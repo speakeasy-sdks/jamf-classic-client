@@ -1,0 +1,9 @@
+# FindComputerManagementByIdSubsetRequest
+
+
+## Fields
+
+| Field                                                                                                       | Type                                                                                                        | Required                                                                                                    | Description                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `id`                                                                                                        | *number*                                                                                                    | :heavy_check_mark:                                                                                          | Computer ID value to filter by                                                                              |
+| `subset`                                                                                                    | [FindComputerManagementByIdSubsetSubset](../../models/operations/findcomputermanagementbyidsubsetsubset.md) | :heavy_check_mark:                                                                                          | Subset to filter by                                                                                         |

@@ -1,0 +1,9 @@
+# FindMobileDeviceHistoryByUDIDSubsetRequest
+
+
+## Fields
+
+| Field                                                                                                             | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `subset`                                                                                                          | [FindMobileDeviceHistoryByUDIDSubsetSubset](../../models/operations/findmobiledevicehistorybyudidsubsetsubset.md) | :heavy_check_mark:                                                                                                | Subset to filter by                                                                                               |
+| `udid`                                                                                                            | *string*                                                                                                          | :heavy_check_mark:                                                                                                | UDID to filter by                                                                                                 |

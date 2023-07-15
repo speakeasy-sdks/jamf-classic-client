@@ -1,0 +1,9 @@
+# FindComputerManagementByNameSubsetRequest
+
+
+## Fields
+
+| Field                                                                                                           | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `name`                                                                                                          | *string*                                                                                                        | :heavy_check_mark:                                                                                              | Computer Name to filter by                                                                                      |
+| `subset`                                                                                                        | [FindComputerManagementByNameSubsetSubset](../../models/operations/findcomputermanagementbynamesubsetsubset.md) | :heavy_check_mark:                                                                                              | Subset to filter by                                                                                             |

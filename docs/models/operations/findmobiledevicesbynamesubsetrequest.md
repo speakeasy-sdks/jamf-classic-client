@@ -1,0 +1,9 @@
+# FindMobileDevicesByNameSubsetRequest
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `name`                                                                                                | *string*                                                                                              | :heavy_check_mark:                                                                                    | Name to filter by                                                                                     |
+| `subset`                                                                                              | [FindMobileDevicesByNameSubsetSubset](../../models/operations/findmobiledevicesbynamesubsetsubset.md) | :heavy_check_mark:                                                                                    | Subset to filter by                                                                                   |

@@ -1,0 +1,9 @@
+# FindComputerManagementByUDIDSubsetRequest
+
+
+## Fields
+
+| Field                                                                                                           | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `subset`                                                                                                        | [FindComputerManagementByUDIDSubsetSubset](../../models/operations/findcomputermanagementbyudidsubsetsubset.md) | :heavy_check_mark:                                                                                              | Subset to filter by                                                                                             |
+| `udid`                                                                                                          | *string*                                                                                                        | :heavy_check_mark:                                                                                              | Computer UDID to filter by                                                                                      |

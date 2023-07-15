@@ -1,0 +1,9 @@
+# FindComputerHistoryByNameSubsetRequest
+
+
+## Fields
+
+| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `name`                                                                                                    | *string*                                                                                                  | :heavy_check_mark:                                                                                        | Computer Name to filter by                                                                                |
+| `subset`                                                                                                  | [FindComputerHistoryByNameSubsetSubset](../../models/operations/findcomputerhistorybynamesubsetsubset.md) | :heavy_check_mark:                                                                                        | Subset to filter by                                                                                       |

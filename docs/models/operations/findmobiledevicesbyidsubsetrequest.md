@@ -1,0 +1,9 @@
+# FindMobileDevicesByIdSubsetRequest
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `id`                                                                                              | *number*                                                                                          | :heavy_check_mark:                                                                                | ID to filter by                                                                                   |
+| `subset`                                                                                          | [FindMobileDevicesByIdSubsetSubset](../../models/operations/findmobiledevicesbyidsubsetsubset.md) | :heavy_check_mark:                                                                                | Subset to filter by                                                                               |

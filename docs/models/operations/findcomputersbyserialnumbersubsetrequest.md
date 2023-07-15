@@ -1,0 +1,9 @@
+# FindComputersBySerialNumberSubsetRequest
+
+
+## Fields
+
+| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `serialnumber`                                                                                                | *string*                                                                                                      | :heavy_check_mark:                                                                                            | Serial number to filter by                                                                                    |
+| `subset`                                                                                                      | [FindComputersBySerialNumberSubsetSubset](../../models/operations/findcomputersbyserialnumbersubsetsubset.md) | :heavy_check_mark:                                                                                            | Subset to filter by                                                                                           |

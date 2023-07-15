@@ -1,0 +1,9 @@
+# FindMobileDevicesByUDIDSubsetRequest
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `subset`                                                                                              | [FindMobileDevicesByUDIDSubsetSubset](../../models/operations/findmobiledevicesbyudidsubsetsubset.md) | :heavy_check_mark:                                                                                    | Subset to filter by                                                                                   |
+| `udid`                                                                                                | *string*                                                                                              | :heavy_check_mark:                                                                                    | UDID to filter by                                                                                     |

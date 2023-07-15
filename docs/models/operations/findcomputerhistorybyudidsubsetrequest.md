@@ -1,0 +1,9 @@
+# FindComputerHistoryByUDIDSubsetRequest
+
+
+## Fields
+
+| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `subset`                                                                                                  | [FindComputerHistoryByUDIDSubsetSubset](../../models/operations/findcomputerhistorybyudidsubsetsubset.md) | :heavy_check_mark:                                                                                        | Subset to filter by                                                                                       |
+| `udid`                                                                                                    | *string*                                                                                                  | :heavy_check_mark:                                                                                        | Computer UDID to filter by                                                                                |

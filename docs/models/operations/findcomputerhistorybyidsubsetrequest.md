@@ -1,0 +1,9 @@
+# FindComputerHistoryByIdSubsetRequest
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `id`                                                                                                  | *number*                                                                                              | :heavy_check_mark:                                                                                    | Computer ID to filter by                                                                              |
+| `subset`                                                                                              | [FindComputerHistoryByIdSubsetSubset](../../models/operations/findcomputerhistorybyidsubsetsubset.md) | :heavy_check_mark:                                                                                    | Subset to filter by                                                                                   |
