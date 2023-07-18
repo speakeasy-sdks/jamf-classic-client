@@ -18,8 +18,8 @@ The `display_fields` are only applicable to the `SmartGroupMobileDeviceMembershi
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateWebhookByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateWebhookByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a webhook by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteWebhookByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteWebhookByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a webhook by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteWebhookByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteWebhookByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all webhooks
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindWebhooksResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindWebhooksResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds webhooks by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindWebhooksByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindWebhooksByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds webhooks by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindWebhooksByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindWebhooksByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ The `display_fields` are only applicable to the `SmartGroupMobileDeviceMembershi
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateWebhookByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateWebhookByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Updates an existing webhook by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateWebhookByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateWebhookByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

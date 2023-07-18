@@ -16,8 +16,8 @@ The following fields are also required if 'Send Emails' distribution method is s
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateInvitationByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateInvitationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -55,8 +55,8 @@ Deletes a VPP invitation by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteInvitationByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteInvitationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -94,8 +94,8 @@ Finds a VPP Invitation by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindInvitationByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindInvitationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -133,8 +133,8 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindInvitationsByIdSubsetResponse, FindInvitationsByIdSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindInvitationsByIdSubsetResponse, FindInvitationsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -173,8 +173,8 @@ Finds all VPP Invitations
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindVPPAdminInvitationResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindVPPAdminInvitationResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -209,8 +209,8 @@ Usages are ignored for this operation
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateInvitationByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateInvitationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

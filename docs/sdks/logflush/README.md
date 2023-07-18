@@ -13,8 +13,8 @@ Flushes all logs for a given interval
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateLogFlushForIntervalLog, CreateLogFlushForIntervalResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateLogFlushForIntervalLog, CreateLogFlushForIntervalResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -53,8 +53,8 @@ Flushes a single log for a given interval
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateLogFlushWithIdAndIntervalLog, CreateLogFlushWithIdAndIntervalResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateLogFlushWithIdAndIntervalLog, CreateLogFlushWithIdAndIntervalResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -94,9 +94,9 @@ Flushes a log specified in an XML file
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { LogFlushResponse } from "jamf/dist/sdk/models/operations";
-import { LogflushInterval, LogflushLog } from "jamf/dist/sdk/models/shared";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { LogFlushResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { LogflushInterval, LogflushLog } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
 const sdk = new Jamf({
   security: {

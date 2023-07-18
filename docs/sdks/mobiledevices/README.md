@@ -33,8 +33,8 @@ To distinguish between mobile device types (e.g., iPad, iPhone, or Apple TV), us
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateMobileDeviceByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateMobileDeviceByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -72,8 +72,8 @@ Deletes a mobile device by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMobileDeviceByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMobileDeviceByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -111,8 +111,8 @@ Deletes a mobile device by Mac address
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMobileDeviceByMacAddressResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMobileDeviceByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -150,8 +150,8 @@ Deletes a mobile device by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMobileDeviceByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMobileDeviceByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -189,8 +189,8 @@ Deletes a mobile device by serial number
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMobileDeviceBySerialNumberResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMobileDeviceBySerialNumberResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -228,8 +228,8 @@ Deletes a mobile device by UDID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMobileDeviceByUDIDResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMobileDeviceByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -267,8 +267,8 @@ Finds all mobile devices
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDevicesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDevicesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -303,8 +303,8 @@ Finds mobile devices by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDevicesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDevicesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -342,8 +342,8 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDevicesByIdSubsetResponse, FindMobileDevicesByIdSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDevicesByIdSubsetResponse, FindMobileDevicesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -382,8 +382,8 @@ Finds mobile devices by Mac address
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDevicesByMacAddressResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDevicesByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -421,11 +421,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindMobileDevicesByMacAddressSubsetResponse,
   FindMobileDevicesByMacAddressSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -464,8 +464,8 @@ Finds mobile devices by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDevicesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDevicesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -503,8 +503,8 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDevicesByNameSubsetResponse, FindMobileDevicesByNameSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDevicesByNameSubsetResponse, FindMobileDevicesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -543,8 +543,8 @@ Finds mobile devices by serial number
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDevicesBySerialNumberResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDevicesBySerialNumberResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -582,11 +582,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindMobileDevicesBySerialNumberSubsetResponse,
   FindMobileDevicesBySerialNumberSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -625,8 +625,8 @@ Finds mobile devices by UDID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDevicesByUDIDResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDevicesByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -664,8 +664,8 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDevicesByUDIDSubsetResponse, FindMobileDevicesByUDIDSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDevicesByUDIDSubsetResponse, FindMobileDevicesByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -704,8 +704,8 @@ Match performs the same function as a simple search in the GUI.
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { MatchMobileDevicesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { MatchMobileDevicesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -743,8 +743,8 @@ sdk.mobiledevices.matchMobileDevices({
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateMobileDeviceByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateMobileDeviceByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -782,8 +782,8 @@ sdk.mobiledevices.updateMobileDeviceById({
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateMobileDeviceByMacAddressResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateMobileDeviceByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -821,8 +821,8 @@ sdk.mobiledevices.updateMobileDeviceByMacAddress({
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateMobileDeviceByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateMobileDeviceByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -860,8 +860,8 @@ sdk.mobiledevices.updateMobileDeviceByName({
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateMobileDeviceBySerialNumberResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateMobileDeviceBySerialNumberResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -899,8 +899,8 @@ sdk.mobiledevices.updateMobileDeviceBySerialNumber({
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateMobileDeviceByUDIDResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateMobileDeviceByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

@@ -14,8 +14,8 @@ Finds computer applications by name and version
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerApplicationByNameAndVersionResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerApplicationByNameAndVersionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -54,8 +54,8 @@ Finds computer applications by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerApplicationsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerApplicationsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -93,8 +93,8 @@ Generates additional inventory data for the devices matching the search criteria
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerApplicationsByNameAndVersionAndInventoryResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerApplicationsByNameAndVersionAndInventoryResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -134,8 +134,8 @@ Valid values for inventory are comma separated Display Fields for computers. Dis
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerApplicationsByNameInventoryResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerApplicationsByNameInventoryResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

@@ -15,8 +15,8 @@ Finds all saved searches (Deprecated - use advancedcomputersearches, advancedmob
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { SavedsearchesGetResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { SavedsearchesGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -53,8 +53,8 @@ Finds saved searches by ID (Deprecated - use advancedcomputersearches, advancedm
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { SavedsearchesIdByIdGetResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { SavedsearchesIdByIdGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -94,8 +94,8 @@ Finds saved searches by name (Deprecated - use advancedcomputersearches, advance
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { SavedsearchesNameByNameGetResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { SavedsearchesNameByNameGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

@@ -18,8 +18,8 @@ Creates a new computer group by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateComputerGroupByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateComputerGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a computer group by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteComputerGroupByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteComputerGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a computer group by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteComputerGroupByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteComputerGroupByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all computer groups
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerGroupsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerGroupsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds computer groups by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerGroupsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerGroupsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds computer groups by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerGroupsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerGroupsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ One or more computers can be added by using "computer_additions" instead of "com
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateComputerGroupByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateComputerGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ One or more computers can be added by using "computer_additions" instead of "com
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateComputerGroupByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateComputerGroupByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

@@ -21,8 +21,8 @@ This operation cannot be used to add computers, mobile devices, peripherals, vpp
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateUserByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateUserByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -60,8 +60,8 @@ Deletes a user by email address
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteUserByEmailAddressResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteUserByEmailAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -99,8 +99,8 @@ Deletes a user by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteUserByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteUserByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -138,8 +138,8 @@ Deletes a user by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteUserByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteUserByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -177,8 +177,8 @@ Finds all users
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindUsersResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindUsersResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -213,8 +213,8 @@ Because email addresses may not be unique, this operation may return a list of u
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindUsersByEmailAddressResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindUsersByEmailAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -252,8 +252,8 @@ Finds users by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindUsersByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindUsersByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -291,8 +291,8 @@ Finds users by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindUsersByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindUsersByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -330,8 +330,8 @@ Updates an existing user by email address
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateUserByEmailAddressResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateUserByEmailAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -369,8 +369,8 @@ This operation cannot be used to add computers, mobile devices, peripherals, vpp
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateUserByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateUserByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -408,8 +408,8 @@ This operation cannot be used to add computers, mobile devices, peripherals, vpp
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateUserByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateUserByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

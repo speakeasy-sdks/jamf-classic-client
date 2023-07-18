@@ -18,8 +18,8 @@ Create a new patch external source by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreatePatchExternalSourcesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreatePatchExternalSourcesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Create a new patch external source by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreatePatchExternalSourcesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreatePatchExternalSourcesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a patch external source by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeletePatchExternalSourcesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeletePatchExternalSourcesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all patch external sources
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPatchExternalSourcesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPatchExternalSourcesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds a patch external source by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPatchExternalSourcesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPatchExternalSourcesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds the first patch external source with the name provided
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPatchExternalSourcesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPatchExternalSourcesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Updates a patch external source by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdatePatchExternalSourcesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdatePatchExternalSourcesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Updates a patch external source by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdatePatchExternalSourcesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdatePatchExternalSourcesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

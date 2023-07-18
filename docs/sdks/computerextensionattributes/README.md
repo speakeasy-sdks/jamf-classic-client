@@ -18,8 +18,8 @@ Creates a new computer extension attribute by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateComputerextensionattributeByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateComputerextensionattributeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a computer extension attribute by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteComputerextensionattributeByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteComputerextensionattributeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a computer extension attribute by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteComputerextensionattributeByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteComputerextensionattributeByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all computer extension attributes
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerextensionattributesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerextensionattributesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds computer extension attributes by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerextensionattributesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerextensionattributesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds computer extension attributes by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerextensionattributesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerextensionattributesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Updates an existing computer extension attribute by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateComputerextensionattributeByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateComputerextensionattributeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Updates an existing computer extension attribute by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateComputerextensionattributeByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateComputerextensionattributeByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

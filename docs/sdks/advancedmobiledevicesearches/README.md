@@ -18,8 +18,8 @@ Creates a new advanced mobile device search
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateAdvancedMobileDeviceSearchByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateAdvancedMobileDeviceSearchByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a mobile device search by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteAdvancedMobileDeviceSearchByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteAdvancedMobileDeviceSearchByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a mobile device search by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteAdvancedMobileDeviceSearchByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteAdvancedMobileDeviceSearchByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all advanced mobile device searches
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindAdvancedMobileDeviceSearchesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindAdvancedMobileDeviceSearchesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds mobile device searches by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindAdvancedMobileDeviceSearchesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindAdvancedMobileDeviceSearchesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds advanced mobile device searches by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceSearchesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceSearchesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Updates an existing advanced mobile device search by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateAdvancedMobileDeviceSearchByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateAdvancedMobileDeviceSearchByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Updates an existing advanced mobile device search by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateAdvancedMobileDeviceSearchByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateAdvancedMobileDeviceSearchByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

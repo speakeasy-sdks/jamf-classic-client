@@ -31,8 +31,8 @@ The chart below includes additional requirements for usage of specific commands
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateComputerCommandByCommandCommand, CreateComputerCommandByCommandResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateComputerCommandByCommandCommand, CreateComputerCommandByCommandResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -70,12 +70,12 @@ Creates a new computer command with a command specific action. Commands supporte
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   CreateComputerCommandByCommandAndActionAction,
   CreateComputerCommandByCommandAndActionCommand,
   CreateComputerCommandByCommandAndActionResponse,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -115,11 +115,11 @@ Creates a new computer command using command name and device IDs
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   CreateComputerCommandByCommandAndIdCommand,
   CreateComputerCommandByCommandAndIdResponse,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -158,11 +158,11 @@ Issuing a DeviceLock and EraseDevice command requires a 6 character passcode.
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   CreateComputerCommandByCommandIdAndPasscodeCommand,
   CreateComputerCommandByCommandIdAndPasscodeResponse,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -202,8 +202,8 @@ Finds all computer commands
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerCommandsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerCommandsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -238,8 +238,8 @@ Finds all computer commands by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerCommandsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerCommandsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -277,8 +277,8 @@ Finds a computer command by UUID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerCommandsByUuidResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerCommandsByUuidResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

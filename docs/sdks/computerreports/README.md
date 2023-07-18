@@ -13,8 +13,8 @@ Finds all computer reports
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerReportsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerReportsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -49,8 +49,8 @@ Additional display fields are returned within the `Computer` object
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerReportsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerReportsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -88,8 +88,8 @@ Additional display fields are returned within the `Computer` object
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerReportsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerReportsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

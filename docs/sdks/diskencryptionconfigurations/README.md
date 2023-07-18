@@ -18,8 +18,8 @@ Creates a new disk encryption configuration by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateDiskEncryptionConfigurationByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateDiskEncryptionConfigurationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a disk encryption configuration by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteDiskEncryptionConfigurationByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteDiskEncryptionConfigurationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a disk encryption configuration by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteDiskEncryptionConfigurationByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteDiskEncryptionConfigurationByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all disk encryption configurations
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindDiskEncryptionConfigurationsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindDiskEncryptionConfigurationsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds disk encryption configurations by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindDiskEncryptionConfigurationsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindDiskEncryptionConfigurationsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds disk encryption configurations by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindDiskEncryptionConfigurationsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindDiskEncryptionConfigurationsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Updates an existing disk encryption configuration by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateDiskEncryptionConfigurationByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateDiskEncryptionConfigurationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Updates an existing disk encryption configuration by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateDiskEncryptionConfigurationByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateDiskEncryptionConfigurationByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

@@ -26,8 +26,8 @@ App configuration preferences should be listed using character entities, e.g. <p
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateMobileDeviceApplicationByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateMobileDeviceApplicationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -65,8 +65,8 @@ Deletes a mobile device application by bundle ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMobileDeviceApplicationByBundleIDResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMobileDeviceApplicationByBundleIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -104,8 +104,8 @@ Deletes a mobile device application by bundle ID and version
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMobileDeviceApplicationByBundleIDandVersionResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMobileDeviceApplicationByBundleIDandVersionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -144,8 +144,8 @@ Deletes a mobile device application by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMobileDeviceApplicationByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMobileDeviceApplicationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -183,8 +183,8 @@ Deletes a mobile device application by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMobileDeviceApplicationByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMobileDeviceApplicationByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -222,8 +222,8 @@ Finds all mobile device applications
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceApplicationsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceApplicationsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -258,8 +258,8 @@ If multiple applications match, no application is returned. You may specify both
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceApplicationsByBundleIDResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceApplicationsByBundleIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -297,8 +297,8 @@ Finds mobile device applications by bundle ID and version
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceApplicationsByBundleIDandVersionResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceApplicationsByBundleIDandVersionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -337,8 +337,8 @@ Finds mobile device applications by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceApplicationsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceApplicationsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -376,8 +376,8 @@ Finds mobile device applications by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceApplicationsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceApplicationsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -415,11 +415,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindMobileDeviceApplicationsByNameSubsetResponse,
   FindMobileDeviceApplicationsByNameSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -458,8 +458,8 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceAppsByIdSubsetResponse, FindMobileDeviceAppsByIdSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceAppsByIdSubsetResponse, FindMobileDeviceAppsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -498,8 +498,8 @@ Updates an existing mobile device application by bundle ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateMobileDeviceApplicationByBundleIDResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateMobileDeviceApplicationByBundleIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -537,8 +537,8 @@ Updates an existing mobile device application by bundle ID and version
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateMobileDeviceApplicationByBundleIDandVersionResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateMobileDeviceApplicationByBundleIDandVersionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -577,8 +577,8 @@ App configuration preferences should be listed using character entities, e.g. <p
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateMobileDeviceApplicationByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateMobileDeviceApplicationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -616,8 +616,8 @@ Updates an existing mobile device application by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateMobileDeviceApplicationByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateMobileDeviceApplicationByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

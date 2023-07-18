@@ -20,8 +20,8 @@ Creates a new ebook by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateEBookByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateEBookByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -59,8 +59,8 @@ Deletes an ebook by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteEBookByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteEBookByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -98,8 +98,8 @@ Deletes an ebook by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteEBookByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteEBookByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -137,8 +137,8 @@ Finds all ebooks
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindEBooksResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindEBooksResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -173,8 +173,8 @@ Finds ebooks by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindEBooksByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindEBooksByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -212,8 +212,8 @@ Finds ebooks by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindEBooksByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindEBooksByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -251,8 +251,8 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindEBooksByNameSubsetResponse, FindEBooksByNameSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindEBooksByNameSubsetResponse, FindEBooksByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -291,8 +291,8 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindEbookssByIdSubsetResponse, FindEbookssByIdSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindEbookssByIdSubsetResponse, FindEbookssByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -331,8 +331,8 @@ Updates an existing ebook by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateEBookByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateEBookByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -370,8 +370,8 @@ Updates an existing ebook by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateEBookByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateEBookByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

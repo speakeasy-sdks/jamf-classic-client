@@ -18,8 +18,8 @@ Creates a new user extension attribute by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateUserextensionattributeByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateUserextensionattributeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a user extension attribute by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteUserextensionattributeByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteUserextensionattributeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a user extension attribute by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteUserextensionattributeByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteUserextensionattributeByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all user extension attributes
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindUserextensionattributesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindUserextensionattributesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds user extension attributes by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindUserextensionattributesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindUserextensionattributesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds user extension attributes by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindUserextensionattributesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindUserextensionattributesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Updates an existing user extension attribute by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateUserextensionattributeByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateUserextensionattributeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Updates an existing user extension attribute by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateUserextensionattributeByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateUserextensionattributeByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

@@ -18,8 +18,8 @@ Creates a new mobile device group by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateMobileDeviceGroupByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateMobileDeviceGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a mobile device group by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMobileDeviceGroupByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMobileDeviceGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a mobile device group by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMobileDeviceGroupByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMobileDeviceGroupByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all mobile device groups
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceGroupsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceGroupsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds mobile device groups by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceGroupsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceGroupsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds mobile device groups by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceGroupsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceGroupsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ One or more mobile devices can be added by using "mobile_device_additions" inste
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateMobileDeviceGroupByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateMobileDeviceGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ One or more mobile devices can be added by using "mobile_device_additions" inste
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateMobileDeviceGroupByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateMobileDeviceGroupByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

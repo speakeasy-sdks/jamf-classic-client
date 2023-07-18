@@ -18,8 +18,8 @@ Creates a new software update server by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateSoftwareUpdateServerByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateSoftwareUpdateServerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a software update server by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteSoftwareUpdateServerByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteSoftwareUpdateServerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a software update server by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteSoftwareUpdateServerByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteSoftwareUpdateServerByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all software update servers
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindSoftwareUpdateServersResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindSoftwareUpdateServersResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds software update servers by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindSoftwareUpdateServersByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindSoftwareUpdateServersByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds software update servers by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindSoftwareUpdateServersByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindSoftwareUpdateServersByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Updates an existing software update server by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateSoftwareUpdateServerByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateSoftwareUpdateServerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Updates an existing software update server by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateSoftwareUpdateServerByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateSoftwareUpdateServerByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

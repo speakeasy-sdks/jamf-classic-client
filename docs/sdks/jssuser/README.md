@@ -13,8 +13,8 @@ Returns basic information about Jamf Pro, as well as privileges of the person re
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { JssuserGetResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { JssuserGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

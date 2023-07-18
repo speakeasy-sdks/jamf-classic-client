@@ -11,8 +11,8 @@ Here is a sample command curl -k -u user:password https://my.server.com:8443/JSS
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UploadFilesIDType, UploadFilesResource, UploadFilesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UploadFilesIDType, UploadFilesResource, UploadFilesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

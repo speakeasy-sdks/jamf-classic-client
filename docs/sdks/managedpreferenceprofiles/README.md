@@ -20,8 +20,8 @@ Creates a new managed preference profile by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateManagedPreferenceProfileByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateManagedPreferenceProfileByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -59,8 +59,8 @@ Deletes a managed preference profiles by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteManagedPreferenceProfilesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteManagedPreferenceProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -98,8 +98,8 @@ Deletes a managed preference profiles by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteManagedPreferenceProfilesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteManagedPreferenceProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -137,8 +137,8 @@ Finds all managed preference profiles
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindManagedPreferenceProfilesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindManagedPreferenceProfilesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -173,8 +173,8 @@ Finds managed preference profiles by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindManagedPreferenceProfilesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindManagedPreferenceProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -212,11 +212,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindManagedPreferenceProfilesByIdSubsetResponse,
   FindManagedPreferenceProfilesByIdSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -255,8 +255,8 @@ Finds managed preference profiles by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindManagedPreferenceProfilesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindManagedPreferenceProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -294,11 +294,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindManagedPreferenceProfilesByNameSubsetResponse,
   FindManagedPreferenceProfilesByNameSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -337,8 +337,8 @@ Updates an existing managed preference profiles by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateManagedPreferenceProfilesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateManagedPreferenceProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -376,8 +376,8 @@ Updates an existing managed preference profiles by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateManagedPreferenceProfilesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateManagedPreferenceProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

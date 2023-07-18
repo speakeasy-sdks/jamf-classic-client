@@ -18,8 +18,8 @@ Creates a new mobile device extension attribute by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateMobiledeviceextensionattributeByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateMobiledeviceextensionattributeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a mobile device extension attribute by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMobiledeviceextensionattributeByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMobiledeviceextensionattributeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a mobile device extension attribute by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMobiledeviceextensionattributeByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMobiledeviceextensionattributeByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all mobile device extension attributes
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobiledeviceextensionattributesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobiledeviceextensionattributesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds mobile device extension attributes by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobiledeviceextensionattributesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobiledeviceextensionattributesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds mobiledeviceextensionattributes by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobiledeviceextensionattributesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobiledeviceextensionattributesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Updates an existing mobile device extension attribute by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateMobiledeviceextensionattributeByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateMobiledeviceextensionattributeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Updates an existing mobile device extension attribute by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateMobiledeviceextensionattributeByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateMobiledeviceextensionattributeByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

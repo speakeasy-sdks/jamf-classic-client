@@ -18,8 +18,8 @@ Creates a new iBeacon region by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateIBeaconByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateIBeaconByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes an iBeacon region by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteIBeaconByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteIBeaconByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes an iBeacon region by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteIBeaconByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteIBeaconByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all iBeacon regions
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindIBeaconsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindIBeaconsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds iBeacon regions by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindIBeaconsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindIBeaconsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds iBeacon regions by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindIBeaconsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindIBeaconsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Updates an existing iBeacon region by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateIBeaconByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateIBeaconByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Updates an existing iBeacon region by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateIBeaconByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateIBeaconByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

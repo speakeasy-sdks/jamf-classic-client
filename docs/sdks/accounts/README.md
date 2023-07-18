@@ -25,8 +25,8 @@ Creates a new account by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateAccountByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateAccountByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -64,8 +64,8 @@ Groups created via this endpoint are created only within Jamf Pro and will not a
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateGroupByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -103,8 +103,8 @@ Deletes an account by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteAccountByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteAccountByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -142,8 +142,8 @@ Deletes an account by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteAccountByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteAccountByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -181,8 +181,8 @@ Deletes a group by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteGroupByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -220,8 +220,8 @@ Deletes a group by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteGroupByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteGroupByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -259,8 +259,8 @@ Finds all accounts
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindAccountsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindAccountsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -295,8 +295,8 @@ Finds accounts by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindAccountsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindAccountsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -334,8 +334,8 @@ Finds accounts by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindAccountsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindAccountsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -373,8 +373,8 @@ Finds groups by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindGroupsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindGroupsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -412,8 +412,8 @@ Finds groups by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindGroupsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindGroupsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -451,8 +451,8 @@ Updates an existing account by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateAccountByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateAccountByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -490,8 +490,8 @@ Updates an existing account by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateAccountByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateAccountByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -529,8 +529,8 @@ Groups updated via this endpoint are updated only within Jamf Pro and will not a
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateGroupByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -568,8 +568,8 @@ Groups updated via this endpoint are updated only within Jamf Pro and will not a
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateGroupByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateGroupByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

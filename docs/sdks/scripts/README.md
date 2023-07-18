@@ -18,8 +18,8 @@ Only one of script_contents_encoded and script_contents should be submitted.
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateScriptByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateScriptByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a script by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteScriptByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteScriptByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a script by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteScriptByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteScriptByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all scripts
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindScriptsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindScriptsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ script_contents_encoded is the equivalent of script_contents, but it has been Ba
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindScriptsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindScriptsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ script_contents_encoded is the equivalent of script_contents, but it has been Ba
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindScriptsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindScriptsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Only one of script_contents_encoded and script_contents should be submitted.
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateScriptByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateScriptByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Only one of script_contents_encoded and script_contents should be submitted.
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateScriptByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateScriptByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

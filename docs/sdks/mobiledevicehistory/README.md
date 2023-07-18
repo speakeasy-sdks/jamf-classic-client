@@ -20,8 +20,8 @@ Finds mobile device history by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceHistoryByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceHistoryByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -59,11 +59,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindMobileDeviceHistoryByIdSubsetResponse,
   FindMobileDeviceHistoryByIdSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -102,8 +102,8 @@ Finds mobile device history by wifi mac address
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceHistoryByMacAddressResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceHistoryByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -141,11 +141,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindMobileDeviceHistoryByMacAddressSubsetResponse,
   FindMobileDeviceHistoryByMacAddressSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -184,8 +184,8 @@ Finds mobile device history by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceHistoryByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceHistoryByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -223,11 +223,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindMobileDeviceHistoryByNameSubsetResponse,
   FindMobileDeviceHistoryByNameSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -266,8 +266,8 @@ Finds mobile device history by serial number
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceHistoryBySerialNumberResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceHistoryBySerialNumberResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -305,11 +305,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindMobileDeviceHistoryBySerialNumberSubsetResponse,
   FindMobileDeviceHistoryBySerialNumberSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -348,8 +348,8 @@ Finds mobile device history by UDID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceHistoryByUDIDResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceHistoryByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -387,11 +387,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindMobileDeviceHistoryByUDIDSubsetResponse,
   FindMobileDeviceHistoryByUDIDSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

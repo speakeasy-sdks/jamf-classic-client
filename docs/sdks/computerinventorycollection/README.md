@@ -12,8 +12,8 @@ Finds the Jamf Pro computer inventory collection information
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerInventoryCollectionResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerInventoryCollectionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -48,13 +48,13 @@ Updates the Jamf Pro computer inventory collection information
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateComputerInventoryCollectionResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateComputerInventoryCollectionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import {
   ComputerInventoryCollectionApplicationsApplicationPlatform,
   ComputerInventoryCollectionFontsFontPlatform,
   ComputerInventoryCollectionPluginsPluginPlatform,
-} from "jamf/dist/sdk/models/shared";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
 const sdk = new Jamf({
   security: {

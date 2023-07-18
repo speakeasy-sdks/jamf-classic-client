@@ -20,8 +20,8 @@ Does not support vpp codes.
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateMacappByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateMacappByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -59,8 +59,8 @@ Deletes a mac application by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMacappByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMacappByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -98,8 +98,8 @@ Deletes a mac application by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMacappByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMacappByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -137,8 +137,8 @@ Finds all mac applications
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMacappsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMacappsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -173,8 +173,8 @@ Finds mac applications by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMacappsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMacappsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -212,8 +212,8 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMacappsByIdSubsetResponse, FindMacappsByIdSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMacappsByIdSubsetResponse, FindMacappsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -252,8 +252,8 @@ Finds mac applications by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMacappsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMacappsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -291,8 +291,8 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMacappsByNameSubsetResponse, FindMacappsByNameSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMacappsByNameSubsetResponse, FindMacappsByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -331,8 +331,8 @@ Does not support vpp codes.
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateMacappByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateMacappByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -370,8 +370,8 @@ Does not support vpp codes.
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateMacappByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateMacappByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

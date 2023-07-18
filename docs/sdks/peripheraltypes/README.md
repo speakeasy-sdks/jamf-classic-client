@@ -15,8 +15,8 @@ Creates a new peripheral by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreatePeripheralTypeByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreatePeripheralTypeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -54,8 +54,8 @@ Deletes a peripheral by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeletePeripheralTypeByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeletePeripheralTypeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -93,8 +93,8 @@ Finds all peripheral types
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPeripheralTypesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPeripheralTypesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -129,8 +129,8 @@ Finds peripheral types by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPeripheralTypesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPeripheralTypesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -168,8 +168,8 @@ Updates an existing peripheral by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdatePeripheralTypeByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdatePeripheralTypeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

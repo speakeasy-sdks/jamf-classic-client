@@ -12,8 +12,8 @@ Finds the Jamf Pro computer checkin information
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerCheckinResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerCheckinResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -48,8 +48,8 @@ Updates the Jamf Pro computer checkin information
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateComputerCheckinResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateComputerCheckinResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

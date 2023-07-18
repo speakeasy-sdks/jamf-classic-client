@@ -13,8 +13,8 @@ Find all Healthcare Listeners
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindHealthcareListenerResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindHealthcareListenerResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -49,8 +49,8 @@ Finds healthcare listener by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindHealthcareListenersByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindHealthcareListenersByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -88,8 +88,8 @@ Updates an existing healthcare listener by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateHealthCareListenerByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateHealthCareListenerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

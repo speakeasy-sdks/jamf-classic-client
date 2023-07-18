@@ -18,8 +18,8 @@ Matching computers are derived from software definitions, therefore they cannot 
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateLicensedSoftwareByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateLicensedSoftwareByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes licensed software by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteLicensedSoftwareByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteLicensedSoftwareByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes licensed software by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteLicensedSoftwareByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteLicensedSoftwareByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all licensed software
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindLicensedSoftwareResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindLicensedSoftwareResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds licensed software by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindLicensedSoftwareByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindLicensedSoftwareByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds licensed software by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindLicensedSoftwareByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindLicensedSoftwareByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Matching computers are derived from software definitions, therefore they cannot 
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateLicensedSoftwareByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateLicensedSoftwareByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Matching computers are derived from software definitions, therefore they cannot 
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateLicensedSoftwareByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateLicensedSoftwareByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

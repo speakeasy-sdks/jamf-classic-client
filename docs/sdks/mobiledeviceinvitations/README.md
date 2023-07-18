@@ -17,8 +17,8 @@ Creates a new mobile device invitation by id
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateMobileDeviceInvitationsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateMobileDeviceInvitationsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -56,8 +56,8 @@ Creates a new mobile device invitation by invitation
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateMobileDeviceInvitationsByInvitationResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateMobileDeviceInvitationsByInvitationResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -95,8 +95,8 @@ Deletes a mobile device invitation by id
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMobileDeviceInvitationByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMobileDeviceInvitationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -134,8 +134,8 @@ Deletes a mobile device invitation by invitation
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMobileDeviceInvitationByInvitationResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMobileDeviceInvitationByInvitationResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -173,8 +173,8 @@ Finds all mobile device invitations
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceInvitationsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceInvitationsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -209,8 +209,8 @@ Finds mobile device invitations by id
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceInvitationsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceInvitationsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -248,8 +248,8 @@ Finds mobile device invitations by invitation
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceInvitationsByInvitationResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceInvitationsByInvitationResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

@@ -13,8 +13,8 @@ Finds all patch internal sources
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPatchInternalSourcesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPatchInternalSourcesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -49,8 +49,8 @@ Finds a patch internal source by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPatchInternalSourcesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPatchInternalSourcesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -88,8 +88,8 @@ Finds the first patch internal source with the name provided
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPatchInternalSourcesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPatchInternalSourcesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

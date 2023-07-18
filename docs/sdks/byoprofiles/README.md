@@ -18,8 +18,8 @@ Creates a personal device profile by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateBYOProfilesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateBYOProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a personal device profile by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteBYOProfilesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteBYOProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a personal device profile by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteBYOProfilesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteBYOProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all personal device profiles
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindBYOProfilesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindBYOProfilesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds personal device profile by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindBYOProfilesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindBYOProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds a personal device profile by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindBYOProfilesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindBYOProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Updates a personal device profile by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateBYOProfilesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateBYOProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ You cannot reassign the site since it is maintained by Jamf Pro.
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateBYOProfilesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateBYOProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

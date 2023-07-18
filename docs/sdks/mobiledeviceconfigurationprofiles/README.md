@@ -20,8 +20,8 @@ Creates a new mobile device configuration profile by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateMobileDeviceConfigurationProfileByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateMobileDeviceConfigurationProfileByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -59,8 +59,8 @@ Deletes a mobile device configuration profile by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMobileDeviceConfigurationProfileByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMobileDeviceConfigurationProfileByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -98,8 +98,8 @@ Deletes a mobile device configuration profile by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteMobileDeviceConfigurationProfileByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteMobileDeviceConfigurationProfileByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -137,8 +137,8 @@ Finds all mobile device configuration profiles
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceConfigurationProfilesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceConfigurationProfilesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -173,8 +173,8 @@ Finds mobile device configuration profiles by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceConfigurationProfilesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceConfigurationProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -212,11 +212,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindMobileDeviceConfigurationProfilesByIdSubsetResponse,
   FindMobileDeviceConfigurationProfilesByIdSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -255,8 +255,8 @@ Finds mobile device configuration profiles by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindMobileDeviceConfigurationProfilesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindMobileDeviceConfigurationProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -294,11 +294,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindMobileDeviceConfigurationProfilesByNameSubsetResponse,
   FindMobileDeviceConfigurationProfilesByNameSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -337,8 +337,8 @@ Updates an existing mobile device configuration profile by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateMobileDeviceConfigurationProfileByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateMobileDeviceConfigurationProfileByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -376,8 +376,8 @@ Updates an existing mobile device configuration profile by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateMobileDeviceConfigurationProfileByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateMobileDeviceConfigurationProfileByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

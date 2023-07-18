@@ -15,8 +15,8 @@ Creates a new allowed file extension value by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateAllowedFileExtensionByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateAllowedFileExtensionByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -54,8 +54,8 @@ Deletes an allowed file extension value by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteAllowedFileExtensionByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteAllowedFileExtensionByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -93,8 +93,8 @@ Finds the allowed file extensions
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindAllowedFileExtensionResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindAllowedFileExtensionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -129,8 +129,8 @@ Finds an allowed file extension value by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindAllowedFileExtensionByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindAllowedFileExtensionByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -168,8 +168,8 @@ Finds an allowed file extension value by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindAllowedFileExtensionByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindAllowedFileExtensionByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

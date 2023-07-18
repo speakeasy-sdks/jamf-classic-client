@@ -14,8 +14,8 @@ Creates a new Healthcare Listener rule
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateHealthCareListenerRuleByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateHealthCareListenerRuleByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -53,8 +53,8 @@ Find all Healthcare Listener rules
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindHealthcareListenerRuleResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindHealthcareListenerRuleResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -89,8 +89,8 @@ Finds Healthcare Listener rules by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindHealthcareListenerRulesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindHealthcareListenerRulesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -128,8 +128,8 @@ Updates an existing Healthcare Listener rule by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateHealthCareListenerRuleByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateHealthCareListenerRuleByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

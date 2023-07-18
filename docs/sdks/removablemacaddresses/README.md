@@ -18,8 +18,8 @@ Creates a new removable Mac address by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateRemovableMacAddressByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateRemovableMacAddressByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a removable Mac address by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteRemovableMacAddressByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteRemovableMacAddressByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a removable Mac address by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteRemovableMacAddressByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteRemovableMacAddressByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all removable Mac addresses
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindRemovableMacAddressesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindRemovableMacAddressesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds removable Mac addresses by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindRemovableMacAddressesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindRemovableMacAddressesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds removable Mac addresses by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindRemovableMacAddressesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindRemovableMacAddressesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Updates an existing removable Mac address by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateRemovableMacAddressByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateRemovableMacAddressByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Updates an existing removable Mac address by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateRemovableMacAddressByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateRemovableMacAddressByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

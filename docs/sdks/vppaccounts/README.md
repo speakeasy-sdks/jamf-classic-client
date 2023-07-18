@@ -15,8 +15,8 @@ The service_token value may not match another vpp account. account_name and expi
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateVPPAdminAccountByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateVPPAdminAccountByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -54,8 +54,8 @@ Deletes a VPP account by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteVPPAdminAccountByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteVPPAdminAccountByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -93,8 +93,8 @@ Finds all VPP Accounts
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindVPPAdminAccountResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindVPPAdminAccountResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -129,8 +129,8 @@ Finds VPP Account by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindVPPAdminAccountByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindVPPAdminAccountByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -168,8 +168,8 @@ The service_token value may not match another vpp account. account_name and expi
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateVPPAdminAccountByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateVPPAdminAccountByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

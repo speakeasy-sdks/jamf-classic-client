@@ -12,8 +12,8 @@ Finds the Jamf Pro GSX connection information
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindGSXConnectionResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindGSXConnectionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -48,9 +48,9 @@ Updates the Jamf Pro GSX connection information
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateGSXConnectionResponse } from "jamf/dist/sdk/models/operations";
-import { GsxConnectionRegion } from "jamf/dist/sdk/models/shared";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateGSXConnectionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { GsxConnectionRegion } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
 const sdk = new Jamf({
   security: {

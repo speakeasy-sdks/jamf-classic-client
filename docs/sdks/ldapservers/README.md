@@ -24,8 +24,8 @@ Creates a new LDAP server by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateLDAPServerByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateLDAPServerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -63,8 +63,8 @@ Deletes an LDAP server by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteLDAPServerByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteLDAPServerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -102,8 +102,8 @@ Deletes an LDAP server by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteLDAPServerByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteLDAPServerByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -141,8 +141,8 @@ Displays information about matching groups for an ldap server specified with the
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindLDAPServerGroupByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindLDAPServerGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -181,8 +181,8 @@ Displays information about matching groups for an ldap server specified with the
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindLDAPServerGroupByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindLDAPServerGroupByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -221,8 +221,8 @@ Displays information about user membership in a group for an ldap server specifi
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindLDAPServerGroupUserByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindLDAPServerGroupUserByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -262,8 +262,8 @@ Displays information about user membership in a group for an ldap server specifi
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindLDAPServerGroupUserByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindLDAPServerGroupUserByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -303,8 +303,8 @@ Displays information about matching users for an ldap server specified with the 
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindLDAPServerUserByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindLDAPServerUserByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -343,8 +343,8 @@ Displays information about matching users for an ldap server specified with the 
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindLDAPServerUserByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindLDAPServerUserByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -383,8 +383,8 @@ Finds all LDAP servers
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindLDAPServersResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindLDAPServersResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -419,8 +419,8 @@ Finds LDAP servers by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindLDAPServersByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindLDAPServersByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -458,8 +458,8 @@ Finds LDAP servers by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindLDAPServersByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindLDAPServersByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -497,8 +497,8 @@ Updates an existing LDAP server by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateLDAPServerByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateLDAPServerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -536,8 +536,8 @@ Updates an existing LDAP server by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateLDAPServerByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateLDAPServerByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

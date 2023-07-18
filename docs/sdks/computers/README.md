@@ -36,8 +36,8 @@ Certificates and mdm_capable are ignored.
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateComputerByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateComputerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -75,8 +75,8 @@ Deletes a computer by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteComputerByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteComputerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -114,8 +114,8 @@ Deletes a computer by MAC address
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteComputerByMacAddressResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteComputerByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -153,8 +153,8 @@ Deletes a computer by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteComputerByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteComputerByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -192,8 +192,8 @@ Deletes a computer by serial number
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteComputerBySerialNumberResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteComputerBySerialNumberResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -231,8 +231,8 @@ Deletes a computer by UDID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteComputerByUDIDResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteComputerByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -270,8 +270,8 @@ Finds all computers
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputersResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputersResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -306,8 +306,8 @@ Finds basic information for all computers
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputersBasicResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputersBasicResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -342,8 +342,8 @@ Finds computers by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputersByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputersByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -381,8 +381,8 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputersByIdSubsetResponse, FindComputersByIdSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputersByIdSubsetResponse, FindComputersByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -421,8 +421,8 @@ Finds computers by MAC address
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputersByMacAddressResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputersByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -460,8 +460,8 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputersByMacAddressSubsetResponse, FindComputersByMacAddressSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputersByMacAddressSubsetResponse, FindComputersByMacAddressSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -500,8 +500,8 @@ Finds the first computer with the given name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputersByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputersByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -539,8 +539,8 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputersByNameSubsetResponse, FindComputersByNameSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputersByNameSubsetResponse, FindComputersByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -579,8 +579,8 @@ Finds computers by serial number
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputersBySerialNumberResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputersBySerialNumberResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -618,11 +618,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindComputersBySerialNumberSubsetResponse,
   FindComputersBySerialNumberSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -661,8 +661,8 @@ Finds computers by UDID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputersByUDIDResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputersByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -700,8 +700,8 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputersByUDIDSubsetResponse, FindComputersByUDIDSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputersByUDIDSubsetResponse, FindComputersByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -740,8 +740,8 @@ Deletes data collected by an extension attribute
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FlushComputerExtenstionAttributeDataResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FlushComputerExtenstionAttributeDataResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -779,8 +779,8 @@ Match performs the same function as a simple search in the GUI.
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { MatchComputersResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { MatchComputersResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -818,8 +818,8 @@ Searches for computers that match the provided name parameter
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { MatchComputersNamesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { MatchComputersNamesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -857,8 +857,8 @@ Certificates and mdm_capable are ignored.
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateComputerByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateComputerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -896,8 +896,8 @@ Certificates and mdm_capable are ignored.
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateComputerByMacAddressResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateComputerByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -935,8 +935,8 @@ Certificates and mdm_capable are ignored.
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateComputerByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateComputerByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -974,8 +974,8 @@ Certificates and mdm_capable are ignored.
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateComputerBySerialNumberResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateComputerBySerialNumberResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -1013,8 +1013,8 @@ Certificates and mdm_capable are ignored.
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateComputerByUDIDResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateComputerByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

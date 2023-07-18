@@ -15,9 +15,9 @@ Finds computer application usage by computer ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerApplicationUsageByIdResponse } from "jamf/dist/sdk/models/operations";
-import { RFCDate } from "jamf/dist/sdk/types";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerApplicationUsageByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Finds computer application usage by computer MAC address
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerApplicationUsageByMacAddressResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerApplicationUsageByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -98,8 +98,8 @@ Finds computer application usage by computer name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerApplicationUsageByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerApplicationUsageByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -139,8 +139,8 @@ Finds computer application usage by computer serial number
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerApplicationUsageBySerialResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerApplicationUsageBySerialResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -180,8 +180,8 @@ Finds computer application usage by computer UDID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerApplicationUsageByUDIDResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerApplicationUsageByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

@@ -15,8 +15,8 @@ Creates a new JSON Web Token configuration by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateJsonWebTokenConfigurationByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateJsonWebTokenConfigurationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -54,8 +54,8 @@ Deletes a JSON Web Token configuration by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteJsonWebTokenConfigurationByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteJsonWebTokenConfigurationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -93,8 +93,8 @@ Find JSON Web Token configuration by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindJsonWebTokenConfigurationByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindJsonWebTokenConfigurationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -132,8 +132,8 @@ Finds all JSON Web Token configurations
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindJsonWebTokenConfigurationsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindJsonWebTokenConfigurationsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -168,8 +168,8 @@ Updates an existing JSON Web Token configuration by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateJsonWebTokenConfigurationByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateJsonWebTokenConfigurationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

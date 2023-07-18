@@ -18,8 +18,8 @@ Creates a new network segment by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateNetworkSegmentByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateNetworkSegmentByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a network segment by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteNetworkSegmentByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteNetworkSegmentByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a network segment by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteNetworkSegmentByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteNetworkSegmentByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all network segments
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindNetworkSegmentsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindNetworkSegmentsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds network segments by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindNetworkSegmentsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindNetworkSegmentsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds network segments by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindNetworkSegmentsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindNetworkSegmentsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Updates an existing network segment by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateNetworkSegmentByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateNetworkSegmentByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Updates an existing network segment by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateNetworkSegmentByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateNetworkSegmentByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

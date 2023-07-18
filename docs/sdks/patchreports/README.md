@@ -14,8 +14,8 @@ Finds patch reports by patch software title ID. (Deprecated) Please transition u
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { PatchreportsPatchsoftwaretitleidByIdGetResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { PatchreportsPatchsoftwaretitleidByIdGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -55,8 +55,8 @@ Display computers for a specific version of a patch report. (Deprecated) Please 
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

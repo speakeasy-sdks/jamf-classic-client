@@ -15,8 +15,8 @@ Creates a new VPP assignment by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateAssignmentByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateAssignmentByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -54,8 +54,8 @@ Deletes a VPP assignment by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteAssignmentByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteAssignmentByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -93,8 +93,8 @@ Finds VPP Assignment by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindAssignmentByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindAssignmentByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -132,8 +132,8 @@ Finds all VPP Assignments
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindVPPAdminAssignmentResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindVPPAdminAssignmentResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -168,8 +168,8 @@ Updates a VPP assignment by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateAssignmentByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateAssignmentByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

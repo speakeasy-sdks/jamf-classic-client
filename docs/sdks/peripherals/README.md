@@ -16,8 +16,8 @@ Creates a new peripheral by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreatePeripheralByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreatePeripheralByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -55,8 +55,8 @@ Deletes a peripheral by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeletePeripheralByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeletePeripheralByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -94,8 +94,8 @@ Finds all peripherals
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPeripheralsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPeripheralsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -130,8 +130,8 @@ Finds peripherals by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPeripheralsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPeripheralsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -169,8 +169,8 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPeripheralsByIdSubsetResponse, FindPeripheralsByIdSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPeripheralsByIdSubsetResponse, FindPeripheralsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -209,8 +209,8 @@ Updates an existing peripheral by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdatePeripheralByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdatePeripheralByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

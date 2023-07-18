@@ -13,8 +13,8 @@ Find all Infrastructure Managers
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindInfrastructureManagerResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindInfrastructureManagerResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -49,8 +49,8 @@ Finds infrastructure manager by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindInfrastructureManagerByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindInfrastructureManagerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -88,8 +88,8 @@ Updates an existing infrastructure manager by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateInfrastructureManagerByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateInfrastructureManagerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

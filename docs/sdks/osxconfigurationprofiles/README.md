@@ -20,8 +20,8 @@ Creates a new OS X configuration profile by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateOsxConfigurationProfileByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateOsxConfigurationProfileByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -59,8 +59,8 @@ Deletes a OS X configuration profile by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteOsxConfigurationProfileByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteOsxConfigurationProfileByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -98,8 +98,8 @@ Deletes a OS X configuration profile by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteOsxConfigurationProfileByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteOsxConfigurationProfileByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -137,8 +137,8 @@ Finds all OS X configuration profiles
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindOsxConfigurationProfilesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindOsxConfigurationProfilesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -173,8 +173,8 @@ Finds OS X configuration profiles by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindOsxConfigurationProfilesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindOsxConfigurationProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -212,11 +212,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindOsxConfigurationProfilesByIdSubsetResponse,
   FindOsxConfigurationProfilesByIdSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -255,8 +255,8 @@ Finds OS X configuration profiles by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindOsxConfigurationProfilesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindOsxConfigurationProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -294,11 +294,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindOsxConfigurationProfilesByNameSubsetResponse,
   FindOsxConfigurationProfilesByNameSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -337,8 +337,8 @@ Updates an existing OS X configuration profile by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateOsxConfigurationProfileByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateOsxConfigurationProfileByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -376,8 +376,8 @@ Updates an existing OS X configuration profile by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateOsxConfigurationProfileByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateOsxConfigurationProfileByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

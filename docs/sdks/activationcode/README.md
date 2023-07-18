@@ -12,8 +12,8 @@ Finds the Jamf Pro activation code
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindactivationcodeResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindactivationcodeResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -48,8 +48,8 @@ Updates the Jamf Pro activation code
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateActivationCodeResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateActivationCodeResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

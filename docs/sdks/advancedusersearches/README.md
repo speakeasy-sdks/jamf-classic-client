@@ -18,8 +18,8 @@ Creates a new advanced user search by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateAdvancedUserSearchgByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateAdvancedUserSearchgByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a user search by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteAdvancedUserSearchByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteAdvancedUserSearchByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a user search by Name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteAdvancedUserSearchByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteAdvancedUserSearchByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all advanced user searches
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindAdvancedUserSearchesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindAdvancedUserSearchesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds user searches by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindAdvancedUserSearchesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindAdvancedUserSearchesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds user searches by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindUserSearchesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindUserSearchesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Updates an existing advanced user search by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateAdvancedUserSearchByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateAdvancedUserSearchByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Updates an existing advanced user search by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateAdvancedUserSearchByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateAdvancedUserSearchByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

@@ -12,9 +12,9 @@ Flushes commands based on information specified in an XML file
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CommandFlushResponse } from "jamf/dist/sdk/models/operations";
-import { CommandflushStatus } from "jamf/dist/sdk/models/shared";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CommandFlushResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { CommandflushStatus } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
 const sdk = new Jamf({
   security: {
@@ -50,12 +50,12 @@ Flushes commands for devices
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   CreateCommandFlushWithIdAndStatusIdtype,
   CreateCommandFlushWithIdAndStatusResponse,
   CreateCommandFlushWithIdAndStatusStatus,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

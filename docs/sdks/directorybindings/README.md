@@ -18,8 +18,8 @@ Creates a new directory binding by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateDirectoryBindingByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateDirectoryBindingByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a directory binding by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteDirectoryBindingByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteDirectoryBindingByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a directory binding by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteDirectoryBindingByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteDirectoryBindingByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all directory bindings
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindDirectoryBindingsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindDirectoryBindingsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds directory bindings by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindDirectoryBindingsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindDirectoryBindingsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds directory bindings by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindDirectoryBindingsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindDirectoryBindingsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Updates an existing directory binding by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateDirectoryBindingByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateDirectoryBindingByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Updates an existing directory binding by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateDirectoryBindingByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateDirectoryBindingByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

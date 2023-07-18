@@ -18,8 +18,8 @@ Creates a new advanced computer search
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateAdvancedComputerSearchgByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateAdvancedComputerSearchgByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a computer search by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteAdvancedComputerSearchByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteAdvancedComputerSearchByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a computer search by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteAdvancedComputerSearchByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteAdvancedComputerSearchByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all advanced computer searches
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindAdvancedComputerSearchesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindAdvancedComputerSearchesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Additional display fields are returned within the `Computer` object
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindAdvancedComputerSearchesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindAdvancedComputerSearchesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Additional display fields are returned within the `Computer` object
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindAdvancedComputerSearchesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindAdvancedComputerSearchesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Updates an existing advanced computer search by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateAdvancedComputerSearchByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateAdvancedComputerSearchByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Updates an existing advanced computer search by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateAdvancedComputerSearchByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateAdvancedComputerSearchByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

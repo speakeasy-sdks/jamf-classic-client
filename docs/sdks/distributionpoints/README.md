@@ -18,8 +18,8 @@ Creates a new distribution point by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateDistributionPointByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateDistributionPointByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a distribution point by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteDistributionPointByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteDistributionPointByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a distribution point by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteDistributionPointByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteDistributionPointByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all distribution points
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindDistributionPointsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindDistributionPointsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds distribution points by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindDistributionPointsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindDistributionPointsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds distribution points by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindDistributionPointsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindDistributionPointsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Updates an existing distribution point by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateDistributionPointByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateDistributionPointByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Updates an existing distribution point by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateDistributionPointByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateDistributionPointByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

@@ -18,8 +18,8 @@ Creates a new restricted software by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateRestrictedSoftwareByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateRestrictedSoftwareByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes a restricted software by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteRestrictedSoftwareByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteRestrictedSoftwareByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes a restricted software by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteRestrictedSoftwareByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteRestrictedSoftwareByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all restricted software
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindRestrictedSoftwareResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindRestrictedSoftwareResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds restricted software by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindRestrictedSoftwareByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindRestrictedSoftwareByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds restricted software by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindRestrictedSoftwareByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindRestrictedSoftwareByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ Updates an existing restricted software by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateRestrictedSoftwareByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateRestrictedSoftwareByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ Updates an existing restricted software by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateRestrictedSoftwareByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateRestrictedSoftwareByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

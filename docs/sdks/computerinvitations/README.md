@@ -17,8 +17,8 @@ Creates a new computer invitation by id
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateComputerInvitationsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateComputerInvitationsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -56,8 +56,8 @@ Creates a new computer invitation by invitation
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateComputerInvitationsByInvitationResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateComputerInvitationsByInvitationResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -95,8 +95,8 @@ Deletes a computer invitation by id
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteComputerInvitationByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteComputerInvitationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -134,8 +134,8 @@ Deletes a computer invitation by invitation
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteComputerInvitationByInvitationResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteComputerInvitationByInvitationResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -173,8 +173,8 @@ Finds all computer invitations
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerInvitationsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerInvitationsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -209,8 +209,8 @@ Finds computer invitations by id
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerInvitationsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerInvitationsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -248,8 +248,8 @@ Finds computer invitations by invitation
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerInvitationsByInvitationResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerInvitationsByInvitationResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

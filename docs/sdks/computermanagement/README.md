@@ -35,8 +35,8 @@ Finds computer management information by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerManagementByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerManagementByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -74,8 +74,8 @@ Display patch management information for a computer and filter
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerManagementByIdPatchFilterResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerManagementByIdPatchFilterResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -114,8 +114,8 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerManagementByIdSubsetResponse, FindComputerManagementByIdSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerManagementByIdSubsetResponse, FindComputerManagementByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -154,8 +154,8 @@ Finds management information for a computer and username
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerManagementByIdUsernameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerManagementByIdUsernameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -194,11 +194,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindComputerManagementByIdUsernameSubsetResponse,
   FindComputerManagementByIdUsernameSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -238,8 +238,8 @@ Finds computer management information by MAC address
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerManagementByMacAddressResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerManagementByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -277,8 +277,8 @@ Display patch management information for a computer and filter
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerManagementByMacAddressPatchFilterResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerManagementByMacAddressPatchFilterResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -317,11 +317,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindComputerManagementByMacAddressSubsetResponse,
   FindComputerManagementByMacAddressSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -360,8 +360,8 @@ Finds management information for a computer and username
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerManagementByMacAddressUsernameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerManagementByMacAddressUsernameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -400,11 +400,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindComputerManagementByMacAddressUsernameSubsetResponse,
   FindComputerManagementByMacAddressUsernameSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -444,8 +444,8 @@ Finds computer management information by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerManagementByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerManagementByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -483,8 +483,8 @@ Display patch management information for a computer and filter
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerManagementByNamePatchFilterResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerManagementByNamePatchFilterResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -523,11 +523,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindComputerManagementByNameSubsetResponse,
   FindComputerManagementByNameSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -566,8 +566,8 @@ Finds management information for a computer and username
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerManagementByNameUsernameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerManagementByNameUsernameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -606,11 +606,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindComputerManagementByNameUsernameSubsetResponse,
   FindComputerManagementByNameUsernameSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -650,8 +650,8 @@ Finds computer management information by serial number
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerManagementBySerialNumberResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerManagementBySerialNumberResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -689,8 +689,8 @@ Display patch management information for a computer and filter
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerManagementBySerialNumberPatchFilterResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerManagementBySerialNumberPatchFilterResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -729,11 +729,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindComputerManagementBySerialNumberSubsetResponse,
   FindComputerManagementBySerialNumberSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -772,8 +772,8 @@ Finds management information for a computer and username
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerManagementBySerialNumberUsernameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerManagementBySerialNumberUsernameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -812,11 +812,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindComputerManagementBySerialNumberUsernameSubsetResponse,
   FindComputerManagementBySerialNumberUsernameSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -856,8 +856,8 @@ Finds computer management information by UDID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerManagementByUDIDResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerManagementByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -895,11 +895,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindComputerManagementByUDIDSubsetResponse,
   FindComputerManagementByUDIDSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -938,8 +938,8 @@ Display patch management information for a computer and filter
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerManagementByUdidPatchFilterResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerManagementByUdidPatchFilterResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -978,8 +978,8 @@ Finds management information for a computer and username
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerManagementByUdidUsernameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerManagementByUdidUsernameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -1018,11 +1018,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindComputerManagementByUdidUsernameSubsetResponse,
   FindComputerManagementByUdidUsernameSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

@@ -12,8 +12,8 @@ Finds the Jamf Pro SMTP server information
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindSMTPServerResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindSMTPServerResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -48,8 +48,8 @@ Password can be changed via the <password> element. Password should be clear tex
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateSMTPServerResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateSMTPServerResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

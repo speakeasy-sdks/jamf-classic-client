@@ -6,13 +6,13 @@
 ### NPM
 
 ```bash
-npm add jamf
+npm add jamf-classic-sdk-nodejs
 ```
 
 ### Yarn
 
 ```bash
-yarn add jamf
+yarn add jamf-classic-sdk-nodejs
 ```
 <!-- End SDK Installation -->
 
@@ -21,8 +21,8 @@ yarn add jamf
 
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateAccountByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateAccountByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

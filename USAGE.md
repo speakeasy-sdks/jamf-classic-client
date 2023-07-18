@@ -2,8 +2,8 @@
 
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateAccountByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateAccountByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

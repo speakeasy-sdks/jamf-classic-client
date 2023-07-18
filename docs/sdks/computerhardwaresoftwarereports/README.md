@@ -20,9 +20,9 @@ Finds hardware/software reports by computer ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerHardwareSoftwareReportsByIdResponse } from "jamf/dist/sdk/models/operations";
-import { RFCDate } from "jamf/dist/sdk/types";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerHardwareSoftwareReportsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 const sdk = new Jamf({
   security: {
@@ -62,12 +62,12 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindComputerHardwareSoftwareReportsByIdSubsetResponse,
   FindComputerHardwareSoftwareReportsByIdSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
-import { RFCDate } from "jamf/dist/sdk/types";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 const sdk = new Jamf({
   security: {
@@ -108,9 +108,9 @@ Finds hardware/software reports by computer MAC address
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerHardwareSoftwareReportsByMacAddressResponse } from "jamf/dist/sdk/models/operations";
-import { RFCDate } from "jamf/dist/sdk/types";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerHardwareSoftwareReportsByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 const sdk = new Jamf({
   security: {
@@ -150,12 +150,12 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindComputerHardwareSoftwareReportsByMacAddressSubsetResponse,
   FindComputerHardwareSoftwareReportsByMacAddressSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
-import { RFCDate } from "jamf/dist/sdk/types";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 const sdk = new Jamf({
   security: {
@@ -196,9 +196,9 @@ Finds hardware/software reports by computer name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerHardwareSoftwareReportsByNameResponse } from "jamf/dist/sdk/models/operations";
-import { RFCDate } from "jamf/dist/sdk/types";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerHardwareSoftwareReportsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 const sdk = new Jamf({
   security: {
@@ -238,12 +238,12 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindComputerHardwareSoftwareReportsByNameSubsetResponse,
   FindComputerHardwareSoftwareReportsByNameSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
-import { RFCDate } from "jamf/dist/sdk/types";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 const sdk = new Jamf({
   security: {
@@ -284,9 +284,9 @@ Finds hardware/software reports by computer serial number
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerHardwareSoftwareReportsBySerialResponse } from "jamf/dist/sdk/models/operations";
-import { RFCDate } from "jamf/dist/sdk/types";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerHardwareSoftwareReportsBySerialResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 const sdk = new Jamf({
   security: {
@@ -326,12 +326,12 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindComputerHardwareSoftwareReportsBySerialSubsetResponse,
   FindComputerHardwareSoftwareReportsBySerialSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
-import { RFCDate } from "jamf/dist/sdk/types";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 const sdk = new Jamf({
   security: {
@@ -372,9 +372,9 @@ Finds hardware/software reports by computer UDID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputerHardwareSoftwareReportsByUDIDResponse } from "jamf/dist/sdk/models/operations";
-import { RFCDate } from "jamf/dist/sdk/types";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputerHardwareSoftwareReportsByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 const sdk = new Jamf({
   security: {
@@ -414,12 +414,12 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
+import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   FindComputerHardwareSoftwareReportsByUDIDSubsetResponse,
   FindComputerHardwareSoftwareReportsByUDIDSubsetSubset,
-} from "jamf/dist/sdk/models/operations";
-import { RFCDate } from "jamf/dist/sdk/types";
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 const sdk = new Jamf({
   security: {

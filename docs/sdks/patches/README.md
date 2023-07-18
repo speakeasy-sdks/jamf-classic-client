@@ -22,8 +22,8 @@ The patch title must exist within a specific site or Full Jamf Pro. Use this end
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreatePatchSoftwareTitlesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreatePatchSoftwareTitlesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -63,8 +63,8 @@ Deletes a Patch Software Title by ID (Deprecated - Please transition use to Jamf
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteSoftwareTitlesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteSoftwareTitlesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -104,8 +104,8 @@ Deletes a Patch Software Title by name (Deprecated - Please transition use to Ja
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteSoftwareTitlesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteSoftwareTitlesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -145,8 +145,8 @@ Displays information specified with the {version} parameter for a patch specifie
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputersByIDAndTitleVersionResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputersByIDAndTitleVersionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -187,8 +187,8 @@ Displays information specified with the {version} parameter for a patch specifie
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindComputersByNameAndTitleVersionResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindComputersByNameAndTitleVersionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -229,8 +229,8 @@ Finds all patches (Deprecated - Please transition use to Jamf Pro API endpoint "
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPatchesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPatchesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -267,8 +267,8 @@ Finds patches by ID (Deprecated - Please transition use to Jamf Pro API endpoint
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPatchesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPatchesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -308,8 +308,8 @@ Finds the first patch with the name provided (Deprecated - Please transition use
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPatchesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPatchesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -349,8 +349,8 @@ Using an empty <package/> tag will disassociate any previous packages associated
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateSoftwareTitlesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateSoftwareTitlesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -390,8 +390,8 @@ Using an empty <package/> tag will disassociate any previous packages associated
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateSoftwareTitlesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateSoftwareTitlesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

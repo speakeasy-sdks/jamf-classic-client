@@ -18,8 +18,8 @@ Creates user groups by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreateUserGroupsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreateUserGroupsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -57,8 +57,8 @@ Deletes user groups by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteUserGroupsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteUserGroupsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Deletes user groups by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeleteUserGroupsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeleteUserGroupsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -135,8 +135,8 @@ Finds all user groups
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindUserGroupsResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindUserGroupsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -171,8 +171,8 @@ Finds user groups by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindUserGroupsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindUserGroupsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -210,8 +210,8 @@ Finds user groups by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindUserGroupsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindUserGroupsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -249,8 +249,8 @@ One or more users can be added by using "user_additions" instead of "users". One
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateUserGroupsByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateUserGroupsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -288,8 +288,8 @@ One or more users can be added by using "user_additions" instead of "users". One
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdateUserGroupsByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdateUserGroupsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

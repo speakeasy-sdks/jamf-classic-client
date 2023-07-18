@@ -17,8 +17,8 @@ Finds all patch software titles. (Deprecated) Please transition use to Jamf Pro 
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { PatchsoftwaretitlesGetResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { PatchsoftwaretitlesGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -55,8 +55,8 @@ Deletes a patch software title by ID. (Deprecated) Please transition use to Jamf
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { PatchsoftwaretitlesIdByIdDeleteResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { PatchsoftwaretitlesIdByIdDeleteResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -96,8 +96,8 @@ Finds a patch software titles by ID. (Deprecated) Please transition use to Jamf 
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { PatchsoftwaretitlesIdByIdGetResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { PatchsoftwaretitlesIdByIdGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -137,8 +137,8 @@ Creates new patch software title by ID. (Deprecated) Please transition use to Ja
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { PatchsoftwaretitlesIdByIdPostResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { PatchsoftwaretitlesIdByIdPostResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -178,8 +178,8 @@ Including an empty package element <package/> within the version element will di
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { PatchsoftwaretitlesIdByIdPutResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { PatchsoftwaretitlesIdByIdPutResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

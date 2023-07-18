@@ -17,8 +17,8 @@ softwaretitleconfig refers to the ID of the patch software title the policy is t
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreatePatchPolicyBySoftwareTitleConfigIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreatePatchPolicyBySoftwareTitleConfigIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -56,8 +56,8 @@ Deletes a patch policy by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeletePatchPolicyByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeletePatchPolicyByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -97,8 +97,8 @@ Finds all patch policies. (Deprecated). Please transition use to Jamf Pro API en
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPatchPoliciesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPatchPoliciesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -133,8 +133,8 @@ Display subsets of information for a patch policy
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPatchPoliciesByIdSubsetResponse, FindPatchPoliciesByIdSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPatchPoliciesByIdSubsetResponse, FindPatchPoliciesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -175,8 +175,8 @@ softwaretitleconfigid refers to the ID of the patch software title the policy is
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPatchPoliciesBySoftwareTitleConfigIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPatchPoliciesBySoftwareTitleConfigIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -214,8 +214,8 @@ Finds a patch policy by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPatchPolicyByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPatchPolicyByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -253,8 +253,8 @@ Updates an existing patch policy by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdatePatchPolicyByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdatePatchPolicyByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

@@ -22,8 +22,8 @@ Creates a new policy by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { CreatePolicyByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { CreatePolicyByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -61,8 +61,8 @@ Deletes a policy by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeletePolicyByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeletePolicyByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -100,8 +100,8 @@ Deletes a policy by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { DeletePolicyByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { DeletePolicyByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -139,8 +139,8 @@ Finds all policies
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPoliciesResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPoliciesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -175,8 +175,8 @@ Category may be specified by id or name, or 'None' for policies with no category
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPoliciesByCategoryResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPoliciesByCategoryResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -214,8 +214,8 @@ Finds policies by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPoliciesByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPoliciesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -253,8 +253,8 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPoliciesByIdSubsetResponse, FindPoliciesByIdSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPoliciesByIdSubsetResponse, FindPoliciesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -293,8 +293,8 @@ Finds policies by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPoliciesByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPoliciesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -332,8 +332,8 @@ Subset values can also be appended using an ampersand to return multiple subsets
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPoliciesByNameSubsetResponse, FindPoliciesByNameSubsetSubset } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPoliciesByNameSubsetResponse, FindPoliciesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -372,8 +372,8 @@ The value 'casper' refers to Casper Remote. The value 'jss' refers to policies c
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { FindPoliciesByTypeCreatedBy, FindPoliciesByTypeResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { FindPoliciesByTypeCreatedBy, FindPoliciesByTypeResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -411,8 +411,8 @@ Updates an existing policy by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdatePolicyByIdResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdatePolicyByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
@@ -450,8 +450,8 @@ Updates an existing policy by name
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { UpdatePolicyByNameResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { UpdatePolicyByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

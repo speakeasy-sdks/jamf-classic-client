@@ -11,8 +11,8 @@ Finds all available title from a source by ID
 ### Example Usage
 
 ```typescript
-import { Jamf } from "jamf";
-import { PatchavailabletitlesSourceidByIdGetResponse } from "jamf/dist/sdk/models/operations";
+import { Jamf } from "jamf-classic-sdk-nodejs";
+import { PatchavailabletitlesSourceidByIdGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {
