@@ -3,8 +3,107 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose } from "class-transformer";
+
+/**
+ * OK
+ */
+export class FindSMTPServer200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    authorizationRequired?: boolean;
+
+    @SpeakeasyMetadata()
+    enabled?: boolean;
+
+    /**
+     * Hostname or IP address of the SMTP server
+     */
+    @SpeakeasyMetadata()
+    host?: string;
+
+    @SpeakeasyMetadata()
+    password?: string;
+
+    @SpeakeasyMetadata()
+    port?: number;
+
+    @SpeakeasyMetadata()
+    sendFromEmail?: string;
+
+    @SpeakeasyMetadata()
+    sendFromName?: string;
+
+    @SpeakeasyMetadata()
+    ssl?: boolean;
+
+    /**
+     * Measured in seconds
+     */
+    @SpeakeasyMetadata()
+    timeout?: number;
+
+    @SpeakeasyMetadata()
+    tls?: boolean;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+/**
+ * OK
+ */
+export class FindSMTPServer200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "authorization_required" })
+    authorizationRequired?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "enabled" })
+    enabled?: boolean;
+
+    /**
+     * Hostname or IP address of the SMTP server
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "host" })
+    host?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "password" })
+    password?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "port" })
+    port?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "send_from_email" })
+    sendFromEmail?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "send_from_name" })
+    sendFromName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "ssl" })
+    ssl?: boolean;
+
+    /**
+     * Measured in seconds
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "timeout" })
+    timeout?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "tls" })
+    tls?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
 
 export class FindSMTPServerResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -23,5 +122,5 @@ export class FindSMTPServerResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    smtpServer?: shared.SmtpServer;
+    findSMTPServer200ApplicationJSONObject?: FindSMTPServer200ApplicationJSON;
 }

@@ -5,7 +5,6 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
-import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -224,11 +223,11 @@ export class Buildings {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.buildings = [];
+                    res.findBuildings200ApplicationJSONObjects = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.buildings = utils.objectToClass(
+                    res.findBuildings200ApplicationJSONObjects = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.Buildings,
+                        operations.FindBuildings200ApplicationJSON,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -297,7 +296,10 @@ export class Buildings {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.building = utils.objectToClass(JSON.parse(decodedRes), shared.Building);
+                    res.findBuildingsById200ApplicationJSONObject = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        operations.FindBuildingsById200ApplicationJSON
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -365,7 +367,10 @@ export class Buildings {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.building = utils.objectToClass(JSON.parse(decodedRes), shared.Building);
+                    res.findBuildingsByName200ApplicationJSONObject = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        operations.FindBuildingsByName200ApplicationJSON
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

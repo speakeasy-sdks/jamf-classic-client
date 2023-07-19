@@ -5,7 +5,6 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
-import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -310,11 +309,11 @@ export class Computerinvitations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerInvitations = [];
+                    res.findComputerInvitations200ApplicationJSONObjects = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.computerInvitations = utils.objectToClass(
+                    res.findComputerInvitations200ApplicationJSONObjects = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.ComputerInvitations,
+                        operations.FindComputerInvitations200ApplicationJSON,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -384,9 +383,9 @@ export class Computerinvitations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerInvitation = utils.objectToClass(
+                    res.findComputerInvitationsById200ApplicationJSONObject = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.ComputerInvitation
+                        operations.FindComputerInvitationsById200ApplicationJSON
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -459,10 +458,11 @@ export class Computerinvitations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerInvitation = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerInvitation
-                    );
+                    res.findComputerInvitationsByInvitation200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerInvitationsByInvitation200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

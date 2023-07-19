@@ -5,6 +5,107 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AxiosResponse } from "axios";
 
+export enum UpdateComputerInventoryCollectionRequestBodyApplicationsApplicationPlatform {
+    Mac = "Mac",
+    Windows = "Windows",
+}
+
+export class UpdateComputerInventoryCollectionRequestBodyApplicationsApplication extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    platform?: UpdateComputerInventoryCollectionRequestBodyApplicationsApplicationPlatform;
+}
+
+export class UpdateComputerInventoryCollectionRequestBodyApplications extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    application?: UpdateComputerInventoryCollectionRequestBodyApplicationsApplication;
+}
+
+export enum UpdateComputerInventoryCollectionRequestBodyFontsFontPlatform {
+    Mac = "Mac",
+    Windows = "Windows",
+}
+
+export class UpdateComputerInventoryCollectionRequestBodyFontsFont extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    platform?: UpdateComputerInventoryCollectionRequestBodyFontsFontPlatform;
+}
+
+export class UpdateComputerInventoryCollectionRequestBodyFonts extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    font?: UpdateComputerInventoryCollectionRequestBodyFontsFont;
+}
+
+export enum UpdateComputerInventoryCollectionRequestBodyPluginsPluginPlatform {
+    Mac = "Mac",
+    Windows = "Windows",
+}
+
+export class UpdateComputerInventoryCollectionRequestBodyPluginsPlugin extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    platform?: UpdateComputerInventoryCollectionRequestBodyPluginsPluginPlatform;
+}
+
+export class UpdateComputerInventoryCollectionRequestBodyPlugins extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    plugin?: UpdateComputerInventoryCollectionRequestBodyPluginsPlugin;
+}
+
+export class UpdateComputerInventoryCollectionRequestBody extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    activeServices?: boolean;
+
+    @SpeakeasyMetadata({ elemType: UpdateComputerInventoryCollectionRequestBodyApplications })
+    applications?: UpdateComputerInventoryCollectionRequestBodyApplications[];
+
+    @SpeakeasyMetadata()
+    availableSoftwareUpdates?: boolean;
+
+    @SpeakeasyMetadata()
+    computerLocationInformation?: boolean;
+
+    @SpeakeasyMetadata({ elemType: UpdateComputerInventoryCollectionRequestBodyFonts })
+    fonts?: UpdateComputerInventoryCollectionRequestBodyFonts[];
+
+    @SpeakeasyMetadata()
+    hiddenAccounts?: boolean;
+
+    @SpeakeasyMetadata()
+    homeDirectorySizes?: boolean;
+
+    @SpeakeasyMetadata()
+    inclueApplications?: boolean;
+
+    @SpeakeasyMetadata()
+    inclueFonts?: boolean;
+
+    @SpeakeasyMetadata()
+    incluePlugins?: boolean;
+
+    @SpeakeasyMetadata()
+    localUserAccounts?: boolean;
+
+    @SpeakeasyMetadata()
+    mobileDeviceAppPurchasingInfo?: boolean;
+
+    @SpeakeasyMetadata()
+    packageReceipts?: boolean;
+
+    @SpeakeasyMetadata({ elemType: UpdateComputerInventoryCollectionRequestBodyPlugins })
+    plugins?: UpdateComputerInventoryCollectionRequestBodyPlugins[];
+
+    @SpeakeasyMetadata()
+    printers?: boolean;
+}
+
 export class UpdateComputerInventoryCollectionResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     contentType: string;

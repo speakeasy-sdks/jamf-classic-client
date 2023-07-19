@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose } from "class-transformer";
 
 export class FindDiskEncryptionConfigurationsByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,72 @@ export class FindDiskEncryptionConfigurationsByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export enum FindDiskEncryptionConfigurationsById200ApplicationXMLFileVaultEnabledUsers {
+    CurrentOrNextUser = "Current or Next User",
+    ManagementAccount = "Management Account",
+}
+
+export enum FindDiskEncryptionConfigurationsById200ApplicationXMLKeyType {
+    Individual = "Individual",
+    Institutional = "Institutional",
+    IndividualAndInstitutional = "Individual And Institutional",
+}
+
+/**
+ * OK
+ */
+export class FindDiskEncryptionConfigurationsById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    fileVaultEnabledUsers?: FindDiskEncryptionConfigurationsById200ApplicationXMLFileVaultEnabledUsers;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    keyType?: FindDiskEncryptionConfigurationsById200ApplicationXMLKeyType;
+
+    /**
+     * Name of the disk encryption configuration
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export enum FindDiskEncryptionConfigurationsById200ApplicationJSONFileVaultEnabledUsers {
+    CurrentOrNextUser = "Current or Next User",
+    ManagementAccount = "Management Account",
+}
+
+export enum FindDiskEncryptionConfigurationsById200ApplicationJSONKeyType {
+    Individual = "Individual",
+    Institutional = "Institutional",
+    IndividualAndInstitutional = "Individual And Institutional",
+}
+
+/**
+ * OK
+ */
+export class FindDiskEncryptionConfigurationsById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "file_vault_enabled_users" })
+    fileVaultEnabledUsers?: FindDiskEncryptionConfigurationsById200ApplicationJSONFileVaultEnabledUsers;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "key_type" })
+    keyType?: FindDiskEncryptionConfigurationsById200ApplicationJSONKeyType;
+
+    /**
+     * Name of the disk encryption configuration
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
 }
 
 export class FindDiskEncryptionConfigurationsByIdResponse extends SpeakeasyBase {
@@ -31,5 +97,5 @@ export class FindDiskEncryptionConfigurationsByIdResponse extends SpeakeasyBase 
      * OK
      */
     @SpeakeasyMetadata()
-    diskEncryptionConfiguration?: shared.DiskEncryptionConfiguration;
+    findDiskEncryptionConfigurationsById200ApplicationJSONObject?: FindDiskEncryptionConfigurationsById200ApplicationJSON;
 }

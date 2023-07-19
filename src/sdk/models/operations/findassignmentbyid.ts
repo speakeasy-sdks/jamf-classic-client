@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindAssignmentByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,438 @@ export class FindAssignmentByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export class FindAssignmentById200ApplicationXMLEbooksEbook extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    adamId?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationXMLEbooks extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    ebook?: FindAssignmentById200ApplicationXMLEbooksEbook;
+}
+
+export class FindAssignmentById200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    vppAdminAccountId: number;
+
+    @SpeakeasyMetadata()
+    vppAdminAccountName?: string;
+}
+
+export class FindAssignmentById200ApplicationXMLIosAppsIosApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    adamId?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationXMLIosApps extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    iosApp?: FindAssignmentById200ApplicationXMLIosAppsIosApp;
+}
+
+export class FindAssignmentById200ApplicationXMLMacAppsMacApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    adamId?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationXMLMacApps extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    macApp?: FindAssignmentById200ApplicationXMLMacAppsMacApp;
+}
+
+export class FindAssignmentById200ApplicationXMLScopeExclusionsJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationXMLScopeExclusionsJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindAssignmentById200ApplicationXMLScopeExclusionsJssUserGroupsUserGroup;
+}
+
+export class FindAssignmentById200ApplicationXMLScopeExclusionsJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationXMLScopeExclusionsJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindAssignmentById200ApplicationXMLScopeExclusionsJssUsersUser;
+}
+
+export class FindAssignmentById200ApplicationXMLScopeExclusionsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationXMLScopeExclusionsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindAssignmentById200ApplicationXMLScopeExclusionsUserGroupsUserGroup;
+}
+
+export class FindAssignmentById200ApplicationXMLScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindAssignmentById200ApplicationXMLScopeExclusionsJssUserGroups,
+    })
+    jssUserGroups?: FindAssignmentById200ApplicationXMLScopeExclusionsJssUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindAssignmentById200ApplicationXMLScopeExclusionsJssUsers })
+    jssUsers?: FindAssignmentById200ApplicationXMLScopeExclusionsJssUsers[];
+
+    @SpeakeasyMetadata({ elemType: FindAssignmentById200ApplicationXMLScopeExclusionsUserGroups })
+    userGroups?: FindAssignmentById200ApplicationXMLScopeExclusionsUserGroups[];
+}
+
+export class FindAssignmentById200ApplicationXMLScopeJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationXMLScopeJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindAssignmentById200ApplicationXMLScopeJssUserGroupsUserGroup;
+}
+
+export class FindAssignmentById200ApplicationXMLScopeJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationXMLScopeJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindAssignmentById200ApplicationXMLScopeJssUsersUser;
+}
+
+export class FindAssignmentById200ApplicationXMLScopeLimitationsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationXMLScopeLimitationsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindAssignmentById200ApplicationXMLScopeLimitationsUserGroupsUserGroup;
+}
+
+export class FindAssignmentById200ApplicationXMLScopeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindAssignmentById200ApplicationXMLScopeLimitationsUserGroups })
+    userGroups?: FindAssignmentById200ApplicationXMLScopeLimitationsUserGroups[];
+}
+
+export class FindAssignmentById200ApplicationXMLScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    allJssUsers?: boolean;
+
+    @SpeakeasyMetadata()
+    exclusions?: FindAssignmentById200ApplicationXMLScopeExclusions;
+
+    @SpeakeasyMetadata({ elemType: FindAssignmentById200ApplicationXMLScopeJssUserGroups })
+    jssUserGroups?: FindAssignmentById200ApplicationXMLScopeJssUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindAssignmentById200ApplicationXMLScopeJssUsers })
+    jssUsers?: FindAssignmentById200ApplicationXMLScopeJssUsers[];
+
+    @SpeakeasyMetadata()
+    limitations?: FindAssignmentById200ApplicationXMLScopeLimitations;
+}
+
+/**
+ * OK
+ */
+export class FindAssignmentById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindAssignmentById200ApplicationXMLEbooks })
+    ebooks?: FindAssignmentById200ApplicationXMLEbooks[];
+
+    @SpeakeasyMetadata()
+    general?: FindAssignmentById200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata({ elemType: FindAssignmentById200ApplicationXMLIosApps })
+    iosApps?: FindAssignmentById200ApplicationXMLIosApps[];
+
+    @SpeakeasyMetadata({ elemType: FindAssignmentById200ApplicationXMLMacApps })
+    macApps?: FindAssignmentById200ApplicationXMLMacApps[];
+
+    @SpeakeasyMetadata()
+    scope?: FindAssignmentById200ApplicationXMLScope;
+}
+
+export class FindAssignmentById200ApplicationJSONEbooksEbook extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "adam_id" })
+    adamId?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationJSONEbooks extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "ebook" })
+    @Type(() => FindAssignmentById200ApplicationJSONEbooksEbook)
+    ebook?: FindAssignmentById200ApplicationJSONEbooksEbook;
+}
+
+export class FindAssignmentById200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "vpp_admin_account_id" })
+    vppAdminAccountId: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "vpp_admin_account_name" })
+    vppAdminAccountName?: string;
+}
+
+export class FindAssignmentById200ApplicationJSONIosAppsIosApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "adam_id" })
+    adamId?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationJSONIosApps extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "ios_app" })
+    @Type(() => FindAssignmentById200ApplicationJSONIosAppsIosApp)
+    iosApp?: FindAssignmentById200ApplicationJSONIosAppsIosApp;
+}
+
+export class FindAssignmentById200ApplicationJSONMacAppsMacApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "adam_id" })
+    adamId?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationJSONMacApps extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mac_app" })
+    @Type(() => FindAssignmentById200ApplicationJSONMacAppsMacApp)
+    macApp?: FindAssignmentById200ApplicationJSONMacAppsMacApp;
+}
+
+export class FindAssignmentById200ApplicationJSONScopeExclusionsJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationJSONScopeExclusionsJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindAssignmentById200ApplicationJSONScopeExclusionsJssUserGroupsUserGroup)
+    userGroup?: FindAssignmentById200ApplicationJSONScopeExclusionsJssUserGroupsUserGroup;
+}
+
+export class FindAssignmentById200ApplicationJSONScopeExclusionsJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationJSONScopeExclusionsJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindAssignmentById200ApplicationJSONScopeExclusionsJssUsersUser)
+    user?: FindAssignmentById200ApplicationJSONScopeExclusionsJssUsersUser;
+}
+
+export class FindAssignmentById200ApplicationJSONScopeExclusionsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationJSONScopeExclusionsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindAssignmentById200ApplicationJSONScopeExclusionsUserGroupsUserGroup)
+    userGroup?: FindAssignmentById200ApplicationJSONScopeExclusionsUserGroupsUserGroup;
+}
+
+export class FindAssignmentById200ApplicationJSONScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindAssignmentById200ApplicationJSONScopeExclusionsJssUserGroups,
+    })
+    @Expose({ name: "jss_user_groups" })
+    @Type(() => FindAssignmentById200ApplicationJSONScopeExclusionsJssUserGroups)
+    jssUserGroups?: FindAssignmentById200ApplicationJSONScopeExclusionsJssUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindAssignmentById200ApplicationJSONScopeExclusionsJssUsers })
+    @Expose({ name: "jss_users" })
+    @Type(() => FindAssignmentById200ApplicationJSONScopeExclusionsJssUsers)
+    jssUsers?: FindAssignmentById200ApplicationJSONScopeExclusionsJssUsers[];
+
+    @SpeakeasyMetadata({ elemType: FindAssignmentById200ApplicationJSONScopeExclusionsUserGroups })
+    @Expose({ name: "user_groups" })
+    @Type(() => FindAssignmentById200ApplicationJSONScopeExclusionsUserGroups)
+    userGroups?: FindAssignmentById200ApplicationJSONScopeExclusionsUserGroups[];
+}
+
+export class FindAssignmentById200ApplicationJSONScopeJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationJSONScopeJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindAssignmentById200ApplicationJSONScopeJssUserGroupsUserGroup)
+    userGroup?: FindAssignmentById200ApplicationJSONScopeJssUserGroupsUserGroup;
+}
+
+export class FindAssignmentById200ApplicationJSONScopeJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationJSONScopeJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindAssignmentById200ApplicationJSONScopeJssUsersUser)
+    user?: FindAssignmentById200ApplicationJSONScopeJssUsersUser;
+}
+
+export class FindAssignmentById200ApplicationJSONScopeLimitationsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindAssignmentById200ApplicationJSONScopeLimitationsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindAssignmentById200ApplicationJSONScopeLimitationsUserGroupsUserGroup)
+    userGroup?: FindAssignmentById200ApplicationJSONScopeLimitationsUserGroupsUserGroup;
+}
+
+export class FindAssignmentById200ApplicationJSONScopeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindAssignmentById200ApplicationJSONScopeLimitationsUserGroups })
+    @Expose({ name: "user_groups" })
+    @Type(() => FindAssignmentById200ApplicationJSONScopeLimitationsUserGroups)
+    userGroups?: FindAssignmentById200ApplicationJSONScopeLimitationsUserGroups[];
+}
+
+export class FindAssignmentById200ApplicationJSONScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "all_jss_users" })
+    allJssUsers?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "exclusions" })
+    @Type(() => FindAssignmentById200ApplicationJSONScopeExclusions)
+    exclusions?: FindAssignmentById200ApplicationJSONScopeExclusions;
+
+    @SpeakeasyMetadata({ elemType: FindAssignmentById200ApplicationJSONScopeJssUserGroups })
+    @Expose({ name: "jss_user_groups" })
+    @Type(() => FindAssignmentById200ApplicationJSONScopeJssUserGroups)
+    jssUserGroups?: FindAssignmentById200ApplicationJSONScopeJssUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindAssignmentById200ApplicationJSONScopeJssUsers })
+    @Expose({ name: "jss_users" })
+    @Type(() => FindAssignmentById200ApplicationJSONScopeJssUsers)
+    jssUsers?: FindAssignmentById200ApplicationJSONScopeJssUsers[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "limitations" })
+    @Type(() => FindAssignmentById200ApplicationJSONScopeLimitations)
+    limitations?: FindAssignmentById200ApplicationJSONScopeLimitations;
+}
+
+/**
+ * OK
+ */
+export class FindAssignmentById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindAssignmentById200ApplicationJSONEbooks })
+    @Expose({ name: "ebooks" })
+    @Type(() => FindAssignmentById200ApplicationJSONEbooks)
+    ebooks?: FindAssignmentById200ApplicationJSONEbooks[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindAssignmentById200ApplicationJSONGeneral)
+    general?: FindAssignmentById200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata({ elemType: FindAssignmentById200ApplicationJSONIosApps })
+    @Expose({ name: "ios_apps" })
+    @Type(() => FindAssignmentById200ApplicationJSONIosApps)
+    iosApps?: FindAssignmentById200ApplicationJSONIosApps[];
+
+    @SpeakeasyMetadata({ elemType: FindAssignmentById200ApplicationJSONMacApps })
+    @Expose({ name: "mac_apps" })
+    @Type(() => FindAssignmentById200ApplicationJSONMacApps)
+    macApps?: FindAssignmentById200ApplicationJSONMacApps[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "scope" })
+    @Type(() => FindAssignmentById200ApplicationJSONScope)
+    scope?: FindAssignmentById200ApplicationJSONScope;
 }
 
 export class FindAssignmentByIdResponse extends SpeakeasyBase {
@@ -31,5 +463,5 @@ export class FindAssignmentByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    vppAssignment?: shared.VppAssignment;
+    findAssignmentById200ApplicationJSONObject?: FindAssignmentById200ApplicationJSON;
 }

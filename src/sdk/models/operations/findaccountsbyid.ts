@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindAccountsByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,331 @@ export class FindAccountsByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export enum FindAccountsById200ApplicationXMLAccessLevel {
+    FullAccess = "Full Access",
+    SiteAccess = "Site Access",
+    GroupAccess = "Group Access",
+}
+
+export enum FindAccountsById200ApplicationXMLEnabled {
+    Enabled = "Enabled",
+    Disabled = "Disabled",
+}
+
+export class FindAccountsById200ApplicationXMLLdapServer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export enum FindAccountsById200ApplicationXMLPrivilegeSet {
+    Administrator = "Administrator",
+    Auditor = "Auditor",
+    EnrollmentOnly = "Enrollment Only",
+    Custom = "Custom",
+}
+
+export class FindAccountsById200ApplicationXMLPrivilegesCasperAdmin extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    privilege?: string;
+}
+
+export class FindAccountsById200ApplicationXMLPrivilegesCasperImaging extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    privilege?: string;
+}
+
+export class FindAccountsById200ApplicationXMLPrivilegesCasperRemote extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    privilege?: string;
+}
+
+export class FindAccountsById200ApplicationXMLPrivilegesJssActions extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    privilege?: string;
+}
+
+export class FindAccountsById200ApplicationXMLPrivilegesJssObjects extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    privilege?: string;
+}
+
+export class FindAccountsById200ApplicationXMLPrivilegesJssSettings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    privilege?: string;
+}
+
+export class FindAccountsById200ApplicationXMLPrivilegesRecon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    privilege?: string;
+}
+
+export class FindAccountsById200ApplicationXMLPrivileges extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindAccountsById200ApplicationXMLPrivilegesCasperAdmin })
+    casperAdmin?: FindAccountsById200ApplicationXMLPrivilegesCasperAdmin[];
+
+    @SpeakeasyMetadata({ elemType: FindAccountsById200ApplicationXMLPrivilegesCasperImaging })
+    casperImaging?: FindAccountsById200ApplicationXMLPrivilegesCasperImaging[];
+
+    @SpeakeasyMetadata({ elemType: FindAccountsById200ApplicationXMLPrivilegesCasperRemote })
+    casperRemote?: FindAccountsById200ApplicationXMLPrivilegesCasperRemote[];
+
+    @SpeakeasyMetadata({ elemType: FindAccountsById200ApplicationXMLPrivilegesJssActions })
+    jssActions?: FindAccountsById200ApplicationXMLPrivilegesJssActions[];
+
+    @SpeakeasyMetadata({ elemType: FindAccountsById200ApplicationXMLPrivilegesJssObjects })
+    jssObjects?: FindAccountsById200ApplicationXMLPrivilegesJssObjects[];
+
+    @SpeakeasyMetadata({ elemType: FindAccountsById200ApplicationXMLPrivilegesJssSettings })
+    jssSettings?: FindAccountsById200ApplicationXMLPrivilegesJssSettings[];
+
+    @SpeakeasyMetadata({ elemType: FindAccountsById200ApplicationXMLPrivilegesRecon })
+    recon?: FindAccountsById200ApplicationXMLPrivilegesRecon[];
+}
+
+export class FindAccountsById200ApplicationXMLSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindAccountsById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    accessLevel?: FindAccountsById200ApplicationXMLAccessLevel;
+
+    @SpeakeasyMetadata()
+    directoryUser?: boolean;
+
+    @SpeakeasyMetadata()
+    email?: string;
+
+    @SpeakeasyMetadata()
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    enabled?: FindAccountsById200ApplicationXMLEnabled;
+
+    @SpeakeasyMetadata()
+    forcePasswordChange?: boolean;
+
+    @SpeakeasyMetadata()
+    fullName?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    ldapServer?: FindAccountsById200ApplicationXMLLdapServer;
+
+    /**
+     * Name of the account
+     */
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    privilegeSet?: FindAccountsById200ApplicationXMLPrivilegeSet;
+
+    @SpeakeasyMetadata()
+    privileges?: FindAccountsById200ApplicationXMLPrivileges;
+
+    @SpeakeasyMetadata()
+    site?: FindAccountsById200ApplicationXMLSite;
+}
+
+export enum FindAccountsById200ApplicationJSONAccessLevel {
+    FullAccess = "Full Access",
+    SiteAccess = "Site Access",
+    GroupAccess = "Group Access",
+}
+
+export enum FindAccountsById200ApplicationJSONEnabled {
+    Enabled = "Enabled",
+    Disabled = "Disabled",
+}
+
+export class FindAccountsById200ApplicationJSONLdapServer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export enum FindAccountsById200ApplicationJSONPrivilegeSet {
+    Administrator = "Administrator",
+    Auditor = "Auditor",
+    EnrollmentOnly = "Enrollment Only",
+    Custom = "Custom",
+}
+
+export class FindAccountsById200ApplicationJSONPrivilegesCasperAdmin extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "privilege" })
+    privilege?: string;
+}
+
+export class FindAccountsById200ApplicationJSONPrivilegesCasperImaging extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "privilege" })
+    privilege?: string;
+}
+
+export class FindAccountsById200ApplicationJSONPrivilegesCasperRemote extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "privilege" })
+    privilege?: string;
+}
+
+export class FindAccountsById200ApplicationJSONPrivilegesJssActions extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "privilege" })
+    privilege?: string;
+}
+
+export class FindAccountsById200ApplicationJSONPrivilegesJssObjects extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "privilege" })
+    privilege?: string;
+}
+
+export class FindAccountsById200ApplicationJSONPrivilegesJssSettings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "privilege" })
+    privilege?: string;
+}
+
+export class FindAccountsById200ApplicationJSONPrivilegesRecon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "privilege" })
+    privilege?: string;
+}
+
+export class FindAccountsById200ApplicationJSONPrivileges extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindAccountsById200ApplicationJSONPrivilegesCasperAdmin })
+    @Expose({ name: "casper_admin" })
+    @Type(() => FindAccountsById200ApplicationJSONPrivilegesCasperAdmin)
+    casperAdmin?: FindAccountsById200ApplicationJSONPrivilegesCasperAdmin[];
+
+    @SpeakeasyMetadata({ elemType: FindAccountsById200ApplicationJSONPrivilegesCasperImaging })
+    @Expose({ name: "casper_imaging" })
+    @Type(() => FindAccountsById200ApplicationJSONPrivilegesCasperImaging)
+    casperImaging?: FindAccountsById200ApplicationJSONPrivilegesCasperImaging[];
+
+    @SpeakeasyMetadata({ elemType: FindAccountsById200ApplicationJSONPrivilegesCasperRemote })
+    @Expose({ name: "casper_remote" })
+    @Type(() => FindAccountsById200ApplicationJSONPrivilegesCasperRemote)
+    casperRemote?: FindAccountsById200ApplicationJSONPrivilegesCasperRemote[];
+
+    @SpeakeasyMetadata({ elemType: FindAccountsById200ApplicationJSONPrivilegesJssActions })
+    @Expose({ name: "jss_actions" })
+    @Type(() => FindAccountsById200ApplicationJSONPrivilegesJssActions)
+    jssActions?: FindAccountsById200ApplicationJSONPrivilegesJssActions[];
+
+    @SpeakeasyMetadata({ elemType: FindAccountsById200ApplicationJSONPrivilegesJssObjects })
+    @Expose({ name: "jss_objects" })
+    @Type(() => FindAccountsById200ApplicationJSONPrivilegesJssObjects)
+    jssObjects?: FindAccountsById200ApplicationJSONPrivilegesJssObjects[];
+
+    @SpeakeasyMetadata({ elemType: FindAccountsById200ApplicationJSONPrivilegesJssSettings })
+    @Expose({ name: "jss_settings" })
+    @Type(() => FindAccountsById200ApplicationJSONPrivilegesJssSettings)
+    jssSettings?: FindAccountsById200ApplicationJSONPrivilegesJssSettings[];
+
+    @SpeakeasyMetadata({ elemType: FindAccountsById200ApplicationJSONPrivilegesRecon })
+    @Expose({ name: "recon" })
+    @Type(() => FindAccountsById200ApplicationJSONPrivilegesRecon)
+    recon?: FindAccountsById200ApplicationJSONPrivilegesRecon[];
+}
+
+export class FindAccountsById200ApplicationJSONSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindAccountsById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "access_level" })
+    accessLevel?: FindAccountsById200ApplicationJSONAccessLevel;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "directory_user" })
+    directoryUser?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "email" })
+    email?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "email_address" })
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "enabled" })
+    enabled?: FindAccountsById200ApplicationJSONEnabled;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "force_password_change" })
+    forcePasswordChange?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "full_name" })
+    fullName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "ldap_server" })
+    @Type(() => FindAccountsById200ApplicationJSONLdapServer)
+    ldapServer?: FindAccountsById200ApplicationJSONLdapServer;
+
+    /**
+     * Name of the account
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "privilege_set" })
+    privilegeSet?: FindAccountsById200ApplicationJSONPrivilegeSet;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "privileges" })
+    @Type(() => FindAccountsById200ApplicationJSONPrivileges)
+    privileges?: FindAccountsById200ApplicationJSONPrivileges;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindAccountsById200ApplicationJSONSite)
+    site?: FindAccountsById200ApplicationJSONSite;
 }
 
 export class FindAccountsByIdResponse extends SpeakeasyBase {
@@ -31,5 +356,5 @@ export class FindAccountsByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    account?: shared.Account;
+    findAccountsById200ApplicationJSONObject?: FindAccountsById200ApplicationJSON;
 }

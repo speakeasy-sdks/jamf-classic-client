@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindWebhooksByNameRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,218 @@ export class FindWebhooksByNameRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
     name: string;
+}
+
+export enum FindWebhooksByName200ApplicationXMLAuthenticationType {
+    None = "NONE",
+    Basic = "BASIC",
+}
+
+export enum FindWebhooksByName200ApplicationXMLContentType {
+    TextXml = "text/xml",
+    ApplicationJson = "application/json",
+}
+
+export class FindWebhooksByName200ApplicationXMLDisplayFieldsDisplayField extends SpeakeasyBase {
+    /**
+     * Name of the display field to include for smart group based webhook events
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindWebhooksByName200ApplicationXMLDisplayFields extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    displayField?: FindWebhooksByName200ApplicationXMLDisplayFieldsDisplayField;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export enum FindWebhooksByName200ApplicationXMLEvent {
+    ComputerAdded = "ComputerAdded",
+    ComputerCheckIn = "ComputerCheckIn",
+    ComputerInventoryCompleted = "ComputerInventoryCompleted",
+    ComputerPolicyFinished = "ComputerPolicyFinished",
+    ComputerPushCapabilityChanged = "ComputerPushCapabilityChanged",
+    JSSShutdown = "JSSShutdown",
+    JSSStartup = "JSSStartup",
+    MobileDeviceCheckIn = "MobileDeviceCheckIn",
+    MobileDeviceCommandCompleted = "MobileDeviceCommandCompleted",
+    MobileDeviceEnrolled = "MobileDeviceEnrolled",
+    MobileDevicePushSent = "MobileDevicePushSent",
+    MobileDeviceUnEnrolled = "MobileDeviceUnEnrolled",
+    PatchSoftwareTitleUpdated = "PatchSoftwareTitleUpdated",
+    PushSent = "PushSent",
+    RestAPIOperation = "RestAPIOperation",
+    SCEPChallenge = "SCEPChallenge",
+    SmartGroupComputerMembershipChange = "SmartGroupComputerMembershipChange",
+    SmartGroupMobileDeviceMembershipChange = "SmartGroupMobileDeviceMembershipChange",
+}
+
+/**
+ * OK
+ */
+export class FindWebhooksByName200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    authenticationType?: FindWebhooksByName200ApplicationXMLAuthenticationType;
+
+    /**
+     * Number of seconds to attempt to connect to the webhooks host server
+     */
+    @SpeakeasyMetadata()
+    connectionTimeout?: number;
+
+    @SpeakeasyMetadata()
+    contentType?: FindWebhooksByName200ApplicationXMLContentType;
+
+    @SpeakeasyMetadata({ elemType: FindWebhooksByName200ApplicationXMLDisplayFields })
+    displayFields?: FindWebhooksByName200ApplicationXMLDisplayFields[];
+
+    @SpeakeasyMetadata()
+    enableDisplayFieldsForGroupObject?: boolean;
+
+    @SpeakeasyMetadata()
+    enabled?: boolean;
+
+    @SpeakeasyMetadata()
+    event: FindWebhooksByName200ApplicationXMLEvent;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    password?: string;
+
+    /**
+     * Number of seconds to wait for a response from the webhooks host server after sending a request
+     */
+    @SpeakeasyMetadata()
+    readTimeout?: number;
+
+    @SpeakeasyMetadata()
+    url: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export enum FindWebhooksByName200ApplicationJSONAuthenticationType {
+    None = "NONE",
+    Basic = "BASIC",
+}
+
+export enum FindWebhooksByName200ApplicationJSONContentType {
+    TextXml = "text/xml",
+    ApplicationJson = "application/json",
+}
+
+export class FindWebhooksByName200ApplicationJSONDisplayFieldsDisplayField extends SpeakeasyBase {
+    /**
+     * Name of the display field to include for smart group based webhook events
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindWebhooksByName200ApplicationJSONDisplayFields extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "display_field" })
+    @Type(() => FindWebhooksByName200ApplicationJSONDisplayFieldsDisplayField)
+    displayField?: FindWebhooksByName200ApplicationJSONDisplayFieldsDisplayField;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export enum FindWebhooksByName200ApplicationJSONEvent {
+    ComputerAdded = "ComputerAdded",
+    ComputerCheckIn = "ComputerCheckIn",
+    ComputerInventoryCompleted = "ComputerInventoryCompleted",
+    ComputerPolicyFinished = "ComputerPolicyFinished",
+    ComputerPushCapabilityChanged = "ComputerPushCapabilityChanged",
+    JSSShutdown = "JSSShutdown",
+    JSSStartup = "JSSStartup",
+    MobileDeviceCheckIn = "MobileDeviceCheckIn",
+    MobileDeviceCommandCompleted = "MobileDeviceCommandCompleted",
+    MobileDeviceEnrolled = "MobileDeviceEnrolled",
+    MobileDevicePushSent = "MobileDevicePushSent",
+    MobileDeviceUnEnrolled = "MobileDeviceUnEnrolled",
+    PatchSoftwareTitleUpdated = "PatchSoftwareTitleUpdated",
+    PushSent = "PushSent",
+    RestAPIOperation = "RestAPIOperation",
+    SCEPChallenge = "SCEPChallenge",
+    SmartGroupComputerMembershipChange = "SmartGroupComputerMembershipChange",
+    SmartGroupMobileDeviceMembershipChange = "SmartGroupMobileDeviceMembershipChange",
+}
+
+/**
+ * OK
+ */
+export class FindWebhooksByName200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "authentication_type" })
+    authenticationType?: FindWebhooksByName200ApplicationJSONAuthenticationType;
+
+    /**
+     * Number of seconds to attempt to connect to the webhooks host server
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "connection_timeout" })
+    connectionTimeout?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "content_type" })
+    contentType?: FindWebhooksByName200ApplicationJSONContentType;
+
+    @SpeakeasyMetadata({ elemType: FindWebhooksByName200ApplicationJSONDisplayFields })
+    @Expose({ name: "display_fields" })
+    @Type(() => FindWebhooksByName200ApplicationJSONDisplayFields)
+    displayFields?: FindWebhooksByName200ApplicationJSONDisplayFields[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "enable_display_fields_for_group_object" })
+    enableDisplayFieldsForGroupObject?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "enabled" })
+    enabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "event" })
+    event: FindWebhooksByName200ApplicationJSONEvent;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "password" })
+    password?: string;
+
+    /**
+     * Number of seconds to wait for a response from the webhooks host server after sending a request
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "read_timeout" })
+    readTimeout?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "url" })
+    url: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
 }
 
 export class FindWebhooksByNameResponse extends SpeakeasyBase {
@@ -31,5 +243,5 @@ export class FindWebhooksByNameResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    webhook?: shared.Webhook;
+    findWebhooksByName200ApplicationJSONObject?: FindWebhooksByName200ApplicationJSON;
 }

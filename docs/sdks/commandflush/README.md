@@ -13,8 +13,7 @@ Flushes commands based on information specified in an XML file
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CommandFlushResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
-import { CommandflushStatus } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
+import { CommandFlushRequestBodyStatus, CommandFlushResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

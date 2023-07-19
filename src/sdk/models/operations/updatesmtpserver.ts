@@ -5,6 +5,47 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AxiosResponse } from "axios";
 
+export class UpdateSMTPServerRequestBody extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    authorizationRequired?: boolean;
+
+    @SpeakeasyMetadata()
+    enabled?: boolean;
+
+    /**
+     * Hostname or IP address of the SMTP server
+     */
+    @SpeakeasyMetadata()
+    host?: string;
+
+    @SpeakeasyMetadata()
+    password?: string;
+
+    @SpeakeasyMetadata()
+    port?: number;
+
+    @SpeakeasyMetadata()
+    sendFromEmail?: string;
+
+    @SpeakeasyMetadata()
+    sendFromName?: string;
+
+    @SpeakeasyMetadata()
+    ssl?: boolean;
+
+    /**
+     * Measured in seconds
+     */
+    @SpeakeasyMetadata()
+    timeout?: number;
+
+    @SpeakeasyMetadata()
+    tls?: boolean;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
 export class UpdateSMTPServerResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     contentType: string;

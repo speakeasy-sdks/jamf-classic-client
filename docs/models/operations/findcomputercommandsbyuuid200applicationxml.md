@@ -1,0 +1,11 @@
+# FindComputerCommandsByUuid200ApplicationXML
+
+OK
+
+
+## Fields
+
+| Field                                                                                                                                   | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `computers`                                                                                                                             | [FindComputerCommandsByUuid200ApplicationXMLComputers](../../models/operations/findcomputercommandsbyuuid200applicationxmlcomputers.md) | :heavy_minus_sign:                                                                                                                      | N/A                                                                                                                                     |
+| `general`                                                                                                                               | [FindComputerCommandsByUuid200ApplicationXMLGeneral](../../models/operations/findcomputercommandsbyuuid200applicationxmlgeneral.md)     | :heavy_minus_sign:                                                                                                                      | N/A                                                                                                                                     |

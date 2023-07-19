@@ -5,7 +5,6 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
-import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -62,11 +61,11 @@ export class Healthcarelistener {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.healthcareListeners = [];
+                    res.findHealthcareListener200ApplicationJSONObjects = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.healthcareListeners = utils.objectToClass(
+                    res.findHealthcareListener200ApplicationJSONObjects = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.HealthcareListeners,
+                        operations.FindHealthcareListener200ApplicationJSON,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -136,11 +135,11 @@ export class Healthcarelistener {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.healthcareListener = [];
+                    res.findHealthcareListenersById200ApplicationJSONObjects = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.healthcareListener = utils.objectToClass(
+                    res.findHealthcareListenersById200ApplicationJSONObjects = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.HealthcareListener,
+                        operations.FindHealthcareListenersById200ApplicationJSON,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {

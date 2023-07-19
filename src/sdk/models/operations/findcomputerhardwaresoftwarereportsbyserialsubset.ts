@@ -4,8 +4,8 @@
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { RFCDate } from "../../types";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 /**
  * Subset to filter by
@@ -43,6 +43,360 @@ export class FindComputerHardwareSoftwareReportsBySerialSubsetRequest extends Sp
     subset: FindComputerHardwareSoftwareReportsBySerialSubsetSubset;
 }
 
+export enum FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationXMLFontReportType {
+    Added = "Added",
+    Deleted = "Deleted",
+}
+
+export class FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationXMLFontReport extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    type?: FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationXMLFontReportType;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationXMLHardwareReport extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    nicSpeed?: string;
+
+    @SpeakeasyMetadata()
+    bootPartitionUsedPercent?: number;
+
+    @SpeakeasyMetadata()
+    coreCount?: number;
+
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    make?: string;
+
+    @SpeakeasyMetadata()
+    modelIdentifier?: string;
+
+    @SpeakeasyMetadata()
+    openRamSlots?: number;
+
+    @SpeakeasyMetadata()
+    operatingSystem?: string;
+
+    @SpeakeasyMetadata()
+    opticalDrive?: string;
+
+    @SpeakeasyMetadata()
+    processorCount?: number;
+
+    @SpeakeasyMetadata()
+    processorSpeedMhz?: number;
+
+    @SpeakeasyMetadata()
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    servicePack?: string;
+
+    @SpeakeasyMetadata()
+    totalHarddriveSize?: string;
+
+    @SpeakeasyMetadata()
+    totalRamMb?: number;
+}
+
+export enum FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationXMLPluginReportType {
+    Added = "Added",
+    Removed = "Removed",
+}
+
+export class FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationXMLPluginReport extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    type?: FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationXMLPluginReportType;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export enum FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationXMLSoftwareReportType {
+    Added = "Added",
+    Deleted = "Deleted",
+}
+
+export class FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationXMLSoftwareReport extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    type?: FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationXMLSoftwareReportType;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+/**
+ * OK
+ */
+export class FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    fontReport?: FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationXMLFontReport;
+
+    @SpeakeasyMetadata()
+    hardwareReport?: FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationXMLHardwareReport;
+
+    @SpeakeasyMetadata()
+    pluginReport?: FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationXMLPluginReport;
+
+    @SpeakeasyMetadata()
+    softwareReport?: FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationXMLSoftwareReport;
+}
+
+export enum FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONFontReportType {
+    Added = "Added",
+    Deleted = "Deleted",
+}
+
+export class FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONFontReport extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_utc" })
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "path" })
+    path?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONFontReportType;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONHardwareReport extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "NIC_speed" })
+    nicSpeed?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "boot_partition_used_percent" })
+    bootPartitionUsedPercent?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "core_count" })
+    coreCount?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_utc" })
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "make" })
+    make?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "model_identifier" })
+    modelIdentifier?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "open_ram_slots" })
+    openRamSlots?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "operating_system" })
+    operatingSystem?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "optical_drive" })
+    opticalDrive?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "processor_count" })
+    processorCount?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "processor_speed_mhz" })
+    processorSpeedMhz?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "serial_number" })
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "service_pack" })
+    servicePack?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "total_harddrive_size" })
+    totalHarddriveSize?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "total_ram_mb" })
+    totalRamMb?: number;
+}
+
+export enum FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONPluginReportType {
+    Added = "Added",
+    Removed = "Removed",
+}
+
+export class FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONPluginReport extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_utc" })
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "path" })
+    path?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONPluginReportType;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export enum FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONSoftwareReportType {
+    Added = "Added",
+    Deleted = "Deleted",
+}
+
+export class FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONSoftwareReport extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_utc" })
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "path" })
+    path?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONSoftwareReportType;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+/**
+ * OK
+ */
+export class FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "font_report" })
+    @Type(() => FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONFontReport)
+    fontReport?: FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONFontReport;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "hardware_report" })
+    @Type(() => FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONHardwareReport)
+    hardwareReport?: FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONHardwareReport;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "plugin_report" })
+    @Type(() => FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONPluginReport)
+    pluginReport?: FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONPluginReport;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "software_report" })
+    @Type(() => FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONSoftwareReport)
+    softwareReport?: FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONSoftwareReport;
+}
+
 export class FindComputerHardwareSoftwareReportsBySerialSubsetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     body?: Uint8Array;
@@ -60,5 +414,5 @@ export class FindComputerHardwareSoftwareReportsBySerialSubsetResponse extends S
      * OK
      */
     @SpeakeasyMetadata()
-    computerHardwareSoftwareReports?: shared.ComputerHardwareSoftwareReports;
+    findComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONObject?: FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSON;
 }

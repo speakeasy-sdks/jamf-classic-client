@@ -3,8 +3,52 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindJsonWebTokenConfigurations200ApplicationXMLJsonWebTokenConfiguration extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    disabled?: boolean;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    tokenExpiry?: number;
+}
+
+export class FindJsonWebTokenConfigurations200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    jsonWebTokenConfiguration?: FindJsonWebTokenConfigurations200ApplicationXMLJsonWebTokenConfiguration;
+}
+
+export class FindJSONWebTokenConfigurations200ApplicationJSONJSONWebTokenConfiguration extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "disabled" })
+    disabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "token_expiry" })
+    tokenExpiry?: number;
+}
+
+export class FindJSONWebTokenConfigurations200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "json_web_token_configuration" })
+    @Type(() => FindJSONWebTokenConfigurations200ApplicationJSONJSONWebTokenConfiguration)
+    jsonWebTokenConfiguration?: FindJSONWebTokenConfigurations200ApplicationJSONJSONWebTokenConfiguration;
+}
 
 export class FindJsonWebTokenConfigurationsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +66,6 @@ export class FindJsonWebTokenConfigurationsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.JsonWebTokenConfigurations })
-    jsonWebTokenConfigurations?: shared.JsonWebTokenConfigurations[];
+    @SpeakeasyMetadata({ elemType: FindJSONWebTokenConfigurations200ApplicationJSON })
+    findJSONWebTokenConfigurations200ApplicationJSONObjects?: FindJSONWebTokenConfigurations200ApplicationJSON[];
 }

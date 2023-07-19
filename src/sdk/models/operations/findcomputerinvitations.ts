@@ -3,8 +3,73 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindComputerInvitations200ApplicationXMLComputerInvitation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    expirationDate?: string;
+
+    @SpeakeasyMetadata()
+    expirationDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    expirationDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    invitation?: number;
+
+    @SpeakeasyMetadata()
+    invitationType?: string;
+}
+
+export class FindComputerInvitations200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computerInvitation?: FindComputerInvitations200ApplicationXMLComputerInvitation;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindComputerInvitations200ApplicationJSONComputerInvitation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "expiration_date" })
+    expirationDate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "expiration_date_epoch" })
+    expirationDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "expiration_date_utc" })
+    expirationDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "invitation" })
+    invitation?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "invitation_type" })
+    invitationType?: string;
+}
+
+export class FindComputerInvitations200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer_invitation" })
+    @Type(() => FindComputerInvitations200ApplicationJSONComputerInvitation)
+    computerInvitation?: FindComputerInvitations200ApplicationJSONComputerInvitation;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
 
 export class FindComputerInvitationsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +87,6 @@ export class FindComputerInvitationsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.ComputerInvitations })
-    computerInvitations?: shared.ComputerInvitations[];
+    @SpeakeasyMetadata({ elemType: FindComputerInvitations200ApplicationJSON })
+    findComputerInvitations200ApplicationJSONObjects?: FindComputerInvitations200ApplicationJSON[];
 }

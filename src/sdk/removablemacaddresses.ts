@@ -5,7 +5,6 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
-import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -227,11 +226,11 @@ export class Removablemacaddresses {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.removableMacAddresses = [];
+                    res.findRemovableMacAddresses200ApplicationJSONObjects = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.removableMacAddresses = utils.objectToClass(
+                    res.findRemovableMacAddresses200ApplicationJSONObjects = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.RemovableMacAddresses,
+                        operations.FindRemovableMacAddresses200ApplicationJSON,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -301,9 +300,9 @@ export class Removablemacaddresses {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.removableMacAddress = utils.objectToClass(
+                    res.findRemovableMacAddressesById200ApplicationJSONObject = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.RemovableMacAddress
+                        operations.FindRemovableMacAddressesById200ApplicationJSON
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -372,10 +371,11 @@ export class Removablemacaddresses {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.removableMacAddress = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.RemovableMacAddress
-                    );
+                    res.findRemovableMacAddressesByName200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindRemovableMacAddressesByName200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

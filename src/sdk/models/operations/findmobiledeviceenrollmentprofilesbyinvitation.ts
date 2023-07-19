@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindMobileDeviceEnrollmentProfilesByInvitationRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,340 @@ export class FindMobileDeviceEnrollmentProfilesByInvitationRequest extends Speak
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=invitation" })
     invitation: string;
+}
+
+export class FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationXMLAttachmentsAttachment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    filename?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    uri?: string;
+}
+
+export class FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationXMLAttachments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    attachment?: FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationXMLAttachmentsAttachment;
+}
+
+export class FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    description?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    invitation?: string;
+
+    /**
+     * Name of the enrollment profile
+     */
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationXMLLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: string;
+
+    @SpeakeasyMetadata()
+    department?: string;
+
+    @SpeakeasyMetadata()
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    phone?: string;
+
+    @SpeakeasyMetadata()
+    phoneNumber?: string;
+
+    @SpeakeasyMetadata()
+    position?: string;
+
+    @SpeakeasyMetadata()
+    realName?: string;
+
+    @SpeakeasyMetadata()
+    realname?: string;
+
+    @SpeakeasyMetadata()
+    room?: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export class FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationXMLPurchasing extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    applecareId?: string;
+
+    @SpeakeasyMetadata()
+    isLeased?: boolean;
+
+    @SpeakeasyMetadata()
+    isPurchased?: boolean;
+
+    @SpeakeasyMetadata()
+    leaseExpires?: string;
+
+    @SpeakeasyMetadata()
+    leaseExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    leaseExpiresUtc?: string;
+
+    @SpeakeasyMetadata()
+    lifeExpectancy?: number;
+
+    @SpeakeasyMetadata()
+    poDate?: string;
+
+    @SpeakeasyMetadata()
+    poDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    poDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    poNumber?: string;
+
+    @SpeakeasyMetadata()
+    purchasePrice?: string;
+
+    @SpeakeasyMetadata()
+    purchasingAccount?: string;
+
+    @SpeakeasyMetadata()
+    purchasingContact?: string;
+
+    @SpeakeasyMetadata()
+    vendor?: string;
+
+    @SpeakeasyMetadata()
+    warrantyExpires?: string;
+
+    @SpeakeasyMetadata()
+    warrantyExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    warrantyExpiresUtc?: string;
+}
+
+/**
+ * OK
+ */
+export class FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationXMLAttachments,
+    })
+    attachments?: FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationXMLAttachments[];
+
+    @SpeakeasyMetadata()
+    general?: FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata()
+    location?: FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationXMLLocation;
+
+    @SpeakeasyMetadata()
+    purchasing?: FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationXMLPurchasing;
+}
+
+export class FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONAttachmentsAttachment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "filename" })
+    filename?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uri" })
+    uri?: string;
+}
+
+export class FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONAttachments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "attachment" })
+    @Type(
+        () => FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONAttachmentsAttachment
+    )
+    attachment?: FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONAttachmentsAttachment;
+}
+
+export class FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "description" })
+    description?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "invitation" })
+    invitation?: string;
+
+    /**
+     * Name of the enrollment profile
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    building?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    department?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "email_address" })
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone" })
+    phone?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone_number" })
+    phoneNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "position" })
+    position?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "real_name" })
+    realName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "realname" })
+    realname?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "room" })
+    room?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONPurchasing extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "applecare_id" })
+    applecareId?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_leased" })
+    isLeased?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_purchased" })
+    isPurchased?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires" })
+    leaseExpires?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires_epoch" })
+    leaseExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires_utc" })
+    leaseExpiresUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "life_expectancy" })
+    lifeExpectancy?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date" })
+    poDate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date_epoch" })
+    poDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date_utc" })
+    poDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_number" })
+    poNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchase_price" })
+    purchasePrice?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing_account" })
+    purchasingAccount?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing_contact" })
+    purchasingContact?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "vendor" })
+    vendor?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires" })
+    warrantyExpires?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires_epoch" })
+    warrantyExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires_utc" })
+    warrantyExpiresUtc?: string;
+}
+
+/**
+ * OK
+ */
+export class FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONAttachments,
+    })
+    @Expose({ name: "attachments" })
+    @Type(() => FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONAttachments)
+    attachments?: FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONAttachments[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONGeneral)
+    general?: FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "location" })
+    @Type(() => FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONLocation)
+    location?: FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONLocation;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing" })
+    @Type(() => FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONPurchasing)
+    purchasing?: FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONPurchasing;
 }
 
 export class FindMobileDeviceEnrollmentProfilesByInvitationResponse extends SpeakeasyBase {
@@ -31,5 +365,5 @@ export class FindMobileDeviceEnrollmentProfilesByInvitationResponse extends Spea
      * OK
      */
     @SpeakeasyMetadata()
-    mobileDeviceEnrollmentProfile?: shared.MobileDeviceEnrollmentProfile;
+    findMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONObject?: FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSON;
 }

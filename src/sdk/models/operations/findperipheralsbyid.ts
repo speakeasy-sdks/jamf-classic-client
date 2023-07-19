@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindPeripheralsByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,365 @@ export class FindPeripheralsByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export class FindPeripheralsById200ApplicationXMLAttachmentsAttachment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    filename?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    uri?: string;
+}
+
+export class FindPeripheralsById200ApplicationXMLAttachments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    attachment?: FindPeripheralsById200ApplicationXMLAttachmentsAttachment;
+}
+
+export class FindPeripheralsById200ApplicationXMLGeneralFieldsField extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    value?: string;
+}
+
+export class FindPeripheralsById200ApplicationXMLGeneralFields extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    field?: FindPeripheralsById200ApplicationXMLGeneralFieldsField;
+}
+
+export class FindPeripheralsById200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    barCode1?: string;
+
+    @SpeakeasyMetadata()
+    barCode2?: string;
+
+    @SpeakeasyMetadata({ elemType: FindPeripheralsById200ApplicationXMLGeneralFields })
+    fields?: FindPeripheralsById200ApplicationXMLGeneralFields[];
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the peripheral type
+     */
+    @SpeakeasyMetadata()
+    type: string;
+}
+
+export class FindPeripheralsById200ApplicationXMLLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: string;
+
+    @SpeakeasyMetadata()
+    department?: string;
+
+    @SpeakeasyMetadata()
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    phone?: string;
+
+    @SpeakeasyMetadata()
+    phoneNumber?: string;
+
+    @SpeakeasyMetadata()
+    position?: string;
+
+    @SpeakeasyMetadata()
+    realName?: string;
+
+    @SpeakeasyMetadata()
+    realname?: string;
+
+    @SpeakeasyMetadata()
+    room?: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export class FindPeripheralsById200ApplicationXMLPurchasing extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    applecareId?: string;
+
+    @SpeakeasyMetadata()
+    isLeased?: boolean;
+
+    @SpeakeasyMetadata()
+    isPurchased?: boolean;
+
+    @SpeakeasyMetadata()
+    leaseExpires?: string;
+
+    @SpeakeasyMetadata()
+    leaseExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    leaseExpiresUtc?: string;
+
+    @SpeakeasyMetadata()
+    lifeExpectancy?: number;
+
+    @SpeakeasyMetadata()
+    poDate?: string;
+
+    @SpeakeasyMetadata()
+    poDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    poDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    poNumber?: string;
+
+    @SpeakeasyMetadata()
+    purchasePrice?: string;
+
+    @SpeakeasyMetadata()
+    purchasingAccount?: string;
+
+    @SpeakeasyMetadata()
+    purchasingContact?: string;
+
+    @SpeakeasyMetadata()
+    vendor?: string;
+
+    @SpeakeasyMetadata()
+    warrantyExpires?: string;
+
+    @SpeakeasyMetadata()
+    warrantyExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    warrantyExpiresUtc?: string;
+}
+
+/**
+ * OK
+ */
+export class FindPeripheralsById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindPeripheralsById200ApplicationXMLAttachments })
+    attachments?: FindPeripheralsById200ApplicationXMLAttachments[];
+
+    @SpeakeasyMetadata()
+    general?: FindPeripheralsById200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata()
+    location?: FindPeripheralsById200ApplicationXMLLocation;
+
+    @SpeakeasyMetadata()
+    purchasing?: FindPeripheralsById200ApplicationXMLPurchasing;
+}
+
+export class FindPeripheralsById200ApplicationJSONAttachmentsAttachment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "filename" })
+    filename?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uri" })
+    uri?: string;
+}
+
+export class FindPeripheralsById200ApplicationJSONAttachments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "attachment" })
+    @Type(() => FindPeripheralsById200ApplicationJSONAttachmentsAttachment)
+    attachment?: FindPeripheralsById200ApplicationJSONAttachmentsAttachment;
+}
+
+export class FindPeripheralsById200ApplicationJSONGeneralFieldsField extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "value" })
+    value?: string;
+}
+
+export class FindPeripheralsById200ApplicationJSONGeneralFields extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "field" })
+    @Type(() => FindPeripheralsById200ApplicationJSONGeneralFieldsField)
+    field?: FindPeripheralsById200ApplicationJSONGeneralFieldsField;
+}
+
+export class FindPeripheralsById200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "bar_code_1" })
+    barCode1?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "bar_code_2" })
+    barCode2?: string;
+
+    @SpeakeasyMetadata({ elemType: FindPeripheralsById200ApplicationJSONGeneralFields })
+    @Expose({ name: "fields" })
+    @Type(() => FindPeripheralsById200ApplicationJSONGeneralFields)
+    fields?: FindPeripheralsById200ApplicationJSONGeneralFields[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the peripheral type
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type: string;
+}
+
+export class FindPeripheralsById200ApplicationJSONLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    building?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    department?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "email_address" })
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone" })
+    phone?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone_number" })
+    phoneNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "position" })
+    position?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "real_name" })
+    realName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "realname" })
+    realname?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "room" })
+    room?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class FindPeripheralsById200ApplicationJSONPurchasing extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "applecare_id" })
+    applecareId?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_leased" })
+    isLeased?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_purchased" })
+    isPurchased?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires" })
+    leaseExpires?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires_epoch" })
+    leaseExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires_utc" })
+    leaseExpiresUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "life_expectancy" })
+    lifeExpectancy?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date" })
+    poDate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date_epoch" })
+    poDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date_utc" })
+    poDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_number" })
+    poNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchase_price" })
+    purchasePrice?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing_account" })
+    purchasingAccount?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing_contact" })
+    purchasingContact?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "vendor" })
+    vendor?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires" })
+    warrantyExpires?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires_epoch" })
+    warrantyExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires_utc" })
+    warrantyExpiresUtc?: string;
+}
+
+/**
+ * OK
+ */
+export class FindPeripheralsById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindPeripheralsById200ApplicationJSONAttachments })
+    @Expose({ name: "attachments" })
+    @Type(() => FindPeripheralsById200ApplicationJSONAttachments)
+    attachments?: FindPeripheralsById200ApplicationJSONAttachments[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindPeripheralsById200ApplicationJSONGeneral)
+    general?: FindPeripheralsById200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "location" })
+    @Type(() => FindPeripheralsById200ApplicationJSONLocation)
+    location?: FindPeripheralsById200ApplicationJSONLocation;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing" })
+    @Type(() => FindPeripheralsById200ApplicationJSONPurchasing)
+    purchasing?: FindPeripheralsById200ApplicationJSONPurchasing;
 }
 
 export class FindPeripheralsByIdResponse extends SpeakeasyBase {
@@ -31,5 +390,5 @@ export class FindPeripheralsByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    peripheral?: shared.Peripheral;
+    findPeripheralsById200ApplicationJSONObject?: FindPeripheralsById200ApplicationJSON;
 }

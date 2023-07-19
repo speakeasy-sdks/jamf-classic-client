@@ -3,8 +3,106 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindAccounts200ApplicationXMLGroupsGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the group
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export class FindAccounts200ApplicationXMLGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindAccounts200ApplicationXMLGroupsGroup })
+    group?: FindAccounts200ApplicationXMLGroupsGroup[];
+}
+
+export class FindAccounts200ApplicationXMLUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the account
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export class FindAccounts200ApplicationXMLUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindAccounts200ApplicationXMLUsersUser })
+    user?: FindAccounts200ApplicationXMLUsersUser[];
+}
+
+/**
+ * OK
+ */
+export class FindAccounts200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    groups?: FindAccounts200ApplicationXMLGroups;
+
+    @SpeakeasyMetadata()
+    users?: FindAccounts200ApplicationXMLUsers;
+}
+
+export class FindAccounts200ApplicationJSONGroupsGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the group
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+export class FindAccounts200ApplicationJSONGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindAccounts200ApplicationJSONGroupsGroup })
+    @Expose({ name: "group" })
+    @Type(() => FindAccounts200ApplicationJSONGroupsGroup)
+    group?: FindAccounts200ApplicationJSONGroupsGroup[];
+}
+
+export class FindAccounts200ApplicationJSONUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the account
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+export class FindAccounts200ApplicationJSONUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindAccounts200ApplicationJSONUsersUser })
+    @Expose({ name: "user" })
+    @Type(() => FindAccounts200ApplicationJSONUsersUser)
+    user?: FindAccounts200ApplicationJSONUsersUser[];
+}
+
+/**
+ * OK
+ */
+export class FindAccounts200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "groups" })
+    @Type(() => FindAccounts200ApplicationJSONGroups)
+    groups?: FindAccounts200ApplicationJSONGroups;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "users" })
+    @Type(() => FindAccounts200ApplicationJSONUsers)
+    users?: FindAccounts200ApplicationJSONUsers;
+}
 
 export class FindAccountsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -23,5 +121,5 @@ export class FindAccountsResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    accounts?: shared.Accounts;
+    findAccounts200ApplicationJSONObject?: FindAccounts200ApplicationJSON;
 }

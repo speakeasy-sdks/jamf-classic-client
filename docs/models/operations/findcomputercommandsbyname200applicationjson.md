@@ -1,0 +1,11 @@
+# FindComputerCommandsByName200ApplicationJSON
+
+OK
+
+
+## Fields
+
+| Field                                                                                                                                     | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `computers`                                                                                                                               | [FindComputerCommandsByName200ApplicationJSONComputers](../../models/operations/findcomputercommandsbyname200applicationjsoncomputers.md) | :heavy_minus_sign:                                                                                                                        | N/A                                                                                                                                       |
+| `general`                                                                                                                                 | [FindComputerCommandsByName200ApplicationJSONGeneral](../../models/operations/findcomputercommandsbyname200applicationjsongeneral.md)     | :heavy_minus_sign:                                                                                                                        | N/A                                                                                                                                       |

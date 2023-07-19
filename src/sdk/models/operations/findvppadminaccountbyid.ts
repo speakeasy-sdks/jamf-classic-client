@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindVPPAdminAccountByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,131 @@ export class FindVPPAdminAccountByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export class FindVPPAdminAccountById200ApplicationXMLSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindVPPAdminAccountById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    accountName?: string;
+
+    @SpeakeasyMetadata()
+    appleId?: string;
+
+    @SpeakeasyMetadata()
+    autoRegisterManagedUsers?: boolean;
+
+    @SpeakeasyMetadata()
+    contact?: string;
+
+    @SpeakeasyMetadata()
+    country?: string;
+
+    @SpeakeasyMetadata()
+    expirationDate?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the VPP account
+     */
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    notifyDisassociation?: boolean;
+
+    @SpeakeasyMetadata()
+    populateCatalogFromVppContent?: boolean;
+
+    @SpeakeasyMetadata()
+    serviceToken: string;
+
+    @SpeakeasyMetadata()
+    site?: FindVPPAdminAccountById200ApplicationXMLSite;
+}
+
+export class FindVPPAdminAccountById200ApplicationJSONSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindVPPAdminAccountById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "account_name" })
+    accountName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "apple_id" })
+    appleId?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "auto_register_managed_users" })
+    autoRegisterManagedUsers?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "contact" })
+    contact?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "country" })
+    country?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "expiration_date" })
+    expirationDate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the VPP account
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notify_disassociation" })
+    notifyDisassociation?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "populate_catalog_from_vpp_content" })
+    populateCatalogFromVppContent?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "service_token" })
+    serviceToken: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindVPPAdminAccountById200ApplicationJSONSite)
+    site?: FindVPPAdminAccountById200ApplicationJSONSite;
 }
 
 export class FindVPPAdminAccountByIdResponse extends SpeakeasyBase {
@@ -31,5 +156,5 @@ export class FindVPPAdminAccountByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    vppAccount?: shared.VppAccount;
+    findVPPAdminAccountById200ApplicationJSONObject?: FindVPPAdminAccountById200ApplicationJSON;
 }

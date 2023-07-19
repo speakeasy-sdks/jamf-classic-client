@@ -3,14 +3,99 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindUserextensionattributesByNameRequest extends SpeakeasyBase {
     /**
      * Name to filter by
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
+    name: string;
+}
+
+export enum FindUserextensionattributesByName200ApplicationXMLDataType {
+    String = "String",
+    Integer = "Integer",
+    Date = "Date",
+}
+
+export enum FindUserextensionattributesByName200ApplicationXMLInputTypeType {
+    TextField = "Text Field",
+    PopUpMenu = "Pop-up Menu",
+}
+
+export class FindUserextensionattributesByName200ApplicationXMLInputType extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    type?: FindUserextensionattributesByName200ApplicationXMLInputTypeType;
+}
+
+/**
+ * OK
+ */
+export class FindUserextensionattributesByName200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dataType?: FindUserextensionattributesByName200ApplicationXMLDataType;
+
+    @SpeakeasyMetadata()
+    description?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    inputType?: FindUserextensionattributesByName200ApplicationXMLInputType;
+
+    /**
+     * Name of the user extension attribute
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export enum FindUserextensionattributesByName200ApplicationJSONDataType {
+    String = "String",
+    Integer = "Integer",
+    Date = "Date",
+}
+
+export enum FindUserextensionattributesByName200ApplicationJSONInputTypeType {
+    TextField = "Text Field",
+    PopUpMenu = "Pop-up Menu",
+}
+
+export class FindUserextensionattributesByName200ApplicationJSONInputType extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: FindUserextensionattributesByName200ApplicationJSONInputTypeType;
+}
+
+/**
+ * OK
+ */
+export class FindUserextensionattributesByName200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "data_type" })
+    dataType?: FindUserextensionattributesByName200ApplicationJSONDataType;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "description" })
+    description?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "input_type" })
+    @Type(() => FindUserextensionattributesByName200ApplicationJSONInputType)
+    inputType?: FindUserextensionattributesByName200ApplicationJSONInputType;
+
+    /**
+     * Name of the user extension attribute
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
     name: string;
 }
 
@@ -31,5 +116,5 @@ export class FindUserextensionattributesByNameResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    userExtensionAttribute?: shared.UserExtensionAttribute;
+    findUserextensionattributesByName200ApplicationJSONObject?: FindUserextensionattributesByName200ApplicationJSON;
 }

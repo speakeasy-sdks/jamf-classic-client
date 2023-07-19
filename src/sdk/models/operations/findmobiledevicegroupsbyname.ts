@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindMobileDeviceGroupsByNameRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,243 @@ export class FindMobileDeviceGroupsByNameRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
     name: string;
+}
+
+export enum FindMobileDeviceGroupsByName200ApplicationXMLCriteriaCriterionAndOr {
+    And = "and",
+    Or = "or",
+}
+
+export class FindMobileDeviceGroupsByName200ApplicationXMLCriteriaCriterion extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    andOr?: FindMobileDeviceGroupsByName200ApplicationXMLCriteriaCriterionAndOr;
+
+    @SpeakeasyMetadata()
+    closingParen?: boolean;
+
+    /**
+     * Name of the criteria
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    openingParen?: boolean;
+
+    @SpeakeasyMetadata()
+    priority?: number;
+
+    /**
+     * Operator
+     */
+    @SpeakeasyMetadata()
+    searchType?: string;
+
+    @SpeakeasyMetadata()
+    value?: string;
+}
+
+export class FindMobileDeviceGroupsByName200ApplicationXMLCriteria extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    criterion?: FindMobileDeviceGroupsByName200ApplicationXMLCriteriaCriterion;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindMobileDeviceGroupsByName200ApplicationXMLMobileDevicesMobileDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    macAddress?: string;
+
+    /**
+     * Name of the device
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+
+    @SpeakeasyMetadata()
+    wifiMacAddress?: string;
+}
+
+export class FindMobileDeviceGroupsByName200ApplicationXMLMobileDevices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    mobileDevice?: FindMobileDeviceGroupsByName200ApplicationXMLMobileDevicesMobileDevice;
+}
+
+export class FindMobileDeviceGroupsByName200ApplicationXMLSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindMobileDeviceGroupsByName200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindMobileDeviceGroupsByName200ApplicationXMLCriteria })
+    criteria?: FindMobileDeviceGroupsByName200ApplicationXMLCriteria[];
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    isSmart: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindMobileDeviceGroupsByName200ApplicationXMLMobileDevices })
+    mobileDevices?: FindMobileDeviceGroupsByName200ApplicationXMLMobileDevices[];
+
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    site?: FindMobileDeviceGroupsByName200ApplicationXMLSite;
+}
+
+export enum FindMobileDeviceGroupsByName200ApplicationJSONCriteriaCriterionAndOr {
+    And = "and",
+    Or = "or",
+}
+
+export class FindMobileDeviceGroupsByName200ApplicationJSONCriteriaCriterion extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "and_or" })
+    andOr?: FindMobileDeviceGroupsByName200ApplicationJSONCriteriaCriterionAndOr;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "closing_paren" })
+    closingParen?: boolean;
+
+    /**
+     * Name of the criteria
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "opening_paren" })
+    openingParen?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "priority" })
+    priority?: number;
+
+    /**
+     * Operator
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "search_type" })
+    searchType?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "value" })
+    value?: string;
+}
+
+export class FindMobileDeviceGroupsByName200ApplicationJSONCriteria extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "criterion" })
+    @Type(() => FindMobileDeviceGroupsByName200ApplicationJSONCriteriaCriterion)
+    criterion?: FindMobileDeviceGroupsByName200ApplicationJSONCriteriaCriterion;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindMobileDeviceGroupsByName200ApplicationJSONMobileDevicesMobileDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mac_address" })
+    macAddress?: string;
+
+    /**
+     * Name of the device
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "serial_number" })
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "wifi_mac_address" })
+    wifiMacAddress?: string;
+}
+
+export class FindMobileDeviceGroupsByName200ApplicationJSONMobileDevices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mobile_device" })
+    @Type(() => FindMobileDeviceGroupsByName200ApplicationJSONMobileDevicesMobileDevice)
+    mobileDevice?: FindMobileDeviceGroupsByName200ApplicationJSONMobileDevicesMobileDevice;
+}
+
+export class FindMobileDeviceGroupsByName200ApplicationJSONSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindMobileDeviceGroupsByName200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindMobileDeviceGroupsByName200ApplicationJSONCriteria })
+    @Expose({ name: "criteria" })
+    @Type(() => FindMobileDeviceGroupsByName200ApplicationJSONCriteria)
+    criteria?: FindMobileDeviceGroupsByName200ApplicationJSONCriteria[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_smart" })
+    isSmart: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindMobileDeviceGroupsByName200ApplicationJSONMobileDevices })
+    @Expose({ name: "mobile_devices" })
+    @Type(() => FindMobileDeviceGroupsByName200ApplicationJSONMobileDevices)
+    mobileDevices?: FindMobileDeviceGroupsByName200ApplicationJSONMobileDevices[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindMobileDeviceGroupsByName200ApplicationJSONSite)
+    site?: FindMobileDeviceGroupsByName200ApplicationJSONSite;
 }
 
 export class FindMobileDeviceGroupsByNameResponse extends SpeakeasyBase {
@@ -31,5 +268,5 @@ export class FindMobileDeviceGroupsByNameResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    mobileDeviceGroup?: shared.MobileDeviceGroup;
+    findMobileDeviceGroupsByName200ApplicationJSONObject?: FindMobileDeviceGroupsByName200ApplicationJSON;
 }

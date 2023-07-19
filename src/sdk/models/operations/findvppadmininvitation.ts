@@ -3,8 +3,45 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindVPPAdminInvitation200ApplicationXMLVPPInvitation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindVPPAdminInvitation200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    size?: number;
+
+    @SpeakeasyMetadata()
+    vppInvitation?: FindVPPAdminInvitation200ApplicationXMLVPPInvitation;
+}
+
+export class FindVPPAdminInvitation200ApplicationJSONVPPInvitation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindVPPAdminInvitation200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "vpp_invitation" })
+    @Type(() => FindVPPAdminInvitation200ApplicationJSONVPPInvitation)
+    vppInvitation?: FindVPPAdminInvitation200ApplicationJSONVPPInvitation;
+}
 
 export class FindVPPAdminInvitationResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +59,6 @@ export class FindVPPAdminInvitationResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.VppInvitations })
-    vppInvitations?: shared.VppInvitations[];
+    @SpeakeasyMetadata({ elemType: FindVPPAdminInvitation200ApplicationJSON })
+    findVPPAdminInvitation200ApplicationJSONObjects?: FindVPPAdminInvitation200ApplicationJSON[];
 }

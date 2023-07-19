@@ -3,8 +3,65 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class JssuserGet200ApplicationXMLPrivileges extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    privilege?: string;
+}
+
+/**
+ * OK
+ */
+export class JssuserGet200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    institution?: string;
+
+    @SpeakeasyMetadata()
+    licenseType?: string;
+
+    @SpeakeasyMetadata({ elemType: JssuserGet200ApplicationXMLPrivileges })
+    privileges?: JssuserGet200ApplicationXMLPrivileges[];
+
+    @SpeakeasyMetadata()
+    product?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class JssuserGet200ApplicationJSONPrivileges extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "privilege" })
+    privilege?: string;
+}
+
+/**
+ * OK
+ */
+export class JssuserGet200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "institution" })
+    institution?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "license_type" })
+    licenseType?: string;
+
+    @SpeakeasyMetadata({ elemType: JssuserGet200ApplicationJSONPrivileges })
+    @Expose({ name: "privileges" })
+    @Type(() => JssuserGet200ApplicationJSONPrivileges)
+    privileges?: JssuserGet200ApplicationJSONPrivileges[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "product" })
+    product?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
 
 export class JssuserGetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -13,15 +70,15 @@ export class JssuserGetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     contentType: string;
 
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata()
+    jssuserGet200ApplicationJSONObject?: JssuserGet200ApplicationJSON;
+
     @SpeakeasyMetadata()
     statusCode: number;
 
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
-
-    /**
-     * OK
-     */
-    @SpeakeasyMetadata()
-    jssUser?: shared.JssUser;
 }

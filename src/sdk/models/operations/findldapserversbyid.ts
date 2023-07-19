@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindLDAPServersByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,563 @@ export class FindLDAPServersByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export class FindLDAPServersById200ApplicationXMLConnectionAccount extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    distinguishedUsername?: string;
+
+    @SpeakeasyMetadata()
+    password?: string;
+}
+
+export enum FindLDAPServersById200ApplicationXMLConnectionAuthenticationType {
+    Simple = "simple",
+    CramMd5 = "CRAM-MD5",
+    DigestMd5 = "DIGEST-MD5",
+    None = "none",
+}
+
+export enum FindLDAPServersById200ApplicationXMLConnectionReferralResponse {
+    Ignore = "ignore",
+    Follow = "follow",
+}
+
+export enum FindLDAPServersById200ApplicationXMLConnectionServerType {
+    ActiveDirectory = "Active Directory",
+    OpenDirectory = "Open Directory",
+    EDirectory = "eDirectory",
+    Custom = "Custom",
+}
+
+export class FindLDAPServersById200ApplicationXMLConnection extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    account?: FindLDAPServersById200ApplicationXMLConnectionAccount;
+
+    @SpeakeasyMetadata()
+    authenticationType?: FindLDAPServersById200ApplicationXMLConnectionAuthenticationType;
+
+    /**
+     * Hostname or IP address of the server
+     */
+    @SpeakeasyMetadata()
+    hostname?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the LDAP server
+     */
+    @SpeakeasyMetadata()
+    name: string;
+
+    /**
+     * Timeout in seconds
+     */
+    @SpeakeasyMetadata()
+    openCloseTimeout?: number;
+
+    @SpeakeasyMetadata()
+    port?: number;
+
+    @SpeakeasyMetadata()
+    referralResponse?: FindLDAPServersById200ApplicationXMLConnectionReferralResponse;
+
+    /**
+     * Timeout in seconds
+     */
+    @SpeakeasyMetadata()
+    searchTimeout?: number;
+
+    @SpeakeasyMetadata()
+    serverType?: FindLDAPServersById200ApplicationXMLConnectionServerType;
+
+    @SpeakeasyMetadata()
+    useSsl?: boolean;
+
+    @SpeakeasyMetadata()
+    useWildcards?: boolean;
+}
+
+export enum FindLDAPServersById200ApplicationXMLMappingsForUsersUserGroupMappingsMapObjectClassToAnyOrAll {
+    All = "all",
+    Any = "any",
+}
+
+export enum FindLDAPServersById200ApplicationXMLMappingsForUsersUserGroupMappingsSearchScope {
+    AllSubtrees = "All Subtrees",
+    FirstLevelOnly = "First Level Only",
+}
+
+export class FindLDAPServersById200ApplicationXMLMappingsForUsersUserGroupMappings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    mapGroupId?: string;
+
+    @SpeakeasyMetadata()
+    mapGroupName?: string;
+
+    @SpeakeasyMetadata()
+    mapGroupUuid?: string;
+
+    @SpeakeasyMetadata()
+    mapObjectClassToAnyOrAll?: FindLDAPServersById200ApplicationXMLMappingsForUsersUserGroupMappingsMapObjectClassToAnyOrAll;
+
+    @SpeakeasyMetadata()
+    objectClasses?: string;
+
+    @SpeakeasyMetadata()
+    searchBase?: string;
+
+    @SpeakeasyMetadata()
+    searchScope?: FindLDAPServersById200ApplicationXMLMappingsForUsersUserGroupMappingsSearchScope;
+}
+
+export enum FindLDAPServersById200ApplicationXMLMappingsForUsersUserGroupMembershipMappingsMapObjectClassToAnyOrAll {
+    All = "all",
+    Any = "any",
+}
+
+export enum FindLDAPServersById200ApplicationXMLMappingsForUsersUserGroupMembershipMappingsSearchScope {
+    AllSubtrees = "All Subtrees",
+    FirstLevelOnly = "First Level Only",
+}
+
+export enum FindLDAPServersById200ApplicationXMLMappingsForUsersUserGroupMembershipMappingsUserGroupMembershipStoredIn {
+    UserObject = "user object",
+    GroupObject = "group object",
+}
+
+export class FindLDAPServersById200ApplicationXMLMappingsForUsersUserGroupMembershipMappings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    appendToUsername?: string;
+
+    @SpeakeasyMetadata()
+    groupId?: string;
+
+    @SpeakeasyMetadata()
+    mapGroupMembershipToUserField?: string;
+
+    @SpeakeasyMetadata()
+    mapObjectClassToAnyOrAll?: FindLDAPServersById200ApplicationXMLMappingsForUsersUserGroupMembershipMappingsMapObjectClassToAnyOrAll;
+
+    @SpeakeasyMetadata()
+    mapUserMembershipToGroupField?: boolean;
+
+    @SpeakeasyMetadata()
+    mapUserMembershipUseDn?: boolean;
+
+    @SpeakeasyMetadata()
+    objectClasses?: string;
+
+    @SpeakeasyMetadata()
+    recursiveLookups?: boolean;
+
+    @SpeakeasyMetadata()
+    searchBase?: string;
+
+    @SpeakeasyMetadata()
+    searchScope?: FindLDAPServersById200ApplicationXMLMappingsForUsersUserGroupMembershipMappingsSearchScope;
+
+    @SpeakeasyMetadata()
+    useDn?: boolean;
+
+    @SpeakeasyMetadata()
+    userGroupMembershipStoredIn?: FindLDAPServersById200ApplicationXMLMappingsForUsersUserGroupMembershipMappingsUserGroupMembershipStoredIn;
+
+    @SpeakeasyMetadata()
+    userGroupMembershipUseLdapCompare?: boolean;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export enum FindLDAPServersById200ApplicationXMLMappingsForUsersUserMappingsMapObjectClassToAnyOrAll {
+    All = "all",
+    Any = "any",
+}
+
+export enum FindLDAPServersById200ApplicationXMLMappingsForUsersUserMappingsSearchScope {
+    AllSubtrees = "All Subtrees",
+    FirstLevelOnly = "First Level Only",
+}
+
+export class FindLDAPServersById200ApplicationXMLMappingsForUsersUserMappings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    appendToEmailResults?: string;
+
+    @SpeakeasyMetadata()
+    mapBuilding?: string;
+
+    @SpeakeasyMetadata()
+    mapDepartment?: string;
+
+    @SpeakeasyMetadata()
+    mapEmailAddress?: string;
+
+    @SpeakeasyMetadata()
+    mapObjectClassToAnyOrAll?: FindLDAPServersById200ApplicationXMLMappingsForUsersUserMappingsMapObjectClassToAnyOrAll;
+
+    @SpeakeasyMetadata()
+    mapPosition?: string;
+
+    @SpeakeasyMetadata()
+    mapRealname?: string;
+
+    @SpeakeasyMetadata()
+    mapRoom?: string;
+
+    @SpeakeasyMetadata()
+    mapTelephone?: string;
+
+    @SpeakeasyMetadata()
+    mapUserId?: string;
+
+    @SpeakeasyMetadata()
+    mapUserUuid?: string;
+
+    @SpeakeasyMetadata()
+    mapUsername?: string;
+
+    @SpeakeasyMetadata()
+    objectClasses?: string;
+
+    @SpeakeasyMetadata()
+    searchBase?: string;
+
+    @SpeakeasyMetadata()
+    searchScope?: FindLDAPServersById200ApplicationXMLMappingsForUsersUserMappingsSearchScope;
+}
+
+export class FindLDAPServersById200ApplicationXMLMappingsForUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroupMappings?: FindLDAPServersById200ApplicationXMLMappingsForUsersUserGroupMappings;
+
+    @SpeakeasyMetadata()
+    userGroupMembershipMappings?: FindLDAPServersById200ApplicationXMLMappingsForUsersUserGroupMembershipMappings;
+
+    @SpeakeasyMetadata()
+    userMappings?: FindLDAPServersById200ApplicationXMLMappingsForUsersUserMappings;
+}
+
+/**
+ * OK
+ */
+export class FindLDAPServersById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    connection?: FindLDAPServersById200ApplicationXMLConnection;
+
+    @SpeakeasyMetadata()
+    mappingsForUsers?: FindLDAPServersById200ApplicationXMLMappingsForUsers;
+}
+
+export class FindLDAPServersById200ApplicationJSONConnectionAccount extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "distinguished_username" })
+    distinguishedUsername?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "password" })
+    password?: string;
+}
+
+export enum FindLDAPServersById200ApplicationJSONConnectionAuthenticationType {
+    Simple = "simple",
+    CramMd5 = "CRAM-MD5",
+    DigestMd5 = "DIGEST-MD5",
+    None = "none",
+}
+
+export enum FindLDAPServersById200ApplicationJSONConnectionReferralResponse {
+    Ignore = "ignore",
+    Follow = "follow",
+}
+
+export enum FindLDAPServersById200ApplicationJSONConnectionServerType {
+    ActiveDirectory = "Active Directory",
+    OpenDirectory = "Open Directory",
+    EDirectory = "eDirectory",
+    Custom = "Custom",
+}
+
+export class FindLDAPServersById200ApplicationJSONConnection extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "account" })
+    @Type(() => FindLDAPServersById200ApplicationJSONConnectionAccount)
+    account?: FindLDAPServersById200ApplicationJSONConnectionAccount;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "authentication_type" })
+    authenticationType?: FindLDAPServersById200ApplicationJSONConnectionAuthenticationType;
+
+    /**
+     * Hostname or IP address of the server
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "hostname" })
+    hostname?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the LDAP server
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    /**
+     * Timeout in seconds
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "open_close_timeout" })
+    openCloseTimeout?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "port" })
+    port?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "referral_response" })
+    referralResponse?: FindLDAPServersById200ApplicationJSONConnectionReferralResponse;
+
+    /**
+     * Timeout in seconds
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "search_timeout" })
+    searchTimeout?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "server_type" })
+    serverType?: FindLDAPServersById200ApplicationJSONConnectionServerType;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "use_ssl" })
+    useSsl?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "use_wildcards" })
+    useWildcards?: boolean;
+}
+
+export enum FindLDAPServersById200ApplicationJSONMappingsForUsersUserGroupMappingsMapObjectClassToAnyOrAll {
+    All = "all",
+    Any = "any",
+}
+
+export enum FindLDAPServersById200ApplicationJSONMappingsForUsersUserGroupMappingsSearchScope {
+    AllSubtrees = "All Subtrees",
+    FirstLevelOnly = "First Level Only",
+}
+
+export class FindLDAPServersById200ApplicationJSONMappingsForUsersUserGroupMappings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_group_id" })
+    mapGroupId?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_group_name" })
+    mapGroupName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_group_uuid" })
+    mapGroupUuid?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_object_class_to_any_or_all" })
+    mapObjectClassToAnyOrAll?: FindLDAPServersById200ApplicationJSONMappingsForUsersUserGroupMappingsMapObjectClassToAnyOrAll;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "object_classes" })
+    objectClasses?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "search_base" })
+    searchBase?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "search_scope" })
+    searchScope?: FindLDAPServersById200ApplicationJSONMappingsForUsersUserGroupMappingsSearchScope;
+}
+
+export enum FindLDAPServersById200ApplicationJSONMappingsForUsersUserGroupMembershipMappingsMapObjectClassToAnyOrAll {
+    All = "all",
+    Any = "any",
+}
+
+export enum FindLDAPServersById200ApplicationJSONMappingsForUsersUserGroupMembershipMappingsSearchScope {
+    AllSubtrees = "All Subtrees",
+    FirstLevelOnly = "First Level Only",
+}
+
+export enum FindLDAPServersById200ApplicationJSONMappingsForUsersUserGroupMembershipMappingsUserGroupMembershipStoredIn {
+    UserObject = "user object",
+    GroupObject = "group object",
+}
+
+export class FindLDAPServersById200ApplicationJSONMappingsForUsersUserGroupMembershipMappings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "append_to_username" })
+    appendToUsername?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "group_id" })
+    groupId?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_group_membership_to_user_field" })
+    mapGroupMembershipToUserField?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_object_class_to_any_or_all" })
+    mapObjectClassToAnyOrAll?: FindLDAPServersById200ApplicationJSONMappingsForUsersUserGroupMembershipMappingsMapObjectClassToAnyOrAll;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_user_membership_to_group_field" })
+    mapUserMembershipToGroupField?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_user_membership_use_dn" })
+    mapUserMembershipUseDn?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "object_classes" })
+    objectClasses?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "recursive_lookups" })
+    recursiveLookups?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "search_base" })
+    searchBase?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "search_scope" })
+    searchScope?: FindLDAPServersById200ApplicationJSONMappingsForUsersUserGroupMembershipMappingsSearchScope;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "use_dn" })
+    useDn?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group_membership_stored_in" })
+    userGroupMembershipStoredIn?: FindLDAPServersById200ApplicationJSONMappingsForUsersUserGroupMembershipMappingsUserGroupMembershipStoredIn;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group_membership_use_ldap_compare" })
+    userGroupMembershipUseLdapCompare?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export enum FindLDAPServersById200ApplicationJSONMappingsForUsersUserMappingsMapObjectClassToAnyOrAll {
+    All = "all",
+    Any = "any",
+}
+
+export enum FindLDAPServersById200ApplicationJSONMappingsForUsersUserMappingsSearchScope {
+    AllSubtrees = "All Subtrees",
+    FirstLevelOnly = "First Level Only",
+}
+
+export class FindLDAPServersById200ApplicationJSONMappingsForUsersUserMappings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "append_to_email_results" })
+    appendToEmailResults?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_building" })
+    mapBuilding?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_department" })
+    mapDepartment?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_email_address" })
+    mapEmailAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_object_class_to_any_or_all" })
+    mapObjectClassToAnyOrAll?: FindLDAPServersById200ApplicationJSONMappingsForUsersUserMappingsMapObjectClassToAnyOrAll;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_position" })
+    mapPosition?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_realname" })
+    mapRealname?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_room" })
+    mapRoom?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_telephone" })
+    mapTelephone?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_user_id" })
+    mapUserId?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_user_uuid" })
+    mapUserUuid?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "map_username" })
+    mapUsername?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "object_classes" })
+    objectClasses?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "search_base" })
+    searchBase?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "search_scope" })
+    searchScope?: FindLDAPServersById200ApplicationJSONMappingsForUsersUserMappingsSearchScope;
+}
+
+export class FindLDAPServersById200ApplicationJSONMappingsForUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group_mappings" })
+    @Type(() => FindLDAPServersById200ApplicationJSONMappingsForUsersUserGroupMappings)
+    userGroupMappings?: FindLDAPServersById200ApplicationJSONMappingsForUsersUserGroupMappings;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group_membership_mappings" })
+    @Type(() => FindLDAPServersById200ApplicationJSONMappingsForUsersUserGroupMembershipMappings)
+    userGroupMembershipMappings?: FindLDAPServersById200ApplicationJSONMappingsForUsersUserGroupMembershipMappings;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_mappings" })
+    @Type(() => FindLDAPServersById200ApplicationJSONMappingsForUsersUserMappings)
+    userMappings?: FindLDAPServersById200ApplicationJSONMappingsForUsersUserMappings;
+}
+
+/**
+ * OK
+ */
+export class FindLDAPServersById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "connection" })
+    @Type(() => FindLDAPServersById200ApplicationJSONConnection)
+    connection?: FindLDAPServersById200ApplicationJSONConnection;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mappings_for_users" })
+    @Type(() => FindLDAPServersById200ApplicationJSONMappingsForUsers)
+    mappingsForUsers?: FindLDAPServersById200ApplicationJSONMappingsForUsers;
 }
 
 export class FindLDAPServersByIdResponse extends SpeakeasyBase {
@@ -31,5 +588,5 @@ export class FindLDAPServersByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    ldapServer?: shared.LdapServer;
+    findLDAPServersById200ApplicationJSONObject?: FindLDAPServersById200ApplicationJSON;
 }

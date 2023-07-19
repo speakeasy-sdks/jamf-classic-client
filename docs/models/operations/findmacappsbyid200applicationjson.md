@@ -1,0 +1,12 @@
+# FindMacappsById200ApplicationJSON
+
+OK
+
+
+## Fields
+
+| Field                                                                                                                   | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `general`                                                                                                               | [FindMacappsById200ApplicationJSONGeneral](../../models/operations/findmacappsbyid200applicationjsongeneral.md)         | :heavy_minus_sign:                                                                                                      | N/A                                                                                                                     |
+| `scope`                                                                                                                 | [FindMacappsById200ApplicationJSONScope](../../models/operations/findmacappsbyid200applicationjsonscope.md)             | :heavy_minus_sign:                                                                                                      | N/A                                                                                                                     |
+| `selfService`                                                                                                           | [FindMacappsById200ApplicationJSONSelfService](../../models/operations/findmacappsbyid200applicationjsonselfservice.md) | :heavy_minus_sign:                                                                                                      | N/A                                                                                                                     |

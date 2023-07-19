@@ -5,7 +5,6 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
-import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -71,10 +70,11 @@ export class Computerapplications {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerApplications = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerApplications
-                    );
+                    res.findComputerApplicationByNameAndVersion200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerApplicationByNameAndVersion200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -146,10 +146,11 @@ export class Computerapplications {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerApplications = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerApplications
-                    );
+                    res.findComputerApplicationsByName200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerApplicationsByName200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -224,10 +225,11 @@ export class Computerapplications {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerApplications = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerApplications
-                    );
+                    res.findComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -302,10 +304,11 @@ export class Computerapplications {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerApplications = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerApplications
-                    );
+                    res.findComputerApplicationsByNameInventory200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerApplicationsByNameInventory200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

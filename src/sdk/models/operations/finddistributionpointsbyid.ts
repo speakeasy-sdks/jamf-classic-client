@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose } from "class-transformer";
 
 export class FindDistributionPointsByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,303 @@ export class FindDistributionPointsByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export enum FindDistributionPointsById200ApplicationXMLConnectionType {
+    Smb = "SMB",
+    Afp = "AFP",
+}
+
+export enum FindDistributionPointsById200ApplicationXMLProtocol {
+    Http = "http",
+    Https = "https",
+}
+
+/**
+ * OK
+ */
+export class FindDistributionPointsById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    connectionType?: FindDistributionPointsById200ApplicationXMLConnectionType;
+
+    /**
+     * Path to the share
+     */
+    @SpeakeasyMetadata()
+    context?: string;
+
+    @SpeakeasyMetadata()
+    enableLoadBalancing?: boolean;
+
+    @SpeakeasyMetadata()
+    failoverPoint?: string;
+
+    @SpeakeasyMetadata()
+    failoverPointUrl?: string;
+
+    @SpeakeasyMetadata()
+    httpDownloadsEnabled?: boolean;
+
+    /**
+     * Password for basic authentication
+     */
+    @SpeakeasyMetadata()
+    httpPassword?: string;
+
+    /**
+     * URL to download packages from
+     */
+    @SpeakeasyMetadata()
+    httpUrl?: string;
+
+    /**
+     * Username to authenticate with for basic authentication
+     */
+    @SpeakeasyMetadata()
+    httpUsername?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * IP address or hostname of distribution point
+     */
+    @SpeakeasyMetadata()
+    ipAddress?: string;
+
+    /**
+     * Only one share can be set as master
+     */
+    @SpeakeasyMetadata()
+    isMaster?: boolean;
+
+    @SpeakeasyMetadata()
+    localPath?: string;
+
+    /**
+     * Name of the distribution point
+     */
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    noAuthenticationRequired?: boolean;
+
+    @SpeakeasyMetadata()
+    password?: string;
+
+    @SpeakeasyMetadata()
+    port?: number;
+
+    @SpeakeasyMetadata()
+    protocol?: FindDistributionPointsById200ApplicationXMLProtocol;
+
+    /**
+     * Password for the read only account
+     */
+    @SpeakeasyMetadata()
+    readOnlyPassword?: string;
+
+    /**
+     * Account with read only privileges to the share
+     */
+    @SpeakeasyMetadata()
+    readOnlyUsername: string;
+
+    /**
+     * Password for the read/write account
+     */
+    @SpeakeasyMetadata()
+    readWritePassword?: string;
+
+    /**
+     * Account with read/write privileges to the share
+     */
+    @SpeakeasyMetadata()
+    readWriteUsername: string;
+
+    /**
+     * Name of the share
+     */
+    @SpeakeasyMetadata()
+    shareName: string;
+
+    @SpeakeasyMetadata()
+    sharePort?: number;
+
+    @SpeakeasyMetadata()
+    sshUsername?: string;
+
+    @SpeakeasyMetadata()
+    usernamePasswordRequired?: boolean;
+
+    /**
+     * Workgroup or domain of the accounts that have access to the share (SMB only)
+     */
+    @SpeakeasyMetadata()
+    workgroupOrDomain?: string;
+}
+
+export enum FindDistributionPointsById200ApplicationJSONConnectionType {
+    Smb = "SMB",
+    Afp = "AFP",
+}
+
+export enum FindDistributionPointsById200ApplicationJSONProtocol {
+    Http = "http",
+    Https = "https",
+}
+
+/**
+ * OK
+ */
+export class FindDistributionPointsById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "connection_type" })
+    connectionType?: FindDistributionPointsById200ApplicationJSONConnectionType;
+
+    /**
+     * Path to the share
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "context" })
+    context?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "enable_load_balancing" })
+    enableLoadBalancing?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "failover_point" })
+    failoverPoint?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "failover_point_url" })
+    failoverPointUrl?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "http_downloads_enabled" })
+    httpDownloadsEnabled?: boolean;
+
+    /**
+     * Password for basic authentication
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "http_password" })
+    httpPassword?: string;
+
+    /**
+     * URL to download packages from
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "http_url" })
+    httpUrl?: string;
+
+    /**
+     * Username to authenticate with for basic authentication
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "http_username" })
+    httpUsername?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * IP address or hostname of distribution point
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "ip_address" })
+    ipAddress?: string;
+
+    /**
+     * Only one share can be set as master
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_master" })
+    isMaster?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "local_path" })
+    localPath?: string;
+
+    /**
+     * Name of the distribution point
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "no_authentication_required" })
+    noAuthenticationRequired?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "password" })
+    password?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "port" })
+    port?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "protocol" })
+    protocol?: FindDistributionPointsById200ApplicationJSONProtocol;
+
+    /**
+     * Password for the read only account
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "read_only_password" })
+    readOnlyPassword?: string;
+
+    /**
+     * Account with read only privileges to the share
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "read_only_username" })
+    readOnlyUsername: string;
+
+    /**
+     * Password for the read/write account
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "read_write_password" })
+    readWritePassword?: string;
+
+    /**
+     * Account with read/write privileges to the share
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "read_write_username" })
+    readWriteUsername: string;
+
+    /**
+     * Name of the share
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "share_name" })
+    shareName: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "share_port" })
+    sharePort?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "ssh_username" })
+    sshUsername?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username_password_required" })
+    usernamePasswordRequired?: boolean;
+
+    /**
+     * Workgroup or domain of the accounts that have access to the share (SMB only)
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "workgroup_or_domain" })
+    workgroupOrDomain?: string;
 }
 
 export class FindDistributionPointsByIdResponse extends SpeakeasyBase {
@@ -31,5 +328,5 @@ export class FindDistributionPointsByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    distributionPoint?: shared.DistributionPoint;
+    findDistributionPointsById200ApplicationJSONObject?: FindDistributionPointsById200ApplicationJSON;
 }

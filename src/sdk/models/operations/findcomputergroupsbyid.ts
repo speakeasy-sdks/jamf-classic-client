@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindComputerGroupsByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,255 @@ export class FindComputerGroupsByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export class FindComputerGroupsById200ApplicationXMLComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    altMacAddress?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    macAddress?: string;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    serialNumber?: string;
+}
+
+export class FindComputerGroupsById200ApplicationXMLComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindComputerGroupsById200ApplicationXMLComputersComputer;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export enum FindComputerGroupsById200ApplicationXMLCriteriaCriterionAndOr {
+    And = "and",
+    Or = "or",
+}
+
+export class FindComputerGroupsById200ApplicationXMLCriteriaCriterion extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    andOr?: FindComputerGroupsById200ApplicationXMLCriteriaCriterionAndOr;
+
+    @SpeakeasyMetadata()
+    closingParen?: boolean;
+
+    /**
+     * Name of the criteria
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    openingParen?: boolean;
+
+    @SpeakeasyMetadata()
+    priority?: number;
+
+    /**
+     * Operator
+     */
+    @SpeakeasyMetadata()
+    searchType?: string;
+
+    @SpeakeasyMetadata()
+    value?: string;
+}
+
+export class FindComputerGroupsById200ApplicationXMLCriteria extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    criterion?: FindComputerGroupsById200ApplicationXMLCriteriaCriterion;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindComputerGroupsById200ApplicationXMLSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindComputerGroupsById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindComputerGroupsById200ApplicationXMLComputers })
+    computers?: FindComputerGroupsById200ApplicationXMLComputers[];
+
+    @SpeakeasyMetadata({ elemType: FindComputerGroupsById200ApplicationXMLCriteria })
+    criteria?: FindComputerGroupsById200ApplicationXMLCriteria[];
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Smart or static group
+     */
+    @SpeakeasyMetadata()
+    isSmart?: boolean;
+
+    /**
+     * Name of the group
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    site?: FindComputerGroupsById200ApplicationXMLSite;
+}
+
+export class FindComputerGroupsById200ApplicationJSONComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "alt_mac_address" })
+    altMacAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mac_address" })
+    macAddress?: string;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "serial_number" })
+    serialNumber?: string;
+}
+
+export class FindComputerGroupsById200ApplicationJSONComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(() => FindComputerGroupsById200ApplicationJSONComputersComputer)
+    computer?: FindComputerGroupsById200ApplicationJSONComputersComputer;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export enum FindComputerGroupsById200ApplicationJSONCriteriaCriterionAndOr {
+    And = "and",
+    Or = "or",
+}
+
+export class FindComputerGroupsById200ApplicationJSONCriteriaCriterion extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "and_or" })
+    andOr?: FindComputerGroupsById200ApplicationJSONCriteriaCriterionAndOr;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "closing_paren" })
+    closingParen?: boolean;
+
+    /**
+     * Name of the criteria
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "opening_paren" })
+    openingParen?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "priority" })
+    priority?: number;
+
+    /**
+     * Operator
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "search_type" })
+    searchType?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "value" })
+    value?: string;
+}
+
+export class FindComputerGroupsById200ApplicationJSONCriteria extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "criterion" })
+    @Type(() => FindComputerGroupsById200ApplicationJSONCriteriaCriterion)
+    criterion?: FindComputerGroupsById200ApplicationJSONCriteriaCriterion;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindComputerGroupsById200ApplicationJSONSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindComputerGroupsById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindComputerGroupsById200ApplicationJSONComputers })
+    @Expose({ name: "computers" })
+    @Type(() => FindComputerGroupsById200ApplicationJSONComputers)
+    computers?: FindComputerGroupsById200ApplicationJSONComputers[];
+
+    @SpeakeasyMetadata({ elemType: FindComputerGroupsById200ApplicationJSONCriteria })
+    @Expose({ name: "criteria" })
+    @Type(() => FindComputerGroupsById200ApplicationJSONCriteria)
+    criteria?: FindComputerGroupsById200ApplicationJSONCriteria[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Smart or static group
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_smart" })
+    isSmart?: boolean;
+
+    /**
+     * Name of the group
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindComputerGroupsById200ApplicationJSONSite)
+    site?: FindComputerGroupsById200ApplicationJSONSite;
 }
 
 export class FindComputerGroupsByIdResponse extends SpeakeasyBase {
@@ -31,5 +280,5 @@ export class FindComputerGroupsByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    computerGroup?: shared.ComputerGroup;
+    findComputerGroupsById200ApplicationJSONObject?: FindComputerGroupsById200ApplicationJSON;
 }

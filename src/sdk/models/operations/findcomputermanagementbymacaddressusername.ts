@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindComputerManagementByMacAddressUsernameRequest extends SpeakeasyBase {
     /**
@@ -18,6 +18,532 @@ export class FindComputerManagementByMacAddressUsernameRequest extends Speakeasy
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=username" })
     username: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLEbooksEbook extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLEbooks extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    ebook?: FindComputerManagementByMacAddressUsername200ApplicationXMLEbooksEbook;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    macAddress?: string;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLMacAppStoreAppsMacAppStoreApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLMacAppStoreApps extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    macAppStoreApp?: FindComputerManagementByMacAddressUsername200ApplicationXMLMacAppStoreAppsMacAppStoreApp;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLManagedPreferenceProfilesProfile extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLManagedPreferenceProfiles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    profile?: FindComputerManagementByMacAddressUsername200ApplicationXMLManagedPreferenceProfilesProfile;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLOsXConfigurationProfilesProfile extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLOsXConfigurationProfiles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    profile?: FindComputerManagementByMacAddressUsername200ApplicationXMLOsXConfigurationProfilesProfile;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLPatchPoliciesPatchPolicy extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLPatchPolicies extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    patchPolicy?: FindComputerManagementByMacAddressUsername200ApplicationXMLPatchPoliciesPatchPolicy;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLPatchReportingSoftwareTitlesTitle extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    installedVersion?: string;
+
+    @SpeakeasyMetadata()
+    latestVersion?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLPatchReportingSoftwareTitles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    title?: FindComputerManagementByMacAddressUsername200ApplicationXMLPatchReportingSoftwareTitlesTitle;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLPoliciesPolicy extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    trigger?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLPolicies extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    policy?: FindComputerManagementByMacAddressUsername200ApplicationXMLPoliciesPolicy;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLRestrictedSoftwareSoftware extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLRestrictedSoftware extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    software?: FindComputerManagementByMacAddressUsername200ApplicationXMLRestrictedSoftwareSoftware;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLSmartGroupsGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLSmartGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    group?: FindComputerManagementByMacAddressUsername200ApplicationXMLSmartGroupsGroup;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLStaticGroupsGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationXMLStaticGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    group?: FindComputerManagementByMacAddressUsername200ApplicationXMLStaticGroupsGroup;
+}
+
+/**
+ * OK
+ */
+export class FindComputerManagementByMacAddressUsername200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementByMacAddressUsername200ApplicationXMLEbooks,
+    })
+    ebooks?: FindComputerManagementByMacAddressUsername200ApplicationXMLEbooks[];
+
+    @SpeakeasyMetadata()
+    general?: FindComputerManagementByMacAddressUsername200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementByMacAddressUsername200ApplicationXMLMacAppStoreApps,
+    })
+    macAppStoreApps?: FindComputerManagementByMacAddressUsername200ApplicationXMLMacAppStoreApps[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerManagementByMacAddressUsername200ApplicationXMLManagedPreferenceProfiles,
+    })
+    managedPreferenceProfiles?: FindComputerManagementByMacAddressUsername200ApplicationXMLManagedPreferenceProfiles[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerManagementByMacAddressUsername200ApplicationXMLOsXConfigurationProfiles,
+    })
+    osXConfigurationProfiles?: FindComputerManagementByMacAddressUsername200ApplicationXMLOsXConfigurationProfiles[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementByMacAddressUsername200ApplicationXMLPatchPolicies,
+    })
+    patchPolicies?: FindComputerManagementByMacAddressUsername200ApplicationXMLPatchPolicies[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerManagementByMacAddressUsername200ApplicationXMLPatchReportingSoftwareTitles,
+    })
+    patchReportingSoftwareTitles?: FindComputerManagementByMacAddressUsername200ApplicationXMLPatchReportingSoftwareTitles[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementByMacAddressUsername200ApplicationXMLPolicies,
+    })
+    policies?: FindComputerManagementByMacAddressUsername200ApplicationXMLPolicies[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementByMacAddressUsername200ApplicationXMLRestrictedSoftware,
+    })
+    restrictedSoftware?: FindComputerManagementByMacAddressUsername200ApplicationXMLRestrictedSoftware[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementByMacAddressUsername200ApplicationXMLSmartGroups,
+    })
+    smartGroups?: FindComputerManagementByMacAddressUsername200ApplicationXMLSmartGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementByMacAddressUsername200ApplicationXMLStaticGroups,
+    })
+    staticGroups?: FindComputerManagementByMacAddressUsername200ApplicationXMLStaticGroups[];
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONEbooksEbook extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONEbooks extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "ebook" })
+    @Type(() => FindComputerManagementByMacAddressUsername200ApplicationJSONEbooksEbook)
+    ebook?: FindComputerManagementByMacAddressUsername200ApplicationJSONEbooksEbook;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mac_address" })
+    macAddress?: string;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "serial_number" })
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONMacAppStoreAppsMacAppStoreApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONMacAppStoreApps extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mac_app_store_app" })
+    @Type(
+        () =>
+            FindComputerManagementByMacAddressUsername200ApplicationJSONMacAppStoreAppsMacAppStoreApp
+    )
+    macAppStoreApp?: FindComputerManagementByMacAddressUsername200ApplicationJSONMacAppStoreAppsMacAppStoreApp;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONManagedPreferenceProfilesProfile extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONManagedPreferenceProfiles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "profile" })
+    @Type(
+        () =>
+            FindComputerManagementByMacAddressUsername200ApplicationJSONManagedPreferenceProfilesProfile
+    )
+    profile?: FindComputerManagementByMacAddressUsername200ApplicationJSONManagedPreferenceProfilesProfile;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONOsXConfigurationProfilesProfile extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONOsXConfigurationProfiles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "profile" })
+    @Type(
+        () =>
+            FindComputerManagementByMacAddressUsername200ApplicationJSONOsXConfigurationProfilesProfile
+    )
+    profile?: FindComputerManagementByMacAddressUsername200ApplicationJSONOsXConfigurationProfilesProfile;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONPatchPoliciesPatchPolicy extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONPatchPolicies extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "patch_policy" })
+    @Type(
+        () => FindComputerManagementByMacAddressUsername200ApplicationJSONPatchPoliciesPatchPolicy
+    )
+    patchPolicy?: FindComputerManagementByMacAddressUsername200ApplicationJSONPatchPoliciesPatchPolicy;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONPatchReportingSoftwareTitlesTitle extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "installed_version" })
+    installedVersion?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "latest_version" })
+    latestVersion?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONPatchReportingSoftwareTitles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "title" })
+    @Type(
+        () =>
+            FindComputerManagementByMacAddressUsername200ApplicationJSONPatchReportingSoftwareTitlesTitle
+    )
+    title?: FindComputerManagementByMacAddressUsername200ApplicationJSONPatchReportingSoftwareTitlesTitle;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONPoliciesPolicy extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "trigger" })
+    trigger?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONPolicies extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "policy" })
+    @Type(() => FindComputerManagementByMacAddressUsername200ApplicationJSONPoliciesPolicy)
+    policy?: FindComputerManagementByMacAddressUsername200ApplicationJSONPoliciesPolicy;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONRestrictedSoftwareSoftware extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONRestrictedSoftware extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "software" })
+    @Type(
+        () => FindComputerManagementByMacAddressUsername200ApplicationJSONRestrictedSoftwareSoftware
+    )
+    software?: FindComputerManagementByMacAddressUsername200ApplicationJSONRestrictedSoftwareSoftware;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONSmartGroupsGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONSmartGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "group" })
+    @Type(() => FindComputerManagementByMacAddressUsername200ApplicationJSONSmartGroupsGroup)
+    group?: FindComputerManagementByMacAddressUsername200ApplicationJSONSmartGroupsGroup;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONStaticGroupsGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementByMacAddressUsername200ApplicationJSONStaticGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "group" })
+    @Type(() => FindComputerManagementByMacAddressUsername200ApplicationJSONStaticGroupsGroup)
+    group?: FindComputerManagementByMacAddressUsername200ApplicationJSONStaticGroupsGroup;
+}
+
+/**
+ * OK
+ */
+export class FindComputerManagementByMacAddressUsername200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementByMacAddressUsername200ApplicationJSONEbooks,
+    })
+    @Expose({ name: "ebooks" })
+    @Type(() => FindComputerManagementByMacAddressUsername200ApplicationJSONEbooks)
+    ebooks?: FindComputerManagementByMacAddressUsername200ApplicationJSONEbooks[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindComputerManagementByMacAddressUsername200ApplicationJSONGeneral)
+    general?: FindComputerManagementByMacAddressUsername200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementByMacAddressUsername200ApplicationJSONMacAppStoreApps,
+    })
+    @Expose({ name: "mac_app_store_apps" })
+    @Type(() => FindComputerManagementByMacAddressUsername200ApplicationJSONMacAppStoreApps)
+    macAppStoreApps?: FindComputerManagementByMacAddressUsername200ApplicationJSONMacAppStoreApps[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerManagementByMacAddressUsername200ApplicationJSONManagedPreferenceProfiles,
+    })
+    @Expose({ name: "managed_preference_profiles" })
+    @Type(
+        () => FindComputerManagementByMacAddressUsername200ApplicationJSONManagedPreferenceProfiles
+    )
+    managedPreferenceProfiles?: FindComputerManagementByMacAddressUsername200ApplicationJSONManagedPreferenceProfiles[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerManagementByMacAddressUsername200ApplicationJSONOsXConfigurationProfiles,
+    })
+    @Expose({ name: "os_x_configuration_profiles" })
+    @Type(
+        () => FindComputerManagementByMacAddressUsername200ApplicationJSONOsXConfigurationProfiles
+    )
+    osXConfigurationProfiles?: FindComputerManagementByMacAddressUsername200ApplicationJSONOsXConfigurationProfiles[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementByMacAddressUsername200ApplicationJSONPatchPolicies,
+    })
+    @Expose({ name: "patch_policies" })
+    @Type(() => FindComputerManagementByMacAddressUsername200ApplicationJSONPatchPolicies)
+    patchPolicies?: FindComputerManagementByMacAddressUsername200ApplicationJSONPatchPolicies[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerManagementByMacAddressUsername200ApplicationJSONPatchReportingSoftwareTitles,
+    })
+    @Expose({ name: "patch_reporting_software_titles" })
+    @Type(
+        () =>
+            FindComputerManagementByMacAddressUsername200ApplicationJSONPatchReportingSoftwareTitles
+    )
+    patchReportingSoftwareTitles?: FindComputerManagementByMacAddressUsername200ApplicationJSONPatchReportingSoftwareTitles[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementByMacAddressUsername200ApplicationJSONPolicies,
+    })
+    @Expose({ name: "policies" })
+    @Type(() => FindComputerManagementByMacAddressUsername200ApplicationJSONPolicies)
+    policies?: FindComputerManagementByMacAddressUsername200ApplicationJSONPolicies[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementByMacAddressUsername200ApplicationJSONRestrictedSoftware,
+    })
+    @Expose({ name: "restricted_software" })
+    @Type(() => FindComputerManagementByMacAddressUsername200ApplicationJSONRestrictedSoftware)
+    restrictedSoftware?: FindComputerManagementByMacAddressUsername200ApplicationJSONRestrictedSoftware[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementByMacAddressUsername200ApplicationJSONSmartGroups,
+    })
+    @Expose({ name: "smart_groups" })
+    @Type(() => FindComputerManagementByMacAddressUsername200ApplicationJSONSmartGroups)
+    smartGroups?: FindComputerManagementByMacAddressUsername200ApplicationJSONSmartGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementByMacAddressUsername200ApplicationJSONStaticGroups,
+    })
+    @Expose({ name: "static_groups" })
+    @Type(() => FindComputerManagementByMacAddressUsername200ApplicationJSONStaticGroups)
+    staticGroups?: FindComputerManagementByMacAddressUsername200ApplicationJSONStaticGroups[];
 }
 
 export class FindComputerManagementByMacAddressUsernameResponse extends SpeakeasyBase {
@@ -37,5 +563,5 @@ export class FindComputerManagementByMacAddressUsernameResponse extends Speakeas
      * OK
      */
     @SpeakeasyMetadata()
-    computerManagement?: shared.ComputerManagement;
+    findComputerManagementByMacAddressUsername200ApplicationJSONObject?: FindComputerManagementByMacAddressUsername200ApplicationJSON;
 }

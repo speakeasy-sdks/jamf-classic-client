@@ -3,8 +3,115 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose } from "class-transformer";
+
+/**
+ * OK
+ */
+export class FindComputerCheckin200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    applyComputerLevelManagedPreferences?: boolean;
+
+    @SpeakeasyMetadata()
+    applyUserLevelManagedPreferences?: boolean;
+
+    @SpeakeasyMetadata()
+    checkForPoliciesAtLoginLogout?: boolean;
+
+    @SpeakeasyMetadata()
+    checkForPoliciesAtStartup?: boolean;
+
+    /**
+     * Measured in minutes
+     */
+    @SpeakeasyMetadata()
+    checkInFrequency?: number;
+
+    @SpeakeasyMetadata()
+    createLoginLogoutHooks?: boolean;
+
+    @SpeakeasyMetadata()
+    createStartupScript?: boolean;
+
+    @SpeakeasyMetadata()
+    displayStatusToUser?: boolean;
+
+    @SpeakeasyMetadata()
+    ensureSshIsEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    hideRestorePartition?: boolean;
+
+    @SpeakeasyMetadata()
+    logStartupEvent?: boolean;
+
+    @SpeakeasyMetadata()
+    logUsername?: boolean;
+
+    @SpeakeasyMetadata()
+    performLoginActionsInBackground?: boolean;
+}
+
+/**
+ * OK
+ */
+export class FindComputerCheckin200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "apply_computer_level_managed_preferences" })
+    applyComputerLevelManagedPreferences?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "apply_user_level_managed_preferences" })
+    applyUserLevelManagedPreferences?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "check_for_policies_at_login_logout" })
+    checkForPoliciesAtLoginLogout?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "check_for_policies_at_startup" })
+    checkForPoliciesAtStartup?: boolean;
+
+    /**
+     * Measured in minutes
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "check_in_frequency" })
+    checkInFrequency?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "create_login_logout_hooks" })
+    createLoginLogoutHooks?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "create_startup_script" })
+    createStartupScript?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "display_status_to_user" })
+    displayStatusToUser?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "ensure_ssh_is_enabled" })
+    ensureSshIsEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "hide_restore_partition" })
+    hideRestorePartition?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "log_startup_event" })
+    logStartupEvent?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "log_username" })
+    logUsername?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "perform_login_actions_in_background" })
+    performLoginActionsInBackground?: boolean;
+}
 
 export class FindComputerCheckinResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -23,5 +130,5 @@ export class FindComputerCheckinResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    computerCheckIn?: shared.ComputerCheckIn;
+    findComputerCheckin200ApplicationJSONObject?: FindComputerCheckin200ApplicationJSON;
 }

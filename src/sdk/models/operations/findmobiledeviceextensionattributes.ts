@@ -3,8 +3,45 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindMobiledeviceextensionattributes200ApplicationXMLMobileDeviceExtensionAttribute extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobiledeviceextensionattributes200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    mobileDeviceExtensionAttribute?: FindMobiledeviceextensionattributes200ApplicationXMLMobileDeviceExtensionAttribute;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindMobiledeviceextensionattributes200ApplicationJSONMobileDeviceExtensionAttribute extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobiledeviceextensionattributes200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mobile_device_extension_attribute" })
+    @Type(() => FindMobiledeviceextensionattributes200ApplicationJSONMobileDeviceExtensionAttribute)
+    mobileDeviceExtensionAttribute?: FindMobiledeviceextensionattributes200ApplicationJSONMobileDeviceExtensionAttribute;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
 
 export class FindMobiledeviceextensionattributesResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +59,6 @@ export class FindMobiledeviceextensionattributesResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.MobileDeviceExtensionAttributes })
-    mobileDeviceExtensionAttributes?: shared.MobileDeviceExtensionAttributes[];
+    @SpeakeasyMetadata({ elemType: FindMobiledeviceextensionattributes200ApplicationJSON })
+    findMobiledeviceextensionattributes200ApplicationJSONObjects?: FindMobiledeviceextensionattributes200ApplicationJSON[];
 }

@@ -1,0 +1,11 @@
+# FindRestrictedSoftwareByName200ApplicationXML
+
+OK
+
+
+## Fields
+
+| Field                                                                                                                                   | Type                                                                                                                                    | Required                                                                                                                                | Description                                                                                                                             |
+| --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| `general`                                                                                                                               | [FindRestrictedSoftwareByName200ApplicationXMLGeneral](../../models/operations/findrestrictedsoftwarebyname200applicationxmlgeneral.md) | :heavy_minus_sign:                                                                                                                      | N/A                                                                                                                                     |
+| `scope`                                                                                                                                 | [FindRestrictedSoftwareByName200ApplicationXMLScope](../../models/operations/findrestrictedsoftwarebyname200applicationxmlscope.md)     | :heavy_minus_sign:                                                                                                                      | N/A                                                                                                                                     |

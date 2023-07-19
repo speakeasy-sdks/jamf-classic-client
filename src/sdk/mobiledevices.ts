@@ -5,7 +5,6 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
-import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -402,11 +401,11 @@ export class Mobiledevices {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.mobileDevices = [];
+                    res.findMobileDevices200ApplicationJSONObjects = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.mobileDevices = utils.objectToClass(
+                    res.findMobileDevices200ApplicationJSONObjects = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.MobileDevices,
+                        operations.FindMobileDevices200ApplicationJSON,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -476,9 +475,9 @@ export class Mobiledevices {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.mobileDevice = utils.objectToClass(
+                    res.findMobileDevicesById200ApplicationJSONObject = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.MobileDevice
+                        operations.FindMobileDevicesById200ApplicationJSON
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -613,9 +612,9 @@ export class Mobiledevices {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.mobileDevice = utils.objectToClass(
+                    res.findMobileDevicesByMacAddress200ApplicationJSONObject = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.MobileDevice
+                        operations.FindMobileDevicesByMacAddress200ApplicationJSON
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -691,10 +690,11 @@ export class Mobiledevices {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.mobileDevice = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.MobileDevice
-                    );
+                    res.findMobileDevicesByMacAddressSubset200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindMobileDevicesByMacAddressSubset200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -762,9 +762,9 @@ export class Mobiledevices {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.mobileDevice = utils.objectToClass(
+                    res.findMobileDevicesByName200ApplicationJSONObject = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.MobileDevice
+                        operations.FindMobileDevicesByName200ApplicationJSON
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -840,9 +840,9 @@ export class Mobiledevices {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.mobileDevice = utils.objectToClass(
+                    res.findMobileDevicesByNameSubset200ApplicationJSONObject = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.MobileDevice
+                        operations.FindMobileDevicesByNameSubset200ApplicationJSON
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -915,10 +915,11 @@ export class Mobiledevices {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.mobileDevice = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.MobileDevice
-                    );
+                    res.findMobileDevicesBySerialNumber200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindMobileDevicesBySerialNumber200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -993,10 +994,11 @@ export class Mobiledevices {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.mobileDevice = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.MobileDevice
-                    );
+                    res.findMobileDevicesBySerialNumberSubset200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindMobileDevicesBySerialNumberSubset200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1064,9 +1066,9 @@ export class Mobiledevices {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.mobileDevice = utils.objectToClass(
+                    res.findMobileDevicesByUDID200ApplicationJSONObject = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.MobileDevice
+                        operations.FindMobileDevicesByUdid200ApplicationJSON
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -1142,9 +1144,9 @@ export class Mobiledevices {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.mobileDevice = utils.objectToClass(
+                    res.findMobileDevicesByUDIDSubset200ApplicationJSONObject = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.MobileDevice
+                        operations.FindMobileDevicesByUDIDSubset200ApplicationJSON
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -1216,9 +1218,9 @@ export class Mobiledevices {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.mobileDevice = utils.objectToClass(
+                    res.matchMobileDevices200ApplicationJSONObject = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.MobileDevice
+                        operations.MatchMobileDevices200ApplicationJSON
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;

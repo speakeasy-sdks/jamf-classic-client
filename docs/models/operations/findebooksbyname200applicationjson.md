@@ -1,0 +1,12 @@
+# FindEBooksByName200ApplicationJSON
+
+OK
+
+
+## Fields
+
+| Field                                                                                                                     | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `general`                                                                                                                 | [FindEBooksByName200ApplicationJSONGeneral](../../models/operations/findebooksbyname200applicationjsongeneral.md)         | :heavy_minus_sign:                                                                                                        | N/A                                                                                                                       |
+| `scope`                                                                                                                   | [FindEBooksByName200ApplicationJSONScope](../../models/operations/findebooksbyname200applicationjsonscope.md)             | :heavy_minus_sign:                                                                                                        | N/A                                                                                                                       |
+| `selfService`                                                                                                             | [FindEBooksByName200ApplicationJSONSelfService](../../models/operations/findebooksbyname200applicationjsonselfservice.md) | :heavy_minus_sign:                                                                                                        | N/A                                                                                                                       |

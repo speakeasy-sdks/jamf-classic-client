@@ -4,8 +4,8 @@
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { RFCDate } from "../../types";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindComputerHardwareSoftwareReportsByMacAddressRequest extends SpeakeasyBase {
     /**
@@ -27,6 +27,360 @@ export class FindComputerHardwareSoftwareReportsByMacAddressRequest extends Spea
     startDate: RFCDate;
 }
 
+export enum FindComputerHardwareSoftwareReportsByMacAddress200ApplicationXMLFontReportType {
+    Added = "Added",
+    Deleted = "Deleted",
+}
+
+export class FindComputerHardwareSoftwareReportsByMacAddress200ApplicationXMLFontReport extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    type?: FindComputerHardwareSoftwareReportsByMacAddress200ApplicationXMLFontReportType;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindComputerHardwareSoftwareReportsByMacAddress200ApplicationXMLHardwareReport extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    nicSpeed?: string;
+
+    @SpeakeasyMetadata()
+    bootPartitionUsedPercent?: number;
+
+    @SpeakeasyMetadata()
+    coreCount?: number;
+
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    make?: string;
+
+    @SpeakeasyMetadata()
+    modelIdentifier?: string;
+
+    @SpeakeasyMetadata()
+    openRamSlots?: number;
+
+    @SpeakeasyMetadata()
+    operatingSystem?: string;
+
+    @SpeakeasyMetadata()
+    opticalDrive?: string;
+
+    @SpeakeasyMetadata()
+    processorCount?: number;
+
+    @SpeakeasyMetadata()
+    processorSpeedMhz?: number;
+
+    @SpeakeasyMetadata()
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    servicePack?: string;
+
+    @SpeakeasyMetadata()
+    totalHarddriveSize?: string;
+
+    @SpeakeasyMetadata()
+    totalRamMb?: number;
+}
+
+export enum FindComputerHardwareSoftwareReportsByMacAddress200ApplicationXMLPluginReportType {
+    Added = "Added",
+    Removed = "Removed",
+}
+
+export class FindComputerHardwareSoftwareReportsByMacAddress200ApplicationXMLPluginReport extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    type?: FindComputerHardwareSoftwareReportsByMacAddress200ApplicationXMLPluginReportType;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export enum FindComputerHardwareSoftwareReportsByMacAddress200ApplicationXMLSoftwareReportType {
+    Added = "Added",
+    Deleted = "Deleted",
+}
+
+export class FindComputerHardwareSoftwareReportsByMacAddress200ApplicationXMLSoftwareReport extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    type?: FindComputerHardwareSoftwareReportsByMacAddress200ApplicationXMLSoftwareReportType;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+/**
+ * OK
+ */
+export class FindComputerHardwareSoftwareReportsByMacAddress200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    fontReport?: FindComputerHardwareSoftwareReportsByMacAddress200ApplicationXMLFontReport;
+
+    @SpeakeasyMetadata()
+    hardwareReport?: FindComputerHardwareSoftwareReportsByMacAddress200ApplicationXMLHardwareReport;
+
+    @SpeakeasyMetadata()
+    pluginReport?: FindComputerHardwareSoftwareReportsByMacAddress200ApplicationXMLPluginReport;
+
+    @SpeakeasyMetadata()
+    softwareReport?: FindComputerHardwareSoftwareReportsByMacAddress200ApplicationXMLSoftwareReport;
+}
+
+export enum FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONFontReportType {
+    Added = "Added",
+    Deleted = "Deleted",
+}
+
+export class FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONFontReport extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_utc" })
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "path" })
+    path?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONFontReportType;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONHardwareReport extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "NIC_speed" })
+    nicSpeed?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "boot_partition_used_percent" })
+    bootPartitionUsedPercent?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "core_count" })
+    coreCount?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_utc" })
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "make" })
+    make?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "model_identifier" })
+    modelIdentifier?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "open_ram_slots" })
+    openRamSlots?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "operating_system" })
+    operatingSystem?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "optical_drive" })
+    opticalDrive?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "processor_count" })
+    processorCount?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "processor_speed_mhz" })
+    processorSpeedMhz?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "serial_number" })
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "service_pack" })
+    servicePack?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "total_harddrive_size" })
+    totalHarddriveSize?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "total_ram_mb" })
+    totalRamMb?: number;
+}
+
+export enum FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONPluginReportType {
+    Added = "Added",
+    Removed = "Removed",
+}
+
+export class FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONPluginReport extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_utc" })
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "path" })
+    path?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONPluginReportType;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export enum FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONSoftwareReportType {
+    Added = "Added",
+    Deleted = "Deleted",
+}
+
+export class FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONSoftwareReport extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_utc" })
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "path" })
+    path?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONSoftwareReportType;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+/**
+ * OK
+ */
+export class FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "font_report" })
+    @Type(() => FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONFontReport)
+    fontReport?: FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONFontReport;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "hardware_report" })
+    @Type(() => FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONHardwareReport)
+    hardwareReport?: FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONHardwareReport;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "plugin_report" })
+    @Type(() => FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONPluginReport)
+    pluginReport?: FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONPluginReport;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "software_report" })
+    @Type(() => FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONSoftwareReport)
+    softwareReport?: FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONSoftwareReport;
+}
+
 export class FindComputerHardwareSoftwareReportsByMacAddressResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     body?: Uint8Array;
@@ -44,5 +398,5 @@ export class FindComputerHardwareSoftwareReportsByMacAddressResponse extends Spe
      * OK
      */
     @SpeakeasyMetadata()
-    computerHardwareSoftwareReports?: shared.ComputerHardwareSoftwareReports;
+    findComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONObject?: FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSON;
 }

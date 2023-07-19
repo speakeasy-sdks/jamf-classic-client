@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindAdvancedComputerSearchesByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,309 @@ export class FindAdvancedComputerSearchesByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export class FindAdvancedComputerSearchesById200ApplicationXMLComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computerName?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindAdvancedComputerSearchesById200ApplicationXMLComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindAdvancedComputerSearchesById200ApplicationXMLComputersComputer;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export enum FindAdvancedComputerSearchesById200ApplicationXMLCriteriaCriterionAndOr {
+    And = "and",
+    Or = "or",
+}
+
+export class FindAdvancedComputerSearchesById200ApplicationXMLCriteriaCriterion extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    andOr?: FindAdvancedComputerSearchesById200ApplicationXMLCriteriaCriterionAndOr;
+
+    @SpeakeasyMetadata()
+    closingParen?: boolean;
+
+    /**
+     * Name of the criteria
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    openingParen?: boolean;
+
+    @SpeakeasyMetadata()
+    priority?: number;
+
+    /**
+     * Operator
+     */
+    @SpeakeasyMetadata()
+    searchType?: string;
+
+    @SpeakeasyMetadata()
+    value?: string;
+}
+
+export class FindAdvancedComputerSearchesById200ApplicationXMLCriteria extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    criterion?: FindAdvancedComputerSearchesById200ApplicationXMLCriteriaCriterion;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindAdvancedComputerSearchesById200ApplicationXMLDisplayFieldsDisplayField extends SpeakeasyBase {
+    /**
+     * Name of the display field
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindAdvancedComputerSearchesById200ApplicationXMLDisplayFields extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    displayField?: FindAdvancedComputerSearchesById200ApplicationXMLDisplayFieldsDisplayField;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindAdvancedComputerSearchesById200ApplicationXMLSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindAdvancedComputerSearchesById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindAdvancedComputerSearchesById200ApplicationXMLComputers })
+    computers?: FindAdvancedComputerSearchesById200ApplicationXMLComputers[];
+
+    @SpeakeasyMetadata({ elemType: FindAdvancedComputerSearchesById200ApplicationXMLCriteria })
+    criteria?: FindAdvancedComputerSearchesById200ApplicationXMLCriteria[];
+
+    @SpeakeasyMetadata({ elemType: FindAdvancedComputerSearchesById200ApplicationXMLDisplayFields })
+    displayFields?: FindAdvancedComputerSearchesById200ApplicationXMLDisplayFields[];
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the advanced computer search
+     */
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    site?: FindAdvancedComputerSearchesById200ApplicationXMLSite;
+
+    @SpeakeasyMetadata()
+    sort1?: string;
+
+    @SpeakeasyMetadata()
+    sort2?: string;
+
+    @SpeakeasyMetadata()
+    sort3?: string;
+
+    @SpeakeasyMetadata()
+    viewAs?: string;
+}
+
+export class FindAdvancedComputerSearchesById200ApplicationJSONComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "Computer_Name" })
+    computerName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindAdvancedComputerSearchesById200ApplicationJSONComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(() => FindAdvancedComputerSearchesById200ApplicationJSONComputersComputer)
+    computer?: FindAdvancedComputerSearchesById200ApplicationJSONComputersComputer;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export enum FindAdvancedComputerSearchesById200ApplicationJSONCriteriaCriterionAndOr {
+    And = "and",
+    Or = "or",
+}
+
+export class FindAdvancedComputerSearchesById200ApplicationJSONCriteriaCriterion extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "and_or" })
+    andOr?: FindAdvancedComputerSearchesById200ApplicationJSONCriteriaCriterionAndOr;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "closing_paren" })
+    closingParen?: boolean;
+
+    /**
+     * Name of the criteria
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "opening_paren" })
+    openingParen?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "priority" })
+    priority?: number;
+
+    /**
+     * Operator
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "search_type" })
+    searchType?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "value" })
+    value?: string;
+}
+
+export class FindAdvancedComputerSearchesById200ApplicationJSONCriteria extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "criterion" })
+    @Type(() => FindAdvancedComputerSearchesById200ApplicationJSONCriteriaCriterion)
+    criterion?: FindAdvancedComputerSearchesById200ApplicationJSONCriteriaCriterion;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindAdvancedComputerSearchesById200ApplicationJSONDisplayFieldsDisplayField extends SpeakeasyBase {
+    /**
+     * Name of the display field
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindAdvancedComputerSearchesById200ApplicationJSONDisplayFields extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "display_field" })
+    @Type(() => FindAdvancedComputerSearchesById200ApplicationJSONDisplayFieldsDisplayField)
+    displayField?: FindAdvancedComputerSearchesById200ApplicationJSONDisplayFieldsDisplayField;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindAdvancedComputerSearchesById200ApplicationJSONSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindAdvancedComputerSearchesById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindAdvancedComputerSearchesById200ApplicationJSONComputers })
+    @Expose({ name: "computers" })
+    @Type(() => FindAdvancedComputerSearchesById200ApplicationJSONComputers)
+    computers?: FindAdvancedComputerSearchesById200ApplicationJSONComputers[];
+
+    @SpeakeasyMetadata({ elemType: FindAdvancedComputerSearchesById200ApplicationJSONCriteria })
+    @Expose({ name: "criteria" })
+    @Type(() => FindAdvancedComputerSearchesById200ApplicationJSONCriteria)
+    criteria?: FindAdvancedComputerSearchesById200ApplicationJSONCriteria[];
+
+    @SpeakeasyMetadata({
+        elemType: FindAdvancedComputerSearchesById200ApplicationJSONDisplayFields,
+    })
+    @Expose({ name: "display_fields" })
+    @Type(() => FindAdvancedComputerSearchesById200ApplicationJSONDisplayFields)
+    displayFields?: FindAdvancedComputerSearchesById200ApplicationJSONDisplayFields[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the advanced computer search
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindAdvancedComputerSearchesById200ApplicationJSONSite)
+    site?: FindAdvancedComputerSearchesById200ApplicationJSONSite;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "sort_1" })
+    sort1?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "sort_2" })
+    sort2?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "sort_3" })
+    sort3?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "view_as" })
+    viewAs?: string;
 }
 
 export class FindAdvancedComputerSearchesByIdResponse extends SpeakeasyBase {
@@ -31,5 +334,5 @@ export class FindAdvancedComputerSearchesByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    advancedComputerSearch?: shared.AdvancedComputerSearch;
+    findAdvancedComputerSearchesById200ApplicationJSONObject?: FindAdvancedComputerSearchesById200ApplicationJSON;
 }

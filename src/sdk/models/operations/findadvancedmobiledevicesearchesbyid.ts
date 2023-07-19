@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindAdvancedMobileDeviceSearchesByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,315 @@ export class FindAdvancedMobileDeviceSearchesByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export enum FindAdvancedMobileDeviceSearchesById200ApplicationXMLCriteriaCriterionAndOr {
+    And = "and",
+    Or = "or",
+}
+
+export class FindAdvancedMobileDeviceSearchesById200ApplicationXMLCriteriaCriterion extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    andOr?: FindAdvancedMobileDeviceSearchesById200ApplicationXMLCriteriaCriterionAndOr;
+
+    @SpeakeasyMetadata()
+    closingParen?: boolean;
+
+    /**
+     * Name of the criteria
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    openingParen?: boolean;
+
+    @SpeakeasyMetadata()
+    priority?: number;
+
+    /**
+     * Operator
+     */
+    @SpeakeasyMetadata()
+    searchType?: string;
+
+    @SpeakeasyMetadata()
+    value?: string;
+}
+
+export class FindAdvancedMobileDeviceSearchesById200ApplicationXMLCriteria extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    criterion?: FindAdvancedMobileDeviceSearchesById200ApplicationXMLCriteriaCriterion;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindAdvancedMobileDeviceSearchesById200ApplicationXMLDisplayFieldsDisplayField extends SpeakeasyBase {
+    /**
+     * Name of the display field
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindAdvancedMobileDeviceSearchesById200ApplicationXMLDisplayFields extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    displayField?: FindAdvancedMobileDeviceSearchesById200ApplicationXMLDisplayFieldsDisplayField;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindAdvancedMobileDeviceSearchesById200ApplicationXMLMobileDevicesMobileDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    displayName?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the mobile device
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindAdvancedMobileDeviceSearchesById200ApplicationXMLMobileDevices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    mobileDevice?: FindAdvancedMobileDeviceSearchesById200ApplicationXMLMobileDevicesMobileDevice;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindAdvancedMobileDeviceSearchesById200ApplicationXMLSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindAdvancedMobileDeviceSearchesById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindAdvancedMobileDeviceSearchesById200ApplicationXMLCriteria })
+    criteria?: FindAdvancedMobileDeviceSearchesById200ApplicationXMLCriteria[];
+
+    @SpeakeasyMetadata({
+        elemType: FindAdvancedMobileDeviceSearchesById200ApplicationXMLDisplayFields,
+    })
+    displayFields?: FindAdvancedMobileDeviceSearchesById200ApplicationXMLDisplayFields[];
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata({
+        elemType: FindAdvancedMobileDeviceSearchesById200ApplicationXMLMobileDevices,
+    })
+    mobileDevices?: FindAdvancedMobileDeviceSearchesById200ApplicationXMLMobileDevices[];
+
+    /**
+     * Name of the advanced mobile device search
+     */
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    site?: FindAdvancedMobileDeviceSearchesById200ApplicationXMLSite;
+
+    @SpeakeasyMetadata()
+    sort1?: string;
+
+    @SpeakeasyMetadata()
+    sort2?: string;
+
+    @SpeakeasyMetadata()
+    sort3?: string;
+
+    @SpeakeasyMetadata()
+    viewAs?: string;
+}
+
+export enum FindAdvancedMobileDeviceSearchesById200ApplicationJSONCriteriaCriterionAndOr {
+    And = "and",
+    Or = "or",
+}
+
+export class FindAdvancedMobileDeviceSearchesById200ApplicationJSONCriteriaCriterion extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "and_or" })
+    andOr?: FindAdvancedMobileDeviceSearchesById200ApplicationJSONCriteriaCriterionAndOr;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "closing_paren" })
+    closingParen?: boolean;
+
+    /**
+     * Name of the criteria
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "opening_paren" })
+    openingParen?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "priority" })
+    priority?: number;
+
+    /**
+     * Operator
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "search_type" })
+    searchType?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "value" })
+    value?: string;
+}
+
+export class FindAdvancedMobileDeviceSearchesById200ApplicationJSONCriteria extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "criterion" })
+    @Type(() => FindAdvancedMobileDeviceSearchesById200ApplicationJSONCriteriaCriterion)
+    criterion?: FindAdvancedMobileDeviceSearchesById200ApplicationJSONCriteriaCriterion;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindAdvancedMobileDeviceSearchesById200ApplicationJSONDisplayFieldsDisplayField extends SpeakeasyBase {
+    /**
+     * Name of the display field
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindAdvancedMobileDeviceSearchesById200ApplicationJSONDisplayFields extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "display_field" })
+    @Type(() => FindAdvancedMobileDeviceSearchesById200ApplicationJSONDisplayFieldsDisplayField)
+    displayField?: FindAdvancedMobileDeviceSearchesById200ApplicationJSONDisplayFieldsDisplayField;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindAdvancedMobileDeviceSearchesById200ApplicationJSONMobileDevicesMobileDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "Display_Name" })
+    displayName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the mobile device
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindAdvancedMobileDeviceSearchesById200ApplicationJSONMobileDevices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mobile_device" })
+    @Type(() => FindAdvancedMobileDeviceSearchesById200ApplicationJSONMobileDevicesMobileDevice)
+    mobileDevice?: FindAdvancedMobileDeviceSearchesById200ApplicationJSONMobileDevicesMobileDevice;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindAdvancedMobileDeviceSearchesById200ApplicationJSONSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindAdvancedMobileDeviceSearchesById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindAdvancedMobileDeviceSearchesById200ApplicationJSONCriteria })
+    @Expose({ name: "criteria" })
+    @Type(() => FindAdvancedMobileDeviceSearchesById200ApplicationJSONCriteria)
+    criteria?: FindAdvancedMobileDeviceSearchesById200ApplicationJSONCriteria[];
+
+    @SpeakeasyMetadata({
+        elemType: FindAdvancedMobileDeviceSearchesById200ApplicationJSONDisplayFields,
+    })
+    @Expose({ name: "display_fields" })
+    @Type(() => FindAdvancedMobileDeviceSearchesById200ApplicationJSONDisplayFields)
+    displayFields?: FindAdvancedMobileDeviceSearchesById200ApplicationJSONDisplayFields[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata({
+        elemType: FindAdvancedMobileDeviceSearchesById200ApplicationJSONMobileDevices,
+    })
+    @Expose({ name: "mobile_devices" })
+    @Type(() => FindAdvancedMobileDeviceSearchesById200ApplicationJSONMobileDevices)
+    mobileDevices?: FindAdvancedMobileDeviceSearchesById200ApplicationJSONMobileDevices[];
+
+    /**
+     * Name of the advanced mobile device search
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindAdvancedMobileDeviceSearchesById200ApplicationJSONSite)
+    site?: FindAdvancedMobileDeviceSearchesById200ApplicationJSONSite;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "sort_1" })
+    sort1?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "sort_2" })
+    sort2?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "sort_3" })
+    sort3?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "view_as" })
+    viewAs?: string;
 }
 
 export class FindAdvancedMobileDeviceSearchesByIdResponse extends SpeakeasyBase {
@@ -31,5 +340,5 @@ export class FindAdvancedMobileDeviceSearchesByIdResponse extends SpeakeasyBase 
      * OK
      */
     @SpeakeasyMetadata()
-    advancedMobileDeviceSearch?: shared.AdvancedMobileDeviceSearch;
+    findAdvancedMobileDeviceSearchesById200ApplicationJSONObject?: FindAdvancedMobileDeviceSearchesById200ApplicationJSON;
 }

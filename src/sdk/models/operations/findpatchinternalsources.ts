@@ -3,8 +3,45 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindPatchInternalSources200ApplicationXMLPatchInternalSource extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPatchInternalSources200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    patchInternalSource?: FindPatchInternalSources200ApplicationXMLPatchInternalSource;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindPatchInternalSources200ApplicationJSONPatchInternalSource extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPatchInternalSources200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "patch_internal_source" })
+    @Type(() => FindPatchInternalSources200ApplicationJSONPatchInternalSource)
+    patchInternalSource?: FindPatchInternalSources200ApplicationJSONPatchInternalSource;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
 
 export class FindPatchInternalSourcesResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +59,6 @@ export class FindPatchInternalSourcesResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.PatchInternalSources })
-    patchInternalSources?: shared.PatchInternalSources[];
+    @SpeakeasyMetadata({ elemType: FindPatchInternalSources200ApplicationJSON })
+    findPatchInternalSources200ApplicationJSONObjects?: FindPatchInternalSources200ApplicationJSON[];
 }

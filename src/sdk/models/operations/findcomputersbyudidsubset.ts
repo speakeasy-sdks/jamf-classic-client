@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 /**
  * Subset to filter by
@@ -37,6 +37,2130 @@ export class FindComputersByUDIDSubsetRequest extends SpeakeasyBase {
     udid: string;
 }
 
+export class FindComputersByUDIDSubset200ApplicationXMLCertificatesCertificate extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    commonName?: string;
+
+    @SpeakeasyMetadata()
+    expiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    expiresUtc?: string;
+
+    @SpeakeasyMetadata()
+    identify?: boolean;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLCertificates extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    certificate?: FindComputersByUDIDSubset200ApplicationXMLCertificatesCertificate;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLConfigurationProfilesConfigurationProfile extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    isRemovable?: boolean;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    uuid?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLConfigurationProfiles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    configurationProfile?: FindComputersByUDIDSubset200ApplicationXMLConfigurationProfilesConfigurationProfile;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLExtensionAttributesExtensionAttribute extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    type?: string;
+
+    @SpeakeasyMetadata()
+    value?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLExtensionAttributes extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    extensionAttribute?: FindComputersByUDIDSubset200ApplicationXMLExtensionAttributesExtensionAttribute;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLGeneralManagementStatus extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    enrolledViaDep?: boolean;
+
+    @SpeakeasyMetadata()
+    userApprovedEnrollment?: boolean;
+
+    @SpeakeasyMetadata()
+    userApprovedMdm?: boolean;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLGeneralMdmCapableUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    mdmCapableUser?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLGeneralRemoteManagement extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    managed?: boolean;
+
+    @SpeakeasyMetadata()
+    managementUsername?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    altMacAddress?: string;
+
+    @SpeakeasyMetadata()
+    altNetworkAdapterType?: string;
+
+    @SpeakeasyMetadata()
+    assetTag?: string;
+
+    @SpeakeasyMetadata()
+    barcode1?: string;
+
+    @SpeakeasyMetadata()
+    barcode2?: string;
+
+    @SpeakeasyMetadata()
+    distributionPoint?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    initialEntryDate?: string;
+
+    @SpeakeasyMetadata()
+    initialEntryDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    initialEntryDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    ipAddress?: string;
+
+    @SpeakeasyMetadata()
+    itunesStoreAccountIsActive?: boolean;
+
+    @SpeakeasyMetadata()
+    jamfVersion?: string;
+
+    @SpeakeasyMetadata()
+    lastCloudBackupDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    lastCloudBackupDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    lastContactTime?: string;
+
+    @SpeakeasyMetadata()
+    lastContactTimeEpoch?: number;
+
+    @SpeakeasyMetadata()
+    lastContactTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    lastEnrolledDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    lastEnrolledDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    lastReportedIp?: string;
+
+    @SpeakeasyMetadata()
+    macAddress?: string;
+
+    @SpeakeasyMetadata()
+    managementStatus?: FindComputersByUDIDSubset200ApplicationXMLGeneralManagementStatus;
+
+    @SpeakeasyMetadata()
+    mdmCapable?: boolean;
+
+    @SpeakeasyMetadata()
+    mdmCapableUsers?: FindComputersByUDIDSubset200ApplicationXMLGeneralMdmCapableUsers;
+
+    /**
+     * Name of computer
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    networkAdapterType?: string;
+
+    @SpeakeasyMetadata()
+    platform?: string;
+
+    @SpeakeasyMetadata()
+    remoteManagement?: FindComputersByUDIDSubset200ApplicationXMLGeneralRemoteManagement;
+
+    @SpeakeasyMetadata()
+    reportDate?: string;
+
+    @SpeakeasyMetadata()
+    reportDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    reportDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    site?: FindComputersByUDIDSubset200ApplicationXMLGeneralSite;
+
+    @SpeakeasyMetadata()
+    sus?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLGroupsAccountsComputerGroupMemberships extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    group?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLGroupsAccountsLocalAccountsUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    administrator?: boolean;
+
+    @SpeakeasyMetadata()
+    filevaultEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    home?: string;
+
+    @SpeakeasyMetadata()
+    homeSize?: string;
+
+    @SpeakeasyMetadata()
+    homeSizeMb?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    realname?: string;
+
+    @SpeakeasyMetadata()
+    uid?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLGroupsAccountsLocalAccounts extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindComputersByUDIDSubset200ApplicationXMLGroupsAccountsLocalAccountsUser;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLGroupsAccounts extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationXMLGroupsAccountsComputerGroupMemberships,
+    })
+    computerGroupMemberships?: FindComputersByUDIDSubset200ApplicationXMLGroupsAccountsComputerGroupMemberships[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationXMLGroupsAccountsLocalAccounts,
+    })
+    localAccounts?: FindComputersByUDIDSubset200ApplicationXMLGroupsAccountsLocalAccounts[];
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLHardwareFilevault2Users extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLHardwareMappedPrintersPrinter extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    location?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    type?: string;
+
+    @SpeakeasyMetadata()
+    uri?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLHardwareMappedPrinters extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    printer?: FindComputersByUDIDSubset200ApplicationXMLHardwareMappedPrintersPrinter;
+}
+
+export enum FindComputersByUDIDSubset200ApplicationXMLHardwareSipStatus {
+    Enabled = "Enabled",
+    Disabled = "Disabled",
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLHardwareStorageDevicePartition extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    bootDriveAvailableMb?: number;
+
+    @SpeakeasyMetadata()
+    filevault2Percent?: number;
+
+    @SpeakeasyMetadata()
+    filevault2Status?: string;
+
+    @SpeakeasyMetadata()
+    filevaultPercent?: number;
+
+    @SpeakeasyMetadata()
+    filevaultStatus?: string;
+
+    @SpeakeasyMetadata()
+    lvUUID?: string;
+
+    @SpeakeasyMetadata()
+    lvgUUID?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    partitionCapacityMb?: number;
+
+    @SpeakeasyMetadata()
+    percentageFull?: number;
+
+    @SpeakeasyMetadata()
+    pvUUID?: string;
+
+    @SpeakeasyMetadata()
+    size?: number;
+
+    @SpeakeasyMetadata()
+    type?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLHardwareStorageDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    connectionType?: string;
+
+    @SpeakeasyMetadata()
+    disk?: string;
+
+    @SpeakeasyMetadata()
+    driveCapacityMb?: number;
+
+    @SpeakeasyMetadata()
+    model?: string;
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationXMLHardwareStorageDevicePartition,
+    })
+    partition?: FindComputersByUDIDSubset200ApplicationXMLHardwareStorageDevicePartition[];
+
+    @SpeakeasyMetadata()
+    revision?: string;
+
+    @SpeakeasyMetadata()
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    size?: number;
+
+    @SpeakeasyMetadata()
+    smartStatus?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLHardwareStorage extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    device?: FindComputersByUDIDSubset200ApplicationXMLHardwareStorageDevice;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLHardware extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    activeDirectoryStatus?: string;
+
+    @SpeakeasyMetadata()
+    availableRamSlots?: number;
+
+    @SpeakeasyMetadata()
+    batteryCapacity?: number;
+
+    @SpeakeasyMetadata()
+    bleCapable?: boolean;
+
+    @SpeakeasyMetadata()
+    bootRom?: string;
+
+    @SpeakeasyMetadata()
+    busSpeed?: number;
+
+    @SpeakeasyMetadata()
+    busSpeedMhz?: number;
+
+    @SpeakeasyMetadata()
+    cacheSize?: number;
+
+    @SpeakeasyMetadata()
+    cacheSizeKb?: number;
+
+    @SpeakeasyMetadata()
+    diskEncryptionConfiguration?: string;
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationXMLHardwareFilevault2Users,
+    })
+    filevault2Users?: FindComputersByUDIDSubset200ApplicationXMLHardwareFilevault2Users[];
+
+    @SpeakeasyMetadata()
+    gatekeeperStatus?: string;
+
+    @SpeakeasyMetadata()
+    institutionalRecoveryKey?: string;
+
+    @SpeakeasyMetadata()
+    make?: string;
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationXMLHardwareMappedPrinters,
+    })
+    mappedPrinters?: FindComputersByUDIDSubset200ApplicationXMLHardwareMappedPrinters[];
+
+    @SpeakeasyMetadata()
+    masterPasswordSet?: boolean;
+
+    @SpeakeasyMetadata()
+    model?: string;
+
+    @SpeakeasyMetadata()
+    modelIdentifier?: string;
+
+    @SpeakeasyMetadata()
+    nicSpeed?: string;
+
+    @SpeakeasyMetadata()
+    numberCores?: number;
+
+    @SpeakeasyMetadata()
+    numberProcessors?: number;
+
+    @SpeakeasyMetadata()
+    opticalDrive?: string;
+
+    @SpeakeasyMetadata()
+    osBuild?: string;
+
+    @SpeakeasyMetadata()
+    osName?: string;
+
+    @SpeakeasyMetadata()
+    osVersion?: string;
+
+    @SpeakeasyMetadata()
+    processorArchitechture?: string;
+
+    @SpeakeasyMetadata()
+    processorSpeed?: string;
+
+    @SpeakeasyMetadata()
+    processorSpeedMhz?: string;
+
+    @SpeakeasyMetadata()
+    processorType?: string;
+
+    @SpeakeasyMetadata()
+    servicePack?: string;
+
+    @SpeakeasyMetadata()
+    sipStatus?: FindComputersByUDIDSubset200ApplicationXMLHardwareSipStatus;
+
+    @SpeakeasyMetadata()
+    smcVersion?: string;
+
+    @SpeakeasyMetadata({ elemType: FindComputersByUDIDSubset200ApplicationXMLHardwareStorage })
+    storage?: FindComputersByUDIDSubset200ApplicationXMLHardwareStorage[];
+
+    @SpeakeasyMetadata()
+    totalRam?: number;
+
+    @SpeakeasyMetadata()
+    totalRamMb?: number;
+
+    @SpeakeasyMetadata()
+    xprotectVersion?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: string;
+
+    @SpeakeasyMetadata()
+    department?: string;
+
+    @SpeakeasyMetadata()
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    phone?: string;
+
+    @SpeakeasyMetadata()
+    phoneNumber?: string;
+
+    @SpeakeasyMetadata()
+    position?: string;
+
+    @SpeakeasyMetadata()
+    realName?: string;
+
+    @SpeakeasyMetadata()
+    realname?: string;
+
+    @SpeakeasyMetadata()
+    room?: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLPeripheralsPeripheralsAttachmentsAttachment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    filename?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    uri?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLPeripheralsPeripheralsAttachments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    attachment?: FindComputersByUDIDSubset200ApplicationXMLPeripheralsPeripheralsAttachmentsAttachment;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLPeripheralsPeripheralsPeripheralFieldsField extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    value?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLPeripheralsPeripheralsPeripheralFields extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    field?: FindComputersByUDIDSubset200ApplicationXMLPeripheralsPeripheralsPeripheralFieldsField;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLPeripheralsPeripheralsPeripheral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    barCode1?: string;
+
+    @SpeakeasyMetadata()
+    barCode2?: string;
+
+    @SpeakeasyMetadata()
+    fields?: FindComputersByUDIDSubset200ApplicationXMLPeripheralsPeripheralsPeripheralFields;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the peripheral type
+     */
+    @SpeakeasyMetadata()
+    type?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLPeripheralsPeripheralsPurchasing extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    applecareId?: string;
+
+    @SpeakeasyMetadata()
+    isLeased?: boolean;
+
+    @SpeakeasyMetadata()
+    isPurchased?: boolean;
+
+    @SpeakeasyMetadata()
+    leaseExpires?: string;
+
+    @SpeakeasyMetadata()
+    leaseExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    leaseExpiresUtc?: string;
+
+    @SpeakeasyMetadata()
+    lifeExpectancy?: number;
+
+    @SpeakeasyMetadata()
+    poDate?: string;
+
+    @SpeakeasyMetadata()
+    poDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    poDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    poNumber?: string;
+
+    @SpeakeasyMetadata()
+    purchasePrice?: string;
+
+    @SpeakeasyMetadata()
+    purchasingAccount?: string;
+
+    @SpeakeasyMetadata()
+    purchasingContact?: string;
+
+    @SpeakeasyMetadata()
+    vendor?: string;
+
+    @SpeakeasyMetadata()
+    warrantyExpires?: string;
+
+    @SpeakeasyMetadata()
+    warrantyExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    warrantyExpiresUtc?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLPeripheralsPeripherals extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationXMLPeripheralsPeripheralsAttachments,
+    })
+    attachments?: FindComputersByUDIDSubset200ApplicationXMLPeripheralsPeripheralsAttachments[];
+
+    @SpeakeasyMetadata()
+    peripheral?: FindComputersByUDIDSubset200ApplicationXMLPeripheralsPeripheralsPeripheral;
+
+    @SpeakeasyMetadata()
+    purchasing?: FindComputersByUDIDSubset200ApplicationXMLPeripheralsPeripheralsPurchasing;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLPeripherals extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationXMLPeripheralsPeripherals,
+    })
+    peripherals?: FindComputersByUDIDSubset200ApplicationXMLPeripheralsPeripherals[];
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLPurchasing extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    applecareId?: string;
+
+    @SpeakeasyMetadata()
+    isLeased?: boolean;
+
+    @SpeakeasyMetadata()
+    isPurchased?: boolean;
+
+    @SpeakeasyMetadata()
+    leaseExpires?: string;
+
+    @SpeakeasyMetadata()
+    leaseExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    leaseExpiresUtc?: string;
+
+    @SpeakeasyMetadata()
+    lifeExpectancy?: number;
+
+    @SpeakeasyMetadata()
+    poDate?: string;
+
+    @SpeakeasyMetadata()
+    poDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    poDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    poNumber?: string;
+
+    @SpeakeasyMetadata()
+    purchasePrice?: string;
+
+    @SpeakeasyMetadata()
+    purchasingAccount?: string;
+
+    @SpeakeasyMetadata()
+    purchasingContact?: string;
+
+    @SpeakeasyMetadata()
+    vendor?: string;
+
+    @SpeakeasyMetadata()
+    warrantyExpires?: string;
+
+    @SpeakeasyMetadata()
+    warrantyExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    warrantyExpiresUtc?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLSecurity extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    activationLock?: boolean;
+
+    @SpeakeasyMetadata()
+    externalBootLevel?: string;
+
+    @SpeakeasyMetadata()
+    firewallEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    recoveryLockEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    secureBootLevel?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLSoftwareApplicationsApplication extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLSoftwareApplications extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    application?: FindComputersByUDIDSubset200ApplicationXMLSoftwareApplicationsApplication;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLSoftwareAvailableSoftwareUpdates extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLSoftwareAvailableUpdatesUpdate extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    packageName?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLSoftwareAvailableUpdates extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    update?: FindComputersByUDIDSubset200ApplicationXMLSoftwareAvailableUpdatesUpdate;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLSoftwareCachedByCasper extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    package?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLSoftwareFontsFont extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLSoftwareFonts extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    font?: FindComputersByUDIDSubset200ApplicationXMLSoftwareFontsFont;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLSoftwareInstalledByCasper extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    package?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLSoftwareInstalledByInstallerSwu extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    package?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLSoftwareLicensedSoftware extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLSoftwarePluginsPlugin extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLSoftwarePlugins extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    plugin?: FindComputersByUDIDSubset200ApplicationXMLSoftwarePluginsPlugin;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLSoftwareRunningServices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationXMLSoftware extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindComputersByUDIDSubset200ApplicationXMLSoftwareApplications })
+    applications?: FindComputersByUDIDSubset200ApplicationXMLSoftwareApplications[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationXMLSoftwareAvailableSoftwareUpdates,
+    })
+    availableSoftwareUpdates?: FindComputersByUDIDSubset200ApplicationXMLSoftwareAvailableSoftwareUpdates[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationXMLSoftwareAvailableUpdates,
+    })
+    availableUpdates?: FindComputersByUDIDSubset200ApplicationXMLSoftwareAvailableUpdates[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationXMLSoftwareCachedByCasper,
+    })
+    cachedByCasper?: FindComputersByUDIDSubset200ApplicationXMLSoftwareCachedByCasper[];
+
+    @SpeakeasyMetadata({ elemType: FindComputersByUDIDSubset200ApplicationXMLSoftwareFonts })
+    fonts?: FindComputersByUDIDSubset200ApplicationXMLSoftwareFonts[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationXMLSoftwareInstalledByCasper,
+    })
+    installedByCasper?: FindComputersByUDIDSubset200ApplicationXMLSoftwareInstalledByCasper[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationXMLSoftwareInstalledByInstallerSwu,
+    })
+    installedByInstallerSwu?: FindComputersByUDIDSubset200ApplicationXMLSoftwareInstalledByInstallerSwu[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationXMLSoftwareLicensedSoftware,
+    })
+    licensedSoftware?: FindComputersByUDIDSubset200ApplicationXMLSoftwareLicensedSoftware[];
+
+    @SpeakeasyMetadata({ elemType: FindComputersByUDIDSubset200ApplicationXMLSoftwarePlugins })
+    plugins?: FindComputersByUDIDSubset200ApplicationXMLSoftwarePlugins[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationXMLSoftwareRunningServices,
+    })
+    runningServices?: FindComputersByUDIDSubset200ApplicationXMLSoftwareRunningServices[];
+
+    @SpeakeasyMetadata()
+    unixExecutables?: string;
+}
+
+/**
+ * OK
+ */
+export class FindComputersByUDIDSubset200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindComputersByUDIDSubset200ApplicationXMLCertificates })
+    certificates?: FindComputersByUDIDSubset200ApplicationXMLCertificates[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationXMLConfigurationProfiles,
+    })
+    configurationProfiles?: FindComputersByUDIDSubset200ApplicationXMLConfigurationProfiles[];
+
+    @SpeakeasyMetadata({ elemType: FindComputersByUDIDSubset200ApplicationXMLExtensionAttributes })
+    extensionAttributes?: FindComputersByUDIDSubset200ApplicationXMLExtensionAttributes[];
+
+    @SpeakeasyMetadata()
+    general?: FindComputersByUDIDSubset200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata()
+    groupsAccounts?: FindComputersByUDIDSubset200ApplicationXMLGroupsAccounts;
+
+    @SpeakeasyMetadata()
+    hardware?: FindComputersByUDIDSubset200ApplicationXMLHardware;
+
+    @SpeakeasyMetadata()
+    location?: FindComputersByUDIDSubset200ApplicationXMLLocation;
+
+    @SpeakeasyMetadata()
+    peripherals?: FindComputersByUDIDSubset200ApplicationXMLPeripherals;
+
+    @SpeakeasyMetadata()
+    purchasing?: FindComputersByUDIDSubset200ApplicationXMLPurchasing;
+
+    @SpeakeasyMetadata()
+    security?: FindComputersByUDIDSubset200ApplicationXMLSecurity;
+
+    @SpeakeasyMetadata()
+    software?: FindComputersByUDIDSubset200ApplicationXMLSoftware;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONCertificatesCertificate extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "common_name" })
+    commonName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "expires_epoch" })
+    expiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "expires_utc" })
+    expiresUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "identify" })
+    identify?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONCertificates extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "certificate" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONCertificatesCertificate)
+    certificate?: FindComputersByUDIDSubset200ApplicationJSONCertificatesCertificate;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONConfigurationProfilesConfigurationProfile extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_removable" })
+    isRemovable?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uuid" })
+    uuid?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONConfigurationProfiles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "configuration_profile" })
+    @Type(
+        () => FindComputersByUDIDSubset200ApplicationJSONConfigurationProfilesConfigurationProfile
+    )
+    configurationProfile?: FindComputersByUDIDSubset200ApplicationJSONConfigurationProfilesConfigurationProfile;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONExtensionAttributesExtensionAttribute extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "value" })
+    value?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONExtensionAttributes extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "extension_attribute" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONExtensionAttributesExtensionAttribute)
+    extensionAttribute?: FindComputersByUDIDSubset200ApplicationJSONExtensionAttributesExtensionAttribute;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONGeneralManagementStatus extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "enrolled_via_dep" })
+    enrolledViaDep?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_approved_enrollment" })
+    userApprovedEnrollment?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_approved_mdm" })
+    userApprovedMdm?: boolean;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONGeneralMdmCapableUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mdm_capable_user" })
+    mdmCapableUser?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONGeneralRemoteManagement extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "managed" })
+    managed?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_username" })
+    managementUsername?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "alt_mac_address" })
+    altMacAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "alt_network_adapter_type" })
+    altNetworkAdapterType?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "asset_tag" })
+    assetTag?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "barcode_1" })
+    barcode1?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "barcode_2" })
+    barcode2?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "distribution_point" })
+    distributionPoint?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "initial_entry_date" })
+    initialEntryDate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "initial_entry_date_epoch" })
+    initialEntryDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "initial_entry_date_utc" })
+    initialEntryDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "ip_address" })
+    ipAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "itunes_store_account_is_active" })
+    itunesStoreAccountIsActive?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "jamf_version" })
+    jamfVersion?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_cloud_backup_date_epoch" })
+    lastCloudBackupDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_cloud_backup_date_utc" })
+    lastCloudBackupDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_contact_time" })
+    lastContactTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_contact_time_epoch" })
+    lastContactTimeEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_contact_time_utc" })
+    lastContactTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_enrolled_date_epoch" })
+    lastEnrolledDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_enrolled_date_utc" })
+    lastEnrolledDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_reported_ip" })
+    lastReportedIp?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mac_address" })
+    macAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONGeneralManagementStatus)
+    managementStatus?: FindComputersByUDIDSubset200ApplicationJSONGeneralManagementStatus;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mdm_capable" })
+    mdmCapable?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mdm_capable_users" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONGeneralMdmCapableUsers)
+    mdmCapableUsers?: FindComputersByUDIDSubset200ApplicationJSONGeneralMdmCapableUsers;
+
+    /**
+     * Name of computer
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "network_adapter_type" })
+    networkAdapterType?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "platform" })
+    platform?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "remote_management" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONGeneralRemoteManagement)
+    remoteManagement?: FindComputersByUDIDSubset200ApplicationJSONGeneralRemoteManagement;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "report_date" })
+    reportDate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "report_date_epoch" })
+    reportDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "report_date_utc" })
+    reportDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "serial_number" })
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONGeneralSite)
+    site?: FindComputersByUDIDSubset200ApplicationJSONGeneralSite;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "sus" })
+    sus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONGroupsAccountsComputerGroupMemberships extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "group" })
+    group?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONGroupsAccountsLocalAccountsUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "administrator" })
+    administrator?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "filevault_enabled" })
+    filevaultEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "home" })
+    home?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "home_size" })
+    homeSize?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "home_size_mb" })
+    homeSizeMb?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "realname" })
+    realname?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uid" })
+    uid?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONGroupsAccountsLocalAccounts extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONGroupsAccountsLocalAccountsUser)
+    user?: FindComputersByUDIDSubset200ApplicationJSONGroupsAccountsLocalAccountsUser;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONGroupsAccounts extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationJSONGroupsAccountsComputerGroupMemberships,
+    })
+    @Expose({ name: "computer_group_memberships" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONGroupsAccountsComputerGroupMemberships)
+    computerGroupMemberships?: FindComputersByUDIDSubset200ApplicationJSONGroupsAccountsComputerGroupMemberships[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationJSONGroupsAccountsLocalAccounts,
+    })
+    @Expose({ name: "local_accounts" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONGroupsAccountsLocalAccounts)
+    localAccounts?: FindComputersByUDIDSubset200ApplicationJSONGroupsAccountsLocalAccounts[];
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONHardwareFilevault2Users extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    user?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONHardwareMappedPrintersPrinter extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "location" })
+    location?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uri" })
+    uri?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONHardwareMappedPrinters extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "printer" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONHardwareMappedPrintersPrinter)
+    printer?: FindComputersByUDIDSubset200ApplicationJSONHardwareMappedPrintersPrinter;
+}
+
+export enum FindComputersByUDIDSubset200ApplicationJSONHardwareSipStatus {
+    Enabled = "Enabled",
+    Disabled = "Disabled",
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONHardwareStorageDevicePartition extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "boot_drive_available_mb" })
+    bootDriveAvailableMb?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "filevault2_percent" })
+    filevault2Percent?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "filevault2_status" })
+    filevault2Status?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "filevault_percent" })
+    filevaultPercent?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "filevault_status" })
+    filevaultStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lvUUID" })
+    lvUUID?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lvgUUID" })
+    lvgUUID?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "partition_capacity_mb" })
+    partitionCapacityMb?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "percentage_full" })
+    percentageFull?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "pvUUID" })
+    pvUUID?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONHardwareStorageDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "connection_type" })
+    connectionType?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "disk" })
+    disk?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "drive_capacity_mb" })
+    driveCapacityMb?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "model" })
+    model?: string;
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationJSONHardwareStorageDevicePartition,
+    })
+    @Expose({ name: "partition" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONHardwareStorageDevicePartition)
+    partition?: FindComputersByUDIDSubset200ApplicationJSONHardwareStorageDevicePartition[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "revision" })
+    revision?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "serial_number" })
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "smart_status" })
+    smartStatus?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONHardwareStorage extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "device" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONHardwareStorageDevice)
+    device?: FindComputersByUDIDSubset200ApplicationJSONHardwareStorageDevice;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONHardware extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "active_directory_status" })
+    activeDirectoryStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "available_ram_slots" })
+    availableRamSlots?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "battery_capacity" })
+    batteryCapacity?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "ble_capable" })
+    bleCapable?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "boot_rom" })
+    bootRom?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "bus_speed" })
+    busSpeed?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "bus_speed_mhz" })
+    busSpeedMhz?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "cache_size" })
+    cacheSize?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "cache_size_kb" })
+    cacheSizeKb?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "disk_encryption_configuration" })
+    diskEncryptionConfiguration?: string;
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationJSONHardwareFilevault2Users,
+    })
+    @Expose({ name: "filevault_2_users" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONHardwareFilevault2Users)
+    filevault2Users?: FindComputersByUDIDSubset200ApplicationJSONHardwareFilevault2Users[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "gatekeeper_status" })
+    gatekeeperStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "institutional_recovery_key" })
+    institutionalRecoveryKey?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "make" })
+    make?: string;
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationJSONHardwareMappedPrinters,
+    })
+    @Expose({ name: "mapped_printers" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONHardwareMappedPrinters)
+    mappedPrinters?: FindComputersByUDIDSubset200ApplicationJSONHardwareMappedPrinters[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "master_password_set" })
+    masterPasswordSet?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "model" })
+    model?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "model_identifier" })
+    modelIdentifier?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "nic_speed" })
+    nicSpeed?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "number_cores" })
+    numberCores?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "number_processors" })
+    numberProcessors?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "optical_drive" })
+    opticalDrive?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "os_build" })
+    osBuild?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "os_name" })
+    osName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "os_version" })
+    osVersion?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "processor_architechture" })
+    processorArchitechture?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "processor_speed" })
+    processorSpeed?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "processor_speed_mhz" })
+    processorSpeedMhz?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "processor_type" })
+    processorType?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "service_pack" })
+    servicePack?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "sip_status" })
+    sipStatus?: FindComputersByUDIDSubset200ApplicationJSONHardwareSipStatus;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "smc_version" })
+    smcVersion?: string;
+
+    @SpeakeasyMetadata({ elemType: FindComputersByUDIDSubset200ApplicationJSONHardwareStorage })
+    @Expose({ name: "storage" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONHardwareStorage)
+    storage?: FindComputersByUDIDSubset200ApplicationJSONHardwareStorage[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "total_ram" })
+    totalRam?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "total_ram_mb" })
+    totalRamMb?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "xprotect_version" })
+    xprotectVersion?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    building?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    department?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "email_address" })
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone" })
+    phone?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone_number" })
+    phoneNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "position" })
+    position?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "real_name" })
+    realName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "realname" })
+    realname?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "room" })
+    room?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsAttachmentsAttachment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "filename" })
+    filename?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uri" })
+    uri?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsAttachments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "attachment" })
+    @Type(
+        () => FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsAttachmentsAttachment
+    )
+    attachment?: FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsAttachmentsAttachment;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsPeripheralFieldsField extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "value" })
+    value?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsPeripheralFields extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "field" })
+    @Type(
+        () => FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsPeripheralFieldsField
+    )
+    field?: FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsPeripheralFieldsField;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsPeripheral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "bar_code_1" })
+    barCode1?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "bar_code_2" })
+    barCode2?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "fields" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsPeripheralFields)
+    fields?: FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsPeripheralFields;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the peripheral type
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsPurchasing extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "applecare_id" })
+    applecareId?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_leased" })
+    isLeased?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_purchased" })
+    isPurchased?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires" })
+    leaseExpires?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires_epoch" })
+    leaseExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires_utc" })
+    leaseExpiresUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "life_expectancy" })
+    lifeExpectancy?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date" })
+    poDate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date_epoch" })
+    poDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date_utc" })
+    poDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_number" })
+    poNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchase_price" })
+    purchasePrice?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing_account" })
+    purchasingAccount?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing_contact" })
+    purchasingContact?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "vendor" })
+    vendor?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires" })
+    warrantyExpires?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires_epoch" })
+    warrantyExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires_utc" })
+    warrantyExpiresUtc?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripherals extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsAttachments,
+    })
+    @Expose({ name: "attachments" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsAttachments)
+    attachments?: FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsAttachments[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "peripheral" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsPeripheral)
+    peripheral?: FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsPeripheral;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsPurchasing)
+    purchasing?: FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripheralsPurchasing;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONPeripherals extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripherals,
+    })
+    @Expose({ name: "peripherals" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripherals)
+    peripherals?: FindComputersByUDIDSubset200ApplicationJSONPeripheralsPeripherals[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONPurchasing extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "applecare_id" })
+    applecareId?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_leased" })
+    isLeased?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_purchased" })
+    isPurchased?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires" })
+    leaseExpires?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires_epoch" })
+    leaseExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires_utc" })
+    leaseExpiresUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "life_expectancy" })
+    lifeExpectancy?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date" })
+    poDate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date_epoch" })
+    poDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date_utc" })
+    poDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_number" })
+    poNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchase_price" })
+    purchasePrice?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing_account" })
+    purchasingAccount?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing_contact" })
+    purchasingContact?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "vendor" })
+    vendor?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires" })
+    warrantyExpires?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires_epoch" })
+    warrantyExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires_utc" })
+    warrantyExpiresUtc?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONSecurity extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "activation_lock" })
+    activationLock?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "external_boot_level" })
+    externalBootLevel?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "firewall_enabled" })
+    firewallEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "recovery_lock_enabled" })
+    recoveryLockEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "secure_boot_level" })
+    secureBootLevel?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONSoftwareApplicationsApplication extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "path" })
+    path?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONSoftwareApplications extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "application" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONSoftwareApplicationsApplication)
+    application?: FindComputersByUDIDSubset200ApplicationJSONSoftwareApplicationsApplication;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONSoftwareAvailableSoftwareUpdates extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONSoftwareAvailableUpdatesUpdate extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "package_name" })
+    packageName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONSoftwareAvailableUpdates extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "update" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONSoftwareAvailableUpdatesUpdate)
+    update?: FindComputersByUDIDSubset200ApplicationJSONSoftwareAvailableUpdatesUpdate;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONSoftwareCachedByCasper extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "package" })
+    package?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONSoftwareFontsFont extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "path" })
+    path?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONSoftwareFonts extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "font" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONSoftwareFontsFont)
+    font?: FindComputersByUDIDSubset200ApplicationJSONSoftwareFontsFont;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONSoftwareInstalledByCasper extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "package" })
+    package?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONSoftwareInstalledByInstallerSwu extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "package" })
+    package?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONSoftwareLicensedSoftware extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONSoftwarePluginsPlugin extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "path" })
+    path?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONSoftwarePlugins extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "plugin" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONSoftwarePluginsPlugin)
+    plugin?: FindComputersByUDIDSubset200ApplicationJSONSoftwarePluginsPlugin;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONSoftwareRunningServices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputersByUDIDSubset200ApplicationJSONSoftware extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationJSONSoftwareApplications,
+    })
+    @Expose({ name: "applications" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONSoftwareApplications)
+    applications?: FindComputersByUDIDSubset200ApplicationJSONSoftwareApplications[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationJSONSoftwareAvailableSoftwareUpdates,
+    })
+    @Expose({ name: "available_software_updates" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONSoftwareAvailableSoftwareUpdates)
+    availableSoftwareUpdates?: FindComputersByUDIDSubset200ApplicationJSONSoftwareAvailableSoftwareUpdates[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationJSONSoftwareAvailableUpdates,
+    })
+    @Expose({ name: "available_updates" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONSoftwareAvailableUpdates)
+    availableUpdates?: FindComputersByUDIDSubset200ApplicationJSONSoftwareAvailableUpdates[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationJSONSoftwareCachedByCasper,
+    })
+    @Expose({ name: "cached_by_casper" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONSoftwareCachedByCasper)
+    cachedByCasper?: FindComputersByUDIDSubset200ApplicationJSONSoftwareCachedByCasper[];
+
+    @SpeakeasyMetadata({ elemType: FindComputersByUDIDSubset200ApplicationJSONSoftwareFonts })
+    @Expose({ name: "fonts" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONSoftwareFonts)
+    fonts?: FindComputersByUDIDSubset200ApplicationJSONSoftwareFonts[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationJSONSoftwareInstalledByCasper,
+    })
+    @Expose({ name: "installed_by_casper" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONSoftwareInstalledByCasper)
+    installedByCasper?: FindComputersByUDIDSubset200ApplicationJSONSoftwareInstalledByCasper[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationJSONSoftwareInstalledByInstallerSwu,
+    })
+    @Expose({ name: "installed_by_installer_swu" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONSoftwareInstalledByInstallerSwu)
+    installedByInstallerSwu?: FindComputersByUDIDSubset200ApplicationJSONSoftwareInstalledByInstallerSwu[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationJSONSoftwareLicensedSoftware,
+    })
+    @Expose({ name: "licensed_software" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONSoftwareLicensedSoftware)
+    licensedSoftware?: FindComputersByUDIDSubset200ApplicationJSONSoftwareLicensedSoftware[];
+
+    @SpeakeasyMetadata({ elemType: FindComputersByUDIDSubset200ApplicationJSONSoftwarePlugins })
+    @Expose({ name: "plugins" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONSoftwarePlugins)
+    plugins?: FindComputersByUDIDSubset200ApplicationJSONSoftwarePlugins[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationJSONSoftwareRunningServices,
+    })
+    @Expose({ name: "running_services" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONSoftwareRunningServices)
+    runningServices?: FindComputersByUDIDSubset200ApplicationJSONSoftwareRunningServices[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "unix_executables" })
+    unixExecutables?: string;
+}
+
+/**
+ * OK
+ */
+export class FindComputersByUDIDSubset200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindComputersByUDIDSubset200ApplicationJSONCertificates })
+    @Expose({ name: "certificates" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONCertificates)
+    certificates?: FindComputersByUDIDSubset200ApplicationJSONCertificates[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersByUDIDSubset200ApplicationJSONConfigurationProfiles,
+    })
+    @Expose({ name: "configuration_profiles" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONConfigurationProfiles)
+    configurationProfiles?: FindComputersByUDIDSubset200ApplicationJSONConfigurationProfiles[];
+
+    @SpeakeasyMetadata({ elemType: FindComputersByUDIDSubset200ApplicationJSONExtensionAttributes })
+    @Expose({ name: "extension_attributes" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONExtensionAttributes)
+    extensionAttributes?: FindComputersByUDIDSubset200ApplicationJSONExtensionAttributes[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONGeneral)
+    general?: FindComputersByUDIDSubset200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "groups_accounts" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONGroupsAccounts)
+    groupsAccounts?: FindComputersByUDIDSubset200ApplicationJSONGroupsAccounts;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "hardware" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONHardware)
+    hardware?: FindComputersByUDIDSubset200ApplicationJSONHardware;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "location" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONLocation)
+    location?: FindComputersByUDIDSubset200ApplicationJSONLocation;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "peripherals" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONPeripherals)
+    peripherals?: FindComputersByUDIDSubset200ApplicationJSONPeripherals;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONPurchasing)
+    purchasing?: FindComputersByUDIDSubset200ApplicationJSONPurchasing;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "security" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONSecurity)
+    security?: FindComputersByUDIDSubset200ApplicationJSONSecurity;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "software" })
+    @Type(() => FindComputersByUDIDSubset200ApplicationJSONSoftware)
+    software?: FindComputersByUDIDSubset200ApplicationJSONSoftware;
+}
+
 export class FindComputersByUDIDSubsetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     body?: Uint8Array;
@@ -54,5 +2178,5 @@ export class FindComputersByUDIDSubsetResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    computer?: shared.Computer;
+    findComputersByUDIDSubset200ApplicationJSONObject?: FindComputersByUDIDSubset200ApplicationJSON;
 }

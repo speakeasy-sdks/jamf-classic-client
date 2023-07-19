@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindPatchesByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,238 @@ export class FindPatchesByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export class FindPatchesById200ApplicationXMLCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the category
+     */
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    priority?: number;
+}
+
+export class FindPatchesById200ApplicationXMLNotifications extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    emailNotification?: boolean;
+
+    @SpeakeasyMetadata()
+    jssNotification?: boolean;
+}
+
+export class FindPatchesById200ApplicationXMLVersionsVersionComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    altMacAddress?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    macAddress?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    serialNumber?: string;
+}
+
+export class FindPatchesById200ApplicationXMLVersionsVersionComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindPatchesById200ApplicationXMLVersionsVersionComputersComputer;
+}
+
+export class FindPatchesById200ApplicationXMLVersionsVersionPackage extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPatchesById200ApplicationXMLVersionsVersion extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindPatchesById200ApplicationXMLVersionsVersionComputers })
+    computers?: FindPatchesById200ApplicationXMLVersionsVersionComputers[];
+
+    @SpeakeasyMetadata()
+    package?: FindPatchesById200ApplicationXMLVersionsVersionPackage;
+
+    @SpeakeasyMetadata()
+    size?: number;
+
+    @SpeakeasyMetadata()
+    softwareVersion?: string;
+}
+
+export class FindPatchesById200ApplicationXMLVersions extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    version?: FindPatchesById200ApplicationXMLVersionsVersion;
+}
+
+/**
+ * OK
+ */
+export class FindPatchesById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    category?: FindPatchesById200ApplicationXMLCategory;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the patch software title
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    notifications?: FindPatchesById200ApplicationXMLNotifications;
+
+    @SpeakeasyMetadata()
+    totalComputers?: number;
+
+    @SpeakeasyMetadata()
+    totalVersions?: number;
+
+    @SpeakeasyMetadata({ elemType: FindPatchesById200ApplicationXMLVersions })
+    versions?: FindPatchesById200ApplicationXMLVersions[];
+}
+
+export class FindPatchesById200ApplicationJSONCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the category
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "priority" })
+    priority?: number;
+}
+
+export class FindPatchesById200ApplicationJSONNotifications extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "email_notification" })
+    emailNotification?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "jss_notification" })
+    jssNotification?: boolean;
+}
+
+export class FindPatchesById200ApplicationJSONVersionsVersionComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "alt_mac_address" })
+    altMacAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mac_address" })
+    macAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "serial_number" })
+    serialNumber?: string;
+}
+
+export class FindPatchesById200ApplicationJSONVersionsVersionComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(() => FindPatchesById200ApplicationJSONVersionsVersionComputersComputer)
+    computer?: FindPatchesById200ApplicationJSONVersionsVersionComputersComputer;
+}
+
+export class FindPatchesById200ApplicationJSONVersionsVersionPackage extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPatchesById200ApplicationJSONVersionsVersion extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindPatchesById200ApplicationJSONVersionsVersionComputers })
+    @Expose({ name: "computers" })
+    @Type(() => FindPatchesById200ApplicationJSONVersionsVersionComputers)
+    computers?: FindPatchesById200ApplicationJSONVersionsVersionComputers[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "package" })
+    @Type(() => FindPatchesById200ApplicationJSONVersionsVersionPackage)
+    package?: FindPatchesById200ApplicationJSONVersionsVersionPackage;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "software_version" })
+    softwareVersion?: string;
+}
+
+export class FindPatchesById200ApplicationJSONVersions extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    @Type(() => FindPatchesById200ApplicationJSONVersionsVersion)
+    version?: FindPatchesById200ApplicationJSONVersionsVersion;
+}
+
+/**
+ * OK
+ */
+export class FindPatchesById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "category" })
+    @Type(() => FindPatchesById200ApplicationJSONCategory)
+    category?: FindPatchesById200ApplicationJSONCategory;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the patch software title
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notifications" })
+    @Type(() => FindPatchesById200ApplicationJSONNotifications)
+    notifications?: FindPatchesById200ApplicationJSONNotifications;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "total_computers" })
+    totalComputers?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "total_versions" })
+    totalVersions?: number;
+
+    @SpeakeasyMetadata({ elemType: FindPatchesById200ApplicationJSONVersions })
+    @Expose({ name: "versions" })
+    @Type(() => FindPatchesById200ApplicationJSONVersions)
+    versions?: FindPatchesById200ApplicationJSONVersions[];
 }
 
 export class FindPatchesByIdResponse extends SpeakeasyBase {
@@ -31,5 +263,5 @@ export class FindPatchesByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    softwareTitle?: shared.SoftwareTitle;
+    findPatchesById200ApplicationJSONObject?: FindPatchesById200ApplicationJSON;
 }

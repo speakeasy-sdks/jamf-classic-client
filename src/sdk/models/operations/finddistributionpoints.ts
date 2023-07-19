@@ -3,8 +3,45 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindDistributionPoints200ApplicationXMLDistributionPoint extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindDistributionPoints200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    distributionPoint?: FindDistributionPoints200ApplicationXMLDistributionPoint;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindDistributionPoints200ApplicationJSONDistributionPoint extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindDistributionPoints200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "distribution_point" })
+    @Type(() => FindDistributionPoints200ApplicationJSONDistributionPoint)
+    distributionPoint?: FindDistributionPoints200ApplicationJSONDistributionPoint;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
 
 export class FindDistributionPointsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +59,6 @@ export class FindDistributionPointsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.DistributionPoints })
-    distributionPoints?: shared.DistributionPoints[];
+    @SpeakeasyMetadata({ elemType: FindDistributionPoints200ApplicationJSON })
+    findDistributionPoints200ApplicationJSONObjects?: FindDistributionPoints200ApplicationJSON[];
 }

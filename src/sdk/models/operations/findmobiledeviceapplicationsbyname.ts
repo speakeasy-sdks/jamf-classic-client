@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindMobileDeviceApplicationsByNameRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,1416 @@ export class FindMobileDeviceApplicationsByNameRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
     name: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLAppConfiguration extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    preferences?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLGeneralCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the category
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export enum FindMobileDeviceApplicationsByName200ApplicationXMLGeneralDeploymentType {
+    MakeAvailableInSelfService = "Make Available in Self Service",
+    InstallAutomaticallyPromptUsersToInstall = "Install Automatically/Prompt Users to Install",
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLGeneralIcon extends SpeakeasyBase {
+    /**
+     * base64 encoded
+     */
+    @SpeakeasyMetadata()
+    data?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    uri?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLGeneralIpa extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    data?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    uri?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    bundleId: string;
+
+    @SpeakeasyMetadata()
+    category?: FindMobileDeviceApplicationsByName200ApplicationXMLGeneralCategory;
+
+    @SpeakeasyMetadata()
+    deployAsManagedApp?: boolean;
+
+    @SpeakeasyMetadata()
+    deployAutomatically?: boolean;
+
+    @SpeakeasyMetadata()
+    deploymentType?: FindMobileDeviceApplicationsByName200ApplicationXMLGeneralDeploymentType;
+
+    @SpeakeasyMetadata()
+    description?: string;
+
+    @SpeakeasyMetadata()
+    displayName?: string;
+
+    @SpeakeasyMetadata()
+    externalUrl?: string;
+
+    @SpeakeasyMetadata()
+    free?: boolean;
+
+    @SpeakeasyMetadata()
+    hostExternally?: boolean;
+
+    @SpeakeasyMetadata()
+    icon?: FindMobileDeviceApplicationsByName200ApplicationXMLGeneralIcon;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    internalApp?: boolean;
+
+    @SpeakeasyMetadata()
+    ipa?: FindMobileDeviceApplicationsByName200ApplicationXMLGeneralIpa;
+
+    @SpeakeasyMetadata()
+    itunesCountryRegion?: string;
+
+    @SpeakeasyMetadata()
+    itunesStoreUrl?: string;
+
+    @SpeakeasyMetadata()
+    itunesSyncTime?: number;
+
+    @SpeakeasyMetadata()
+    keepDescriptionAndIconUpToDate?: boolean;
+
+    @SpeakeasyMetadata()
+    makeAvailableAfterInstall?: boolean;
+
+    @SpeakeasyMetadata()
+    mobileDeviceProvisioningProfile?: number;
+
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    preventBackupOfAppData?: boolean;
+
+    @SpeakeasyMetadata()
+    removeAppWhenMdmProfileIsRemoved?: boolean;
+
+    @SpeakeasyMetadata()
+    site?: FindMobileDeviceApplicationsByName200ApplicationXMLGeneralSite;
+
+    @SpeakeasyMetadata()
+    takeOverManagement?: boolean;
+
+    @SpeakeasyMetadata()
+    version: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeBuildingsBuilding;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    department?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeDepartmentsDepartment;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsBuildingsBuilding;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    department?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsDepartmentsDepartment;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsJssUserGroupsUserGroup;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsJssUsersUser;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsMobileDeviceGroupsMobileDeviceGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsMobileDeviceGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    mobileDeviceGroup?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsMobileDeviceGroupsMobileDeviceGroup;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsMobileDevicesMobileDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the device
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+
+    @SpeakeasyMetadata()
+    wifiMacAddress?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsMobileDevices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    mobileDevice?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsMobileDevicesMobileDevice;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the network segment
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    uid?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    networkSegment?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsNetworkSegmentsNetworkSegment;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsUserGroupsUserGroup;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsUsersUser;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsBuildings,
+    })
+    buildings?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsDepartments,
+    })
+    departments?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsDepartments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsJssUserGroups,
+    })
+    jssUserGroups?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsJssUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsJssUsers,
+    })
+    jssUsers?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsJssUsers[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsMobileDeviceGroups,
+    })
+    mobileDeviceGroups?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsMobileDeviceGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsMobileDevices,
+    })
+    mobileDevices?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsMobileDevices[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsNetworkSegments,
+    })
+    networkSegments?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsNetworkSegments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsUserGroups,
+    })
+    userGroups?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsUsers,
+    })
+    users?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusionsUsers[];
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeJssUserGroupsUserGroup;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeJssUsersUser;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeLimitationsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeLimitationsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    networkSegment?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeLimitationsNetworkSegmentsNetworkSegment;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeLimitationsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeLimitationsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeLimitationsUserGroupsUserGroup;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeLimitationsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeLimitationsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeLimitationsUsersUser;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType:
+            FindMobileDeviceApplicationsByName200ApplicationXMLScopeLimitationsNetworkSegments,
+    })
+    networkSegments?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeLimitationsNetworkSegments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationXMLScopeLimitationsUserGroups,
+    })
+    userGroups?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeLimitationsUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationXMLScopeLimitationsUsers,
+    })
+    users?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeLimitationsUsers[];
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeMobileDeviceGroupsMobileDeviceGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeMobileDeviceGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    mobileDeviceGroup?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeMobileDeviceGroupsMobileDeviceGroup;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeMobileDevicesMobileDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the device
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+
+    @SpeakeasyMetadata()
+    wifiMacAddress?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScopeMobileDevices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    mobileDevice?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeMobileDevicesMobileDevice;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    allJssUsers?: boolean;
+
+    @SpeakeasyMetadata()
+    allMobileDevices?: boolean;
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationXMLScopeBuildings,
+    })
+    buildings?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationXMLScopeDepartments,
+    })
+    departments?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeDepartments[];
+
+    @SpeakeasyMetadata()
+    exclusions?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeExclusions;
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationXMLScopeJssUserGroups,
+    })
+    jssUserGroups?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeJssUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationXMLScopeJssUsers,
+    })
+    jssUsers?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeJssUsers[];
+
+    @SpeakeasyMetadata()
+    limitations?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeLimitations;
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationXMLScopeMobileDeviceGroups,
+    })
+    mobileDeviceGroups?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeMobileDeviceGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationXMLScopeMobileDevices,
+    })
+    mobileDevices?: FindMobileDeviceApplicationsByName200ApplicationXMLScopeMobileDevices[];
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLSelfServiceSelfServiceCategoriesCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    displayIn?: boolean;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLSelfServiceSelfServiceCategories extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    category?: FindMobileDeviceApplicationsByName200ApplicationXMLSelfServiceSelfServiceCategoriesCategory;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLSelfServiceSelfServiceIcon extends SpeakeasyBase {
+    /**
+     * base64 encoded
+     */
+    @SpeakeasyMetadata()
+    data?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    uri?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLSelfService extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    featureOnMainPage?: boolean;
+
+    @SpeakeasyMetadata()
+    notification?: boolean;
+
+    @SpeakeasyMetadata()
+    notificationMessage?: string;
+
+    @SpeakeasyMetadata()
+    notificationSubject?: string;
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindMobileDeviceApplicationsByName200ApplicationXMLSelfServiceSelfServiceCategories,
+    })
+    selfServiceCategories?: FindMobileDeviceApplicationsByName200ApplicationXMLSelfServiceSelfServiceCategories[];
+
+    @SpeakeasyMetadata()
+    selfServiceDescription?: string;
+
+    @SpeakeasyMetadata()
+    selfServiceIcon?: FindMobileDeviceApplicationsByName200ApplicationXMLSelfServiceSelfServiceIcon;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationXMLVpp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    assignVppDeviceBasedLicenses?: boolean;
+
+    @SpeakeasyMetadata()
+    vppAdminAccountId?: number;
+}
+
+/**
+ * OK
+ */
+export class FindMobileDeviceApplicationsByName200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    appConfiguration?: FindMobileDeviceApplicationsByName200ApplicationXMLAppConfiguration;
+
+    @SpeakeasyMetadata()
+    general?: FindMobileDeviceApplicationsByName200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata()
+    scope?: FindMobileDeviceApplicationsByName200ApplicationXMLScope;
+
+    @SpeakeasyMetadata()
+    selfService?: FindMobileDeviceApplicationsByName200ApplicationXMLSelfService;
+
+    @SpeakeasyMetadata()
+    vpp?: FindMobileDeviceApplicationsByName200ApplicationXMLVpp;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONAppConfiguration extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "preferences" })
+    preferences?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONGeneralCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the category
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+export enum FindMobileDeviceApplicationsByName200ApplicationJSONGeneralDeploymentType {
+    MakeAvailableInSelfService = "Make Available in Self Service",
+    InstallAutomaticallyPromptUsersToInstall = "Install Automatically/Prompt Users to Install",
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONGeneralIcon extends SpeakeasyBase {
+    /**
+     * base64 encoded
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "data" })
+    data?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uri" })
+    uri?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONGeneralIpa extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "data" })
+    data?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uri" })
+    uri?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "bundle_id" })
+    bundleId: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "category" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONGeneralCategory)
+    category?: FindMobileDeviceApplicationsByName200ApplicationJSONGeneralCategory;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "deploy_as_managed_app" })
+    deployAsManagedApp?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "deploy_automatically" })
+    deployAutomatically?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "deployment_type" })
+    deploymentType?: FindMobileDeviceApplicationsByName200ApplicationJSONGeneralDeploymentType;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "description" })
+    description?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "display_name" })
+    displayName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "external_url" })
+    externalUrl?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "free" })
+    free?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "host_externally" })
+    hostExternally?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "icon" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONGeneralIcon)
+    icon?: FindMobileDeviceApplicationsByName200ApplicationJSONGeneralIcon;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "internal_app" })
+    internalApp?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "ipa" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONGeneralIpa)
+    ipa?: FindMobileDeviceApplicationsByName200ApplicationJSONGeneralIpa;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "itunes_country_region" })
+    itunesCountryRegion?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "itunes_store_url" })
+    itunesStoreUrl?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "itunes_sync_time" })
+    itunesSyncTime?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "keep_description_and_icon_up_to_date" })
+    keepDescriptionAndIconUpToDate?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "make_available_after_install" })
+    makeAvailableAfterInstall?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mobile_device_provisioning_profile" })
+    mobileDeviceProvisioningProfile?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "prevent_backup_of_app_data" })
+    preventBackupOfAppData?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "remove_app_when_mdm_profile_is_removed" })
+    removeAppWhenMdmProfileIsRemoved?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONGeneralSite)
+    site?: FindMobileDeviceApplicationsByName200ApplicationJSONGeneralSite;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "take_over_management" })
+    takeOverManagement?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeBuildingsBuilding)
+    building?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeBuildingsBuilding;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeDepartmentsDepartment)
+    department?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeDepartmentsDepartment;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    @Type(
+        () => FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsBuildingsBuilding
+    )
+    building?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsBuildingsBuilding;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    @Type(
+        () =>
+            FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsDepartmentsDepartment
+    )
+    department?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsDepartmentsDepartment;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(
+        () =>
+            FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsJssUserGroupsUserGroup
+    )
+    userGroup?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsJssUserGroupsUserGroup;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsJssUsersUser)
+    user?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsJssUsersUser;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsMobileDeviceGroupsMobileDeviceGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsMobileDeviceGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mobile_device_group" })
+    @Type(
+        () =>
+            FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsMobileDeviceGroupsMobileDeviceGroup
+    )
+    mobileDeviceGroup?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsMobileDeviceGroupsMobileDeviceGroup;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsMobileDevicesMobileDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the device
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "wifi_mac_address" })
+    wifiMacAddress?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsMobileDevices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mobile_device" })
+    @Type(
+        () =>
+            FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsMobileDevicesMobileDevice
+    )
+    mobileDevice?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsMobileDevicesMobileDevice;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the network segment
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uid" })
+    uid?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "network_segment" })
+    @Type(
+        () =>
+            FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment
+    )
+    networkSegment?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(
+        () => FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsUserGroupsUserGroup
+    )
+    userGroup?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsUserGroupsUserGroup;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsUsersUser)
+    user?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsUsersUser;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsBuildings,
+    })
+    @Expose({ name: "buildings" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsBuildings)
+    buildings?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsDepartments,
+    })
+    @Expose({ name: "departments" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsDepartments)
+    departments?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsDepartments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsJssUserGroups,
+    })
+    @Expose({ name: "jss_user_groups" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsJssUserGroups)
+    jssUserGroups?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsJssUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsJssUsers,
+    })
+    @Expose({ name: "jss_users" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsJssUsers)
+    jssUsers?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsJssUsers[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsMobileDeviceGroups,
+    })
+    @Expose({ name: "mobile_device_groups" })
+    @Type(
+        () => FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsMobileDeviceGroups
+    )
+    mobileDeviceGroups?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsMobileDeviceGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsMobileDevices,
+    })
+    @Expose({ name: "mobile_devices" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsMobileDevices)
+    mobileDevices?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsMobileDevices[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsNetworkSegments,
+    })
+    @Expose({ name: "network_segments" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsNetworkSegments)
+    networkSegments?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsNetworkSegments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsUserGroups,
+    })
+    @Expose({ name: "user_groups" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsUserGroups)
+    userGroups?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsUsers,
+    })
+    @Expose({ name: "users" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsUsers)
+    users?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusionsUsers[];
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeJssUserGroupsUserGroup)
+    userGroup?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeJssUserGroupsUserGroup;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeJssUsersUser)
+    user?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeJssUsersUser;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "network_segment" })
+    @Type(
+        () =>
+            FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment
+    )
+    networkSegment?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(
+        () =>
+            FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsUserGroupsUserGroup
+    )
+    userGroup?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsUserGroupsUserGroup;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsUsersUser)
+    user?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsUsersUser;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType:
+            FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsNetworkSegments,
+    })
+    @Expose({ name: "network_segments" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsNetworkSegments)
+    networkSegments?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsNetworkSegments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsUserGroups,
+    })
+    @Expose({ name: "user_groups" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsUserGroups)
+    userGroups?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsUsers,
+    })
+    @Expose({ name: "users" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsUsers)
+    users?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitationsUsers[];
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeMobileDeviceGroupsMobileDeviceGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeMobileDeviceGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mobile_device_group" })
+    @Type(
+        () =>
+            FindMobileDeviceApplicationsByName200ApplicationJSONScopeMobileDeviceGroupsMobileDeviceGroup
+    )
+    mobileDeviceGroup?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeMobileDeviceGroupsMobileDeviceGroup;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeMobileDevicesMobileDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the device
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "wifi_mac_address" })
+    wifiMacAddress?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScopeMobileDevices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mobile_device" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeMobileDevicesMobileDevice)
+    mobileDevice?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeMobileDevicesMobileDevice;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "all_jss_users" })
+    allJssUsers?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "all_mobile_devices" })
+    allMobileDevices?: boolean;
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationJSONScopeBuildings,
+    })
+    @Expose({ name: "buildings" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeBuildings)
+    buildings?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationJSONScopeDepartments,
+    })
+    @Expose({ name: "departments" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeDepartments)
+    departments?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeDepartments[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "exclusions" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusions)
+    exclusions?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeExclusions;
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationJSONScopeJssUserGroups,
+    })
+    @Expose({ name: "jss_user_groups" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeJssUserGroups)
+    jssUserGroups?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeJssUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationJSONScopeJssUsers,
+    })
+    @Expose({ name: "jss_users" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeJssUsers)
+    jssUsers?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeJssUsers[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "limitations" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitations)
+    limitations?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeLimitations;
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationJSONScopeMobileDeviceGroups,
+    })
+    @Expose({ name: "mobile_device_groups" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeMobileDeviceGroups)
+    mobileDeviceGroups?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeMobileDeviceGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceApplicationsByName200ApplicationJSONScopeMobileDevices,
+    })
+    @Expose({ name: "mobile_devices" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScopeMobileDevices)
+    mobileDevices?: FindMobileDeviceApplicationsByName200ApplicationJSONScopeMobileDevices[];
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONSelfServiceSelfServiceCategoriesCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "display_in" })
+    displayIn?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONSelfServiceSelfServiceCategories extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "category" })
+    @Type(
+        () =>
+            FindMobileDeviceApplicationsByName200ApplicationJSONSelfServiceSelfServiceCategoriesCategory
+    )
+    category?: FindMobileDeviceApplicationsByName200ApplicationJSONSelfServiceSelfServiceCategoriesCategory;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONSelfServiceSelfServiceIcon extends SpeakeasyBase {
+    /**
+     * base64 encoded
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "data" })
+    data?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uri" })
+    uri?: string;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONSelfService extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "feature_on_main_page" })
+    featureOnMainPage?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification" })
+    notification?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_message" })
+    notificationMessage?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_subject" })
+    notificationSubject?: string;
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindMobileDeviceApplicationsByName200ApplicationJSONSelfServiceSelfServiceCategories,
+    })
+    @Expose({ name: "self_service_categories" })
+    @Type(
+        () => FindMobileDeviceApplicationsByName200ApplicationJSONSelfServiceSelfServiceCategories
+    )
+    selfServiceCategories?: FindMobileDeviceApplicationsByName200ApplicationJSONSelfServiceSelfServiceCategories[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_description" })
+    selfServiceDescription?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_icon" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONSelfServiceSelfServiceIcon)
+    selfServiceIcon?: FindMobileDeviceApplicationsByName200ApplicationJSONSelfServiceSelfServiceIcon;
+}
+
+export class FindMobileDeviceApplicationsByName200ApplicationJSONVpp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "assign_vpp_device_based_licenses" })
+    assignVppDeviceBasedLicenses?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "vpp_admin_account_id" })
+    vppAdminAccountId?: number;
+}
+
+/**
+ * OK
+ */
+export class FindMobileDeviceApplicationsByName200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "app_configuration" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONAppConfiguration)
+    appConfiguration?: FindMobileDeviceApplicationsByName200ApplicationJSONAppConfiguration;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONGeneral)
+    general?: FindMobileDeviceApplicationsByName200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "scope" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONScope)
+    scope?: FindMobileDeviceApplicationsByName200ApplicationJSONScope;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONSelfService)
+    selfService?: FindMobileDeviceApplicationsByName200ApplicationJSONSelfService;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "vpp" })
+    @Type(() => FindMobileDeviceApplicationsByName200ApplicationJSONVpp)
+    vpp?: FindMobileDeviceApplicationsByName200ApplicationJSONVpp;
 }
 
 export class FindMobileDeviceApplicationsByNameResponse extends SpeakeasyBase {
@@ -31,5 +1441,5 @@ export class FindMobileDeviceApplicationsByNameResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    mobileDeviceApplication?: shared.MobileDeviceApplication;
+    findMobileDeviceApplicationsByName200ApplicationJSONObject?: FindMobileDeviceApplicationsByName200ApplicationJSON;
 }

@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindInvitationByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,463 @@ export class FindInvitationByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export enum FindInvitationById200ApplicationXMLGeneralDistributionMethod {
+    PromptUsersToAcceptMakeAvailableInSelfService = "Prompt users to accept/make available in Self Service",
+    SendEmails = "Send emails",
+    MakeAvailableInSelfServiceOnly = "Make available in Self Service only",
+}
+
+export class FindInvitationById200ApplicationXMLGeneralVppAccount extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id: number;
+}
+
+export class FindInvitationById200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    distributionMethod?: FindInvitationById200ApplicationXMLGeneralDistributionMethod;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    message?: string;
+
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    requireLogin?: boolean;
+
+    @SpeakeasyMetadata()
+    senderEmailAddress?: string;
+
+    @SpeakeasyMetadata()
+    senderName?: string;
+
+    @SpeakeasyMetadata()
+    subject?: string;
+
+    @SpeakeasyMetadata()
+    vppAccount?: FindInvitationById200ApplicationXMLGeneralVppAccount;
+}
+
+export class FindInvitationById200ApplicationXMLInvitationUsageUsage extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    lastActionDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    lastActionEpoch?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    status?: string;
+
+    @SpeakeasyMetadata()
+    vppAccount?: string;
+}
+
+export class FindInvitationById200ApplicationXMLInvitationUsage extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    size?: number;
+
+    @SpeakeasyMetadata()
+    usage?: FindInvitationById200ApplicationXMLInvitationUsageUsage;
+}
+
+export class FindInvitationById200ApplicationXMLScopeExclusionsJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindInvitationById200ApplicationXMLScopeExclusionsJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindInvitationById200ApplicationXMLScopeExclusionsJssUserGroupsUserGroup;
+}
+
+export class FindInvitationById200ApplicationXMLScopeExclusionsJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindInvitationById200ApplicationXMLScopeExclusionsJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindInvitationById200ApplicationXMLScopeExclusionsJssUsersUser;
+}
+
+export class FindInvitationById200ApplicationXMLScopeExclusionsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindInvitationById200ApplicationXMLScopeExclusionsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindInvitationById200ApplicationXMLScopeExclusionsUserGroupsUserGroup;
+}
+
+export class FindInvitationById200ApplicationXMLScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindInvitationById200ApplicationXMLScopeExclusionsJssUserGroups,
+    })
+    jssUserGroups?: FindInvitationById200ApplicationXMLScopeExclusionsJssUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindInvitationById200ApplicationXMLScopeExclusionsJssUsers })
+    jssUsers?: FindInvitationById200ApplicationXMLScopeExclusionsJssUsers[];
+
+    @SpeakeasyMetadata({ elemType: FindInvitationById200ApplicationXMLScopeExclusionsUserGroups })
+    userGroups?: FindInvitationById200ApplicationXMLScopeExclusionsUserGroups[];
+}
+
+export class FindInvitationById200ApplicationXMLScopeJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindInvitationById200ApplicationXMLScopeJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindInvitationById200ApplicationXMLScopeJssUserGroupsUserGroup;
+}
+
+export class FindInvitationById200ApplicationXMLScopeJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindInvitationById200ApplicationXMLScopeJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindInvitationById200ApplicationXMLScopeJssUsersUser;
+}
+
+export class FindInvitationById200ApplicationXMLScopeLimitationsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindInvitationById200ApplicationXMLScopeLimitationsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindInvitationById200ApplicationXMLScopeLimitationsUserGroupsUserGroup;
+}
+
+export class FindInvitationById200ApplicationXMLScopeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindInvitationById200ApplicationXMLScopeLimitationsUserGroups })
+    userGroups?: FindInvitationById200ApplicationXMLScopeLimitationsUserGroups[];
+}
+
+export class FindInvitationById200ApplicationXMLScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    allJssUsers?: boolean;
+
+    @SpeakeasyMetadata()
+    exclusions?: FindInvitationById200ApplicationXMLScopeExclusions;
+
+    @SpeakeasyMetadata({ elemType: FindInvitationById200ApplicationXMLScopeJssUserGroups })
+    jssUserGroups?: FindInvitationById200ApplicationXMLScopeJssUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindInvitationById200ApplicationXMLScopeJssUsers })
+    jssUsers?: FindInvitationById200ApplicationXMLScopeJssUsers[];
+
+    @SpeakeasyMetadata()
+    limitations?: FindInvitationById200ApplicationXMLScopeLimitations;
+}
+
+/**
+ * OK
+ */
+export class FindInvitationById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    general?: FindInvitationById200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata({ elemType: FindInvitationById200ApplicationXMLInvitationUsage })
+    invitationUsage?: FindInvitationById200ApplicationXMLInvitationUsage[];
+
+    @SpeakeasyMetadata()
+    scope?: FindInvitationById200ApplicationXMLScope;
+}
+
+export enum FindInvitationById200ApplicationJSONGeneralDistributionMethod {
+    PromptUsersToAcceptMakeAvailableInSelfService = "Prompt users to accept/make available in Self Service",
+    SendEmails = "Send emails",
+    MakeAvailableInSelfServiceOnly = "Make available in Self Service only",
+}
+
+export class FindInvitationById200ApplicationJSONGeneralVppAccount extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id: number;
+}
+
+export class FindInvitationById200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "distribution_method" })
+    distributionMethod?: FindInvitationById200ApplicationJSONGeneralDistributionMethod;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "message" })
+    message?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "require_login" })
+    requireLogin?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "sender_email_address" })
+    senderEmailAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "sender_name" })
+    senderName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "subject" })
+    subject?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "vpp_account" })
+    @Type(() => FindInvitationById200ApplicationJSONGeneralVppAccount)
+    vppAccount?: FindInvitationById200ApplicationJSONGeneralVppAccount;
+}
+
+export class FindInvitationById200ApplicationJSONInvitationUsageUsage extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "email_address" })
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_action_date_utc" })
+    lastActionDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_action_epoch" })
+    lastActionEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "vpp_account" })
+    vppAccount?: string;
+}
+
+export class FindInvitationById200ApplicationJSONInvitationUsage extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "usage" })
+    @Type(() => FindInvitationById200ApplicationJSONInvitationUsageUsage)
+    usage?: FindInvitationById200ApplicationJSONInvitationUsageUsage;
+}
+
+export class FindInvitationById200ApplicationJSONScopeExclusionsJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindInvitationById200ApplicationJSONScopeExclusionsJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindInvitationById200ApplicationJSONScopeExclusionsJssUserGroupsUserGroup)
+    userGroup?: FindInvitationById200ApplicationJSONScopeExclusionsJssUserGroupsUserGroup;
+}
+
+export class FindInvitationById200ApplicationJSONScopeExclusionsJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindInvitationById200ApplicationJSONScopeExclusionsJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindInvitationById200ApplicationJSONScopeExclusionsJssUsersUser)
+    user?: FindInvitationById200ApplicationJSONScopeExclusionsJssUsersUser;
+}
+
+export class FindInvitationById200ApplicationJSONScopeExclusionsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindInvitationById200ApplicationJSONScopeExclusionsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindInvitationById200ApplicationJSONScopeExclusionsUserGroupsUserGroup)
+    userGroup?: FindInvitationById200ApplicationJSONScopeExclusionsUserGroupsUserGroup;
+}
+
+export class FindInvitationById200ApplicationJSONScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindInvitationById200ApplicationJSONScopeExclusionsJssUserGroups,
+    })
+    @Expose({ name: "jss_user_groups" })
+    @Type(() => FindInvitationById200ApplicationJSONScopeExclusionsJssUserGroups)
+    jssUserGroups?: FindInvitationById200ApplicationJSONScopeExclusionsJssUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindInvitationById200ApplicationJSONScopeExclusionsJssUsers })
+    @Expose({ name: "jss_users" })
+    @Type(() => FindInvitationById200ApplicationJSONScopeExclusionsJssUsers)
+    jssUsers?: FindInvitationById200ApplicationJSONScopeExclusionsJssUsers[];
+
+    @SpeakeasyMetadata({ elemType: FindInvitationById200ApplicationJSONScopeExclusionsUserGroups })
+    @Expose({ name: "user_groups" })
+    @Type(() => FindInvitationById200ApplicationJSONScopeExclusionsUserGroups)
+    userGroups?: FindInvitationById200ApplicationJSONScopeExclusionsUserGroups[];
+}
+
+export class FindInvitationById200ApplicationJSONScopeJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindInvitationById200ApplicationJSONScopeJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindInvitationById200ApplicationJSONScopeJssUserGroupsUserGroup)
+    userGroup?: FindInvitationById200ApplicationJSONScopeJssUserGroupsUserGroup;
+}
+
+export class FindInvitationById200ApplicationJSONScopeJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindInvitationById200ApplicationJSONScopeJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindInvitationById200ApplicationJSONScopeJssUsersUser)
+    user?: FindInvitationById200ApplicationJSONScopeJssUsersUser;
+}
+
+export class FindInvitationById200ApplicationJSONScopeLimitationsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindInvitationById200ApplicationJSONScopeLimitationsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindInvitationById200ApplicationJSONScopeLimitationsUserGroupsUserGroup)
+    userGroup?: FindInvitationById200ApplicationJSONScopeLimitationsUserGroupsUserGroup;
+}
+
+export class FindInvitationById200ApplicationJSONScopeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindInvitationById200ApplicationJSONScopeLimitationsUserGroups })
+    @Expose({ name: "user_groups" })
+    @Type(() => FindInvitationById200ApplicationJSONScopeLimitationsUserGroups)
+    userGroups?: FindInvitationById200ApplicationJSONScopeLimitationsUserGroups[];
+}
+
+export class FindInvitationById200ApplicationJSONScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "all_jss_users" })
+    allJssUsers?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "exclusions" })
+    @Type(() => FindInvitationById200ApplicationJSONScopeExclusions)
+    exclusions?: FindInvitationById200ApplicationJSONScopeExclusions;
+
+    @SpeakeasyMetadata({ elemType: FindInvitationById200ApplicationJSONScopeJssUserGroups })
+    @Expose({ name: "jss_user_groups" })
+    @Type(() => FindInvitationById200ApplicationJSONScopeJssUserGroups)
+    jssUserGroups?: FindInvitationById200ApplicationJSONScopeJssUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindInvitationById200ApplicationJSONScopeJssUsers })
+    @Expose({ name: "jss_users" })
+    @Type(() => FindInvitationById200ApplicationJSONScopeJssUsers)
+    jssUsers?: FindInvitationById200ApplicationJSONScopeJssUsers[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "limitations" })
+    @Type(() => FindInvitationById200ApplicationJSONScopeLimitations)
+    limitations?: FindInvitationById200ApplicationJSONScopeLimitations;
+}
+
+/**
+ * OK
+ */
+export class FindInvitationById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindInvitationById200ApplicationJSONGeneral)
+    general?: FindInvitationById200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata({ elemType: FindInvitationById200ApplicationJSONInvitationUsage })
+    @Expose({ name: "invitation_usage" })
+    @Type(() => FindInvitationById200ApplicationJSONInvitationUsage)
+    invitationUsage?: FindInvitationById200ApplicationJSONInvitationUsage[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "scope" })
+    @Type(() => FindInvitationById200ApplicationJSONScope)
+    scope?: FindInvitationById200ApplicationJSONScope;
 }
 
 export class FindInvitationByIdResponse extends SpeakeasyBase {
@@ -31,5 +488,5 @@ export class FindInvitationByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    vppInvitation?: shared.VppInvitation;
+    findInvitationById200ApplicationJSONObject?: FindInvitationById200ApplicationJSON;
 }

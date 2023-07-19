@@ -13,6 +13,23 @@ export class CreateJsonWebTokenConfigurationByIdRequest extends SpeakeasyBase {
     id: number;
 }
 
+/**
+ * Created
+ */
+export class CreateJsonWebTokenConfigurationById201ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    disabled?: boolean;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    tokenExpiry?: number;
+}
+
 export class CreateJsonWebTokenConfigurationByIdResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     body?: Uint8Array;

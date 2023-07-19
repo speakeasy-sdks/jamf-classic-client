@@ -3,8 +3,45 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindVPPAdminAccount200ApplicationXMLVPPAccount extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindVPPAdminAccount200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    size?: number;
+
+    @SpeakeasyMetadata()
+    vppAccount?: FindVPPAdminAccount200ApplicationXMLVPPAccount;
+}
+
+export class FindVPPAdminAccount200ApplicationJSONVPPAccount extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindVPPAdminAccount200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "vpp_account" })
+    @Type(() => FindVPPAdminAccount200ApplicationJSONVPPAccount)
+    vppAccount?: FindVPPAdminAccount200ApplicationJSONVPPAccount;
+}
 
 export class FindVPPAdminAccountResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +59,6 @@ export class FindVPPAdminAccountResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.VppAccounts })
-    vppAccounts?: shared.VppAccounts[];
+    @SpeakeasyMetadata({ elemType: FindVPPAdminAccount200ApplicationJSON })
+    findVPPAdminAccount200ApplicationJSONObjects?: FindVPPAdminAccount200ApplicationJSON[];
 }

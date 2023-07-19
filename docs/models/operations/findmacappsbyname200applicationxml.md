@@ -1,0 +1,12 @@
+# FindMacappsByName200ApplicationXML
+
+OK
+
+
+## Fields
+
+| Field                                                                                                                     | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `general`                                                                                                                 | [FindMacappsByName200ApplicationXMLGeneral](../../models/operations/findmacappsbyname200applicationxmlgeneral.md)         | :heavy_minus_sign:                                                                                                        | N/A                                                                                                                       |
+| `scope`                                                                                                                   | [FindMacappsByName200ApplicationXMLScope](../../models/operations/findmacappsbyname200applicationxmlscope.md)             | :heavy_minus_sign:                                                                                                        | N/A                                                                                                                       |
+| `selfService`                                                                                                             | [FindMacappsByName200ApplicationXMLSelfService](../../models/operations/findmacappsbyname200applicationxmlselfservice.md) | :heavy_minus_sign:                                                                                                        | N/A                                                                                                                       |

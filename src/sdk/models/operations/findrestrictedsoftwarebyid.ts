@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindRestrictedSoftwareByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,519 @@ export class FindRestrictedSoftwareByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    deleteExecutable?: boolean;
+
+    @SpeakeasyMetadata()
+    displayMessage?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    killProcess?: boolean;
+
+    @SpeakeasyMetadata()
+    matchExactProcessName?: boolean;
+
+    /**
+     * Name of the restricted software
+     */
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    processName: string;
+
+    @SpeakeasyMetadata()
+    sendNotification?: boolean;
+
+    @SpeakeasyMetadata()
+    site?: FindRestrictedSoftwareById200ApplicationXMLGeneralSite;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: FindRestrictedSoftwareById200ApplicationXMLScopeBuildingsBuilding;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computerGroup?: FindRestrictedSoftwareById200ApplicationXMLScopeComputerGroupsComputerGroup;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindRestrictedSoftwareById200ApplicationXMLScopeComputersComputer;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    department?: FindRestrictedSoftwareById200ApplicationXMLScopeDepartmentsDepartment;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsBuildingsBuilding;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computerGroup?: FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsComputerGroupsComputerGroup;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsComputersComputer;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    department?: FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsDepartmentsDepartment;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsUsersUser;
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsBuildings,
+    })
+    buildings?: FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType: FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsComputerGroups,
+    })
+    computerGroups?: FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsComputerGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsComputers,
+    })
+    computers?: FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsComputers[];
+
+    @SpeakeasyMetadata({
+        elemType: FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsDepartments,
+    })
+    departments?: FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsDepartments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsUsers,
+    })
+    users?: FindRestrictedSoftwareById200ApplicationXMLScopeExclusionsUsers[];
+}
+
+export class FindRestrictedSoftwareById200ApplicationXMLScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    allComputers?: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindRestrictedSoftwareById200ApplicationXMLScopeBuildings })
+    buildings?: FindRestrictedSoftwareById200ApplicationXMLScopeBuildings[];
+
+    @SpeakeasyMetadata({ elemType: FindRestrictedSoftwareById200ApplicationXMLScopeComputerGroups })
+    computerGroups?: FindRestrictedSoftwareById200ApplicationXMLScopeComputerGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindRestrictedSoftwareById200ApplicationXMLScopeComputers })
+    computers?: FindRestrictedSoftwareById200ApplicationXMLScopeComputers[];
+
+    @SpeakeasyMetadata({ elemType: FindRestrictedSoftwareById200ApplicationXMLScopeDepartments })
+    departments?: FindRestrictedSoftwareById200ApplicationXMLScopeDepartments[];
+
+    @SpeakeasyMetadata()
+    exclusions?: FindRestrictedSoftwareById200ApplicationXMLScopeExclusions;
+}
+
+/**
+ * OK
+ */
+export class FindRestrictedSoftwareById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    general?: FindRestrictedSoftwareById200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata()
+    scope?: FindRestrictedSoftwareById200ApplicationXMLScope;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "delete_executable" })
+    deleteExecutable?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "display_message" })
+    displayMessage?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "kill_process" })
+    killProcess?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "match_exact_process_name" })
+    matchExactProcessName?: boolean;
+
+    /**
+     * Name of the restricted software
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "process_name" })
+    processName: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "send_notification" })
+    sendNotification?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONGeneralSite)
+    site?: FindRestrictedSoftwareById200ApplicationJSONGeneralSite;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeBuildingsBuilding)
+    building?: FindRestrictedSoftwareById200ApplicationJSONScopeBuildingsBuilding;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer_group" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeComputerGroupsComputerGroup)
+    computerGroup?: FindRestrictedSoftwareById200ApplicationJSONScopeComputerGroupsComputerGroup;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeComputersComputer)
+    computer?: FindRestrictedSoftwareById200ApplicationJSONScopeComputersComputer;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeDepartmentsDepartment)
+    department?: FindRestrictedSoftwareById200ApplicationJSONScopeDepartmentsDepartment;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsBuildingsBuilding)
+    building?: FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsBuildingsBuilding;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer_group" })
+    @Type(
+        () => FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup
+    )
+    computerGroup?: FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsComputersComputer)
+    computer?: FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsComputersComputer;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsDepartmentsDepartment)
+    department?: FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsDepartmentsDepartment;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsUsersUser)
+    user?: FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsUsersUser;
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsBuildings,
+    })
+    @Expose({ name: "buildings" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsBuildings)
+    buildings?: FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType: FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsComputerGroups,
+    })
+    @Expose({ name: "computer_groups" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsComputerGroups)
+    computerGroups?: FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsComputerGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsComputers,
+    })
+    @Expose({ name: "computers" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsComputers)
+    computers?: FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsComputers[];
+
+    @SpeakeasyMetadata({
+        elemType: FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsDepartments,
+    })
+    @Expose({ name: "departments" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsDepartments)
+    departments?: FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsDepartments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsUsers,
+    })
+    @Expose({ name: "users" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsUsers)
+    users?: FindRestrictedSoftwareById200ApplicationJSONScopeExclusionsUsers[];
+}
+
+export class FindRestrictedSoftwareById200ApplicationJSONScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "all_computers" })
+    allComputers?: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindRestrictedSoftwareById200ApplicationJSONScopeBuildings })
+    @Expose({ name: "buildings" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeBuildings)
+    buildings?: FindRestrictedSoftwareById200ApplicationJSONScopeBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType: FindRestrictedSoftwareById200ApplicationJSONScopeComputerGroups,
+    })
+    @Expose({ name: "computer_groups" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeComputerGroups)
+    computerGroups?: FindRestrictedSoftwareById200ApplicationJSONScopeComputerGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindRestrictedSoftwareById200ApplicationJSONScopeComputers })
+    @Expose({ name: "computers" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeComputers)
+    computers?: FindRestrictedSoftwareById200ApplicationJSONScopeComputers[];
+
+    @SpeakeasyMetadata({ elemType: FindRestrictedSoftwareById200ApplicationJSONScopeDepartments })
+    @Expose({ name: "departments" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeDepartments)
+    departments?: FindRestrictedSoftwareById200ApplicationJSONScopeDepartments[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "exclusions" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScopeExclusions)
+    exclusions?: FindRestrictedSoftwareById200ApplicationJSONScopeExclusions;
+}
+
+/**
+ * OK
+ */
+export class FindRestrictedSoftwareById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONGeneral)
+    general?: FindRestrictedSoftwareById200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "scope" })
+    @Type(() => FindRestrictedSoftwareById200ApplicationJSONScope)
+    scope?: FindRestrictedSoftwareById200ApplicationJSONScope;
 }
 
 export class FindRestrictedSoftwareByIdResponse extends SpeakeasyBase {
@@ -31,5 +544,5 @@ export class FindRestrictedSoftwareByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    restrictedSoftware?: shared.RestrictedSoftware;
+    findRestrictedSoftwareById200ApplicationJSONObject?: FindRestrictedSoftwareById200ApplicationJSON;
 }

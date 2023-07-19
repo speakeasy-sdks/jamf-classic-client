@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 /**
  * Subset to filter by
@@ -32,6 +32,951 @@ export class FindMobileDeviceHistoryByUDIDSubsetRequest extends SpeakeasyBase {
     udid: string;
 }
 
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsFailedApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsFailed extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    app?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsFailedApp;
+}
+
+export enum FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsInstalledAppStoreFromMobileDeviceAppCatalogManagementStatus {
+    Unmanaged = "Unmanaged",
+    Managed = "Managed",
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsInstalledAppStoreFromMobileDeviceAppCatalog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    bundleSize?: string;
+
+    @SpeakeasyMetadata()
+    dynamicSize?: string;
+
+    @SpeakeasyMetadata()
+    managementStatus?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsInstalledAppStoreFromMobileDeviceAppCatalogManagementStatus;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export enum FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsInstalledInHouseFromMobileDeviceAppCatalogManagementStatus {
+    Unmanaged = "Unmanaged",
+    Managed = "Managed",
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsInstalledInHouseFromMobileDeviceAppCatalog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    bundleSize?: string;
+
+    @SpeakeasyMetadata()
+    dynamicSize?: string;
+
+    @SpeakeasyMetadata()
+    managementStatus?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsInstalledInHouseFromMobileDeviceAppCatalogManagementStatus;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export enum FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsInstalledOtherManagementStatus {
+    Unmanaged = "Unmanaged",
+    Managed = "Managed",
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsInstalledOther extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    bundleSize?: string;
+
+    @SpeakeasyMetadata()
+    dynamicSize?: string;
+
+    @SpeakeasyMetadata()
+    managementStatus?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsInstalledOtherManagementStatus;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsInstalled extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    appStoreFromMobileDeviceAppCatalog?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsInstalledAppStoreFromMobileDeviceAppCatalog;
+
+    @SpeakeasyMetadata()
+    inHouseFromMobileDeviceAppCatalog?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsInstalledInHouseFromMobileDeviceAppCatalog;
+
+    @SpeakeasyMetadata()
+    other?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsInstalledOther;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsPendingApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsPending extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    app?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsPendingApp;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplications extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsFailed,
+    })
+    failed?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsFailed[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsInstalled,
+    })
+    installed?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsInstalled[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsPending,
+    })
+    pending?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplicationsPending[];
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLAuditsAudit extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: number;
+
+    @SpeakeasyMetadata()
+    event?: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLAudits extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    audit?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLAuditsAudit;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLEbooksFailed extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    author?: string;
+
+    @SpeakeasyMetadata()
+    kind?: string;
+
+    @SpeakeasyMetadata()
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    title?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLEbooksInstalledIbookstore extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    author?: string;
+
+    @SpeakeasyMetadata()
+    kind?: string;
+
+    @SpeakeasyMetadata()
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    title?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLEbooksInstalledInhouse extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    author?: string;
+
+    @SpeakeasyMetadata()
+    kind?: string;
+
+    @SpeakeasyMetadata()
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    title?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLEbooksInstalled extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLEbooksInstalledIbookstore,
+    })
+    ibookstore?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLEbooksInstalledIbookstore[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLEbooksInstalledInhouse,
+    })
+    inhouse?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLEbooksInstalledInhouse[];
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLEbooksPending extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    author?: string;
+
+    @SpeakeasyMetadata()
+    kind?: string;
+
+    @SpeakeasyMetadata()
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    title?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLEbooks extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLEbooksFailed,
+    })
+    failed?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLEbooksFailed[];
+
+    @SpeakeasyMetadata()
+    installed?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLEbooksInstalled;
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLEbooksPending,
+    })
+    pending?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLEbooksPending[];
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    macAddress?: string;
+
+    /**
+     * Name of the device
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLManagementCommandsCompletedCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTimeCompleted?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeCompletedEpoch?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLManagementCommandsCompleted extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    command?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLManagementCommandsCompletedCommand;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLManagementCommandsFailedCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTimeFailed?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeFailedEpoch?: number;
+
+    @SpeakeasyMetadata()
+    dateTimeIssued?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeIssuedEpoch?: string;
+
+    @SpeakeasyMetadata()
+    error?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLManagementCommandsFailed extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    command?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLManagementCommandsFailedCommand;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLManagementCommandsPendingCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTimeFailed?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeFailedEpoch?: number;
+
+    @SpeakeasyMetadata()
+    dateTimeIssued?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeIssuedEpoch?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLManagementCommandsPending extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    command?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLManagementCommandsPendingCommand;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLManagementCommands extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLManagementCommandsCompleted,
+    })
+    completed?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLManagementCommandsCompleted[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLManagementCommandsFailed,
+    })
+    failed?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLManagementCommandsFailed[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLManagementCommandsPending,
+    })
+    pending?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLManagementCommandsPending[];
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLUserLocationLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: string;
+
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: number;
+
+    @SpeakeasyMetadata()
+    department?: string;
+
+    @SpeakeasyMetadata()
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    fullName?: string;
+
+    @SpeakeasyMetadata()
+    phoneNumber?: string;
+
+    @SpeakeasyMetadata()
+    position?: string;
+
+    @SpeakeasyMetadata()
+    room?: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLUserLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    location?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLUserLocationLocation;
+}
+
+/**
+ * OK
+ */
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    applications?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLApplications;
+
+    @SpeakeasyMetadata({ elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLAudits })
+    audits?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLAudits[];
+
+    @SpeakeasyMetadata()
+    ebooks?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLEbooks;
+
+    @SpeakeasyMetadata()
+    general?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata()
+    managementCommands?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLManagementCommands;
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLUserLocation,
+    })
+    userLocation?: FindMobileDeviceHistoryByUDIDSubset200ApplicationXMLUserLocation[];
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsFailedApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsFailed extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "app" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsFailedApp)
+    app?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsFailedApp;
+}
+
+export enum FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalledAppStoreFromMobileDeviceAppCatalogManagementStatus {
+    Unmanaged = "Unmanaged",
+    Managed = "Managed",
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalledAppStoreFromMobileDeviceAppCatalog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "bundle_size" })
+    bundleSize?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "dynamic_size" })
+    dynamicSize?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalledAppStoreFromMobileDeviceAppCatalogManagementStatus;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export enum FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalledInHouseFromMobileDeviceAppCatalogManagementStatus {
+    Unmanaged = "Unmanaged",
+    Managed = "Managed",
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalledInHouseFromMobileDeviceAppCatalog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "bundle_size" })
+    bundleSize?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "dynamic_size" })
+    dynamicSize?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalledInHouseFromMobileDeviceAppCatalogManagementStatus;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export enum FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalledOtherManagementStatus {
+    Unmanaged = "Unmanaged",
+    Managed = "Managed",
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalledOther extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "bundle_size" })
+    bundleSize?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "dynamic_size" })
+    dynamicSize?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalledOtherManagementStatus;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalled extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "app_store_from_mobile_device_app_catalog" })
+    @Type(
+        () =>
+            FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalledAppStoreFromMobileDeviceAppCatalog
+    )
+    appStoreFromMobileDeviceAppCatalog?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalledAppStoreFromMobileDeviceAppCatalog;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "in_house_from_mobile_device_app_catalog" })
+    @Type(
+        () =>
+            FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalledInHouseFromMobileDeviceAppCatalog
+    )
+    inHouseFromMobileDeviceAppCatalog?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalledInHouseFromMobileDeviceAppCatalog;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "other" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalledOther)
+    other?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalledOther;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsPendingApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsPending extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "app" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsPendingApp)
+    app?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsPendingApp;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplications extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsFailed,
+    })
+    @Expose({ name: "failed" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsFailed)
+    failed?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsFailed[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalled,
+    })
+    @Expose({ name: "installed" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalled)
+    installed?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsInstalled[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsPending,
+    })
+    @Expose({ name: "pending" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsPending)
+    pending?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplicationsPending[];
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONAuditsAudit extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "event" })
+    event?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONAudits extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "audit" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONAuditsAudit)
+    audit?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONAuditsAudit;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksFailed extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "author" })
+    author?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "kind" })
+    kind?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "title" })
+    title?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksInstalledIbookstore extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "author" })
+    author?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "kind" })
+    kind?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "title" })
+    title?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksInstalledInhouse extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "author" })
+    author?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "kind" })
+    kind?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "title" })
+    title?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksInstalled extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksInstalledIbookstore,
+    })
+    @Expose({ name: "ibookstore" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksInstalledIbookstore)
+    ibookstore?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksInstalledIbookstore[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksInstalledInhouse,
+    })
+    @Expose({ name: "inhouse" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksInstalledInhouse)
+    inhouse?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksInstalledInhouse[];
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksPending extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "author" })
+    author?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "kind" })
+    kind?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "title" })
+    title?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooks extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksFailed,
+    })
+    @Expose({ name: "failed" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksFailed)
+    failed?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksFailed[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "installed" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksInstalled)
+    installed?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksInstalled;
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksPending,
+    })
+    @Expose({ name: "pending" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksPending)
+    pending?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooksPending[];
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mac_address" })
+    macAddress?: string;
+
+    /**
+     * Name of the device
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "serial_number" })
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsCompletedCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_completed" })
+    dateTimeCompleted?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_completed_epoch" })
+    dateTimeCompletedEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsCompleted extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "command" })
+    @Type(
+        () =>
+            FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsCompletedCommand
+    )
+    command?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsCompletedCommand;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsFailedCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_failed" })
+    dateTimeFailed?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_failed_epoch" })
+    dateTimeFailedEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_issued" })
+    dateTimeIssued?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_issued_epoch" })
+    dateTimeIssuedEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "error" })
+    error?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsFailed extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "command" })
+    @Type(
+        () => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsFailedCommand
+    )
+    command?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsFailedCommand;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsPendingCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_failed" })
+    dateTimeFailed?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_failed_epoch" })
+    dateTimeFailedEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_issued" })
+    dateTimeIssued?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_issued_epoch" })
+    dateTimeIssuedEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsPending extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "command" })
+    @Type(
+        () => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsPendingCommand
+    )
+    command?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsPendingCommand;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommands extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsCompleted,
+    })
+    @Expose({ name: "completed" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsCompleted)
+    completed?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsCompleted[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsFailed,
+    })
+    @Expose({ name: "failed" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsFailed)
+    failed?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsFailed[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsPending,
+    })
+    @Expose({ name: "pending" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsPending)
+    pending?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommandsPending[];
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONUserLocationLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    building?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    department?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "email_address" })
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "full_name" })
+    fullName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone_number" })
+    phoneNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "position" })
+    position?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "room" })
+    room?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONUserLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "location" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONUserLocationLocation)
+    location?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONUserLocationLocation;
+}
+
+/**
+ * OK
+ */
+export class FindMobileDeviceHistoryByUDIDSubset200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "applications" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplications)
+    applications?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONApplications;
+
+    @SpeakeasyMetadata({ elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONAudits })
+    @Expose({ name: "audits" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONAudits)
+    audits?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONAudits[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "ebooks" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooks)
+    ebooks?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONEbooks;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONGeneral)
+    general?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_commands" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommands)
+    managementCommands?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONManagementCommands;
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONUserLocation,
+    })
+    @Expose({ name: "user_location" })
+    @Type(() => FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONUserLocation)
+    userLocation?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSONUserLocation[];
+}
+
 export class FindMobileDeviceHistoryByUDIDSubsetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     body?: Uint8Array;
@@ -49,5 +994,5 @@ export class FindMobileDeviceHistoryByUDIDSubsetResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    mobileDeviceHistory?: shared.MobileDeviceHistory;
+    findMobileDeviceHistoryByUDIDSubset200ApplicationJSONObject?: FindMobileDeviceHistoryByUDIDSubset200ApplicationJSON;
 }

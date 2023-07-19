@@ -5,7 +5,6 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
-import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -231,13 +230,14 @@ export class Managedpreferenceprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.managedPreferenceProfiles = [];
+                    res.findManagedPreferenceProfiles200ApplicationJSONObjects = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.managedPreferenceProfiles = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ManagedPreferenceProfiles,
-                        resFieldDepth
-                    );
+                    res.findManagedPreferenceProfiles200ApplicationJSONObjects =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindManagedPreferenceProfiles200ApplicationJSON,
+                            resFieldDepth
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -305,10 +305,11 @@ export class Managedpreferenceprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.managedPreferenceProfile = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ManagedPreferenceProfile
-                    );
+                    res.findManagedPreferenceProfilesById200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindManagedPreferenceProfilesById200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -442,10 +443,11 @@ export class Managedpreferenceprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.managedPreferenceProfile = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ManagedPreferenceProfile
-                    );
+                    res.findManagedPreferenceProfilesByName200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindManagedPreferenceProfilesByName200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -520,10 +522,11 @@ export class Managedpreferenceprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.managedPreferenceProfile = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ManagedPreferenceProfile
-                    );
+                    res.findManagedPreferenceProfilesByNameSubset200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindManagedPreferenceProfilesByNameSubset200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

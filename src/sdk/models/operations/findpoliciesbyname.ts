@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindPoliciesByNameRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,2222 @@ export class FindPoliciesByNameRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
     name: string;
+}
+
+export enum FindPoliciesByName200ApplicationXMLAccountMaintenanceAccountsAccountAction {
+    Create = "Create",
+    Reset = "Reset",
+    Delete = "Delete",
+    DisableFileVault = "DisableFileVault",
+}
+
+export class FindPoliciesByName200ApplicationXMLAccountMaintenanceAccountsAccount extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    action?: FindPoliciesByName200ApplicationXMLAccountMaintenanceAccountsAccountAction;
+
+    @SpeakeasyMetadata()
+    admin?: boolean;
+
+    @SpeakeasyMetadata()
+    archiveHomeDirectory?: boolean;
+
+    @SpeakeasyMetadata()
+    archiveHomeDirectoryTo?: string;
+
+    @SpeakeasyMetadata()
+    filevaultEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    home?: string;
+
+    @SpeakeasyMetadata()
+    password?: string;
+
+    @SpeakeasyMetadata()
+    picture?: string;
+
+    @SpeakeasyMetadata()
+    realname?: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLAccountMaintenanceAccounts extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    account?: FindPoliciesByName200ApplicationXMLAccountMaintenanceAccountsAccount;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindPoliciesByName200ApplicationXMLAccountMaintenanceDirectoryBindingsBinding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLAccountMaintenanceDirectoryBindings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    binding?: FindPoliciesByName200ApplicationXMLAccountMaintenanceDirectoryBindingsBinding;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export enum FindPoliciesByName200ApplicationXMLAccountMaintenanceManagementAccountAction {
+    Specified = "specified",
+    Random = "random",
+    Reset = "reset",
+    FileVaultEnable = "fileVaultEnable",
+    FileVaultDisable = "fileVaultDisable",
+}
+
+export class FindPoliciesByName200ApplicationXMLAccountMaintenanceManagementAccount extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    action?: FindPoliciesByName200ApplicationXMLAccountMaintenanceManagementAccountAction;
+
+    @SpeakeasyMetadata()
+    managedPassword?: string;
+
+    /**
+     * Only necessary when utilizing the random action
+     */
+    @SpeakeasyMetadata()
+    managedPasswordLength?: number;
+}
+
+export enum FindPoliciesByName200ApplicationXMLAccountMaintenanceOpenFirmwareEfiPasswordOfMode {
+    Command = "command",
+    None = "none",
+}
+
+export class FindPoliciesByName200ApplicationXMLAccountMaintenanceOpenFirmwareEfiPassword extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    ofMode?: FindPoliciesByName200ApplicationXMLAccountMaintenanceOpenFirmwareEfiPasswordOfMode;
+
+    @SpeakeasyMetadata()
+    ofPassword?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLAccountMaintenance extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLAccountMaintenanceAccounts })
+    accounts?: FindPoliciesByName200ApplicationXMLAccountMaintenanceAccounts[];
+
+    @SpeakeasyMetadata({
+        elemType: FindPoliciesByName200ApplicationXMLAccountMaintenanceDirectoryBindings,
+    })
+    directoryBindings?: FindPoliciesByName200ApplicationXMLAccountMaintenanceDirectoryBindings[];
+
+    @SpeakeasyMetadata()
+    managementAccount?: FindPoliciesByName200ApplicationXMLAccountMaintenanceManagementAccount;
+
+    @SpeakeasyMetadata()
+    openFirmwareEfiPassword?: FindPoliciesByName200ApplicationXMLAccountMaintenanceOpenFirmwareEfiPassword;
+}
+
+export enum FindPoliciesByName200ApplicationXMLDiskEncryptionAction {
+    Apply = "apply",
+    Remediate = "remediate",
+}
+
+export enum FindPoliciesByName200ApplicationXMLDiskEncryptionRemediateKeyType {
+    Individual = "Individual",
+    Institutional = "Institutional",
+    IndividualAndInstitutional = "Individual And Institutional",
+}
+
+export class FindPoliciesByName200ApplicationXMLDiskEncryption extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    action?: FindPoliciesByName200ApplicationXMLDiskEncryptionAction;
+
+    @SpeakeasyMetadata()
+    authRestart?: boolean;
+
+    @SpeakeasyMetadata()
+    diskEncryptionConfigurationId?: number;
+
+    /**
+     * disk encryption ID to utilize for remediating institutional recovery key types.
+     */
+    @SpeakeasyMetadata()
+    remediateDiskEncryptionConfigurationId?: number;
+
+    @SpeakeasyMetadata()
+    remediateKeyType?: FindPoliciesByName200ApplicationXMLDiskEncryptionRemediateKeyType;
+}
+
+export enum FindPoliciesByName200ApplicationXMLDockItemsDockItemAction {
+    AddToBeginning = "Add To Beginning",
+    AddToEnd = "Add To End",
+    Remove = "Remove",
+}
+
+export class FindPoliciesByName200ApplicationXMLDockItemsDockItem extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    action?: FindPoliciesByName200ApplicationXMLDockItemsDockItemAction;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLDockItems extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dockItem?: FindPoliciesByName200ApplicationXMLDockItemsDockItem;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindPoliciesByName200ApplicationXMLFilesProcesses extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    deleteFile?: boolean;
+
+    @SpeakeasyMetadata()
+    killProcess?: boolean;
+
+    @SpeakeasyMetadata()
+    locateFile?: string;
+
+    @SpeakeasyMetadata()
+    runCommand?: string;
+
+    @SpeakeasyMetadata()
+    searchByPath?: string;
+
+    @SpeakeasyMetadata()
+    searchForProcess?: string;
+
+    @SpeakeasyMetadata()
+    spotlightSearch?: string;
+
+    @SpeakeasyMetadata()
+    updateLocateDatabase?: boolean;
+}
+
+export class FindPoliciesByName200ApplicationXMLGeneralCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the category
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export enum FindPoliciesByName200ApplicationXMLGeneralDateTimeLimitationsNoExecuteOnDay {
+    Sun = "Sun",
+    Mon = "Mon",
+    Tue = "Tue",
+    Wed = "Wed",
+    Thu = "Thu",
+    Fri = "Fri",
+    Sat = "Sat",
+}
+
+export class FindPoliciesByName200ApplicationXMLGeneralDateTimeLimitationsNoExecuteOn extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    day?: FindPoliciesByName200ApplicationXMLGeneralDateTimeLimitationsNoExecuteOnDay;
+}
+
+export class FindPoliciesByName200ApplicationXMLGeneralDateTimeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    activationDate?: string;
+
+    @SpeakeasyMetadata()
+    activationDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    activationDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    expirationDate?: string;
+
+    @SpeakeasyMetadata()
+    expirationDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    expirationDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    noExecuteEnd?: string;
+
+    @SpeakeasyMetadata()
+    noExecuteOn?: FindPoliciesByName200ApplicationXMLGeneralDateTimeLimitationsNoExecuteOn;
+
+    @SpeakeasyMetadata()
+    noExecuteStart?: string;
+}
+
+export enum FindPoliciesByName200ApplicationXMLGeneralFrequency {
+    OncePerComputer = "Once per computer",
+    OncePerUserPerComputer = "Once per user per computer",
+    OncePerUser = "Once per user",
+    OnceEveryDay = "Once every day",
+    OnceEveryWeek = "Once every week",
+    OnceEveryMonth = "Once every month",
+    Ongoing = "Ongoing",
+}
+
+export enum FindPoliciesByName200ApplicationXMLGeneralNetworkLimitationsMinimumNetworkConnection {
+    NoMinimum = "No Minimum",
+    Ethernet = "Ethernet",
+}
+
+export class FindPoliciesByName200ApplicationXMLGeneralNetworkLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    anyIpAddress?: boolean;
+
+    @SpeakeasyMetadata()
+    minimumNetworkConnection?: FindPoliciesByName200ApplicationXMLGeneralNetworkLimitationsMinimumNetworkConnection;
+}
+
+export enum FindPoliciesByName200ApplicationXMLGeneralNetworkRequirements {
+    Any = "Any",
+    Ethernet = "Ethernet",
+}
+
+export class FindPoliciesByName200ApplicationXMLGeneralOverrideDefaultSettings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    distributionPoint?: string;
+
+    @SpeakeasyMetadata()
+    forceAfpSmb?: boolean;
+
+    @SpeakeasyMetadata()
+    sus?: string;
+
+    @SpeakeasyMetadata()
+    targetDrive?: string;
+}
+
+export enum FindPoliciesByName200ApplicationXMLGeneralRetryEvent {
+    None = "none",
+    Trigger = "trigger",
+    CheckIn = "check-in",
+}
+
+export class FindPoliciesByName200ApplicationXMLGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    category?: FindPoliciesByName200ApplicationXMLGeneralCategory;
+
+    @SpeakeasyMetadata()
+    dateTimeLimitations?: FindPoliciesByName200ApplicationXMLGeneralDateTimeLimitations;
+
+    @SpeakeasyMetadata()
+    enabled?: boolean;
+
+    @SpeakeasyMetadata()
+    frequency?: FindPoliciesByName200ApplicationXMLGeneralFrequency;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    locationUserOnly?: boolean;
+
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    networkLimitations?: FindPoliciesByName200ApplicationXMLGeneralNetworkLimitations;
+
+    @SpeakeasyMetadata()
+    networkRequirements?: FindPoliciesByName200ApplicationXMLGeneralNetworkRequirements;
+
+    @SpeakeasyMetadata()
+    notifyOnEachFailedRetry?: boolean;
+
+    @SpeakeasyMetadata()
+    offline?: boolean;
+
+    @SpeakeasyMetadata()
+    overrideDefaultSettings?: FindPoliciesByName200ApplicationXMLGeneralOverrideDefaultSettings;
+
+    @SpeakeasyMetadata()
+    retryAttempts?: number;
+
+    @SpeakeasyMetadata()
+    retryEvent?: FindPoliciesByName200ApplicationXMLGeneralRetryEvent;
+
+    @SpeakeasyMetadata()
+    site?: FindPoliciesByName200ApplicationXMLGeneralSite;
+
+    @SpeakeasyMetadata()
+    targetDrive?: string;
+
+    @SpeakeasyMetadata()
+    trigger?: string;
+
+    @SpeakeasyMetadata()
+    triggerCheckin?: boolean;
+
+    @SpeakeasyMetadata()
+    triggerEnrollmentComplete?: boolean;
+
+    @SpeakeasyMetadata()
+    triggerLogin?: boolean;
+
+    @SpeakeasyMetadata()
+    triggerLogout?: boolean;
+
+    @SpeakeasyMetadata()
+    triggerNetworkStateChanged?: boolean;
+
+    @SpeakeasyMetadata()
+    triggerOther?: string;
+
+    @SpeakeasyMetadata()
+    triggerStartup?: boolean;
+}
+
+export class FindPoliciesByName200ApplicationXMLMaintenance extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    byhost?: boolean;
+
+    @SpeakeasyMetadata()
+    heal?: boolean;
+
+    @SpeakeasyMetadata()
+    installAllCachedPackages?: boolean;
+
+    @SpeakeasyMetadata()
+    permissions?: boolean;
+
+    @SpeakeasyMetadata()
+    prebindings?: boolean;
+
+    @SpeakeasyMetadata()
+    recon?: boolean;
+
+    @SpeakeasyMetadata()
+    resetName?: boolean;
+
+    @SpeakeasyMetadata()
+    systemCache?: boolean;
+
+    @SpeakeasyMetadata()
+    userCache?: boolean;
+
+    @SpeakeasyMetadata()
+    verify?: boolean;
+}
+
+export enum FindPoliciesByName200ApplicationXMLPackageConfigurationPackagesPackageAction {
+    Install = "Install",
+    Cache = "Cache",
+    InstallCached = "Install Cached",
+}
+
+export class FindPoliciesByName200ApplicationXMLPackageConfigurationPackagesPackage extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    action?: FindPoliciesByName200ApplicationXMLPackageConfigurationPackagesPackageAction;
+
+    @SpeakeasyMetadata()
+    feu?: boolean;
+
+    @SpeakeasyMetadata()
+    fut?: boolean;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    updateAutorun?: boolean;
+}
+
+export class FindPoliciesByName200ApplicationXMLPackageConfigurationPackages extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    package?: FindPoliciesByName200ApplicationXMLPackageConfigurationPackagesPackage;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindPoliciesByName200ApplicationXMLPackageConfiguration extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindPoliciesByName200ApplicationXMLPackageConfigurationPackages,
+    })
+    packages?: FindPoliciesByName200ApplicationXMLPackageConfigurationPackages[];
+}
+
+export enum FindPoliciesByName200ApplicationXMLPrintersPrinterAction {
+    Install = "install",
+    Uninstall = "uninstall",
+}
+
+export class FindPoliciesByName200ApplicationXMLPrintersPrinter extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    action?: FindPoliciesByName200ApplicationXMLPrintersPrinterAction;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    makeDefault?: boolean;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLPrinters extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    leaveExistingDefault?: string;
+
+    @SpeakeasyMetadata()
+    printer?: FindPoliciesByName200ApplicationXMLPrintersPrinter;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: FindPoliciesByName200ApplicationXMLScopeBuildingsBuilding;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computerGroup?: FindPoliciesByName200ApplicationXMLScopeComputerGroupsComputerGroup;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindPoliciesByName200ApplicationXMLScopeComputersComputer;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    department?: FindPoliciesByName200ApplicationXMLScopeDepartmentsDepartment;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeExclusionsBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeExclusionsBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: FindPoliciesByName200ApplicationXMLScopeExclusionsBuildingsBuilding;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeExclusionsComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeExclusionsComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computerGroup?: FindPoliciesByName200ApplicationXMLScopeExclusionsComputerGroupsComputerGroup;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeExclusionsComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeExclusionsComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindPoliciesByName200ApplicationXMLScopeExclusionsComputersComputer;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeExclusionsDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeExclusionsDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    department?: FindPoliciesByName200ApplicationXMLScopeExclusionsDepartmentsDepartment;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeExclusionsIbeaconsIbeacon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeExclusionsIbeacons extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    ibeacon?: FindPoliciesByName200ApplicationXMLScopeExclusionsIbeaconsIbeacon;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeExclusionsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the network segment
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    uid?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeExclusionsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    networkSegment?: FindPoliciesByName200ApplicationXMLScopeExclusionsNetworkSegmentsNetworkSegment;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeExclusionsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeExclusionsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindPoliciesByName200ApplicationXMLScopeExclusionsUserGroupsUserGroup;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeExclusionsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeExclusionsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindPoliciesByName200ApplicationXMLScopeExclusionsUsersUser;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLScopeExclusionsBuildings })
+    buildings?: FindPoliciesByName200ApplicationXMLScopeExclusionsBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType: FindPoliciesByName200ApplicationXMLScopeExclusionsComputerGroups,
+    })
+    computerGroups?: FindPoliciesByName200ApplicationXMLScopeExclusionsComputerGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLScopeExclusionsComputers })
+    computers?: FindPoliciesByName200ApplicationXMLScopeExclusionsComputers[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLScopeExclusionsDepartments })
+    departments?: FindPoliciesByName200ApplicationXMLScopeExclusionsDepartments[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLScopeExclusionsIbeacons })
+    ibeacons?: FindPoliciesByName200ApplicationXMLScopeExclusionsIbeacons[];
+
+    @SpeakeasyMetadata({
+        elemType: FindPoliciesByName200ApplicationXMLScopeExclusionsNetworkSegments,
+    })
+    networkSegments?: FindPoliciesByName200ApplicationXMLScopeExclusionsNetworkSegments[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLScopeExclusionsUserGroups })
+    userGroups?: FindPoliciesByName200ApplicationXMLScopeExclusionsUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLScopeExclusionsUsers })
+    users?: FindPoliciesByName200ApplicationXMLScopeExclusionsUsers[];
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeLimitToUsersUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeLimitToUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLScopeLimitToUsersUserGroups })
+    userGroups?: FindPoliciesByName200ApplicationXMLScopeLimitToUsersUserGroups[];
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeLimitationsIbeaconsIbeacon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeLimitationsIbeacons extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    ibeacon?: FindPoliciesByName200ApplicationXMLScopeLimitationsIbeaconsIbeacon;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeLimitationsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeLimitationsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    networkSegment?: FindPoliciesByName200ApplicationXMLScopeLimitationsNetworkSegmentsNetworkSegment;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeLimitationsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeLimitationsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindPoliciesByName200ApplicationXMLScopeLimitationsUserGroupsUserGroup;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeLimitationsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeLimitationsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindPoliciesByName200ApplicationXMLScopeLimitationsUsersUser;
+}
+
+export class FindPoliciesByName200ApplicationXMLScopeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLScopeLimitationsIbeacons })
+    ibeacons?: FindPoliciesByName200ApplicationXMLScopeLimitationsIbeacons[];
+
+    @SpeakeasyMetadata({
+        elemType: FindPoliciesByName200ApplicationXMLScopeLimitationsNetworkSegments,
+    })
+    networkSegments?: FindPoliciesByName200ApplicationXMLScopeLimitationsNetworkSegments[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLScopeLimitationsUserGroups })
+    userGroups?: FindPoliciesByName200ApplicationXMLScopeLimitationsUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLScopeLimitationsUsers })
+    users?: FindPoliciesByName200ApplicationXMLScopeLimitationsUsers[];
+}
+
+export class FindPoliciesByName200ApplicationXMLScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    allComputers?: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLScopeBuildings })
+    buildings?: FindPoliciesByName200ApplicationXMLScopeBuildings[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLScopeComputerGroups })
+    computerGroups?: FindPoliciesByName200ApplicationXMLScopeComputerGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLScopeComputers })
+    computers?: FindPoliciesByName200ApplicationXMLScopeComputers[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLScopeDepartments })
+    departments?: FindPoliciesByName200ApplicationXMLScopeDepartments[];
+
+    @SpeakeasyMetadata()
+    exclusions?: FindPoliciesByName200ApplicationXMLScopeExclusions;
+
+    @SpeakeasyMetadata()
+    limitToUsers?: FindPoliciesByName200ApplicationXMLScopeLimitToUsers;
+
+    @SpeakeasyMetadata()
+    limitations?: FindPoliciesByName200ApplicationXMLScopeLimitations;
+}
+
+export enum FindPoliciesByName200ApplicationXMLScriptsScriptPriority {
+    Before = "Before",
+    After = "After",
+}
+
+export class FindPoliciesByName200ApplicationXMLScriptsScript extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    parameter10?: string;
+
+    @SpeakeasyMetadata()
+    parameter11?: string;
+
+    @SpeakeasyMetadata()
+    parameter4?: string;
+
+    @SpeakeasyMetadata()
+    parameter5?: string;
+
+    @SpeakeasyMetadata()
+    parameter6?: string;
+
+    @SpeakeasyMetadata()
+    parameter7?: string;
+
+    @SpeakeasyMetadata()
+    parameter8?: string;
+
+    @SpeakeasyMetadata()
+    parameter9?: string;
+
+    @SpeakeasyMetadata()
+    priority?: FindPoliciesByName200ApplicationXMLScriptsScriptPriority;
+}
+
+export class FindPoliciesByName200ApplicationXMLScripts extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLScriptsScript })
+    script?: FindPoliciesByName200ApplicationXMLScriptsScript[];
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindPoliciesByName200ApplicationXMLSelfServiceSelfServiceCategoriesCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    displayIn?: boolean;
+
+    @SpeakeasyMetadata()
+    featureIn?: boolean;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLSelfServiceSelfServiceCategories extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    category?: FindPoliciesByName200ApplicationXMLSelfServiceSelfServiceCategoriesCategory;
+}
+
+export class FindPoliciesByName200ApplicationXMLSelfServiceSelfServiceIcon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    filename?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    uri?: string;
+}
+
+export class FindPoliciesByName200ApplicationXMLSelfService extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    featureOnMainPage?: boolean;
+
+    @SpeakeasyMetadata()
+    forceUsersToViewDescription?: boolean;
+
+    @SpeakeasyMetadata()
+    installButtonText?: string;
+
+    @SpeakeasyMetadata()
+    reInstallButtonText?: string;
+
+    @SpeakeasyMetadata()
+    selfServiceCategories?: FindPoliciesByName200ApplicationXMLSelfServiceSelfServiceCategories;
+
+    @SpeakeasyMetadata()
+    selfServiceDescription?: string;
+
+    @SpeakeasyMetadata()
+    selfServiceDisplayName?: string;
+
+    @SpeakeasyMetadata()
+    selfServiceIcon?: FindPoliciesByName200ApplicationXMLSelfServiceSelfServiceIcon;
+
+    @SpeakeasyMetadata()
+    useForSelfService?: boolean;
+}
+
+export class FindPoliciesByName200ApplicationXMLUserInteraction extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    allowDeferralMinutes?: number;
+
+    @SpeakeasyMetadata()
+    allowDeferralUntilUtc?: string;
+
+    @SpeakeasyMetadata()
+    allowUserToDefer?: boolean;
+
+    @SpeakeasyMetadata()
+    messageFinish?: string;
+
+    @SpeakeasyMetadata()
+    messageStart?: string;
+}
+
+/**
+ * OK
+ */
+export class FindPoliciesByName200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    accountMaintenance?: FindPoliciesByName200ApplicationXMLAccountMaintenance;
+
+    @SpeakeasyMetadata()
+    diskEncryption?: FindPoliciesByName200ApplicationXMLDiskEncryption;
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLDockItems })
+    dockItems?: FindPoliciesByName200ApplicationXMLDockItems[];
+
+    @SpeakeasyMetadata()
+    filesProcesses?: FindPoliciesByName200ApplicationXMLFilesProcesses;
+
+    @SpeakeasyMetadata()
+    general?: FindPoliciesByName200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata()
+    maintenance?: FindPoliciesByName200ApplicationXMLMaintenance;
+
+    @SpeakeasyMetadata()
+    packageConfiguration?: FindPoliciesByName200ApplicationXMLPackageConfiguration;
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationXMLPrinters })
+    printers?: FindPoliciesByName200ApplicationXMLPrinters[];
+
+    @SpeakeasyMetadata()
+    scope?: FindPoliciesByName200ApplicationXMLScope;
+
+    @SpeakeasyMetadata()
+    scripts?: FindPoliciesByName200ApplicationXMLScripts;
+
+    @SpeakeasyMetadata()
+    selfService?: FindPoliciesByName200ApplicationXMLSelfService;
+
+    @SpeakeasyMetadata()
+    userInteraction?: FindPoliciesByName200ApplicationXMLUserInteraction;
+}
+
+export enum FindPoliciesByName200ApplicationJSONAccountMaintenanceAccountsAccountAction {
+    Create = "Create",
+    Reset = "Reset",
+    Delete = "Delete",
+    DisableFileVault = "DisableFileVault",
+}
+
+export class FindPoliciesByName200ApplicationJSONAccountMaintenanceAccountsAccount extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "action" })
+    action?: FindPoliciesByName200ApplicationJSONAccountMaintenanceAccountsAccountAction;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "admin" })
+    admin?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "archive_home_directory" })
+    archiveHomeDirectory?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "archive_home_directory_to" })
+    archiveHomeDirectoryTo?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "filevault_enabled" })
+    filevaultEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "home" })
+    home?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "password" })
+    password?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "picture" })
+    picture?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "realname" })
+    realname?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONAccountMaintenanceAccounts extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "account" })
+    @Type(() => FindPoliciesByName200ApplicationJSONAccountMaintenanceAccountsAccount)
+    account?: FindPoliciesByName200ApplicationJSONAccountMaintenanceAccountsAccount;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindPoliciesByName200ApplicationJSONAccountMaintenanceDirectoryBindingsBinding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONAccountMaintenanceDirectoryBindings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "binding" })
+    @Type(() => FindPoliciesByName200ApplicationJSONAccountMaintenanceDirectoryBindingsBinding)
+    binding?: FindPoliciesByName200ApplicationJSONAccountMaintenanceDirectoryBindingsBinding;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export enum FindPoliciesByName200ApplicationJSONAccountMaintenanceManagementAccountAction {
+    Specified = "specified",
+    Random = "random",
+    Reset = "reset",
+    FileVaultEnable = "fileVaultEnable",
+    FileVaultDisable = "fileVaultDisable",
+}
+
+export class FindPoliciesByName200ApplicationJSONAccountMaintenanceManagementAccount extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "action" })
+    action?: FindPoliciesByName200ApplicationJSONAccountMaintenanceManagementAccountAction;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "managed_password" })
+    managedPassword?: string;
+
+    /**
+     * Only necessary when utilizing the random action
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "managed_password_length" })
+    managedPasswordLength?: number;
+}
+
+export enum FindPoliciesByName200ApplicationJSONAccountMaintenanceOpenFirmwareEfiPasswordOfMode {
+    Command = "command",
+    None = "none",
+}
+
+export class FindPoliciesByName200ApplicationJSONAccountMaintenanceOpenFirmwareEfiPassword extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "of_mode" })
+    ofMode?: FindPoliciesByName200ApplicationJSONAccountMaintenanceOpenFirmwareEfiPasswordOfMode;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "of_password" })
+    ofPassword?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONAccountMaintenance extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationJSONAccountMaintenanceAccounts })
+    @Expose({ name: "accounts" })
+    @Type(() => FindPoliciesByName200ApplicationJSONAccountMaintenanceAccounts)
+    accounts?: FindPoliciesByName200ApplicationJSONAccountMaintenanceAccounts[];
+
+    @SpeakeasyMetadata({
+        elemType: FindPoliciesByName200ApplicationJSONAccountMaintenanceDirectoryBindings,
+    })
+    @Expose({ name: "directory_bindings" })
+    @Type(() => FindPoliciesByName200ApplicationJSONAccountMaintenanceDirectoryBindings)
+    directoryBindings?: FindPoliciesByName200ApplicationJSONAccountMaintenanceDirectoryBindings[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_account" })
+    @Type(() => FindPoliciesByName200ApplicationJSONAccountMaintenanceManagementAccount)
+    managementAccount?: FindPoliciesByName200ApplicationJSONAccountMaintenanceManagementAccount;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "open_firmware_efi_password" })
+    @Type(() => FindPoliciesByName200ApplicationJSONAccountMaintenanceOpenFirmwareEfiPassword)
+    openFirmwareEfiPassword?: FindPoliciesByName200ApplicationJSONAccountMaintenanceOpenFirmwareEfiPassword;
+}
+
+export enum FindPoliciesByName200ApplicationJSONDiskEncryptionAction {
+    Apply = "apply",
+    Remediate = "remediate",
+}
+
+export enum FindPoliciesByName200ApplicationJSONDiskEncryptionRemediateKeyType {
+    Individual = "Individual",
+    Institutional = "Institutional",
+    IndividualAndInstitutional = "Individual And Institutional",
+}
+
+export class FindPoliciesByName200ApplicationJSONDiskEncryption extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "action" })
+    action?: FindPoliciesByName200ApplicationJSONDiskEncryptionAction;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "auth_restart" })
+    authRestart?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "disk_encryption_configuration_id" })
+    diskEncryptionConfigurationId?: number;
+
+    /**
+     * disk encryption ID to utilize for remediating institutional recovery key types.
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "remediate_disk_encryption_configuration_id" })
+    remediateDiskEncryptionConfigurationId?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "remediate_key_type" })
+    remediateKeyType?: FindPoliciesByName200ApplicationJSONDiskEncryptionRemediateKeyType;
+}
+
+export enum FindPoliciesByName200ApplicationJSONDockItemsDockItemAction {
+    AddToBeginning = "Add To Beginning",
+    AddToEnd = "Add To End",
+    Remove = "Remove",
+}
+
+export class FindPoliciesByName200ApplicationJSONDockItemsDockItem extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "action" })
+    action?: FindPoliciesByName200ApplicationJSONDockItemsDockItemAction;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONDockItems extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "dock_item" })
+    @Type(() => FindPoliciesByName200ApplicationJSONDockItemsDockItem)
+    dockItem?: FindPoliciesByName200ApplicationJSONDockItemsDockItem;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindPoliciesByName200ApplicationJSONFilesProcesses extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "delete_file" })
+    deleteFile?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "kill_process" })
+    killProcess?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "locate_file" })
+    locateFile?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "run_command" })
+    runCommand?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "search_by_path" })
+    searchByPath?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "search_for_process" })
+    searchForProcess?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "spotlight_search" })
+    spotlightSearch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "update_locate_database" })
+    updateLocateDatabase?: boolean;
+}
+
+export class FindPoliciesByName200ApplicationJSONGeneralCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the category
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+export enum FindPoliciesByName200ApplicationJSONGeneralDateTimeLimitationsNoExecuteOnDay {
+    Sun = "Sun",
+    Mon = "Mon",
+    Tue = "Tue",
+    Wed = "Wed",
+    Thu = "Thu",
+    Fri = "Fri",
+    Sat = "Sat",
+}
+
+export class FindPoliciesByName200ApplicationJSONGeneralDateTimeLimitationsNoExecuteOn extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "day" })
+    day?: FindPoliciesByName200ApplicationJSONGeneralDateTimeLimitationsNoExecuteOnDay;
+}
+
+export class FindPoliciesByName200ApplicationJSONGeneralDateTimeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "activation_date" })
+    activationDate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "activation_date_epoch" })
+    activationDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "activation_date_utc" })
+    activationDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "expiration_date" })
+    expirationDate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "expiration_date_epoch" })
+    expirationDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "expiration_date_utc" })
+    expirationDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "no_execute_end" })
+    noExecuteEnd?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "no_execute_on" })
+    @Type(() => FindPoliciesByName200ApplicationJSONGeneralDateTimeLimitationsNoExecuteOn)
+    noExecuteOn?: FindPoliciesByName200ApplicationJSONGeneralDateTimeLimitationsNoExecuteOn;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "no_execute_start" })
+    noExecuteStart?: string;
+}
+
+export enum FindPoliciesByName200ApplicationJSONGeneralFrequency {
+    OncePerComputer = "Once per computer",
+    OncePerUserPerComputer = "Once per user per computer",
+    OncePerUser = "Once per user",
+    OnceEveryDay = "Once every day",
+    OnceEveryWeek = "Once every week",
+    OnceEveryMonth = "Once every month",
+    Ongoing = "Ongoing",
+}
+
+export enum FindPoliciesByName200ApplicationJSONGeneralNetworkLimitationsMinimumNetworkConnection {
+    NoMinimum = "No Minimum",
+    Ethernet = "Ethernet",
+}
+
+export class FindPoliciesByName200ApplicationJSONGeneralNetworkLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "any_ip_address" })
+    anyIpAddress?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "minimum_network_connection" })
+    minimumNetworkConnection?: FindPoliciesByName200ApplicationJSONGeneralNetworkLimitationsMinimumNetworkConnection;
+}
+
+export enum FindPoliciesByName200ApplicationJSONGeneralNetworkRequirements {
+    Any = "Any",
+    Ethernet = "Ethernet",
+}
+
+export class FindPoliciesByName200ApplicationJSONGeneralOverrideDefaultSettings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "distribution_point" })
+    distributionPoint?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "force_afp_smb" })
+    forceAfpSmb?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "sus" })
+    sus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "target_drive" })
+    targetDrive?: string;
+}
+
+export enum FindPoliciesByName200ApplicationJSONGeneralRetryEvent {
+    None = "none",
+    Trigger = "trigger",
+    CheckIn = "check-in",
+}
+
+export class FindPoliciesByName200ApplicationJSONGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "category" })
+    @Type(() => FindPoliciesByName200ApplicationJSONGeneralCategory)
+    category?: FindPoliciesByName200ApplicationJSONGeneralCategory;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_limitations" })
+    @Type(() => FindPoliciesByName200ApplicationJSONGeneralDateTimeLimitations)
+    dateTimeLimitations?: FindPoliciesByName200ApplicationJSONGeneralDateTimeLimitations;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "enabled" })
+    enabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "frequency" })
+    frequency?: FindPoliciesByName200ApplicationJSONGeneralFrequency;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "location_user_only" })
+    locationUserOnly?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "network_limitations" })
+    @Type(() => FindPoliciesByName200ApplicationJSONGeneralNetworkLimitations)
+    networkLimitations?: FindPoliciesByName200ApplicationJSONGeneralNetworkLimitations;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "network_requirements" })
+    networkRequirements?: FindPoliciesByName200ApplicationJSONGeneralNetworkRequirements;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notify_on_each_failed_retry" })
+    notifyOnEachFailedRetry?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "offline" })
+    offline?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "override_default_settings" })
+    @Type(() => FindPoliciesByName200ApplicationJSONGeneralOverrideDefaultSettings)
+    overrideDefaultSettings?: FindPoliciesByName200ApplicationJSONGeneralOverrideDefaultSettings;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "retry_attempts" })
+    retryAttempts?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "retry_event" })
+    retryEvent?: FindPoliciesByName200ApplicationJSONGeneralRetryEvent;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindPoliciesByName200ApplicationJSONGeneralSite)
+    site?: FindPoliciesByName200ApplicationJSONGeneralSite;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "target_drive" })
+    targetDrive?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "trigger" })
+    trigger?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "trigger_checkin" })
+    triggerCheckin?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "trigger_enrollment_complete" })
+    triggerEnrollmentComplete?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "trigger_login" })
+    triggerLogin?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "trigger_logout" })
+    triggerLogout?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "trigger_network_state_changed" })
+    triggerNetworkStateChanged?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "trigger_other" })
+    triggerOther?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "trigger_startup" })
+    triggerStartup?: boolean;
+}
+
+export class FindPoliciesByName200ApplicationJSONMaintenance extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "byhost" })
+    byhost?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "heal" })
+    heal?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "install_all_cached_packages" })
+    installAllCachedPackages?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "permissions" })
+    permissions?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "prebindings" })
+    prebindings?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "recon" })
+    recon?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "reset_name" })
+    resetName?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "system_cache" })
+    systemCache?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_cache" })
+    userCache?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "verify" })
+    verify?: boolean;
+}
+
+export enum FindPoliciesByName200ApplicationJSONPackageConfigurationPackagesPackageAction {
+    Install = "Install",
+    Cache = "Cache",
+    InstallCached = "Install Cached",
+}
+
+export class FindPoliciesByName200ApplicationJSONPackageConfigurationPackagesPackage extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "action" })
+    action?: FindPoliciesByName200ApplicationJSONPackageConfigurationPackagesPackageAction;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "feu" })
+    feu?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "fut" })
+    fut?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "update_autorun" })
+    updateAutorun?: boolean;
+}
+
+export class FindPoliciesByName200ApplicationJSONPackageConfigurationPackages extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "package" })
+    @Type(() => FindPoliciesByName200ApplicationJSONPackageConfigurationPackagesPackage)
+    package?: FindPoliciesByName200ApplicationJSONPackageConfigurationPackagesPackage;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindPoliciesByName200ApplicationJSONPackageConfiguration extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindPoliciesByName200ApplicationJSONPackageConfigurationPackages,
+    })
+    @Expose({ name: "packages" })
+    @Type(() => FindPoliciesByName200ApplicationJSONPackageConfigurationPackages)
+    packages?: FindPoliciesByName200ApplicationJSONPackageConfigurationPackages[];
+}
+
+export enum FindPoliciesByName200ApplicationJSONPrintersPrinterAction {
+    Install = "install",
+    Uninstall = "uninstall",
+}
+
+export class FindPoliciesByName200ApplicationJSONPrintersPrinter extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "action" })
+    action?: FindPoliciesByName200ApplicationJSONPrintersPrinterAction;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "make_default" })
+    makeDefault?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONPrinters extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "leave_existing_default" })
+    leaveExistingDefault?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "printer" })
+    @Type(() => FindPoliciesByName200ApplicationJSONPrintersPrinter)
+    printer?: FindPoliciesByName200ApplicationJSONPrintersPrinter;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeBuildingsBuilding)
+    building?: FindPoliciesByName200ApplicationJSONScopeBuildingsBuilding;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer_group" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeComputerGroupsComputerGroup)
+    computerGroup?: FindPoliciesByName200ApplicationJSONScopeComputerGroupsComputerGroup;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeComputersComputer)
+    computer?: FindPoliciesByName200ApplicationJSONScopeComputersComputer;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeDepartmentsDepartment)
+    department?: FindPoliciesByName200ApplicationJSONScopeDepartmentsDepartment;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeExclusionsBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeExclusionsBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeExclusionsBuildingsBuilding)
+    building?: FindPoliciesByName200ApplicationJSONScopeExclusionsBuildingsBuilding;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeExclusionsComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer_group" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup)
+    computerGroup?: FindPoliciesByName200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeExclusionsComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeExclusionsComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeExclusionsComputersComputer)
+    computer?: FindPoliciesByName200ApplicationJSONScopeExclusionsComputersComputer;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeExclusionsDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeExclusionsDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeExclusionsDepartmentsDepartment)
+    department?: FindPoliciesByName200ApplicationJSONScopeExclusionsDepartmentsDepartment;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeExclusionsIbeaconsIbeacon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeExclusionsIbeacons extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "ibeacon" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeExclusionsIbeaconsIbeacon)
+    ibeacon?: FindPoliciesByName200ApplicationJSONScopeExclusionsIbeaconsIbeacon;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the network segment
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uid" })
+    uid?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeExclusionsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "network_segment" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment)
+    networkSegment?: FindPoliciesByName200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeExclusionsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeExclusionsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeExclusionsUserGroupsUserGroup)
+    userGroup?: FindPoliciesByName200ApplicationJSONScopeExclusionsUserGroupsUserGroup;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeExclusionsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeExclusionsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeExclusionsUsersUser)
+    user?: FindPoliciesByName200ApplicationJSONScopeExclusionsUsersUser;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationJSONScopeExclusionsBuildings })
+    @Expose({ name: "buildings" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeExclusionsBuildings)
+    buildings?: FindPoliciesByName200ApplicationJSONScopeExclusionsBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType: FindPoliciesByName200ApplicationJSONScopeExclusionsComputerGroups,
+    })
+    @Expose({ name: "computer_groups" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeExclusionsComputerGroups)
+    computerGroups?: FindPoliciesByName200ApplicationJSONScopeExclusionsComputerGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationJSONScopeExclusionsComputers })
+    @Expose({ name: "computers" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeExclusionsComputers)
+    computers?: FindPoliciesByName200ApplicationJSONScopeExclusionsComputers[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationJSONScopeExclusionsDepartments })
+    @Expose({ name: "departments" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeExclusionsDepartments)
+    departments?: FindPoliciesByName200ApplicationJSONScopeExclusionsDepartments[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationJSONScopeExclusionsIbeacons })
+    @Expose({ name: "ibeacons" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeExclusionsIbeacons)
+    ibeacons?: FindPoliciesByName200ApplicationJSONScopeExclusionsIbeacons[];
+
+    @SpeakeasyMetadata({
+        elemType: FindPoliciesByName200ApplicationJSONScopeExclusionsNetworkSegments,
+    })
+    @Expose({ name: "network_segments" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeExclusionsNetworkSegments)
+    networkSegments?: FindPoliciesByName200ApplicationJSONScopeExclusionsNetworkSegments[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationJSONScopeExclusionsUserGroups })
+    @Expose({ name: "user_groups" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeExclusionsUserGroups)
+    userGroups?: FindPoliciesByName200ApplicationJSONScopeExclusionsUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationJSONScopeExclusionsUsers })
+    @Expose({ name: "users" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeExclusionsUsers)
+    users?: FindPoliciesByName200ApplicationJSONScopeExclusionsUsers[];
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeLimitToUsersUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    userGroup?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeLimitToUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindPoliciesByName200ApplicationJSONScopeLimitToUsersUserGroups,
+    })
+    @Expose({ name: "user_groups" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeLimitToUsersUserGroups)
+    userGroups?: FindPoliciesByName200ApplicationJSONScopeLimitToUsersUserGroups[];
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeLimitationsIbeaconsIbeacon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeLimitationsIbeacons extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "ibeacon" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeLimitationsIbeaconsIbeacon)
+    ibeacon?: FindPoliciesByName200ApplicationJSONScopeLimitationsIbeaconsIbeacon;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeLimitationsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "network_segment" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment)
+    networkSegment?: FindPoliciesByName200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeLimitationsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeLimitationsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeLimitationsUserGroupsUserGroup)
+    userGroup?: FindPoliciesByName200ApplicationJSONScopeLimitationsUserGroupsUserGroup;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeLimitationsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeLimitationsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeLimitationsUsersUser)
+    user?: FindPoliciesByName200ApplicationJSONScopeLimitationsUsersUser;
+}
+
+export class FindPoliciesByName200ApplicationJSONScopeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationJSONScopeLimitationsIbeacons })
+    @Expose({ name: "ibeacons" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeLimitationsIbeacons)
+    ibeacons?: FindPoliciesByName200ApplicationJSONScopeLimitationsIbeacons[];
+
+    @SpeakeasyMetadata({
+        elemType: FindPoliciesByName200ApplicationJSONScopeLimitationsNetworkSegments,
+    })
+    @Expose({ name: "network_segments" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeLimitationsNetworkSegments)
+    networkSegments?: FindPoliciesByName200ApplicationJSONScopeLimitationsNetworkSegments[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationJSONScopeLimitationsUserGroups })
+    @Expose({ name: "user_groups" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeLimitationsUserGroups)
+    userGroups?: FindPoliciesByName200ApplicationJSONScopeLimitationsUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationJSONScopeLimitationsUsers })
+    @Expose({ name: "users" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeLimitationsUsers)
+    users?: FindPoliciesByName200ApplicationJSONScopeLimitationsUsers[];
+}
+
+export class FindPoliciesByName200ApplicationJSONScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "all_computers" })
+    allComputers?: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationJSONScopeBuildings })
+    @Expose({ name: "buildings" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeBuildings)
+    buildings?: FindPoliciesByName200ApplicationJSONScopeBuildings[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationJSONScopeComputerGroups })
+    @Expose({ name: "computer_groups" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeComputerGroups)
+    computerGroups?: FindPoliciesByName200ApplicationJSONScopeComputerGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationJSONScopeComputers })
+    @Expose({ name: "computers" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeComputers)
+    computers?: FindPoliciesByName200ApplicationJSONScopeComputers[];
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationJSONScopeDepartments })
+    @Expose({ name: "departments" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeDepartments)
+    departments?: FindPoliciesByName200ApplicationJSONScopeDepartments[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "exclusions" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeExclusions)
+    exclusions?: FindPoliciesByName200ApplicationJSONScopeExclusions;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "limit_to_users" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeLimitToUsers)
+    limitToUsers?: FindPoliciesByName200ApplicationJSONScopeLimitToUsers;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "limitations" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScopeLimitations)
+    limitations?: FindPoliciesByName200ApplicationJSONScopeLimitations;
+}
+
+export enum FindPoliciesByName200ApplicationJSONScriptsScriptPriority {
+    Before = "Before",
+    After = "After",
+}
+
+export class FindPoliciesByName200ApplicationJSONScriptsScript extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "parameter10" })
+    parameter10?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "parameter11" })
+    parameter11?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "parameter4" })
+    parameter4?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "parameter5" })
+    parameter5?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "parameter6" })
+    parameter6?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "parameter7" })
+    parameter7?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "parameter8" })
+    parameter8?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "parameter9" })
+    parameter9?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "priority" })
+    priority?: FindPoliciesByName200ApplicationJSONScriptsScriptPriority;
+}
+
+export class FindPoliciesByName200ApplicationJSONScripts extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationJSONScriptsScript })
+    @Expose({ name: "script" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScriptsScript)
+    script?: FindPoliciesByName200ApplicationJSONScriptsScript[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindPoliciesByName200ApplicationJSONSelfServiceSelfServiceCategoriesCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "display_in" })
+    displayIn?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "feature_in" })
+    featureIn?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONSelfServiceSelfServiceCategories extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "category" })
+    @Type(() => FindPoliciesByName200ApplicationJSONSelfServiceSelfServiceCategoriesCategory)
+    category?: FindPoliciesByName200ApplicationJSONSelfServiceSelfServiceCategoriesCategory;
+}
+
+export class FindPoliciesByName200ApplicationJSONSelfServiceSelfServiceIcon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "filename" })
+    filename?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uri" })
+    uri?: string;
+}
+
+export class FindPoliciesByName200ApplicationJSONSelfService extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "feature_on_main_page" })
+    featureOnMainPage?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "force_users_to_view_description" })
+    forceUsersToViewDescription?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "install_button_text" })
+    installButtonText?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "re-install_button_text" })
+    reInstallButtonText?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_categories" })
+    @Type(() => FindPoliciesByName200ApplicationJSONSelfServiceSelfServiceCategories)
+    selfServiceCategories?: FindPoliciesByName200ApplicationJSONSelfServiceSelfServiceCategories;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_description" })
+    selfServiceDescription?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_display_name" })
+    selfServiceDisplayName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_icon" })
+    @Type(() => FindPoliciesByName200ApplicationJSONSelfServiceSelfServiceIcon)
+    selfServiceIcon?: FindPoliciesByName200ApplicationJSONSelfServiceSelfServiceIcon;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "use_for_self_service" })
+    useForSelfService?: boolean;
+}
+
+export class FindPoliciesByName200ApplicationJSONUserInteraction extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "allow_deferral_minutes" })
+    allowDeferralMinutes?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "allow_deferral_until_utc" })
+    allowDeferralUntilUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "allow_user_to_defer" })
+    allowUserToDefer?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "message_finish" })
+    messageFinish?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "message_start" })
+    messageStart?: string;
+}
+
+/**
+ * OK
+ */
+export class FindPoliciesByName200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "account_maintenance" })
+    @Type(() => FindPoliciesByName200ApplicationJSONAccountMaintenance)
+    accountMaintenance?: FindPoliciesByName200ApplicationJSONAccountMaintenance;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "disk_encryption" })
+    @Type(() => FindPoliciesByName200ApplicationJSONDiskEncryption)
+    diskEncryption?: FindPoliciesByName200ApplicationJSONDiskEncryption;
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationJSONDockItems })
+    @Expose({ name: "dock_items" })
+    @Type(() => FindPoliciesByName200ApplicationJSONDockItems)
+    dockItems?: FindPoliciesByName200ApplicationJSONDockItems[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "files_processes" })
+    @Type(() => FindPoliciesByName200ApplicationJSONFilesProcesses)
+    filesProcesses?: FindPoliciesByName200ApplicationJSONFilesProcesses;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindPoliciesByName200ApplicationJSONGeneral)
+    general?: FindPoliciesByName200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "maintenance" })
+    @Type(() => FindPoliciesByName200ApplicationJSONMaintenance)
+    maintenance?: FindPoliciesByName200ApplicationJSONMaintenance;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "package_configuration" })
+    @Type(() => FindPoliciesByName200ApplicationJSONPackageConfiguration)
+    packageConfiguration?: FindPoliciesByName200ApplicationJSONPackageConfiguration;
+
+    @SpeakeasyMetadata({ elemType: FindPoliciesByName200ApplicationJSONPrinters })
+    @Expose({ name: "printers" })
+    @Type(() => FindPoliciesByName200ApplicationJSONPrinters)
+    printers?: FindPoliciesByName200ApplicationJSONPrinters[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "scope" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScope)
+    scope?: FindPoliciesByName200ApplicationJSONScope;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "scripts" })
+    @Type(() => FindPoliciesByName200ApplicationJSONScripts)
+    scripts?: FindPoliciesByName200ApplicationJSONScripts;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service" })
+    @Type(() => FindPoliciesByName200ApplicationJSONSelfService)
+    selfService?: FindPoliciesByName200ApplicationJSONSelfService;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_interaction" })
+    @Type(() => FindPoliciesByName200ApplicationJSONUserInteraction)
+    userInteraction?: FindPoliciesByName200ApplicationJSONUserInteraction;
 }
 
 export class FindPoliciesByNameResponse extends SpeakeasyBase {
@@ -31,5 +2247,5 @@ export class FindPoliciesByNameResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    policy?: shared.Policy;
+    findPoliciesByName200ApplicationJSONObject?: FindPoliciesByName200ApplicationJSON;
 }

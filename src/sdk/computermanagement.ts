@@ -5,7 +5,6 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
-import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -67,9 +66,9 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
+                    res.findComputerManagementById200ApplicationJSONObject = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.ComputerManagement
+                        operations.FindComputerManagementById200ApplicationJSON
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -142,10 +141,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementByIdPatchFilter200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementByIdPatchFilter200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -220,10 +220,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementByIdSubset200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementByIdSubset200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -295,10 +296,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementByIdUsername200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementByIdUsername200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -373,10 +375,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementByIdUsernameSubset200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementByIdUsernameSubset200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -448,10 +451,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementByMacAddress200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementByMacAddress200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -523,10 +527,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementByMacAddressPatchFilter200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementByMacAddressPatchFilter200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -601,10 +606,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementByMacAddressSubset200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementByMacAddressSubset200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -676,10 +682,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementByMacAddressUsername200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementByMacAddressUsername200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -754,10 +761,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementByMacAddressUsernameSubset200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementByMacAddressUsernameSubset200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -825,9 +833,9 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
+                    res.findComputerManagementByName200ApplicationJSONObject = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.ComputerManagement
+                        operations.FindComputerManagementByName200ApplicationJSON
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -900,10 +908,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementByNamePatchFilter200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementByNamePatchFilter200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -978,10 +987,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementByNameSubset200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementByNameSubset200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1053,10 +1063,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementByNameUsername200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementByNameUsername200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1131,10 +1142,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementByNameUsernameSubset200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementByNameUsernameSubset200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1206,10 +1218,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementBySerialNumber200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementBySerialNumber200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1281,10 +1294,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementBySerialNumberPatchFilter200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementBySerialNumberPatchFilter200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1359,10 +1373,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementBySerialNumberSubset200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementBySerialNumberSubset200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1434,10 +1449,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementBySerialNumberUsername200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementBySerialNumberUsername200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1512,10 +1528,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementBySerialNumberUsernameSubset200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1583,9 +1600,9 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
+                    res.findComputerManagementByUDID200ApplicationJSONObject = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.ComputerManagement
+                        operations.FindComputerManagementByUdid200ApplicationJSON
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -1661,10 +1678,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementByUDIDSubset200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementByUDIDSubset200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1736,10 +1754,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementByUdidPatchFilter200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementByUdidPatchFilter200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1811,10 +1830,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementByUdidUsername200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementByUdidUsername200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1889,10 +1909,11 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerManagement = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.ComputerManagement
-                    );
+                    res.findComputerManagementByUdidUsernameSubset200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindComputerManagementByUdidUsernameSubset200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

@@ -5,7 +5,6 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
-import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -224,11 +223,11 @@ export class Categories {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.categories = [];
+                    res.findCategories200ApplicationJSONObjects = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.categories = utils.objectToClass(
+                    res.findCategories200ApplicationJSONObjects = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.Categories,
+                        operations.FindCategories200ApplicationJSON,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -298,7 +297,10 @@ export class Categories {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.category = utils.objectToClass(JSON.parse(decodedRes), shared.Category);
+                    res.category = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        operations.FindCategoriesByIdCategory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -366,7 +368,10 @@ export class Categories {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.category = utils.objectToClass(JSON.parse(decodedRes), shared.Category);
+                    res.category = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        operations.FindCategoriesByNameCategory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

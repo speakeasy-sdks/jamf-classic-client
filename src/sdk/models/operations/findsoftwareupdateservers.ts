@@ -3,8 +3,45 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindSoftwareUpdateServers200ApplicationXMLSoftwareUpdateServer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindSoftwareUpdateServers200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    size?: number;
+
+    @SpeakeasyMetadata()
+    softwareUpdateServer?: FindSoftwareUpdateServers200ApplicationXMLSoftwareUpdateServer;
+}
+
+export class FindSoftwareUpdateServers200ApplicationJSONSoftwareUpdateServer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindSoftwareUpdateServers200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "software_update_server" })
+    @Type(() => FindSoftwareUpdateServers200ApplicationJSONSoftwareUpdateServer)
+    softwareUpdateServer?: FindSoftwareUpdateServers200ApplicationJSONSoftwareUpdateServer;
+}
 
 export class FindSoftwareUpdateServersResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +59,6 @@ export class FindSoftwareUpdateServersResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.SoftwareUpdateServers })
-    softwareUpdateServers?: shared.SoftwareUpdateServers[];
+    @SpeakeasyMetadata({ elemType: FindSoftwareUpdateServers200ApplicationJSON })
+    findSoftwareUpdateServers200ApplicationJSONObjects?: FindSoftwareUpdateServers200ApplicationJSON[];
 }

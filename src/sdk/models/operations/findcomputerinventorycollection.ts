@@ -3,8 +3,246 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export enum FindComputerInventoryCollection200ApplicationXMLApplicationsApplicationPlatform {
+    Mac = "Mac",
+    Windows = "Windows",
+}
+
+export class FindComputerInventoryCollection200ApplicationXMLApplicationsApplication extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    platform?: FindComputerInventoryCollection200ApplicationXMLApplicationsApplicationPlatform;
+}
+
+export class FindComputerInventoryCollection200ApplicationXMLApplications extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    application?: FindComputerInventoryCollection200ApplicationXMLApplicationsApplication;
+}
+
+export enum FindComputerInventoryCollection200ApplicationXMLFontsFontPlatform {
+    Mac = "Mac",
+    Windows = "Windows",
+}
+
+export class FindComputerInventoryCollection200ApplicationXMLFontsFont extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    platform?: FindComputerInventoryCollection200ApplicationXMLFontsFontPlatform;
+}
+
+export class FindComputerInventoryCollection200ApplicationXMLFonts extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    font?: FindComputerInventoryCollection200ApplicationXMLFontsFont;
+}
+
+export enum FindComputerInventoryCollection200ApplicationXMLPluginsPluginPlatform {
+    Mac = "Mac",
+    Windows = "Windows",
+}
+
+export class FindComputerInventoryCollection200ApplicationXMLPluginsPlugin extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    platform?: FindComputerInventoryCollection200ApplicationXMLPluginsPluginPlatform;
+}
+
+export class FindComputerInventoryCollection200ApplicationXMLPlugins extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    plugin?: FindComputerInventoryCollection200ApplicationXMLPluginsPlugin;
+}
+
+/**
+ * OK
+ */
+export class FindComputerInventoryCollection200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    activeServices?: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindComputerInventoryCollection200ApplicationXMLApplications })
+    applications?: FindComputerInventoryCollection200ApplicationXMLApplications[];
+
+    @SpeakeasyMetadata()
+    availableSoftwareUpdates?: boolean;
+
+    @SpeakeasyMetadata()
+    computerLocationInformation?: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindComputerInventoryCollection200ApplicationXMLFonts })
+    fonts?: FindComputerInventoryCollection200ApplicationXMLFonts[];
+
+    @SpeakeasyMetadata()
+    hiddenAccounts?: boolean;
+
+    @SpeakeasyMetadata()
+    homeDirectorySizes?: boolean;
+
+    @SpeakeasyMetadata()
+    inclueApplications?: boolean;
+
+    @SpeakeasyMetadata()
+    inclueFonts?: boolean;
+
+    @SpeakeasyMetadata()
+    incluePlugins?: boolean;
+
+    @SpeakeasyMetadata()
+    localUserAccounts?: boolean;
+
+    @SpeakeasyMetadata()
+    mobileDeviceAppPurchasingInfo?: boolean;
+
+    @SpeakeasyMetadata()
+    packageReceipts?: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindComputerInventoryCollection200ApplicationXMLPlugins })
+    plugins?: FindComputerInventoryCollection200ApplicationXMLPlugins[];
+
+    @SpeakeasyMetadata()
+    printers?: boolean;
+}
+
+export enum FindComputerInventoryCollection200ApplicationJSONApplicationsApplicationPlatform {
+    Mac = "Mac",
+    Windows = "Windows",
+}
+
+export class FindComputerInventoryCollection200ApplicationJSONApplicationsApplication extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "path" })
+    path?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "platform" })
+    platform?: FindComputerInventoryCollection200ApplicationJSONApplicationsApplicationPlatform;
+}
+
+export class FindComputerInventoryCollection200ApplicationJSONApplications extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "application" })
+    @Type(() => FindComputerInventoryCollection200ApplicationJSONApplicationsApplication)
+    application?: FindComputerInventoryCollection200ApplicationJSONApplicationsApplication;
+}
+
+export enum FindComputerInventoryCollection200ApplicationJSONFontsFontPlatform {
+    Mac = "Mac",
+    Windows = "Windows",
+}
+
+export class FindComputerInventoryCollection200ApplicationJSONFontsFont extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "path" })
+    path?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "platform" })
+    platform?: FindComputerInventoryCollection200ApplicationJSONFontsFontPlatform;
+}
+
+export class FindComputerInventoryCollection200ApplicationJSONFonts extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "font" })
+    @Type(() => FindComputerInventoryCollection200ApplicationJSONFontsFont)
+    font?: FindComputerInventoryCollection200ApplicationJSONFontsFont;
+}
+
+export enum FindComputerInventoryCollection200ApplicationJSONPluginsPluginPlatform {
+    Mac = "Mac",
+    Windows = "Windows",
+}
+
+export class FindComputerInventoryCollection200ApplicationJSONPluginsPlugin extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "path" })
+    path?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "platform" })
+    platform?: FindComputerInventoryCollection200ApplicationJSONPluginsPluginPlatform;
+}
+
+export class FindComputerInventoryCollection200ApplicationJSONPlugins extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "plugin" })
+    @Type(() => FindComputerInventoryCollection200ApplicationJSONPluginsPlugin)
+    plugin?: FindComputerInventoryCollection200ApplicationJSONPluginsPlugin;
+}
+
+/**
+ * OK
+ */
+export class FindComputerInventoryCollection200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "active_services" })
+    activeServices?: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindComputerInventoryCollection200ApplicationJSONApplications })
+    @Expose({ name: "applications" })
+    @Type(() => FindComputerInventoryCollection200ApplicationJSONApplications)
+    applications?: FindComputerInventoryCollection200ApplicationJSONApplications[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "available_software_updates" })
+    availableSoftwareUpdates?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer_location_information" })
+    computerLocationInformation?: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindComputerInventoryCollection200ApplicationJSONFonts })
+    @Expose({ name: "fonts" })
+    @Type(() => FindComputerInventoryCollection200ApplicationJSONFonts)
+    fonts?: FindComputerInventoryCollection200ApplicationJSONFonts[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "hidden_accounts" })
+    hiddenAccounts?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "home_directory_sizes" })
+    homeDirectorySizes?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "inclue_applications" })
+    inclueApplications?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "inclue_fonts" })
+    inclueFonts?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "inclue_plugins" })
+    incluePlugins?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "local_user_accounts" })
+    localUserAccounts?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mobile_device_app_purchasing_info" })
+    mobileDeviceAppPurchasingInfo?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "package_receipts" })
+    packageReceipts?: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindComputerInventoryCollection200ApplicationJSONPlugins })
+    @Expose({ name: "plugins" })
+    @Type(() => FindComputerInventoryCollection200ApplicationJSONPlugins)
+    plugins?: FindComputerInventoryCollection200ApplicationJSONPlugins[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "printers" })
+    printers?: boolean;
+}
 
 export class FindComputerInventoryCollectionResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -23,5 +261,5 @@ export class FindComputerInventoryCollectionResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    computerInventoryCollection?: shared.ComputerInventoryCollection;
+    findComputerInventoryCollection200ApplicationJSONObject?: FindComputerInventoryCollection200ApplicationJSON;
 }

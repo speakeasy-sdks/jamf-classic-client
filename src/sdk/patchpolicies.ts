@@ -5,7 +5,6 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
-import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -180,11 +179,11 @@ export class Patchpolicies {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.patchPolicies = [];
+                    res.findPatchPolicies200ApplicationJSONObjects = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.patchPolicies = utils.objectToClass(
+                    res.findPatchPolicies200ApplicationJSONObjects = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.PatchPolicies,
+                        operations.FindPatchPolicies200ApplicationJSON,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -258,9 +257,9 @@ export class Patchpolicies {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.patchPolicy = utils.objectToClass(
+                    res.findPatchPoliciesByIdSubset200ApplicationJSONObject = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.PatchPolicy
+                        operations.FindPatchPoliciesByIdSubset200ApplicationJSON
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -338,10 +337,11 @@ export class Patchpolicies {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.patchPolicy = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.PatchPolicy
-                    );
+                    res.findPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -409,9 +409,9 @@ export class Patchpolicies {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.patchPolicy = utils.objectToClass(
+                    res.findPatchPolicyById200ApplicationJSONObject = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.PatchPolicy
+                        operations.FindPatchPolicyById200ApplicationJSON
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;

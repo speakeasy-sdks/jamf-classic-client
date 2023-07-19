@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindComputersBySerialNumberRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,2140 @@ export class FindComputersBySerialNumberRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=serialnumber" })
     serialnumber: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLCertificatesCertificate extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    commonName?: string;
+
+    @SpeakeasyMetadata()
+    expiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    expiresUtc?: string;
+
+    @SpeakeasyMetadata()
+    identify?: boolean;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLCertificates extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    certificate?: FindComputersBySerialNumber200ApplicationXMLCertificatesCertificate;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLConfigurationProfilesConfigurationProfile extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    isRemovable?: boolean;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    uuid?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLConfigurationProfiles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    configurationProfile?: FindComputersBySerialNumber200ApplicationXMLConfigurationProfilesConfigurationProfile;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLExtensionAttributesExtensionAttribute extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    type?: string;
+
+    @SpeakeasyMetadata()
+    value?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLExtensionAttributes extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    extensionAttribute?: FindComputersBySerialNumber200ApplicationXMLExtensionAttributesExtensionAttribute;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLGeneralManagementStatus extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    enrolledViaDep?: boolean;
+
+    @SpeakeasyMetadata()
+    userApprovedEnrollment?: boolean;
+
+    @SpeakeasyMetadata()
+    userApprovedMdm?: boolean;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLGeneralMdmCapableUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    mdmCapableUser?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLGeneralRemoteManagement extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    managed?: boolean;
+
+    @SpeakeasyMetadata()
+    managementUsername?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    altMacAddress?: string;
+
+    @SpeakeasyMetadata()
+    altNetworkAdapterType?: string;
+
+    @SpeakeasyMetadata()
+    assetTag?: string;
+
+    @SpeakeasyMetadata()
+    barcode1?: string;
+
+    @SpeakeasyMetadata()
+    barcode2?: string;
+
+    @SpeakeasyMetadata()
+    distributionPoint?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    initialEntryDate?: string;
+
+    @SpeakeasyMetadata()
+    initialEntryDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    initialEntryDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    ipAddress?: string;
+
+    @SpeakeasyMetadata()
+    itunesStoreAccountIsActive?: boolean;
+
+    @SpeakeasyMetadata()
+    jamfVersion?: string;
+
+    @SpeakeasyMetadata()
+    lastCloudBackupDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    lastCloudBackupDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    lastContactTime?: string;
+
+    @SpeakeasyMetadata()
+    lastContactTimeEpoch?: number;
+
+    @SpeakeasyMetadata()
+    lastContactTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    lastEnrolledDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    lastEnrolledDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    lastReportedIp?: string;
+
+    @SpeakeasyMetadata()
+    macAddress?: string;
+
+    @SpeakeasyMetadata()
+    managementStatus?: FindComputersBySerialNumber200ApplicationXMLGeneralManagementStatus;
+
+    @SpeakeasyMetadata()
+    mdmCapable?: boolean;
+
+    @SpeakeasyMetadata()
+    mdmCapableUsers?: FindComputersBySerialNumber200ApplicationXMLGeneralMdmCapableUsers;
+
+    /**
+     * Name of computer
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    networkAdapterType?: string;
+
+    @SpeakeasyMetadata()
+    platform?: string;
+
+    @SpeakeasyMetadata()
+    remoteManagement?: FindComputersBySerialNumber200ApplicationXMLGeneralRemoteManagement;
+
+    @SpeakeasyMetadata()
+    reportDate?: string;
+
+    @SpeakeasyMetadata()
+    reportDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    reportDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    site?: FindComputersBySerialNumber200ApplicationXMLGeneralSite;
+
+    @SpeakeasyMetadata()
+    sus?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLGroupsAccountsComputerGroupMemberships extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    group?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLGroupsAccountsLocalAccountsUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    administrator?: boolean;
+
+    @SpeakeasyMetadata()
+    filevaultEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    home?: string;
+
+    @SpeakeasyMetadata()
+    homeSize?: string;
+
+    @SpeakeasyMetadata()
+    homeSizeMb?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    realname?: string;
+
+    @SpeakeasyMetadata()
+    uid?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLGroupsAccountsLocalAccounts extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindComputersBySerialNumber200ApplicationXMLGroupsAccountsLocalAccountsUser;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLGroupsAccounts extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputersBySerialNumber200ApplicationXMLGroupsAccountsComputerGroupMemberships,
+    })
+    computerGroupMemberships?: FindComputersBySerialNumber200ApplicationXMLGroupsAccountsComputerGroupMemberships[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationXMLGroupsAccountsLocalAccounts,
+    })
+    localAccounts?: FindComputersBySerialNumber200ApplicationXMLGroupsAccountsLocalAccounts[];
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLHardwareFilevault2Users extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLHardwareMappedPrintersPrinter extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    location?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    type?: string;
+
+    @SpeakeasyMetadata()
+    uri?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLHardwareMappedPrinters extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    printer?: FindComputersBySerialNumber200ApplicationXMLHardwareMappedPrintersPrinter;
+}
+
+export enum FindComputersBySerialNumber200ApplicationXMLHardwareSipStatus {
+    Enabled = "Enabled",
+    Disabled = "Disabled",
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLHardwareStorageDevicePartition extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    bootDriveAvailableMb?: number;
+
+    @SpeakeasyMetadata()
+    filevault2Percent?: number;
+
+    @SpeakeasyMetadata()
+    filevault2Status?: string;
+
+    @SpeakeasyMetadata()
+    filevaultPercent?: number;
+
+    @SpeakeasyMetadata()
+    filevaultStatus?: string;
+
+    @SpeakeasyMetadata()
+    lvUUID?: string;
+
+    @SpeakeasyMetadata()
+    lvgUUID?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    partitionCapacityMb?: number;
+
+    @SpeakeasyMetadata()
+    percentageFull?: number;
+
+    @SpeakeasyMetadata()
+    pvUUID?: string;
+
+    @SpeakeasyMetadata()
+    size?: number;
+
+    @SpeakeasyMetadata()
+    type?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLHardwareStorageDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    connectionType?: string;
+
+    @SpeakeasyMetadata()
+    disk?: string;
+
+    @SpeakeasyMetadata()
+    driveCapacityMb?: number;
+
+    @SpeakeasyMetadata()
+    model?: string;
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationXMLHardwareStorageDevicePartition,
+    })
+    partition?: FindComputersBySerialNumber200ApplicationXMLHardwareStorageDevicePartition[];
+
+    @SpeakeasyMetadata()
+    revision?: string;
+
+    @SpeakeasyMetadata()
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    size?: number;
+
+    @SpeakeasyMetadata()
+    smartStatus?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLHardwareStorage extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    device?: FindComputersBySerialNumber200ApplicationXMLHardwareStorageDevice;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLHardware extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    activeDirectoryStatus?: string;
+
+    @SpeakeasyMetadata()
+    availableRamSlots?: number;
+
+    @SpeakeasyMetadata()
+    batteryCapacity?: number;
+
+    @SpeakeasyMetadata()
+    bleCapable?: boolean;
+
+    @SpeakeasyMetadata()
+    bootRom?: string;
+
+    @SpeakeasyMetadata()
+    busSpeed?: number;
+
+    @SpeakeasyMetadata()
+    busSpeedMhz?: number;
+
+    @SpeakeasyMetadata()
+    cacheSize?: number;
+
+    @SpeakeasyMetadata()
+    cacheSizeKb?: number;
+
+    @SpeakeasyMetadata()
+    diskEncryptionConfiguration?: string;
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationXMLHardwareFilevault2Users,
+    })
+    filevault2Users?: FindComputersBySerialNumber200ApplicationXMLHardwareFilevault2Users[];
+
+    @SpeakeasyMetadata()
+    gatekeeperStatus?: string;
+
+    @SpeakeasyMetadata()
+    institutionalRecoveryKey?: string;
+
+    @SpeakeasyMetadata()
+    make?: string;
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationXMLHardwareMappedPrinters,
+    })
+    mappedPrinters?: FindComputersBySerialNumber200ApplicationXMLHardwareMappedPrinters[];
+
+    @SpeakeasyMetadata()
+    masterPasswordSet?: boolean;
+
+    @SpeakeasyMetadata()
+    model?: string;
+
+    @SpeakeasyMetadata()
+    modelIdentifier?: string;
+
+    @SpeakeasyMetadata()
+    nicSpeed?: string;
+
+    @SpeakeasyMetadata()
+    numberCores?: number;
+
+    @SpeakeasyMetadata()
+    numberProcessors?: number;
+
+    @SpeakeasyMetadata()
+    opticalDrive?: string;
+
+    @SpeakeasyMetadata()
+    osBuild?: string;
+
+    @SpeakeasyMetadata()
+    osName?: string;
+
+    @SpeakeasyMetadata()
+    osVersion?: string;
+
+    @SpeakeasyMetadata()
+    processorArchitechture?: string;
+
+    @SpeakeasyMetadata()
+    processorSpeed?: string;
+
+    @SpeakeasyMetadata()
+    processorSpeedMhz?: string;
+
+    @SpeakeasyMetadata()
+    processorType?: string;
+
+    @SpeakeasyMetadata()
+    servicePack?: string;
+
+    @SpeakeasyMetadata()
+    sipStatus?: FindComputersBySerialNumber200ApplicationXMLHardwareSipStatus;
+
+    @SpeakeasyMetadata()
+    smcVersion?: string;
+
+    @SpeakeasyMetadata({ elemType: FindComputersBySerialNumber200ApplicationXMLHardwareStorage })
+    storage?: FindComputersBySerialNumber200ApplicationXMLHardwareStorage[];
+
+    @SpeakeasyMetadata()
+    totalRam?: number;
+
+    @SpeakeasyMetadata()
+    totalRamMb?: number;
+
+    @SpeakeasyMetadata()
+    xprotectVersion?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: string;
+
+    @SpeakeasyMetadata()
+    department?: string;
+
+    @SpeakeasyMetadata()
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    phone?: string;
+
+    @SpeakeasyMetadata()
+    phoneNumber?: string;
+
+    @SpeakeasyMetadata()
+    position?: string;
+
+    @SpeakeasyMetadata()
+    realName?: string;
+
+    @SpeakeasyMetadata()
+    realname?: string;
+
+    @SpeakeasyMetadata()
+    room?: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLPeripheralsPeripheralsAttachmentsAttachment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    filename?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    uri?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLPeripheralsPeripheralsAttachments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    attachment?: FindComputersBySerialNumber200ApplicationXMLPeripheralsPeripheralsAttachmentsAttachment;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLPeripheralsPeripheralsPeripheralFieldsField extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    value?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLPeripheralsPeripheralsPeripheralFields extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    field?: FindComputersBySerialNumber200ApplicationXMLPeripheralsPeripheralsPeripheralFieldsField;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLPeripheralsPeripheralsPeripheral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    barCode1?: string;
+
+    @SpeakeasyMetadata()
+    barCode2?: string;
+
+    @SpeakeasyMetadata()
+    fields?: FindComputersBySerialNumber200ApplicationXMLPeripheralsPeripheralsPeripheralFields;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the peripheral type
+     */
+    @SpeakeasyMetadata()
+    type?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLPeripheralsPeripheralsPurchasing extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    applecareId?: string;
+
+    @SpeakeasyMetadata()
+    isLeased?: boolean;
+
+    @SpeakeasyMetadata()
+    isPurchased?: boolean;
+
+    @SpeakeasyMetadata()
+    leaseExpires?: string;
+
+    @SpeakeasyMetadata()
+    leaseExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    leaseExpiresUtc?: string;
+
+    @SpeakeasyMetadata()
+    lifeExpectancy?: number;
+
+    @SpeakeasyMetadata()
+    poDate?: string;
+
+    @SpeakeasyMetadata()
+    poDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    poDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    poNumber?: string;
+
+    @SpeakeasyMetadata()
+    purchasePrice?: string;
+
+    @SpeakeasyMetadata()
+    purchasingAccount?: string;
+
+    @SpeakeasyMetadata()
+    purchasingContact?: string;
+
+    @SpeakeasyMetadata()
+    vendor?: string;
+
+    @SpeakeasyMetadata()
+    warrantyExpires?: string;
+
+    @SpeakeasyMetadata()
+    warrantyExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    warrantyExpiresUtc?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLPeripheralsPeripherals extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationXMLPeripheralsPeripheralsAttachments,
+    })
+    attachments?: FindComputersBySerialNumber200ApplicationXMLPeripheralsPeripheralsAttachments[];
+
+    @SpeakeasyMetadata()
+    peripheral?: FindComputersBySerialNumber200ApplicationXMLPeripheralsPeripheralsPeripheral;
+
+    @SpeakeasyMetadata()
+    purchasing?: FindComputersBySerialNumber200ApplicationXMLPeripheralsPeripheralsPurchasing;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLPeripherals extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationXMLPeripheralsPeripherals,
+    })
+    peripherals?: FindComputersBySerialNumber200ApplicationXMLPeripheralsPeripherals[];
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLPurchasing extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    applecareId?: string;
+
+    @SpeakeasyMetadata()
+    isLeased?: boolean;
+
+    @SpeakeasyMetadata()
+    isPurchased?: boolean;
+
+    @SpeakeasyMetadata()
+    leaseExpires?: string;
+
+    @SpeakeasyMetadata()
+    leaseExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    leaseExpiresUtc?: string;
+
+    @SpeakeasyMetadata()
+    lifeExpectancy?: number;
+
+    @SpeakeasyMetadata()
+    poDate?: string;
+
+    @SpeakeasyMetadata()
+    poDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    poDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    poNumber?: string;
+
+    @SpeakeasyMetadata()
+    purchasePrice?: string;
+
+    @SpeakeasyMetadata()
+    purchasingAccount?: string;
+
+    @SpeakeasyMetadata()
+    purchasingContact?: string;
+
+    @SpeakeasyMetadata()
+    vendor?: string;
+
+    @SpeakeasyMetadata()
+    warrantyExpires?: string;
+
+    @SpeakeasyMetadata()
+    warrantyExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    warrantyExpiresUtc?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLSecurity extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    activationLock?: boolean;
+
+    @SpeakeasyMetadata()
+    externalBootLevel?: string;
+
+    @SpeakeasyMetadata()
+    firewallEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    recoveryLockEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    secureBootLevel?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLSoftwareApplicationsApplication extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLSoftwareApplications extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    application?: FindComputersBySerialNumber200ApplicationXMLSoftwareApplicationsApplication;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLSoftwareAvailableSoftwareUpdates extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLSoftwareAvailableUpdatesUpdate extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    packageName?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLSoftwareAvailableUpdates extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    update?: FindComputersBySerialNumber200ApplicationXMLSoftwareAvailableUpdatesUpdate;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLSoftwareCachedByCasper extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    package?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLSoftwareFontsFont extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLSoftwareFonts extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    font?: FindComputersBySerialNumber200ApplicationXMLSoftwareFontsFont;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLSoftwareInstalledByCasper extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    package?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLSoftwareInstalledByInstallerSwu extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    package?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLSoftwareLicensedSoftware extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLSoftwarePluginsPlugin extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    path?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLSoftwarePlugins extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    plugin?: FindComputersBySerialNumber200ApplicationXMLSoftwarePluginsPlugin;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLSoftwareRunningServices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationXMLSoftware extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationXMLSoftwareApplications,
+    })
+    applications?: FindComputersBySerialNumber200ApplicationXMLSoftwareApplications[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationXMLSoftwareAvailableSoftwareUpdates,
+    })
+    availableSoftwareUpdates?: FindComputersBySerialNumber200ApplicationXMLSoftwareAvailableSoftwareUpdates[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationXMLSoftwareAvailableUpdates,
+    })
+    availableUpdates?: FindComputersBySerialNumber200ApplicationXMLSoftwareAvailableUpdates[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationXMLSoftwareCachedByCasper,
+    })
+    cachedByCasper?: FindComputersBySerialNumber200ApplicationXMLSoftwareCachedByCasper[];
+
+    @SpeakeasyMetadata({ elemType: FindComputersBySerialNumber200ApplicationXMLSoftwareFonts })
+    fonts?: FindComputersBySerialNumber200ApplicationXMLSoftwareFonts[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationXMLSoftwareInstalledByCasper,
+    })
+    installedByCasper?: FindComputersBySerialNumber200ApplicationXMLSoftwareInstalledByCasper[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationXMLSoftwareInstalledByInstallerSwu,
+    })
+    installedByInstallerSwu?: FindComputersBySerialNumber200ApplicationXMLSoftwareInstalledByInstallerSwu[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationXMLSoftwareLicensedSoftware,
+    })
+    licensedSoftware?: FindComputersBySerialNumber200ApplicationXMLSoftwareLicensedSoftware[];
+
+    @SpeakeasyMetadata({ elemType: FindComputersBySerialNumber200ApplicationXMLSoftwarePlugins })
+    plugins?: FindComputersBySerialNumber200ApplicationXMLSoftwarePlugins[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationXMLSoftwareRunningServices,
+    })
+    runningServices?: FindComputersBySerialNumber200ApplicationXMLSoftwareRunningServices[];
+
+    @SpeakeasyMetadata()
+    unixExecutables?: string;
+}
+
+/**
+ * OK
+ */
+export class FindComputersBySerialNumber200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindComputersBySerialNumber200ApplicationXMLCertificates })
+    certificates?: FindComputersBySerialNumber200ApplicationXMLCertificates[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationXMLConfigurationProfiles,
+    })
+    configurationProfiles?: FindComputersBySerialNumber200ApplicationXMLConfigurationProfiles[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationXMLExtensionAttributes,
+    })
+    extensionAttributes?: FindComputersBySerialNumber200ApplicationXMLExtensionAttributes[];
+
+    @SpeakeasyMetadata()
+    general?: FindComputersBySerialNumber200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata()
+    groupsAccounts?: FindComputersBySerialNumber200ApplicationXMLGroupsAccounts;
+
+    @SpeakeasyMetadata()
+    hardware?: FindComputersBySerialNumber200ApplicationXMLHardware;
+
+    @SpeakeasyMetadata()
+    location?: FindComputersBySerialNumber200ApplicationXMLLocation;
+
+    @SpeakeasyMetadata()
+    peripherals?: FindComputersBySerialNumber200ApplicationXMLPeripherals;
+
+    @SpeakeasyMetadata()
+    purchasing?: FindComputersBySerialNumber200ApplicationXMLPurchasing;
+
+    @SpeakeasyMetadata()
+    security?: FindComputersBySerialNumber200ApplicationXMLSecurity;
+
+    @SpeakeasyMetadata()
+    software?: FindComputersBySerialNumber200ApplicationXMLSoftware;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONCertificatesCertificate extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "common_name" })
+    commonName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "expires_epoch" })
+    expiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "expires_utc" })
+    expiresUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "identify" })
+    identify?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONCertificates extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "certificate" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONCertificatesCertificate)
+    certificate?: FindComputersBySerialNumber200ApplicationJSONCertificatesCertificate;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONConfigurationProfilesConfigurationProfile extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_removable" })
+    isRemovable?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uuid" })
+    uuid?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONConfigurationProfiles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "configuration_profile" })
+    @Type(
+        () => FindComputersBySerialNumber200ApplicationJSONConfigurationProfilesConfigurationProfile
+    )
+    configurationProfile?: FindComputersBySerialNumber200ApplicationJSONConfigurationProfilesConfigurationProfile;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONExtensionAttributesExtensionAttribute extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "value" })
+    value?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONExtensionAttributes extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "extension_attribute" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONExtensionAttributesExtensionAttribute)
+    extensionAttribute?: FindComputersBySerialNumber200ApplicationJSONExtensionAttributesExtensionAttribute;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONGeneralManagementStatus extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "enrolled_via_dep" })
+    enrolledViaDep?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_approved_enrollment" })
+    userApprovedEnrollment?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_approved_mdm" })
+    userApprovedMdm?: boolean;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONGeneralMdmCapableUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mdm_capable_user" })
+    mdmCapableUser?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONGeneralRemoteManagement extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "managed" })
+    managed?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_username" })
+    managementUsername?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "alt_mac_address" })
+    altMacAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "alt_network_adapter_type" })
+    altNetworkAdapterType?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "asset_tag" })
+    assetTag?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "barcode_1" })
+    barcode1?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "barcode_2" })
+    barcode2?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "distribution_point" })
+    distributionPoint?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "initial_entry_date" })
+    initialEntryDate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "initial_entry_date_epoch" })
+    initialEntryDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "initial_entry_date_utc" })
+    initialEntryDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "ip_address" })
+    ipAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "itunes_store_account_is_active" })
+    itunesStoreAccountIsActive?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "jamf_version" })
+    jamfVersion?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_cloud_backup_date_epoch" })
+    lastCloudBackupDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_cloud_backup_date_utc" })
+    lastCloudBackupDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_contact_time" })
+    lastContactTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_contact_time_epoch" })
+    lastContactTimeEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_contact_time_utc" })
+    lastContactTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_enrolled_date_epoch" })
+    lastEnrolledDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_enrolled_date_utc" })
+    lastEnrolledDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_reported_ip" })
+    lastReportedIp?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mac_address" })
+    macAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONGeneralManagementStatus)
+    managementStatus?: FindComputersBySerialNumber200ApplicationJSONGeneralManagementStatus;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mdm_capable" })
+    mdmCapable?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mdm_capable_users" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONGeneralMdmCapableUsers)
+    mdmCapableUsers?: FindComputersBySerialNumber200ApplicationJSONGeneralMdmCapableUsers;
+
+    /**
+     * Name of computer
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "network_adapter_type" })
+    networkAdapterType?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "platform" })
+    platform?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "remote_management" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONGeneralRemoteManagement)
+    remoteManagement?: FindComputersBySerialNumber200ApplicationJSONGeneralRemoteManagement;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "report_date" })
+    reportDate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "report_date_epoch" })
+    reportDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "report_date_utc" })
+    reportDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "serial_number" })
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONGeneralSite)
+    site?: FindComputersBySerialNumber200ApplicationJSONGeneralSite;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "sus" })
+    sus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONGroupsAccountsComputerGroupMemberships extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "group" })
+    group?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONGroupsAccountsLocalAccountsUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "administrator" })
+    administrator?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "filevault_enabled" })
+    filevaultEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "home" })
+    home?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "home_size" })
+    homeSize?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "home_size_mb" })
+    homeSizeMb?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "realname" })
+    realname?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uid" })
+    uid?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONGroupsAccountsLocalAccounts extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONGroupsAccountsLocalAccountsUser)
+    user?: FindComputersBySerialNumber200ApplicationJSONGroupsAccountsLocalAccountsUser;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONGroupsAccounts extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputersBySerialNumber200ApplicationJSONGroupsAccountsComputerGroupMemberships,
+    })
+    @Expose({ name: "computer_group_memberships" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONGroupsAccountsComputerGroupMemberships)
+    computerGroupMemberships?: FindComputersBySerialNumber200ApplicationJSONGroupsAccountsComputerGroupMemberships[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationJSONGroupsAccountsLocalAccounts,
+    })
+    @Expose({ name: "local_accounts" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONGroupsAccountsLocalAccounts)
+    localAccounts?: FindComputersBySerialNumber200ApplicationJSONGroupsAccountsLocalAccounts[];
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONHardwareFilevault2Users extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    user?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONHardwareMappedPrintersPrinter extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "location" })
+    location?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uri" })
+    uri?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONHardwareMappedPrinters extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "printer" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONHardwareMappedPrintersPrinter)
+    printer?: FindComputersBySerialNumber200ApplicationJSONHardwareMappedPrintersPrinter;
+}
+
+export enum FindComputersBySerialNumber200ApplicationJSONHardwareSipStatus {
+    Enabled = "Enabled",
+    Disabled = "Disabled",
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONHardwareStorageDevicePartition extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "boot_drive_available_mb" })
+    bootDriveAvailableMb?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "filevault2_percent" })
+    filevault2Percent?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "filevault2_status" })
+    filevault2Status?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "filevault_percent" })
+    filevaultPercent?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "filevault_status" })
+    filevaultStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lvUUID" })
+    lvUUID?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lvgUUID" })
+    lvgUUID?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "partition_capacity_mb" })
+    partitionCapacityMb?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "percentage_full" })
+    percentageFull?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "pvUUID" })
+    pvUUID?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONHardwareStorageDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "connection_type" })
+    connectionType?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "disk" })
+    disk?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "drive_capacity_mb" })
+    driveCapacityMb?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "model" })
+    model?: string;
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationJSONHardwareStorageDevicePartition,
+    })
+    @Expose({ name: "partition" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONHardwareStorageDevicePartition)
+    partition?: FindComputersBySerialNumber200ApplicationJSONHardwareStorageDevicePartition[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "revision" })
+    revision?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "serial_number" })
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "smart_status" })
+    smartStatus?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONHardwareStorage extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "device" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONHardwareStorageDevice)
+    device?: FindComputersBySerialNumber200ApplicationJSONHardwareStorageDevice;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONHardware extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "active_directory_status" })
+    activeDirectoryStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "available_ram_slots" })
+    availableRamSlots?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "battery_capacity" })
+    batteryCapacity?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "ble_capable" })
+    bleCapable?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "boot_rom" })
+    bootRom?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "bus_speed" })
+    busSpeed?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "bus_speed_mhz" })
+    busSpeedMhz?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "cache_size" })
+    cacheSize?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "cache_size_kb" })
+    cacheSizeKb?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "disk_encryption_configuration" })
+    diskEncryptionConfiguration?: string;
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationJSONHardwareFilevault2Users,
+    })
+    @Expose({ name: "filevault_2_users" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONHardwareFilevault2Users)
+    filevault2Users?: FindComputersBySerialNumber200ApplicationJSONHardwareFilevault2Users[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "gatekeeper_status" })
+    gatekeeperStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "institutional_recovery_key" })
+    institutionalRecoveryKey?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "make" })
+    make?: string;
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationJSONHardwareMappedPrinters,
+    })
+    @Expose({ name: "mapped_printers" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONHardwareMappedPrinters)
+    mappedPrinters?: FindComputersBySerialNumber200ApplicationJSONHardwareMappedPrinters[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "master_password_set" })
+    masterPasswordSet?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "model" })
+    model?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "model_identifier" })
+    modelIdentifier?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "nic_speed" })
+    nicSpeed?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "number_cores" })
+    numberCores?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "number_processors" })
+    numberProcessors?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "optical_drive" })
+    opticalDrive?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "os_build" })
+    osBuild?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "os_name" })
+    osName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "os_version" })
+    osVersion?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "processor_architechture" })
+    processorArchitechture?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "processor_speed" })
+    processorSpeed?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "processor_speed_mhz" })
+    processorSpeedMhz?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "processor_type" })
+    processorType?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "service_pack" })
+    servicePack?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "sip_status" })
+    sipStatus?: FindComputersBySerialNumber200ApplicationJSONHardwareSipStatus;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "smc_version" })
+    smcVersion?: string;
+
+    @SpeakeasyMetadata({ elemType: FindComputersBySerialNumber200ApplicationJSONHardwareStorage })
+    @Expose({ name: "storage" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONHardwareStorage)
+    storage?: FindComputersBySerialNumber200ApplicationJSONHardwareStorage[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "total_ram" })
+    totalRam?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "total_ram_mb" })
+    totalRamMb?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "xprotect_version" })
+    xprotectVersion?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    building?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    department?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "email_address" })
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone" })
+    phone?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone_number" })
+    phoneNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "position" })
+    position?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "real_name" })
+    realName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "realname" })
+    realname?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "room" })
+    room?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsAttachmentsAttachment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "filename" })
+    filename?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uri" })
+    uri?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsAttachments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "attachment" })
+    @Type(
+        () =>
+            FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsAttachmentsAttachment
+    )
+    attachment?: FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsAttachmentsAttachment;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsPeripheralFieldsField extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "value" })
+    value?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsPeripheralFields extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "field" })
+    @Type(
+        () =>
+            FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsPeripheralFieldsField
+    )
+    field?: FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsPeripheralFieldsField;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsPeripheral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "bar_code_1" })
+    barCode1?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "bar_code_2" })
+    barCode2?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "fields" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsPeripheralFields)
+    fields?: FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsPeripheralFields;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the peripheral type
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsPurchasing extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "applecare_id" })
+    applecareId?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_leased" })
+    isLeased?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_purchased" })
+    isPurchased?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires" })
+    leaseExpires?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires_epoch" })
+    leaseExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires_utc" })
+    leaseExpiresUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "life_expectancy" })
+    lifeExpectancy?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date" })
+    poDate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date_epoch" })
+    poDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date_utc" })
+    poDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_number" })
+    poNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchase_price" })
+    purchasePrice?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing_account" })
+    purchasingAccount?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing_contact" })
+    purchasingContact?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "vendor" })
+    vendor?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires" })
+    warrantyExpires?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires_epoch" })
+    warrantyExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires_utc" })
+    warrantyExpiresUtc?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripherals extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsAttachments,
+    })
+    @Expose({ name: "attachments" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsAttachments)
+    attachments?: FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsAttachments[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "peripheral" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsPeripheral)
+    peripheral?: FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsPeripheral;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsPurchasing)
+    purchasing?: FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripheralsPurchasing;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONPeripherals extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripherals,
+    })
+    @Expose({ name: "peripherals" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripherals)
+    peripherals?: FindComputersBySerialNumber200ApplicationJSONPeripheralsPeripherals[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONPurchasing extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "applecare_id" })
+    applecareId?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_leased" })
+    isLeased?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_purchased" })
+    isPurchased?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires" })
+    leaseExpires?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires_epoch" })
+    leaseExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lease_expires_utc" })
+    leaseExpiresUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "life_expectancy" })
+    lifeExpectancy?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date" })
+    poDate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date_epoch" })
+    poDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_date_utc" })
+    poDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "po_number" })
+    poNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchase_price" })
+    purchasePrice?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing_account" })
+    purchasingAccount?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing_contact" })
+    purchasingContact?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "vendor" })
+    vendor?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires" })
+    warrantyExpires?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires_epoch" })
+    warrantyExpiresEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "warranty_expires_utc" })
+    warrantyExpiresUtc?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONSecurity extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "activation_lock" })
+    activationLock?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "external_boot_level" })
+    externalBootLevel?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "firewall_enabled" })
+    firewallEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "recovery_lock_enabled" })
+    recoveryLockEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "secure_boot_level" })
+    secureBootLevel?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONSoftwareApplicationsApplication extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "path" })
+    path?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONSoftwareApplications extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "application" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONSoftwareApplicationsApplication)
+    application?: FindComputersBySerialNumber200ApplicationJSONSoftwareApplicationsApplication;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONSoftwareAvailableSoftwareUpdates extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONSoftwareAvailableUpdatesUpdate extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "package_name" })
+    packageName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONSoftwareAvailableUpdates extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "update" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONSoftwareAvailableUpdatesUpdate)
+    update?: FindComputersBySerialNumber200ApplicationJSONSoftwareAvailableUpdatesUpdate;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONSoftwareCachedByCasper extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "package" })
+    package?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONSoftwareFontsFont extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "path" })
+    path?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONSoftwareFonts extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "font" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONSoftwareFontsFont)
+    font?: FindComputersBySerialNumber200ApplicationJSONSoftwareFontsFont;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONSoftwareInstalledByCasper extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "package" })
+    package?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONSoftwareInstalledByInstallerSwu extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "package" })
+    package?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONSoftwareLicensedSoftware extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONSoftwarePluginsPlugin extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "path" })
+    path?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONSoftwarePlugins extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "plugin" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONSoftwarePluginsPlugin)
+    plugin?: FindComputersBySerialNumber200ApplicationJSONSoftwarePluginsPlugin;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONSoftwareRunningServices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputersBySerialNumber200ApplicationJSONSoftware extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationJSONSoftwareApplications,
+    })
+    @Expose({ name: "applications" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONSoftwareApplications)
+    applications?: FindComputersBySerialNumber200ApplicationJSONSoftwareApplications[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationJSONSoftwareAvailableSoftwareUpdates,
+    })
+    @Expose({ name: "available_software_updates" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONSoftwareAvailableSoftwareUpdates)
+    availableSoftwareUpdates?: FindComputersBySerialNumber200ApplicationJSONSoftwareAvailableSoftwareUpdates[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationJSONSoftwareAvailableUpdates,
+    })
+    @Expose({ name: "available_updates" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONSoftwareAvailableUpdates)
+    availableUpdates?: FindComputersBySerialNumber200ApplicationJSONSoftwareAvailableUpdates[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationJSONSoftwareCachedByCasper,
+    })
+    @Expose({ name: "cached_by_casper" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONSoftwareCachedByCasper)
+    cachedByCasper?: FindComputersBySerialNumber200ApplicationJSONSoftwareCachedByCasper[];
+
+    @SpeakeasyMetadata({ elemType: FindComputersBySerialNumber200ApplicationJSONSoftwareFonts })
+    @Expose({ name: "fonts" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONSoftwareFonts)
+    fonts?: FindComputersBySerialNumber200ApplicationJSONSoftwareFonts[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationJSONSoftwareInstalledByCasper,
+    })
+    @Expose({ name: "installed_by_casper" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONSoftwareInstalledByCasper)
+    installedByCasper?: FindComputersBySerialNumber200ApplicationJSONSoftwareInstalledByCasper[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationJSONSoftwareInstalledByInstallerSwu,
+    })
+    @Expose({ name: "installed_by_installer_swu" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONSoftwareInstalledByInstallerSwu)
+    installedByInstallerSwu?: FindComputersBySerialNumber200ApplicationJSONSoftwareInstalledByInstallerSwu[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationJSONSoftwareLicensedSoftware,
+    })
+    @Expose({ name: "licensed_software" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONSoftwareLicensedSoftware)
+    licensedSoftware?: FindComputersBySerialNumber200ApplicationJSONSoftwareLicensedSoftware[];
+
+    @SpeakeasyMetadata({ elemType: FindComputersBySerialNumber200ApplicationJSONSoftwarePlugins })
+    @Expose({ name: "plugins" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONSoftwarePlugins)
+    plugins?: FindComputersBySerialNumber200ApplicationJSONSoftwarePlugins[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationJSONSoftwareRunningServices,
+    })
+    @Expose({ name: "running_services" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONSoftwareRunningServices)
+    runningServices?: FindComputersBySerialNumber200ApplicationJSONSoftwareRunningServices[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "unix_executables" })
+    unixExecutables?: string;
+}
+
+/**
+ * OK
+ */
+export class FindComputersBySerialNumber200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindComputersBySerialNumber200ApplicationJSONCertificates })
+    @Expose({ name: "certificates" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONCertificates)
+    certificates?: FindComputersBySerialNumber200ApplicationJSONCertificates[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationJSONConfigurationProfiles,
+    })
+    @Expose({ name: "configuration_profiles" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONConfigurationProfiles)
+    configurationProfiles?: FindComputersBySerialNumber200ApplicationJSONConfigurationProfiles[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputersBySerialNumber200ApplicationJSONExtensionAttributes,
+    })
+    @Expose({ name: "extension_attributes" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONExtensionAttributes)
+    extensionAttributes?: FindComputersBySerialNumber200ApplicationJSONExtensionAttributes[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONGeneral)
+    general?: FindComputersBySerialNumber200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "groups_accounts" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONGroupsAccounts)
+    groupsAccounts?: FindComputersBySerialNumber200ApplicationJSONGroupsAccounts;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "hardware" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONHardware)
+    hardware?: FindComputersBySerialNumber200ApplicationJSONHardware;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "location" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONLocation)
+    location?: FindComputersBySerialNumber200ApplicationJSONLocation;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "peripherals" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONPeripherals)
+    peripherals?: FindComputersBySerialNumber200ApplicationJSONPeripherals;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "purchasing" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONPurchasing)
+    purchasing?: FindComputersBySerialNumber200ApplicationJSONPurchasing;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "security" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONSecurity)
+    security?: FindComputersBySerialNumber200ApplicationJSONSecurity;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "software" })
+    @Type(() => FindComputersBySerialNumber200ApplicationJSONSoftware)
+    software?: FindComputersBySerialNumber200ApplicationJSONSoftware;
 }
 
 export class FindComputersBySerialNumberResponse extends SpeakeasyBase {
@@ -31,5 +2165,5 @@ export class FindComputersBySerialNumberResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    computer?: shared.Computer;
+    findComputersBySerialNumber200ApplicationJSONObject?: FindComputersBySerialNumber200ApplicationJSON;
 }

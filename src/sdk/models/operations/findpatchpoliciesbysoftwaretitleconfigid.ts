@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindPatchPoliciesBySoftwareTitleConfigIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,992 @@ export class FindPatchPoliciesBySoftwareTitleConfigIdRequest extends SpeakeasyBa
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=softwaretitleconfigid" })
     softwaretitleconfigid: number;
+}
+
+export enum FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLGeneralDistributionMethod {
+    Selfservice = "selfservice",
+    Prompt = "prompt",
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLGeneralKillAppsKillApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    killAppBundleId?: string;
+
+    @SpeakeasyMetadata()
+    killAppName?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLGeneralKillApps extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    killApp?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLGeneralKillAppsKillApp;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    allowDowngrade?: boolean;
+
+    @SpeakeasyMetadata()
+    distributionMethod?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLGeneralDistributionMethod;
+
+    @SpeakeasyMetadata()
+    enabled?: boolean;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    incrementalUpdates?: boolean;
+
+    @SpeakeasyMetadata({
+        elemType: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLGeneralKillApps,
+    })
+    killApps?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLGeneralKillApps[];
+
+    @SpeakeasyMetadata()
+    minimumOs?: string;
+
+    @SpeakeasyMetadata()
+    name: string;
+
+    /**
+     * Set to true to patch versions unidentified by Jamf Pro patch reporting
+     */
+    @SpeakeasyMetadata()
+    patchUnknown?: boolean;
+
+    @SpeakeasyMetadata()
+    reboot?: boolean;
+
+    @SpeakeasyMetadata()
+    releaseDate?: number;
+
+    @SpeakeasyMetadata()
+    targetVersion: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeBuildingsBuilding;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computerGroup?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeComputerGroupsComputerGroup;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeComputersComputer;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    department?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeDepartmentsDepartment;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsBuildingsBuilding;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computerGroup?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsComputerGroupsComputerGroup;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsComputersComputer;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    department?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsDepartmentsDepartment;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsIbeaconsIbeacon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsIbeacons extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    ibeacon?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsIbeaconsIbeacon;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    networkSegment?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsNetworkSegmentsNetworkSegment;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsBuildings,
+    })
+    buildings?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsComputerGroups,
+    })
+    computerGroups?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsComputerGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsComputers,
+    })
+    computers?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsComputers[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsDepartments,
+    })
+    departments?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsDepartments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsIbeacons,
+    })
+    ibeacons?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsIbeacons[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsNetworkSegments,
+    })
+    networkSegments?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusionsNetworkSegments[];
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeLimitationsIbeaconsIbeacon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeLimitationsIbeacons extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    ibeacon?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeLimitationsIbeaconsIbeacon;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeLimitationsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeLimitationsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    networkSegment?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeLimitationsNetworkSegmentsNetworkSegment;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeLimitationsIbeacons,
+    })
+    ibeacons?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeLimitationsIbeacons[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeLimitationsNetworkSegments,
+    })
+    networkSegments?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeLimitationsNetworkSegments[];
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    allComputers?: boolean;
+
+    @SpeakeasyMetadata({
+        elemType: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeBuildings,
+    })
+    buildings?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeComputerGroups,
+    })
+    computerGroups?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeComputerGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeComputers,
+    })
+    computers?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeComputers[];
+
+    @SpeakeasyMetadata({
+        elemType: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeDepartments,
+    })
+    departments?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeDepartments[];
+
+    @SpeakeasyMetadata()
+    exclusions?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeExclusions;
+
+    @SpeakeasyMetadata()
+    limitations?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScopeLimitations;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLUserInteractionDeadlines extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    deadlineEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    deadlinePeriod?: number;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLUserInteractionGracePeriod extends SpeakeasyBase {
+    /**
+     * Number of minutes to wait before automatically closing all apps required to be closed for an update
+     */
+    @SpeakeasyMetadata()
+    gracePeriodDuration?: number;
+
+    @SpeakeasyMetadata()
+    message?: string;
+
+    @SpeakeasyMetadata()
+    notificationCenterSubject?: string;
+}
+
+export enum FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLUserInteractionNotificationsNotificationType {
+    SelfService = "Self Service",
+    SelfServiceAndNotificationCenter = "Self Service and Notification Center",
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLUserInteractionNotificationsReminders extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    notificationReminderFrequency?: number;
+
+    @SpeakeasyMetadata()
+    notificationRemindersEnabled?: boolean;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLUserInteractionNotifications extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    notificationEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    notificationMessage?: string;
+
+    @SpeakeasyMetadata()
+    notificationSubject?: string;
+
+    @SpeakeasyMetadata()
+    notificationType?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLUserInteractionNotificationsNotificationType;
+
+    @SpeakeasyMetadata()
+    reminders?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLUserInteractionNotificationsReminders;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLUserInteractionSelfServiceIcon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    filename?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    uri?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLUserInteraction extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    deadlines?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLUserInteractionDeadlines;
+
+    @SpeakeasyMetadata()
+    gracePeriod?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLUserInteractionGracePeriod;
+
+    @SpeakeasyMetadata()
+    installButtonText?: string;
+
+    @SpeakeasyMetadata()
+    notifications?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLUserInteractionNotifications;
+
+    @SpeakeasyMetadata()
+    selfServiceDescription?: string;
+
+    @SpeakeasyMetadata()
+    selfServiceIcon?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLUserInteractionSelfServiceIcon;
+}
+
+/**
+ * OK
+ */
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    general?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata()
+    scope?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLScope;
+
+    @SpeakeasyMetadata()
+    softwareTitleConfigurationId?: number;
+
+    @SpeakeasyMetadata()
+    userInteraction?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationXMLUserInteraction;
+}
+
+export enum FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONGeneralDistributionMethod {
+    Selfservice = "selfservice",
+    Prompt = "prompt",
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONGeneralKillAppsKillApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "kill_app_bundle_id" })
+    killAppBundleId?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "kill_app_name" })
+    killAppName?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONGeneralKillApps extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "kill_app" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONGeneralKillAppsKillApp)
+    killApp?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONGeneralKillAppsKillApp;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "allow_downgrade" })
+    allowDowngrade?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "distribution_method" })
+    distributionMethod?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONGeneralDistributionMethod;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "enabled" })
+    enabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "incremental_updates" })
+    incrementalUpdates?: boolean;
+
+    @SpeakeasyMetadata({
+        elemType: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONGeneralKillApps,
+    })
+    @Expose({ name: "kill_apps" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONGeneralKillApps)
+    killApps?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONGeneralKillApps[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "minimum_os" })
+    minimumOs?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    /**
+     * Set to true to patch versions unidentified by Jamf Pro patch reporting
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "patch_unknown" })
+    patchUnknown?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "reboot" })
+    reboot?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "release_date" })
+    releaseDate?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "target_version" })
+    targetVersion: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeBuildingsBuilding)
+    building?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeBuildingsBuilding;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer_group" })
+    @Type(
+        () =>
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeComputerGroupsComputerGroup
+    )
+    computerGroup?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeComputerGroupsComputerGroup;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeComputersComputer)
+    computer?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeComputersComputer;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    @Type(
+        () => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeDepartmentsDepartment
+    )
+    department?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeDepartmentsDepartment;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    @Type(
+        () =>
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsBuildingsBuilding
+    )
+    building?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsBuildingsBuilding;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer_group" })
+    @Type(
+        () =>
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup
+    )
+    computerGroup?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(
+        () =>
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsComputersComputer
+    )
+    computer?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsComputersComputer;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    @Type(
+        () =>
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsDepartmentsDepartment
+    )
+    department?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsDepartmentsDepartment;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsIbeaconsIbeacon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsIbeacons extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "ibeacon" })
+    @Type(
+        () =>
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsIbeaconsIbeacon
+    )
+    ibeacon?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsIbeaconsIbeacon;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "network_segment" })
+    @Type(
+        () =>
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment
+    )
+    networkSegment?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType:
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsBuildings,
+    })
+    @Expose({ name: "buildings" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsBuildings)
+    buildings?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsComputerGroups,
+    })
+    @Expose({ name: "computer_groups" })
+    @Type(
+        () =>
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsComputerGroups
+    )
+    computerGroups?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsComputerGroups[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsComputers,
+    })
+    @Expose({ name: "computers" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsComputers)
+    computers?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsComputers[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsDepartments,
+    })
+    @Expose({ name: "departments" })
+    @Type(
+        () => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsDepartments
+    )
+    departments?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsDepartments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsIbeacons,
+    })
+    @Expose({ name: "ibeacons" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsIbeacons)
+    ibeacons?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsIbeacons[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsNetworkSegments,
+    })
+    @Expose({ name: "network_segments" })
+    @Type(
+        () =>
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsNetworkSegments
+    )
+    networkSegments?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusionsNetworkSegments[];
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeLimitationsIbeaconsIbeacon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeLimitationsIbeacons extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "ibeacon" })
+    @Type(
+        () =>
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeLimitationsIbeaconsIbeacon
+    )
+    ibeacon?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeLimitationsIbeaconsIbeacon;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeLimitationsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "network_segment" })
+    @Type(
+        () =>
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment
+    )
+    networkSegment?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType:
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeLimitationsIbeacons,
+    })
+    @Expose({ name: "ibeacons" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeLimitationsIbeacons)
+    ibeacons?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeLimitationsIbeacons[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeLimitationsNetworkSegments,
+    })
+    @Expose({ name: "network_segments" })
+    @Type(
+        () =>
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeLimitationsNetworkSegments
+    )
+    networkSegments?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeLimitationsNetworkSegments[];
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "all_computers" })
+    allComputers?: boolean;
+
+    @SpeakeasyMetadata({
+        elemType: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeBuildings,
+    })
+    @Expose({ name: "buildings" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeBuildings)
+    buildings?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeComputerGroups,
+    })
+    @Expose({ name: "computer_groups" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeComputerGroups)
+    computerGroups?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeComputerGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeComputers,
+    })
+    @Expose({ name: "computers" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeComputers)
+    computers?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeComputers[];
+
+    @SpeakeasyMetadata({
+        elemType: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeDepartments,
+    })
+    @Expose({ name: "departments" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeDepartments)
+    departments?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeDepartments[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "exclusions" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusions)
+    exclusions?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeExclusions;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "limitations" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeLimitations)
+    limitations?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScopeLimitations;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteractionDeadlines extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "deadline_enabled" })
+    deadlineEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "deadline_period" })
+    deadlinePeriod?: number;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteractionGracePeriod extends SpeakeasyBase {
+    /**
+     * Number of minutes to wait before automatically closing all apps required to be closed for an update
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "grace_period_duration" })
+    gracePeriodDuration?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "message" })
+    message?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_center_subject" })
+    notificationCenterSubject?: string;
+}
+
+export enum FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteractionNotificationsNotificationType {
+    SelfService = "Self Service",
+    SelfServiceAndNotificationCenter = "Self Service and Notification Center",
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteractionNotificationsReminders extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_reminder_frequency" })
+    notificationReminderFrequency?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_reminders_enabled" })
+    notificationRemindersEnabled?: boolean;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteractionNotifications extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_enabled" })
+    notificationEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_message" })
+    notificationMessage?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_subject" })
+    notificationSubject?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_type" })
+    notificationType?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteractionNotificationsNotificationType;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "reminders" })
+    @Type(
+        () =>
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteractionNotificationsReminders
+    )
+    reminders?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteractionNotificationsReminders;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteractionSelfServiceIcon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "filename" })
+    filename?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uri" })
+    uri?: string;
+}
+
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteraction extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "deadlines" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteractionDeadlines)
+    deadlines?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteractionDeadlines;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "grace_period" })
+    @Type(
+        () => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteractionGracePeriod
+    )
+    gracePeriod?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteractionGracePeriod;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "install_button_text" })
+    installButtonText?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notifications" })
+    @Type(
+        () => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteractionNotifications
+    )
+    notifications?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteractionNotifications;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_description" })
+    selfServiceDescription?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_icon" })
+    @Type(
+        () =>
+            FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteractionSelfServiceIcon
+    )
+    selfServiceIcon?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteractionSelfServiceIcon;
+}
+
+/**
+ * OK
+ */
+export class FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONGeneral)
+    general?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "scope" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScope)
+    scope?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONScope;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "software_title_configuration_id" })
+    softwareTitleConfigurationId?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_interaction" })
+    @Type(() => FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteraction)
+    userInteraction?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONUserInteraction;
 }
 
 export class FindPatchPoliciesBySoftwareTitleConfigIdResponse extends SpeakeasyBase {
@@ -31,5 +1017,5 @@ export class FindPatchPoliciesBySoftwareTitleConfigIdResponse extends SpeakeasyB
      * OK
      */
     @SpeakeasyMetadata()
-    patchPolicy?: shared.PatchPolicy;
+    findPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONObject?: FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSON;
 }

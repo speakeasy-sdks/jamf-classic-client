@@ -1,0 +1,11 @@
+# FindRestrictedSoftwareById200ApplicationJSON
+
+OK
+
+
+## Fields
+
+| Field                                                                                                                                 | Type                                                                                                                                  | Required                                                                                                                              | Description                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `general`                                                                                                                             | [FindRestrictedSoftwareById200ApplicationJSONGeneral](../../models/operations/findrestrictedsoftwarebyid200applicationjsongeneral.md) | :heavy_minus_sign:                                                                                                                    | N/A                                                                                                                                   |
+| `scope`                                                                                                                               | [FindRestrictedSoftwareById200ApplicationJSONScope](../../models/operations/findrestrictedsoftwarebyid200applicationjsonscope.md)     | :heavy_minus_sign:                                                                                                                    | N/A                                                                                                                                   |

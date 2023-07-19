@@ -49,12 +49,12 @@ Updates the Jamf Pro computer inventory collection information
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateComputerInventoryCollectionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import {
-  ComputerInventoryCollectionApplicationsApplicationPlatform,
-  ComputerInventoryCollectionFontsFontPlatform,
-  ComputerInventoryCollectionPluginsPluginPlatform,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
+  UpdateComputerInventoryCollectionRequestBodyApplicationsApplicationPlatform,
+  UpdateComputerInventoryCollectionRequestBodyFontsFontPlatform,
+  UpdateComputerInventoryCollectionRequestBodyPluginsPluginPlatform,
+  UpdateComputerInventoryCollectionResponse,
+} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 const sdk = new Jamf({
   security: {

@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindOsxConfigurationProfilesByNameRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,1283 @@ export class FindOsxConfigurationProfilesByNameRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
     name: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLGeneralCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the category
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export enum FindOsxConfigurationProfilesByName200ApplicationXMLGeneralDistributionMethod {
+    InstallAutomatically = "Install Automatically",
+    MakeAvailableInSelfService = "Make Available in Self Service",
+}
+
+export enum FindOsxConfigurationProfilesByName200ApplicationXMLGeneralLevel {
+    Computer = "computer",
+    User = "user",
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    category?: FindOsxConfigurationProfilesByName200ApplicationXMLGeneralCategory;
+
+    @SpeakeasyMetadata()
+    description?: string;
+
+    @SpeakeasyMetadata()
+    distributionMethod?: FindOsxConfigurationProfilesByName200ApplicationXMLGeneralDistributionMethod;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    level?: FindOsxConfigurationProfilesByName200ApplicationXMLGeneralLevel;
+
+    /**
+     * Name of the configuration profile
+     */
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    payloads?: string;
+
+    @SpeakeasyMetadata()
+    redeployOnUpdate?: string;
+
+    @SpeakeasyMetadata()
+    site?: FindOsxConfigurationProfilesByName200ApplicationXMLGeneralSite;
+
+    @SpeakeasyMetadata()
+    userRemovable?: boolean;
+
+    @SpeakeasyMetadata()
+    uuid?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeBuildingsBuilding;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computerGroup?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeComputerGroupsComputerGroup;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeComputersComputer;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    department?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeDepartmentsDepartment;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsBuildingsBuilding;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computerGroup?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsComputerGroupsComputerGroup;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsComputersComputer;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    department?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsDepartmentsDepartment;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsIbeaconsIbeacon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsIbeacons extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    ibeacon?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsIbeaconsIbeacon;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsJssUserGroupsJssUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    jssUserGroup?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsJssUserGroupsJssUserGroup;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsJssUsersJssUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    jssUser?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsJssUsersJssUser;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the network segment
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    uid?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    networkSegment?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsNetworkSegmentsNetworkSegment;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsUserGroupsUserGroup;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsUsersUser;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsBuildings,
+    })
+    buildings?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsComputerGroups,
+    })
+    computerGroups?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsComputerGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsComputers,
+    })
+    computers?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsComputers[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsDepartments,
+    })
+    departments?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsDepartments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsIbeacons,
+    })
+    ibeacons?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsIbeacons[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsJssUserGroups,
+    })
+    jssUserGroups?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsJssUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsJssUsers,
+    })
+    jssUsers?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsJssUsers[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsNetworkSegments,
+    })
+    networkSegments?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsNetworkSegments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsUserGroups,
+    })
+    userGroups?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsUsers,
+    })
+    users?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusionsUsers[];
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeJssUserGroupsJssUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    jssUserGroup?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeJssUserGroupsJssUserGroup;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeJssUsersUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    users?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeJssUsersUsers;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsIbeaconsIbeacon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsIbeacons extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    ibeacon?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsIbeaconsIbeacon;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    networkSegment?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsNetworkSegmentsNetworkSegment;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsUserGroupsUserGroup;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsUsersUser;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsIbeacons,
+    })
+    ibeacons?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsIbeacons[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsNetworkSegments,
+    })
+    networkSegments?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsNetworkSegments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsUserGroups,
+    })
+    userGroups?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsUsers,
+    })
+    users?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitationsUsers[];
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    allComputers?: boolean;
+
+    @SpeakeasyMetadata()
+    allJssUsers?: boolean;
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeBuildings,
+    })
+    buildings?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeComputerGroups,
+    })
+    computerGroups?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeComputerGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeComputers,
+    })
+    computers?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeComputers[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeDepartments,
+    })
+    departments?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeDepartments[];
+
+    @SpeakeasyMetadata()
+    exclusions?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeExclusions;
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeJssUserGroups,
+    })
+    jssUserGroups?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeJssUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationXMLScopeJssUsers,
+    })
+    jssUsers?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeJssUsers[];
+
+    @SpeakeasyMetadata()
+    limitations?: FindOsxConfigurationProfilesByName200ApplicationXMLScopeLimitations;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLSelfServiceSelfServiceCategoriesCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    displayIn?: boolean;
+
+    @SpeakeasyMetadata()
+    featureIn?: boolean;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLSelfServiceSelfServiceCategories extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    category?: FindOsxConfigurationProfilesByName200ApplicationXMLSelfServiceSelfServiceCategoriesCategory;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLSelfServiceSelfServiceIcon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    data?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    uri?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationXMLSelfService extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    featureOnMainPage?: boolean;
+
+    @SpeakeasyMetadata()
+    forceUsersToViewDescription?: boolean;
+
+    @SpeakeasyMetadata()
+    installButtonText?: string;
+
+    @SpeakeasyMetadata()
+    notification?: string;
+
+    @SpeakeasyMetadata()
+    notificationMessage?: string;
+
+    @SpeakeasyMetadata()
+    notificationSubject?: string;
+
+    @SpeakeasyMetadata()
+    selfServiceCategories?: FindOsxConfigurationProfilesByName200ApplicationXMLSelfServiceSelfServiceCategories;
+
+    @SpeakeasyMetadata()
+    selfServiceDescription?: string;
+
+    @SpeakeasyMetadata()
+    selfServiceIcon?: FindOsxConfigurationProfilesByName200ApplicationXMLSelfServiceSelfServiceIcon;
+}
+
+/**
+ * OK
+ */
+export class FindOsxConfigurationProfilesByName200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    general?: FindOsxConfigurationProfilesByName200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata()
+    scope?: FindOsxConfigurationProfilesByName200ApplicationXMLScope;
+
+    @SpeakeasyMetadata()
+    selfService?: FindOsxConfigurationProfilesByName200ApplicationXMLSelfService;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONGeneralCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the category
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+export enum FindOsxConfigurationProfilesByName200ApplicationJSONGeneralDistributionMethod {
+    InstallAutomatically = "Install Automatically",
+    MakeAvailableInSelfService = "Make Available in Self Service",
+}
+
+export enum FindOsxConfigurationProfilesByName200ApplicationJSONGeneralLevel {
+    Computer = "computer",
+    User = "user",
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "category" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONGeneralCategory)
+    category?: FindOsxConfigurationProfilesByName200ApplicationJSONGeneralCategory;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "description" })
+    description?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "distribution_method" })
+    distributionMethod?: FindOsxConfigurationProfilesByName200ApplicationJSONGeneralDistributionMethod;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "level" })
+    level?: FindOsxConfigurationProfilesByName200ApplicationJSONGeneralLevel;
+
+    /**
+     * Name of the configuration profile
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "payloads" })
+    payloads?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "redeploy_on_update" })
+    redeployOnUpdate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONGeneralSite)
+    site?: FindOsxConfigurationProfilesByName200ApplicationJSONGeneralSite;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_removable" })
+    userRemovable?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uuid" })
+    uuid?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeBuildingsBuilding)
+    building?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeBuildingsBuilding;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer_group" })
+    @Type(
+        () => FindOsxConfigurationProfilesByName200ApplicationJSONScopeComputerGroupsComputerGroup
+    )
+    computerGroup?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeComputerGroupsComputerGroup;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeComputersComputer)
+    computer?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeComputersComputer;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeDepartmentsDepartment)
+    department?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeDepartmentsDepartment;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    @Type(
+        () => FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsBuildingsBuilding
+    )
+    building?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsBuildingsBuilding;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer_group" })
+    @Type(
+        () =>
+            FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup
+    )
+    computerGroup?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(
+        () => FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsComputersComputer
+    )
+    computer?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsComputersComputer;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    @Type(
+        () =>
+            FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsDepartmentsDepartment
+    )
+    department?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsDepartmentsDepartment;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsIbeaconsIbeacon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsIbeacons extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "ibeacon" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsIbeaconsIbeacon)
+    ibeacon?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsIbeaconsIbeacon;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsJssUserGroupsJssUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "jss_user_group" })
+    @Type(
+        () =>
+            FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsJssUserGroupsJssUserGroup
+    )
+    jssUserGroup?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsJssUserGroupsJssUserGroup;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsJssUsersJssUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "jss_user" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsJssUsersJssUser)
+    jssUser?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsJssUsersJssUser;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the network segment
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uid" })
+    uid?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "network_segment" })
+    @Type(
+        () =>
+            FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment
+    )
+    networkSegment?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(
+        () => FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsUserGroupsUserGroup
+    )
+    userGroup?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsUserGroupsUserGroup;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsUsersUser)
+    user?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsUsersUser;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsBuildings,
+    })
+    @Expose({ name: "buildings" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsBuildings)
+    buildings?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsComputerGroups,
+    })
+    @Expose({ name: "computer_groups" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsComputerGroups)
+    computerGroups?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsComputerGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsComputers,
+    })
+    @Expose({ name: "computers" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsComputers)
+    computers?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsComputers[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsDepartments,
+    })
+    @Expose({ name: "departments" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsDepartments)
+    departments?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsDepartments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsIbeacons,
+    })
+    @Expose({ name: "ibeacons" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsIbeacons)
+    ibeacons?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsIbeacons[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsJssUserGroups,
+    })
+    @Expose({ name: "jss_user_groups" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsJssUserGroups)
+    jssUserGroups?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsJssUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsJssUsers,
+    })
+    @Expose({ name: "jss_users" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsJssUsers)
+    jssUsers?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsJssUsers[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsNetworkSegments,
+    })
+    @Expose({ name: "network_segments" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsNetworkSegments)
+    networkSegments?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsNetworkSegments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsUserGroups,
+    })
+    @Expose({ name: "user_groups" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsUserGroups)
+    userGroups?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsUsers,
+    })
+    @Expose({ name: "users" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsUsers)
+    users?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusionsUsers[];
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeJssUserGroupsJssUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "jss_user_group" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeJssUserGroupsJssUserGroup)
+    jssUserGroup?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeJssUserGroupsJssUserGroup;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeJssUsersUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "users" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeJssUsersUsers)
+    users?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeJssUsersUsers;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsIbeaconsIbeacon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsIbeacons extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "ibeacon" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsIbeaconsIbeacon)
+    ibeacon?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsIbeaconsIbeacon;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "network_segment" })
+    @Type(
+        () =>
+            FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment
+    )
+    networkSegment?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(
+        () =>
+            FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsUserGroupsUserGroup
+    )
+    userGroup?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsUserGroupsUserGroup;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsUsersUser)
+    user?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsUsersUser;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsIbeacons,
+    })
+    @Expose({ name: "ibeacons" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsIbeacons)
+    ibeacons?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsIbeacons[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsNetworkSegments,
+    })
+    @Expose({ name: "network_segments" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsNetworkSegments)
+    networkSegments?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsNetworkSegments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsUserGroups,
+    })
+    @Expose({ name: "user_groups" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsUserGroups)
+    userGroups?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsUsers,
+    })
+    @Expose({ name: "users" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsUsers)
+    users?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitationsUsers[];
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "all_computers" })
+    allComputers?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "all_jss_users" })
+    allJssUsers?: boolean;
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeBuildings,
+    })
+    @Expose({ name: "buildings" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeBuildings)
+    buildings?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeComputerGroups,
+    })
+    @Expose({ name: "computer_groups" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeComputerGroups)
+    computerGroups?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeComputerGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeComputers,
+    })
+    @Expose({ name: "computers" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeComputers)
+    computers?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeComputers[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeDepartments,
+    })
+    @Expose({ name: "departments" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeDepartments)
+    departments?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeDepartments[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "exclusions" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusions)
+    exclusions?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeExclusions;
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeJssUserGroups,
+    })
+    @Expose({ name: "jss_user_groups" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeJssUserGroups)
+    jssUserGroups?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeJssUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindOsxConfigurationProfilesByName200ApplicationJSONScopeJssUsers,
+    })
+    @Expose({ name: "jss_users" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeJssUsers)
+    jssUsers?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeJssUsers[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "limitations" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitations)
+    limitations?: FindOsxConfigurationProfilesByName200ApplicationJSONScopeLimitations;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONSelfServiceSelfServiceCategoriesCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "display_in" })
+    displayIn?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "feature_in" })
+    featureIn?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONSelfServiceSelfServiceCategories extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "category" })
+    @Type(
+        () =>
+            FindOsxConfigurationProfilesByName200ApplicationJSONSelfServiceSelfServiceCategoriesCategory
+    )
+    category?: FindOsxConfigurationProfilesByName200ApplicationJSONSelfServiceSelfServiceCategoriesCategory;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONSelfServiceSelfServiceIcon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "data" })
+    data?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uri" })
+    uri?: string;
+}
+
+export class FindOsxConfigurationProfilesByName200ApplicationJSONSelfService extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "feature_on_main_page" })
+    featureOnMainPage?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "force_users_to_view_description" })
+    forceUsersToViewDescription?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "install_button_text" })
+    installButtonText?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification" })
+    notification?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_message" })
+    notificationMessage?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_subject" })
+    notificationSubject?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_categories" })
+    @Type(
+        () => FindOsxConfigurationProfilesByName200ApplicationJSONSelfServiceSelfServiceCategories
+    )
+    selfServiceCategories?: FindOsxConfigurationProfilesByName200ApplicationJSONSelfServiceSelfServiceCategories;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_description" })
+    selfServiceDescription?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_icon" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONSelfServiceSelfServiceIcon)
+    selfServiceIcon?: FindOsxConfigurationProfilesByName200ApplicationJSONSelfServiceSelfServiceIcon;
+}
+
+/**
+ * OK
+ */
+export class FindOsxConfigurationProfilesByName200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONGeneral)
+    general?: FindOsxConfigurationProfilesByName200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "scope" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONScope)
+    scope?: FindOsxConfigurationProfilesByName200ApplicationJSONScope;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service" })
+    @Type(() => FindOsxConfigurationProfilesByName200ApplicationJSONSelfService)
+    selfService?: FindOsxConfigurationProfilesByName200ApplicationJSONSelfService;
 }
 
 export class FindOsxConfigurationProfilesByNameResponse extends SpeakeasyBase {
@@ -31,5 +1308,5 @@ export class FindOsxConfigurationProfilesByNameResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    osXConfigurationProfile?: shared.OsXConfigurationProfile;
+    findOsxConfigurationProfilesByName200ApplicationJSONObject?: FindOsxConfigurationProfilesByName200ApplicationJSON;
 }

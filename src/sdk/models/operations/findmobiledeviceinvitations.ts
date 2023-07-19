@@ -3,8 +3,80 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindMobileDeviceInvitations200ApplicationXMLMobileDeviceInvitation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    expirationDate?: string;
+
+    @SpeakeasyMetadata()
+    expirationDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    expirationDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    invitation?: number;
+
+    @SpeakeasyMetadata()
+    invitationType?: string;
+
+    @SpeakeasyMetadata()
+    lastAction?: string;
+}
+
+export class FindMobileDeviceInvitations200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    mobileDeviceInvitation?: FindMobileDeviceInvitations200ApplicationXMLMobileDeviceInvitation;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindMobileDeviceInvitations200ApplicationJSONMobileDeviceInvitation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "expiration_date" })
+    expirationDate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "expiration_date_epoch" })
+    expirationDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "expiration_date_utc" })
+    expirationDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "invitation" })
+    invitation?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "invitation_type" })
+    invitationType?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_action" })
+    lastAction?: string;
+}
+
+export class FindMobileDeviceInvitations200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mobile_device_invitation" })
+    @Type(() => FindMobileDeviceInvitations200ApplicationJSONMobileDeviceInvitation)
+    mobileDeviceInvitation?: FindMobileDeviceInvitations200ApplicationJSONMobileDeviceInvitation;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
 
 export class FindMobileDeviceInvitationsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +94,6 @@ export class FindMobileDeviceInvitationsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.MobileDeviceInvitations })
-    mobileDeviceInvitations?: shared.MobileDeviceInvitations[];
+    @SpeakeasyMetadata({ elemType: FindMobileDeviceInvitations200ApplicationJSON })
+    findMobileDeviceInvitations200ApplicationJSONObjects?: FindMobileDeviceInvitations200ApplicationJSON[];
 }

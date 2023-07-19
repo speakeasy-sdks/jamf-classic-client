@@ -23,3 +23,11 @@ Based on:
 - Speakeasy CLI 1.62.1 (2.70.2) https://github.com/speakeasy-api/speakeasy
 ### Releases
 - [NPM v1.1.1] https://www.npmjs.com/package/jamf-classic-sdk-nodejs/v/1.1.1 - .
+
+## 2023-07-19 14:43:21
+### Changes
+Based on:
+- OpenAPI Doc 10.48.0 
+- Speakeasy CLI 1.62.1 (2.70.2) https://github.com/speakeasy-api/speakeasy
+### Releases
+- [NPM v1.1.2] https://www.npmjs.com/package/jamf-classic-sdk-nodejs/v/1.1.2 - .

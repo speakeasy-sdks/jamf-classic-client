@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindEBooksByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,1396 @@ export class FindEBooksByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export class FindEBooksById200ApplicationXMLGeneralCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the category
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export enum FindEBooksById200ApplicationXMLGeneralDeploymentType {
+    MakeAvailableInSelfService = "Make Available in Self Service",
+    InstallAutomaticallyPromptUsersToInstall = "Install Automatically/Prompt Users to Install",
+}
+
+export enum FindEBooksById200ApplicationXMLGeneralFileType {
+    Pdf = "PDF",
+    Ibook = "IBOOK",
+    Epub = "EPUB",
+}
+
+export class FindEBooksById200ApplicationXMLGeneralSelfServiceIcon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    data?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    uri?: string;
+}
+
+export class FindEBooksById200ApplicationXMLGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export class FindEBooksById200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    author?: string;
+
+    @SpeakeasyMetadata()
+    category?: FindEBooksById200ApplicationXMLGeneralCategory;
+
+    @SpeakeasyMetadata()
+    deployAsManaged?: boolean;
+
+    @SpeakeasyMetadata()
+    deploymentType?: FindEBooksById200ApplicationXMLGeneralDeploymentType;
+
+    @SpeakeasyMetadata()
+    fileType?: FindEBooksById200ApplicationXMLGeneralFileType;
+
+    @SpeakeasyMetadata()
+    free?: boolean;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the ebook
+     */
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    selfServiceIcon?: FindEBooksById200ApplicationXMLGeneralSelfServiceIcon;
+
+    @SpeakeasyMetadata()
+    site?: FindEBooksById200ApplicationXMLGeneralSite;
+
+    /**
+     * Download URL for the ebook
+     */
+    @SpeakeasyMetadata()
+    url?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: FindEBooksById200ApplicationXMLScopeBuildingsBuilding;
+}
+
+export class FindEBooksById200ApplicationXMLScopeClassesClass extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeClasses extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    class?: FindEBooksById200ApplicationXMLScopeClassesClass;
+}
+
+export class FindEBooksById200ApplicationXMLScopeComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computerGroup?: FindEBooksById200ApplicationXMLScopeComputerGroupsComputerGroup;
+}
+
+export class FindEBooksById200ApplicationXMLScopeComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindEBooksById200ApplicationXMLScopeComputersComputer;
+}
+
+export class FindEBooksById200ApplicationXMLScopeDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    department?: FindEBooksById200ApplicationXMLScopeDepartmentsDepartment;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: FindEBooksById200ApplicationXMLScopeExclusionsBuildingsBuilding;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computerGroup?: FindEBooksById200ApplicationXMLScopeExclusionsComputerGroupsComputerGroup;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindEBooksById200ApplicationXMLScopeExclusionsComputersComputer;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    department?: FindEBooksById200ApplicationXMLScopeExclusionsDepartmentsDepartment;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindEBooksById200ApplicationXMLScopeExclusionsJssUserGroupsUserGroup;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindEBooksById200ApplicationXMLScopeExclusionsJssUsersUser;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsMobileDeviceGroupsMobileDeviceGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsMobileDeviceGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    mobileDeviceGroup?: FindEBooksById200ApplicationXMLScopeExclusionsMobileDeviceGroupsMobileDeviceGroup;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsMobileDevicesMobileDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the device
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+
+    @SpeakeasyMetadata()
+    wifiMacAddress?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsMobileDevices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    mobileDevice?: FindEBooksById200ApplicationXMLScopeExclusionsMobileDevicesMobileDevice;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the network segment
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    uid?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    networkSegment?: FindEBooksById200ApplicationXMLScopeExclusionsNetworkSegmentsNetworkSegment;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindEBooksById200ApplicationXMLScopeExclusionsUserGroupsUserGroup;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusionsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindEBooksById200ApplicationXMLScopeExclusionsUsersUser;
+}
+
+export class FindEBooksById200ApplicationXMLScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeExclusionsBuildings })
+    buildings?: FindEBooksById200ApplicationXMLScopeExclusionsBuildings[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeExclusionsComputerGroups })
+    computerGroups?: FindEBooksById200ApplicationXMLScopeExclusionsComputerGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeExclusionsComputers })
+    computers?: FindEBooksById200ApplicationXMLScopeExclusionsComputers[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeExclusionsDepartments })
+    departments?: FindEBooksById200ApplicationXMLScopeExclusionsDepartments[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeExclusionsJssUserGroups })
+    jssUserGroups?: FindEBooksById200ApplicationXMLScopeExclusionsJssUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeExclusionsJssUsers })
+    jssUsers?: FindEBooksById200ApplicationXMLScopeExclusionsJssUsers[];
+
+    @SpeakeasyMetadata({
+        elemType: FindEBooksById200ApplicationXMLScopeExclusionsMobileDeviceGroups,
+    })
+    mobileDeviceGroups?: FindEBooksById200ApplicationXMLScopeExclusionsMobileDeviceGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeExclusionsMobileDevices })
+    mobileDevices?: FindEBooksById200ApplicationXMLScopeExclusionsMobileDevices[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeExclusionsNetworkSegments })
+    networkSegments?: FindEBooksById200ApplicationXMLScopeExclusionsNetworkSegments[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeExclusionsUserGroups })
+    userGroups?: FindEBooksById200ApplicationXMLScopeExclusionsUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeExclusionsUsers })
+    users?: FindEBooksById200ApplicationXMLScopeExclusionsUsers[];
+}
+
+export class FindEBooksById200ApplicationXMLScopeJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindEBooksById200ApplicationXMLScopeJssUserGroupsUserGroup;
+}
+
+export class FindEBooksById200ApplicationXMLScopeJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindEBooksById200ApplicationXMLScopeJssUsersUser;
+}
+
+export class FindEBooksById200ApplicationXMLScopeLimitationsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeLimitationsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    networkSegment?: FindEBooksById200ApplicationXMLScopeLimitationsNetworkSegmentsNetworkSegment;
+}
+
+export class FindEBooksById200ApplicationXMLScopeLimitationsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeLimitationsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindEBooksById200ApplicationXMLScopeLimitationsUserGroupsUserGroup;
+}
+
+export class FindEBooksById200ApplicationXMLScopeLimitationsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeLimitationsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindEBooksById200ApplicationXMLScopeLimitationsUsersUser;
+}
+
+export class FindEBooksById200ApplicationXMLScopeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeLimitationsNetworkSegments })
+    networkSegments?: FindEBooksById200ApplicationXMLScopeLimitationsNetworkSegments[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeLimitationsUserGroups })
+    userGroups?: FindEBooksById200ApplicationXMLScopeLimitationsUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeLimitationsUsers })
+    users?: FindEBooksById200ApplicationXMLScopeLimitationsUsers[];
+}
+
+export class FindEBooksById200ApplicationXMLScopeMobileDeviceGroupsMobileDeviceGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeMobileDeviceGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    mobileDeviceGroup?: FindEBooksById200ApplicationXMLScopeMobileDeviceGroupsMobileDeviceGroup;
+}
+
+export class FindEBooksById200ApplicationXMLScopeMobileDevicesMobileDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the device
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+
+    @SpeakeasyMetadata()
+    wifiMacAddress?: string;
+}
+
+export class FindEBooksById200ApplicationXMLScopeMobileDevices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    mobileDevice?: FindEBooksById200ApplicationXMLScopeMobileDevicesMobileDevice;
+}
+
+export class FindEBooksById200ApplicationXMLScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    allComputers?: boolean;
+
+    @SpeakeasyMetadata()
+    allJssUsers?: boolean;
+
+    @SpeakeasyMetadata()
+    allMobileDevices?: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeBuildings })
+    buildings?: FindEBooksById200ApplicationXMLScopeBuildings[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeClasses })
+    classes?: FindEBooksById200ApplicationXMLScopeClasses[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeComputerGroups })
+    computerGroups?: FindEBooksById200ApplicationXMLScopeComputerGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeComputers })
+    computers?: FindEBooksById200ApplicationXMLScopeComputers[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeDepartments })
+    departments?: FindEBooksById200ApplicationXMLScopeDepartments[];
+
+    @SpeakeasyMetadata()
+    exclusions?: FindEBooksById200ApplicationXMLScopeExclusions;
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeJssUserGroups })
+    jssUserGroups?: FindEBooksById200ApplicationXMLScopeJssUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeJssUsers })
+    jssUsers?: FindEBooksById200ApplicationXMLScopeJssUsers[];
+
+    @SpeakeasyMetadata()
+    limitations?: FindEBooksById200ApplicationXMLScopeLimitations;
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeMobileDeviceGroups })
+    mobileDeviceGroups?: FindEBooksById200ApplicationXMLScopeMobileDeviceGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationXMLScopeMobileDevices })
+    mobileDevices?: FindEBooksById200ApplicationXMLScopeMobileDevices[];
+}
+
+export class FindEBooksById200ApplicationXMLSelfServiceSelfServiceCategoriesCategory extends SpeakeasyBase {
+    /**
+     * Self Service categories to be displayed ebook in
+     */
+    @SpeakeasyMetadata()
+    displayIn?: string;
+
+    @SpeakeasyMetadata()
+    featureIn?: boolean;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the category
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationXMLSelfServiceSelfServiceCategories extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    category?: FindEBooksById200ApplicationXMLSelfServiceSelfServiceCategoriesCategory;
+}
+
+export class FindEBooksById200ApplicationXMLSelfServiceSelfServiceIcon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    data?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    uri?: string;
+}
+
+export class FindEBooksById200ApplicationXMLSelfService extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    featureOnMainPage?: boolean;
+
+    @SpeakeasyMetadata()
+    forceUsersToViewDescription?: boolean;
+
+    @SpeakeasyMetadata()
+    installButtonText?: string;
+
+    @SpeakeasyMetadata()
+    notification?: boolean;
+
+    @SpeakeasyMetadata()
+    notificationMessage?: string;
+
+    @SpeakeasyMetadata()
+    notificationSubject?: string;
+
+    @SpeakeasyMetadata()
+    selfServiceCategories?: FindEBooksById200ApplicationXMLSelfServiceSelfServiceCategories;
+
+    @SpeakeasyMetadata()
+    selfServiceDescription?: string;
+
+    @SpeakeasyMetadata()
+    selfServiceDisplayName?: string;
+
+    @SpeakeasyMetadata()
+    selfServiceIcon?: FindEBooksById200ApplicationXMLSelfServiceSelfServiceIcon;
+}
+
+/**
+ * OK
+ */
+export class FindEBooksById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    general?: FindEBooksById200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata()
+    scope?: FindEBooksById200ApplicationXMLScope;
+
+    @SpeakeasyMetadata()
+    selfService?: FindEBooksById200ApplicationXMLSelfService;
+}
+
+export class FindEBooksById200ApplicationJSONGeneralCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the category
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+export enum FindEBooksById200ApplicationJSONGeneralDeploymentType {
+    MakeAvailableInSelfService = "Make Available in Self Service",
+    InstallAutomaticallyPromptUsersToInstall = "Install Automatically/Prompt Users to Install",
+}
+
+export enum FindEBooksById200ApplicationJSONGeneralFileType {
+    Pdf = "PDF",
+    Ibook = "IBOOK",
+    Epub = "EPUB",
+}
+
+export class FindEBooksById200ApplicationJSONGeneralSelfServiceIcon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "data" })
+    data?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uri" })
+    uri?: string;
+}
+
+export class FindEBooksById200ApplicationJSONGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+export class FindEBooksById200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "author" })
+    author?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "category" })
+    @Type(() => FindEBooksById200ApplicationJSONGeneralCategory)
+    category?: FindEBooksById200ApplicationJSONGeneralCategory;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "deploy_as_managed" })
+    deployAsManaged?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "deployment_type" })
+    deploymentType?: FindEBooksById200ApplicationJSONGeneralDeploymentType;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "file_type" })
+    fileType?: FindEBooksById200ApplicationJSONGeneralFileType;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "free" })
+    free?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the ebook
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_icon" })
+    @Type(() => FindEBooksById200ApplicationJSONGeneralSelfServiceIcon)
+    selfServiceIcon?: FindEBooksById200ApplicationJSONGeneralSelfServiceIcon;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindEBooksById200ApplicationJSONGeneralSite)
+    site?: FindEBooksById200ApplicationJSONGeneralSite;
+
+    /**
+     * Download URL for the ebook
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "url" })
+    url?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeBuildingsBuilding)
+    building?: FindEBooksById200ApplicationJSONScopeBuildingsBuilding;
+}
+
+export class FindEBooksById200ApplicationJSONScopeClassesClass extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeClasses extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "class" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeClassesClass)
+    class?: FindEBooksById200ApplicationJSONScopeClassesClass;
+}
+
+export class FindEBooksById200ApplicationJSONScopeComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer_group" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeComputerGroupsComputerGroup)
+    computerGroup?: FindEBooksById200ApplicationJSONScopeComputerGroupsComputerGroup;
+}
+
+export class FindEBooksById200ApplicationJSONScopeComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeComputersComputer)
+    computer?: FindEBooksById200ApplicationJSONScopeComputersComputer;
+}
+
+export class FindEBooksById200ApplicationJSONScopeDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeDepartmentsDepartment)
+    department?: FindEBooksById200ApplicationJSONScopeDepartmentsDepartment;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsBuildingsBuilding)
+    building?: FindEBooksById200ApplicationJSONScopeExclusionsBuildingsBuilding;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer_group" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup)
+    computerGroup?: FindEBooksById200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsComputersComputer)
+    computer?: FindEBooksById200ApplicationJSONScopeExclusionsComputersComputer;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsDepartmentsDepartment)
+    department?: FindEBooksById200ApplicationJSONScopeExclusionsDepartmentsDepartment;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsJssUserGroupsUserGroup)
+    userGroup?: FindEBooksById200ApplicationJSONScopeExclusionsJssUserGroupsUserGroup;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsJssUsersUser)
+    user?: FindEBooksById200ApplicationJSONScopeExclusionsJssUsersUser;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsMobileDeviceGroupsMobileDeviceGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsMobileDeviceGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mobile_device_group" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsMobileDeviceGroupsMobileDeviceGroup)
+    mobileDeviceGroup?: FindEBooksById200ApplicationJSONScopeExclusionsMobileDeviceGroupsMobileDeviceGroup;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsMobileDevicesMobileDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the device
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "wifi_mac_address" })
+    wifiMacAddress?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsMobileDevices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mobile_device" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsMobileDevicesMobileDevice)
+    mobileDevice?: FindEBooksById200ApplicationJSONScopeExclusionsMobileDevicesMobileDevice;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the network segment
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uid" })
+    uid?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "network_segment" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment)
+    networkSegment?: FindEBooksById200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsUserGroupsUserGroup)
+    userGroup?: FindEBooksById200ApplicationJSONScopeExclusionsUserGroupsUserGroup;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusionsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsUsersUser)
+    user?: FindEBooksById200ApplicationJSONScopeExclusionsUsersUser;
+}
+
+export class FindEBooksById200ApplicationJSONScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeExclusionsBuildings })
+    @Expose({ name: "buildings" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsBuildings)
+    buildings?: FindEBooksById200ApplicationJSONScopeExclusionsBuildings[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeExclusionsComputerGroups })
+    @Expose({ name: "computer_groups" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsComputerGroups)
+    computerGroups?: FindEBooksById200ApplicationJSONScopeExclusionsComputerGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeExclusionsComputers })
+    @Expose({ name: "computers" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsComputers)
+    computers?: FindEBooksById200ApplicationJSONScopeExclusionsComputers[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeExclusionsDepartments })
+    @Expose({ name: "departments" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsDepartments)
+    departments?: FindEBooksById200ApplicationJSONScopeExclusionsDepartments[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeExclusionsJssUserGroups })
+    @Expose({ name: "jss_user_groups" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsJssUserGroups)
+    jssUserGroups?: FindEBooksById200ApplicationJSONScopeExclusionsJssUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeExclusionsJssUsers })
+    @Expose({ name: "jss_users" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsJssUsers)
+    jssUsers?: FindEBooksById200ApplicationJSONScopeExclusionsJssUsers[];
+
+    @SpeakeasyMetadata({
+        elemType: FindEBooksById200ApplicationJSONScopeExclusionsMobileDeviceGroups,
+    })
+    @Expose({ name: "mobile_device_groups" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsMobileDeviceGroups)
+    mobileDeviceGroups?: FindEBooksById200ApplicationJSONScopeExclusionsMobileDeviceGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeExclusionsMobileDevices })
+    @Expose({ name: "mobile_devices" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsMobileDevices)
+    mobileDevices?: FindEBooksById200ApplicationJSONScopeExclusionsMobileDevices[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeExclusionsNetworkSegments })
+    @Expose({ name: "network_segments" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsNetworkSegments)
+    networkSegments?: FindEBooksById200ApplicationJSONScopeExclusionsNetworkSegments[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeExclusionsUserGroups })
+    @Expose({ name: "user_groups" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsUserGroups)
+    userGroups?: FindEBooksById200ApplicationJSONScopeExclusionsUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeExclusionsUsers })
+    @Expose({ name: "users" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusionsUsers)
+    users?: FindEBooksById200ApplicationJSONScopeExclusionsUsers[];
+}
+
+export class FindEBooksById200ApplicationJSONScopeJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeJssUserGroupsUserGroup)
+    userGroup?: FindEBooksById200ApplicationJSONScopeJssUserGroupsUserGroup;
+}
+
+export class FindEBooksById200ApplicationJSONScopeJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeJssUsersUser)
+    user?: FindEBooksById200ApplicationJSONScopeJssUsersUser;
+}
+
+export class FindEBooksById200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeLimitationsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "network_segment" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment)
+    networkSegment?: FindEBooksById200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment;
+}
+
+export class FindEBooksById200ApplicationJSONScopeLimitationsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeLimitationsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeLimitationsUserGroupsUserGroup)
+    userGroup?: FindEBooksById200ApplicationJSONScopeLimitationsUserGroupsUserGroup;
+}
+
+export class FindEBooksById200ApplicationJSONScopeLimitationsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeLimitationsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeLimitationsUsersUser)
+    user?: FindEBooksById200ApplicationJSONScopeLimitationsUsersUser;
+}
+
+export class FindEBooksById200ApplicationJSONScopeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindEBooksById200ApplicationJSONScopeLimitationsNetworkSegments,
+    })
+    @Expose({ name: "network_segments" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeLimitationsNetworkSegments)
+    networkSegments?: FindEBooksById200ApplicationJSONScopeLimitationsNetworkSegments[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeLimitationsUserGroups })
+    @Expose({ name: "user_groups" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeLimitationsUserGroups)
+    userGroups?: FindEBooksById200ApplicationJSONScopeLimitationsUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeLimitationsUsers })
+    @Expose({ name: "users" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeLimitationsUsers)
+    users?: FindEBooksById200ApplicationJSONScopeLimitationsUsers[];
+}
+
+export class FindEBooksById200ApplicationJSONScopeMobileDeviceGroupsMobileDeviceGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeMobileDeviceGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mobile_device_group" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeMobileDeviceGroupsMobileDeviceGroup)
+    mobileDeviceGroup?: FindEBooksById200ApplicationJSONScopeMobileDeviceGroupsMobileDeviceGroup;
+}
+
+export class FindEBooksById200ApplicationJSONScopeMobileDevicesMobileDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the device
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "wifi_mac_address" })
+    wifiMacAddress?: string;
+}
+
+export class FindEBooksById200ApplicationJSONScopeMobileDevices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mobile_device" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeMobileDevicesMobileDevice)
+    mobileDevice?: FindEBooksById200ApplicationJSONScopeMobileDevicesMobileDevice;
+}
+
+export class FindEBooksById200ApplicationJSONScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "all_computers" })
+    allComputers?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "all_jss_users" })
+    allJssUsers?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "all_mobile_devices" })
+    allMobileDevices?: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeBuildings })
+    @Expose({ name: "buildings" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeBuildings)
+    buildings?: FindEBooksById200ApplicationJSONScopeBuildings[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeClasses })
+    @Expose({ name: "classes" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeClasses)
+    classes?: FindEBooksById200ApplicationJSONScopeClasses[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeComputerGroups })
+    @Expose({ name: "computer_groups" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeComputerGroups)
+    computerGroups?: FindEBooksById200ApplicationJSONScopeComputerGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeComputers })
+    @Expose({ name: "computers" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeComputers)
+    computers?: FindEBooksById200ApplicationJSONScopeComputers[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeDepartments })
+    @Expose({ name: "departments" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeDepartments)
+    departments?: FindEBooksById200ApplicationJSONScopeDepartments[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "exclusions" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeExclusions)
+    exclusions?: FindEBooksById200ApplicationJSONScopeExclusions;
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeJssUserGroups })
+    @Expose({ name: "jss_user_groups" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeJssUserGroups)
+    jssUserGroups?: FindEBooksById200ApplicationJSONScopeJssUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeJssUsers })
+    @Expose({ name: "jss_users" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeJssUsers)
+    jssUsers?: FindEBooksById200ApplicationJSONScopeJssUsers[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "limitations" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeLimitations)
+    limitations?: FindEBooksById200ApplicationJSONScopeLimitations;
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeMobileDeviceGroups })
+    @Expose({ name: "mobile_device_groups" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeMobileDeviceGroups)
+    mobileDeviceGroups?: FindEBooksById200ApplicationJSONScopeMobileDeviceGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindEBooksById200ApplicationJSONScopeMobileDevices })
+    @Expose({ name: "mobile_devices" })
+    @Type(() => FindEBooksById200ApplicationJSONScopeMobileDevices)
+    mobileDevices?: FindEBooksById200ApplicationJSONScopeMobileDevices[];
+}
+
+export class FindEBooksById200ApplicationJSONSelfServiceSelfServiceCategoriesCategory extends SpeakeasyBase {
+    /**
+     * Self Service categories to be displayed ebook in
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "display_in" })
+    displayIn?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "feature_in" })
+    featureIn?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the category
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindEBooksById200ApplicationJSONSelfServiceSelfServiceCategories extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "category" })
+    @Type(() => FindEBooksById200ApplicationJSONSelfServiceSelfServiceCategoriesCategory)
+    category?: FindEBooksById200ApplicationJSONSelfServiceSelfServiceCategoriesCategory;
+}
+
+export class FindEBooksById200ApplicationJSONSelfServiceSelfServiceIcon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "data" })
+    data?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uri" })
+    uri?: string;
+}
+
+export class FindEBooksById200ApplicationJSONSelfService extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "feature_on_main_page" })
+    featureOnMainPage?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "force_users_to_view_description" })
+    forceUsersToViewDescription?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "install_button_text" })
+    installButtonText?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification" })
+    notification?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_message" })
+    notificationMessage?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_subject" })
+    notificationSubject?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_categories" })
+    @Type(() => FindEBooksById200ApplicationJSONSelfServiceSelfServiceCategories)
+    selfServiceCategories?: FindEBooksById200ApplicationJSONSelfServiceSelfServiceCategories;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_description" })
+    selfServiceDescription?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_display_name" })
+    selfServiceDisplayName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_icon" })
+    @Type(() => FindEBooksById200ApplicationJSONSelfServiceSelfServiceIcon)
+    selfServiceIcon?: FindEBooksById200ApplicationJSONSelfServiceSelfServiceIcon;
+}
+
+/**
+ * OK
+ */
+export class FindEBooksById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindEBooksById200ApplicationJSONGeneral)
+    general?: FindEBooksById200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "scope" })
+    @Type(() => FindEBooksById200ApplicationJSONScope)
+    scope?: FindEBooksById200ApplicationJSONScope;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service" })
+    @Type(() => FindEBooksById200ApplicationJSONSelfService)
+    selfService?: FindEBooksById200ApplicationJSONSelfService;
 }
 
 export class FindEBooksByIdResponse extends SpeakeasyBase {
@@ -31,5 +1421,5 @@ export class FindEBooksByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    ebook?: shared.Ebook;
+    findEBooksById200ApplicationJSONObject?: FindEBooksById200ApplicationJSON;
 }

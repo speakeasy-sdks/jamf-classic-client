@@ -3,8 +3,65 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindNetworkSegments200ApplicationXMLNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    endingAddress?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the network segment
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    startingAddress?: string;
+}
+
+export class FindNetworkSegments200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    networkSegment?: FindNetworkSegments200ApplicationXMLNetworkSegment;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindNetworkSegments200ApplicationJSONNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "ending_address" })
+    endingAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the network segment
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "starting_address" })
+    startingAddress?: string;
+}
+
+export class FindNetworkSegments200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "network_segment" })
+    @Type(() => FindNetworkSegments200ApplicationJSONNetworkSegment)
+    networkSegment?: FindNetworkSegments200ApplicationJSONNetworkSegment;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
 
 export class FindNetworkSegmentsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +79,6 @@ export class FindNetworkSegmentsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.NetworkSegments })
-    networkSegments?: shared.NetworkSegments[];
+    @SpeakeasyMetadata({ elemType: FindNetworkSegments200ApplicationJSON })
+    findNetworkSegments200ApplicationJSONObjects?: FindNetworkSegments200ApplicationJSON[];
 }

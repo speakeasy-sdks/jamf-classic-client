@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 /**
  * Subset to filter by
@@ -31,6 +31,1126 @@ export class FindMacappsByNameSubsetRequest extends SpeakeasyBase {
     subset: FindMacappsByNameSubsetSubset;
 }
 
+export class FindMacappsByNameSubset200ApplicationXMLGeneralCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the category
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    bundleId: string;
+
+    @SpeakeasyMetadata()
+    category?: FindMacappsByNameSubset200ApplicationXMLGeneralCategory;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    isFree?: boolean;
+
+    /**
+     * Name of the application
+     */
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    site?: FindMacappsByNameSubset200ApplicationXMLGeneralSite;
+
+    @SpeakeasyMetadata()
+    url: string;
+
+    @SpeakeasyMetadata()
+    version: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: FindMacappsByNameSubset200ApplicationXMLScopeBuildingsBuilding;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computerGroup?: FindMacappsByNameSubset200ApplicationXMLScopeComputerGroupsComputerGroup;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindMacappsByNameSubset200ApplicationXMLScopeComputersComputer;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    department?: FindMacappsByNameSubset200ApplicationXMLScopeDepartmentsDepartment;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsBuildingsBuilding;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computerGroup?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsComputerGroupsComputerGroup;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsComputersComputer;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    department?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsDepartmentsDepartment;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsJssUserGroupsUserGroup;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsJssUsersUser;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the network segment
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    uid?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    networkSegment?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsNetworkSegmentsNetworkSegment;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsUserGroupsUserGroup;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusionsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsUsersUser;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsBuildings,
+    })
+    buildings?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsComputerGroups,
+    })
+    computerGroups?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsComputerGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsComputers,
+    })
+    computers?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsComputers[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsDepartments,
+    })
+    departments?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsDepartments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsJssUserGroups,
+    })
+    jssUserGroups?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsJssUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsJssUsers,
+    })
+    jssUsers?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsJssUsers[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsNetworkSegments,
+    })
+    networkSegments?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsNetworkSegments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsUserGroups,
+    })
+    userGroups?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsUsers })
+    users?: FindMacappsByNameSubset200ApplicationXMLScopeExclusionsUsers[];
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindMacappsByNameSubset200ApplicationXMLScopeJssUserGroupsUserGroup;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindMacappsByNameSubset200ApplicationXMLScopeJssUsersUser;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeLimitationsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeLimitationsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    networkSegment?: FindMacappsByNameSubset200ApplicationXMLScopeLimitationsNetworkSegmentsNetworkSegment;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeLimitationsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeLimitationsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    userGroup?: FindMacappsByNameSubset200ApplicationXMLScopeLimitationsUserGroupsUserGroup;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeLimitationsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeLimitationsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindMacappsByNameSubset200ApplicationXMLScopeLimitationsUsersUser;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScopeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationXMLScopeLimitationsNetworkSegments,
+    })
+    networkSegments?: FindMacappsByNameSubset200ApplicationXMLScopeLimitationsNetworkSegments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationXMLScopeLimitationsUserGroups,
+    })
+    userGroups?: FindMacappsByNameSubset200ApplicationXMLScopeLimitationsUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindMacappsByNameSubset200ApplicationXMLScopeLimitationsUsers })
+    users?: FindMacappsByNameSubset200ApplicationXMLScopeLimitationsUsers[];
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    allComputers?: boolean;
+
+    @SpeakeasyMetadata()
+    allJssUsers?: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindMacappsByNameSubset200ApplicationXMLScopeBuildings })
+    buildings?: FindMacappsByNameSubset200ApplicationXMLScopeBuildings[];
+
+    @SpeakeasyMetadata({ elemType: FindMacappsByNameSubset200ApplicationXMLScopeComputerGroups })
+    computerGroups?: FindMacappsByNameSubset200ApplicationXMLScopeComputerGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindMacappsByNameSubset200ApplicationXMLScopeComputers })
+    computers?: FindMacappsByNameSubset200ApplicationXMLScopeComputers[];
+
+    @SpeakeasyMetadata({ elemType: FindMacappsByNameSubset200ApplicationXMLScopeDepartments })
+    departments?: FindMacappsByNameSubset200ApplicationXMLScopeDepartments[];
+
+    @SpeakeasyMetadata()
+    exclusions?: FindMacappsByNameSubset200ApplicationXMLScopeExclusions;
+
+    @SpeakeasyMetadata({ elemType: FindMacappsByNameSubset200ApplicationXMLScopeJssUserGroups })
+    jssUserGroups?: FindMacappsByNameSubset200ApplicationXMLScopeJssUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindMacappsByNameSubset200ApplicationXMLScopeJssUsers })
+    jssUsers?: FindMacappsByNameSubset200ApplicationXMLScopeJssUsers[];
+
+    @SpeakeasyMetadata()
+    limitations?: FindMacappsByNameSubset200ApplicationXMLScopeLimitations;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLSelfServiceSelfServiceCategoriesCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    displayIn?: boolean;
+
+    @SpeakeasyMetadata()
+    featureIn?: boolean;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLSelfServiceSelfServiceCategories extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    category?: FindMacappsByNameSubset200ApplicationXMLSelfServiceSelfServiceCategoriesCategory;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLSelfServiceSelfServiceIcon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    data?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    uri?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLSelfServiceVpp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    assignVppDeviceBasedLicenses?: boolean;
+
+    @SpeakeasyMetadata()
+    vppAdminAccountId?: number;
+}
+
+export class FindMacappsByNameSubset200ApplicationXMLSelfService extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    featureOnMainPage?: boolean;
+
+    @SpeakeasyMetadata()
+    forceUsersToViewDescription?: boolean;
+
+    @SpeakeasyMetadata()
+    installButtonText?: string;
+
+    @SpeakeasyMetadata()
+    notification?: string;
+
+    @SpeakeasyMetadata()
+    notificationMessage?: string;
+
+    @SpeakeasyMetadata()
+    notificationSubject?: string;
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationXMLSelfServiceSelfServiceCategories,
+    })
+    selfServiceCategories?: FindMacappsByNameSubset200ApplicationXMLSelfServiceSelfServiceCategories[];
+
+    @SpeakeasyMetadata()
+    selfServiceDescription?: string;
+
+    @SpeakeasyMetadata()
+    selfServiceIcon?: FindMacappsByNameSubset200ApplicationXMLSelfServiceSelfServiceIcon;
+
+    @SpeakeasyMetadata()
+    vpp?: FindMacappsByNameSubset200ApplicationXMLSelfServiceVpp;
+}
+
+/**
+ * OK
+ */
+export class FindMacappsByNameSubset200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    general?: FindMacappsByNameSubset200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata()
+    scope?: FindMacappsByNameSubset200ApplicationXMLScope;
+
+    @SpeakeasyMetadata()
+    selfService?: FindMacappsByNameSubset200ApplicationXMLSelfService;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONGeneralCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the category
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "bundle_id" })
+    bundleId: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "category" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONGeneralCategory)
+    category?: FindMacappsByNameSubset200ApplicationJSONGeneralCategory;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "is_free" })
+    isFree?: boolean;
+
+    /**
+     * Name of the application
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONGeneralSite)
+    site?: FindMacappsByNameSubset200ApplicationJSONGeneralSite;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "url" })
+    url: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeBuildingsBuilding)
+    building?: FindMacappsByNameSubset200ApplicationJSONScopeBuildingsBuilding;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer_group" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeComputerGroupsComputerGroup)
+    computerGroup?: FindMacappsByNameSubset200ApplicationJSONScopeComputerGroupsComputerGroup;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeComputersComputer)
+    computer?: FindMacappsByNameSubset200ApplicationJSONScopeComputersComputer;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeDepartmentsDepartment)
+    department?: FindMacappsByNameSubset200ApplicationJSONScopeDepartmentsDepartment;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsBuildingsBuilding extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsBuildings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsBuildingsBuilding)
+    building?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsBuildingsBuilding;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsComputerGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer_group" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup)
+    computerGroup?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsComputerGroupsComputerGroup;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsComputersComputer)
+    computer?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsComputersComputer;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsDepartmentsDepartment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsDepartments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsDepartmentsDepartment)
+    department?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsDepartmentsDepartment;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsJssUserGroupsUserGroup)
+    userGroup?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsJssUserGroupsUserGroup;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsJssUsersUser)
+    user?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsJssUsersUser;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the network segment
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uid" })
+    uid?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "network_segment" })
+    @Type(
+        () => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment
+    )
+    networkSegment?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsNetworkSegmentsNetworkSegment;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsUserGroupsUserGroup)
+    userGroup?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsUserGroupsUserGroup;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusionsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsUsersUser)
+    user?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsUsersUser;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsBuildings,
+    })
+    @Expose({ name: "buildings" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsBuildings)
+    buildings?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsBuildings[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsComputerGroups,
+    })
+    @Expose({ name: "computer_groups" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsComputerGroups)
+    computerGroups?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsComputerGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsComputers,
+    })
+    @Expose({ name: "computers" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsComputers)
+    computers?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsComputers[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsDepartments,
+    })
+    @Expose({ name: "departments" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsDepartments)
+    departments?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsDepartments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsJssUserGroups,
+    })
+    @Expose({ name: "jss_user_groups" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsJssUserGroups)
+    jssUserGroups?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsJssUserGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsJssUsers,
+    })
+    @Expose({ name: "jss_users" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsJssUsers)
+    jssUsers?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsJssUsers[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsNetworkSegments,
+    })
+    @Expose({ name: "network_segments" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsNetworkSegments)
+    networkSegments?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsNetworkSegments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsUserGroups,
+    })
+    @Expose({ name: "user_groups" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsUserGroups)
+    userGroups?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsUsers })
+    @Expose({ name: "users" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusionsUsers)
+    users?: FindMacappsByNameSubset200ApplicationJSONScopeExclusionsUsers[];
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeJssUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeJssUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeJssUserGroupsUserGroup)
+    userGroup?: FindMacappsByNameSubset200ApplicationJSONScopeJssUserGroupsUserGroup;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeJssUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeJssUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeJssUsersUser)
+    user?: FindMacappsByNameSubset200ApplicationJSONScopeJssUsersUser;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeLimitationsNetworkSegments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "network_segment" })
+    @Type(
+        () => FindMacappsByNameSubset200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment
+    )
+    networkSegment?: FindMacappsByNameSubset200ApplicationJSONScopeLimitationsNetworkSegmentsNetworkSegment;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeLimitationsUserGroupsUserGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeLimitationsUserGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user_group" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeLimitationsUserGroupsUserGroup)
+    userGroup?: FindMacappsByNameSubset200ApplicationJSONScopeLimitationsUserGroupsUserGroup;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeLimitationsUsersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeLimitationsUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeLimitationsUsersUser)
+    user?: FindMacappsByNameSubset200ApplicationJSONScopeLimitationsUsersUser;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScopeLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationJSONScopeLimitationsNetworkSegments,
+    })
+    @Expose({ name: "network_segments" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeLimitationsNetworkSegments)
+    networkSegments?: FindMacappsByNameSubset200ApplicationJSONScopeLimitationsNetworkSegments[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationJSONScopeLimitationsUserGroups,
+    })
+    @Expose({ name: "user_groups" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeLimitationsUserGroups)
+    userGroups?: FindMacappsByNameSubset200ApplicationJSONScopeLimitationsUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindMacappsByNameSubset200ApplicationJSONScopeLimitationsUsers })
+    @Expose({ name: "users" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeLimitationsUsers)
+    users?: FindMacappsByNameSubset200ApplicationJSONScopeLimitationsUsers[];
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONScope extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "all_computers" })
+    allComputers?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "all_jss_users" })
+    allJssUsers?: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindMacappsByNameSubset200ApplicationJSONScopeBuildings })
+    @Expose({ name: "buildings" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeBuildings)
+    buildings?: FindMacappsByNameSubset200ApplicationJSONScopeBuildings[];
+
+    @SpeakeasyMetadata({ elemType: FindMacappsByNameSubset200ApplicationJSONScopeComputerGroups })
+    @Expose({ name: "computer_groups" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeComputerGroups)
+    computerGroups?: FindMacappsByNameSubset200ApplicationJSONScopeComputerGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindMacappsByNameSubset200ApplicationJSONScopeComputers })
+    @Expose({ name: "computers" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeComputers)
+    computers?: FindMacappsByNameSubset200ApplicationJSONScopeComputers[];
+
+    @SpeakeasyMetadata({ elemType: FindMacappsByNameSubset200ApplicationJSONScopeDepartments })
+    @Expose({ name: "departments" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeDepartments)
+    departments?: FindMacappsByNameSubset200ApplicationJSONScopeDepartments[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "exclusions" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeExclusions)
+    exclusions?: FindMacappsByNameSubset200ApplicationJSONScopeExclusions;
+
+    @SpeakeasyMetadata({ elemType: FindMacappsByNameSubset200ApplicationJSONScopeJssUserGroups })
+    @Expose({ name: "jss_user_groups" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeJssUserGroups)
+    jssUserGroups?: FindMacappsByNameSubset200ApplicationJSONScopeJssUserGroups[];
+
+    @SpeakeasyMetadata({ elemType: FindMacappsByNameSubset200ApplicationJSONScopeJssUsers })
+    @Expose({ name: "jss_users" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeJssUsers)
+    jssUsers?: FindMacappsByNameSubset200ApplicationJSONScopeJssUsers[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "limitations" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScopeLimitations)
+    limitations?: FindMacappsByNameSubset200ApplicationJSONScopeLimitations;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONSelfServiceSelfServiceCategoriesCategory extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "display_in" })
+    displayIn?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "feature_in" })
+    featureIn?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONSelfServiceSelfServiceCategories extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "category" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONSelfServiceSelfServiceCategoriesCategory)
+    category?: FindMacappsByNameSubset200ApplicationJSONSelfServiceSelfServiceCategoriesCategory;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONSelfServiceSelfServiceIcon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "data" })
+    data?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uri" })
+    uri?: string;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONSelfServiceVpp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "assign_vpp_device_based_licenses" })
+    assignVppDeviceBasedLicenses?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "vpp_admin_account_id" })
+    vppAdminAccountId?: number;
+}
+
+export class FindMacappsByNameSubset200ApplicationJSONSelfService extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "feature_on_main_page" })
+    featureOnMainPage?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "force_users_to_view_description" })
+    forceUsersToViewDescription?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "install_button_text" })
+    installButtonText?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification" })
+    notification?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_message" })
+    notificationMessage?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_subject" })
+    notificationSubject?: string;
+
+    @SpeakeasyMetadata({
+        elemType: FindMacappsByNameSubset200ApplicationJSONSelfServiceSelfServiceCategories,
+    })
+    @Expose({ name: "self_service_categories" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONSelfServiceSelfServiceCategories)
+    selfServiceCategories?: FindMacappsByNameSubset200ApplicationJSONSelfServiceSelfServiceCategories[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_description" })
+    selfServiceDescription?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service_icon" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONSelfServiceSelfServiceIcon)
+    selfServiceIcon?: FindMacappsByNameSubset200ApplicationJSONSelfServiceSelfServiceIcon;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "vpp" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONSelfServiceVpp)
+    vpp?: FindMacappsByNameSubset200ApplicationJSONSelfServiceVpp;
+}
+
+/**
+ * OK
+ */
+export class FindMacappsByNameSubset200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONGeneral)
+    general?: FindMacappsByNameSubset200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "scope" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONScope)
+    scope?: FindMacappsByNameSubset200ApplicationJSONScope;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "self_service" })
+    @Type(() => FindMacappsByNameSubset200ApplicationJSONSelfService)
+    selfService?: FindMacappsByNameSubset200ApplicationJSONSelfService;
+}
+
 export class FindMacappsByNameSubsetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     body?: Uint8Array;
@@ -48,5 +1168,5 @@ export class FindMacappsByNameSubsetResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    macApplication?: shared.MacApplication;
+    findMacappsByNameSubset200ApplicationJSONObject?: FindMacappsByNameSubset200ApplicationJSON;
 }

@@ -3,8 +3,94 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindInfrastructureManager200ApplicationXMLInfrastructureManager extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    hostname?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    lastCheckIn?: string;
+
+    @SpeakeasyMetadata()
+    lastReportedIp?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    operatingSystem?: string;
+
+    @SpeakeasyMetadata()
+    operatingSystemVersion?: string;
+
+    @SpeakeasyMetadata()
+    recurringCheckInFrequency?: number;
+
+    @SpeakeasyMetadata()
+    uuid?: string;
+}
+
+export class FindInfrastructureManager200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    infrastructureManager?: FindInfrastructureManager200ApplicationXMLInfrastructureManager;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindInfrastructureManager200ApplicationJSONInfrastructureManager extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "hostname" })
+    hostname?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_check_in" })
+    lastCheckIn?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_reported_ip" })
+    lastReportedIp?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "operating_system" })
+    operatingSystem?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "operating_system_version" })
+    operatingSystemVersion?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "recurring_check_in_frequency" })
+    recurringCheckInFrequency?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uuid" })
+    uuid?: string;
+}
+
+export class FindInfrastructureManager200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "infrastructure_manager" })
+    @Type(() => FindInfrastructureManager200ApplicationJSONInfrastructureManager)
+    infrastructureManager?: FindInfrastructureManager200ApplicationJSONInfrastructureManager;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
 
 export class FindInfrastructureManagerResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +108,6 @@ export class FindInfrastructureManagerResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.InfrastructureManagers })
-    infrastructureManagers?: shared.InfrastructureManagers[];
+    @SpeakeasyMetadata({ elemType: FindInfrastructureManager200ApplicationJSON })
+    findInfrastructureManager200ApplicationJSONObjects?: FindInfrastructureManager200ApplicationJSON[];
 }

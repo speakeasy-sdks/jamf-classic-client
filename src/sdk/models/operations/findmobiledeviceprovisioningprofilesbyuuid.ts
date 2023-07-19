@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindMobileDeviceProvisioningProfilesByUUIDRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,56 @@ export class FindMobileDeviceProvisioningProfilesByUUIDRequest extends Speakeasy
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=uuid" })
     uuid: string;
+}
+
+export class FindMobileDeviceProvisioningProfilesByUuid200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    displayName?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    uuid?: string;
+}
+
+/**
+ * OK
+ */
+export class FindMobileDeviceProvisioningProfilesByUuid200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    general?: FindMobileDeviceProvisioningProfilesByUuid200ApplicationXMLGeneral;
+}
+
+export class FindMobileDeviceProvisioningProfilesByUuid200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "display_name" })
+    displayName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uuid" })
+    uuid?: string;
+}
+
+/**
+ * OK
+ */
+export class FindMobileDeviceProvisioningProfilesByUuid200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindMobileDeviceProvisioningProfilesByUuid200ApplicationJSONGeneral)
+    general?: FindMobileDeviceProvisioningProfilesByUuid200ApplicationJSONGeneral;
 }
 
 export class FindMobileDeviceProvisioningProfilesByUUIDResponse extends SpeakeasyBase {
@@ -31,5 +81,5 @@ export class FindMobileDeviceProvisioningProfilesByUUIDResponse extends Speakeas
      * OK
      */
     @SpeakeasyMetadata()
-    mobileDeviceProvisioningProfile?: shared.MobileDeviceProvisioningProfile;
+    findMobileDeviceProvisioningProfilesByUUID200ApplicationJSONObject?: FindMobileDeviceProvisioningProfilesByUuid200ApplicationJSON;
 }

@@ -5,7 +5,6 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
-import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -239,13 +238,14 @@ export class Advancedmobiledevicesearches {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.advancedMobileDeviceSearches = [];
+                    res.findAdvancedMobileDeviceSearches200ApplicationJSONObjects = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.advancedMobileDeviceSearches = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.AdvancedMobileDeviceSearches,
-                        resFieldDepth
-                    );
+                    res.findAdvancedMobileDeviceSearches200ApplicationJSONObjects =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindAdvancedMobileDeviceSearches200ApplicationJSON,
+                            resFieldDepth
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -317,10 +317,11 @@ export class Advancedmobiledevicesearches {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.advancedMobileDeviceSearch = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.AdvancedMobileDeviceSearch
-                    );
+                    res.findAdvancedMobileDeviceSearchesById200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindAdvancedMobileDeviceSearchesById200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -392,10 +393,11 @@ export class Advancedmobiledevicesearches {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.advancedMobileDeviceSearch = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.AdvancedMobileDeviceSearch
-                    );
+                    res.findMobileDeviceSearchesByName200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindMobileDeviceSearchesByName200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

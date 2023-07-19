@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose } from "class-transformer";
 
 export class FindPackagesByNameRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,160 @@ export class FindPackagesByNameRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
     name: string;
+}
+
+export enum FindPackagesByName200ApplicationXMLRequiredProcessor {
+    None = "None",
+    Ppc = "ppc",
+    X86 = "x86",
+}
+
+/**
+ * OK
+ */
+export class FindPackagesByName200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    allowUninstalled?: boolean;
+
+    @SpeakeasyMetadata()
+    category?: string;
+
+    @SpeakeasyMetadata()
+    filename: string;
+
+    @SpeakeasyMetadata()
+    fillExistingUsers?: boolean;
+
+    @SpeakeasyMetadata()
+    fillUserTemplate?: boolean;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    info?: string;
+
+    @SpeakeasyMetadata()
+    installIfReportedAvailable?: boolean;
+
+    /**
+     * Name of the package
+     */
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    notes?: string;
+
+    @SpeakeasyMetadata()
+    osRequirements?: string;
+
+    @SpeakeasyMetadata()
+    priority?: number;
+
+    @SpeakeasyMetadata()
+    rebootRequired?: boolean;
+
+    @SpeakeasyMetadata()
+    reinstallOption?: string;
+
+    @SpeakeasyMetadata()
+    requiredProcessor?: FindPackagesByName200ApplicationXMLRequiredProcessor;
+
+    @SpeakeasyMetadata()
+    sendNotification?: boolean;
+
+    @SpeakeasyMetadata()
+    switchWithPackage?: string;
+
+    @SpeakeasyMetadata()
+    triggeringFiles?: string;
+}
+
+export enum FindPackagesByName200ApplicationJSONRequiredProcessor {
+    None = "None",
+    Ppc = "ppc",
+    X86 = "x86",
+}
+
+/**
+ * OK
+ */
+export class FindPackagesByName200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "allow_uninstalled" })
+    allowUninstalled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "category" })
+    category?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "filename" })
+    filename: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "fill_existing_users" })
+    fillExistingUsers?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "fill_user_template" })
+    fillUserTemplate?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "info" })
+    info?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "install_if_reported_available" })
+    installIfReportedAvailable?: boolean;
+
+    /**
+     * Name of the package
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notes" })
+    notes?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "os_requirements" })
+    osRequirements?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "priority" })
+    priority?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "reboot_required" })
+    rebootRequired?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "reinstall_option" })
+    reinstallOption?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "required_processor" })
+    requiredProcessor?: FindPackagesByName200ApplicationJSONRequiredProcessor;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "send_notification" })
+    sendNotification?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "switch_with_package" })
+    switchWithPackage?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "triggering_files" })
+    triggeringFiles?: string;
 }
 
 export class FindPackagesByNameResponse extends SpeakeasyBase {
@@ -31,5 +185,5 @@ export class FindPackagesByNameResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    package?: shared.Package;
+    findPackagesByName200ApplicationJSONObject?: FindPackagesByName200ApplicationJSON;
 }

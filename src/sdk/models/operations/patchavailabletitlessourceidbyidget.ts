@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class PatchavailabletitlesSourceidByIdGetRequest extends SpeakeasyBase {
     /**
@@ -14,6 +14,86 @@ export class PatchavailabletitlesSourceidByIdGetRequest extends SpeakeasyBase {
     id: string;
 }
 
+export class PatchavailabletitlesSourceidByIdGet200ApplicationXMLAvailableTitlesAvailableTitle extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    appName?: string;
+
+    @SpeakeasyMetadata()
+    currentVersion?: string;
+
+    @SpeakeasyMetadata()
+    lastModified?: string;
+
+    @SpeakeasyMetadata()
+    nameId?: string;
+
+    @SpeakeasyMetadata()
+    publisher?: string;
+}
+
+export class PatchavailabletitlesSourceidByIdGet200ApplicationXMLAvailableTitles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    availableTitle?: PatchavailabletitlesSourceidByIdGet200ApplicationXMLAvailableTitlesAvailableTitle;
+}
+
+/**
+ * OK
+ */
+export class PatchavailabletitlesSourceidByIdGet200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: PatchavailabletitlesSourceidByIdGet200ApplicationXMLAvailableTitles,
+    })
+    availableTitles?: PatchavailabletitlesSourceidByIdGet200ApplicationXMLAvailableTitles[];
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class PatchavailabletitlesSourceidByIdGet200ApplicationJSONAvailableTitlesAvailableTitle extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "app_name" })
+    appName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "current_version" })
+    currentVersion?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_modified" })
+    lastModified?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name_id" })
+    nameId?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "publisher" })
+    publisher?: string;
+}
+
+export class PatchavailabletitlesSourceidByIdGet200ApplicationJSONAvailableTitles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "available_title" })
+    @Type(() => PatchavailabletitlesSourceidByIdGet200ApplicationJSONAvailableTitlesAvailableTitle)
+    availableTitle?: PatchavailabletitlesSourceidByIdGet200ApplicationJSONAvailableTitlesAvailableTitle;
+}
+
+/**
+ * OK
+ */
+export class PatchavailabletitlesSourceidByIdGet200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: PatchavailabletitlesSourceidByIdGet200ApplicationJSONAvailableTitles,
+    })
+    @Expose({ name: "available_titles" })
+    @Type(() => PatchavailabletitlesSourceidByIdGet200ApplicationJSONAvailableTitles)
+    availableTitles?: PatchavailabletitlesSourceidByIdGet200ApplicationJSONAvailableTitles[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
 export class PatchavailabletitlesSourceidByIdGetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     body?: Uint8Array;
@@ -21,15 +101,15 @@ export class PatchavailabletitlesSourceidByIdGetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     contentType: string;
 
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata()
+    patchavailabletitlesSourceidByIdGet200ApplicationJSONObject?: PatchavailabletitlesSourceidByIdGet200ApplicationJSON;
+
     @SpeakeasyMetadata()
     statusCode: number;
 
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
-
-    /**
-     * OK
-     */
-    @SpeakeasyMetadata()
-    patchAvailableTitles?: shared.PatchAvailableTitles;
 }

@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindComputerApplicationsByNameAndVersionAndInventoryRequest extends SpeakeasyBase {
     /**
@@ -26,6 +26,198 @@ export class FindComputerApplicationsByNameAndVersionAndInventoryRequest extends
     version: string;
 }
 
+export class FindComputerApplicationsByNameAndVersionAndInventory200ApplicationXMLUniqueComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    macAddress?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindComputerApplicationsByNameAndVersionAndInventory200ApplicationXMLUniqueComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerApplicationsByNameAndVersionAndInventory200ApplicationXMLUniqueComputersComputer,
+    })
+    computer?: FindComputerApplicationsByNameAndVersionAndInventory200ApplicationXMLUniqueComputersComputer[];
+}
+
+export class FindComputerApplicationsByNameAndVersionAndInventory200ApplicationXMLVersionsVersionComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    macAddress?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindComputerApplicationsByNameAndVersionAndInventory200ApplicationXMLVersionsVersionComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindComputerApplicationsByNameAndVersionAndInventory200ApplicationXMLVersionsVersionComputersComputer;
+}
+
+export class FindComputerApplicationsByNameAndVersionAndInventory200ApplicationXMLVersionsVersion extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerApplicationsByNameAndVersionAndInventory200ApplicationXMLVersionsVersionComputers,
+    })
+    computers?: FindComputerApplicationsByNameAndVersionAndInventory200ApplicationXMLVersionsVersionComputers[];
+
+    @SpeakeasyMetadata()
+    number?: string;
+}
+
+export class FindComputerApplicationsByNameAndVersionAndInventory200ApplicationXMLVersions extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerApplicationsByNameAndVersionAndInventory200ApplicationXMLVersionsVersion,
+        elemDepth: 2,
+    })
+    version?: FindComputerApplicationsByNameAndVersionAndInventory200ApplicationXMLVersionsVersion[][];
+}
+
+/**
+ * OK
+ */
+export class FindComputerApplicationsByNameAndVersionAndInventory200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    uniqueComputers?: FindComputerApplicationsByNameAndVersionAndInventory200ApplicationXMLUniqueComputers;
+
+    @SpeakeasyMetadata()
+    versions?: FindComputerApplicationsByNameAndVersionAndInventory200ApplicationXMLVersions;
+}
+
+export class FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONUniqueComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mac_address" })
+    macAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "serial_number" })
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONUniqueComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONUniqueComputersComputer,
+    })
+    @Expose({ name: "computer" })
+    @Type(
+        () =>
+            FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONUniqueComputersComputer
+    )
+    computer?: FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONUniqueComputersComputer[];
+}
+
+export class FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONVersionsVersionComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mac_address" })
+    macAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "serial_number" })
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONVersionsVersionComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(
+        () =>
+            FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONVersionsVersionComputersComputer
+    )
+    computer?: FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONVersionsVersionComputersComputer;
+}
+
+export class FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONVersionsVersion extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONVersionsVersionComputers,
+    })
+    @Expose({ name: "computers" })
+    @Type(
+        () =>
+            FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONVersionsVersionComputers
+    )
+    computers?: FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONVersionsVersionComputers[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "number" })
+    number?: string;
+}
+
+export class FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONVersions extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONVersionsVersion,
+        elemDepth: 2,
+    })
+    @Expose({ name: "version" })
+    @Type(
+        () => FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONVersionsVersion
+    )
+    version?: FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONVersionsVersion[][];
+}
+
+/**
+ * OK
+ */
+export class FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "unique_computers" })
+    @Type(
+        () => FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONUniqueComputers
+    )
+    uniqueComputers?: FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONUniqueComputers;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "versions" })
+    @Type(() => FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONVersions)
+    versions?: FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONVersions;
+}
+
 export class FindComputerApplicationsByNameAndVersionAndInventoryResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     body?: Uint8Array;
@@ -43,5 +235,5 @@ export class FindComputerApplicationsByNameAndVersionAndInventoryResponse extend
      * OK
      */
     @SpeakeasyMetadata()
-    computerApplications?: shared.ComputerApplications;
+    findComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONObject?: FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSON;
 }

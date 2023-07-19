@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class UpdateMobileDeviceProvisioningProfilesByNameRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,56 @@ export class UpdateMobileDeviceProvisioningProfilesByNameRequest extends Speakea
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
     name: string;
+}
+
+export class UpdateMobileDeviceProvisioningProfilesByName200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    displayName?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    uuid?: string;
+}
+
+/**
+ * OK
+ */
+export class UpdateMobileDeviceProvisioningProfilesByName200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    general?: UpdateMobileDeviceProvisioningProfilesByName200ApplicationXMLGeneral;
+}
+
+export class UpdateMobileDeviceProvisioningProfilesByName200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "display_name" })
+    displayName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uuid" })
+    uuid?: string;
+}
+
+/**
+ * OK
+ */
+export class UpdateMobileDeviceProvisioningProfilesByName200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => UpdateMobileDeviceProvisioningProfilesByName200ApplicationJSONGeneral)
+    general?: UpdateMobileDeviceProvisioningProfilesByName200ApplicationJSONGeneral;
 }
 
 export class UpdateMobileDeviceProvisioningProfilesByNameResponse extends SpeakeasyBase {
@@ -31,5 +81,5 @@ export class UpdateMobileDeviceProvisioningProfilesByNameResponse extends Speake
      * OK
      */
     @SpeakeasyMetadata()
-    mobileDeviceProvisioningProfile?: shared.MobileDeviceProvisioningProfile;
+    updateMobileDeviceProvisioningProfilesByName200ApplicationJSONObject?: UpdateMobileDeviceProvisioningProfilesByName200ApplicationJSON;
 }

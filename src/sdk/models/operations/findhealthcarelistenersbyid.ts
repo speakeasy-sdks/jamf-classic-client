@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindHealthcareListenersByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,233 @@ export class FindHealthcareListenersByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export class FindHealthcareListenersById200ApplicationXMLRulesRuleMdmCommandAdditionalData extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    lostModeFootnote?: string;
+
+    @SpeakeasyMetadata()
+    lostModeMessage?: string;
+
+    @SpeakeasyMetadata()
+    lostModeOption?: string;
+
+    @SpeakeasyMetadata()
+    lostModePersistent?: string;
+
+    @SpeakeasyMetadata()
+    lostModePhone?: string;
+
+    @SpeakeasyMetadata()
+    lostModeSound?: boolean;
+}
+
+export class FindHealthcareListenersById200ApplicationXMLRulesRuleNotificationEmails extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    email?: string;
+}
+
+export class FindHealthcareListenersById200ApplicationXMLRulesRule extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    adtMessage?: string;
+
+    @SpeakeasyMetadata()
+    adtMessageField?: string;
+
+    @SpeakeasyMetadata()
+    deviceInventoryField?: number;
+
+    @SpeakeasyMetadata()
+    hclId?: number;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    mdmCommand?: string;
+
+    @SpeakeasyMetadata()
+    mdmCommandAdditionalData?: FindHealthcareListenersById200ApplicationXMLRulesRuleMdmCommandAdditionalData;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    notificationEmails?: FindHealthcareListenersById200ApplicationXMLRulesRuleNotificationEmails;
+
+    @SpeakeasyMetadata()
+    notificationEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    notificationThreshold?: number;
+
+    @SpeakeasyMetadata()
+    notifyUnsupportedEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    operatingSystem?: string;
+}
+
+export class FindHealthcareListenersById200ApplicationXMLRules extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    rule?: FindHealthcareListenersById200ApplicationXMLRulesRule;
+}
+
+export class FindHealthcareListenersById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    enabled?: boolean;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    infratructureManagerId?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    port?: number;
+
+    @SpeakeasyMetadata()
+    rangeIps?: string;
+
+    @SpeakeasyMetadata({ elemType: FindHealthcareListenersById200ApplicationXMLRules })
+    rules?: FindHealthcareListenersById200ApplicationXMLRules[];
+
+    @SpeakeasyMetadata()
+    singleIps?: string;
+}
+
+export class FindHealthcareListenersById200ApplicationJSONRulesRuleMdmCommandAdditionalData extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "lost_mode_footnote" })
+    lostModeFootnote?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lost_mode_message" })
+    lostModeMessage?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lost_mode_option" })
+    lostModeOption?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lost_mode_persistent" })
+    lostModePersistent?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lost_mode_phone" })
+    lostModePhone?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lost_mode_sound" })
+    lostModeSound?: boolean;
+}
+
+export class FindHealthcareListenersById200ApplicationJSONRulesRuleNotificationEmails extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "email" })
+    email?: string;
+}
+
+export class FindHealthcareListenersById200ApplicationJSONRulesRule extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "adt_message" })
+    adtMessage?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "adt_message_field" })
+    adtMessageField?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "device_inventory_field" })
+    deviceInventoryField?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "hcl_id" })
+    hclId?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mdm_command" })
+    mdmCommand?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mdm_command_additional_data" })
+    @Type(() => FindHealthcareListenersById200ApplicationJSONRulesRuleMdmCommandAdditionalData)
+    mdmCommandAdditionalData?: FindHealthcareListenersById200ApplicationJSONRulesRuleMdmCommandAdditionalData;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_emails" })
+    @Type(() => FindHealthcareListenersById200ApplicationJSONRulesRuleNotificationEmails)
+    notificationEmails?: FindHealthcareListenersById200ApplicationJSONRulesRuleNotificationEmails;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_enabled" })
+    notificationEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_threshold" })
+    notificationThreshold?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notify_unsupported_enabled" })
+    notifyUnsupportedEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "operating_system" })
+    operatingSystem?: string;
+}
+
+export class FindHealthcareListenersById200ApplicationJSONRules extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "rule" })
+    @Type(() => FindHealthcareListenersById200ApplicationJSONRulesRule)
+    rule?: FindHealthcareListenersById200ApplicationJSONRulesRule;
+}
+
+export class FindHealthcareListenersById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "enabled" })
+    enabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "infratructure_manager_id" })
+    infratructureManagerId?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "port" })
+    port?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "range_ips" })
+    rangeIps?: string;
+
+    @SpeakeasyMetadata({ elemType: FindHealthcareListenersById200ApplicationJSONRules })
+    @Expose({ name: "rules" })
+    @Type(() => FindHealthcareListenersById200ApplicationJSONRules)
+    rules?: FindHealthcareListenersById200ApplicationJSONRules[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "single_ips" })
+    singleIps?: string;
 }
 
 export class FindHealthcareListenersByIdResponse extends SpeakeasyBase {
@@ -30,6 +257,6 @@ export class FindHealthcareListenersByIdResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.HealthcareListener })
-    healthcareListener?: shared.HealthcareListener[];
+    @SpeakeasyMetadata({ elemType: FindHealthcareListenersById200ApplicationJSON })
+    findHealthcareListenersById200ApplicationJSONObjects?: FindHealthcareListenersById200ApplicationJSON[];
 }

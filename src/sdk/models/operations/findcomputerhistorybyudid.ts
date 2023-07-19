@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindComputerHistoryByUDIDRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,998 @@ export class FindComputerHistoryByUDIDRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=udid" })
     udid: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLAuditsAudit extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    event?: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLAudits extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    audit?: FindComputerHistoryByUdid200ApplicationXMLAuditsAudit;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLCasperImagingLogsCasperImagingLog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    status?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLCasperImagingLogs extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    casperImagingLog?: FindComputerHistoryByUdid200ApplicationXMLCasperImagingLogsCasperImagingLog;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLCasperRemoteLogsCasperRemoteLog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    status?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLCasperRemoteLogs extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    casperRemoteLog?: FindComputerHistoryByUdid200ApplicationXMLCasperRemoteLogsCasperRemoteLog;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLCommandsCompletedCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    completed?: string;
+
+    @SpeakeasyMetadata()
+    completedEpoch?: string;
+
+    @SpeakeasyMetadata()
+    completedUtc?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLCommandsCompleted extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    command?: FindComputerHistoryByUdid200ApplicationXMLCommandsCompletedCommand;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLCommandsFailedCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    failed?: string;
+
+    @SpeakeasyMetadata()
+    failedEpoch?: string;
+
+    @SpeakeasyMetadata()
+    failedUtc?: string;
+
+    @SpeakeasyMetadata()
+    issued?: string;
+
+    @SpeakeasyMetadata()
+    issuedEpoch?: string;
+
+    @SpeakeasyMetadata()
+    issuedUtc?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    status?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLCommandsFailed extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    command?: FindComputerHistoryByUdid200ApplicationXMLCommandsFailedCommand;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLCommandsPendingCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    issued?: string;
+
+    @SpeakeasyMetadata()
+    issuedEpoch?: string;
+
+    @SpeakeasyMetadata()
+    issuedUtc?: string;
+
+    @SpeakeasyMetadata()
+    lastPush?: string;
+
+    @SpeakeasyMetadata()
+    lastPushEpoch?: string;
+
+    @SpeakeasyMetadata()
+    lastPushUtc?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    status?: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLCommandsPending extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    command?: FindComputerHistoryByUdid200ApplicationXMLCommandsPendingCommand;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLCommands extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationXMLCommandsCompleted })
+    completed?: FindComputerHistoryByUdid200ApplicationXMLCommandsCompleted[];
+
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationXMLCommandsFailed })
+    failed?: FindComputerHistoryByUdid200ApplicationXMLCommandsFailed[];
+
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationXMLCommandsPending })
+    pending?: FindComputerHistoryByUdid200ApplicationXMLCommandsPending[];
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLComputerUsageLogsUsageLog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    event?: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLComputerUsageLogs extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    usageLog?: FindComputerHistoryByUdid200ApplicationXMLComputerUsageLogsUsageLog;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    macAddress?: string;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLMacAppStoreApplicationsFailedApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    deployed?: string;
+
+    @SpeakeasyMetadata()
+    deployedEpoch?: number;
+
+    @SpeakeasyMetadata()
+    deployedUtc?: string;
+
+    @SpeakeasyMetadata()
+    lastUpdate?: string;
+
+    @SpeakeasyMetadata()
+    lastUpdateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    lastUpdateUtc?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    status?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLMacAppStoreApplicationsFailed extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    app?: FindComputerHistoryByUdid200ApplicationXMLMacAppStoreApplicationsFailedApp;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLMacAppStoreApplicationsInstalledApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    sizeMb?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLMacAppStoreApplicationsInstalled extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    app?: FindComputerHistoryByUdid200ApplicationXMLMacAppStoreApplicationsInstalledApp;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLMacAppStoreApplicationsPendingApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    deployed?: string;
+
+    @SpeakeasyMetadata()
+    deployedEpoch?: number;
+
+    @SpeakeasyMetadata()
+    deployedUtc?: string;
+
+    @SpeakeasyMetadata()
+    lastUpdate?: string;
+
+    @SpeakeasyMetadata()
+    lastUpdateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    lastUpdateUtc?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLMacAppStoreApplicationsPending extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    app?: FindComputerHistoryByUdid200ApplicationXMLMacAppStoreApplicationsPendingApp;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLMacAppStoreApplications extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputerHistoryByUdid200ApplicationXMLMacAppStoreApplicationsFailed,
+    })
+    failed?: FindComputerHistoryByUdid200ApplicationXMLMacAppStoreApplicationsFailed[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerHistoryByUdid200ApplicationXMLMacAppStoreApplicationsInstalled,
+    })
+    installed?: FindComputerHistoryByUdid200ApplicationXMLMacAppStoreApplicationsInstalled[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerHistoryByUdid200ApplicationXMLMacAppStoreApplicationsPending,
+    })
+    pending?: FindComputerHistoryByUdid200ApplicationXMLMacAppStoreApplicationsPending[];
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLPolicyLogsPolicyLog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    policyId?: number;
+
+    @SpeakeasyMetadata()
+    policyName?: string;
+
+    @SpeakeasyMetadata()
+    status?: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLPolicyLogs extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    policyLog?: FindComputerHistoryByUdid200ApplicationXMLPolicyLogsPolicyLog;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLScreenSharingLogsScreenSharingLog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    details?: string;
+
+    @SpeakeasyMetadata()
+    status?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLScreenSharingLogs extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    screenSharingLog?: FindComputerHistoryByUdid200ApplicationXMLScreenSharingLogsScreenSharingLog;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLUserLocationLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: string;
+
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    department?: string;
+
+    @SpeakeasyMetadata()
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    fullName?: string;
+
+    @SpeakeasyMetadata()
+    phoneNumber?: string;
+
+    @SpeakeasyMetadata()
+    position?: string;
+
+    @SpeakeasyMetadata()
+    room?: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationXMLUserLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    location?: FindComputerHistoryByUdid200ApplicationXMLUserLocationLocation;
+}
+
+/**
+ * OK
+ */
+export class FindComputerHistoryByUdid200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationXMLAudits })
+    audits?: FindComputerHistoryByUdid200ApplicationXMLAudits[];
+
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationXMLCasperImagingLogs })
+    casperImagingLogs?: FindComputerHistoryByUdid200ApplicationXMLCasperImagingLogs[];
+
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationXMLCasperRemoteLogs })
+    casperRemoteLogs?: FindComputerHistoryByUdid200ApplicationXMLCasperRemoteLogs[];
+
+    @SpeakeasyMetadata()
+    commands?: FindComputerHistoryByUdid200ApplicationXMLCommands;
+
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationXMLComputerUsageLogs })
+    computerUsageLogs?: FindComputerHistoryByUdid200ApplicationXMLComputerUsageLogs[];
+
+    @SpeakeasyMetadata()
+    general?: FindComputerHistoryByUdid200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata()
+    macAppStoreApplications?: FindComputerHistoryByUdid200ApplicationXMLMacAppStoreApplications;
+
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationXMLPolicyLogs })
+    policyLogs?: FindComputerHistoryByUdid200ApplicationXMLPolicyLogs[];
+
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationXMLScreenSharingLogs })
+    screenSharingLogs?: FindComputerHistoryByUdid200ApplicationXMLScreenSharingLogs[];
+
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationXMLUserLocation })
+    userLocation?: FindComputerHistoryByUdid200ApplicationXMLUserLocation[];
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONAuditsAudit extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_utc" })
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "event" })
+    event?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONAudits extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "audit" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONAuditsAudit)
+    audit?: FindComputerHistoryByUdid200ApplicationJSONAuditsAudit;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONCasperImagingLogsCasperImagingLog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_utc" })
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONCasperImagingLogs extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "casper_imaging_log" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONCasperImagingLogsCasperImagingLog)
+    casperImagingLog?: FindComputerHistoryByUdid200ApplicationJSONCasperImagingLogsCasperImagingLog;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONCasperRemoteLogsCasperRemoteLog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_utc" })
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONCasperRemoteLogs extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "casper_remote_log" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONCasperRemoteLogsCasperRemoteLog)
+    casperRemoteLog?: FindComputerHistoryByUdid200ApplicationJSONCasperRemoteLogsCasperRemoteLog;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONCommandsCompletedCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "completed" })
+    completed?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "completed_epoch" })
+    completedEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "completed_utc" })
+    completedUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONCommandsCompleted extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "command" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONCommandsCompletedCommand)
+    command?: FindComputerHistoryByUdid200ApplicationJSONCommandsCompletedCommand;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONCommandsFailedCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "failed" })
+    failed?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "failed_epoch" })
+    failedEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "failed_utc" })
+    failedUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "issued" })
+    issued?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "issued_epoch" })
+    issuedEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "issued_utc" })
+    issuedUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONCommandsFailed extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "command" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONCommandsFailedCommand)
+    command?: FindComputerHistoryByUdid200ApplicationJSONCommandsFailedCommand;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONCommandsPendingCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "issued" })
+    issued?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "issued_epoch" })
+    issuedEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "issued_utc" })
+    issuedUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_push" })
+    lastPush?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_push_epoch" })
+    lastPushEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_push_utc" })
+    lastPushUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONCommandsPending extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "command" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONCommandsPendingCommand)
+    command?: FindComputerHistoryByUdid200ApplicationJSONCommandsPendingCommand;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONCommands extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationJSONCommandsCompleted })
+    @Expose({ name: "completed" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONCommandsCompleted)
+    completed?: FindComputerHistoryByUdid200ApplicationJSONCommandsCompleted[];
+
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationJSONCommandsFailed })
+    @Expose({ name: "failed" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONCommandsFailed)
+    failed?: FindComputerHistoryByUdid200ApplicationJSONCommandsFailed[];
+
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationJSONCommandsPending })
+    @Expose({ name: "pending" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONCommandsPending)
+    pending?: FindComputerHistoryByUdid200ApplicationJSONCommandsPending[];
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONComputerUsageLogsUsageLog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_utc" })
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "event" })
+    event?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONComputerUsageLogs extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "usage_log" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONComputerUsageLogsUsageLog)
+    usageLog?: FindComputerHistoryByUdid200ApplicationJSONComputerUsageLogsUsageLog;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mac_address" })
+    macAddress?: string;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "serial_number" })
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsFailedApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "deployed" })
+    deployed?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "deployed_epoch" })
+    deployedEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "deployed_utc" })
+    deployedUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_update" })
+    lastUpdate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_update_epoch" })
+    lastUpdateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_update_utc" })
+    lastUpdateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsFailed extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "app" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsFailedApp)
+    app?: FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsFailedApp;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsInstalledApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size_mb" })
+    sizeMb?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsInstalled extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "app" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsInstalledApp)
+    app?: FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsInstalledApp;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsPendingApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "deployed" })
+    deployed?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "deployed_epoch" })
+    deployedEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "deployed_utc" })
+    deployedUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_update" })
+    lastUpdate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_update_epoch" })
+    lastUpdateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_update_utc" })
+    lastUpdateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsPending extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "app" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsPendingApp)
+    app?: FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsPendingApp;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplications extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsFailed,
+    })
+    @Expose({ name: "failed" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsFailed)
+    failed?: FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsFailed[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsInstalled,
+    })
+    @Expose({ name: "installed" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsInstalled)
+    installed?: FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsInstalled[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsPending,
+    })
+    @Expose({ name: "pending" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsPending)
+    pending?: FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplicationsPending[];
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONPolicyLogsPolicyLog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_utc" })
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "policy_id" })
+    policyId?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "policy_name" })
+    policyName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONPolicyLogs extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "policy_log" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONPolicyLogsPolicyLog)
+    policyLog?: FindComputerHistoryByUdid200ApplicationJSONPolicyLogsPolicyLog;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONScreenSharingLogsScreenSharingLog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_utc" })
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "details" })
+    details?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "status" })
+    status?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONScreenSharingLogs extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "screen_sharing_log" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONScreenSharingLogsScreenSharingLog)
+    screenSharingLog?: FindComputerHistoryByUdid200ApplicationJSONScreenSharingLogsScreenSharingLog;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONUserLocationLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    building?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_utc" })
+    dateTimeUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    department?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "email_address" })
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "full_name" })
+    fullName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone_number" })
+    phoneNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "position" })
+    position?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "room" })
+    room?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class FindComputerHistoryByUdid200ApplicationJSONUserLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "location" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONUserLocationLocation)
+    location?: FindComputerHistoryByUdid200ApplicationJSONUserLocationLocation;
+}
+
+/**
+ * OK
+ */
+export class FindComputerHistoryByUdid200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationJSONAudits })
+    @Expose({ name: "audits" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONAudits)
+    audits?: FindComputerHistoryByUdid200ApplicationJSONAudits[];
+
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationJSONCasperImagingLogs })
+    @Expose({ name: "casper_imaging_logs" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONCasperImagingLogs)
+    casperImagingLogs?: FindComputerHistoryByUdid200ApplicationJSONCasperImagingLogs[];
+
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationJSONCasperRemoteLogs })
+    @Expose({ name: "casper_remote_logs" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONCasperRemoteLogs)
+    casperRemoteLogs?: FindComputerHistoryByUdid200ApplicationJSONCasperRemoteLogs[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "commands" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONCommands)
+    commands?: FindComputerHistoryByUdid200ApplicationJSONCommands;
+
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationJSONComputerUsageLogs })
+    @Expose({ name: "computer_usage_logs" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONComputerUsageLogs)
+    computerUsageLogs?: FindComputerHistoryByUdid200ApplicationJSONComputerUsageLogs[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONGeneral)
+    general?: FindComputerHistoryByUdid200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mac_app_store_applications" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplications)
+    macAppStoreApplications?: FindComputerHistoryByUdid200ApplicationJSONMacAppStoreApplications;
+
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationJSONPolicyLogs })
+    @Expose({ name: "policy_logs" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONPolicyLogs)
+    policyLogs?: FindComputerHistoryByUdid200ApplicationJSONPolicyLogs[];
+
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationJSONScreenSharingLogs })
+    @Expose({ name: "screen_sharing_logs" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONScreenSharingLogs)
+    screenSharingLogs?: FindComputerHistoryByUdid200ApplicationJSONScreenSharingLogs[];
+
+    @SpeakeasyMetadata({ elemType: FindComputerHistoryByUdid200ApplicationJSONUserLocation })
+    @Expose({ name: "user_location" })
+    @Type(() => FindComputerHistoryByUdid200ApplicationJSONUserLocation)
+    userLocation?: FindComputerHistoryByUdid200ApplicationJSONUserLocation[];
 }
 
 export class FindComputerHistoryByUDIDResponse extends SpeakeasyBase {
@@ -31,5 +1023,5 @@ export class FindComputerHistoryByUDIDResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    computerHistory?: shared.ComputerHistory;
+    findComputerHistoryByUDID200ApplicationJSONObject?: FindComputerHistoryByUdid200ApplicationJSON;
 }

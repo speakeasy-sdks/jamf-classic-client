@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindComputerApplicationUsageByMacAddressRequest extends SpeakeasyBase {
     /**
@@ -26,6 +26,97 @@ export class FindComputerApplicationUsageByMacAddressRequest extends SpeakeasyBa
     startDate: string;
 }
 
+export class FindComputerApplicationUsageByMacAddress200ApplicationXMLUsageAppsApp extends SpeakeasyBase {
+    /**
+     * Number of minutes application was in the foreground
+     */
+    @SpeakeasyMetadata()
+    foreground?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    /**
+     * Number of minutes the application was open
+     */
+    @SpeakeasyMetadata()
+    open?: number;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindComputerApplicationUsageByMacAddress200ApplicationXMLUsageApps extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    app?: FindComputerApplicationUsageByMacAddress200ApplicationXMLUsageAppsApp;
+}
+
+export class FindComputerApplicationUsageByMacAddress200ApplicationXMLUsage extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputerApplicationUsageByMacAddress200ApplicationXMLUsageApps,
+    })
+    apps?: FindComputerApplicationUsageByMacAddress200ApplicationXMLUsageApps[];
+
+    @SpeakeasyMetadata()
+    date?: string;
+}
+
+export class FindComputerApplicationUsageByMacAddress200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    usage?: FindComputerApplicationUsageByMacAddress200ApplicationXMLUsage;
+}
+
+export class FindComputerApplicationUsageByMacAddress200ApplicationJSONUsageAppsApp extends SpeakeasyBase {
+    /**
+     * Number of minutes application was in the foreground
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "foreground" })
+    foreground?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    /**
+     * Number of minutes the application was open
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "open" })
+    open?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindComputerApplicationUsageByMacAddress200ApplicationJSONUsageApps extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "app" })
+    @Type(() => FindComputerApplicationUsageByMacAddress200ApplicationJSONUsageAppsApp)
+    app?: FindComputerApplicationUsageByMacAddress200ApplicationJSONUsageAppsApp;
+}
+
+export class FindComputerApplicationUsageByMacAddress200ApplicationJSONUsage extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputerApplicationUsageByMacAddress200ApplicationJSONUsageApps,
+    })
+    @Expose({ name: "apps" })
+    @Type(() => FindComputerApplicationUsageByMacAddress200ApplicationJSONUsageApps)
+    apps?: FindComputerApplicationUsageByMacAddress200ApplicationJSONUsageApps[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date" })
+    date?: string;
+}
+
+export class FindComputerApplicationUsageByMacAddress200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "usage" })
+    @Type(() => FindComputerApplicationUsageByMacAddress200ApplicationJSONUsage)
+    usage?: FindComputerApplicationUsageByMacAddress200ApplicationJSONUsage;
+}
+
 export class FindComputerApplicationUsageByMacAddressResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     body?: Uint8Array;
@@ -42,6 +133,6 @@ export class FindComputerApplicationUsageByMacAddressResponse extends SpeakeasyB
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.ComputerApplicationUsage })
-    computerApplicationUsage?: shared.ComputerApplicationUsage[];
+    @SpeakeasyMetadata({ elemType: FindComputerApplicationUsageByMacAddress200ApplicationJSON })
+    findComputerApplicationUsageByMacAddress200ApplicationJSONObjects?: FindComputerApplicationUsageByMacAddress200ApplicationJSON[];
 }

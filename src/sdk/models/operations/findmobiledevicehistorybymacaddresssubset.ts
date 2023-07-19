@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 /**
  * Subset to filter by
@@ -32,6 +32,973 @@ export class FindMobileDeviceHistoryByMacAddressSubsetRequest extends SpeakeasyB
     subset: FindMobileDeviceHistoryByMacAddressSubsetSubset;
 }
 
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsFailedApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsFailed extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    app?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsFailedApp;
+}
+
+export enum FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsInstalledAppStoreFromMobileDeviceAppCatalogManagementStatus {
+    Unmanaged = "Unmanaged",
+    Managed = "Managed",
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsInstalledAppStoreFromMobileDeviceAppCatalog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    bundleSize?: string;
+
+    @SpeakeasyMetadata()
+    dynamicSize?: string;
+
+    @SpeakeasyMetadata()
+    managementStatus?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsInstalledAppStoreFromMobileDeviceAppCatalogManagementStatus;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export enum FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsInstalledInHouseFromMobileDeviceAppCatalogManagementStatus {
+    Unmanaged = "Unmanaged",
+    Managed = "Managed",
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsInstalledInHouseFromMobileDeviceAppCatalog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    bundleSize?: string;
+
+    @SpeakeasyMetadata()
+    dynamicSize?: string;
+
+    @SpeakeasyMetadata()
+    managementStatus?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsInstalledInHouseFromMobileDeviceAppCatalogManagementStatus;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export enum FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsInstalledOtherManagementStatus {
+    Unmanaged = "Unmanaged",
+    Managed = "Managed",
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsInstalledOther extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    bundleSize?: string;
+
+    @SpeakeasyMetadata()
+    dynamicSize?: string;
+
+    @SpeakeasyMetadata()
+    managementStatus?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsInstalledOtherManagementStatus;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsInstalled extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    appStoreFromMobileDeviceAppCatalog?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsInstalledAppStoreFromMobileDeviceAppCatalog;
+
+    @SpeakeasyMetadata()
+    inHouseFromMobileDeviceAppCatalog?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsInstalledInHouseFromMobileDeviceAppCatalog;
+
+    @SpeakeasyMetadata()
+    other?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsInstalledOther;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsPendingApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsPending extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    app?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsPendingApp;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplications extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsFailed,
+    })
+    failed?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsFailed[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsInstalled,
+    })
+    installed?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsInstalled[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsPending,
+    })
+    pending?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplicationsPending[];
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLAuditsAudit extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: number;
+
+    @SpeakeasyMetadata()
+    event?: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLAudits extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    audit?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLAuditsAudit;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLEbooksFailed extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    author?: string;
+
+    @SpeakeasyMetadata()
+    kind?: string;
+
+    @SpeakeasyMetadata()
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    title?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLEbooksInstalledIbookstore extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    author?: string;
+
+    @SpeakeasyMetadata()
+    kind?: string;
+
+    @SpeakeasyMetadata()
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    title?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLEbooksInstalledInhouse extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    author?: string;
+
+    @SpeakeasyMetadata()
+    kind?: string;
+
+    @SpeakeasyMetadata()
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    title?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLEbooksInstalled extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType:
+            FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLEbooksInstalledIbookstore,
+    })
+    ibookstore?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLEbooksInstalledIbookstore[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLEbooksInstalledInhouse,
+    })
+    inhouse?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLEbooksInstalledInhouse[];
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLEbooksPending extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    author?: string;
+
+    @SpeakeasyMetadata()
+    kind?: string;
+
+    @SpeakeasyMetadata()
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    title?: string;
+
+    @SpeakeasyMetadata()
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLEbooks extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLEbooksFailed,
+    })
+    failed?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLEbooksFailed[];
+
+    @SpeakeasyMetadata()
+    installed?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLEbooksInstalled;
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLEbooksPending,
+    })
+    pending?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLEbooksPending[];
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    macAddress?: string;
+
+    /**
+     * Name of the device
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLManagementCommandsCompletedCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTimeCompleted?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeCompletedEpoch?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLManagementCommandsCompleted extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    command?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLManagementCommandsCompletedCommand;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLManagementCommandsFailedCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTimeFailed?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeFailedEpoch?: number;
+
+    @SpeakeasyMetadata()
+    dateTimeIssued?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeIssuedEpoch?: string;
+
+    @SpeakeasyMetadata()
+    error?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLManagementCommandsFailed extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    command?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLManagementCommandsFailedCommand;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLManagementCommandsPendingCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateTimeFailed?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeFailedEpoch?: number;
+
+    @SpeakeasyMetadata()
+    dateTimeIssued?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeIssuedEpoch?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLManagementCommandsPending extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    command?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLManagementCommandsPendingCommand;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLManagementCommands extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType:
+            FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLManagementCommandsCompleted,
+    })
+    completed?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLManagementCommandsCompleted[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLManagementCommandsFailed,
+    })
+    failed?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLManagementCommandsFailed[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLManagementCommandsPending,
+    })
+    pending?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLManagementCommandsPending[];
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLUserLocationLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    building?: string;
+
+    @SpeakeasyMetadata()
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    dateTimeEpoch?: number;
+
+    @SpeakeasyMetadata()
+    department?: string;
+
+    @SpeakeasyMetadata()
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    fullName?: string;
+
+    @SpeakeasyMetadata()
+    phoneNumber?: string;
+
+    @SpeakeasyMetadata()
+    position?: string;
+
+    @SpeakeasyMetadata()
+    room?: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLUserLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    location?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLUserLocationLocation;
+}
+
+/**
+ * OK
+ */
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    applications?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLApplications;
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLAudits,
+    })
+    audits?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLAudits[];
+
+    @SpeakeasyMetadata()
+    ebooks?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLEbooks;
+
+    @SpeakeasyMetadata()
+    general?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata()
+    managementCommands?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLManagementCommands;
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLUserLocation,
+    })
+    userLocation?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationXMLUserLocation[];
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsFailedApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsFailed extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "app" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsFailedApp)
+    app?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsFailedApp;
+}
+
+export enum FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalledAppStoreFromMobileDeviceAppCatalogManagementStatus {
+    Unmanaged = "Unmanaged",
+    Managed = "Managed",
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalledAppStoreFromMobileDeviceAppCatalog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "bundle_size" })
+    bundleSize?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "dynamic_size" })
+    dynamicSize?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalledAppStoreFromMobileDeviceAppCatalogManagementStatus;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export enum FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalledInHouseFromMobileDeviceAppCatalogManagementStatus {
+    Unmanaged = "Unmanaged",
+    Managed = "Managed",
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalledInHouseFromMobileDeviceAppCatalog extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "bundle_size" })
+    bundleSize?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "dynamic_size" })
+    dynamicSize?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalledInHouseFromMobileDeviceAppCatalogManagementStatus;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export enum FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalledOtherManagementStatus {
+    Unmanaged = "Unmanaged",
+    Managed = "Managed",
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalledOther extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "bundle_size" })
+    bundleSize?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "dynamic_size" })
+    dynamicSize?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalledOtherManagementStatus;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalled extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "app_store_from_mobile_device_app_catalog" })
+    @Type(
+        () =>
+            FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalledAppStoreFromMobileDeviceAppCatalog
+    )
+    appStoreFromMobileDeviceAppCatalog?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalledAppStoreFromMobileDeviceAppCatalog;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "in_house_from_mobile_device_app_catalog" })
+    @Type(
+        () =>
+            FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalledInHouseFromMobileDeviceAppCatalog
+    )
+    inHouseFromMobileDeviceAppCatalog?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalledInHouseFromMobileDeviceAppCatalog;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "other" })
+    @Type(
+        () => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalledOther
+    )
+    other?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalledOther;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsPendingApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsPending extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "app" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsPendingApp)
+    app?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsPendingApp;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplications extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsFailed,
+    })
+    @Expose({ name: "failed" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsFailed)
+    failed?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsFailed[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalled,
+    })
+    @Expose({ name: "installed" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalled)
+    installed?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsInstalled[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsPending,
+    })
+    @Expose({ name: "pending" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsPending)
+    pending?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplicationsPending[];
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONAuditsAudit extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "event" })
+    event?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONAudits extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "audit" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONAuditsAudit)
+    audit?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONAuditsAudit;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksFailed extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "author" })
+    author?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "kind" })
+    kind?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "title" })
+    title?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksInstalledIbookstore extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "author" })
+    author?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "kind" })
+    kind?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "title" })
+    title?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksInstalledInhouse extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "author" })
+    author?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "kind" })
+    kind?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "title" })
+    title?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksInstalled extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType:
+            FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksInstalledIbookstore,
+    })
+    @Expose({ name: "ibookstore" })
+    @Type(
+        () => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksInstalledIbookstore
+    )
+    ibookstore?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksInstalledIbookstore[];
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksInstalledInhouse,
+    })
+    @Expose({ name: "inhouse" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksInstalledInhouse)
+    inhouse?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksInstalledInhouse[];
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksPending extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "author" })
+    author?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "kind" })
+    kind?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_status" })
+    managementStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "title" })
+    title?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "version" })
+    version?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooks extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksFailed,
+    })
+    @Expose({ name: "failed" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksFailed)
+    failed?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksFailed[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "installed" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksInstalled)
+    installed?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksInstalled;
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksPending,
+    })
+    @Expose({ name: "pending" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksPending)
+    pending?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooksPending[];
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mac_address" })
+    macAddress?: string;
+
+    /**
+     * Name of the device
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "serial_number" })
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsCompletedCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_completed" })
+    dateTimeCompleted?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_completed_epoch" })
+    dateTimeCompletedEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsCompleted extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "command" })
+    @Type(
+        () =>
+            FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsCompletedCommand
+    )
+    command?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsCompletedCommand;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsFailedCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_failed" })
+    dateTimeFailed?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_failed_epoch" })
+    dateTimeFailedEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_issued" })
+    dateTimeIssued?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_issued_epoch" })
+    dateTimeIssuedEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "error" })
+    error?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsFailed extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "command" })
+    @Type(
+        () =>
+            FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsFailedCommand
+    )
+    command?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsFailedCommand;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsPendingCommand extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_failed" })
+    dateTimeFailed?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_failed_epoch" })
+    dateTimeFailedEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_issued" })
+    dateTimeIssued?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_issued_epoch" })
+    dateTimeIssuedEpoch?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsPending extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "command" })
+    @Type(
+        () =>
+            FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsPendingCommand
+    )
+    command?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsPendingCommand;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommands extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType:
+            FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsCompleted,
+    })
+    @Expose({ name: "completed" })
+    @Type(
+        () => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsCompleted
+    )
+    completed?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsCompleted[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsFailed,
+    })
+    @Expose({ name: "failed" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsFailed)
+    failed?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsFailed[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsPending,
+    })
+    @Expose({ name: "pending" })
+    @Type(
+        () => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsPending
+    )
+    pending?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommandsPending[];
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONUserLocationLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "building" })
+    building?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time" })
+    dateTime?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_time_epoch" })
+    dateTimeEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "department" })
+    department?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "email_address" })
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "full_name" })
+    fullName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone_number" })
+    phoneNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "position" })
+    position?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "room" })
+    room?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
+
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONUserLocation extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "location" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONUserLocationLocation)
+    location?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONUserLocationLocation;
+}
+
+/**
+ * OK
+ */
+export class FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "applications" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplications)
+    applications?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONApplications;
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONAudits,
+    })
+    @Expose({ name: "audits" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONAudits)
+    audits?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONAudits[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "ebooks" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooks)
+    ebooks?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONEbooks;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONGeneral)
+    general?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "management_commands" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommands)
+    managementCommands?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONManagementCommands;
+
+    @SpeakeasyMetadata({
+        elemType: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONUserLocation,
+    })
+    @Expose({ name: "user_location" })
+    @Type(() => FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONUserLocation)
+    userLocation?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSONUserLocation[];
+}
+
 export class FindMobileDeviceHistoryByMacAddressSubsetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     body?: Uint8Array;
@@ -49,5 +1016,5 @@ export class FindMobileDeviceHistoryByMacAddressSubsetResponse extends Speakeasy
      * OK
      */
     @SpeakeasyMetadata()
-    mobileDeviceHistory?: shared.MobileDeviceHistory;
+    findMobileDeviceHistoryByMacAddressSubset200ApplicationJSONObject?: FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSON;
 }

@@ -3,8 +3,44 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindMobileDeviceConfigurationProfiles200ApplicationXMLConfigurationProfile extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the configuration profile
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceConfigurationProfiles200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    configurationProfile?: FindMobileDeviceConfigurationProfiles200ApplicationXMLConfigurationProfile;
+}
+
+export class FindMobileDeviceConfigurationProfiles200ApplicationJSONConfigurationProfile extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the configuration profile
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceConfigurationProfiles200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "configuration_profile" })
+    @Type(() => FindMobileDeviceConfigurationProfiles200ApplicationJSONConfigurationProfile)
+    configurationProfile?: FindMobileDeviceConfigurationProfiles200ApplicationJSONConfigurationProfile;
+}
 
 export class FindMobileDeviceConfigurationProfilesResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +58,6 @@ export class FindMobileDeviceConfigurationProfilesResponse extends SpeakeasyBase
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.MobileDeviceConfigurationProfiles })
-    mobileDeviceConfigurationProfiles?: shared.MobileDeviceConfigurationProfiles[];
+    @SpeakeasyMetadata({ elemType: FindMobileDeviceConfigurationProfiles200ApplicationJSON })
+    findMobileDeviceConfigurationProfiles200ApplicationJSONObjects?: FindMobileDeviceConfigurationProfiles200ApplicationJSON[];
 }

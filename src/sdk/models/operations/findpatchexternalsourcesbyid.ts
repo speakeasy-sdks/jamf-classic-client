@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose } from "class-transformer";
 
 export class FindPatchExternalSourcesByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,51 @@ export class FindPatchExternalSourcesByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: string;
+}
+
+/**
+ * OK
+ */
+export class FindPatchExternalSourcesById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    hostName?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    port?: number;
+
+    @SpeakeasyMetadata()
+    sslEnabled?: boolean;
+}
+
+/**
+ * OK
+ */
+export class FindPatchExternalSourcesById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "host_name" })
+    hostName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "port" })
+    port?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "ssl_enabled" })
+    sslEnabled?: boolean;
 }
 
 export class FindPatchExternalSourcesByIdResponse extends SpeakeasyBase {
@@ -31,5 +76,5 @@ export class FindPatchExternalSourcesByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    patchExternalSource?: shared.PatchExternalSource;
+    findPatchExternalSourcesById200ApplicationJSONObject?: FindPatchExternalSourcesById200ApplicationJSON;
 }

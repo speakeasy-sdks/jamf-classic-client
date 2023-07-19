@@ -1,0 +1,10 @@
+# FindDockItemsById200ApplicationJSONType
+
+
+## Values
+
+| Name     | Value    |
+| -------- | -------- |
+| `App`    | App      |
+| `File`   | File     |
+| `Folder` | Folder   |

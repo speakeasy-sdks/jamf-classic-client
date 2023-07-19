@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindUsersByEmailAddressRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,390 @@ export class FindUsersByEmailAddressRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=email" })
     email: string;
+}
+
+export enum FindUsersByEmailAddress200ApplicationXMLExtensionAttributesExtensionAttributeType {
+    String = "String",
+    Integer = "Integer",
+    Date = "Date",
+}
+
+export class FindUsersByEmailAddress200ApplicationXMLExtensionAttributesExtensionAttribute extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    type?: FindUsersByEmailAddress200ApplicationXMLExtensionAttributesExtensionAttributeType;
+
+    @SpeakeasyMetadata()
+    value?: string;
+}
+
+export class FindUsersByEmailAddress200ApplicationXMLExtensionAttributes extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    extensionAttribute?: FindUsersByEmailAddress200ApplicationXMLExtensionAttributesExtensionAttribute;
+}
+
+export class FindUsersByEmailAddress200ApplicationXMLLdapServer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindUsersByEmailAddress200ApplicationXMLLinksComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindUsersByEmailAddress200ApplicationXMLLinksComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindUsersByEmailAddress200ApplicationXMLLinksComputersComputer;
+}
+
+export class FindUsersByEmailAddress200ApplicationXMLLinksMobileDevicesMobileDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindUsersByEmailAddress200ApplicationXMLLinksMobileDevices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    mobileDevice?: FindUsersByEmailAddress200ApplicationXMLLinksMobileDevicesMobileDevice;
+}
+
+export class FindUsersByEmailAddress200ApplicationXMLLinksPeripheralsPeripheral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindUsersByEmailAddress200ApplicationXMLLinksPeripherals extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    peripheral?: FindUsersByEmailAddress200ApplicationXMLLinksPeripheralsPeripheral;
+}
+
+export class FindUsersByEmailAddress200ApplicationXMLLinksVppAssignmentsVppAssignment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindUsersByEmailAddress200ApplicationXMLLinksVppAssignments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    vppAssignment?: FindUsersByEmailAddress200ApplicationXMLLinksVppAssignmentsVppAssignment;
+}
+
+export class FindUsersByEmailAddress200ApplicationXMLLinks extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computers?: FindUsersByEmailAddress200ApplicationXMLLinksComputers;
+
+    @SpeakeasyMetadata()
+    mobileDevices?: FindUsersByEmailAddress200ApplicationXMLLinksMobileDevices;
+
+    @SpeakeasyMetadata()
+    peripherals?: FindUsersByEmailAddress200ApplicationXMLLinksPeripherals;
+
+    @SpeakeasyMetadata()
+    totalVppCodeCount?: number;
+
+    @SpeakeasyMetadata()
+    vppAssignments?: FindUsersByEmailAddress200ApplicationXMLLinksVppAssignments;
+}
+
+export class FindUsersByEmailAddress200ApplicationXMLSitesSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export class FindUsersByEmailAddress200ApplicationXMLSites extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    site?: FindUsersByEmailAddress200ApplicationXMLSitesSite;
+}
+
+/**
+ * OK
+ */
+export class FindUsersByEmailAddress200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    customPhotoUrl?: string;
+
+    @SpeakeasyMetadata()
+    email?: string;
+
+    @SpeakeasyMetadata()
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    enableCustomPhotoUrl?: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindUsersByEmailAddress200ApplicationXMLExtensionAttributes })
+    extensionAttributes?: FindUsersByEmailAddress200ApplicationXMLExtensionAttributes[];
+
+    @SpeakeasyMetadata()
+    fullName?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    ldapServer?: FindUsersByEmailAddress200ApplicationXMLLdapServer;
+
+    @SpeakeasyMetadata()
+    links?: FindUsersByEmailAddress200ApplicationXMLLinks;
+
+    /**
+     * Name of the user
+     */
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    phoneNumber?: string;
+
+    @SpeakeasyMetadata()
+    position?: string;
+
+    @SpeakeasyMetadata({ elemType: FindUsersByEmailAddress200ApplicationXMLSites })
+    sites?: FindUsersByEmailAddress200ApplicationXMLSites[];
+}
+
+export enum FindUsersByEmailAddress200ApplicationJSONExtensionAttributesExtensionAttributeType {
+    String = "String",
+    Integer = "Integer",
+    Date = "Date",
+}
+
+export class FindUsersByEmailAddress200ApplicationJSONExtensionAttributesExtensionAttribute extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: FindUsersByEmailAddress200ApplicationJSONExtensionAttributesExtensionAttributeType;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "value" })
+    value?: string;
+}
+
+export class FindUsersByEmailAddress200ApplicationJSONExtensionAttributes extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "extension_attribute" })
+    @Type(() => FindUsersByEmailAddress200ApplicationJSONExtensionAttributesExtensionAttribute)
+    extensionAttribute?: FindUsersByEmailAddress200ApplicationJSONExtensionAttributesExtensionAttribute;
+}
+
+export class FindUsersByEmailAddress200ApplicationJSONLdapServer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindUsersByEmailAddress200ApplicationJSONLinksComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindUsersByEmailAddress200ApplicationJSONLinksComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(() => FindUsersByEmailAddress200ApplicationJSONLinksComputersComputer)
+    computer?: FindUsersByEmailAddress200ApplicationJSONLinksComputersComputer;
+}
+
+export class FindUsersByEmailAddress200ApplicationJSONLinksMobileDevicesMobileDevice extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindUsersByEmailAddress200ApplicationJSONLinksMobileDevices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mobile_device" })
+    @Type(() => FindUsersByEmailAddress200ApplicationJSONLinksMobileDevicesMobileDevice)
+    mobileDevice?: FindUsersByEmailAddress200ApplicationJSONLinksMobileDevicesMobileDevice;
+}
+
+export class FindUsersByEmailAddress200ApplicationJSONLinksPeripheralsPeripheral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindUsersByEmailAddress200ApplicationJSONLinksPeripherals extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "peripheral" })
+    @Type(() => FindUsersByEmailAddress200ApplicationJSONLinksPeripheralsPeripheral)
+    peripheral?: FindUsersByEmailAddress200ApplicationJSONLinksPeripheralsPeripheral;
+}
+
+export class FindUsersByEmailAddress200ApplicationJSONLinksVppAssignmentsVppAssignment extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindUsersByEmailAddress200ApplicationJSONLinksVppAssignments extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "vpp_assignment" })
+    @Type(() => FindUsersByEmailAddress200ApplicationJSONLinksVppAssignmentsVppAssignment)
+    vppAssignment?: FindUsersByEmailAddress200ApplicationJSONLinksVppAssignmentsVppAssignment;
+}
+
+export class FindUsersByEmailAddress200ApplicationJSONLinks extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computers" })
+    @Type(() => FindUsersByEmailAddress200ApplicationJSONLinksComputers)
+    computers?: FindUsersByEmailAddress200ApplicationJSONLinksComputers;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mobile_devices" })
+    @Type(() => FindUsersByEmailAddress200ApplicationJSONLinksMobileDevices)
+    mobileDevices?: FindUsersByEmailAddress200ApplicationJSONLinksMobileDevices;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "peripherals" })
+    @Type(() => FindUsersByEmailAddress200ApplicationJSONLinksPeripherals)
+    peripherals?: FindUsersByEmailAddress200ApplicationJSONLinksPeripherals;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "total_vpp_code_count" })
+    totalVppCodeCount?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "vpp_assignments" })
+    @Type(() => FindUsersByEmailAddress200ApplicationJSONLinksVppAssignments)
+    vppAssignments?: FindUsersByEmailAddress200ApplicationJSONLinksVppAssignments;
+}
+
+export class FindUsersByEmailAddress200ApplicationJSONSitesSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+export class FindUsersByEmailAddress200ApplicationJSONSites extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindUsersByEmailAddress200ApplicationJSONSitesSite)
+    site?: FindUsersByEmailAddress200ApplicationJSONSitesSite;
+}
+
+/**
+ * OK
+ */
+export class FindUsersByEmailAddress200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "custom_photo_url" })
+    customPhotoUrl?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "email" })
+    email?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "email_address" })
+    emailAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "enable_custom_photo_url" })
+    enableCustomPhotoUrl?: boolean;
+
+    @SpeakeasyMetadata({ elemType: FindUsersByEmailAddress200ApplicationJSONExtensionAttributes })
+    @Expose({ name: "extension_attributes" })
+    @Type(() => FindUsersByEmailAddress200ApplicationJSONExtensionAttributes)
+    extensionAttributes?: FindUsersByEmailAddress200ApplicationJSONExtensionAttributes[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "full_name" })
+    fullName?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "ldap_server" })
+    @Type(() => FindUsersByEmailAddress200ApplicationJSONLdapServer)
+    ldapServer?: FindUsersByEmailAddress200ApplicationJSONLdapServer;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "links" })
+    @Type(() => FindUsersByEmailAddress200ApplicationJSONLinks)
+    links?: FindUsersByEmailAddress200ApplicationJSONLinks;
+
+    /**
+     * Name of the user
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "phone_number" })
+    phoneNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "position" })
+    position?: string;
+
+    @SpeakeasyMetadata({ elemType: FindUsersByEmailAddress200ApplicationJSONSites })
+    @Expose({ name: "sites" })
+    @Type(() => FindUsersByEmailAddress200ApplicationJSONSites)
+    sites?: FindUsersByEmailAddress200ApplicationJSONSites[];
 }
 
 export class FindUsersByEmailAddressResponse extends SpeakeasyBase {
@@ -31,5 +415,5 @@ export class FindUsersByEmailAddressResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    user?: shared.User;
+    findUsersByEmailAddress200ApplicationJSONObject?: FindUsersByEmailAddress200ApplicationJSON;
 }

@@ -3,8 +3,45 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindPrinters200ApplicationXMLPrinter extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPrinters200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    printer?: FindPrinters200ApplicationXMLPrinter;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindPrinters200ApplicationJSONPrinter extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPrinters200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "printer" })
+    @Type(() => FindPrinters200ApplicationJSONPrinter)
+    printer?: FindPrinters200ApplicationJSONPrinter;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
 
 export class FindPrintersResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +59,6 @@ export class FindPrintersResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.Printers })
-    printers?: shared.Printers[];
+    @SpeakeasyMetadata({ elemType: FindPrinters200ApplicationJSON })
+    findPrinters200ApplicationJSONObjects?: FindPrinters200ApplicationJSON[];
 }

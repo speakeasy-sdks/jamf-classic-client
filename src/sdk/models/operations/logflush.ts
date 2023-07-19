@@ -5,6 +5,57 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AxiosResponse } from "axios";
 
+export class LogFlushRequestBodyComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+}
+
+export class LogFlushRequestBodyComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: LogFlushRequestBodyComputersComputer;
+}
+
+export enum LogFlushRequestBodyInterval {
+    ZeroDays = "Zero Days",
+    ZeroWeeks = "Zero Weeks",
+    ZeroMonths = "Zero Months",
+    ZeroYears = "Zero Years",
+    OneDays = "One Days",
+    OneWeeks = "One Weeks",
+    OneMonths = "One Months",
+    OneYears = "One Years",
+    TwoDays = "Two Days",
+    TwoWeeks = "Two Weeks",
+    TwoMonths = "Two Months",
+    TwoYears = "Two Years",
+    ThreeDays = "Three Days",
+    ThreeWeeks = "Three Weeks",
+    ThreeMonths = "Three Months",
+    ThreeYears = "Three Years",
+    SixDays = "Six Days",
+    SixWeeks = "Six Weeks",
+    SixMonths = "Six Months",
+    SixYears = "Six Years",
+}
+
+export enum LogFlushRequestBodyLog {
+    Policy = "policy",
+}
+
+export class LogFlushRequestBody extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computers?: LogFlushRequestBodyComputers;
+
+    @SpeakeasyMetadata()
+    interval: LogFlushRequestBodyInterval;
+
+    @SpeakeasyMetadata()
+    log: LogFlushRequestBodyLog;
+
+    @SpeakeasyMetadata()
+    logId: number;
+}
+
 export class LogFlushResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     contentType: string;

@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 /**
  * Subset to filter by
@@ -42,6 +42,546 @@ export class FindComputerManagementBySerialNumberUsernameSubsetRequest extends S
     username: string;
 }
 
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLEbooksEbook extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLEbooks extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    ebook?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLEbooksEbook;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    macAddress?: string;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLMacAppStoreAppsMacAppStoreApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLMacAppStoreApps extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    macAppStoreApp?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLMacAppStoreAppsMacAppStoreApp;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLManagedPreferenceProfilesProfile extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLManagedPreferenceProfiles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    profile?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLManagedPreferenceProfilesProfile;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLOsXConfigurationProfilesProfile extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLOsXConfigurationProfiles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    profile?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLOsXConfigurationProfilesProfile;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLPatchPoliciesPatchPolicy extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLPatchPolicies extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    patchPolicy?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLPatchPoliciesPatchPolicy;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLPatchReportingSoftwareTitlesTitle extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    installedVersion?: string;
+
+    @SpeakeasyMetadata()
+    latestVersion?: string;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLPatchReportingSoftwareTitles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    title?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLPatchReportingSoftwareTitlesTitle;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLPoliciesPolicy extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    trigger?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLPolicies extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    policy?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLPoliciesPolicy;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLRestrictedSoftwareSoftware extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLRestrictedSoftware extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    software?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLRestrictedSoftwareSoftware;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLSmartGroupsGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLSmartGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    group?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLSmartGroupsGroup;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLStaticGroupsGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLStaticGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    group?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLStaticGroupsGroup;
+}
+
+/**
+ * OK
+ */
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLEbooks,
+    })
+    ebooks?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLEbooks[];
+
+    @SpeakeasyMetadata()
+    general?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLGeneral;
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLMacAppStoreApps,
+    })
+    macAppStoreApps?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLMacAppStoreApps[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLManagedPreferenceProfiles,
+    })
+    managedPreferenceProfiles?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLManagedPreferenceProfiles[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLOsXConfigurationProfiles,
+    })
+    osXConfigurationProfiles?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLOsXConfigurationProfiles[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLPatchPolicies,
+    })
+    patchPolicies?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLPatchPolicies[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLPatchReportingSoftwareTitles,
+    })
+    patchReportingSoftwareTitles?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLPatchReportingSoftwareTitles[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLPolicies,
+    })
+    policies?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLPolicies[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLRestrictedSoftware,
+    })
+    restrictedSoftware?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLRestrictedSoftware[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLSmartGroups,
+    })
+    smartGroups?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLSmartGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLStaticGroups,
+    })
+    staticGroups?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationXMLStaticGroups[];
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONEbooksEbook extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONEbooks extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "ebook" })
+    @Type(() => FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONEbooksEbook)
+    ebook?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONEbooksEbook;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mac_address" })
+    macAddress?: string;
+
+    /**
+     * Name of the computer
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "serial_number" })
+    serialNumber?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONMacAppStoreAppsMacAppStoreApp extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONMacAppStoreApps extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "mac_app_store_app" })
+    @Type(
+        () =>
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONMacAppStoreAppsMacAppStoreApp
+    )
+    macAppStoreApp?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONMacAppStoreAppsMacAppStoreApp;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONManagedPreferenceProfilesProfile extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONManagedPreferenceProfiles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "profile" })
+    @Type(
+        () =>
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONManagedPreferenceProfilesProfile
+    )
+    profile?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONManagedPreferenceProfilesProfile;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONOsXConfigurationProfilesProfile extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONOsXConfigurationProfiles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "profile" })
+    @Type(
+        () =>
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONOsXConfigurationProfilesProfile
+    )
+    profile?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONOsXConfigurationProfilesProfile;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPatchPoliciesPatchPolicy extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPatchPolicies extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "patch_policy" })
+    @Type(
+        () =>
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPatchPoliciesPatchPolicy
+    )
+    patchPolicy?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPatchPoliciesPatchPolicy;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPatchReportingSoftwareTitlesTitle extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "installed_version" })
+    installedVersion?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "latest_version" })
+    latestVersion?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPatchReportingSoftwareTitles extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "title" })
+    @Type(
+        () =>
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPatchReportingSoftwareTitlesTitle
+    )
+    title?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPatchReportingSoftwareTitlesTitle;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPoliciesPolicy extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "trigger" })
+    trigger?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPolicies extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "policy" })
+    @Type(() => FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPoliciesPolicy)
+    policy?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPoliciesPolicy;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONRestrictedSoftwareSoftware extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONRestrictedSoftware extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "software" })
+    @Type(
+        () =>
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONRestrictedSoftwareSoftware
+    )
+    software?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONRestrictedSoftwareSoftware;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONSmartGroupsGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONSmartGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "group" })
+    @Type(
+        () => FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONSmartGroupsGroup
+    )
+    group?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONSmartGroupsGroup;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONStaticGroupsGroup extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONStaticGroups extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "group" })
+    @Type(
+        () => FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONStaticGroupsGroup
+    )
+    group?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONStaticGroupsGroup;
+}
+
+/**
+ * OK
+ */
+export class FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONEbooks,
+    })
+    @Expose({ name: "ebooks" })
+    @Type(() => FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONEbooks)
+    ebooks?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONEbooks[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONGeneral)
+    general?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONGeneral;
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONMacAppStoreApps,
+    })
+    @Expose({ name: "mac_app_store_apps" })
+    @Type(() => FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONMacAppStoreApps)
+    macAppStoreApps?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONMacAppStoreApps[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONManagedPreferenceProfiles,
+    })
+    @Expose({ name: "managed_preference_profiles" })
+    @Type(
+        () =>
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONManagedPreferenceProfiles
+    )
+    managedPreferenceProfiles?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONManagedPreferenceProfiles[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONOsXConfigurationProfiles,
+    })
+    @Expose({ name: "os_x_configuration_profiles" })
+    @Type(
+        () =>
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONOsXConfigurationProfiles
+    )
+    osXConfigurationProfiles?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONOsXConfigurationProfiles[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPatchPolicies,
+    })
+    @Expose({ name: "patch_policies" })
+    @Type(() => FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPatchPolicies)
+    patchPolicies?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPatchPolicies[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPatchReportingSoftwareTitles,
+    })
+    @Expose({ name: "patch_reporting_software_titles" })
+    @Type(
+        () =>
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPatchReportingSoftwareTitles
+    )
+    patchReportingSoftwareTitles?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPatchReportingSoftwareTitles[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPolicies,
+    })
+    @Expose({ name: "policies" })
+    @Type(() => FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPolicies)
+    policies?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONPolicies[];
+
+    @SpeakeasyMetadata({
+        elemType:
+            FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONRestrictedSoftware,
+    })
+    @Expose({ name: "restricted_software" })
+    @Type(
+        () => FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONRestrictedSoftware
+    )
+    restrictedSoftware?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONRestrictedSoftware[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONSmartGroups,
+    })
+    @Expose({ name: "smart_groups" })
+    @Type(() => FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONSmartGroups)
+    smartGroups?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONSmartGroups[];
+
+    @SpeakeasyMetadata({
+        elemType: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONStaticGroups,
+    })
+    @Expose({ name: "static_groups" })
+    @Type(() => FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONStaticGroups)
+    staticGroups?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSONStaticGroups[];
+}
+
 export class FindComputerManagementBySerialNumberUsernameSubsetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     body?: Uint8Array;
@@ -59,5 +599,5 @@ export class FindComputerManagementBySerialNumberUsernameSubsetResponse extends 
      * OK
      */
     @SpeakeasyMetadata()
-    computerManagement?: shared.ComputerManagement;
+    findComputerManagementBySerialNumberUsernameSubset200ApplicationJSONObject?: FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSON;
 }

@@ -1,0 +1,12 @@
+# FindEBooksByName200ApplicationXML
+
+OK
+
+
+## Fields
+
+| Field                                                                                                                   | Type                                                                                                                    | Required                                                                                                                | Description                                                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `general`                                                                                                               | [FindEBooksByName200ApplicationXMLGeneral](../../models/operations/findebooksbyname200applicationxmlgeneral.md)         | :heavy_minus_sign:                                                                                                      | N/A                                                                                                                     |
+| `scope`                                                                                                                 | [FindEBooksByName200ApplicationXMLScope](../../models/operations/findebooksbyname200applicationxmlscope.md)             | :heavy_minus_sign:                                                                                                      | N/A                                                                                                                     |
+| `selfService`                                                                                                           | [FindEBooksByName200ApplicationXMLSelfService](../../models/operations/findebooksbyname200applicationxmlselfservice.md) | :heavy_minus_sign:                                                                                                      | N/A                                                                                                                     |

@@ -3,8 +3,131 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindComputerCommands200ApplicationXMLComputerCommandComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    ipAddress?: string;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+
+    @SpeakeasyMetadata()
+    users?: string;
+}
+
+export class FindComputerCommands200ApplicationXMLComputerCommandComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computer?: FindComputerCommands200ApplicationXMLComputerCommandComputersComputer;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindComputerCommands200ApplicationXMLComputerCommand extends SpeakeasyBase {
+    /**
+     * Command type
+     */
+    @SpeakeasyMetadata()
+    command?: string;
+
+    @SpeakeasyMetadata({ elemType: FindComputerCommands200ApplicationXMLComputerCommandComputers })
+    computers?: FindComputerCommands200ApplicationXMLComputerCommandComputers[];
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    profileId?: number;
+
+    @SpeakeasyMetadata()
+    udid?: string;
+
+    @SpeakeasyMetadata()
+    uuid?: string;
+}
+
+export class FindComputerCommands200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    computerCommand?: FindComputerCommands200ApplicationXMLComputerCommand;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindComputerCommands200ApplicationJSONComputerCommandComputersComputer extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "ip_address" })
+    ipAddress?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "users" })
+    users?: string;
+}
+
+export class FindComputerCommands200ApplicationJSONComputerCommandComputers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer" })
+    @Type(() => FindComputerCommands200ApplicationJSONComputerCommandComputersComputer)
+    computer?: FindComputerCommands200ApplicationJSONComputerCommandComputersComputer;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
+
+export class FindComputerCommands200ApplicationJSONComputerCommand extends SpeakeasyBase {
+    /**
+     * Command type
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "command" })
+    command?: string;
+
+    @SpeakeasyMetadata({ elemType: FindComputerCommands200ApplicationJSONComputerCommandComputers })
+    @Expose({ name: "computers" })
+    @Type(() => FindComputerCommands200ApplicationJSONComputerCommandComputers)
+    computers?: FindComputerCommands200ApplicationJSONComputerCommandComputers[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "profile_id" })
+    profileId?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "udid" })
+    udid?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uuid" })
+    uuid?: string;
+}
+
+export class FindComputerCommands200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "computer_command" })
+    @Type(() => FindComputerCommands200ApplicationJSONComputerCommand)
+    computerCommand?: FindComputerCommands200ApplicationJSONComputerCommand;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
 
 export class FindComputerCommandsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +145,6 @@ export class FindComputerCommandsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.ComputerCommands })
-    computerCommands?: shared.ComputerCommands[];
+    @SpeakeasyMetadata({ elemType: FindComputerCommands200ApplicationJSON })
+    findComputerCommands200ApplicationJSONObjects?: FindComputerCommands200ApplicationJSON[];
 }

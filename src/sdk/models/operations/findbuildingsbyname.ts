@@ -3,14 +3,44 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose } from "class-transformer";
 
 export class FindBuildingsByNameRequest extends SpeakeasyBase {
     /**
      * Name to filter by
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindBuildingsByName200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the building
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindBuildingsByName200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the building
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
     name: string;
 }
 
@@ -31,5 +61,5 @@ export class FindBuildingsByNameResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    building?: shared.Building;
+    findBuildingsByName200ApplicationJSONObject?: FindBuildingsByName200ApplicationJSON;
 }

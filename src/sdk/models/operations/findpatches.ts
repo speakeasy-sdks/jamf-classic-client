@@ -3,8 +3,59 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindPatches200ApplicationXMLPatchManagementSoftwareTitle extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    nameId?: string;
+
+    @SpeakeasyMetadata()
+    sourceId?: number;
+}
+
+export class FindPatches200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    patchManagementSoftwareTitle?: FindPatches200ApplicationXMLPatchManagementSoftwareTitle;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindPatches200ApplicationJSONPatchManagementSoftwareTitle extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name_id" })
+    nameId?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "source_id" })
+    sourceId?: number;
+}
+
+export class FindPatches200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "patch_management_software_title" })
+    @Type(() => FindPatches200ApplicationJSONPatchManagementSoftwareTitle)
+    patchManagementSoftwareTitle?: FindPatches200ApplicationJSONPatchManagementSoftwareTitle;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
 
 export class FindPatchesResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +73,6 @@ export class FindPatchesResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.PatchManagementSoftwareTitles })
-    patchManagementSoftwareTitles?: shared.PatchManagementSoftwareTitles[];
+    @SpeakeasyMetadata({ elemType: FindPatches200ApplicationJSON })
+    findPatches200ApplicationJSONObjects?: FindPatches200ApplicationJSON[];
 }

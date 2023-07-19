@@ -1,0 +1,11 @@
+# FindRestrictedSoftwareById200ApplicationXML
+
+OK
+
+
+## Fields
+
+| Field                                                                                                                               | Type                                                                                                                                | Required                                                                                                                            | Description                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| `general`                                                                                                                           | [FindRestrictedSoftwareById200ApplicationXMLGeneral](../../models/operations/findrestrictedsoftwarebyid200applicationxmlgeneral.md) | :heavy_minus_sign:                                                                                                                  | N/A                                                                                                                                 |
+| `scope`                                                                                                                             | [FindRestrictedSoftwareById200ApplicationXMLScope](../../models/operations/findrestrictedsoftwarebyid200applicationxmlscope.md)     | :heavy_minus_sign:                                                                                                                  | N/A                                                                                                                                 |

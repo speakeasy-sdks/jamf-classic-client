@@ -3,8 +3,67 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose } from "class-transformer";
+
+export enum FindGSXConnection200ApplicationXMLRegion {
+    Americas = "Americas",
+    Apac = "APAC",
+    Emea = "EMEA",
+    LatinAmerica = "LatinAmerica",
+}
+
+/**
+ * OK
+ */
+export class FindGSXConnection200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    accountNumber?: number;
+
+    @SpeakeasyMetadata()
+    enabled?: boolean;
+
+    @SpeakeasyMetadata()
+    region?: FindGSXConnection200ApplicationXMLRegion;
+
+    @SpeakeasyMetadata()
+    uri?: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export enum FindGSXConnection200ApplicationJSONRegion {
+    Americas = "Americas",
+    Apac = "APAC",
+    Emea = "EMEA",
+    LatinAmerica = "LatinAmerica",
+}
+
+/**
+ * OK
+ */
+export class FindGSXConnection200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "account_number" })
+    accountNumber?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "enabled" })
+    enabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "region" })
+    region?: FindGSXConnection200ApplicationJSONRegion;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "uri" })
+    uri?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
+}
 
 export class FindGSXConnectionResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -23,5 +82,5 @@ export class FindGSXConnectionResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    gsxConnection?: shared.GsxConnection;
+    findGSXConnection200ApplicationJSONObject?: FindGSXConnection200ApplicationJSON;
 }

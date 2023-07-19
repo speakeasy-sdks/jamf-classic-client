@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindBYOProfilesByNameRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,94 @@ export class FindBYOProfilesByNameRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
     name: string;
+}
+
+export class FindBYOProfilesByName200ApplicationXMLGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export class FindBYOProfilesByName200ApplicationXMLGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    description?: string;
+
+    @SpeakeasyMetadata()
+    enabled?: boolean;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the BYO profile
+     */
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    site?: FindBYOProfilesByName200ApplicationXMLGeneralSite;
+}
+
+/**
+ * OK
+ */
+export class FindBYOProfilesByName200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    general?: FindBYOProfilesByName200ApplicationXMLGeneral;
+}
+
+export class FindBYOProfilesByName200ApplicationJSONGeneralSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+export class FindBYOProfilesByName200ApplicationJSONGeneral extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "description" })
+    description?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "enabled" })
+    enabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the BYO profile
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindBYOProfilesByName200ApplicationJSONGeneralSite)
+    site?: FindBYOProfilesByName200ApplicationJSONGeneralSite;
+}
+
+/**
+ * OK
+ */
+export class FindBYOProfilesByName200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "general" })
+    @Type(() => FindBYOProfilesByName200ApplicationJSONGeneral)
+    general?: FindBYOProfilesByName200ApplicationJSONGeneral;
 }
 
 export class FindBYOProfilesByNameResponse extends SpeakeasyBase {
@@ -31,5 +119,5 @@ export class FindBYOProfilesByNameResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    byoprofile?: shared.Byoprofile;
+    findBYOProfilesByName200ApplicationJSONObject?: FindBYOProfilesByName200ApplicationJSON;
 }

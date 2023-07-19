@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindMobiledeviceextensionattributesByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,110 @@ export class FindMobiledeviceextensionattributesByIdRequest extends SpeakeasyBas
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export enum FindMobiledeviceextensionattributesById200ApplicationXMLDateType {
+    String = "String",
+    Date = "Date",
+    Integer = "Integer",
+}
+
+export enum FindMobiledeviceextensionattributesById200ApplicationXMLInputTypeType {
+    TextField = "Text Field",
+    PopUpMenu = "Pop-up Menu",
+    LDAPAttributeMapping = "LDAP Attribute Mapping",
+}
+
+export class FindMobiledeviceextensionattributesById200ApplicationXMLInputType extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    type?: FindMobiledeviceextensionattributesById200ApplicationXMLInputTypeType;
+}
+
+export enum FindMobiledeviceextensionattributesById200ApplicationXMLInventoryDisplay {
+    General = "General",
+    Hardware = "Hardware",
+    UserAndLocation = "User and Location",
+    Purchasing = "Purchasing",
+    ExtensionAttributes = "Extension Attributes",
+}
+
+/**
+ * OK
+ */
+export class FindMobiledeviceextensionattributesById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateType?: FindMobiledeviceextensionattributesById200ApplicationXMLDateType;
+
+    @SpeakeasyMetadata()
+    description?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    inputType?: FindMobiledeviceextensionattributesById200ApplicationXMLInputType;
+
+    @SpeakeasyMetadata()
+    inventoryDisplay?: FindMobiledeviceextensionattributesById200ApplicationXMLInventoryDisplay;
+
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export enum FindMobiledeviceextensionattributesById200ApplicationJSONDateType {
+    String = "String",
+    Date = "Date",
+    Integer = "Integer",
+}
+
+export enum FindMobiledeviceextensionattributesById200ApplicationJSONInputTypeType {
+    TextField = "Text Field",
+    PopUpMenu = "Pop-up Menu",
+    LDAPAttributeMapping = "LDAP Attribute Mapping",
+}
+
+export class FindMobiledeviceextensionattributesById200ApplicationJSONInputType extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: FindMobiledeviceextensionattributesById200ApplicationJSONInputTypeType;
+}
+
+export enum FindMobiledeviceextensionattributesById200ApplicationJSONInventoryDisplay {
+    General = "General",
+    Hardware = "Hardware",
+    UserAndLocation = "User and Location",
+    Purchasing = "Purchasing",
+    ExtensionAttributes = "Extension Attributes",
+}
+
+/**
+ * OK
+ */
+export class FindMobiledeviceextensionattributesById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_type" })
+    dateType?: FindMobiledeviceextensionattributesById200ApplicationJSONDateType;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "description" })
+    description?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "input_type" })
+    @Type(() => FindMobiledeviceextensionattributesById200ApplicationJSONInputType)
+    inputType?: FindMobiledeviceextensionattributesById200ApplicationJSONInputType;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "inventory_display" })
+    inventoryDisplay?: FindMobiledeviceextensionattributesById200ApplicationJSONInventoryDisplay;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
 }
 
 export class FindMobiledeviceextensionattributesByIdResponse extends SpeakeasyBase {
@@ -31,5 +135,5 @@ export class FindMobiledeviceextensionattributesByIdResponse extends SpeakeasyBa
      * OK
      */
     @SpeakeasyMetadata()
-    mobileDeviceExtensionAttribute?: shared.MobileDeviceExtensionAttribute;
+    findMobiledeviceextensionattributesById200ApplicationJSONObject?: FindMobiledeviceextensionattributesById200ApplicationJSON;
 }

@@ -3,8 +3,51 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindAllowedFileExtension200ApplicationXMLAllowedFileExtension extends SpeakeasyBase {
+    /**
+     * File extension
+     */
+    @SpeakeasyMetadata()
+    extension: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+}
+
+export class FindAllowedFileExtension200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    allowedFileExtension?: FindAllowedFileExtension200ApplicationXMLAllowedFileExtension;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindAllowedFileExtension200ApplicationJSONAllowedFileExtension extends SpeakeasyBase {
+    /**
+     * File extension
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "extension" })
+    extension: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+}
+
+export class FindAllowedFileExtension200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "allowed_file_extension" })
+    @Type(() => FindAllowedFileExtension200ApplicationJSONAllowedFileExtension)
+    allowedFileExtension?: FindAllowedFileExtension200ApplicationJSONAllowedFileExtension;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
 
 export class FindAllowedFileExtensionResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +65,6 @@ export class FindAllowedFileExtensionResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.AllowedFileExtensions })
-    allowedFileExtensions?: shared.AllowedFileExtensions[];
+    @SpeakeasyMetadata({ elemType: FindAllowedFileExtension200ApplicationJSON })
+    findAllowedFileExtension200ApplicationJSONObjects?: FindAllowedFileExtension200ApplicationJSON[];
 }

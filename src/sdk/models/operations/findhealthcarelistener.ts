@@ -3,8 +3,261 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindHealthcareListener200ApplicationXMLHealthcareListenerRulesRuleMdmCommandAdditionalData extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    lostModeFootnote?: string;
+
+    @SpeakeasyMetadata()
+    lostModeMessage?: string;
+
+    @SpeakeasyMetadata()
+    lostModeOption?: string;
+
+    @SpeakeasyMetadata()
+    lostModePersistent?: string;
+
+    @SpeakeasyMetadata()
+    lostModePhone?: string;
+
+    @SpeakeasyMetadata()
+    lostModeSound?: boolean;
+}
+
+export class FindHealthcareListener200ApplicationXMLHealthcareListenerRulesRuleNotificationEmails extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    email?: string;
+}
+
+export class FindHealthcareListener200ApplicationXMLHealthcareListenerRulesRule extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    adtMessage?: string;
+
+    @SpeakeasyMetadata()
+    adtMessageField?: string;
+
+    @SpeakeasyMetadata()
+    deviceInventoryField?: number;
+
+    @SpeakeasyMetadata()
+    hclId?: number;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    mdmCommand?: string;
+
+    @SpeakeasyMetadata()
+    mdmCommandAdditionalData?: FindHealthcareListener200ApplicationXMLHealthcareListenerRulesRuleMdmCommandAdditionalData;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    notificationEmails?: FindHealthcareListener200ApplicationXMLHealthcareListenerRulesRuleNotificationEmails;
+
+    @SpeakeasyMetadata()
+    notificationEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    notificationThreshold?: number;
+
+    @SpeakeasyMetadata()
+    notifyUnsupportedEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    operatingSystem?: string;
+}
+
+export class FindHealthcareListener200ApplicationXMLHealthcareListenerRules extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    rule?: FindHealthcareListener200ApplicationXMLHealthcareListenerRulesRule;
+}
+
+export class FindHealthcareListener200ApplicationXMLHealthcareListener extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    enabled?: boolean;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    infratructureManagerId?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    port?: number;
+
+    @SpeakeasyMetadata()
+    rangeIps?: string;
+
+    @SpeakeasyMetadata({ elemType: FindHealthcareListener200ApplicationXMLHealthcareListenerRules })
+    rules?: FindHealthcareListener200ApplicationXMLHealthcareListenerRules[];
+
+    @SpeakeasyMetadata()
+    singleIps?: string;
+}
+
+export class FindHealthcareListener200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindHealthcareListener200ApplicationXMLHealthcareListener })
+    healthcareListener?: FindHealthcareListener200ApplicationXMLHealthcareListener[];
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindHealthcareListener200ApplicationJSONHealthcareListenerRulesRuleMdmCommandAdditionalData extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "lost_mode_footnote" })
+    lostModeFootnote?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lost_mode_message" })
+    lostModeMessage?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lost_mode_option" })
+    lostModeOption?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lost_mode_persistent" })
+    lostModePersistent?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lost_mode_phone" })
+    lostModePhone?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lost_mode_sound" })
+    lostModeSound?: boolean;
+}
+
+export class FindHealthcareListener200ApplicationJSONHealthcareListenerRulesRuleNotificationEmails extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "email" })
+    email?: string;
+}
+
+export class FindHealthcareListener200ApplicationJSONHealthcareListenerRulesRule extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "adt_message" })
+    adtMessage?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "adt_message_field" })
+    adtMessageField?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "device_inventory_field" })
+    deviceInventoryField?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "hcl_id" })
+    hclId?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mdm_command" })
+    mdmCommand?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "mdm_command_additional_data" })
+    @Type(
+        () =>
+            FindHealthcareListener200ApplicationJSONHealthcareListenerRulesRuleMdmCommandAdditionalData
+    )
+    mdmCommandAdditionalData?: FindHealthcareListener200ApplicationJSONHealthcareListenerRulesRuleMdmCommandAdditionalData;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_emails" })
+    @Type(
+        () => FindHealthcareListener200ApplicationJSONHealthcareListenerRulesRuleNotificationEmails
+    )
+    notificationEmails?: FindHealthcareListener200ApplicationJSONHealthcareListenerRulesRuleNotificationEmails;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_enabled" })
+    notificationEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notification_threshold" })
+    notificationThreshold?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "notify_unsupported_enabled" })
+    notifyUnsupportedEnabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "operating_system" })
+    operatingSystem?: string;
+}
+
+export class FindHealthcareListener200ApplicationJSONHealthcareListenerRules extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "rule" })
+    @Type(() => FindHealthcareListener200ApplicationJSONHealthcareListenerRulesRule)
+    rule?: FindHealthcareListener200ApplicationJSONHealthcareListenerRulesRule;
+}
+
+export class FindHealthcareListener200ApplicationJSONHealthcareListener extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "enabled" })
+    enabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "infratructure_manager_id" })
+    infratructureManagerId?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "port" })
+    port?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "range_ips" })
+    rangeIps?: string;
+
+    @SpeakeasyMetadata({
+        elemType: FindHealthcareListener200ApplicationJSONHealthcareListenerRules,
+    })
+    @Expose({ name: "rules" })
+    @Type(() => FindHealthcareListener200ApplicationJSONHealthcareListenerRules)
+    rules?: FindHealthcareListener200ApplicationJSONHealthcareListenerRules[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "single_ips" })
+    singleIps?: string;
+}
+
+export class FindHealthcareListener200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindHealthcareListener200ApplicationJSONHealthcareListener })
+    @Expose({ name: "healthcare_listener" })
+    @Type(() => FindHealthcareListener200ApplicationJSONHealthcareListener)
+    healthcareListener?: FindHealthcareListener200ApplicationJSONHealthcareListener[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
 
 export class FindHealthcareListenerResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +275,6 @@ export class FindHealthcareListenerResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.HealthcareListeners })
-    healthcareListeners?: shared.HealthcareListeners[];
+    @SpeakeasyMetadata({ elemType: FindHealthcareListener200ApplicationJSON })
+    findHealthcareListener200ApplicationJSONObjects?: FindHealthcareListener200ApplicationJSON[];
 }

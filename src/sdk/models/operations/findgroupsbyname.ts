@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindGroupsByNameRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,291 @@ export class FindGroupsByNameRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
     name: string;
+}
+
+export enum FindGroupsByName200ApplicationXMLAccessLevel {
+    FullAccess = "Full Access",
+    SiteAccess = "Site Access",
+    GroupAccess = "Group Access",
+}
+
+export class FindGroupsByName200ApplicationXMLMembersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindGroupsByName200ApplicationXMLMembers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    user?: FindGroupsByName200ApplicationXMLMembersUser;
+}
+
+export enum FindGroupsByName200ApplicationXMLPrivilegeSet {
+    Administrator = "Administrator",
+    Auditor = "Auditor",
+    EnrollmentOnly = "Enrollment Only",
+    Custom = "Custom",
+}
+
+export class FindGroupsByName200ApplicationXMLPrivilegesCasperAdmin extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    privilege?: string;
+}
+
+export class FindGroupsByName200ApplicationXMLPrivilegesCasperImaging extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    privilege?: string;
+}
+
+export class FindGroupsByName200ApplicationXMLPrivilegesCasperRemote extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    privilege?: string;
+}
+
+export class FindGroupsByName200ApplicationXMLPrivilegesJssActions extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    privilege?: string;
+}
+
+export class FindGroupsByName200ApplicationXMLPrivilegesJssObjects extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    privilege?: string;
+}
+
+export class FindGroupsByName200ApplicationXMLPrivilegesJssSettings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    privilege?: string;
+}
+
+export class FindGroupsByName200ApplicationXMLPrivilegesRecon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    privilege?: string;
+}
+
+export class FindGroupsByName200ApplicationXMLPrivileges extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindGroupsByName200ApplicationXMLPrivilegesCasperAdmin })
+    casperAdmin?: FindGroupsByName200ApplicationXMLPrivilegesCasperAdmin[];
+
+    @SpeakeasyMetadata({ elemType: FindGroupsByName200ApplicationXMLPrivilegesCasperImaging })
+    casperImaging?: FindGroupsByName200ApplicationXMLPrivilegesCasperImaging[];
+
+    @SpeakeasyMetadata({ elemType: FindGroupsByName200ApplicationXMLPrivilegesCasperRemote })
+    casperRemote?: FindGroupsByName200ApplicationXMLPrivilegesCasperRemote[];
+
+    @SpeakeasyMetadata({ elemType: FindGroupsByName200ApplicationXMLPrivilegesJssActions })
+    jssActions?: FindGroupsByName200ApplicationXMLPrivilegesJssActions[];
+
+    @SpeakeasyMetadata({ elemType: FindGroupsByName200ApplicationXMLPrivilegesJssObjects })
+    jssObjects?: FindGroupsByName200ApplicationXMLPrivilegesJssObjects[];
+
+    @SpeakeasyMetadata({ elemType: FindGroupsByName200ApplicationXMLPrivilegesJssSettings })
+    jssSettings?: FindGroupsByName200ApplicationXMLPrivilegesJssSettings[];
+
+    @SpeakeasyMetadata({ elemType: FindGroupsByName200ApplicationXMLPrivilegesRecon })
+    recon?: FindGroupsByName200ApplicationXMLPrivilegesRecon[];
+}
+
+export class FindGroupsByName200ApplicationXMLSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindGroupsByName200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    accessLevel?: FindGroupsByName200ApplicationXMLAccessLevel;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata({ elemType: FindGroupsByName200ApplicationXMLMembers })
+    members?: FindGroupsByName200ApplicationXMLMembers[];
+
+    /**
+     * Group name
+     */
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    privilegeSet?: FindGroupsByName200ApplicationXMLPrivilegeSet;
+
+    @SpeakeasyMetadata()
+    privileges?: FindGroupsByName200ApplicationXMLPrivileges;
+
+    @SpeakeasyMetadata()
+    site?: FindGroupsByName200ApplicationXMLSite;
+}
+
+export enum FindGroupsByName200ApplicationJSONAccessLevel {
+    FullAccess = "Full Access",
+    SiteAccess = "Site Access",
+    GroupAccess = "Group Access",
+}
+
+export class FindGroupsByName200ApplicationJSONMembersUser extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindGroupsByName200ApplicationJSONMembers extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "user" })
+    @Type(() => FindGroupsByName200ApplicationJSONMembersUser)
+    user?: FindGroupsByName200ApplicationJSONMembersUser;
+}
+
+export enum FindGroupsByName200ApplicationJSONPrivilegeSet {
+    Administrator = "Administrator",
+    Auditor = "Auditor",
+    EnrollmentOnly = "Enrollment Only",
+    Custom = "Custom",
+}
+
+export class FindGroupsByName200ApplicationJSONPrivilegesCasperAdmin extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "privilege" })
+    privilege?: string;
+}
+
+export class FindGroupsByName200ApplicationJSONPrivilegesCasperImaging extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "privilege" })
+    privilege?: string;
+}
+
+export class FindGroupsByName200ApplicationJSONPrivilegesCasperRemote extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "privilege" })
+    privilege?: string;
+}
+
+export class FindGroupsByName200ApplicationJSONPrivilegesJssActions extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "privilege" })
+    privilege?: string;
+}
+
+export class FindGroupsByName200ApplicationJSONPrivilegesJssObjects extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "privilege" })
+    privilege?: string;
+}
+
+export class FindGroupsByName200ApplicationJSONPrivilegesJssSettings extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "privilege" })
+    privilege?: string;
+}
+
+export class FindGroupsByName200ApplicationJSONPrivilegesRecon extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "privilege" })
+    privilege?: string;
+}
+
+export class FindGroupsByName200ApplicationJSONPrivileges extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindGroupsByName200ApplicationJSONPrivilegesCasperAdmin })
+    @Expose({ name: "casper_admin" })
+    @Type(() => FindGroupsByName200ApplicationJSONPrivilegesCasperAdmin)
+    casperAdmin?: FindGroupsByName200ApplicationJSONPrivilegesCasperAdmin[];
+
+    @SpeakeasyMetadata({ elemType: FindGroupsByName200ApplicationJSONPrivilegesCasperImaging })
+    @Expose({ name: "casper_imaging" })
+    @Type(() => FindGroupsByName200ApplicationJSONPrivilegesCasperImaging)
+    casperImaging?: FindGroupsByName200ApplicationJSONPrivilegesCasperImaging[];
+
+    @SpeakeasyMetadata({ elemType: FindGroupsByName200ApplicationJSONPrivilegesCasperRemote })
+    @Expose({ name: "casper_remote" })
+    @Type(() => FindGroupsByName200ApplicationJSONPrivilegesCasperRemote)
+    casperRemote?: FindGroupsByName200ApplicationJSONPrivilegesCasperRemote[];
+
+    @SpeakeasyMetadata({ elemType: FindGroupsByName200ApplicationJSONPrivilegesJssActions })
+    @Expose({ name: "jss_actions" })
+    @Type(() => FindGroupsByName200ApplicationJSONPrivilegesJssActions)
+    jssActions?: FindGroupsByName200ApplicationJSONPrivilegesJssActions[];
+
+    @SpeakeasyMetadata({ elemType: FindGroupsByName200ApplicationJSONPrivilegesJssObjects })
+    @Expose({ name: "jss_objects" })
+    @Type(() => FindGroupsByName200ApplicationJSONPrivilegesJssObjects)
+    jssObjects?: FindGroupsByName200ApplicationJSONPrivilegesJssObjects[];
+
+    @SpeakeasyMetadata({ elemType: FindGroupsByName200ApplicationJSONPrivilegesJssSettings })
+    @Expose({ name: "jss_settings" })
+    @Type(() => FindGroupsByName200ApplicationJSONPrivilegesJssSettings)
+    jssSettings?: FindGroupsByName200ApplicationJSONPrivilegesJssSettings[];
+
+    @SpeakeasyMetadata({ elemType: FindGroupsByName200ApplicationJSONPrivilegesRecon })
+    @Expose({ name: "recon" })
+    @Type(() => FindGroupsByName200ApplicationJSONPrivilegesRecon)
+    recon?: FindGroupsByName200ApplicationJSONPrivilegesRecon[];
+}
+
+export class FindGroupsByName200ApplicationJSONSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindGroupsByName200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "access_level" })
+    accessLevel?: FindGroupsByName200ApplicationJSONAccessLevel;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata({ elemType: FindGroupsByName200ApplicationJSONMembers })
+    @Expose({ name: "members" })
+    @Type(() => FindGroupsByName200ApplicationJSONMembers)
+    members?: FindGroupsByName200ApplicationJSONMembers[];
+
+    /**
+     * Group name
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "privilege_set" })
+    privilegeSet?: FindGroupsByName200ApplicationJSONPrivilegeSet;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "privileges" })
+    @Type(() => FindGroupsByName200ApplicationJSONPrivileges)
+    privileges?: FindGroupsByName200ApplicationJSONPrivileges;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindGroupsByName200ApplicationJSONSite)
+    site?: FindGroupsByName200ApplicationJSONSite;
 }
 
 export class FindGroupsByNameResponse extends SpeakeasyBase {
@@ -31,5 +316,5 @@ export class FindGroupsByNameResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    group?: shared.Group;
+    findGroupsByName200ApplicationJSONObject?: FindGroupsByName200ApplicationJSON;
 }

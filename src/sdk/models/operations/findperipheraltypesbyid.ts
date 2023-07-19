@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindPeripheralTypesByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,104 @@ export class FindPeripheralTypesByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export class FindPeripheralTypesById200ApplicationXMLFieldsFieldChoices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    choice?: string;
+}
+
+export enum FindPeripheralTypesById200ApplicationXMLFieldsFieldType {
+    Menu = "menu",
+    Text = "text",
+}
+
+export class FindPeripheralTypesById200ApplicationXMLFieldsField extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindPeripheralTypesById200ApplicationXMLFieldsFieldChoices })
+    choices?: FindPeripheralTypesById200ApplicationXMLFieldsFieldChoices[];
+
+    @SpeakeasyMetadata()
+    name?: string;
+
+    @SpeakeasyMetadata()
+    order?: number;
+
+    @SpeakeasyMetadata()
+    type?: FindPeripheralTypesById200ApplicationXMLFieldsFieldType;
+}
+
+export class FindPeripheralTypesById200ApplicationXMLFields extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    field?: FindPeripheralTypesById200ApplicationXMLFieldsField;
+}
+
+/**
+ * OK
+ */
+export class FindPeripheralTypesById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindPeripheralTypesById200ApplicationXMLFields })
+    fields?: FindPeripheralTypesById200ApplicationXMLFields[];
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export class FindPeripheralTypesById200ApplicationJSONFieldsFieldChoices extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "choice" })
+    choice?: string;
+}
+
+export enum FindPeripheralTypesById200ApplicationJSONFieldsFieldType {
+    Menu = "menu",
+    Text = "text",
+}
+
+export class FindPeripheralTypesById200ApplicationJSONFieldsField extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindPeripheralTypesById200ApplicationJSONFieldsFieldChoices })
+    @Expose({ name: "choices" })
+    @Type(() => FindPeripheralTypesById200ApplicationJSONFieldsFieldChoices)
+    choices?: FindPeripheralTypesById200ApplicationJSONFieldsFieldChoices[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "order" })
+    order?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: FindPeripheralTypesById200ApplicationJSONFieldsFieldType;
+}
+
+export class FindPeripheralTypesById200ApplicationJSONFields extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "field" })
+    @Type(() => FindPeripheralTypesById200ApplicationJSONFieldsField)
+    field?: FindPeripheralTypesById200ApplicationJSONFieldsField;
+}
+
+/**
+ * OK
+ */
+export class FindPeripheralTypesById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: FindPeripheralTypesById200ApplicationJSONFields })
+    @Expose({ name: "fields" })
+    @Type(() => FindPeripheralTypesById200ApplicationJSONFields)
+    fields?: FindPeripheralTypesById200ApplicationJSONFields[];
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
 }
 
 export class FindPeripheralTypesByIdResponse extends SpeakeasyBase {
@@ -31,5 +129,5 @@ export class FindPeripheralTypesByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    peripheralType?: shared.PeripheralType;
+    findPeripheralTypesById200ApplicationJSONObject?: FindPeripheralTypesById200ApplicationJSON;
 }

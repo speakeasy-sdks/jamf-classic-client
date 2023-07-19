@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose } from "class-transformer";
 
 export class FindDockItemsByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,69 @@ export class FindDockItemsByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export enum FindDockItemsById200ApplicationXMLType {
+    App = "App",
+    File = "File",
+    Folder = "Folder",
+}
+
+/**
+ * OK
+ */
+export class FindDockItemsById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    contents?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the dock item
+     */
+    @SpeakeasyMetadata()
+    name: string;
+
+    @SpeakeasyMetadata()
+    path: string;
+
+    @SpeakeasyMetadata()
+    type: FindDockItemsById200ApplicationXMLType;
+}
+
+export enum FindDockItemsById200ApplicationJSONType {
+    App = "App",
+    File = "File",
+    Folder = "Folder",
+}
+
+/**
+ * OK
+ */
+export class FindDockItemsById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "contents" })
+    contents?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the dock item
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "path" })
+    path: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type: FindDockItemsById200ApplicationJSONType;
 }
 
 export class FindDockItemsByIdResponse extends SpeakeasyBase {
@@ -31,5 +94,5 @@ export class FindDockItemsByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    dockItem?: shared.DockItem;
+    findDockItemsById200ApplicationJSONObject?: FindDockItemsById200ApplicationJSON;
 }

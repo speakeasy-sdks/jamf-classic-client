@@ -1,0 +1,11 @@
+# FindLDAPServersById200ApplicationJSON
+
+OK
+
+
+## Fields
+
+| Field                                                                                                                                     | Type                                                                                                                                      | Required                                                                                                                                  | Description                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `connection`                                                                                                                              | [FindLDAPServersById200ApplicationJSONConnection](../../models/operations/findldapserversbyid200applicationjsonconnection.md)             | :heavy_minus_sign:                                                                                                                        | N/A                                                                                                                                       |
+| `mappingsForUsers`                                                                                                                        | [FindLDAPServersById200ApplicationJSONMappingsForUsers](../../models/operations/findldapserversbyid200applicationjsonmappingsforusers.md) | :heavy_minus_sign:                                                                                                                        | N/A                                                                                                                                       |

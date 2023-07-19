@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindMobileDeviceInvitationsByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,220 @@ export class FindMobileDeviceInvitationsByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export class FindMobileDeviceInvitationsById200ApplicationXMLEnrolledIntoSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindMobileDeviceInvitationsById200ApplicationXMLSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindMobileDeviceInvitationsById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dateSent?: string;
+
+    @SpeakeasyMetadata()
+    dateSentEpoch?: number;
+
+    @SpeakeasyMetadata()
+    dateSentUtc?: string;
+
+    @SpeakeasyMetadata()
+    enrolledIntoSite?: FindMobileDeviceInvitationsById200ApplicationXMLEnrolledIntoSite;
+
+    /**
+     * Use 'Unlimited' to specify no expiration
+     */
+    @SpeakeasyMetadata()
+    expirationDate?: string;
+
+    @SpeakeasyMetadata()
+    expirationDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    expirationDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    invitation?: number;
+
+    @SpeakeasyMetadata()
+    invitationType?: string;
+
+    @SpeakeasyMetadata()
+    keepExistingSiteMembership?: boolean;
+
+    @SpeakeasyMetadata()
+    lastAction?: string;
+
+    @SpeakeasyMetadata()
+    loginRequired?: boolean;
+
+    @SpeakeasyMetadata()
+    message?: string;
+
+    @SpeakeasyMetadata()
+    multipleUsesAllowed?: boolean;
+
+    @SpeakeasyMetadata()
+    replyTo?: string;
+
+    @SpeakeasyMetadata()
+    sentFrom?: string;
+
+    @SpeakeasyMetadata()
+    sentTo?: string;
+
+    @SpeakeasyMetadata()
+    site?: FindMobileDeviceInvitationsById200ApplicationXMLSite;
+
+    @SpeakeasyMetadata()
+    subject?: string;
+
+    @SpeakeasyMetadata()
+    targetIos?: string;
+
+    @SpeakeasyMetadata()
+    username?: string;
+}
+
+export class FindMobileDeviceInvitationsById200ApplicationJSONEnrolledIntoSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindMobileDeviceInvitationsById200ApplicationJSONSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindMobileDeviceInvitationsById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_sent" })
+    dateSent?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_sent_epoch" })
+    dateSentEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "date_sent_utc" })
+    dateSentUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "enrolled_into_site" })
+    @Type(() => FindMobileDeviceInvitationsById200ApplicationJSONEnrolledIntoSite)
+    enrolledIntoSite?: FindMobileDeviceInvitationsById200ApplicationJSONEnrolledIntoSite;
+
+    /**
+     * Use 'Unlimited' to specify no expiration
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "expiration_date" })
+    expirationDate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "expiration_date_epoch" })
+    expirationDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "expiration_date_utc" })
+    expirationDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "invitation" })
+    invitation?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "invitation_type" })
+    invitationType?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "keep_existing_site_membership" })
+    keepExistingSiteMembership?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "last_action" })
+    lastAction?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "login_required" })
+    loginRequired?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "message" })
+    message?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "multiple_uses_allowed" })
+    multipleUsesAllowed?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "reply_to" })
+    replyTo?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "sent_from" })
+    sentFrom?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "sent_to" })
+    sentTo?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindMobileDeviceInvitationsById200ApplicationJSONSite)
+    site?: FindMobileDeviceInvitationsById200ApplicationJSONSite;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "subject" })
+    subject?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "target_ios" })
+    targetIos?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "username" })
+    username?: string;
 }
 
 export class FindMobileDeviceInvitationsByIdResponse extends SpeakeasyBase {
@@ -31,5 +245,5 @@ export class FindMobileDeviceInvitationsByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    mobileDeviceInvitation?: shared.MobileDeviceInvitation;
+    findMobileDeviceInvitationsById200ApplicationJSONObject?: FindMobileDeviceInvitationsById200ApplicationJSON;
 }

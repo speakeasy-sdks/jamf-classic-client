@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindComputerInvitationsByInvitationRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,192 @@ export class FindComputerInvitationsByInvitationRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=invitation" })
     invitation: number;
+}
+
+export class FindComputerInvitationsByInvitation200ApplicationXMLEnrollIntoSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindComputerInvitationsByInvitation200ApplicationXMLSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindComputerInvitationsByInvitation200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    createAccountIfDoesNotExist?: boolean;
+
+    @SpeakeasyMetadata()
+    enrollIntoSite?: FindComputerInvitationsByInvitation200ApplicationXMLEnrollIntoSite;
+
+    /**
+     * Use 'Unlimited' to specify no expiration date
+     */
+    @SpeakeasyMetadata()
+    expirationDate?: string;
+
+    @SpeakeasyMetadata()
+    expirationDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    expirationDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    hideAccount?: boolean;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    invitation?: number;
+
+    @SpeakeasyMetadata()
+    invitationStatus?: string;
+
+    @SpeakeasyMetadata()
+    invitationType?: string;
+
+    @SpeakeasyMetadata()
+    invitedUserUuid?: string;
+
+    @SpeakeasyMetadata()
+    keepExistingSiteMembership?: boolean;
+
+    @SpeakeasyMetadata()
+    lockDownSsh?: boolean;
+
+    @SpeakeasyMetadata()
+    multipleUsersAllowed?: boolean;
+
+    @SpeakeasyMetadata()
+    site?: FindComputerInvitationsByInvitation200ApplicationXMLSite;
+
+    @SpeakeasyMetadata()
+    sshPassword?: string;
+
+    @SpeakeasyMetadata()
+    sshUsername?: string;
+
+    @SpeakeasyMetadata()
+    timesUsed?: number;
+}
+
+export class FindComputerInvitationsByInvitation200ApplicationJSONEnrollIntoSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindComputerInvitationsByInvitation200ApplicationJSONSite extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    /**
+     * Name of the site
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
+}
+
+/**
+ * OK
+ */
+export class FindComputerInvitationsByInvitation200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "create_account_if_does_not_exist" })
+    createAccountIfDoesNotExist?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "enroll_into_site" })
+    @Type(() => FindComputerInvitationsByInvitation200ApplicationJSONEnrollIntoSite)
+    enrollIntoSite?: FindComputerInvitationsByInvitation200ApplicationJSONEnrollIntoSite;
+
+    /**
+     * Use 'Unlimited' to specify no expiration date
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "expiration_date" })
+    expirationDate?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "expiration_date_epoch" })
+    expirationDateEpoch?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "expiration_date_utc" })
+    expirationDateUtc?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "hide_account" })
+    hideAccount?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "invitation" })
+    invitation?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "invitation_status" })
+    invitationStatus?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "invitation_type" })
+    invitationType?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "invited_user_uuid" })
+    invitedUserUuid?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "keep_existing_site_membership" })
+    keepExistingSiteMembership?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "lock_down_ssh" })
+    lockDownSsh?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "multiple_users_allowed" })
+    multipleUsersAllowed?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "site" })
+    @Type(() => FindComputerInvitationsByInvitation200ApplicationJSONSite)
+    site?: FindComputerInvitationsByInvitation200ApplicationJSONSite;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "ssh_password" })
+    sshPassword?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "ssh_username" })
+    sshUsername?: string;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "times_used" })
+    timesUsed?: number;
 }
 
 export class FindComputerInvitationsByInvitationResponse extends SpeakeasyBase {
@@ -31,5 +217,5 @@ export class FindComputerInvitationsByInvitationResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    computerInvitation?: shared.ComputerInvitation;
+    findComputerInvitationsByInvitation200ApplicationJSONObject?: FindComputerInvitationsByInvitation200ApplicationJSON;
 }

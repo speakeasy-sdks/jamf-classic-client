@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
 
 export class FindComputerextensionattributesByIdRequest extends SpeakeasyBase {
     /**
@@ -12,6 +12,151 @@ export class FindComputerextensionattributesByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
+}
+
+export enum FindComputerextensionattributesById200ApplicationXMLDataType {
+    String = "String",
+    Integer = "Integer",
+    Date = "Date",
+}
+
+export enum FindComputerextensionattributesById200ApplicationXMLInputTypeType {
+    Script = "script",
+    TextField = "Text Field",
+    LDAPMapping = "LDAP Mapping",
+    PopUpMenu = "Pop-up Menu",
+}
+
+export class FindComputerextensionattributesById200ApplicationXMLInputType extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    type?: FindComputerextensionattributesById200ApplicationXMLInputTypeType;
+}
+
+/**
+ * Category in which to display the extension attribute in Jamf Pro
+ */
+export enum FindComputerextensionattributesById200ApplicationXMLInventoryDisplay {
+    General = "General",
+    Hardware = "Hardware",
+    OperatingSystem = "Operating System",
+    UserAndLocation = "User and Location",
+    Purchasing = "Purchasing",
+    ExtensionAttributes = "Extension Attributes",
+}
+
+/**
+ * OK
+ */
+export class FindComputerextensionattributesById200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    dataType?: FindComputerextensionattributesById200ApplicationXMLDataType;
+
+    /**
+     * Description of the extension attribute
+     */
+    @SpeakeasyMetadata()
+    description?: string;
+
+    /**
+     * Only applicable to script input type
+     */
+    @SpeakeasyMetadata()
+    enabled?: boolean;
+
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    inputType?: FindComputerextensionattributesById200ApplicationXMLInputType;
+
+    /**
+     * Category in which to display the extension attribute in Jamf Pro
+     */
+    @SpeakeasyMetadata()
+    inventoryDisplay?: FindComputerextensionattributesById200ApplicationXMLInventoryDisplay;
+
+    /**
+     * Extension attribute name
+     */
+    @SpeakeasyMetadata()
+    name: string;
+}
+
+export enum FindComputerextensionattributesById200ApplicationJSONDataType {
+    String = "String",
+    Integer = "Integer",
+    Date = "Date",
+}
+
+export enum FindComputerextensionattributesById200ApplicationJSONInputTypeType {
+    Script = "script",
+    TextField = "Text Field",
+    LDAPMapping = "LDAP Mapping",
+    PopUpMenu = "Pop-up Menu",
+}
+
+export class FindComputerextensionattributesById200ApplicationJSONInputType extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "type" })
+    type?: FindComputerextensionattributesById200ApplicationJSONInputTypeType;
+}
+
+/**
+ * Category in which to display the extension attribute in Jamf Pro
+ */
+export enum FindComputerextensionattributesById200ApplicationJSONInventoryDisplay {
+    General = "General",
+    Hardware = "Hardware",
+    OperatingSystem = "Operating System",
+    UserAndLocation = "User and Location",
+    Purchasing = "Purchasing",
+    ExtensionAttributes = "Extension Attributes",
+}
+
+/**
+ * OK
+ */
+export class FindComputerextensionattributesById200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "data_type" })
+    dataType?: FindComputerextensionattributesById200ApplicationJSONDataType;
+
+    /**
+     * Description of the extension attribute
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "description" })
+    description?: string;
+
+    /**
+     * Only applicable to script input type
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "enabled" })
+    enabled?: boolean;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "input_type" })
+    @Type(() => FindComputerextensionattributesById200ApplicationJSONInputType)
+    inputType?: FindComputerextensionattributesById200ApplicationJSONInputType;
+
+    /**
+     * Category in which to display the extension attribute in Jamf Pro
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "inventory_display" })
+    inventoryDisplay?: FindComputerextensionattributesById200ApplicationJSONInventoryDisplay;
+
+    /**
+     * Extension attribute name
+     */
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name: string;
 }
 
 export class FindComputerextensionattributesByIdResponse extends SpeakeasyBase {
@@ -31,5 +176,5 @@ export class FindComputerextensionattributesByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    computerExtensionAttribute?: shared.ComputerExtensionAttribute;
+    findComputerextensionattributesById200ApplicationJSONObject?: FindComputerextensionattributesById200ApplicationJSON;
 }

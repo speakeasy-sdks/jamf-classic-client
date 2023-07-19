@@ -5,7 +5,6 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
-import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -117,11 +116,11 @@ export class Healthcarelistenerrule {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.healthcareListenerRules = [];
+                    res.findHealthcareListenerRule200ApplicationJSONObjects = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.healthcareListenerRules = utils.objectToClass(
+                    res.findHealthcareListenerRule200ApplicationJSONObjects = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        shared.HealthcareListenerRules1,
+                        operations.FindHealthcareListenerRule200ApplicationJSON,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -191,10 +190,11 @@ export class Healthcarelistenerrule {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.healthcareListenerRule = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.HealthcareListenerRule
-                    );
+                    res.findHealthcareListenerRulesById200ApplicationJSONObject =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            operations.FindHealthcareListenerRulesById200ApplicationJSON
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

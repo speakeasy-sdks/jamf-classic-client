@@ -3,8 +3,45 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
 import { AxiosResponse } from "axios";
+import { Expose, Type } from "class-transformer";
+
+export class FindPolicies200ApplicationXMLPolicy extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    id?: number;
+
+    @SpeakeasyMetadata()
+    name?: string;
+}
+
+export class FindPolicies200ApplicationXML extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    policy?: FindPolicies200ApplicationXMLPolicy;
+
+    @SpeakeasyMetadata()
+    size?: number;
+}
+
+export class FindPolicies200ApplicationJSONPolicy extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "id" })
+    id?: number;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "name" })
+    name?: string;
+}
+
+export class FindPolicies200ApplicationJSON extends SpeakeasyBase {
+    @SpeakeasyMetadata()
+    @Expose({ name: "policy" })
+    @Type(() => FindPolicies200ApplicationJSONPolicy)
+    policy?: FindPolicies200ApplicationJSONPolicy;
+
+    @SpeakeasyMetadata()
+    @Expose({ name: "size" })
+    size?: number;
+}
 
 export class FindPoliciesResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -22,6 +59,6 @@ export class FindPoliciesResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: shared.Policies })
-    policies?: shared.Policies[];
+    @SpeakeasyMetadata({ elemType: FindPolicies200ApplicationJSON })
+    findPolicies200ApplicationJSONObjects?: FindPolicies200ApplicationJSON[];
 }
