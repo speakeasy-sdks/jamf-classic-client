@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -238,14 +239,13 @@ export class Mobiledeviceconfigurationprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceConfigurationProfiles200ApplicationJSONObjects = [];
+                    res.mobileDeviceConfigurationProfiles = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findMobileDeviceConfigurationProfiles200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceConfigurationProfiles200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.mobileDeviceConfigurationProfiles = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceConfigurationProfiles,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -317,11 +317,10 @@ export class Mobiledeviceconfigurationprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceConfigurationProfilesById200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceConfigurationProfilesById200ApplicationJSON
-                        );
+                    res.mobileDeviceConfigurationProfile = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceConfigurationProfile
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -455,11 +454,10 @@ export class Mobiledeviceconfigurationprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceConfigurationProfilesByName200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceConfigurationProfilesByName200ApplicationJSON
-                        );
+                    res.mobileDeviceConfigurationProfile = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceConfigurationProfile
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -534,11 +532,10 @@ export class Mobiledeviceconfigurationprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceConfigurationProfilesByNameSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceConfigurationProfilesByNameSubset200ApplicationJSON
-                        );
+                    res.mobileDeviceConfigurationProfile = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceConfigurationProfile
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

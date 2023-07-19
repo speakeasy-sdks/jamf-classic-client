@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -229,11 +230,11 @@ export class Licensedsoftware {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findLicensedSoftware200ApplicationJSONObjects = [];
+                    res.licensedSoftwareAll = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findLicensedSoftware200ApplicationJSONObjects = utils.objectToClass(
+                    res.licensedSoftwareAll = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindLicensedSoftware200ApplicationJSON,
+                        shared.LicensedSoftwareAll,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -303,9 +304,9 @@ export class Licensedsoftware {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findLicensedSoftwareById200ApplicationJSONObject = utils.objectToClass(
+                    res.licensedSoftware = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindLicensedSoftwareById200ApplicationJSON
+                        shared.LicensedSoftware
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -374,9 +375,9 @@ export class Licensedsoftware {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findLicensedSoftwareByName200ApplicationJSONObject = utils.objectToClass(
+                    res.licensedSoftware = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindLicensedSoftwareByName200ApplicationJSON
+                        shared.LicensedSoftware
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;

@@ -3,73 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindPeripherals200ApplicationXMLPeripheral extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    barCode1?: string;
-
-    @SpeakeasyMetadata()
-    barCode2?: string;
-
-    @SpeakeasyMetadata()
-    computerId?: number;
-
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-
-    @SpeakeasyMetadata()
-    type?: string;
-}
-
-export class FindPeripherals200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    peripheral?: FindPeripherals200ApplicationXMLPeripheral;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindPeripherals200ApplicationJSONPeripheral extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "bar_code_1" })
-    barCode1?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "bar_code_2" })
-    barCode2?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "computer_id" })
-    computerId?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "type" })
-    type?: string;
-}
-
-export class FindPeripherals200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "peripheral" })
-    @Type(() => FindPeripherals200ApplicationJSONPeripheral)
-    peripheral?: FindPeripherals200ApplicationJSONPeripheral;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindPeripheralsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -87,6 +22,6 @@ export class FindPeripheralsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindPeripherals200ApplicationJSON })
-    findPeripherals200ApplicationJSONObjects?: FindPeripherals200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.Peripherals })
+    peripherals?: shared.Peripherals[];
 }

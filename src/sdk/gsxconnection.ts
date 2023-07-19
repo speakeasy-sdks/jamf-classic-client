@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -60,9 +61,9 @@ export class Gsxconnection {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findGSXConnection200ApplicationJSONObject = utils.objectToClass(
+                    res.gsxConnection = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindGSXConnection200ApplicationJSON
+                        shared.GsxConnection
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;

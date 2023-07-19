@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
 
 export class FindMobileDeviceCommandsByNameRequest extends SpeakeasyBase {
     /**
@@ -12,164 +12,6 @@ export class FindMobileDeviceCommandsByNameRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
     name: string;
-}
-
-export class FindMobileDeviceCommandsByName200ApplicationXMLGeneral extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    apnsResultStatus?: string;
-
-    @SpeakeasyMetadata()
-    command?: string;
-
-    @SpeakeasyMetadata()
-    dateSent?: string;
-
-    @SpeakeasyMetadata()
-    dateSentEpoch?: string;
-
-    @SpeakeasyMetadata()
-    dateSentUtc?: string;
-
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    profileId?: number;
-
-    @SpeakeasyMetadata()
-    profileUdid?: string;
-
-    @SpeakeasyMetadata()
-    udid?: string;
-
-    @SpeakeasyMetadata()
-    uuid?: string;
-}
-
-export class FindMobileDeviceCommandsByName200ApplicationXMLMobileDevicesMobileDevice extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    phoneNumber?: string;
-
-    @SpeakeasyMetadata()
-    serialNumber?: string;
-
-    @SpeakeasyMetadata()
-    udid?: string;
-
-    @SpeakeasyMetadata()
-    wifiMacAddress?: string;
-}
-
-export class FindMobileDeviceCommandsByName200ApplicationXMLMobileDevices extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    mobileDevice?: FindMobileDeviceCommandsByName200ApplicationXMLMobileDevicesMobileDevice;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-/**
- * OK
- */
-export class FindMobileDeviceCommandsByName200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    general?: FindMobileDeviceCommandsByName200ApplicationXMLGeneral;
-
-    @SpeakeasyMetadata()
-    mobileDevices?: FindMobileDeviceCommandsByName200ApplicationXMLMobileDevices;
-}
-
-export class FindMobileDeviceCommandsByName200ApplicationJSONGeneral extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "apns_result_status" })
-    apnsResultStatus?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "command" })
-    command?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "date_sent" })
-    dateSent?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "date_sent_epoch" })
-    dateSentEpoch?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "date_sent_utc" })
-    dateSentUtc?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "profile_id" })
-    profileId?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "profile_udid" })
-    profileUdid?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "udid" })
-    udid?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "uuid" })
-    uuid?: string;
-}
-
-export class FindMobileDeviceCommandsByName200ApplicationJSONMobileDevicesMobileDevice extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "phone_number" })
-    phoneNumber?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "serial_number" })
-    serialNumber?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "udid" })
-    udid?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "wifi_mac_address" })
-    wifiMacAddress?: string;
-}
-
-export class FindMobileDeviceCommandsByName200ApplicationJSONMobileDevices extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "mobile_device" })
-    @Type(() => FindMobileDeviceCommandsByName200ApplicationJSONMobileDevicesMobileDevice)
-    mobileDevice?: FindMobileDeviceCommandsByName200ApplicationJSONMobileDevicesMobileDevice;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
-
-/**
- * OK
- */
-export class FindMobileDeviceCommandsByName200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "general" })
-    @Type(() => FindMobileDeviceCommandsByName200ApplicationJSONGeneral)
-    general?: FindMobileDeviceCommandsByName200ApplicationJSONGeneral;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "mobile_devices" })
-    @Type(() => FindMobileDeviceCommandsByName200ApplicationJSONMobileDevices)
-    mobileDevices?: FindMobileDeviceCommandsByName200ApplicationJSONMobileDevices;
 }
 
 export class FindMobileDeviceCommandsByNameResponse extends SpeakeasyBase {
@@ -189,5 +31,5 @@ export class FindMobileDeviceCommandsByNameResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    findMobileDeviceCommandsByName200ApplicationJSONObject?: FindMobileDeviceCommandsByName200ApplicationJSON;
+    mobileDeviceCommand?: shared.MobileDeviceCommand;
 }
