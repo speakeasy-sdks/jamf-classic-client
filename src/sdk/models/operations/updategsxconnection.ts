@@ -5,30 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AxiosResponse } from "axios";
 
-export enum UpdateGSXConnectionRequestBodyRegion {
-    Americas = "Americas",
-    Apac = "APAC",
-    Emea = "EMEA",
-    LatinAmerica = "LatinAmerica",
-}
-
-export class UpdateGSXConnectionRequestBody extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    accountNumber?: number;
-
-    @SpeakeasyMetadata()
-    enabled?: boolean;
-
-    @SpeakeasyMetadata()
-    region?: UpdateGSXConnectionRequestBodyRegion;
-
-    @SpeakeasyMetadata()
-    uri?: string;
-
-    @SpeakeasyMetadata()
-    username?: string;
-}
-
 export class UpdateGSXConnectionResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     contentType: string;

@@ -3,64 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export enum SavedsearchesGet200ApplicationXMLSavedSearchType {
-    Computers = "Computers",
-    MobileDevices = "Mobile Devices",
-    Users = "Users",
-}
-
-export class SavedsearchesGet200ApplicationXMLSavedSearch extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-
-    @SpeakeasyMetadata()
-    type?: SavedsearchesGet200ApplicationXMLSavedSearchType;
-}
-
-export class SavedsearchesGet200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    savedSearch?: SavedsearchesGet200ApplicationXMLSavedSearch;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export enum SavedsearchesGet200ApplicationJSONSavedSearchType {
-    Computers = "Computers",
-    MobileDevices = "Mobile Devices",
-    Users = "Users",
-}
-
-export class SavedsearchesGet200ApplicationJSONSavedSearch extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "type" })
-    type?: SavedsearchesGet200ApplicationJSONSavedSearchType;
-}
-
-export class SavedsearchesGet200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "saved_search" })
-    @Type(() => SavedsearchesGet200ApplicationJSONSavedSearch)
-    savedSearch?: SavedsearchesGet200ApplicationJSONSavedSearch;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class SavedsearchesGetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -69,15 +13,15 @@ export class SavedsearchesGetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     contentType: string;
 
-    /**
-     * OK
-     */
-    @SpeakeasyMetadata({ elemType: SavedsearchesGet200ApplicationJSON })
-    savedsearchesGet200ApplicationJSONObjects?: SavedsearchesGet200ApplicationJSON[];
-
     @SpeakeasyMetadata()
     statusCode: number;
 
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata({ elemType: shared.SavedSearches })
+    savedSearches?: shared.SavedSearches[];
 }

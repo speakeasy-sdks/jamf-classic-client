@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -223,11 +224,11 @@ export class Usergroups {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findUserGroups200ApplicationJSONObjects = [];
+                    res.userGroups = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findUserGroups200ApplicationJSONObjects = utils.objectToClass(
+                    res.userGroups = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindUserGroups200ApplicationJSON,
+                        shared.UserGroups,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -297,10 +298,7 @@ export class Usergroups {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findUserGroupsById200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindUserGroupsById200ApplicationJSON
-                    );
+                    res.userGroup = utils.objectToClass(JSON.parse(decodedRes), shared.UserGroup);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -368,10 +366,7 @@ export class Usergroups {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findUserGroupsByName200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindUserGroupsByName200ApplicationJSON
-                    );
+                    res.userGroup = utils.objectToClass(JSON.parse(decodedRes), shared.UserGroup);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

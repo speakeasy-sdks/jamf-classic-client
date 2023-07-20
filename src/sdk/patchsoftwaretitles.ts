@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -63,11 +64,11 @@ export class Patchsoftwaretitles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.patchsoftwaretitlesGet200ApplicationJSONObjects = [];
+                    res.patchSoftwareTitles = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.patchsoftwaretitlesGet200ApplicationJSONObjects = utils.objectToClass(
+                    res.patchSoftwareTitles = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.PatchsoftwaretitlesGet200ApplicationJSON,
+                        shared.PatchSoftwareTitles,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -196,9 +197,9 @@ export class Patchsoftwaretitles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.patchsoftwaretitlesIdByIdGet200ApplicationJSONObject = utils.objectToClass(
+                    res.patchSoftwareTitle = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.PatchsoftwaretitlesIdByIdGet200ApplicationJSON
+                        shared.PatchSoftwareTitle
                     );
                 } else {
                     throw new errors.SDKError(

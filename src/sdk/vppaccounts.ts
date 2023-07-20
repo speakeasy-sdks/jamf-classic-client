@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -174,11 +175,11 @@ export class Vppaccounts {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findVPPAdminAccount200ApplicationJSONObjects = [];
+                    res.vppAccounts = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findVPPAdminAccount200ApplicationJSONObjects = utils.objectToClass(
+                    res.vppAccounts = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindVPPAdminAccount200ApplicationJSON,
+                        shared.VppAccounts,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -248,10 +249,7 @@ export class Vppaccounts {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findVPPAdminAccountById200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindVPPAdminAccountById200ApplicationJSON
-                    );
+                    res.vppAccount = utils.objectToClass(JSON.parse(decodedRes), shared.VppAccount);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
