@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -61,11 +62,11 @@ export class Computerreports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerReports200ApplicationJSONObjects = [];
+                    res.computerReports = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerReports200ApplicationJSONObjects = utils.objectToClass(
+                    res.computerReports = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerReports200ApplicationJSON,
+                        shared.ComputerReports,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -138,11 +139,11 @@ export class Computerreports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerReportsById200ApplicationJSONObjects = [];
+                    res.computerReport = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerReportsById200ApplicationJSONObjects = utils.objectToClass(
+                    res.computerReport = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerReportsById200ApplicationJSON,
+                        shared.ComputerReport,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -215,11 +216,11 @@ export class Computerreports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerReportsByName200ApplicationJSONObjects = [];
+                    res.computerReport = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerReportsByName200ApplicationJSONObjects = utils.objectToClass(
+                    res.computerReport = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerReportsByName200ApplicationJSON,
+                        shared.ComputerReport,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {

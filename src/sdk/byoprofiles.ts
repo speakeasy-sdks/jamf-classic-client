@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -225,11 +226,11 @@ export class Byoprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findBYOProfiles200ApplicationJSONObjects = [];
+                    res.byoprofiles = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findBYOProfiles200ApplicationJSONObjects = utils.objectToClass(
+                    res.byoprofiles = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindBYOProfiles200ApplicationJSON,
+                        shared.Byoprofiles,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -299,10 +300,7 @@ export class Byoprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findBYOProfilesById200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindBYOProfilesById200ApplicationJSON
-                    );
+                    res.byoprofile = utils.objectToClass(JSON.parse(decodedRes), shared.Byoprofile);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -370,10 +368,7 @@ export class Byoprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findBYOProfilesByName200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindBYOProfilesByName200ApplicationJSON
-                    );
+                    res.byoprofile = utils.objectToClass(JSON.parse(decodedRes), shared.Byoprofile);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

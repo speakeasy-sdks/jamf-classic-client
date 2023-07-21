@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -226,11 +227,11 @@ export class Directorybindings {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDirectoryBindings200ApplicationJSONObjects = [];
+                    res.directoryBindings = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findDirectoryBindings200ApplicationJSONObjects = utils.objectToClass(
+                    res.directoryBindings = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindDirectoryBindings200ApplicationJSON,
+                        shared.DirectoryBindings,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -300,9 +301,9 @@ export class Directorybindings {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDirectoryBindingsById200ApplicationJSONObject = utils.objectToClass(
+                    res.directoryBinding = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindDirectoryBindingsById200ApplicationJSON
+                        shared.DirectoryBinding
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -371,9 +372,9 @@ export class Directorybindings {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDirectoryBindingsByName200ApplicationJSONObject = utils.objectToClass(
+                    res.directoryBinding = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindDirectoryBindingsByName200ApplicationJSON
+                        shared.DirectoryBinding
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;

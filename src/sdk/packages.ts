@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -221,11 +222,11 @@ export class Packages {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPackages200ApplicationJSONObjects = [];
+                    res.packages = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findPackages200ApplicationJSONObjects = utils.objectToClass(
+                    res.packages = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPackages200ApplicationJSON,
+                        shared.Packages,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -294,10 +295,7 @@ export class Packages {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPackagesById200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindPackagesById200ApplicationJSON
-                    );
+                    res.package = utils.objectToClass(JSON.parse(decodedRes), shared.Package);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -365,10 +363,7 @@ export class Packages {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPackagesByName200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindPackagesByName200ApplicationJSON
-                    );
+                    res.package = utils.objectToClass(JSON.parse(decodedRes), shared.Package);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

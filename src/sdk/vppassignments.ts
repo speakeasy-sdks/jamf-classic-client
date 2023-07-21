@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -176,9 +177,9 @@ export class Vppassignments {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findAssignmentById200ApplicationJSONObject = utils.objectToClass(
+                    res.vppAssignment = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindAssignmentById200ApplicationJSON
+                        shared.VppAssignment
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -242,11 +243,11 @@ export class Vppassignments {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findVPPAdminAssignment200ApplicationJSONObjects = [];
+                    res.vppAssignments = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findVPPAdminAssignment200ApplicationJSONObjects = utils.objectToClass(
+                    res.vppAssignments = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindVPPAdminAssignment200ApplicationJSON,
+                        shared.VppAssignments,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {

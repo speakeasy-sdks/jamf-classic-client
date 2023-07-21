@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -221,11 +222,11 @@ export class Ibeacons {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findIBeacons200ApplicationJSONObjects = [];
+                    res.ibeacons = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findIBeacons200ApplicationJSONObjects = utils.objectToClass(
+                    res.ibeacons = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindIBeacons200ApplicationJSON,
+                        shared.Ibeacons,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -294,10 +295,7 @@ export class Ibeacons {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findIBeaconsById200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindIBeaconsById200ApplicationJSON
-                    );
+                    res.ibeacon = utils.objectToClass(JSON.parse(decodedRes), shared.Ibeacon);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -365,10 +363,7 @@ export class Ibeacons {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findIBeaconsByName200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindIBeaconsByName200ApplicationJSON
-                    );
+                    res.ibeacon = utils.objectToClass(JSON.parse(decodedRes), shared.Ibeacon);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

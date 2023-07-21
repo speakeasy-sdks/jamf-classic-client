@@ -1,0 +1,12 @@
+# MobileDeviceConfigurationProfile
+
+OK
+
+
+## Fields
+
+| Field                                                                                                             | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `general`                                                                                                         | [MobileDeviceConfigurationProfileGeneral](../../models/shared/mobiledeviceconfigurationprofilegeneral.md)         | :heavy_minus_sign:                                                                                                | N/A                                                                                                               |
+| `scope`                                                                                                           | [MobileDeviceConfigurationProfileScope](../../models/shared/mobiledeviceconfigurationprofilescope.md)             | :heavy_minus_sign:                                                                                                | N/A                                                                                                               |
+| `selfService`                                                                                                     | [MobileDeviceConfigurationProfileSelfService](../../models/shared/mobiledeviceconfigurationprofileselfservice.md) | :heavy_minus_sign:                                                                                                | N/A                                                                                                               |

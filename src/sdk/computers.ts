@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -395,11 +396,11 @@ export class Computers {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputers200ApplicationJSONObjects = [];
+                    res.computers = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputers200ApplicationJSONObjects = utils.objectToClass(
+                    res.computers = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputers200ApplicationJSON,
+                        shared.Computers,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -464,9 +465,9 @@ export class Computers {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computers = utils.objectToClass(
+                    res.computersBasic = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputersBasicComputers
+                        shared.ComputersBasic
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -534,10 +535,7 @@ export class Computers {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputersById200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindComputersById200ApplicationJSON
-                    );
+                    res.computer = utils.objectToClass(JSON.parse(decodedRes), shared.Computer);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -663,10 +661,7 @@ export class Computers {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputersByMacAddress200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindComputersByMacAddress200ApplicationJSON
-                    );
+                    res.computer = utils.objectToClass(JSON.parse(decodedRes), shared.Computer);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -741,11 +736,7 @@ export class Computers {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputersByMacAddressSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputersByMacAddressSubset200ApplicationJSON
-                        );
+                    res.computer = utils.objectToClass(JSON.parse(decodedRes), shared.Computer);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -813,10 +804,7 @@ export class Computers {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputersByName200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindComputersByName200ApplicationJSON
-                    );
+                    res.computer = utils.objectToClass(JSON.parse(decodedRes), shared.Computer);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -891,10 +879,7 @@ export class Computers {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputersByNameSubset200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindComputersByNameSubset200ApplicationJSON
-                    );
+                    res.computer = utils.objectToClass(JSON.parse(decodedRes), shared.Computer);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -966,10 +951,7 @@ export class Computers {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputersBySerialNumber200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindComputersBySerialNumber200ApplicationJSON
-                    );
+                    res.computer = utils.objectToClass(JSON.parse(decodedRes), shared.Computer);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1044,11 +1026,7 @@ export class Computers {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputersBySerialNumberSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputersBySerialNumberSubset200ApplicationJSON
-                        );
+                    res.computer = utils.objectToClass(JSON.parse(decodedRes), shared.Computer);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1116,10 +1094,7 @@ export class Computers {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputersByUDID200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindComputersByUdid200ApplicationJSON
-                    );
+                    res.computer = utils.objectToClass(JSON.parse(decodedRes), shared.Computer);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1194,10 +1169,7 @@ export class Computers {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputersByUDIDSubset200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindComputersByUDIDSubset200ApplicationJSON
-                    );
+                    res.computer = utils.objectToClass(JSON.parse(decodedRes), shared.Computer);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

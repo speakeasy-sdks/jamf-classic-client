@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -226,11 +227,11 @@ export class Patchexternalsources {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPatchExternalSources200ApplicationJSONObjects = [];
+                    res.patchExternalSources = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findPatchExternalSources200ApplicationJSONObjects = utils.objectToClass(
+                    res.patchExternalSources = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPatchExternalSources200ApplicationJSON,
+                        shared.PatchExternalSources,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -300,9 +301,9 @@ export class Patchexternalsources {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPatchExternalSourcesById200ApplicationJSONObject = utils.objectToClass(
+                    res.patchExternalSource = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPatchExternalSourcesById200ApplicationJSON
+                        shared.PatchExternalSource
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -371,11 +372,10 @@ export class Patchexternalsources {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPatchExternalSourcesByName200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindPatchExternalSourcesByName200ApplicationJSON
-                        );
+                    res.patchExternalSource = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.PatchExternalSource
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

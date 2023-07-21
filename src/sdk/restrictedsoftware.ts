@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -226,11 +227,11 @@ export class Restrictedsoftware {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findRestrictedSoftware200ApplicationJSONObjects = [];
+                    res.restrictedSoftwareAll = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findRestrictedSoftware200ApplicationJSONObjects = utils.objectToClass(
+                    res.restrictedSoftwareAll = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindRestrictedSoftware200ApplicationJSON,
+                        shared.RestrictedSoftwareAll,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -300,9 +301,9 @@ export class Restrictedsoftware {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findRestrictedSoftwareById200ApplicationJSONObject = utils.objectToClass(
+                    res.restrictedSoftware = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindRestrictedSoftwareById200ApplicationJSON
+                        shared.RestrictedSoftware
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -371,9 +372,9 @@ export class Restrictedsoftware {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findRestrictedSoftwareByName200ApplicationJSONObject = utils.objectToClass(
+                    res.restrictedSoftware = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindRestrictedSoftwareByName200ApplicationJSON
+                        shared.RestrictedSoftware
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
