@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -226,11 +227,11 @@ export class Computergroups {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerGroups200ApplicationJSONObjects = [];
+                    res.computerGroups = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerGroups200ApplicationJSONObjects = utils.objectToClass(
+                    res.computerGroups = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerGroups200ApplicationJSON,
+                        shared.ComputerGroups,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -300,9 +301,9 @@ export class Computergroups {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerGroupsById200ApplicationJSONObject = utils.objectToClass(
+                    res.computerGroup = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerGroupsById200ApplicationJSON
+                        shared.ComputerGroup
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -371,9 +372,9 @@ export class Computergroups {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerGroupsByName200ApplicationJSONObject = utils.objectToClass(
+                    res.computerGroup = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerGroupsByName200ApplicationJSON
+                        shared.ComputerGroup
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;

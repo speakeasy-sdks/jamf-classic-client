@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -220,11 +221,11 @@ export class Sites {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findSites200ApplicationJSONObjects = [];
+                    res.sites = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findSites200ApplicationJSONObjects = utils.objectToClass(
+                    res.sites = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindSites200ApplicationJSON,
+                        shared.Sites,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -293,10 +294,7 @@ export class Sites {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findSitesById200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindSitesById200ApplicationJSON
-                    );
+                    res.site = utils.objectToClass(JSON.parse(decodedRes), shared.Site);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -363,10 +361,7 @@ export class Sites {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findSitesByName200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindSitesByName200ApplicationJSON
-                    );
+                    res.site = utils.objectToClass(JSON.parse(decodedRes), shared.Site);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

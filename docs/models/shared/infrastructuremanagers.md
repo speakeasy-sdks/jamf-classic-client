@@ -1,0 +1,9 @@
+# InfrastructureManagers
+
+
+## Fields
+
+| Field                                                                 | Type                                                                  | Required                                                              | Description                                                           | Example                                                               |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `infrastructureManager`                                               | [InfrastructureManager](../../models/shared/infrastructuremanager.md) | :heavy_minus_sign:                                                    | N/A                                                                   |                                                                       |
+| `size`                                                                | *number*                                                              | :heavy_minus_sign:                                                    | N/A                                                                   | 1                                                                     |

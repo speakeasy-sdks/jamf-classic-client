@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -70,11 +71,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsById200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsById200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -149,11 +149,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsByIdSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsByIdSubset200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -225,11 +224,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -304,11 +302,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsByMacAddressSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsByMacAddressSubset200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -380,11 +377,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsByName200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsByName200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -459,11 +455,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsByNameSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsByNameSubset200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -535,11 +530,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsBySerial200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsBySerial200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -614,11 +608,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -690,11 +683,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsByUDID200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsByUdid200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -769,11 +761,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsByUDIDSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsByUDIDSubset200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

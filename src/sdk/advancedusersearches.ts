@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -226,11 +227,11 @@ export class Advancedusersearches {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findAdvancedUserSearches200ApplicationJSONObjects = [];
+                    res.advancedUserSearches = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findAdvancedUserSearches200ApplicationJSONObjects = utils.objectToClass(
+                    res.advancedUserSearches = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindAdvancedUserSearches200ApplicationJSON,
+                        shared.AdvancedUserSearches,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -302,7 +303,7 @@ export class Advancedusersearches {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.advancedUserSearch = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindAdvancedUserSearchesByIdAdvancedUserSearch
+                        shared.AdvancedUserSearch
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -373,7 +374,7 @@ export class Advancedusersearches {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.advancedUserSearch = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindUserSearchesByNameAdvancedUserSearch
+                        shared.AdvancedUserSearch
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
