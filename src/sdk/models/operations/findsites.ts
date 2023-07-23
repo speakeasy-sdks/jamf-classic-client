@@ -3,51 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindSites200ApplicationXMLSite extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    /**
-     * Name of the site
-     */
-    @SpeakeasyMetadata()
-    name: string;
-}
-
-export class FindSites200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    site?: FindSites200ApplicationXMLSite;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindSites200ApplicationJSONSite extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    /**
-     * Name of the site
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-}
-
-export class FindSites200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "site" })
-    @Type(() => FindSites200ApplicationJSONSite)
-    site?: FindSites200ApplicationJSONSite;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindSitesResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -65,6 +22,6 @@ export class FindSitesResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindSites200ApplicationJSON })
-    findSites200ApplicationJSONObjects?: FindSites200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.Sites })
+    sites?: shared.Sites[];
 }

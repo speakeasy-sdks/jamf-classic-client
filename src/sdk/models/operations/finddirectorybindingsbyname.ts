@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose } from "class-transformer";
 
 export class FindDirectoryBindingsByNameRequest extends SpeakeasyBase {
     /**
@@ -12,96 +12,6 @@ export class FindDirectoryBindingsByNameRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
     name: string;
-}
-
-/**
- * OK
- */
-export class FindDirectoryBindingsByName200ApplicationXML extends SpeakeasyBase {
-    /**
-     * OU to bind computers to
-     */
-    @SpeakeasyMetadata()
-    computerOu?: string;
-
-    @SpeakeasyMetadata()
-    domain?: string;
-
-    @SpeakeasyMetadata()
-    id?: number;
-
-    /**
-     * Name of the binding
-     */
-    @SpeakeasyMetadata()
-    name: string;
-
-    /**
-     * Password for the network administrator account
-     */
-    @SpeakeasyMetadata()
-    password?: string;
-
-    @SpeakeasyMetadata()
-    priority?: number;
-
-    @SpeakeasyMetadata()
-    type?: string;
-
-    /**
-     * Network administrator account to bind with
-     */
-    @SpeakeasyMetadata()
-    username?: string;
-}
-
-/**
- * OK
- */
-export class FindDirectoryBindingsByName200ApplicationJSON extends SpeakeasyBase {
-    /**
-     * OU to bind computers to
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "computer_ou" })
-    computerOu?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "domain" })
-    domain?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    /**
-     * Name of the binding
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-
-    /**
-     * Password for the network administrator account
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "password" })
-    password?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "priority" })
-    priority?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "type" })
-    type?: string;
-
-    /**
-     * Network administrator account to bind with
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "username" })
-    username?: string;
 }
 
 export class FindDirectoryBindingsByNameResponse extends SpeakeasyBase {
@@ -121,5 +31,5 @@ export class FindDirectoryBindingsByNameResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    findDirectoryBindingsByName200ApplicationJSONObject?: FindDirectoryBindingsByName200ApplicationJSON;
+    directoryBinding?: shared.DirectoryBinding;
 }

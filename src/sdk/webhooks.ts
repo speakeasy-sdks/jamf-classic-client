@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -224,11 +225,11 @@ export class Webhooks {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findWebhooks200ApplicationJSONObjects = [];
+                    res.webhooks = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findWebhooks200ApplicationJSONObjects = utils.objectToClass(
+                    res.webhooks = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindWebhooks200ApplicationJSON,
+                        shared.Webhooks,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -297,10 +298,7 @@ export class Webhooks {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findWebhooksById200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindWebhooksById200ApplicationJSON
-                    );
+                    res.webhook = utils.objectToClass(JSON.parse(decodedRes), shared.Webhook);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -368,10 +366,7 @@ export class Webhooks {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findWebhooksByName200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindWebhooksByName200ApplicationJSON
-                    );
+                    res.webhook = utils.objectToClass(JSON.parse(decodedRes), shared.Webhook);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

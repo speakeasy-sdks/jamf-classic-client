@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -171,11 +172,11 @@ export class Peripheraltypes {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPeripheralTypes200ApplicationJSONObjects = [];
+                    res.peripheralTypes = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findPeripheralTypes200ApplicationJSONObjects = utils.objectToClass(
+                    res.peripheralTypes = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPeripheralTypes200ApplicationJSON,
+                        shared.PeripheralTypes,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -245,9 +246,9 @@ export class Peripheraltypes {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPeripheralTypesById200ApplicationJSONObject = utils.objectToClass(
+                    res.peripheralType = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPeripheralTypesById200ApplicationJSON
+                        shared.PeripheralType
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
