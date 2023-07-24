@@ -1,0 +1,10 @@
+# ComputerHistoryCommands
+
+
+## Fields
+
+| Field                                                                                         | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `completed`                                                                                   | [ComputerHistoryCommandsCompleted](../../models/shared/computerhistorycommandscompleted.md)[] | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `failed`                                                                                      | [ComputerHistoryCommandsFailed](../../models/shared/computerhistorycommandsfailed.md)[]       | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `pending`                                                                                     | [ComputerHistoryCommandsPending](../../models/shared/computerhistorycommandspending.md)[]     | :heavy_minus_sign:                                                                            | N/A                                                                                           |

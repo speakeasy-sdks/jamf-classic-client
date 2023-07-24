@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -223,11 +224,11 @@ export class Dockitems {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDockItems200ApplicationJSONObjects = [];
+                    res.dockItems = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findDockItems200ApplicationJSONObjects = utils.objectToClass(
+                    res.dockItems = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindDockItems200ApplicationJSON,
+                        shared.DockItems,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -296,10 +297,7 @@ export class Dockitems {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDockItemsById200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindDockItemsById200ApplicationJSON
-                    );
+                    res.dockItem = utils.objectToClass(JSON.parse(decodedRes), shared.DockItem);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -367,10 +365,7 @@ export class Dockitems {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDockItemsByName200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindDockItemsByName200ApplicationJSON
-                    );
+                    res.dockItem = utils.objectToClass(JSON.parse(decodedRes), shared.DockItem);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

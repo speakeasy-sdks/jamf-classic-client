@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -309,11 +310,11 @@ export class Mobiledeviceinvitations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceInvitations200ApplicationJSONObjects = [];
+                    res.mobileDeviceInvitations = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findMobileDeviceInvitations200ApplicationJSONObjects = utils.objectToClass(
+                    res.mobileDeviceInvitations = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindMobileDeviceInvitations200ApplicationJSON,
+                        shared.MobileDeviceInvitations,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -383,11 +384,10 @@ export class Mobiledeviceinvitations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceInvitationsById200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceInvitationsById200ApplicationJSON
-                        );
+                    res.mobileDeviceInvitation = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceInvitation
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -459,11 +459,10 @@ export class Mobiledeviceinvitations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceInvitationsByInvitation200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceInvitationsByInvitation200ApplicationJSON
-                        );
+                    res.mobileDeviceInvitation = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceInvitation
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

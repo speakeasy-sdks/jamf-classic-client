@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -171,11 +172,11 @@ export class Allowedfileextensions {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findAllowedFileExtension200ApplicationJSONObjects = [];
+                    res.allowedFileExtensions = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findAllowedFileExtension200ApplicationJSONObjects = utils.objectToClass(
+                    res.allowedFileExtensions = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindAllowedFileExtension200ApplicationJSON,
+                        shared.AllowedFileExtensions,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -245,9 +246,9 @@ export class Allowedfileextensions {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findAllowedFileExtensionById200ApplicationJSONObject = utils.objectToClass(
+                    res.allowedFileExtension = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindAllowedFileExtensionById200ApplicationJSON
+                        shared.AllowedFileExtension
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -320,11 +321,10 @@ export class Allowedfileextensions {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findAllowedFileExtensionByName200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindAllowedFileExtensionByName200ApplicationJSON
-                        );
+                    res.allowedFileExtension = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.AllowedFileExtension
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

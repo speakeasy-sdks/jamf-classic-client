@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -358,11 +359,11 @@ export class Patches {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPatches200ApplicationJSONObjects = [];
+                    res.patchManagementSoftwareTitles = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findPatches200ApplicationJSONObjects = utils.objectToClass(
+                    res.patchManagementSoftwareTitles = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPatches200ApplicationJSON,
+                        shared.PatchManagementSoftwareTitles,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -433,9 +434,9 @@ export class Patches {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPatchesById200ApplicationJSONObject = utils.objectToClass(
+                    res.softwareTitle = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPatchesById200ApplicationJSON
+                        shared.SoftwareTitle
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -505,9 +506,9 @@ export class Patches {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPatchesByName200ApplicationJSONObject = utils.objectToClass(
+                    res.softwareTitle = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPatchesByName200ApplicationJSON
+                        shared.SoftwareTitle
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;

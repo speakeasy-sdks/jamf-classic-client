@@ -1,0 +1,10 @@
+# EbookScopeLimitations
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `networkSegments`                                                                                     | [EbookScopeLimitationsNetworkSegments](../../models/shared/ebookscopelimitationsnetworksegments.md)[] | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |
+| `userGroups`                                                                                          | [EbookScopeLimitationsUserGroups](../../models/shared/ebookscopelimitationsusergroups.md)[]           | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |
+| `users`                                                                                               | [EbookScopeLimitationsUsers](../../models/shared/ebookscopelimitationsusers.md)[]                     | :heavy_minus_sign:                                                                                    | N/A                                                                                                   |

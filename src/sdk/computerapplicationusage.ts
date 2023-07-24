@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -70,14 +71,13 @@ export class Computerapplicationusage {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerApplicationUsageById200ApplicationJSONObjects = [];
+                    res.computerApplicationUsage = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerApplicationUsageById200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerApplicationUsageById200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.computerApplicationUsage = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerApplicationUsage,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -149,14 +149,13 @@ export class Computerapplicationusage {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerApplicationUsageByMacAddress200ApplicationJSONObjects = [];
+                    res.computerApplicationUsage = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerApplicationUsageByMacAddress200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerApplicationUsageByMacAddress200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.computerApplicationUsage = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerApplicationUsage,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -228,14 +227,13 @@ export class Computerapplicationusage {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerApplicationUsageByName200ApplicationJSONObjects = [];
+                    res.computerApplicationUsage = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerApplicationUsageByName200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerApplicationUsageByName200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.computerApplicationUsage = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerApplicationUsage,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -307,14 +305,13 @@ export class Computerapplicationusage {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerApplicationUsageBySerial200ApplicationJSONObjects = [];
+                    res.computerApplicationUsage = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerApplicationUsageBySerial200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerApplicationUsageBySerial200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.computerApplicationUsage = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerApplicationUsage,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -386,14 +383,13 @@ export class Computerapplicationusage {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerApplicationUsageByUDID200ApplicationJSONObjects = [];
+                    res.computerApplicationUsage = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerApplicationUsageByUDID200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerApplicationUsageByUdid200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.computerApplicationUsage = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerApplicationUsage,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
