@@ -3,45 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindLDAPServers200ApplicationXMLLDAPServer extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindLDAPServers200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    ldapServer?: FindLDAPServers200ApplicationXMLLDAPServer;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindLDAPServers200ApplicationJSONLDAPServer extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindLDAPServers200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "ldap_server" })
-    @Type(() => FindLDAPServers200ApplicationJSONLDAPServer)
-    ldapServer?: FindLDAPServers200ApplicationJSONLDAPServer;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindLDAPServersResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -59,6 +22,6 @@ export class FindLDAPServersResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindLDAPServers200ApplicationJSON })
-    findLDAPServers200ApplicationJSONObjects?: FindLDAPServers200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.LdapServers })
+    ldapServers?: shared.LdapServers[];
 }

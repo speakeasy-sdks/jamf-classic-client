@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -224,11 +225,11 @@ export class Macapplications {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMacapps200ApplicationJSONObjects = [];
+                    res.macApplications = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findMacapps200ApplicationJSONObjects = utils.objectToClass(
+                    res.macApplications = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindMacapps200ApplicationJSON,
+                        shared.MacApplications,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -297,9 +298,9 @@ export class Macapplications {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMacappsById200ApplicationJSONObject = utils.objectToClass(
+                    res.macApplication = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindMacappsById200ApplicationJSON
+                        shared.MacApplication
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -429,9 +430,9 @@ export class Macapplications {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMacappsByName200ApplicationJSONObject = utils.objectToClass(
+                    res.macApplication = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindMacappsByName200ApplicationJSON
+                        shared.MacApplication
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -507,9 +508,9 @@ export class Macapplications {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMacappsByNameSubset200ApplicationJSONObject = utils.objectToClass(
+                    res.macApplication = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindMacappsByNameSubset200ApplicationJSON
+                        shared.MacApplication
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;

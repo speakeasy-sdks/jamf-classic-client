@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
 
 export class FindComputerCommandsByNameRequest extends SpeakeasyBase {
     /**
@@ -12,156 +12,6 @@ export class FindComputerCommandsByNameRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
     name: string;
-}
-
-export class FindComputerCommandsByName200ApplicationXMLComputersComputer extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    serialNumber?: string;
-
-    @SpeakeasyMetadata()
-    udid?: string;
-}
-
-export class FindComputerCommandsByName200ApplicationXMLComputers extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    computer?: FindComputerCommandsByName200ApplicationXMLComputersComputer;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindComputerCommandsByName200ApplicationXMLGeneral extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    apnsResultStatus?: string;
-
-    /**
-     * Command type
-     */
-    @SpeakeasyMetadata()
-    command?: string;
-
-    @SpeakeasyMetadata()
-    dateSent?: string;
-
-    @SpeakeasyMetadata()
-    dateSentEpoch?: string;
-
-    @SpeakeasyMetadata()
-    dateSentUtc?: string;
-
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    profileId?: number;
-
-    @SpeakeasyMetadata()
-    profileUdid?: string;
-
-    @SpeakeasyMetadata()
-    udid?: string;
-
-    @SpeakeasyMetadata()
-    uuid?: string;
-}
-
-/**
- * OK
- */
-export class FindComputerCommandsByName200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    computers?: FindComputerCommandsByName200ApplicationXMLComputers;
-
-    @SpeakeasyMetadata()
-    general?: FindComputerCommandsByName200ApplicationXMLGeneral;
-}
-
-export class FindComputerCommandsByName200ApplicationJSONComputersComputer extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "serial_number" })
-    serialNumber?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "udid" })
-    udid?: string;
-}
-
-export class FindComputerCommandsByName200ApplicationJSONComputers extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "computer" })
-    @Type(() => FindComputerCommandsByName200ApplicationJSONComputersComputer)
-    computer?: FindComputerCommandsByName200ApplicationJSONComputersComputer;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
-
-export class FindComputerCommandsByName200ApplicationJSONGeneral extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "apns_result_status" })
-    apnsResultStatus?: string;
-
-    /**
-     * Command type
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "command" })
-    command?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "date_sent" })
-    dateSent?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "date_sent_epoch" })
-    dateSentEpoch?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "date_sent_utc" })
-    dateSentUtc?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "profile_id" })
-    profileId?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "profile_udid" })
-    profileUdid?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "udid" })
-    udid?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "uuid" })
-    uuid?: string;
-}
-
-/**
- * OK
- */
-export class FindComputerCommandsByName200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "computers" })
-    @Type(() => FindComputerCommandsByName200ApplicationJSONComputers)
-    computers?: FindComputerCommandsByName200ApplicationJSONComputers;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "general" })
-    @Type(() => FindComputerCommandsByName200ApplicationJSONGeneral)
-    general?: FindComputerCommandsByName200ApplicationJSONGeneral;
 }
 
 export class FindComputerCommandsByNameResponse extends SpeakeasyBase {
@@ -181,5 +31,5 @@ export class FindComputerCommandsByNameResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    findComputerCommandsByName200ApplicationJSONObject?: FindComputerCommandsByName200ApplicationJSON;
+    computerCommand?: shared.ComputerCommand;
 }

@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -238,14 +239,13 @@ export class Diskencryptionconfigurations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDiskEncryptionConfigurations200ApplicationJSONObjects = [];
+                    res.diskEncryptionConfigurations = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findDiskEncryptionConfigurations200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindDiskEncryptionConfigurations200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.diskEncryptionConfigurations = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.DiskEncryptionConfigurations,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -317,11 +317,10 @@ export class Diskencryptionconfigurations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDiskEncryptionConfigurationsById200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindDiskEncryptionConfigurationsById200ApplicationJSON
-                        );
+                    res.diskEncryptionConfiguration = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.DiskEncryptionConfiguration
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -393,11 +392,10 @@ export class Diskencryptionconfigurations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDiskEncryptionConfigurationsByName200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindDiskEncryptionConfigurationsByName200ApplicationJSON
-                        );
+                    res.diskEncryptionConfiguration = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.DiskEncryptionConfiguration
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

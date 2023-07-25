@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -585,11 +586,11 @@ export class Ldapservers {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findLDAPServers200ApplicationJSONObjects = [];
+                    res.ldapServers = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findLDAPServers200ApplicationJSONObjects = utils.objectToClass(
+                    res.ldapServers = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindLDAPServers200ApplicationJSON,
+                        shared.LdapServers,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -659,10 +660,7 @@ export class Ldapservers {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findLDAPServersById200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindLDAPServersById200ApplicationJSON
-                    );
+                    res.ldapServer = utils.objectToClass(JSON.parse(decodedRes), shared.LdapServer);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

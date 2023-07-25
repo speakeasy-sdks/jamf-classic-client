@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -66,9 +67,9 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryById200ApplicationJSONObject = utils.objectToClass(
+                    res.computerHistory = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerHistoryById200ApplicationJSON
+                        shared.ComputerHistory
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -144,9 +145,9 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryByIdSubset200ApplicationJSONObject = utils.objectToClass(
+                    res.computerHistory = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerHistoryByIdSubset200ApplicationJSON
+                        shared.ComputerHistory
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -219,11 +220,10 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryByMacAddress200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHistoryByMacAddress200ApplicationJSON
-                        );
+                    res.computerHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -298,11 +298,10 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryByMacAddressSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHistoryByMacAddressSubset200ApplicationJSON
-                        );
+                    res.computerHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -370,9 +369,9 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryByName200ApplicationJSONObject = utils.objectToClass(
+                    res.computerHistory = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerHistoryByName200ApplicationJSON
+                        shared.ComputerHistory
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -448,11 +447,10 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryByNameSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHistoryByNameSubset200ApplicationJSON
-                        );
+                    res.computerHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -524,11 +522,10 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryBySerialNumber200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHistoryBySerialNumber200ApplicationJSON
-                        );
+                    res.computerHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -603,11 +600,10 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryBySerialNumberSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHistoryBySerialNumberSubset200ApplicationJSON
-                        );
+                    res.computerHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -675,9 +671,9 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryByUDID200ApplicationJSONObject = utils.objectToClass(
+                    res.computerHistory = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerHistoryByUdid200ApplicationJSON
+                        shared.ComputerHistory
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -753,11 +749,10 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryByUDIDSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHistoryByUDIDSubset200ApplicationJSON
-                        );
+                    res.computerHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

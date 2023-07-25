@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -313,11 +314,11 @@ export class Computercommands {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerCommands200ApplicationJSONObjects = [];
+                    res.computerCommands = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerCommands200ApplicationJSONObjects = utils.objectToClass(
+                    res.computerCommands = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerCommands200ApplicationJSON,
+                        shared.ComputerCommands,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -387,9 +388,9 @@ export class Computercommands {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerCommandsByName200ApplicationJSONObject = utils.objectToClass(
+                    res.computerCommand = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerCommandsByName200ApplicationJSON
+                        shared.ComputerCommand
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -458,9 +459,9 @@ export class Computercommands {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerCommandsByUuid200ApplicationJSONObject = utils.objectToClass(
+                    res.computerCommand = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerCommandsByUuid200ApplicationJSON
+                        shared.ComputerCommand
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
