@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose } from "class-transformer";
 
 export class FindIBeaconsByIdRequest extends SpeakeasyBase {
     /**
@@ -12,57 +12,6 @@ export class FindIBeaconsByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
-}
-
-/**
- * OK
- */
-export class FindIBeaconsById200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    major?: string;
-
-    @SpeakeasyMetadata()
-    minor?: string;
-
-    /**
-     * Name of the ibeacon
-     */
-    @SpeakeasyMetadata()
-    name: string;
-
-    @SpeakeasyMetadata()
-    uuid: string;
-}
-
-/**
- * OK
- */
-export class FindIBeaconsById200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "major" })
-    major?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "minor" })
-    minor?: string;
-
-    /**
-     * Name of the ibeacon
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "uuid" })
-    uuid: string;
 }
 
 export class FindIBeaconsByIdResponse extends SpeakeasyBase {
@@ -82,5 +31,5 @@ export class FindIBeaconsByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    findIBeaconsById200ApplicationJSONObject?: FindIBeaconsById200ApplicationJSON;
+    ibeacon?: shared.Ibeacon;
 }

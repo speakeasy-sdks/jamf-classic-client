@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -226,11 +227,11 @@ export class Distributionpoints {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDistributionPoints200ApplicationJSONObjects = [];
+                    res.distributionPoints = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findDistributionPoints200ApplicationJSONObjects = utils.objectToClass(
+                    res.distributionPoints = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindDistributionPoints200ApplicationJSON,
+                        shared.DistributionPoints,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -300,9 +301,9 @@ export class Distributionpoints {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDistributionPointsById200ApplicationJSONObject = utils.objectToClass(
+                    res.distributionPoint = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindDistributionPointsById200ApplicationJSON
+                        shared.DistributionPoint
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -371,9 +372,9 @@ export class Distributionpoints {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDistributionPointsByName200ApplicationJSONObject = utils.objectToClass(
+                    res.distributionPoint = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindDistributionPointsByName200ApplicationJSON
+                        shared.DistributionPoint
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;

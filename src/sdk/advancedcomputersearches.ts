@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -230,11 +231,11 @@ export class Advancedcomputersearches {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findAdvancedComputerSearches200ApplicationJSONObjects = [];
+                    res.advancedComputerSearches = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findAdvancedComputerSearches200ApplicationJSONObjects = utils.objectToClass(
+                    res.advancedComputerSearches = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindAdvancedComputerSearches200ApplicationJSON,
+                        shared.AdvancedComputerSearches,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -309,11 +310,10 @@ export class Advancedcomputersearches {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findAdvancedComputerSearchesById200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindAdvancedComputerSearchesById200ApplicationJSON
-                        );
+                    res.advancedComputerSearch = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.AdvancedComputerSearch
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -388,11 +388,10 @@ export class Advancedcomputersearches {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findAdvancedComputerSearchesByName200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindAdvancedComputerSearchesByName200ApplicationJSON
-                        );
+                    res.advancedComputerSearch = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.AdvancedComputerSearch
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -186,11 +187,10 @@ export class Jsonwebtokenconfigurations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findJSONWebTokenConfigurationById200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindJSONWebTokenConfigurationById200ApplicationJSON
-                        );
+                    res.jsonWebTokenConfiguration = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.JsonWebTokenConfiguration
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -253,14 +253,13 @@ export class Jsonwebtokenconfigurations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findJSONWebTokenConfigurations200ApplicationJSONObjects = [];
+                    res.jsonWebTokenConfigurations = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findJSONWebTokenConfigurations200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindJSONWebTokenConfigurations200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.jsonWebTokenConfigurations = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.JsonWebTokenConfigurations,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

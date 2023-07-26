@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -61,11 +62,11 @@ export class Infrastructuremanager {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findInfrastructureManager200ApplicationJSONObjects = [];
+                    res.infrastructureManagers = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findInfrastructureManager200ApplicationJSONObjects = utils.objectToClass(
+                    res.infrastructureManagers = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindInfrastructureManager200ApplicationJSON,
+                        shared.InfrastructureManagers,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -135,9 +136,9 @@ export class Infrastructuremanager {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findInfrastructureManagerById200ApplicationJSONObject = utils.objectToClass(
+                    res.infrastructureManager = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindInfrastructureManagerById200ApplicationJSON
+                        shared.InfrastructureManager
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;

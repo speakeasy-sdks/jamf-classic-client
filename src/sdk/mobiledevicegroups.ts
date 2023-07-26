@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -226,11 +227,11 @@ export class Mobiledevicegroups {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceGroups200ApplicationJSONObjects = [];
+                    res.mobileDeviceGroups = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findMobileDeviceGroups200ApplicationJSONObjects = utils.objectToClass(
+                    res.mobileDeviceGroups = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindMobileDeviceGroups200ApplicationJSON,
+                        shared.MobileDeviceGroups,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -300,9 +301,9 @@ export class Mobiledevicegroups {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceGroupsById200ApplicationJSONObject = utils.objectToClass(
+                    res.mobileDeviceGroup = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindMobileDeviceGroupsById200ApplicationJSON
+                        shared.MobileDeviceGroup
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -371,9 +372,9 @@ export class Mobiledevicegroups {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceGroupsByName200ApplicationJSONObject = utils.objectToClass(
+                    res.mobileDeviceGroup = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindMobileDeviceGroupsByName200ApplicationJSON
+                        shared.MobileDeviceGroup
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;

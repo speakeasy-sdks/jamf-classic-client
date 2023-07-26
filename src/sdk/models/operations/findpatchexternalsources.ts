@@ -3,45 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindPatchExternalSources200ApplicationXMLPatchExternalSource extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindPatchExternalSources200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    patchExternalSource?: FindPatchExternalSources200ApplicationXMLPatchExternalSource;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindPatchExternalSources200ApplicationJSONPatchExternalSource extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindPatchExternalSources200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "patch_external_source" })
-    @Type(() => FindPatchExternalSources200ApplicationJSONPatchExternalSource)
-    patchExternalSource?: FindPatchExternalSources200ApplicationJSONPatchExternalSource;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindPatchExternalSourcesResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -59,6 +22,6 @@ export class FindPatchExternalSourcesResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindPatchExternalSources200ApplicationJSON })
-    findPatchExternalSources200ApplicationJSONObjects?: FindPatchExternalSources200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.PatchExternalSources })
+    patchExternalSources?: shared.PatchExternalSources[];
 }

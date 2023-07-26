@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose } from "class-transformer";
 
 export class FindSoftwareUpdateServersByNameRequest extends SpeakeasyBase {
     /**
@@ -12,57 +12,6 @@ export class FindSoftwareUpdateServersByNameRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
     name: string;
-}
-
-/**
- * OK
- */
-export class FindSoftwareUpdateServersByName200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    ipAddress: string;
-
-    /**
-     * Name of the software update server
-     */
-    @SpeakeasyMetadata()
-    name: string;
-
-    @SpeakeasyMetadata()
-    port?: number;
-
-    @SpeakeasyMetadata()
-    setSystemWide?: boolean;
-}
-
-/**
- * OK
- */
-export class FindSoftwareUpdateServersByName200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "ip_address" })
-    ipAddress: string;
-
-    /**
-     * Name of the software update server
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "port" })
-    port?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "set_system_wide" })
-    setSystemWide?: boolean;
 }
 
 export class FindSoftwareUpdateServersByNameResponse extends SpeakeasyBase {
@@ -82,5 +31,5 @@ export class FindSoftwareUpdateServersByNameResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    findSoftwareUpdateServersByName200ApplicationJSONObject?: FindSoftwareUpdateServersByName200ApplicationJSON;
+    softwareUpdateServer?: shared.SoftwareUpdateServer;
 }

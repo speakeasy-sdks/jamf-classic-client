@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -224,11 +225,11 @@ export class Scripts {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findScripts200ApplicationJSONObjects = [];
+                    res.scripts = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findScripts200ApplicationJSONObjects = utils.objectToClass(
+                    res.scripts = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindScripts200ApplicationJSON,
+                        shared.Scripts,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -300,10 +301,7 @@ export class Scripts {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findScriptsById200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindScriptsById200ApplicationJSON
-                    );
+                    res.script = utils.objectToClass(JSON.parse(decodedRes), shared.Script);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -373,10 +371,7 @@ export class Scripts {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findScriptsByName200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindScriptsByName200ApplicationJSON
-                    );
+                    res.script = utils.objectToClass(JSON.parse(decodedRes), shared.Script);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

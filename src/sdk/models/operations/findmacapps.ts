@@ -3,44 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindMacapps200ApplicationXMLMacApplication extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    /**
-     * Name of the application
-     */
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindMacapps200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    macApplication?: FindMacapps200ApplicationXMLMacApplication;
-}
-
-export class FindMacapps200ApplicationJSONMacApplication extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    /**
-     * Name of the application
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindMacapps200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "mac_application" })
-    @Type(() => FindMacapps200ApplicationJSONMacApplication)
-    macApplication?: FindMacapps200ApplicationJSONMacApplication;
-}
 
 export class FindMacappsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -58,6 +22,6 @@ export class FindMacappsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindMacapps200ApplicationJSON })
-    findMacapps200ApplicationJSONObjects?: FindMacapps200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.MacApplications })
+    macApplications?: shared.MacApplications[];
 }

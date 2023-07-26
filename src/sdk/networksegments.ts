@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -226,11 +227,11 @@ export class Networksegments {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findNetworkSegments200ApplicationJSONObjects = [];
+                    res.networkSegments = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findNetworkSegments200ApplicationJSONObjects = utils.objectToClass(
+                    res.networkSegments = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindNetworkSegments200ApplicationJSON,
+                        shared.NetworkSegments,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -300,9 +301,9 @@ export class Networksegments {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findNetworkSegmentsById200ApplicationJSONObject = utils.objectToClass(
+                    res.networkSegment = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindNetworkSegmentsById200ApplicationJSON
+                        shared.NetworkSegment
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -371,9 +372,9 @@ export class Networksegments {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findNetworkSegmentsByName200ApplicationJSONObject = utils.objectToClass(
+                    res.networkSegment = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindNetworkSegmentsByName200ApplicationJSON
+                        shared.NetworkSegment
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
