@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -297,14 +298,13 @@ export class Mobiledeviceenrollmentprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceEnrollmentProfiles200ApplicationJSONObjects = [];
+                    res.mobileDeviceEnrollmentProfiles = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findMobileDeviceEnrollmentProfiles200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceEnrollmentProfiles200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.mobileDeviceEnrollmentProfiles = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceEnrollmentProfiles,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -376,11 +376,10 @@ export class Mobiledeviceenrollmentprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceEnrollmentProfilesById200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceEnrollmentProfilesById200ApplicationJSON
-                        );
+                    res.mobileDeviceEnrollmentProfile = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceEnrollmentProfile
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -514,11 +513,10 @@ export class Mobiledeviceenrollmentprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSON
-                        );
+                    res.mobileDeviceEnrollmentProfile = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceEnrollmentProfile
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -590,11 +588,10 @@ export class Mobiledeviceenrollmentprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceEnrollmentProfilesByName200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceEnrollmentProfilesByName200ApplicationJSON
-                        );
+                    res.mobileDeviceEnrollmentProfile = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceEnrollmentProfile
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -669,11 +666,10 @@ export class Mobiledeviceenrollmentprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceEnrollmentProfilesByNameSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceEnrollmentProfilesByNameSubset200ApplicationJSON
-                        );
+                    res.mobileDeviceEnrollmentProfile = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceEnrollmentProfile
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

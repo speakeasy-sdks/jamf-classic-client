@@ -3,45 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindDockItems200ApplicationXMLDockItem extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindDockItems200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    dockItem?: FindDockItems200ApplicationXMLDockItem;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindDockItems200ApplicationJSONDockItem extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindDockItems200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "dock_item" })
-    @Type(() => FindDockItems200ApplicationJSONDockItem)
-    dockItem?: FindDockItems200ApplicationJSONDockItem;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindDockItemsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -59,6 +22,6 @@ export class FindDockItemsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindDockItems200ApplicationJSON })
-    findDockItems200ApplicationJSONObjects?: FindDockItems200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.DockItems })
+    dockItems?: shared.DockItems[];
 }

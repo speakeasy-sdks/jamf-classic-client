@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -221,11 +222,11 @@ export class Policies {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPolicies200ApplicationJSONObjects = [];
+                    res.policies = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findPolicies200ApplicationJSONObjects = utils.objectToClass(
+                    res.policies = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPolicies200ApplicationJSON,
+                        shared.Policies,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -352,10 +353,7 @@ export class Policies {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPoliciesById200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindPoliciesById200ApplicationJSON
-                    );
+                    res.policy = utils.objectToClass(JSON.parse(decodedRes), shared.Policy);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -481,10 +479,7 @@ export class Policies {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPoliciesByName200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindPoliciesByName200ApplicationJSON
-                    );
+                    res.policy = utils.objectToClass(JSON.parse(decodedRes), shared.Policy);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -559,10 +554,7 @@ export class Policies {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPoliciesByNameSubset200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindPoliciesByNameSubset200ApplicationJSON
-                    );
+                    res.policy = utils.objectToClass(JSON.parse(decodedRes), shared.Policy);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

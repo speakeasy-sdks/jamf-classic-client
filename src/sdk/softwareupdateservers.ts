@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -226,11 +227,11 @@ export class Softwareupdateservers {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findSoftwareUpdateServers200ApplicationJSONObjects = [];
+                    res.softwareUpdateServers = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findSoftwareUpdateServers200ApplicationJSONObjects = utils.objectToClass(
+                    res.softwareUpdateServers = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindSoftwareUpdateServers200ApplicationJSON,
+                        shared.SoftwareUpdateServers,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -300,9 +301,9 @@ export class Softwareupdateservers {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findSoftwareUpdateServersById200ApplicationJSONObject = utils.objectToClass(
+                    res.softwareUpdateServer = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindSoftwareUpdateServersById200ApplicationJSON
+                        shared.SoftwareUpdateServer
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -371,11 +372,10 @@ export class Softwareupdateservers {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findSoftwareUpdateServersByName200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindSoftwareUpdateServersByName200ApplicationJSON
-                        );
+                    res.softwareUpdateServer = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.SoftwareUpdateServer
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

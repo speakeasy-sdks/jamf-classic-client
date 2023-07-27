@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -278,11 +279,11 @@ export class Users {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findUsers200ApplicationJSONObjects = [];
+                    res.users = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findUsers200ApplicationJSONObjects = utils.objectToClass(
+                    res.users = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindUsers200ApplicationJSON,
+                        shared.Users,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -355,10 +356,7 @@ export class Users {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findUsersByEmailAddress200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindUsersByEmailAddress200ApplicationJSON
-                    );
+                    res.user = utils.objectToClass(JSON.parse(decodedRes), shared.User);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -425,10 +423,7 @@ export class Users {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findUsersById200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindUsersById200ApplicationJSON
-                    );
+                    res.user = utils.objectToClass(JSON.parse(decodedRes), shared.User);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -495,10 +490,7 @@ export class Users {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findUsersByName200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindUsersByName200ApplicationJSON
-                    );
+                    res.user = utils.objectToClass(JSON.parse(decodedRes), shared.User);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

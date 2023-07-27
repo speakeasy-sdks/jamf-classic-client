@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -61,9 +62,9 @@ export class Activationcode {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findactivationcode200ApplicationJSONObject = utils.objectToClass(
+                    res.activationCode = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.Findactivationcode200ApplicationJSON
+                        shared.ActivationCode
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;

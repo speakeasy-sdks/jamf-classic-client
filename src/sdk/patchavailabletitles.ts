@@ -5,6 +5,7 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 
@@ -66,11 +67,10 @@ export class Patchavailabletitles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.patchavailabletitlesSourceidByIdGet200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.PatchavailabletitlesSourceidByIdGet200ApplicationJSON
-                        );
+                    res.patchAvailableTitles = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.PatchAvailableTitles
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

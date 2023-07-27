@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose } from "class-transformer";
 
 export class FindJsonWebTokenConfigurationByIdRequest extends SpeakeasyBase {
     /**
@@ -12,44 +12,6 @@ export class FindJsonWebTokenConfigurationByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: string;
-}
-
-/**
- * OK
- */
-export class FindJsonWebTokenConfigurationById200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    disabled?: boolean;
-
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name: string;
-
-    @SpeakeasyMetadata()
-    tokenExpiry?: number;
-}
-
-/**
- * OK
- */
-export class FindJSONWebTokenConfigurationById200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "disabled" })
-    disabled?: boolean;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "token_expiry" })
-    tokenExpiry?: number;
 }
 
 export class FindJsonWebTokenConfigurationByIdResponse extends SpeakeasyBase {
@@ -69,5 +31,5 @@ export class FindJsonWebTokenConfigurationByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    findJSONWebTokenConfigurationById200ApplicationJSONObject?: FindJSONWebTokenConfigurationById200ApplicationJSON;
+    jsonWebTokenConfiguration?: shared.JsonWebTokenConfiguration;
 }

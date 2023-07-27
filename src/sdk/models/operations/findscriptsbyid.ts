@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
 
 export class FindScriptsByIdRequest extends SpeakeasyBase {
     /**
@@ -12,172 +12,6 @@ export class FindScriptsByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
-}
-
-export class FindScriptsById200ApplicationXMLParameters extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    parameter10?: string;
-
-    @SpeakeasyMetadata()
-    parameter11?: string;
-
-    @SpeakeasyMetadata()
-    parameter4?: string;
-
-    @SpeakeasyMetadata()
-    parameter5?: string;
-
-    @SpeakeasyMetadata()
-    parameter6?: string;
-
-    @SpeakeasyMetadata()
-    parameter7?: string;
-
-    @SpeakeasyMetadata()
-    parameter8?: string;
-
-    @SpeakeasyMetadata()
-    parameter9?: string;
-}
-
-export enum FindScriptsById200ApplicationXMLPriority {
-    Before = "Before",
-    After = "After",
-    AtReboot = "At Reboot",
-}
-
-/**
- * OK
- */
-export class FindScriptsById200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    category?: string;
-
-    @SpeakeasyMetadata()
-    filename?: string;
-
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    info?: string;
-
-    /**
-     * Name of the script
-     */
-    @SpeakeasyMetadata()
-    name: string;
-
-    @SpeakeasyMetadata()
-    notes?: string;
-
-    @SpeakeasyMetadata()
-    osRequirements?: string;
-
-    @SpeakeasyMetadata()
-    parameters?: FindScriptsById200ApplicationXMLParameters;
-
-    @SpeakeasyMetadata()
-    priority?: FindScriptsById200ApplicationXMLPriority;
-
-    @SpeakeasyMetadata()
-    scriptContents?: string;
-
-    @SpeakeasyMetadata()
-    scriptContentsEncoded?: string;
-}
-
-export class FindScriptsById200ApplicationJSONParameters extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "parameter10" })
-    parameter10?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "parameter11" })
-    parameter11?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "parameter4" })
-    parameter4?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "parameter5" })
-    parameter5?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "parameter6" })
-    parameter6?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "parameter7" })
-    parameter7?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "parameter8" })
-    parameter8?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "parameter9" })
-    parameter9?: string;
-}
-
-export enum FindScriptsById200ApplicationJSONPriority {
-    Before = "Before",
-    After = "After",
-    AtReboot = "At Reboot",
-}
-
-/**
- * OK
- */
-export class FindScriptsById200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "category" })
-    category?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "filename" })
-    filename?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "info" })
-    info?: string;
-
-    /**
-     * Name of the script
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "notes" })
-    notes?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "os_requirements" })
-    osRequirements?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "parameters" })
-    @Type(() => FindScriptsById200ApplicationJSONParameters)
-    parameters?: FindScriptsById200ApplicationJSONParameters;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "priority" })
-    priority?: FindScriptsById200ApplicationJSONPriority;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "script_contents" })
-    scriptContents?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "script_contents_encoded" })
-    scriptContentsEncoded?: string;
 }
 
 export class FindScriptsByIdResponse extends SpeakeasyBase {
@@ -197,5 +31,5 @@ export class FindScriptsByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    findScriptsById200ApplicationJSONObject?: FindScriptsById200ApplicationJSON;
+    script?: shared.Script;
 }
