@@ -3,72 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindIBeacons200ApplicationXMLIbeacon extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    major?: string;
-
-    @SpeakeasyMetadata()
-    minor?: string;
-
-    /**
-     * Name of the ibeacon
-     */
-    @SpeakeasyMetadata()
-    name: string;
-
-    @SpeakeasyMetadata()
-    uuid: string;
-}
-
-export class FindIBeacons200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    ibeacon?: FindIBeacons200ApplicationXMLIbeacon;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindIBeacons200ApplicationJSONIbeacon extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "major" })
-    major?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "minor" })
-    minor?: string;
-
-    /**
-     * Name of the ibeacon
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "uuid" })
-    uuid: string;
-}
-
-export class FindIBeacons200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "ibeacon" })
-    @Type(() => FindIBeacons200ApplicationJSONIbeacon)
-    ibeacon?: FindIBeacons200ApplicationJSONIbeacon;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindIBeaconsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -86,6 +22,6 @@ export class FindIBeaconsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindIBeacons200ApplicationJSON })
-    findIBeacons200ApplicationJSONObjects?: FindIBeacons200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.Ibeacons })
+    ibeacons?: shared.Ibeacons[];
 }

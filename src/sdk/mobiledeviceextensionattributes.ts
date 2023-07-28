@@ -5,8 +5,24 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindMobiledeviceextensionattributesAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMobiledeviceextensionattributesByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMobiledeviceextensionattributesByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Mobiledeviceextensionattributes {
     private sdkConfiguration: SDKConfiguration;
@@ -41,6 +57,7 @@ export class Mobiledeviceextensionattributes {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -100,6 +117,7 @@ export class Mobiledeviceextensionattributes {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -159,6 +177,7 @@ export class Mobiledeviceextensionattributes {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -196,7 +215,8 @@ export class Mobiledeviceextensionattributes {
      * Finds all mobile device extension attributes
      */
     async findMobiledeviceextensionattributes(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobiledeviceextensionattributesAcceptEnum
     ): Promise<operations.FindMobiledeviceextensionattributesResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -208,7 +228,12 @@ export class Mobiledeviceextensionattributes {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -238,14 +263,13 @@ export class Mobiledeviceextensionattributes {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobiledeviceextensionattributes200ApplicationJSONObjects = [];
+                    res.mobileDeviceExtensionAttributes = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findMobiledeviceextensionattributes200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobiledeviceextensionattributes200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.mobileDeviceExtensionAttributes = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceExtensionAttributes,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -267,7 +291,8 @@ export class Mobiledeviceextensionattributes {
      */
     async findMobiledeviceextensionattributesById(
         req: operations.FindMobiledeviceextensionattributesByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobiledeviceextensionattributesByIdAcceptEnum
     ): Promise<operations.FindMobiledeviceextensionattributesByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMobiledeviceextensionattributesByIdRequest(req);
@@ -287,7 +312,12 @@ export class Mobiledeviceextensionattributes {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -317,11 +347,10 @@ export class Mobiledeviceextensionattributes {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobiledeviceextensionattributesById200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobiledeviceextensionattributesById200ApplicationJSON
-                        );
+                    res.mobileDeviceExtensionAttribute = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceExtensionAttribute
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -343,7 +372,8 @@ export class Mobiledeviceextensionattributes {
      */
     async findMobiledeviceextensionattributesByName(
         req: operations.FindMobiledeviceextensionattributesByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobiledeviceextensionattributesByNameAcceptEnum
     ): Promise<operations.FindMobiledeviceextensionattributesByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMobiledeviceextensionattributesByNameRequest(req);
@@ -363,7 +393,12 @@ export class Mobiledeviceextensionattributes {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -393,11 +428,10 @@ export class Mobiledeviceextensionattributes {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobiledeviceextensionattributesByName200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobiledeviceextensionattributesByName200ApplicationJSON
-                        );
+                    res.mobileDeviceExtensionAttribute = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceExtensionAttribute
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -440,6 +474,7 @@ export class Mobiledeviceextensionattributes {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -499,6 +534,7 @@ export class Mobiledeviceextensionattributes {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;

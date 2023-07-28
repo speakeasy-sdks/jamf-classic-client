@@ -5,8 +5,24 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindRemovableMacAddressesAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindRemovableMacAddressesByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindRemovableMacAddressesByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Removablemacaddresses {
     private sdkConfiguration: SDKConfiguration;
@@ -37,6 +53,7 @@ export class Removablemacaddresses {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -92,6 +109,7 @@ export class Removablemacaddresses {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -147,6 +165,7 @@ export class Removablemacaddresses {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -184,7 +203,8 @@ export class Removablemacaddresses {
      * Finds all removable Mac addresses
      */
     async findRemovableMacAddresses(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindRemovableMacAddressesAcceptEnum
     ): Promise<operations.FindRemovableMacAddressesResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -196,7 +216,12 @@ export class Removablemacaddresses {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -226,11 +251,11 @@ export class Removablemacaddresses {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findRemovableMacAddresses200ApplicationJSONObjects = [];
+                    res.removableMacAddresses = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findRemovableMacAddresses200ApplicationJSONObjects = utils.objectToClass(
+                    res.removableMacAddresses = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindRemovableMacAddresses200ApplicationJSON,
+                        shared.RemovableMacAddresses,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -254,7 +279,8 @@ export class Removablemacaddresses {
      */
     async findRemovableMacAddressesById(
         req: operations.FindRemovableMacAddressesByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindRemovableMacAddressesByIdAcceptEnum
     ): Promise<operations.FindRemovableMacAddressesByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindRemovableMacAddressesByIdRequest(req);
@@ -270,7 +296,12 @@ export class Removablemacaddresses {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -300,9 +331,9 @@ export class Removablemacaddresses {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findRemovableMacAddressesById200ApplicationJSONObject = utils.objectToClass(
+                    res.removableMacAddress = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindRemovableMacAddressesById200ApplicationJSON
+                        shared.RemovableMacAddress
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -325,7 +356,8 @@ export class Removablemacaddresses {
      */
     async findRemovableMacAddressesByName(
         req: operations.FindRemovableMacAddressesByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindRemovableMacAddressesByNameAcceptEnum
     ): Promise<operations.FindRemovableMacAddressesByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindRemovableMacAddressesByNameRequest(req);
@@ -341,7 +373,12 @@ export class Removablemacaddresses {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -371,11 +408,10 @@ export class Removablemacaddresses {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findRemovableMacAddressesByName200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindRemovableMacAddressesByName200ApplicationJSON
-                        );
+                    res.removableMacAddress = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.RemovableMacAddress
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -414,6 +450,7 @@ export class Removablemacaddresses {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -469,6 +506,7 @@ export class Removablemacaddresses {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;

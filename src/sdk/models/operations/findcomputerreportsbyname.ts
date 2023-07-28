@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
 
 export class FindComputerReportsByNameRequest extends SpeakeasyBase {
     /**
@@ -12,36 +12,6 @@ export class FindComputerReportsByNameRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
     name: string;
-}
-
-export class FindComputerReportsByName200ApplicationXMLComputer extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    computerName?: string;
-
-    @SpeakeasyMetadata()
-    id?: number;
-}
-
-export class FindComputerReportsByName200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    computer?: FindComputerReportsByName200ApplicationXMLComputer;
-}
-
-export class FindComputerReportsByName200ApplicationJSONComputer extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "Computer_Name" })
-    computerName?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-}
-
-export class FindComputerReportsByName200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "Computer" })
-    @Type(() => FindComputerReportsByName200ApplicationJSONComputer)
-    computer?: FindComputerReportsByName200ApplicationJSONComputer;
 }
 
 export class FindComputerReportsByNameResponse extends SpeakeasyBase {
@@ -60,6 +30,6 @@ export class FindComputerReportsByNameResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindComputerReportsByName200ApplicationJSON })
-    findComputerReportsByName200ApplicationJSONObjects?: FindComputerReportsByName200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.ComputerReport })
+    computerReport?: shared.ComputerReport[];
 }

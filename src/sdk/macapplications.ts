@@ -5,8 +5,29 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindMacappsAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMacappsByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMacappsByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMacappsByNameSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Macapplications {
     private sdkConfiguration: SDKConfiguration;
@@ -40,6 +61,7 @@ export class Macapplications {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -94,6 +116,7 @@ export class Macapplications {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -148,6 +171,7 @@ export class Macapplications {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -184,7 +208,10 @@ export class Macapplications {
     /**
      * Finds all mac applications
      */
-    async findMacapps(config?: AxiosRequestConfig): Promise<operations.FindMacappsResponse> {
+    async findMacapps(
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMacappsAcceptEnum
+    ): Promise<operations.FindMacappsResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -195,7 +222,12 @@ export class Macapplications {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -224,11 +256,11 @@ export class Macapplications {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMacapps200ApplicationJSONObjects = [];
+                    res.macApplications = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findMacapps200ApplicationJSONObjects = utils.objectToClass(
+                    res.macApplications = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindMacapps200ApplicationJSON,
+                        shared.MacApplications,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -252,7 +284,8 @@ export class Macapplications {
      */
     async findMacappsById(
         req: operations.FindMacappsByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMacappsByIdAcceptEnum
     ): Promise<operations.FindMacappsByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMacappsByIdRequest(req);
@@ -268,7 +301,12 @@ export class Macapplications {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -297,9 +335,9 @@ export class Macapplications {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMacappsById200ApplicationJSONObject = utils.objectToClass(
+                    res.macApplication = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindMacappsById200ApplicationJSON
+                        shared.MacApplication
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -346,6 +384,7 @@ export class Macapplications {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -384,7 +423,8 @@ export class Macapplications {
      */
     async findMacappsByName(
         req: operations.FindMacappsByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMacappsByNameAcceptEnum
     ): Promise<operations.FindMacappsByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMacappsByNameRequest(req);
@@ -400,7 +440,12 @@ export class Macapplications {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -429,9 +474,9 @@ export class Macapplications {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMacappsByName200ApplicationJSONObject = utils.objectToClass(
+                    res.macApplication = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindMacappsByName200ApplicationJSON
+                        shared.MacApplication
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -457,7 +502,8 @@ export class Macapplications {
      */
     async findMacappsByNameSubset(
         req: operations.FindMacappsByNameSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMacappsByNameSubsetAcceptEnum
     ): Promise<operations.FindMacappsByNameSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMacappsByNameSubsetRequest(req);
@@ -477,7 +523,12 @@ export class Macapplications {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -507,9 +558,9 @@ export class Macapplications {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMacappsByNameSubset200ApplicationJSONObject = utils.objectToClass(
+                    res.macApplication = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindMacappsByNameSubset200ApplicationJSON
+                        shared.MacApplication
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -552,6 +603,7 @@ export class Macapplications {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -609,6 +661,7 @@ export class Macapplications {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
