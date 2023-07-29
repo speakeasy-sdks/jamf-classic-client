@@ -3,52 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindComputerextensionattributes200ApplicationXMLComputerExtensionAttribute extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    enabled?: boolean;
-
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindComputerextensionattributes200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    computerExtensionAttribute?: FindComputerextensionattributes200ApplicationXMLComputerExtensionAttribute;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindComputerextensionattributes200ApplicationJSONComputerExtensionAttribute extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "enabled" })
-    enabled?: boolean;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindComputerextensionattributes200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "computer_extension_attribute" })
-    @Type(() => FindComputerextensionattributes200ApplicationJSONComputerExtensionAttribute)
-    computerExtensionAttribute?: FindComputerextensionattributes200ApplicationJSONComputerExtensionAttribute;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindComputerextensionattributesResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -66,6 +22,6 @@ export class FindComputerextensionattributesResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindComputerextensionattributes200ApplicationJSON })
-    findComputerextensionattributes200ApplicationJSONObjects?: FindComputerextensionattributes200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.ComputerExtensionAttributes })
+    computerExtensionAttributes?: shared.ComputerExtensionAttributes[];
 }

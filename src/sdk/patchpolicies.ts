@@ -5,8 +5,29 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindPatchPoliciesAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindPatchPoliciesByIdSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindPatchPoliciesBySoftwareTitleConfigIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindPatchPolicyByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Patchpolicies {
     private sdkConfiguration: SDKConfiguration;
@@ -44,6 +65,7 @@ export class Patchpolicies {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -99,6 +121,7 @@ export class Patchpolicies {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -138,7 +161,8 @@ export class Patchpolicies {
      * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
     async findPatchPolicies(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindPatchPoliciesAcceptEnum
     ): Promise<operations.FindPatchPoliciesResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -150,7 +174,12 @@ export class Patchpolicies {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -179,11 +208,11 @@ export class Patchpolicies {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPatchPolicies200ApplicationJSONObjects = [];
+                    res.patchPolicies = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findPatchPolicies200ApplicationJSONObjects = utils.objectToClass(
+                    res.patchPolicies = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPatchPolicies200ApplicationJSON,
+                        shared.PatchPolicies,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -207,7 +236,8 @@ export class Patchpolicies {
      */
     async findPatchPoliciesByIdSubset(
         req: operations.FindPatchPoliciesByIdSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindPatchPoliciesByIdSubsetAcceptEnum
     ): Promise<operations.FindPatchPoliciesByIdSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindPatchPoliciesByIdSubsetRequest(req);
@@ -227,7 +257,12 @@ export class Patchpolicies {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -257,9 +292,9 @@ export class Patchpolicies {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPatchPoliciesByIdSubset200ApplicationJSONObject = utils.objectToClass(
+                    res.patchPolicy = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPatchPoliciesByIdSubset200ApplicationJSON
+                        shared.PatchPolicy
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -287,7 +322,8 @@ export class Patchpolicies {
      */
     async findPatchPoliciesBySoftwareTitleConfigId(
         req: operations.FindPatchPoliciesBySoftwareTitleConfigIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindPatchPoliciesBySoftwareTitleConfigIdAcceptEnum
     ): Promise<operations.FindPatchPoliciesBySoftwareTitleConfigIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindPatchPoliciesBySoftwareTitleConfigIdRequest(req);
@@ -307,7 +343,12 @@ export class Patchpolicies {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -337,11 +378,10 @@ export class Patchpolicies {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPatchPoliciesBySoftwareTitleConfigId200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindPatchPoliciesBySoftwareTitleConfigId200ApplicationJSON
-                        );
+                    res.patchPolicy = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.PatchPolicy
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -363,7 +403,8 @@ export class Patchpolicies {
      */
     async findPatchPolicyById(
         req: operations.FindPatchPolicyByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindPatchPolicyByIdAcceptEnum
     ): Promise<operations.FindPatchPolicyByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindPatchPolicyByIdRequest(req);
@@ -379,7 +420,12 @@ export class Patchpolicies {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -409,9 +455,9 @@ export class Patchpolicies {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPatchPolicyById200ApplicationJSONObject = utils.objectToClass(
+                    res.patchPolicy = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPatchPolicyById200ApplicationJSON
+                        shared.PatchPolicy
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -451,6 +497,7 @@ export class Patchpolicies {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;

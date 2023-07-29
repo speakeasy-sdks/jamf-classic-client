@@ -5,8 +5,24 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindPatchesAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindPatchesByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindPatchesByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Patches {
     private sdkConfiguration: SDKConfiguration;
@@ -42,6 +58,7 @@ export class Patches {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -99,6 +116,7 @@ export class Patches {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -156,6 +174,7 @@ export class Patches {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -216,6 +235,7 @@ export class Patches {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -280,6 +300,7 @@ export class Patches {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -318,7 +339,10 @@ export class Patches {
      *
      * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
      */
-    async findPatches(config?: AxiosRequestConfig): Promise<operations.FindPatchesResponse> {
+    async findPatches(
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindPatchesAcceptEnum
+    ): Promise<operations.FindPatchesResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -329,7 +353,12 @@ export class Patches {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -358,11 +387,11 @@ export class Patches {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPatches200ApplicationJSONObjects = [];
+                    res.patchManagementSoftwareTitles = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findPatches200ApplicationJSONObjects = utils.objectToClass(
+                    res.patchManagementSoftwareTitles = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPatches200ApplicationJSON,
+                        shared.PatchManagementSoftwareTitles,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -388,7 +417,8 @@ export class Patches {
      */
     async findPatchesById(
         req: operations.FindPatchesByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindPatchesByIdAcceptEnum
     ): Promise<operations.FindPatchesByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindPatchesByIdRequest(req);
@@ -404,7 +434,12 @@ export class Patches {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -433,9 +468,9 @@ export class Patches {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPatchesById200ApplicationJSONObject = utils.objectToClass(
+                    res.softwareTitle = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPatchesById200ApplicationJSON
+                        shared.SoftwareTitle
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -460,7 +495,8 @@ export class Patches {
      */
     async findPatchesByName(
         req: operations.FindPatchesByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindPatchesByNameAcceptEnum
     ): Promise<operations.FindPatchesByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindPatchesByNameRequest(req);
@@ -476,7 +512,12 @@ export class Patches {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -505,9 +546,9 @@ export class Patches {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPatchesByName200ApplicationJSONObject = utils.objectToClass(
+                    res.softwareTitle = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPatchesByName200ApplicationJSON
+                        shared.SoftwareTitle
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -552,6 +593,7 @@ export class Patches {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -612,6 +654,7 @@ export class Patches {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
