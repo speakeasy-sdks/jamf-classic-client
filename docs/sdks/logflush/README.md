@@ -95,7 +95,8 @@ Flushes a log specified in an XML file
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { LogFlushRequestBodyInterval, LogFlushRequestBodyLog, LogFlushResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { LogFlushResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { LogflushInterval, LogflushLog } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
 const sdk = new Jamf({
   security: {

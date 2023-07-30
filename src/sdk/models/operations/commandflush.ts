@@ -5,30 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AxiosResponse } from "axios";
 
-export class CommandFlushRequestBodyMobileDevicesMobileDevice extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id: number;
-}
-
-export class CommandFlushRequestBodyMobileDevices extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    mobileDevice?: CommandFlushRequestBodyMobileDevicesMobileDevice;
-}
-
-export enum CommandFlushRequestBodyStatus {
-    Pending = "Pending",
-    Failed = "Failed",
-    PendingPlusFailed = "Pending+Failed",
-}
-
-export class CommandFlushRequestBody extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    mobileDevices?: CommandFlushRequestBodyMobileDevices;
-
-    @SpeakeasyMetadata()
-    status: CommandFlushRequestBodyStatus;
-}
-
 export class CommandFlushResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     contentType: string;
