@@ -3,65 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindUserGroups200ApplicationXMLUserGroup extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    isNotifyOnChange?: boolean;
-
-    @SpeakeasyMetadata()
-    isSmart?: boolean;
-
-    /**
-     * Name of the user group
-     */
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindUserGroups200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    size?: number;
-
-    @SpeakeasyMetadata()
-    userGroup?: FindUserGroups200ApplicationXMLUserGroup;
-}
-
-export class FindUserGroups200ApplicationJSONUserGroup extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "is_notify_on_change" })
-    isNotifyOnChange?: boolean;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "is_smart" })
-    isSmart?: boolean;
-
-    /**
-     * Name of the user group
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindUserGroups200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "user_group" })
-    @Type(() => FindUserGroups200ApplicationJSONUserGroup)
-    userGroup?: FindUserGroups200ApplicationJSONUserGroup;
-}
 
 export class FindUserGroupsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -79,6 +22,6 @@ export class FindUserGroupsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindUserGroups200ApplicationJSON })
-    findUserGroups200ApplicationJSONObjects?: FindUserGroups200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.UserGroups })
+    userGroups?: shared.UserGroups[];
 }

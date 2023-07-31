@@ -3,51 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindBuildings200ApplicationXMLBuilding extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    /**
-     * Name of the building
-     */
-    @SpeakeasyMetadata()
-    name: string;
-}
-
-export class FindBuildings200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    building?: FindBuildings200ApplicationXMLBuilding;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindBuildings200ApplicationJSONBuilding extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    /**
-     * Name of the building
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-}
-
-export class FindBuildings200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "building" })
-    @Type(() => FindBuildings200ApplicationJSONBuilding)
-    building?: FindBuildings200ApplicationJSONBuilding;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindBuildingsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -65,6 +22,6 @@ export class FindBuildingsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindBuildings200ApplicationJSON })
-    findBuildings200ApplicationJSONObjects?: FindBuildings200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.Buildings })
+    buildings?: shared.Buildings[];
 }

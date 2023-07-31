@@ -5,8 +5,19 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindVPPAdminAccountAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindVPPAdminAccountByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Vppaccounts {
     private sdkConfiguration: SDKConfiguration;
@@ -40,6 +51,7 @@ export class Vppaccounts {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -95,6 +107,7 @@ export class Vppaccounts {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -132,7 +145,8 @@ export class Vppaccounts {
      * Finds all VPP Accounts
      */
     async findVPPAdminAccount(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindVPPAdminAccountAcceptEnum
     ): Promise<operations.FindVPPAdminAccountResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -144,7 +158,12 @@ export class Vppaccounts {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -174,11 +193,11 @@ export class Vppaccounts {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findVPPAdminAccount200ApplicationJSONObjects = [];
+                    res.vppAccounts = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findVPPAdminAccount200ApplicationJSONObjects = utils.objectToClass(
+                    res.vppAccounts = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindVPPAdminAccount200ApplicationJSON,
+                        shared.VppAccounts,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -202,7 +221,8 @@ export class Vppaccounts {
      */
     async findVPPAdminAccountById(
         req: operations.FindVPPAdminAccountByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindVPPAdminAccountByIdAcceptEnum
     ): Promise<operations.FindVPPAdminAccountByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindVPPAdminAccountByIdRequest(req);
@@ -218,7 +238,12 @@ export class Vppaccounts {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -248,10 +273,7 @@ export class Vppaccounts {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findVPPAdminAccountById200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindVPPAdminAccountById200ApplicationJSON
-                    );
+                    res.vppAccount = utils.objectToClass(JSON.parse(decodedRes), shared.VppAccount);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -293,6 +315,7 @@ export class Vppaccounts {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;

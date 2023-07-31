@@ -3,45 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindUsers200ApplicationXMLUser extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindUsers200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    size?: number;
-
-    @SpeakeasyMetadata()
-    user?: FindUsers200ApplicationXMLUser;
-}
-
-export class FindUsers200ApplicationJSONUser extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindUsers200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "user" })
-    @Type(() => FindUsers200ApplicationJSONUser)
-    user?: FindUsers200ApplicationJSONUser;
-}
 
 export class FindUsersResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -59,6 +22,6 @@ export class FindUsersResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindUsers200ApplicationJSON })
-    findUsers200ApplicationJSONObjects?: FindUsers200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.Users })
+    users?: shared.Users[];
 }

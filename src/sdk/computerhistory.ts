@@ -5,8 +5,59 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindComputerHistoryByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHistoryByIdSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHistoryByMacAddressAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHistoryByMacAddressSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHistoryByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHistoryByNameSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHistoryBySerialNumberAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHistoryBySerialNumberSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHistoryByUDIDAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHistoryByUDIDSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Computerhistory {
     private sdkConfiguration: SDKConfiguration;
@@ -20,7 +71,8 @@ export class Computerhistory {
      */
     async findComputerHistoryById(
         req: operations.FindComputerHistoryByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHistoryByIdAcceptEnum
     ): Promise<operations.FindComputerHistoryByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHistoryByIdRequest(req);
@@ -36,7 +88,12 @@ export class Computerhistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -66,9 +123,9 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryById200ApplicationJSONObject = utils.objectToClass(
+                    res.computerHistory = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerHistoryById200ApplicationJSON
+                        shared.ComputerHistory
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -94,7 +151,8 @@ export class Computerhistory {
      */
     async findComputerHistoryByIdSubset(
         req: operations.FindComputerHistoryByIdSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHistoryByIdSubsetAcceptEnum
     ): Promise<operations.FindComputerHistoryByIdSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHistoryByIdSubsetRequest(req);
@@ -114,7 +172,12 @@ export class Computerhistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -144,9 +207,9 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryByIdSubset200ApplicationJSONObject = utils.objectToClass(
+                    res.computerHistory = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerHistoryByIdSubset200ApplicationJSON
+                        shared.ComputerHistory
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -169,7 +232,8 @@ export class Computerhistory {
      */
     async findComputerHistoryByMacAddress(
         req: operations.FindComputerHistoryByMacAddressRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHistoryByMacAddressAcceptEnum
     ): Promise<operations.FindComputerHistoryByMacAddressResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHistoryByMacAddressRequest(req);
@@ -189,7 +253,12 @@ export class Computerhistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -219,11 +288,10 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryByMacAddress200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHistoryByMacAddress200ApplicationJSON
-                        );
+                    res.computerHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -248,7 +316,8 @@ export class Computerhistory {
      */
     async findComputerHistoryByMacAddressSubset(
         req: operations.FindComputerHistoryByMacAddressSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHistoryByMacAddressSubsetAcceptEnum
     ): Promise<operations.FindComputerHistoryByMacAddressSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHistoryByMacAddressSubsetRequest(req);
@@ -268,7 +337,12 @@ export class Computerhistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -298,11 +372,10 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryByMacAddressSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHistoryByMacAddressSubset200ApplicationJSON
-                        );
+                    res.computerHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -324,7 +397,8 @@ export class Computerhistory {
      */
     async findComputerHistoryByName(
         req: operations.FindComputerHistoryByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHistoryByNameAcceptEnum
     ): Promise<operations.FindComputerHistoryByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHistoryByNameRequest(req);
@@ -340,7 +414,12 @@ export class Computerhistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -370,9 +449,9 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryByName200ApplicationJSONObject = utils.objectToClass(
+                    res.computerHistory = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerHistoryByName200ApplicationJSON
+                        shared.ComputerHistory
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -398,7 +477,8 @@ export class Computerhistory {
      */
     async findComputerHistoryByNameSubset(
         req: operations.FindComputerHistoryByNameSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHistoryByNameSubsetAcceptEnum
     ): Promise<operations.FindComputerHistoryByNameSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHistoryByNameSubsetRequest(req);
@@ -418,7 +498,12 @@ export class Computerhistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -448,11 +533,10 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryByNameSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHistoryByNameSubset200ApplicationJSON
-                        );
+                    res.computerHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -474,7 +558,8 @@ export class Computerhistory {
      */
     async findComputerHistoryBySerialNumber(
         req: operations.FindComputerHistoryBySerialNumberRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHistoryBySerialNumberAcceptEnum
     ): Promise<operations.FindComputerHistoryBySerialNumberResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHistoryBySerialNumberRequest(req);
@@ -494,7 +579,12 @@ export class Computerhistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -524,11 +614,10 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryBySerialNumber200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHistoryBySerialNumber200ApplicationJSON
-                        );
+                    res.computerHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -553,7 +642,8 @@ export class Computerhistory {
      */
     async findComputerHistoryBySerialNumberSubset(
         req: operations.FindComputerHistoryBySerialNumberSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHistoryBySerialNumberSubsetAcceptEnum
     ): Promise<operations.FindComputerHistoryBySerialNumberSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHistoryBySerialNumberSubsetRequest(req);
@@ -573,7 +663,12 @@ export class Computerhistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -603,11 +698,10 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryBySerialNumberSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHistoryBySerialNumberSubset200ApplicationJSON
-                        );
+                    res.computerHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -629,7 +723,8 @@ export class Computerhistory {
      */
     async findComputerHistoryByUDID(
         req: operations.FindComputerHistoryByUDIDRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHistoryByUDIDAcceptEnum
     ): Promise<operations.FindComputerHistoryByUDIDResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHistoryByUDIDRequest(req);
@@ -645,7 +740,12 @@ export class Computerhistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -675,9 +775,9 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryByUDID200ApplicationJSONObject = utils.objectToClass(
+                    res.computerHistory = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerHistoryByUdid200ApplicationJSON
+                        shared.ComputerHistory
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -703,7 +803,8 @@ export class Computerhistory {
      */
     async findComputerHistoryByUDIDSubset(
         req: operations.FindComputerHistoryByUDIDSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHistoryByUDIDSubsetAcceptEnum
     ): Promise<operations.FindComputerHistoryByUDIDSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHistoryByUDIDSubsetRequest(req);
@@ -723,7 +824,12 @@ export class Computerhistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -753,11 +859,10 @@ export class Computerhistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHistoryByUDIDSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHistoryByUDIDSubset200ApplicationJSON
-                        );
+                    res.computerHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

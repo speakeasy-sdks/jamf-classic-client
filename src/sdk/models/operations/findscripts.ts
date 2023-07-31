@@ -3,45 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindScripts200ApplicationXMLScript extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindScripts200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    script?: FindScripts200ApplicationXMLScript;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindScripts200ApplicationJSONScript extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindScripts200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "script" })
-    @Type(() => FindScripts200ApplicationJSONScript)
-    script?: FindScripts200ApplicationJSONScript;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindScriptsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -59,6 +22,6 @@ export class FindScriptsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindScripts200ApplicationJSON })
-    findScripts200ApplicationJSONObjects?: FindScripts200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.Scripts })
+    scripts?: shared.Scripts[];
 }
