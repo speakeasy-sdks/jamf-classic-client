@@ -5,8 +5,24 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindPatchInternalSourcesAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindPatchInternalSourcesByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindPatchInternalSourcesByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Patchinternalsources {
     private sdkConfiguration: SDKConfiguration;
@@ -19,7 +35,8 @@ export class Patchinternalsources {
      * Finds all patch internal sources
      */
     async findPatchInternalSources(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindPatchInternalSourcesAcceptEnum
     ): Promise<operations.FindPatchInternalSourcesResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -31,7 +48,12 @@ export class Patchinternalsources {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -61,11 +83,11 @@ export class Patchinternalsources {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPatchInternalSources200ApplicationJSONObjects = [];
+                    res.patchInternalSources = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findPatchInternalSources200ApplicationJSONObjects = utils.objectToClass(
+                    res.patchInternalSources = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPatchInternalSources200ApplicationJSON,
+                        shared.PatchInternalSources,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -89,7 +111,8 @@ export class Patchinternalsources {
      */
     async findPatchInternalSourcesById(
         req: operations.FindPatchInternalSourcesByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindPatchInternalSourcesByIdAcceptEnum
     ): Promise<operations.FindPatchInternalSourcesByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindPatchInternalSourcesByIdRequest(req);
@@ -105,7 +128,12 @@ export class Patchinternalsources {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -135,9 +163,9 @@ export class Patchinternalsources {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPatchInternalSourcesById200ApplicationJSONObject = utils.objectToClass(
+                    res.patchInternalSource = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPatchInternalSourcesById200ApplicationJSON
+                        shared.PatchInternalSource
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -160,7 +188,8 @@ export class Patchinternalsources {
      */
     async findPatchInternalSourcesByName(
         req: operations.FindPatchInternalSourcesByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindPatchInternalSourcesByNameAcceptEnum
     ): Promise<operations.FindPatchInternalSourcesByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindPatchInternalSourcesByNameRequest(req);
@@ -176,7 +205,12 @@ export class Patchinternalsources {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -206,11 +240,10 @@ export class Patchinternalsources {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPatchInternalSourcesByName200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindPatchInternalSourcesByName200ApplicationJSON
-                        );
+                    res.patchInternalSource = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.PatchInternalSource
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

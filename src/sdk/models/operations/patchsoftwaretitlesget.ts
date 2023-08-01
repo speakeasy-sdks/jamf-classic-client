@@ -3,52 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class PatchsoftwaretitlesGet200ApplicationXMLPatchSoftwareTitle extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    nameId?: string;
-
-    @SpeakeasyMetadata()
-    sourceId?: number;
-}
-
-export class PatchsoftwaretitlesGet200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    patchSoftwareTitle?: PatchsoftwaretitlesGet200ApplicationXMLPatchSoftwareTitle;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class PatchsoftwaretitlesGet200ApplicationJSONPatchSoftwareTitle extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name_id" })
-    nameId?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "source_id" })
-    sourceId?: number;
-}
-
-export class PatchsoftwaretitlesGet200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "patch_software_title" })
-    @Type(() => PatchsoftwaretitlesGet200ApplicationJSONPatchSoftwareTitle)
-    patchSoftwareTitle?: PatchsoftwaretitlesGet200ApplicationJSONPatchSoftwareTitle;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class PatchsoftwaretitlesGetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -57,15 +13,15 @@ export class PatchsoftwaretitlesGetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     contentType: string;
 
-    /**
-     * OK
-     */
-    @SpeakeasyMetadata({ elemType: PatchsoftwaretitlesGet200ApplicationJSON })
-    patchsoftwaretitlesGet200ApplicationJSONObjects?: PatchsoftwaretitlesGet200ApplicationJSON[];
-
     @SpeakeasyMetadata()
     statusCode: number;
 
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata({ elemType: shared.PatchSoftwareTitles })
+    patchSoftwareTitles?: shared.PatchSoftwareTitles[];
 }
