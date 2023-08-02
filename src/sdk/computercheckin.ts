@@ -5,8 +5,14 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindComputerCheckinAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Computercheckin {
     private sdkConfiguration: SDKConfiguration;
@@ -19,7 +25,8 @@ export class Computercheckin {
      * Finds the Jamf Pro computer checkin information
      */
     async findComputerCheckin(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerCheckinAcceptEnum
     ): Promise<operations.FindComputerCheckinResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -31,7 +38,12 @@ export class Computercheckin {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -61,9 +73,9 @@ export class Computercheckin {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerCheckin200ApplicationJSONObject = utils.objectToClass(
+                    res.computerCheckIn = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerCheckin200ApplicationJSON
+                        shared.ComputerCheckIn
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -111,6 +123,7 @@ export class Computercheckin {
         if (reqBody == null || Object.keys(reqBody).length === 0)
             throw new Error("request body is required");
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;

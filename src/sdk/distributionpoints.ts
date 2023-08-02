@@ -5,8 +5,24 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindDistributionPointsAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindDistributionPointsByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindDistributionPointsByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Distributionpoints {
     private sdkConfiguration: SDKConfiguration;
@@ -37,6 +53,7 @@ export class Distributionpoints {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -92,6 +109,7 @@ export class Distributionpoints {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -147,6 +165,7 @@ export class Distributionpoints {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -184,7 +203,8 @@ export class Distributionpoints {
      * Finds all distribution points
      */
     async findDistributionPoints(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindDistributionPointsAcceptEnum
     ): Promise<operations.FindDistributionPointsResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -196,7 +216,12 @@ export class Distributionpoints {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -226,11 +251,11 @@ export class Distributionpoints {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDistributionPoints200ApplicationJSONObjects = [];
+                    res.distributionPoints = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findDistributionPoints200ApplicationJSONObjects = utils.objectToClass(
+                    res.distributionPoints = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindDistributionPoints200ApplicationJSON,
+                        shared.DistributionPoints,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -254,7 +279,8 @@ export class Distributionpoints {
      */
     async findDistributionPointsById(
         req: operations.FindDistributionPointsByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindDistributionPointsByIdAcceptEnum
     ): Promise<operations.FindDistributionPointsByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindDistributionPointsByIdRequest(req);
@@ -270,7 +296,12 @@ export class Distributionpoints {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -300,9 +331,9 @@ export class Distributionpoints {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDistributionPointsById200ApplicationJSONObject = utils.objectToClass(
+                    res.distributionPoint = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindDistributionPointsById200ApplicationJSON
+                        shared.DistributionPoint
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -325,7 +356,8 @@ export class Distributionpoints {
      */
     async findDistributionPointsByName(
         req: operations.FindDistributionPointsByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindDistributionPointsByNameAcceptEnum
     ): Promise<operations.FindDistributionPointsByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindDistributionPointsByNameRequest(req);
@@ -341,7 +373,12 @@ export class Distributionpoints {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -371,9 +408,9 @@ export class Distributionpoints {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDistributionPointsByName200ApplicationJSONObject = utils.objectToClass(
+                    res.distributionPoint = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindDistributionPointsByName200ApplicationJSON
+                        shared.DistributionPoint
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -413,6 +450,7 @@ export class Distributionpoints {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -468,6 +506,7 @@ export class Distributionpoints {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
