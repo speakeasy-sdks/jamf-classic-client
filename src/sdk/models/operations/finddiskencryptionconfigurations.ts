@@ -3,45 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindDiskEncryptionConfigurations200ApplicationXMLDiskEncryptionConfiguration extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindDiskEncryptionConfigurations200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    diskEncryptionConfiguration?: FindDiskEncryptionConfigurations200ApplicationXMLDiskEncryptionConfiguration;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindDiskEncryptionConfigurations200ApplicationJSONDiskEncryptionConfiguration extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindDiskEncryptionConfigurations200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "disk_encryption_configuration" })
-    @Type(() => FindDiskEncryptionConfigurations200ApplicationJSONDiskEncryptionConfiguration)
-    diskEncryptionConfiguration?: FindDiskEncryptionConfigurations200ApplicationJSONDiskEncryptionConfiguration;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindDiskEncryptionConfigurationsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -59,6 +22,6 @@ export class FindDiskEncryptionConfigurationsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindDiskEncryptionConfigurations200ApplicationJSON })
-    findDiskEncryptionConfigurations200ApplicationJSONObjects?: FindDiskEncryptionConfigurations200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.DiskEncryptionConfigurations })
+    diskEncryptionConfigurations?: shared.DiskEncryptionConfigurations[];
 }

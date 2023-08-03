@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
 
 export class FindManagedPreferenceProfilesByIdRequest extends SpeakeasyBase {
     /**
@@ -12,56 +12,6 @@ export class FindManagedPreferenceProfilesByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
-}
-
-export class FindManagedPreferenceProfilesById200ApplicationXMLGeneral extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    enabled?: boolean;
-
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name: string;
-
-    @SpeakeasyMetadata()
-    plist?: string;
-}
-
-/**
- * OK
- */
-export class FindManagedPreferenceProfilesById200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    general?: FindManagedPreferenceProfilesById200ApplicationXMLGeneral;
-}
-
-export class FindManagedPreferenceProfilesById200ApplicationJSONGeneral extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "enabled" })
-    enabled?: boolean;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "plist" })
-    plist?: string;
-}
-
-/**
- * OK
- */
-export class FindManagedPreferenceProfilesById200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "general" })
-    @Type(() => FindManagedPreferenceProfilesById200ApplicationJSONGeneral)
-    general?: FindManagedPreferenceProfilesById200ApplicationJSONGeneral;
 }
 
 export class FindManagedPreferenceProfilesByIdResponse extends SpeakeasyBase {
@@ -81,5 +31,5 @@ export class FindManagedPreferenceProfilesByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    findManagedPreferenceProfilesById200ApplicationJSONObject?: FindManagedPreferenceProfilesById200ApplicationJSON;
+    managedPreferenceProfile?: shared.ManagedPreferenceProfile;
 }

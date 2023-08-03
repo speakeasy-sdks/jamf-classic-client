@@ -5,8 +5,59 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindComputerHardwareSoftwareReportsByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHardwareSoftwareReportsByIdSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHardwareSoftwareReportsByMacAddressAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHardwareSoftwareReportsByMacAddressSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHardwareSoftwareReportsByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHardwareSoftwareReportsByNameSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHardwareSoftwareReportsBySerialAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHardwareSoftwareReportsBySerialSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHardwareSoftwareReportsByUDIDAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerHardwareSoftwareReportsByUDIDSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Computerhardwaresoftwarereports {
     private sdkConfiguration: SDKConfiguration;
@@ -20,7 +71,8 @@ export class Computerhardwaresoftwarereports {
      */
     async findComputerHardwareSoftwareReportsById(
         req: operations.FindComputerHardwareSoftwareReportsByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHardwareSoftwareReportsByIdAcceptEnum
     ): Promise<operations.FindComputerHardwareSoftwareReportsByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHardwareSoftwareReportsByIdRequest(req);
@@ -40,7 +92,12 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -70,11 +127,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsById200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsById200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -99,7 +155,8 @@ export class Computerhardwaresoftwarereports {
      */
     async findComputerHardwareSoftwareReportsByIdSubset(
         req: operations.FindComputerHardwareSoftwareReportsByIdSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHardwareSoftwareReportsByIdSubsetAcceptEnum
     ): Promise<operations.FindComputerHardwareSoftwareReportsByIdSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHardwareSoftwareReportsByIdSubsetRequest(req);
@@ -119,7 +176,12 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -149,11 +211,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsByIdSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsByIdSubset200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -175,7 +236,8 @@ export class Computerhardwaresoftwarereports {
      */
     async findComputerHardwareSoftwareReportsByMacAddress(
         req: operations.FindComputerHardwareSoftwareReportsByMacAddressRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHardwareSoftwareReportsByMacAddressAcceptEnum
     ): Promise<operations.FindComputerHardwareSoftwareReportsByMacAddressResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHardwareSoftwareReportsByMacAddressRequest(req);
@@ -195,7 +257,12 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -225,11 +292,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsByMacAddress200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsByMacAddress200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -254,7 +320,8 @@ export class Computerhardwaresoftwarereports {
      */
     async findComputerHardwareSoftwareReportsByMacAddressSubset(
         req: operations.FindComputerHardwareSoftwareReportsByMacAddressSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHardwareSoftwareReportsByMacAddressSubsetAcceptEnum
     ): Promise<operations.FindComputerHardwareSoftwareReportsByMacAddressSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHardwareSoftwareReportsByMacAddressSubsetRequest(req);
@@ -274,7 +341,12 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -304,11 +376,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsByMacAddressSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsByMacAddressSubset200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -330,7 +401,8 @@ export class Computerhardwaresoftwarereports {
      */
     async findComputerHardwareSoftwareReportsByName(
         req: operations.FindComputerHardwareSoftwareReportsByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHardwareSoftwareReportsByNameAcceptEnum
     ): Promise<operations.FindComputerHardwareSoftwareReportsByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHardwareSoftwareReportsByNameRequest(req);
@@ -350,7 +422,12 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -380,11 +457,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsByName200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsByName200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -409,7 +485,8 @@ export class Computerhardwaresoftwarereports {
      */
     async findComputerHardwareSoftwareReportsByNameSubset(
         req: operations.FindComputerHardwareSoftwareReportsByNameSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHardwareSoftwareReportsByNameSubsetAcceptEnum
     ): Promise<operations.FindComputerHardwareSoftwareReportsByNameSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHardwareSoftwareReportsByNameSubsetRequest(req);
@@ -429,7 +506,12 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -459,11 +541,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsByNameSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsByNameSubset200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -485,7 +566,8 @@ export class Computerhardwaresoftwarereports {
      */
     async findComputerHardwareSoftwareReportsBySerial(
         req: operations.FindComputerHardwareSoftwareReportsBySerialRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHardwareSoftwareReportsBySerialAcceptEnum
     ): Promise<operations.FindComputerHardwareSoftwareReportsBySerialResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHardwareSoftwareReportsBySerialRequest(req);
@@ -505,7 +587,12 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -535,11 +622,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsBySerial200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsBySerial200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -564,7 +650,8 @@ export class Computerhardwaresoftwarereports {
      */
     async findComputerHardwareSoftwareReportsBySerialSubset(
         req: operations.FindComputerHardwareSoftwareReportsBySerialSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHardwareSoftwareReportsBySerialSubsetAcceptEnum
     ): Promise<operations.FindComputerHardwareSoftwareReportsBySerialSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHardwareSoftwareReportsBySerialSubsetRequest(req);
@@ -584,7 +671,12 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -614,11 +706,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsBySerialSubset200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -640,7 +731,8 @@ export class Computerhardwaresoftwarereports {
      */
     async findComputerHardwareSoftwareReportsByUDID(
         req: operations.FindComputerHardwareSoftwareReportsByUDIDRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHardwareSoftwareReportsByUDIDAcceptEnum
     ): Promise<operations.FindComputerHardwareSoftwareReportsByUDIDResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHardwareSoftwareReportsByUDIDRequest(req);
@@ -660,7 +752,12 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -690,11 +787,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsByUDID200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsByUdid200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -719,7 +815,8 @@ export class Computerhardwaresoftwarereports {
      */
     async findComputerHardwareSoftwareReportsByUDIDSubset(
         req: operations.FindComputerHardwareSoftwareReportsByUDIDSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerHardwareSoftwareReportsByUDIDSubsetAcceptEnum
     ): Promise<operations.FindComputerHardwareSoftwareReportsByUDIDSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerHardwareSoftwareReportsByUDIDSubsetRequest(req);
@@ -739,7 +836,12 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -769,11 +871,10 @@ export class Computerhardwaresoftwarereports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerHardwareSoftwareReportsByUDIDSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerHardwareSoftwareReportsByUDIDSubset200ApplicationJSON
-                        );
+                    res.computerHardwareSoftwareReports = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerHardwareSoftwareReports
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
