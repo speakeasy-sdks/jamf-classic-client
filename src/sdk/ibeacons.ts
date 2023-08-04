@@ -5,8 +5,24 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindIBeaconsAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindIBeaconsByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindIBeaconsByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Ibeacons {
     private sdkConfiguration: SDKConfiguration;
@@ -37,6 +53,7 @@ export class Ibeacons {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -91,6 +108,7 @@ export class Ibeacons {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -145,6 +163,7 @@ export class Ibeacons {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -181,7 +200,10 @@ export class Ibeacons {
     /**
      * Finds all iBeacon regions
      */
-    async findIBeacons(config?: AxiosRequestConfig): Promise<operations.FindIBeaconsResponse> {
+    async findIBeacons(
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindIBeaconsAcceptEnum
+    ): Promise<operations.FindIBeaconsResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -192,7 +214,12 @@ export class Ibeacons {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -221,11 +248,11 @@ export class Ibeacons {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findIBeacons200ApplicationJSONObjects = [];
+                    res.ibeacons = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findIBeacons200ApplicationJSONObjects = utils.objectToClass(
+                    res.ibeacons = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindIBeacons200ApplicationJSON,
+                        shared.Ibeacons,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -249,7 +276,8 @@ export class Ibeacons {
      */
     async findIBeaconsById(
         req: operations.FindIBeaconsByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindIBeaconsByIdAcceptEnum
     ): Promise<operations.FindIBeaconsByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindIBeaconsByIdRequest(req);
@@ -265,7 +293,12 @@ export class Ibeacons {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -294,10 +327,7 @@ export class Ibeacons {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findIBeaconsById200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindIBeaconsById200ApplicationJSON
-                    );
+                    res.ibeacon = utils.objectToClass(JSON.parse(decodedRes), shared.Ibeacon);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -319,7 +349,8 @@ export class Ibeacons {
      */
     async findIBeaconsByName(
         req: operations.FindIBeaconsByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindIBeaconsByNameAcceptEnum
     ): Promise<operations.FindIBeaconsByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindIBeaconsByNameRequest(req);
@@ -335,7 +366,12 @@ export class Ibeacons {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -365,10 +401,7 @@ export class Ibeacons {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findIBeaconsByName200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindIBeaconsByName200ApplicationJSON
-                    );
+                    res.ibeacon = utils.objectToClass(JSON.parse(decodedRes), shared.Ibeacon);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -407,6 +440,7 @@ export class Ibeacons {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -461,6 +495,7 @@ export class Ibeacons {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;

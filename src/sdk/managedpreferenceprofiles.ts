@@ -5,8 +5,29 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindManagedPreferenceProfilesAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindManagedPreferenceProfilesByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindManagedPreferenceProfilesByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindManagedPreferenceProfilesByNameSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Managedpreferenceprofiles {
     private sdkConfiguration: SDKConfiguration;
@@ -37,6 +58,7 @@ export class Managedpreferenceprofiles {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -92,6 +114,7 @@ export class Managedpreferenceprofiles {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -151,6 +174,7 @@ export class Managedpreferenceprofiles {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -188,7 +212,8 @@ export class Managedpreferenceprofiles {
      * Finds all managed preference profiles
      */
     async findManagedPreferenceProfiles(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindManagedPreferenceProfilesAcceptEnum
     ): Promise<operations.FindManagedPreferenceProfilesResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -200,7 +225,12 @@ export class Managedpreferenceprofiles {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -230,14 +260,13 @@ export class Managedpreferenceprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findManagedPreferenceProfiles200ApplicationJSONObjects = [];
+                    res.managedPreferenceProfiles = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findManagedPreferenceProfiles200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindManagedPreferenceProfiles200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.managedPreferenceProfiles = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ManagedPreferenceProfiles,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -259,7 +288,8 @@ export class Managedpreferenceprofiles {
      */
     async findManagedPreferenceProfilesById(
         req: operations.FindManagedPreferenceProfilesByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindManagedPreferenceProfilesByIdAcceptEnum
     ): Promise<operations.FindManagedPreferenceProfilesByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindManagedPreferenceProfilesByIdRequest(req);
@@ -275,7 +305,12 @@ export class Managedpreferenceprofiles {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -305,11 +340,10 @@ export class Managedpreferenceprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findManagedPreferenceProfilesById200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindManagedPreferenceProfilesById200ApplicationJSON
-                        );
+                    res.managedPreferenceProfile = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ManagedPreferenceProfile
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -355,6 +389,7 @@ export class Managedpreferenceprofiles {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -393,7 +428,8 @@ export class Managedpreferenceprofiles {
      */
     async findManagedPreferenceProfilesByName(
         req: operations.FindManagedPreferenceProfilesByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindManagedPreferenceProfilesByNameAcceptEnum
     ): Promise<operations.FindManagedPreferenceProfilesByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindManagedPreferenceProfilesByNameRequest(req);
@@ -413,7 +449,12 @@ export class Managedpreferenceprofiles {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -443,11 +484,10 @@ export class Managedpreferenceprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findManagedPreferenceProfilesByName200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindManagedPreferenceProfilesByName200ApplicationJSON
-                        );
+                    res.managedPreferenceProfile = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ManagedPreferenceProfile
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -472,7 +512,8 @@ export class Managedpreferenceprofiles {
      */
     async findManagedPreferenceProfilesByNameSubset(
         req: operations.FindManagedPreferenceProfilesByNameSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindManagedPreferenceProfilesByNameSubsetAcceptEnum
     ): Promise<operations.FindManagedPreferenceProfilesByNameSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindManagedPreferenceProfilesByNameSubsetRequest(req);
@@ -492,7 +533,12 @@ export class Managedpreferenceprofiles {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -522,11 +568,10 @@ export class Managedpreferenceprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findManagedPreferenceProfilesByNameSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindManagedPreferenceProfilesByNameSubset200ApplicationJSON
-                        );
+                    res.managedPreferenceProfile = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ManagedPreferenceProfile
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -565,6 +610,7 @@ export class Managedpreferenceprofiles {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -624,6 +670,7 @@ export class Managedpreferenceprofiles {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;

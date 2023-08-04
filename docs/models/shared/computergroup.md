@@ -1,0 +1,15 @@
+# ComputerGroup
+
+OK
+
+
+## Fields
+
+| Field                                                                     | Type                                                                      | Required                                                                  | Description                                                               | Example                                                                   |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `computers`                                                               | [ComputerGroupComputers](../../models/shared/computergroupcomputers.md)[] | :heavy_minus_sign:                                                        | N/A                                                                       |                                                                           |
+| `criteria`                                                                | [ComputerGroupCriteria](../../models/shared/computergroupcriteria.md)[]   | :heavy_minus_sign:                                                        | N/A                                                                       |                                                                           |
+| `id`                                                                      | *number*                                                                  | :heavy_minus_sign:                                                        | N/A                                                                       | 1                                                                         |
+| `isSmart`                                                                 | *boolean*                                                                 | :heavy_minus_sign:                                                        | Smart or static group                                                     |                                                                           |
+| `name`                                                                    | *string*                                                                  | :heavy_minus_sign:                                                        | Name of the group                                                         | Group Name                                                                |
+| `site`                                                                    | [SiteObject](../../models/shared/siteobject.md)                           | :heavy_minus_sign:                                                        | N/A                                                                       |                                                                           |

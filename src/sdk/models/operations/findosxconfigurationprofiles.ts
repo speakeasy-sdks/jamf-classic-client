@@ -3,45 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindOsxConfigurationProfiles200ApplicationXMLOsXConfigurationProfile extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindOsxConfigurationProfiles200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    osXConfigurationProfile?: FindOsxConfigurationProfiles200ApplicationXMLOsXConfigurationProfile;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindOsxConfigurationProfiles200ApplicationJSONOsXConfigurationProfile extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindOsxConfigurationProfiles200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "os_x_configuration_profile" })
-    @Type(() => FindOsxConfigurationProfiles200ApplicationJSONOsXConfigurationProfile)
-    osXConfigurationProfile?: FindOsxConfigurationProfiles200ApplicationJSONOsXConfigurationProfile;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindOsxConfigurationProfilesResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -59,6 +22,6 @@ export class FindOsxConfigurationProfilesResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindOsxConfigurationProfiles200ApplicationJSON })
-    findOsxConfigurationProfiles200ApplicationJSONObjects?: FindOsxConfigurationProfiles200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.OsXConfigurationProfiles })
+    osXConfigurationProfiles?: shared.OsXConfigurationProfiles[];
 }

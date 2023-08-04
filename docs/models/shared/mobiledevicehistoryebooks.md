@@ -1,0 +1,10 @@
+# MobileDeviceHistoryEbooks
+
+
+## Fields
+
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `failed`                                                                                        | [MobileDeviceHistoryEbooksFailed](../../models/shared/mobiledevicehistoryebooksfailed.md)[]     | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `installed`                                                                                     | [MobileDeviceHistoryEbooksInstalled](../../models/shared/mobiledevicehistoryebooksinstalled.md) | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `pending`                                                                                       | [MobileDeviceHistoryEbooksPending](../../models/shared/mobiledevicehistoryebookspending.md)[]   | :heavy_minus_sign:                                                                              | N/A                                                                                             |
