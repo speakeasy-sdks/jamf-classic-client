@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
 
 export class PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetRequest extends SpeakeasyBase {
     /**
@@ -20,140 +20,6 @@ export class PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetRequest ext
     version: string;
 }
 
-export class PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationXMLVersionsVersionComputersComputer extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationXMLVersionsVersionComputers extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    computer?: PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationXMLVersionsVersionComputersComputer;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationXMLVersionsVersion extends SpeakeasyBase {
-    @SpeakeasyMetadata({
-        elemType:
-            PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationXMLVersionsVersionComputers,
-    })
-    computers?: PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationXMLVersionsVersionComputers[];
-
-    @SpeakeasyMetadata()
-    softwareVersion?: string;
-}
-
-export class PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationXMLVersions extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    version?: PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationXMLVersionsVersion;
-}
-
-/**
- * OK
- */
-export class PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    name?: string;
-
-    @SpeakeasyMetadata()
-    patchSoftwareTitleId?: string;
-
-    @SpeakeasyMetadata()
-    totalComputers?: number;
-
-    @SpeakeasyMetadata()
-    totalVersions?: number;
-
-    @SpeakeasyMetadata({
-        elemType: PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationXMLVersions,
-    })
-    versions?: PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationXMLVersions[];
-}
-
-export class PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSONVersionsVersionComputersComputer extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSONVersionsVersionComputers extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "computer" })
-    @Type(
-        () =>
-            PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSONVersionsVersionComputersComputer
-    )
-    computer?: PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSONVersionsVersionComputersComputer;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
-
-export class PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSONVersionsVersion extends SpeakeasyBase {
-    @SpeakeasyMetadata({
-        elemType:
-            PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSONVersionsVersionComputers,
-    })
-    @Expose({ name: "computers" })
-    @Type(
-        () =>
-            PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSONVersionsVersionComputers
-    )
-    computers?: PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSONVersionsVersionComputers[];
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "software_version" })
-    softwareVersion?: string;
-}
-
-export class PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSONVersions extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "version" })
-    @Type(
-        () =>
-            PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSONVersionsVersion
-    )
-    version?: PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSONVersionsVersion;
-}
-
-/**
- * OK
- */
-export class PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "patch_software_title_id" })
-    patchSoftwareTitleId?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "total_computers" })
-    totalComputers?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "total_versions" })
-    totalVersions?: number;
-
-    @SpeakeasyMetadata({
-        elemType:
-            PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSONVersions,
-    })
-    @Expose({ name: "versions" })
-    @Type(() => PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSONVersions)
-    versions?: PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSONVersions[];
-}
-
 export class PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     body?: Uint8Array;
@@ -161,15 +27,15 @@ export class PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetResponse ex
     @SpeakeasyMetadata()
     contentType: string;
 
-    /**
-     * OK
-     */
-    @SpeakeasyMetadata()
-    patchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSONObject?: PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSON;
-
     @SpeakeasyMetadata()
     statusCode: number;
 
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata()
+    patchReport?: shared.PatchReport;
 }

@@ -5,8 +5,14 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum PatchavailabletitlesSourceidByIdGetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Patchavailabletitles {
     private sdkConfiguration: SDKConfiguration;
@@ -20,7 +26,8 @@ export class Patchavailabletitles {
      */
     async patchavailabletitlesSourceidByIdGet(
         req: operations.PatchavailabletitlesSourceidByIdGetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: PatchavailabletitlesSourceidByIdGetAcceptEnum
     ): Promise<operations.PatchavailabletitlesSourceidByIdGetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.PatchavailabletitlesSourceidByIdGetRequest(req);
@@ -36,7 +43,12 @@ export class Patchavailabletitles {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -66,11 +78,10 @@ export class Patchavailabletitles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.patchavailabletitlesSourceidByIdGet200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.PatchavailabletitlesSourceidByIdGet200ApplicationJSON
-                        );
+                    res.patchAvailableTitles = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.PatchAvailableTitles
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

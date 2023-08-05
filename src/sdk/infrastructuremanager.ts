@@ -5,8 +5,19 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindInfrastructureManagerAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindInfrastructureManagerByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Infrastructuremanager {
     private sdkConfiguration: SDKConfiguration;
@@ -19,7 +30,8 @@ export class Infrastructuremanager {
      * Find all Infrastructure Managers
      */
     async findInfrastructureManager(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindInfrastructureManagerAcceptEnum
     ): Promise<operations.FindInfrastructureManagerResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -31,7 +43,12 @@ export class Infrastructuremanager {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -61,11 +78,11 @@ export class Infrastructuremanager {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findInfrastructureManager200ApplicationJSONObjects = [];
+                    res.infrastructureManagers = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findInfrastructureManager200ApplicationJSONObjects = utils.objectToClass(
+                    res.infrastructureManagers = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindInfrastructureManager200ApplicationJSON,
+                        shared.InfrastructureManagers,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -89,7 +106,8 @@ export class Infrastructuremanager {
      */
     async findInfrastructureManagerById(
         req: operations.FindInfrastructureManagerByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindInfrastructureManagerByIdAcceptEnum
     ): Promise<operations.FindInfrastructureManagerByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindInfrastructureManagerByIdRequest(req);
@@ -105,7 +123,12 @@ export class Infrastructuremanager {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -135,9 +158,9 @@ export class Infrastructuremanager {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findInfrastructureManagerById200ApplicationJSONObject = utils.objectToClass(
+                    res.infrastructureManager = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindInfrastructureManagerById200ApplicationJSON
+                        shared.InfrastructureManager
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -177,6 +200,7 @@ export class Infrastructuremanager {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;

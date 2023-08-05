@@ -5,50 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AxiosResponse } from "axios";
 
-export class UpdateComputerCheckinRequestBody extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    applyComputerLevelManagedPreferences?: boolean;
-
-    @SpeakeasyMetadata()
-    applyUserLevelManagedPreferences?: boolean;
-
-    @SpeakeasyMetadata()
-    checkForPoliciesAtLoginLogout?: boolean;
-
-    @SpeakeasyMetadata()
-    checkForPoliciesAtStartup?: boolean;
-
-    /**
-     * Measured in minutes
-     */
-    @SpeakeasyMetadata()
-    checkInFrequency?: number;
-
-    @SpeakeasyMetadata()
-    createLoginLogoutHooks?: boolean;
-
-    @SpeakeasyMetadata()
-    createStartupScript?: boolean;
-
-    @SpeakeasyMetadata()
-    displayStatusToUser?: boolean;
-
-    @SpeakeasyMetadata()
-    ensureSshIsEnabled?: boolean;
-
-    @SpeakeasyMetadata()
-    hideRestorePartition?: boolean;
-
-    @SpeakeasyMetadata()
-    logStartupEvent?: boolean;
-
-    @SpeakeasyMetadata()
-    logUsername?: boolean;
-
-    @SpeakeasyMetadata()
-    performLoginActionsInBackground?: boolean;
-}
-
 export class UpdateComputerCheckinResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     contentType: string;
