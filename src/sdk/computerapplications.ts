@@ -5,8 +5,29 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindComputerApplicationByNameAndVersionAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerApplicationsByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerApplicationsByNameAndVersionAndInventoryAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerApplicationsByNameInventoryAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Computerapplications {
     private sdkConfiguration: SDKConfiguration;
@@ -20,7 +41,8 @@ export class Computerapplications {
      */
     async findComputerApplicationByNameAndVersion(
         req: operations.FindComputerApplicationByNameAndVersionRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerApplicationByNameAndVersionAcceptEnum
     ): Promise<operations.FindComputerApplicationByNameAndVersionResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerApplicationByNameAndVersionRequest(req);
@@ -40,7 +62,12 @@ export class Computerapplications {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -70,11 +97,10 @@ export class Computerapplications {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerApplicationByNameAndVersion200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerApplicationByNameAndVersion200ApplicationJSON
-                        );
+                    res.computerApplications = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerApplications
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -96,7 +122,8 @@ export class Computerapplications {
      */
     async findComputerApplicationsByName(
         req: operations.FindComputerApplicationsByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerApplicationsByNameAcceptEnum
     ): Promise<operations.FindComputerApplicationsByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerApplicationsByNameRequest(req);
@@ -116,7 +143,12 @@ export class Computerapplications {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -146,11 +178,10 @@ export class Computerapplications {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerApplicationsByName200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerApplicationsByName200ApplicationJSON
-                        );
+                    res.computerApplications = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerApplications
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -175,7 +206,8 @@ export class Computerapplications {
      */
     async findComputerApplicationsByNameAndVersionAndInventory(
         req: operations.FindComputerApplicationsByNameAndVersionAndInventoryRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerApplicationsByNameAndVersionAndInventoryAcceptEnum
     ): Promise<operations.FindComputerApplicationsByNameAndVersionAndInventoryResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerApplicationsByNameAndVersionAndInventoryRequest(req);
@@ -195,7 +227,12 @@ export class Computerapplications {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -225,11 +262,10 @@ export class Computerapplications {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerApplicationsByNameAndVersionAndInventory200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerApplicationsByNameAndVersionAndInventory200ApplicationJSON
-                        );
+                    res.computerApplications = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerApplications
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -254,7 +290,8 @@ export class Computerapplications {
      */
     async findComputerApplicationsByNameInventory(
         req: operations.FindComputerApplicationsByNameInventoryRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerApplicationsByNameInventoryAcceptEnum
     ): Promise<operations.FindComputerApplicationsByNameInventoryResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerApplicationsByNameInventoryRequest(req);
@@ -274,7 +311,12 @@ export class Computerapplications {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -304,11 +346,10 @@ export class Computerapplications {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerApplicationsByNameInventory200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerApplicationsByNameInventory200ApplicationJSON
-                        );
+                    res.computerApplications = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerApplications
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

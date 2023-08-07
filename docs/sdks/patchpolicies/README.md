@@ -92,7 +92,7 @@ sdk.patchpolicies.deletePatchPolicyById({
 
 Finds all patch policies. (Deprecated). Please transition use to Jamf Pro API endpoint "/v2/patch-policies".
 
-> :warning: **DEPRECATED**: this method will be removed in a future release, please migrate away from it as soon as possible.
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -170,7 +170,7 @@ sdk.patchpolicies.findPatchPoliciesByIdSubset({
 
 softwaretitleconfigid refers to the ID of the patch software title the policy is associated to
 
-> :warning: **DEPRECATED**: this method will be removed in a future release, please migrate away from it as soon as possible.
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
