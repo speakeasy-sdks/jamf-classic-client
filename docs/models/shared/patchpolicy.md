@@ -1,0 +1,13 @@
+# PatchPolicy
+
+OK
+
+
+## Fields
+
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     | Example                                                                         |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `general`                                                                       | [PatchPolicyGeneral](../../models/shared/patchpolicygeneral.md)                 | :heavy_minus_sign:                                                              | N/A                                                                             |                                                                                 |
+| `scope`                                                                         | [PatchPolicyScope](../../models/shared/patchpolicyscope.md)                     | :heavy_minus_sign:                                                              | N/A                                                                             |                                                                                 |
+| `softwareTitleConfigurationId`                                                  | *number*                                                                        | :heavy_minus_sign:                                                              | N/A                                                                             | 1                                                                               |
+| `userInteraction`                                                               | [PatchPolicyUserInteraction](../../models/shared/patchpolicyuserinteraction.md) | :heavy_minus_sign:                                                              | N/A                                                                             |                                                                                 |

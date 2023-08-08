@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose } from "class-transformer";
 
 export class FindCategoriesByIdRequest extends SpeakeasyBase {
     /**
@@ -12,26 +12,6 @@ export class FindCategoriesByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
-}
-
-/**
- * OK
- */
-export class FindCategoriesByIdCategory extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    /**
-     * Name of the category
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "priority" })
-    priority?: number;
 }
 
 export class FindCategoriesByIdResponse extends SpeakeasyBase {
@@ -51,5 +31,5 @@ export class FindCategoriesByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    category?: FindCategoriesByIdCategory;
+    category?: shared.Category;
 }
