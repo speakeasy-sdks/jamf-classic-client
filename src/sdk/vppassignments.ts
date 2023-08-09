@@ -5,8 +5,19 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindAssignmentByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindVPPAdminAssignmentAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Vppassignments {
     private sdkConfiguration: SDKConfiguration;
@@ -37,6 +48,7 @@ export class Vppassignments {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -92,6 +104,7 @@ export class Vppassignments {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -130,7 +143,8 @@ export class Vppassignments {
      */
     async findAssignmentById(
         req: operations.FindAssignmentByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindAssignmentByIdAcceptEnum
     ): Promise<operations.FindAssignmentByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindAssignmentByIdRequest(req);
@@ -146,7 +160,12 @@ export class Vppassignments {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -176,9 +195,9 @@ export class Vppassignments {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findAssignmentById200ApplicationJSONObject = utils.objectToClass(
+                    res.vppAssignment = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindAssignmentById200ApplicationJSON
+                        shared.VppAssignment
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -200,7 +219,8 @@ export class Vppassignments {
      * Finds all VPP Assignments
      */
     async findVPPAdminAssignment(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindVPPAdminAssignmentAcceptEnum
     ): Promise<operations.FindVPPAdminAssignmentResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -212,7 +232,12 @@ export class Vppassignments {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -242,11 +267,11 @@ export class Vppassignments {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findVPPAdminAssignment200ApplicationJSONObjects = [];
+                    res.vppAssignments = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findVPPAdminAssignment200ApplicationJSONObjects = utils.objectToClass(
+                    res.vppAssignments = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindVPPAdminAssignment200ApplicationJSON,
+                        shared.VppAssignments,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -287,6 +312,7 @@ export class Vppassignments {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;

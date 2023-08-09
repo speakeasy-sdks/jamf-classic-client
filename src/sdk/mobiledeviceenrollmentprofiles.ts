@@ -5,8 +5,34 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindMobileDeviceEnrollmentProfilesAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMobileDeviceEnrollmentProfilesByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMobileDeviceEnrollmentProfilesByInvitationAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMobileDeviceEnrollmentProfilesByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMobileDeviceEnrollmentProfilesByNameSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Mobiledeviceenrollmentprofiles {
     private sdkConfiguration: SDKConfiguration;
@@ -41,6 +67,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -100,6 +127,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -159,6 +187,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -218,6 +247,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -255,7 +285,8 @@ export class Mobiledeviceenrollmentprofiles {
      * Finds all mobile device enrollment profiles
      */
     async findMobileDeviceEnrollmentProfiles(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobileDeviceEnrollmentProfilesAcceptEnum
     ): Promise<operations.FindMobileDeviceEnrollmentProfilesResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -267,7 +298,12 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -297,14 +333,13 @@ export class Mobiledeviceenrollmentprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceEnrollmentProfiles200ApplicationJSONObjects = [];
+                    res.mobileDeviceEnrollmentProfiles = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findMobileDeviceEnrollmentProfiles200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceEnrollmentProfiles200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.mobileDeviceEnrollmentProfiles = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceEnrollmentProfiles,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -326,7 +361,8 @@ export class Mobiledeviceenrollmentprofiles {
      */
     async findMobileDeviceEnrollmentProfilesById(
         req: operations.FindMobileDeviceEnrollmentProfilesByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobileDeviceEnrollmentProfilesByIdAcceptEnum
     ): Promise<operations.FindMobileDeviceEnrollmentProfilesByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMobileDeviceEnrollmentProfilesByIdRequest(req);
@@ -346,7 +382,12 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -376,11 +417,10 @@ export class Mobiledeviceenrollmentprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceEnrollmentProfilesById200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceEnrollmentProfilesById200ApplicationJSON
-                        );
+                    res.mobileDeviceEnrollmentProfile = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceEnrollmentProfile
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -426,6 +466,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -464,7 +505,8 @@ export class Mobiledeviceenrollmentprofiles {
      */
     async findMobileDeviceEnrollmentProfilesByInvitation(
         req: operations.FindMobileDeviceEnrollmentProfilesByInvitationRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobileDeviceEnrollmentProfilesByInvitationAcceptEnum
     ): Promise<operations.FindMobileDeviceEnrollmentProfilesByInvitationResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMobileDeviceEnrollmentProfilesByInvitationRequest(req);
@@ -484,7 +526,12 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -514,11 +561,10 @@ export class Mobiledeviceenrollmentprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceEnrollmentProfilesByInvitation200ApplicationJSON
-                        );
+                    res.mobileDeviceEnrollmentProfile = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceEnrollmentProfile
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -540,7 +586,8 @@ export class Mobiledeviceenrollmentprofiles {
      */
     async findMobileDeviceEnrollmentProfilesByName(
         req: operations.FindMobileDeviceEnrollmentProfilesByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobileDeviceEnrollmentProfilesByNameAcceptEnum
     ): Promise<operations.FindMobileDeviceEnrollmentProfilesByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMobileDeviceEnrollmentProfilesByNameRequest(req);
@@ -560,7 +607,12 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -590,11 +642,10 @@ export class Mobiledeviceenrollmentprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceEnrollmentProfilesByName200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceEnrollmentProfilesByName200ApplicationJSON
-                        );
+                    res.mobileDeviceEnrollmentProfile = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceEnrollmentProfile
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -619,7 +670,8 @@ export class Mobiledeviceenrollmentprofiles {
      */
     async findMobileDeviceEnrollmentProfilesByNameSubset(
         req: operations.FindMobileDeviceEnrollmentProfilesByNameSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobileDeviceEnrollmentProfilesByNameSubsetAcceptEnum
     ): Promise<operations.FindMobileDeviceEnrollmentProfilesByNameSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMobileDeviceEnrollmentProfilesByNameSubsetRequest(req);
@@ -639,7 +691,12 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -669,11 +726,10 @@ export class Mobiledeviceenrollmentprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceEnrollmentProfilesByNameSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceEnrollmentProfilesByNameSubset200ApplicationJSON
-                        );
+                    res.mobileDeviceEnrollmentProfile = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceEnrollmentProfile
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -716,6 +772,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -775,6 +832,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -834,6 +892,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;

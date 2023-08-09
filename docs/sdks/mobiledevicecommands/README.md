@@ -49,10 +49,8 @@ The chart below includes additional requirements for usage of specific commands
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  CreateMobileDeviceCommandRequestBodyGeneralCommand,
-  CreateMobileDeviceCommandResponse,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { CreateMobileDeviceCommandResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { MobileDeviceCommandPostGeneralCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
 const sdk = new Jamf({
   security: {
