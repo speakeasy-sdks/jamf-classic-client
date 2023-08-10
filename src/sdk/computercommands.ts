@@ -5,8 +5,24 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindComputerCommandsAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerCommandsByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerCommandsByUuidAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Computercommands {
     private sdkConfiguration: SDKConfiguration;
@@ -54,6 +70,7 @@ export class Computercommands {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -113,6 +130,7 @@ export class Computercommands {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -172,6 +190,7 @@ export class Computercommands {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -234,6 +253,7 @@ export class Computercommands {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -271,7 +291,8 @@ export class Computercommands {
      * Finds all computer commands
      */
     async findComputerCommands(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerCommandsAcceptEnum
     ): Promise<operations.FindComputerCommandsResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -283,7 +304,12 @@ export class Computercommands {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -313,11 +339,11 @@ export class Computercommands {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerCommands200ApplicationJSONObjects = [];
+                    res.computerCommands = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerCommands200ApplicationJSONObjects = utils.objectToClass(
+                    res.computerCommands = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerCommands200ApplicationJSON,
+                        shared.ComputerCommands,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -341,7 +367,8 @@ export class Computercommands {
      */
     async findComputerCommandsByName(
         req: operations.FindComputerCommandsByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerCommandsByNameAcceptEnum
     ): Promise<operations.FindComputerCommandsByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerCommandsByNameRequest(req);
@@ -357,7 +384,12 @@ export class Computercommands {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -387,9 +419,9 @@ export class Computercommands {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerCommandsByName200ApplicationJSONObject = utils.objectToClass(
+                    res.computerCommand = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerCommandsByName200ApplicationJSON
+                        shared.ComputerCommand
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -412,7 +444,8 @@ export class Computercommands {
      */
     async findComputerCommandsByUuid(
         req: operations.FindComputerCommandsByUuidRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerCommandsByUuidAcceptEnum
     ): Promise<operations.FindComputerCommandsByUuidResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerCommandsByUuidRequest(req);
@@ -428,7 +461,12 @@ export class Computercommands {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -458,9 +496,9 @@ export class Computercommands {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerCommandsByUuid200ApplicationJSONObject = utils.objectToClass(
+                    res.computerCommand = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerCommandsByUuid200ApplicationJSON
+                        shared.ComputerCommand
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;

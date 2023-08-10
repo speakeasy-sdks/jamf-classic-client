@@ -3,45 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindPeripheralTypes200ApplicationXMLPeripheralType extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindPeripheralTypes200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    peripheralType?: FindPeripheralTypes200ApplicationXMLPeripheralType;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindPeripheralTypes200ApplicationJSONPeripheralType extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindPeripheralTypes200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "peripheral_type" })
-    @Type(() => FindPeripheralTypes200ApplicationJSONPeripheralType)
-    peripheralType?: FindPeripheralTypes200ApplicationJSONPeripheralType;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindPeripheralTypesResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -59,6 +22,6 @@ export class FindPeripheralTypesResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindPeripheralTypes200ApplicationJSON })
-    findPeripheralTypes200ApplicationJSONObjects?: FindPeripheralTypes200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.PeripheralTypes })
+    peripheralTypes?: shared.PeripheralTypes[];
 }

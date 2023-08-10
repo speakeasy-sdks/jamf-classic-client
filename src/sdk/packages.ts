@@ -5,8 +5,24 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindPackagesAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindPackagesByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindPackagesByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Packages {
     private sdkConfiguration: SDKConfiguration;
@@ -37,6 +53,7 @@ export class Packages {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -91,6 +108,7 @@ export class Packages {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -145,6 +163,7 @@ export class Packages {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -181,7 +200,10 @@ export class Packages {
     /**
      * Finds all packages
      */
-    async findPackages(config?: AxiosRequestConfig): Promise<operations.FindPackagesResponse> {
+    async findPackages(
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindPackagesAcceptEnum
+    ): Promise<operations.FindPackagesResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
@@ -192,7 +214,12 @@ export class Packages {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -221,11 +248,11 @@ export class Packages {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPackages200ApplicationJSONObjects = [];
+                    res.packages = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findPackages200ApplicationJSONObjects = utils.objectToClass(
+                    res.packages = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindPackages200ApplicationJSON,
+                        shared.Packages,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -249,7 +276,8 @@ export class Packages {
      */
     async findPackagesById(
         req: operations.FindPackagesByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindPackagesByIdAcceptEnum
     ): Promise<operations.FindPackagesByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindPackagesByIdRequest(req);
@@ -265,7 +293,12 @@ export class Packages {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -294,10 +327,7 @@ export class Packages {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPackagesById200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindPackagesById200ApplicationJSON
-                    );
+                    res.package = utils.objectToClass(JSON.parse(decodedRes), shared.Package);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -319,7 +349,8 @@ export class Packages {
      */
     async findPackagesByName(
         req: operations.FindPackagesByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindPackagesByNameAcceptEnum
     ): Promise<operations.FindPackagesByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindPackagesByNameRequest(req);
@@ -335,7 +366,12 @@ export class Packages {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -365,10 +401,7 @@ export class Packages {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findPackagesByName200ApplicationJSONObject = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        operations.FindPackagesByName200ApplicationJSON
-                    );
+                    res.package = utils.objectToClass(JSON.parse(decodedRes), shared.Package);
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -407,6 +440,7 @@ export class Packages {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -461,6 +495,7 @@ export class Packages {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;

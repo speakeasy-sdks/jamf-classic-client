@@ -5,8 +5,24 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindMobileDeviceInvitationsAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMobileDeviceInvitationsByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMobileDeviceInvitationsByInvitationAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Mobiledeviceinvitations {
     private sdkConfiguration: SDKConfiguration;
@@ -37,6 +53,7 @@ export class Mobiledeviceinvitations {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "application/xml";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -106,6 +123,7 @@ export class Mobiledeviceinvitations {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "application/xml";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -171,6 +189,7 @@ export class Mobiledeviceinvitations {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -230,6 +249,7 @@ export class Mobiledeviceinvitations {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -267,7 +287,8 @@ export class Mobiledeviceinvitations {
      * Finds all mobile device invitations
      */
     async findMobileDeviceInvitations(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobileDeviceInvitationsAcceptEnum
     ): Promise<operations.FindMobileDeviceInvitationsResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -279,7 +300,12 @@ export class Mobiledeviceinvitations {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -309,11 +335,11 @@ export class Mobiledeviceinvitations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceInvitations200ApplicationJSONObjects = [];
+                    res.mobileDeviceInvitations = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findMobileDeviceInvitations200ApplicationJSONObjects = utils.objectToClass(
+                    res.mobileDeviceInvitations = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindMobileDeviceInvitations200ApplicationJSON,
+                        shared.MobileDeviceInvitations,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -337,7 +363,8 @@ export class Mobiledeviceinvitations {
      */
     async findMobileDeviceInvitationsById(
         req: operations.FindMobileDeviceInvitationsByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobileDeviceInvitationsByIdAcceptEnum
     ): Promise<operations.FindMobileDeviceInvitationsByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMobileDeviceInvitationsByIdRequest(req);
@@ -353,7 +380,12 @@ export class Mobiledeviceinvitations {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -383,11 +415,10 @@ export class Mobiledeviceinvitations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceInvitationsById200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceInvitationsById200ApplicationJSON
-                        );
+                    res.mobileDeviceInvitation = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceInvitation
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -409,7 +440,8 @@ export class Mobiledeviceinvitations {
      */
     async findMobileDeviceInvitationsByInvitation(
         req: operations.FindMobileDeviceInvitationsByInvitationRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobileDeviceInvitationsByInvitationAcceptEnum
     ): Promise<operations.FindMobileDeviceInvitationsByInvitationResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMobileDeviceInvitationsByInvitationRequest(req);
@@ -429,7 +461,12 @@ export class Mobiledeviceinvitations {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -459,11 +496,10 @@ export class Mobiledeviceinvitations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceInvitationsByInvitation200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceInvitationsByInvitation200ApplicationJSON
-                        );
+                    res.mobileDeviceInvitation = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceInvitation
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

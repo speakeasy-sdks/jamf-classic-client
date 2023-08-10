@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
 
 /**
  * Subset to filter by
@@ -29,56 +29,6 @@ export class FindManagedPreferenceProfilesByNameSubsetRequest extends SpeakeasyB
     subset: FindManagedPreferenceProfilesByNameSubsetSubset;
 }
 
-export class FindManagedPreferenceProfilesByNameSubset200ApplicationXMLGeneral extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    enabled?: boolean;
-
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name: string;
-
-    @SpeakeasyMetadata()
-    plist?: string;
-}
-
-/**
- * OK
- */
-export class FindManagedPreferenceProfilesByNameSubset200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    general?: FindManagedPreferenceProfilesByNameSubset200ApplicationXMLGeneral;
-}
-
-export class FindManagedPreferenceProfilesByNameSubset200ApplicationJSONGeneral extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "enabled" })
-    enabled?: boolean;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "plist" })
-    plist?: string;
-}
-
-/**
- * OK
- */
-export class FindManagedPreferenceProfilesByNameSubset200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "general" })
-    @Type(() => FindManagedPreferenceProfilesByNameSubset200ApplicationJSONGeneral)
-    general?: FindManagedPreferenceProfilesByNameSubset200ApplicationJSONGeneral;
-}
-
 export class FindManagedPreferenceProfilesByNameSubsetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     body?: Uint8Array;
@@ -96,5 +46,5 @@ export class FindManagedPreferenceProfilesByNameSubsetResponse extends Speakeasy
      * OK
      */
     @SpeakeasyMetadata()
-    findManagedPreferenceProfilesByNameSubset200ApplicationJSONObject?: FindManagedPreferenceProfilesByNameSubset200ApplicationJSON;
+    managedPreferenceProfile?: shared.ManagedPreferenceProfile;
 }

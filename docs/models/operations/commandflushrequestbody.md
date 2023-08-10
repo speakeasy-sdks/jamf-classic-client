@@ -1,9 +1,0 @@
-# CommandFlushRequestBody
-
-
-## Fields
-
-| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
-| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `mobileDevices`                                                                                         | [CommandFlushRequestBodyMobileDevices](../../models/operations/commandflushrequestbodymobiledevices.md) | :heavy_minus_sign:                                                                                      | N/A                                                                                                     |
-| `status`                                                                                                | [CommandFlushRequestBodyStatus](../../models/operations/commandflushrequestbodystatus.md)               | :heavy_check_mark:                                                                                      | N/A                                                                                                     |
