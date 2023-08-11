@@ -3,58 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindComputerGroups200ApplicationXMLComputerGroup extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    isSmart?: boolean;
-
-    /**
-     * Name of the group
-     */
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindComputerGroups200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: FindComputerGroups200ApplicationXMLComputerGroup })
-    computerGroup?: FindComputerGroups200ApplicationXMLComputerGroup[];
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindComputerGroups200ApplicationJSONComputerGroup extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "is_smart" })
-    isSmart?: boolean;
-
-    /**
-     * Name of the group
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindComputerGroups200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: FindComputerGroups200ApplicationJSONComputerGroup })
-    @Expose({ name: "computer_group" })
-    @Type(() => FindComputerGroups200ApplicationJSONComputerGroup)
-    computerGroup?: FindComputerGroups200ApplicationJSONComputerGroup[];
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindComputerGroupsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -72,6 +22,6 @@ export class FindComputerGroupsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindComputerGroups200ApplicationJSON })
-    findComputerGroups200ApplicationJSONObjects?: FindComputerGroups200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.ComputerGroups })
+    computerGroups?: shared.ComputerGroups[];
 }

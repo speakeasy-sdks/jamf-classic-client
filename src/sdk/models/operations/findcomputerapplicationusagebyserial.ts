@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
 
 export class FindComputerApplicationUsageBySerialRequest extends SpeakeasyBase {
     /**
@@ -26,95 +26,6 @@ export class FindComputerApplicationUsageBySerialRequest extends SpeakeasyBase {
     startDate: string;
 }
 
-export class FindComputerApplicationUsageBySerial200ApplicationXMLUsageAppsApp extends SpeakeasyBase {
-    /**
-     * Number of minutes application was in the foreground
-     */
-    @SpeakeasyMetadata()
-    foreground?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-
-    /**
-     * Number of minutes the application was open
-     */
-    @SpeakeasyMetadata()
-    open?: number;
-
-    @SpeakeasyMetadata()
-    version?: string;
-}
-
-export class FindComputerApplicationUsageBySerial200ApplicationXMLUsageApps extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    app?: FindComputerApplicationUsageBySerial200ApplicationXMLUsageAppsApp;
-}
-
-export class FindComputerApplicationUsageBySerial200ApplicationXMLUsage extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: FindComputerApplicationUsageBySerial200ApplicationXMLUsageApps })
-    apps?: FindComputerApplicationUsageBySerial200ApplicationXMLUsageApps[];
-
-    @SpeakeasyMetadata()
-    date?: string;
-}
-
-export class FindComputerApplicationUsageBySerial200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    usage?: FindComputerApplicationUsageBySerial200ApplicationXMLUsage;
-}
-
-export class FindComputerApplicationUsageBySerial200ApplicationJSONUsageAppsApp extends SpeakeasyBase {
-    /**
-     * Number of minutes application was in the foreground
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "foreground" })
-    foreground?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-
-    /**
-     * Number of minutes the application was open
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "open" })
-    open?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "version" })
-    version?: string;
-}
-
-export class FindComputerApplicationUsageBySerial200ApplicationJSONUsageApps extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "app" })
-    @Type(() => FindComputerApplicationUsageBySerial200ApplicationJSONUsageAppsApp)
-    app?: FindComputerApplicationUsageBySerial200ApplicationJSONUsageAppsApp;
-}
-
-export class FindComputerApplicationUsageBySerial200ApplicationJSONUsage extends SpeakeasyBase {
-    @SpeakeasyMetadata({
-        elemType: FindComputerApplicationUsageBySerial200ApplicationJSONUsageApps,
-    })
-    @Expose({ name: "apps" })
-    @Type(() => FindComputerApplicationUsageBySerial200ApplicationJSONUsageApps)
-    apps?: FindComputerApplicationUsageBySerial200ApplicationJSONUsageApps[];
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "date" })
-    date?: string;
-}
-
-export class FindComputerApplicationUsageBySerial200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "usage" })
-    @Type(() => FindComputerApplicationUsageBySerial200ApplicationJSONUsage)
-    usage?: FindComputerApplicationUsageBySerial200ApplicationJSONUsage;
-}
-
 export class FindComputerApplicationUsageBySerialResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     body?: Uint8Array;
@@ -131,6 +42,6 @@ export class FindComputerApplicationUsageBySerialResponse extends SpeakeasyBase 
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindComputerApplicationUsageBySerial200ApplicationJSON })
-    findComputerApplicationUsageBySerial200ApplicationJSONObjects?: FindComputerApplicationUsageBySerial200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.ComputerApplicationUsage })
+    computerApplicationUsage?: shared.ComputerApplicationUsage[];
 }

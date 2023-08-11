@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose } from "class-transformer";
 
 export class FindRemovableMacAddressesByNameRequest extends SpeakeasyBase {
     /**
@@ -12,36 +12,6 @@ export class FindRemovableMacAddressesByNameRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
     name: string;
-}
-
-/**
- * OK
- */
-export class FindRemovableMacAddressesByName200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    /**
-     * MAC address to ignore when identifying computers
-     */
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-/**
- * OK
- */
-export class FindRemovableMacAddressesByName200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    /**
-     * MAC address to ignore when identifying computers
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
 }
 
 export class FindRemovableMacAddressesByNameResponse extends SpeakeasyBase {
@@ -61,5 +31,5 @@ export class FindRemovableMacAddressesByNameResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    findRemovableMacAddressesByName200ApplicationJSONObject?: FindRemovableMacAddressesByName200ApplicationJSON;
+    removableMacAddress?: shared.RemovableMacAddress;
 }
