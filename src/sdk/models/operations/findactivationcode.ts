@@ -3,32 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose } from "class-transformer";
-
-/**
- * OK
- */
-export class Findactivationcode200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    code?: string;
-
-    @SpeakeasyMetadata()
-    organizationName?: string;
-}
-
-/**
- * OK
- */
-export class Findactivationcode200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "code" })
-    code?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "organization_name" })
-    organizationName?: string;
-}
 
 export class FindactivationcodeResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -47,5 +23,5 @@ export class FindactivationcodeResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    findactivationcode200ApplicationJSONObject?: Findactivationcode200ApplicationJSON;
+    activationCode?: shared.ActivationCode;
 }

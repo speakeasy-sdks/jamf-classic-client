@@ -5,8 +5,24 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindDiskEncryptionConfigurationsAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindDiskEncryptionConfigurationsByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindDiskEncryptionConfigurationsByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Diskencryptionconfigurations {
     private sdkConfiguration: SDKConfiguration;
@@ -41,6 +57,7 @@ export class Diskencryptionconfigurations {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -100,6 +117,7 @@ export class Diskencryptionconfigurations {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -159,6 +177,7 @@ export class Diskencryptionconfigurations {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -196,7 +215,8 @@ export class Diskencryptionconfigurations {
      * Finds all disk encryption configurations
      */
     async findDiskEncryptionConfigurations(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindDiskEncryptionConfigurationsAcceptEnum
     ): Promise<operations.FindDiskEncryptionConfigurationsResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -208,7 +228,12 @@ export class Diskencryptionconfigurations {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -238,14 +263,13 @@ export class Diskencryptionconfigurations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDiskEncryptionConfigurations200ApplicationJSONObjects = [];
+                    res.diskEncryptionConfigurations = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findDiskEncryptionConfigurations200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindDiskEncryptionConfigurations200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.diskEncryptionConfigurations = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.DiskEncryptionConfigurations,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -267,7 +291,8 @@ export class Diskencryptionconfigurations {
      */
     async findDiskEncryptionConfigurationsById(
         req: operations.FindDiskEncryptionConfigurationsByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindDiskEncryptionConfigurationsByIdAcceptEnum
     ): Promise<operations.FindDiskEncryptionConfigurationsByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindDiskEncryptionConfigurationsByIdRequest(req);
@@ -287,7 +312,12 @@ export class Diskencryptionconfigurations {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -317,11 +347,10 @@ export class Diskencryptionconfigurations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDiskEncryptionConfigurationsById200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindDiskEncryptionConfigurationsById200ApplicationJSON
-                        );
+                    res.diskEncryptionConfiguration = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.DiskEncryptionConfiguration
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -343,7 +372,8 @@ export class Diskencryptionconfigurations {
      */
     async findDiskEncryptionConfigurationsByName(
         req: operations.FindDiskEncryptionConfigurationsByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindDiskEncryptionConfigurationsByNameAcceptEnum
     ): Promise<operations.FindDiskEncryptionConfigurationsByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindDiskEncryptionConfigurationsByNameRequest(req);
@@ -363,7 +393,12 @@ export class Diskencryptionconfigurations {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -393,11 +428,10 @@ export class Diskencryptionconfigurations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findDiskEncryptionConfigurationsByName200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindDiskEncryptionConfigurationsByName200ApplicationJSON
-                        );
+                    res.diskEncryptionConfiguration = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.DiskEncryptionConfiguration
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -440,6 +474,7 @@ export class Diskencryptionconfigurations {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -499,6 +534,7 @@ export class Diskencryptionconfigurations {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;

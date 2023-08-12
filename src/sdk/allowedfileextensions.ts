@@ -5,8 +5,24 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindAllowedFileExtensionAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindAllowedFileExtensionByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindAllowedFileExtensionByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Allowedfileextensions {
     private sdkConfiguration: SDKConfiguration;
@@ -37,6 +53,7 @@ export class Allowedfileextensions {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -92,6 +109,7 @@ export class Allowedfileextensions {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -129,7 +147,8 @@ export class Allowedfileextensions {
      * Finds the allowed file extensions
      */
     async findAllowedFileExtension(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindAllowedFileExtensionAcceptEnum
     ): Promise<operations.FindAllowedFileExtensionResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -141,7 +160,12 @@ export class Allowedfileextensions {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -171,11 +195,11 @@ export class Allowedfileextensions {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findAllowedFileExtension200ApplicationJSONObjects = [];
+                    res.allowedFileExtensions = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findAllowedFileExtension200ApplicationJSONObjects = utils.objectToClass(
+                    res.allowedFileExtensions = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindAllowedFileExtension200ApplicationJSON,
+                        shared.AllowedFileExtensions,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -199,7 +223,8 @@ export class Allowedfileextensions {
      */
     async findAllowedFileExtensionById(
         req: operations.FindAllowedFileExtensionByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindAllowedFileExtensionByIdAcceptEnum
     ): Promise<operations.FindAllowedFileExtensionByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindAllowedFileExtensionByIdRequest(req);
@@ -215,7 +240,12 @@ export class Allowedfileextensions {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -245,9 +275,9 @@ export class Allowedfileextensions {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findAllowedFileExtensionById200ApplicationJSONObject = utils.objectToClass(
+                    res.allowedFileExtension = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindAllowedFileExtensionById200ApplicationJSON
+                        shared.AllowedFileExtension
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -270,7 +300,8 @@ export class Allowedfileextensions {
      */
     async findAllowedFileExtensionByName(
         req: operations.FindAllowedFileExtensionByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindAllowedFileExtensionByNameAcceptEnum
     ): Promise<operations.FindAllowedFileExtensionByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindAllowedFileExtensionByNameRequest(req);
@@ -290,7 +321,12 @@ export class Allowedfileextensions {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -320,11 +356,10 @@ export class Allowedfileextensions {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findAllowedFileExtensionByName200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindAllowedFileExtensionByName200ApplicationJSON
-                        );
+                    res.allowedFileExtension = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.AllowedFileExtension
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

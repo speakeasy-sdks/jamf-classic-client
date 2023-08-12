@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose } from "class-transformer";
 
 export class FindNetworkSegmentsByIdRequest extends SpeakeasyBase {
     /**
@@ -12,106 +12,6 @@ export class FindNetworkSegmentsByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
-}
-
-/**
- * OK
- */
-export class FindNetworkSegmentsById200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    building?: string;
-
-    @SpeakeasyMetadata()
-    department?: string;
-
-    @SpeakeasyMetadata()
-    distributionPoint?: string;
-
-    @SpeakeasyMetadata()
-    distributionServer?: string;
-
-    @SpeakeasyMetadata()
-    endingAddress: string;
-
-    @SpeakeasyMetadata()
-    id?: number;
-
-    /**
-     * Name of the network segment
-     */
-    @SpeakeasyMetadata()
-    name: string;
-
-    @SpeakeasyMetadata()
-    overrideBuildings?: boolean;
-
-    @SpeakeasyMetadata()
-    overrideDepartments?: boolean;
-
-    @SpeakeasyMetadata()
-    startingAddress: string;
-
-    @SpeakeasyMetadata()
-    swuServer?: string;
-
-    @SpeakeasyMetadata()
-    url?: string;
-}
-
-/**
- * OK
- */
-export class FindNetworkSegmentsById200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "building" })
-    building?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "department" })
-    department?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "distribution_point" })
-    distributionPoint?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "distribution_server" })
-    distributionServer?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "ending_address" })
-    endingAddress: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    /**
-     * Name of the network segment
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "override_buildings" })
-    overrideBuildings?: boolean;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "override_departments" })
-    overrideDepartments?: boolean;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "starting_address" })
-    startingAddress: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "swu_server" })
-    swuServer?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "url" })
-    url?: string;
 }
 
 export class FindNetworkSegmentsByIdResponse extends SpeakeasyBase {
@@ -131,5 +31,5 @@ export class FindNetworkSegmentsByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    findNetworkSegmentsById200ApplicationJSONObject?: FindNetworkSegmentsById200ApplicationJSON;
+    networkSegment?: shared.NetworkSegment;
 }

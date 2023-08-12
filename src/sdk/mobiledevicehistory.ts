@@ -5,8 +5,54 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindMobileDeviceHistoryByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMobileDeviceHistoryByMacAddressAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMobileDeviceHistoryByMacAddressSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMobileDeviceHistoryByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMobileDeviceHistoryByNameSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMobileDeviceHistoryBySerialNumberAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMobileDeviceHistoryBySerialNumberSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMobileDeviceHistoryByUDIDAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindMobileDeviceHistoryByUDIDSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Mobiledevicehistory {
     private sdkConfiguration: SDKConfiguration;
@@ -20,7 +66,8 @@ export class Mobiledevicehistory {
      */
     async findMobileDeviceHistoryById(
         req: operations.FindMobileDeviceHistoryByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobileDeviceHistoryByIdAcceptEnum
     ): Promise<operations.FindMobileDeviceHistoryByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMobileDeviceHistoryByIdRequest(req);
@@ -36,7 +83,12 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -66,9 +118,9 @@ export class Mobiledevicehistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceHistoryById200ApplicationJSONObject = utils.objectToClass(
+                    res.mobileDeviceHistory = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindMobileDeviceHistoryById200ApplicationJSON
+                        shared.MobileDeviceHistory
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -115,6 +167,7 @@ export class Mobiledevicehistory {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -153,7 +206,8 @@ export class Mobiledevicehistory {
      */
     async findMobileDeviceHistoryByMacAddress(
         req: operations.FindMobileDeviceHistoryByMacAddressRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobileDeviceHistoryByMacAddressAcceptEnum
     ): Promise<operations.FindMobileDeviceHistoryByMacAddressResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMobileDeviceHistoryByMacAddressRequest(req);
@@ -173,7 +227,12 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -203,11 +262,10 @@ export class Mobiledevicehistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceHistoryByMacAddress200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceHistoryByMacAddress200ApplicationJSON
-                        );
+                    res.mobileDeviceHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -232,7 +290,8 @@ export class Mobiledevicehistory {
      */
     async findMobileDeviceHistoryByMacAddressSubset(
         req: operations.FindMobileDeviceHistoryByMacAddressSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobileDeviceHistoryByMacAddressSubsetAcceptEnum
     ): Promise<operations.FindMobileDeviceHistoryByMacAddressSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMobileDeviceHistoryByMacAddressSubsetRequest(req);
@@ -252,7 +311,12 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -282,11 +346,10 @@ export class Mobiledevicehistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceHistoryByMacAddressSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceHistoryByMacAddressSubset200ApplicationJSON
-                        );
+                    res.mobileDeviceHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -308,7 +371,8 @@ export class Mobiledevicehistory {
      */
     async findMobileDeviceHistoryByName(
         req: operations.FindMobileDeviceHistoryByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobileDeviceHistoryByNameAcceptEnum
     ): Promise<operations.FindMobileDeviceHistoryByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMobileDeviceHistoryByNameRequest(req);
@@ -324,7 +388,12 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -354,9 +423,9 @@ export class Mobiledevicehistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceHistoryByName200ApplicationJSONObject = utils.objectToClass(
+                    res.mobileDeviceHistory = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindMobileDeviceHistoryByName200ApplicationJSON
+                        shared.MobileDeviceHistory
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -382,7 +451,8 @@ export class Mobiledevicehistory {
      */
     async findMobileDeviceHistoryByNameSubset(
         req: operations.FindMobileDeviceHistoryByNameSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobileDeviceHistoryByNameSubsetAcceptEnum
     ): Promise<operations.FindMobileDeviceHistoryByNameSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMobileDeviceHistoryByNameSubsetRequest(req);
@@ -402,7 +472,12 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -432,11 +507,10 @@ export class Mobiledevicehistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceHistoryByNameSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceHistoryByNameSubset200ApplicationJSON
-                        );
+                    res.mobileDeviceHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -458,7 +532,8 @@ export class Mobiledevicehistory {
      */
     async findMobileDeviceHistoryBySerialNumber(
         req: operations.FindMobileDeviceHistoryBySerialNumberRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobileDeviceHistoryBySerialNumberAcceptEnum
     ): Promise<operations.FindMobileDeviceHistoryBySerialNumberResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMobileDeviceHistoryBySerialNumberRequest(req);
@@ -478,7 +553,12 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -508,11 +588,10 @@ export class Mobiledevicehistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceHistoryBySerialNumber200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceHistoryBySerialNumber200ApplicationJSON
-                        );
+                    res.mobileDeviceHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -537,7 +616,8 @@ export class Mobiledevicehistory {
      */
     async findMobileDeviceHistoryBySerialNumberSubset(
         req: operations.FindMobileDeviceHistoryBySerialNumberSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobileDeviceHistoryBySerialNumberSubsetAcceptEnum
     ): Promise<operations.FindMobileDeviceHistoryBySerialNumberSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMobileDeviceHistoryBySerialNumberSubsetRequest(req);
@@ -557,7 +637,12 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -587,11 +672,10 @@ export class Mobiledevicehistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceHistoryBySerialNumberSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceHistoryBySerialNumberSubset200ApplicationJSON
-                        );
+                    res.mobileDeviceHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -613,7 +697,8 @@ export class Mobiledevicehistory {
      */
     async findMobileDeviceHistoryByUDID(
         req: operations.FindMobileDeviceHistoryByUDIDRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobileDeviceHistoryByUDIDAcceptEnum
     ): Promise<operations.FindMobileDeviceHistoryByUDIDResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMobileDeviceHistoryByUDIDRequest(req);
@@ -629,7 +714,12 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -659,9 +749,9 @@ export class Mobiledevicehistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceHistoryByUDID200ApplicationJSONObject = utils.objectToClass(
+                    res.mobileDeviceHistory = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindMobileDeviceHistoryByUdid200ApplicationJSON
+                        shared.MobileDeviceHistory
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -687,7 +777,8 @@ export class Mobiledevicehistory {
      */
     async findMobileDeviceHistoryByUDIDSubset(
         req: operations.FindMobileDeviceHistoryByUDIDSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindMobileDeviceHistoryByUDIDSubsetAcceptEnum
     ): Promise<operations.FindMobileDeviceHistoryByUDIDSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindMobileDeviceHistoryByUDIDSubsetRequest(req);
@@ -707,7 +798,12 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -737,11 +833,10 @@ export class Mobiledevicehistory {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findMobileDeviceHistoryByUDIDSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindMobileDeviceHistoryByUDIDSubset200ApplicationJSON
-                        );
+                    res.mobileDeviceHistory = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.MobileDeviceHistory
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
