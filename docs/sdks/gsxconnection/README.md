@@ -49,7 +49,8 @@ Updates the Jamf Pro GSX connection information
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateGSXConnectionRequestBodyRegion, UpdateGSXConnectionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { UpdateGSXConnectionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { GsxConnectionRegion } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
 const sdk = new Jamf({
   security: {

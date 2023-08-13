@@ -5,14 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AxiosResponse } from "axios";
 
-export class UpdateActivationCodeRequestBody extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    code?: string;
-
-    @SpeakeasyMetadata()
-    organizationName?: string;
-}
-
 export class UpdateActivationCodeResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     contentType: string;
