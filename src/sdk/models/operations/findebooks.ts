@@ -3,45 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindEBooks200ApplicationXMLEbook extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindEBooks200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    ebook?: FindEBooks200ApplicationXMLEbook;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindEBooks200ApplicationJSONEbook extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindEBooks200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "ebook" })
-    @Type(() => FindEBooks200ApplicationJSONEbook)
-    ebook?: FindEBooks200ApplicationJSONEbook;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindEBooksResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -59,6 +22,6 @@ export class FindEBooksResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindEBooks200ApplicationJSON })
-    findEBooks200ApplicationJSONObjects?: FindEBooks200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.Ebooks })
+    ebooks?: shared.Ebooks[];
 }

@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose } from "class-transformer";
 
 export class FindSitesByIdRequest extends SpeakeasyBase {
     /**
@@ -12,36 +12,6 @@ export class FindSitesByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
-}
-
-/**
- * OK
- */
-export class FindSitesById200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    /**
-     * Name of the site
-     */
-    @SpeakeasyMetadata()
-    name: string;
-}
-
-/**
- * OK
- */
-export class FindSitesById200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    /**
-     * Name of the site
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
 }
 
 export class FindSitesByIdResponse extends SpeakeasyBase {
@@ -61,5 +31,5 @@ export class FindSitesByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    findSitesById200ApplicationJSONObject?: FindSitesById200ApplicationJSON;
+    site?: shared.Site;
 }

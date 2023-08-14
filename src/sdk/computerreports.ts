@@ -5,8 +5,24 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindComputerReportsAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerReportsByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerReportsByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Computerreports {
     private sdkConfiguration: SDKConfiguration;
@@ -19,7 +35,8 @@ export class Computerreports {
      * Finds all computer reports
      */
     async findComputerReports(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerReportsAcceptEnum
     ): Promise<operations.FindComputerReportsResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -31,7 +48,12 @@ export class Computerreports {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -61,11 +83,11 @@ export class Computerreports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerReports200ApplicationJSONObjects = [];
+                    res.computerReports = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerReports200ApplicationJSONObjects = utils.objectToClass(
+                    res.computerReports = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerReports200ApplicationJSON,
+                        shared.ComputerReports,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -92,7 +114,8 @@ export class Computerreports {
      */
     async findComputerReportsById(
         req: operations.FindComputerReportsByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerReportsByIdAcceptEnum
     ): Promise<operations.FindComputerReportsByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerReportsByIdRequest(req);
@@ -108,7 +131,12 @@ export class Computerreports {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -138,11 +166,11 @@ export class Computerreports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerReportsById200ApplicationJSONObjects = [];
+                    res.computerReport = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerReportsById200ApplicationJSONObjects = utils.objectToClass(
+                    res.computerReport = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerReportsById200ApplicationJSON,
+                        shared.ComputerReport,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -169,7 +197,8 @@ export class Computerreports {
      */
     async findComputerReportsByName(
         req: operations.FindComputerReportsByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerReportsByNameAcceptEnum
     ): Promise<operations.FindComputerReportsByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerReportsByNameRequest(req);
@@ -185,7 +214,12 @@ export class Computerreports {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -215,11 +249,11 @@ export class Computerreports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerReportsByName200ApplicationJSONObjects = [];
+                    res.computerReport = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerReportsByName200ApplicationJSONObjects = utils.objectToClass(
+                    res.computerReport = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerReportsByName200ApplicationJSON,
+                        shared.ComputerReport,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {

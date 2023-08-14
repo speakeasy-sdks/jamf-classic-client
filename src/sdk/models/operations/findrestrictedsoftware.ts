@@ -3,45 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindRestrictedSoftware200ApplicationXMLRestrictedSoftwareTitle extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindRestrictedSoftware200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    restrictedSoftwareTitle?: FindRestrictedSoftware200ApplicationXMLRestrictedSoftwareTitle;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindRestrictedSoftware200ApplicationJSONRestrictedSoftwareTitle extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindRestrictedSoftware200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "restricted_software_title" })
-    @Type(() => FindRestrictedSoftware200ApplicationJSONRestrictedSoftwareTitle)
-    restrictedSoftwareTitle?: FindRestrictedSoftware200ApplicationJSONRestrictedSoftwareTitle;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindRestrictedSoftwareResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -59,6 +22,6 @@ export class FindRestrictedSoftwareResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindRestrictedSoftware200ApplicationJSON })
-    findRestrictedSoftware200ApplicationJSONObjects?: FindRestrictedSoftware200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.RestrictedSoftwareAll })
+    restrictedSoftwareAll?: shared.RestrictedSoftwareAll[];
 }

@@ -5,8 +5,24 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindLicensedSoftwareAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindLicensedSoftwareByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindLicensedSoftwareByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Licensedsoftware {
     private sdkConfiguration: SDKConfiguration;
@@ -40,6 +56,7 @@ export class Licensedsoftware {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -95,6 +112,7 @@ export class Licensedsoftware {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -150,6 +168,7 @@ export class Licensedsoftware {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -187,7 +206,8 @@ export class Licensedsoftware {
      * Finds all licensed software
      */
     async findLicensedSoftware(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindLicensedSoftwareAcceptEnum
     ): Promise<operations.FindLicensedSoftwareResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -199,7 +219,12 @@ export class Licensedsoftware {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -229,11 +254,11 @@ export class Licensedsoftware {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findLicensedSoftware200ApplicationJSONObjects = [];
+                    res.licensedSoftwareAll = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findLicensedSoftware200ApplicationJSONObjects = utils.objectToClass(
+                    res.licensedSoftwareAll = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindLicensedSoftware200ApplicationJSON,
+                        shared.LicensedSoftwareAll,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -257,7 +282,8 @@ export class Licensedsoftware {
      */
     async findLicensedSoftwareById(
         req: operations.FindLicensedSoftwareByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindLicensedSoftwareByIdAcceptEnum
     ): Promise<operations.FindLicensedSoftwareByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindLicensedSoftwareByIdRequest(req);
@@ -273,7 +299,12 @@ export class Licensedsoftware {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -303,9 +334,9 @@ export class Licensedsoftware {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findLicensedSoftwareById200ApplicationJSONObject = utils.objectToClass(
+                    res.licensedSoftware = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindLicensedSoftwareById200ApplicationJSON
+                        shared.LicensedSoftware
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -328,7 +359,8 @@ export class Licensedsoftware {
      */
     async findLicensedSoftwareByName(
         req: operations.FindLicensedSoftwareByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindLicensedSoftwareByNameAcceptEnum
     ): Promise<operations.FindLicensedSoftwareByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindLicensedSoftwareByNameRequest(req);
@@ -344,7 +376,12 @@ export class Licensedsoftware {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -374,9 +411,9 @@ export class Licensedsoftware {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findLicensedSoftwareByName200ApplicationJSONObject = utils.objectToClass(
+                    res.licensedSoftware = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindLicensedSoftwareByName200ApplicationJSON
+                        shared.LicensedSoftware
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -419,6 +456,7 @@ export class Licensedsoftware {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -477,6 +515,7 @@ export class Licensedsoftware {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
