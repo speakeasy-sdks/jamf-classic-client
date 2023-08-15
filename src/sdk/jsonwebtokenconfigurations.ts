@@ -5,8 +5,19 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindJsonWebTokenConfigurationByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindJsonWebTokenConfigurationsAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Jsonwebtokenconfigurations {
     private sdkConfiguration: SDKConfiguration;
@@ -37,6 +48,7 @@ export class Jsonwebtokenconfigurations {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "application/xml";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -102,6 +114,7 @@ export class Jsonwebtokenconfigurations {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -140,7 +153,8 @@ export class Jsonwebtokenconfigurations {
      */
     async findJsonWebTokenConfigurationById(
         req: operations.FindJsonWebTokenConfigurationByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindJsonWebTokenConfigurationByIdAcceptEnum
     ): Promise<operations.FindJsonWebTokenConfigurationByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindJsonWebTokenConfigurationByIdRequest(req);
@@ -156,7 +170,12 @@ export class Jsonwebtokenconfigurations {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -186,11 +205,10 @@ export class Jsonwebtokenconfigurations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findJSONWebTokenConfigurationById200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindJSONWebTokenConfigurationById200ApplicationJSON
-                        );
+                    res.jsonWebTokenConfiguration = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.JsonWebTokenConfiguration
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -211,7 +229,8 @@ export class Jsonwebtokenconfigurations {
      * Finds all JSON Web Token configurations
      */
     async findJsonWebTokenConfigurations(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindJsonWebTokenConfigurationsAcceptEnum
     ): Promise<operations.FindJsonWebTokenConfigurationsResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -223,7 +242,12 @@ export class Jsonwebtokenconfigurations {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -253,14 +277,13 @@ export class Jsonwebtokenconfigurations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findJSONWebTokenConfigurations200ApplicationJSONObjects = [];
+                    res.jsonWebTokenConfigurations = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findJSONWebTokenConfigurations200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindJSONWebTokenConfigurations200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.jsonWebTokenConfigurations = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.JsonWebTokenConfigurations,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -299,6 +322,7 @@ export class Jsonwebtokenconfigurations {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;

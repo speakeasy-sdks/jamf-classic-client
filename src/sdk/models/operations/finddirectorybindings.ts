@@ -3,45 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindDirectoryBindings200ApplicationXMLDirectoryBinding extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindDirectoryBindings200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    directoryBinding?: FindDirectoryBindings200ApplicationXMLDirectoryBinding;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindDirectoryBindings200ApplicationJSONDirectoryBinding extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindDirectoryBindings200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "directory_binding" })
-    @Type(() => FindDirectoryBindings200ApplicationJSONDirectoryBinding)
-    directoryBinding?: FindDirectoryBindings200ApplicationJSONDirectoryBinding;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindDirectoryBindingsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -59,6 +22,6 @@ export class FindDirectoryBindingsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindDirectoryBindings200ApplicationJSON })
-    findDirectoryBindings200ApplicationJSONObjects?: FindDirectoryBindings200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.DirectoryBindings })
+    directoryBindings?: shared.DirectoryBindings[];
 }

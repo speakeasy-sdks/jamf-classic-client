@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
 
 export class FindHealthcareListenerRulesByIdRequest extends SpeakeasyBase {
     /**
@@ -12,151 +12,6 @@ export class FindHealthcareListenerRulesByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: string;
-}
-
-export enum FindHealthcareListenerRulesById200ApplicationXMLMdmCommand {
-    EraseDevice = "EraseDevice",
-    DeviceLock = "DeviceLock",
-    ClearPasscode = "ClearPasscode",
-    EnableLostMode = "EnableLostMode",
-    DisableLostMode = "DisableLostMode",
-}
-
-export class FindHealthcareListenerRulesById200ApplicationXMLNotificationEmails extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    email?: string;
-}
-
-export enum FindHealthcareListenerRulesById200ApplicationXMLOperatingSystem {
-    IPhone = "iPhone",
-    Tv = "TV",
-}
-
-/**
- * OK
- */
-export class FindHealthcareListenerRulesById200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    adtMessage: string;
-
-    @SpeakeasyMetadata()
-    adtMessageField: string;
-
-    /**
-     * -1 represents the location field 'Room'; any other number is a mobile device extension attribute ID.
-     */
-    @SpeakeasyMetadata()
-    deviceInventoryField?: number;
-
-    @SpeakeasyMetadata()
-    hclId?: number;
-
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    mdmCommand?: FindHealthcareListenerRulesById200ApplicationXMLMdmCommand;
-
-    @SpeakeasyMetadata()
-    mdmCommandAdditionalData?: string;
-
-    @SpeakeasyMetadata()
-    name: string;
-
-    @SpeakeasyMetadata()
-    notificationEmails?: FindHealthcareListenerRulesById200ApplicationXMLNotificationEmails;
-
-    @SpeakeasyMetadata()
-    notificationEnabled?: boolean;
-
-    @SpeakeasyMetadata()
-    notificationThreshold?: number;
-
-    @SpeakeasyMetadata()
-    notifyUnsupportedEnabled?: boolean;
-
-    @SpeakeasyMetadata()
-    operatingSystem?: FindHealthcareListenerRulesById200ApplicationXMLOperatingSystem;
-}
-
-export enum FindHealthcareListenerRulesById200ApplicationJSONMdmCommand {
-    EraseDevice = "EraseDevice",
-    DeviceLock = "DeviceLock",
-    ClearPasscode = "ClearPasscode",
-    EnableLostMode = "EnableLostMode",
-    DisableLostMode = "DisableLostMode",
-}
-
-export class FindHealthcareListenerRulesById200ApplicationJSONNotificationEmails extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "email" })
-    email?: string;
-}
-
-export enum FindHealthcareListenerRulesById200ApplicationJSONOperatingSystem {
-    IPhone = "iPhone",
-    Tv = "TV",
-}
-
-/**
- * OK
- */
-export class FindHealthcareListenerRulesById200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "adt_message" })
-    adtMessage: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "adt_message_field" })
-    adtMessageField: string;
-
-    /**
-     * -1 represents the location field 'Room'; any other number is a mobile device extension attribute ID.
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "device_inventory_field" })
-    deviceInventoryField?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "hcl_id" })
-    hclId?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "mdm_command" })
-    mdmCommand?: FindHealthcareListenerRulesById200ApplicationJSONMdmCommand;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "mdm_command_additional_data" })
-    mdmCommandAdditionalData?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "notification_emails" })
-    @Type(() => FindHealthcareListenerRulesById200ApplicationJSONNotificationEmails)
-    notificationEmails?: FindHealthcareListenerRulesById200ApplicationJSONNotificationEmails;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "notification_enabled" })
-    notificationEnabled?: boolean;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "notification_threshold" })
-    notificationThreshold?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "notify_unsupported_enabled" })
-    notifyUnsupportedEnabled?: boolean;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "operating_system" })
-    operatingSystem?: FindHealthcareListenerRulesById200ApplicationJSONOperatingSystem;
 }
 
 export class FindHealthcareListenerRulesByIdResponse extends SpeakeasyBase {
@@ -176,5 +31,5 @@ export class FindHealthcareListenerRulesByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    findHealthcareListenerRulesById200ApplicationJSONObject?: FindHealthcareListenerRulesById200ApplicationJSON;
+    healthcareListenerRule?: shared.HealthcareListenerRule;
 }

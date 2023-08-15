@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
 
 export class PatchsoftwaretitlesIdByIdGetRequest extends SpeakeasyBase {
     /**
@@ -14,106 +14,19 @@ export class PatchsoftwaretitlesIdByIdGetRequest extends SpeakeasyBase {
     id: string;
 }
 
-export class PatchsoftwaretitlesIdByIdGet200ApplicationJSONCategory extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    /**
-     * Name of the category
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-}
-
-export class PatchsoftwaretitlesIdByIdGet200ApplicationJSONNotifications extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "email_notification" })
-    emailNotification?: boolean;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "web_notification" })
-    webNotification?: boolean;
-}
-
-export class PatchsoftwaretitlesIdByIdGet200ApplicationJSONVersionsVersionPackage extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class PatchsoftwaretitlesIdByIdGet200ApplicationJSONVersionsVersion extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "package" })
-    @Type(() => PatchsoftwaretitlesIdByIdGet200ApplicationJSONVersionsVersionPackage)
-    package?: PatchsoftwaretitlesIdByIdGet200ApplicationJSONVersionsVersionPackage;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "software_version" })
-    softwareVersion?: string;
-}
-
-export class PatchsoftwaretitlesIdByIdGet200ApplicationJSONVersions extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "version" })
-    @Type(() => PatchsoftwaretitlesIdByIdGet200ApplicationJSONVersionsVersion)
-    version?: PatchsoftwaretitlesIdByIdGet200ApplicationJSONVersionsVersion;
-}
-
-/**
- * OK
- */
-export class PatchsoftwaretitlesIdByIdGet200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "categories" })
-    @Type(() => PatchsoftwaretitlesIdByIdGet200ApplicationJSONCategory)
-    categories?: PatchsoftwaretitlesIdByIdGet200ApplicationJSONCategory;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name_id" })
-    nameId?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "notifications" })
-    @Type(() => PatchsoftwaretitlesIdByIdGet200ApplicationJSONNotifications)
-    notifications?: PatchsoftwaretitlesIdByIdGet200ApplicationJSONNotifications;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "source_id" })
-    sourceId?: number;
-
-    @SpeakeasyMetadata({ elemType: PatchsoftwaretitlesIdByIdGet200ApplicationJSONVersions })
-    @Expose({ name: "versions" })
-    @Type(() => PatchsoftwaretitlesIdByIdGet200ApplicationJSONVersions)
-    versions?: PatchsoftwaretitlesIdByIdGet200ApplicationJSONVersions[];
-}
-
 export class PatchsoftwaretitlesIdByIdGetResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     contentType: string;
-
-    /**
-     * OK
-     */
-    @SpeakeasyMetadata()
-    patchsoftwaretitlesIdByIdGet200ApplicationJSONObject?: PatchsoftwaretitlesIdByIdGet200ApplicationJSON;
 
     @SpeakeasyMetadata()
     statusCode: number;
 
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
+
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata()
+    patchSoftwareTitle?: shared.PatchSoftwareTitle;
 }
