@@ -3,45 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindMobileDeviceGroups200ApplicationXMLMobileDeviceGroup extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    isSmart?: boolean;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindMobileDeviceGroups200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    mobileDeviceGroup?: FindMobileDeviceGroups200ApplicationXMLMobileDeviceGroup;
-}
-
-export class FindMobileDeviceGroups200ApplicationJSONMobileDeviceGroup extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "is_smart" })
-    isSmart?: boolean;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindMobileDeviceGroups200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "mobile_device_group" })
-    @Type(() => FindMobileDeviceGroups200ApplicationJSONMobileDeviceGroup)
-    mobileDeviceGroup?: FindMobileDeviceGroups200ApplicationJSONMobileDeviceGroup;
-}
 
 export class FindMobileDeviceGroupsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -59,6 +22,6 @@ export class FindMobileDeviceGroupsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindMobileDeviceGroups200ApplicationJSON })
-    findMobileDeviceGroups200ApplicationJSONObjects?: FindMobileDeviceGroups200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.MobileDeviceGroups })
+    mobileDeviceGroups?: shared.MobileDeviceGroups[];
 }

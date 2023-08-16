@@ -3,58 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindClasses200ApplicationXMLClass extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    description?: string;
-
-    @SpeakeasyMetadata()
-    id?: number;
-
-    /**
-     * Name of the class
-     */
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindClasses200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    class?: FindClasses200ApplicationXMLClass;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindClasses200ApplicationJSONClass extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "description" })
-    description?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    /**
-     * Name of the class
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindClasses200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "class" })
-    @Type(() => FindClasses200ApplicationJSONClass)
-    class?: FindClasses200ApplicationJSONClass;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindClassesResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -72,6 +22,6 @@ export class FindClassesResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindClasses200ApplicationJSON })
-    findClasses200ApplicationJSONObjects?: FindClasses200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.Classes })
+    classes?: shared.Classes[];
 }
