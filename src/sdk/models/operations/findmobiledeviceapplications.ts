@@ -3,66 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindMobileDeviceApplications200ApplicationXMLMobileDeviceApplication extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    bundleId?: string;
-
-    @SpeakeasyMetadata()
-    displayName?: string;
-
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    internalApp?: boolean;
-
-    @SpeakeasyMetadata()
-    name?: string;
-
-    @SpeakeasyMetadata()
-    version?: string;
-}
-
-export class FindMobileDeviceApplications200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    mobileDeviceApplication?: FindMobileDeviceApplications200ApplicationXMLMobileDeviceApplication;
-}
-
-export class FindMobileDeviceApplications200ApplicationJSONMobileDeviceApplication extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "bundle_id" })
-    bundleId?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "display_name" })
-    displayName?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "internal_app" })
-    internalApp?: boolean;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "version" })
-    version?: string;
-}
-
-export class FindMobileDeviceApplications200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "mobile_device_application" })
-    @Type(() => FindMobileDeviceApplications200ApplicationJSONMobileDeviceApplication)
-    mobileDeviceApplication?: FindMobileDeviceApplications200ApplicationJSONMobileDeviceApplication;
-}
 
 export class FindMobileDeviceApplicationsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -80,6 +22,6 @@ export class FindMobileDeviceApplicationsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindMobileDeviceApplications200ApplicationJSON })
-    findMobileDeviceApplications200ApplicationJSONObjects?: FindMobileDeviceApplications200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.MobileDeviceApplications })
+    mobileDeviceApplications?: shared.MobileDeviceApplications[];
 }

@@ -1,0 +1,14 @@
+# LicensedSoftware
+
+OK
+
+
+## Fields
+
+| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `fontDefinitions`                                                                                   | [LicensedSoftwareFontDefinitions](../../models/shared/licensedsoftwarefontdefinitions.md)[]         | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |
+| `general`                                                                                           | [LicensedSoftwareGeneral](../../models/shared/licensedsoftwaregeneral.md)                           | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |
+| `licenses`                                                                                          | [LicensedSoftwareLicenses](../../models/shared/licensedsoftwarelicenses.md)[]                       | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |
+| `pluginDefinitions`                                                                                 | [LicensedSoftwarePluginDefinitions](../../models/shared/licensedsoftwareplugindefinitions.md)[]     | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |
+| `softwareDefinitions`                                                                               | [LicensedSoftwareSoftwareDefinitions](../../models/shared/licensedsoftwaresoftwaredefinitions.md)[] | :heavy_minus_sign:                                                                                  | N/A                                                                                                 |

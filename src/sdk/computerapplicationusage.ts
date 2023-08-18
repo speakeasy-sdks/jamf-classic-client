@@ -5,8 +5,34 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindComputerApplicationUsageByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerApplicationUsageByMacAddressAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerApplicationUsageByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerApplicationUsageBySerialAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerApplicationUsageByUDIDAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Computerapplicationusage {
     private sdkConfiguration: SDKConfiguration;
@@ -20,7 +46,8 @@ export class Computerapplicationusage {
      */
     async findComputerApplicationUsageById(
         req: operations.FindComputerApplicationUsageByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerApplicationUsageByIdAcceptEnum
     ): Promise<operations.FindComputerApplicationUsageByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerApplicationUsageByIdRequest(req);
@@ -40,7 +67,12 @@ export class Computerapplicationusage {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -70,14 +102,13 @@ export class Computerapplicationusage {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerApplicationUsageById200ApplicationJSONObjects = [];
+                    res.computerApplicationUsage = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerApplicationUsageById200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerApplicationUsageById200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.computerApplicationUsage = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerApplicationUsage,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -99,7 +130,8 @@ export class Computerapplicationusage {
      */
     async findComputerApplicationUsageByMacAddress(
         req: operations.FindComputerApplicationUsageByMacAddressRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerApplicationUsageByMacAddressAcceptEnum
     ): Promise<operations.FindComputerApplicationUsageByMacAddressResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerApplicationUsageByMacAddressRequest(req);
@@ -119,7 +151,12 @@ export class Computerapplicationusage {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -149,14 +186,13 @@ export class Computerapplicationusage {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerApplicationUsageByMacAddress200ApplicationJSONObjects = [];
+                    res.computerApplicationUsage = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerApplicationUsageByMacAddress200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerApplicationUsageByMacAddress200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.computerApplicationUsage = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerApplicationUsage,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -178,7 +214,8 @@ export class Computerapplicationusage {
      */
     async findComputerApplicationUsageByName(
         req: operations.FindComputerApplicationUsageByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerApplicationUsageByNameAcceptEnum
     ): Promise<operations.FindComputerApplicationUsageByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerApplicationUsageByNameRequest(req);
@@ -198,7 +235,12 @@ export class Computerapplicationusage {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -228,14 +270,13 @@ export class Computerapplicationusage {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerApplicationUsageByName200ApplicationJSONObjects = [];
+                    res.computerApplicationUsage = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerApplicationUsageByName200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerApplicationUsageByName200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.computerApplicationUsage = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerApplicationUsage,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -257,7 +298,8 @@ export class Computerapplicationusage {
      */
     async findComputerApplicationUsageBySerial(
         req: operations.FindComputerApplicationUsageBySerialRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerApplicationUsageBySerialAcceptEnum
     ): Promise<operations.FindComputerApplicationUsageBySerialResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerApplicationUsageBySerialRequest(req);
@@ -277,7 +319,12 @@ export class Computerapplicationusage {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -307,14 +354,13 @@ export class Computerapplicationusage {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerApplicationUsageBySerial200ApplicationJSONObjects = [];
+                    res.computerApplicationUsage = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerApplicationUsageBySerial200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerApplicationUsageBySerial200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.computerApplicationUsage = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerApplicationUsage,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -336,7 +382,8 @@ export class Computerapplicationusage {
      */
     async findComputerApplicationUsageByUDID(
         req: operations.FindComputerApplicationUsageByUDIDRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerApplicationUsageByUDIDAcceptEnum
     ): Promise<operations.FindComputerApplicationUsageByUDIDResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerApplicationUsageByUDIDRequest(req);
@@ -356,7 +403,12 @@ export class Computerapplicationusage {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -386,14 +438,13 @@ export class Computerapplicationusage {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerApplicationUsageByUDID200ApplicationJSONObjects = [];
+                    res.computerApplicationUsage = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerApplicationUsageByUDID200ApplicationJSONObjects =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerApplicationUsageByUdid200ApplicationJSON,
-                            resFieldDepth
-                        );
+                    res.computerApplicationUsage = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerApplicationUsage,
+                        resFieldDepth
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

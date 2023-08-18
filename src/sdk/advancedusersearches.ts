@@ -5,8 +5,24 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindAdvancedUserSearchesAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindAdvancedUserSearchesByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindUserSearchesByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Advancedusersearches {
     private sdkConfiguration: SDKConfiguration;
@@ -37,6 +53,7 @@ export class Advancedusersearches {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -92,6 +109,7 @@ export class Advancedusersearches {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -147,6 +165,7 @@ export class Advancedusersearches {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -184,7 +203,8 @@ export class Advancedusersearches {
      * Finds all advanced user searches
      */
     async findAdvancedUserSearches(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindAdvancedUserSearchesAcceptEnum
     ): Promise<operations.FindAdvancedUserSearchesResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -196,7 +216,12 @@ export class Advancedusersearches {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -226,11 +251,11 @@ export class Advancedusersearches {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findAdvancedUserSearches200ApplicationJSONObjects = [];
+                    res.advancedUserSearches = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findAdvancedUserSearches200ApplicationJSONObjects = utils.objectToClass(
+                    res.advancedUserSearches = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindAdvancedUserSearches200ApplicationJSON,
+                        shared.AdvancedUserSearches,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -254,7 +279,8 @@ export class Advancedusersearches {
      */
     async findAdvancedUserSearchesById(
         req: operations.FindAdvancedUserSearchesByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindAdvancedUserSearchesByIdAcceptEnum
     ): Promise<operations.FindAdvancedUserSearchesByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindAdvancedUserSearchesByIdRequest(req);
@@ -270,7 +296,12 @@ export class Advancedusersearches {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -302,7 +333,7 @@ export class Advancedusersearches {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.advancedUserSearch = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindAdvancedUserSearchesByIdAdvancedUserSearch
+                        shared.AdvancedUserSearch
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -325,7 +356,8 @@ export class Advancedusersearches {
      */
     async findUserSearchesByName(
         req: operations.FindUserSearchesByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindUserSearchesByNameAcceptEnum
     ): Promise<operations.FindUserSearchesByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindUserSearchesByNameRequest(req);
@@ -341,7 +373,12 @@ export class Advancedusersearches {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -373,7 +410,7 @@ export class Advancedusersearches {
                 if (utils.matchContentType(contentType, `application/json`)) {
                     res.advancedUserSearch = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindUserSearchesByNameAdvancedUserSearch
+                        shared.AdvancedUserSearch
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -413,6 +450,7 @@ export class Advancedusersearches {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -468,6 +506,7 @@ export class Advancedusersearches {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;

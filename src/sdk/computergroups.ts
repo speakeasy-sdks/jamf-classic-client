@@ -5,8 +5,24 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindComputerGroupsAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerGroupsByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerGroupsByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Computergroups {
     private sdkConfiguration: SDKConfiguration;
@@ -37,6 +53,7 @@ export class Computergroups {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -92,6 +109,7 @@ export class Computergroups {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -147,6 +165,7 @@ export class Computergroups {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -184,7 +203,8 @@ export class Computergroups {
      * Finds all computer groups
      */
     async findComputerGroups(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerGroupsAcceptEnum
     ): Promise<operations.FindComputerGroupsResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -196,7 +216,12 @@ export class Computergroups {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -226,11 +251,11 @@ export class Computergroups {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerGroups200ApplicationJSONObjects = [];
+                    res.computerGroups = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerGroups200ApplicationJSONObjects = utils.objectToClass(
+                    res.computerGroups = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerGroups200ApplicationJSON,
+                        shared.ComputerGroups,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -254,7 +279,8 @@ export class Computergroups {
      */
     async findComputerGroupsById(
         req: operations.FindComputerGroupsByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerGroupsByIdAcceptEnum
     ): Promise<operations.FindComputerGroupsByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerGroupsByIdRequest(req);
@@ -270,7 +296,12 @@ export class Computergroups {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -300,9 +331,9 @@ export class Computergroups {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerGroupsById200ApplicationJSONObject = utils.objectToClass(
+                    res.computerGroup = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerGroupsById200ApplicationJSON
+                        shared.ComputerGroup
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -325,7 +356,8 @@ export class Computergroups {
      */
     async findComputerGroupsByName(
         req: operations.FindComputerGroupsByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerGroupsByNameAcceptEnum
     ): Promise<operations.FindComputerGroupsByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerGroupsByNameRequest(req);
@@ -341,7 +373,12 @@ export class Computergroups {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -371,9 +408,9 @@ export class Computergroups {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerGroupsByName200ApplicationJSONObject = utils.objectToClass(
+                    res.computerGroup = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerGroupsByName200ApplicationJSON
+                        shared.ComputerGroup
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -416,6 +453,7 @@ export class Computergroups {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -474,6 +512,7 @@ export class Computergroups {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
