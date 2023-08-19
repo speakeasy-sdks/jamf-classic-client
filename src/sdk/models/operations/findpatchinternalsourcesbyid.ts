@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose } from "class-transformer";
 
 export class FindPatchInternalSourcesByIdRequest extends SpeakeasyBase {
     /**
@@ -12,44 +12,6 @@ export class FindPatchInternalSourcesByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: string;
-}
-
-/**
- * OK
- */
-export class FindPatchInternalSourcesById200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    enabled?: boolean;
-
-    @SpeakeasyMetadata()
-    endpoint?: string;
-
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-/**
- * OK
- */
-export class FindPatchInternalSourcesById200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "enabled" })
-    enabled?: boolean;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "endpoint" })
-    endpoint?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
 }
 
 export class FindPatchInternalSourcesByIdResponse extends SpeakeasyBase {
@@ -69,5 +31,5 @@ export class FindPatchInternalSourcesByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    findPatchInternalSourcesById200ApplicationJSONObject?: FindPatchInternalSourcesById200ApplicationJSON;
+    patchInternalSource?: shared.PatchInternalSource;
 }

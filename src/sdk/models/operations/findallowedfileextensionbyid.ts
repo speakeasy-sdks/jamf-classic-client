@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose } from "class-transformer";
 
 export class FindAllowedFileExtensionByIdRequest extends SpeakeasyBase {
     /**
@@ -12,36 +12,6 @@ export class FindAllowedFileExtensionByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
-}
-
-/**
- * OK
- */
-export class FindAllowedFileExtensionById200ApplicationXML extends SpeakeasyBase {
-    /**
-     * File extension
-     */
-    @SpeakeasyMetadata()
-    extension: string;
-
-    @SpeakeasyMetadata()
-    id?: number;
-}
-
-/**
- * OK
- */
-export class FindAllowedFileExtensionById200ApplicationJSON extends SpeakeasyBase {
-    /**
-     * File extension
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "extension" })
-    extension: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
 }
 
 export class FindAllowedFileExtensionByIdResponse extends SpeakeasyBase {
@@ -61,5 +31,5 @@ export class FindAllowedFileExtensionByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    findAllowedFileExtensionById200ApplicationJSONObject?: FindAllowedFileExtensionById200ApplicationJSON;
+    allowedFileExtension?: shared.AllowedFileExtension;
 }

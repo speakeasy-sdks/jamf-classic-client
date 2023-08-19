@@ -5,8 +5,134 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindComputerManagementByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByIdPatchFilterAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByIdSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByIdUsernameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByIdUsernameSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByMacAddressAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByMacAddressPatchFilterAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByMacAddressSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByMacAddressUsernameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByMacAddressUsernameSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByNameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByNamePatchFilterAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByNameSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByNameUsernameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByNameUsernameSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementBySerialNumberAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementBySerialNumberPatchFilterAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementBySerialNumberSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementBySerialNumberUsernameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementBySerialNumberUsernameSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByUDIDAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByUDIDSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByUdidPatchFilterAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByUdidUsernameAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerManagementByUdidUsernameSubsetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Computermanagement {
     private sdkConfiguration: SDKConfiguration;
@@ -20,7 +146,8 @@ export class Computermanagement {
      */
     async findComputerManagementById(
         req: operations.FindComputerManagementByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByIdAcceptEnum
     ): Promise<operations.FindComputerManagementByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByIdRequest(req);
@@ -36,7 +163,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -66,9 +198,9 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementById200ApplicationJSONObject = utils.objectToClass(
+                    res.computerManagement = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerManagementById200ApplicationJSON
+                        shared.ComputerManagement
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -91,7 +223,8 @@ export class Computermanagement {
      */
     async findComputerManagementByIdPatchFilter(
         req: operations.FindComputerManagementByIdPatchFilterRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByIdPatchFilterAcceptEnum
     ): Promise<operations.FindComputerManagementByIdPatchFilterResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByIdPatchFilterRequest(req);
@@ -111,7 +244,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -141,11 +279,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByIdPatchFilter200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementByIdPatchFilter200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -170,7 +307,8 @@ export class Computermanagement {
      */
     async findComputerManagementByIdSubset(
         req: operations.FindComputerManagementByIdSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByIdSubsetAcceptEnum
     ): Promise<operations.FindComputerManagementByIdSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByIdSubsetRequest(req);
@@ -190,7 +328,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -220,11 +363,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByIdSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementByIdSubset200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -246,7 +388,8 @@ export class Computermanagement {
      */
     async findComputerManagementByIdUsername(
         req: operations.FindComputerManagementByIdUsernameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByIdUsernameAcceptEnum
     ): Promise<operations.FindComputerManagementByIdUsernameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByIdUsernameRequest(req);
@@ -266,7 +409,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -296,11 +444,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByIdUsername200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementByIdUsername200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -325,7 +472,8 @@ export class Computermanagement {
      */
     async findComputerManagementByIdUsernameSubset(
         req: operations.FindComputerManagementByIdUsernameSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByIdUsernameSubsetAcceptEnum
     ): Promise<operations.FindComputerManagementByIdUsernameSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByIdUsernameSubsetRequest(req);
@@ -345,7 +493,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -375,11 +528,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByIdUsernameSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementByIdUsernameSubset200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -401,7 +553,8 @@ export class Computermanagement {
      */
     async findComputerManagementByMacAddress(
         req: operations.FindComputerManagementByMacAddressRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByMacAddressAcceptEnum
     ): Promise<operations.FindComputerManagementByMacAddressResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByMacAddressRequest(req);
@@ -421,7 +574,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -451,11 +609,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByMacAddress200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementByMacAddress200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -477,7 +634,8 @@ export class Computermanagement {
      */
     async findComputerManagementByMacAddressPatchFilter(
         req: operations.FindComputerManagementByMacAddressPatchFilterRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByMacAddressPatchFilterAcceptEnum
     ): Promise<operations.FindComputerManagementByMacAddressPatchFilterResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByMacAddressPatchFilterRequest(req);
@@ -497,7 +655,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -527,11 +690,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByMacAddressPatchFilter200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementByMacAddressPatchFilter200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -556,7 +718,8 @@ export class Computermanagement {
      */
     async findComputerManagementByMacAddressSubset(
         req: operations.FindComputerManagementByMacAddressSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByMacAddressSubsetAcceptEnum
     ): Promise<operations.FindComputerManagementByMacAddressSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByMacAddressSubsetRequest(req);
@@ -576,7 +739,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -606,11 +774,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByMacAddressSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementByMacAddressSubset200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -632,7 +799,8 @@ export class Computermanagement {
      */
     async findComputerManagementByMacAddressUsername(
         req: operations.FindComputerManagementByMacAddressUsernameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByMacAddressUsernameAcceptEnum
     ): Promise<operations.FindComputerManagementByMacAddressUsernameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByMacAddressUsernameRequest(req);
@@ -652,7 +820,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -682,11 +855,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByMacAddressUsername200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementByMacAddressUsername200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -711,7 +883,8 @@ export class Computermanagement {
      */
     async findComputerManagementByMacAddressUsernameSubset(
         req: operations.FindComputerManagementByMacAddressUsernameSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByMacAddressUsernameSubsetAcceptEnum
     ): Promise<operations.FindComputerManagementByMacAddressUsernameSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByMacAddressUsernameSubsetRequest(req);
@@ -731,7 +904,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -761,11 +939,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByMacAddressUsernameSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementByMacAddressUsernameSubset200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -787,7 +964,8 @@ export class Computermanagement {
      */
     async findComputerManagementByName(
         req: operations.FindComputerManagementByNameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByNameAcceptEnum
     ): Promise<operations.FindComputerManagementByNameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByNameRequest(req);
@@ -803,7 +981,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -833,9 +1016,9 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByName200ApplicationJSONObject = utils.objectToClass(
+                    res.computerManagement = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerManagementByName200ApplicationJSON
+                        shared.ComputerManagement
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -858,7 +1041,8 @@ export class Computermanagement {
      */
     async findComputerManagementByNamePatchFilter(
         req: operations.FindComputerManagementByNamePatchFilterRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByNamePatchFilterAcceptEnum
     ): Promise<operations.FindComputerManagementByNamePatchFilterResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByNamePatchFilterRequest(req);
@@ -878,7 +1062,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -908,11 +1097,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByNamePatchFilter200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementByNamePatchFilter200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -937,7 +1125,8 @@ export class Computermanagement {
      */
     async findComputerManagementByNameSubset(
         req: operations.FindComputerManagementByNameSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByNameSubsetAcceptEnum
     ): Promise<operations.FindComputerManagementByNameSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByNameSubsetRequest(req);
@@ -957,7 +1146,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -987,11 +1181,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByNameSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementByNameSubset200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1013,7 +1206,8 @@ export class Computermanagement {
      */
     async findComputerManagementByNameUsername(
         req: operations.FindComputerManagementByNameUsernameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByNameUsernameAcceptEnum
     ): Promise<operations.FindComputerManagementByNameUsernameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByNameUsernameRequest(req);
@@ -1033,7 +1227,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -1063,11 +1262,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByNameUsername200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementByNameUsername200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1092,7 +1290,8 @@ export class Computermanagement {
      */
     async findComputerManagementByNameUsernameSubset(
         req: operations.FindComputerManagementByNameUsernameSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByNameUsernameSubsetAcceptEnum
     ): Promise<operations.FindComputerManagementByNameUsernameSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByNameUsernameSubsetRequest(req);
@@ -1112,7 +1311,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -1142,11 +1346,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByNameUsernameSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementByNameUsernameSubset200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1168,7 +1371,8 @@ export class Computermanagement {
      */
     async findComputerManagementBySerialNumber(
         req: operations.FindComputerManagementBySerialNumberRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementBySerialNumberAcceptEnum
     ): Promise<operations.FindComputerManagementBySerialNumberResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementBySerialNumberRequest(req);
@@ -1188,7 +1392,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -1218,11 +1427,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementBySerialNumber200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementBySerialNumber200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1244,7 +1452,8 @@ export class Computermanagement {
      */
     async findComputerManagementBySerialNumberPatchFilter(
         req: operations.FindComputerManagementBySerialNumberPatchFilterRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementBySerialNumberPatchFilterAcceptEnum
     ): Promise<operations.FindComputerManagementBySerialNumberPatchFilterResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementBySerialNumberPatchFilterRequest(req);
@@ -1264,7 +1473,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -1294,11 +1508,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementBySerialNumberPatchFilter200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementBySerialNumberPatchFilter200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1323,7 +1536,8 @@ export class Computermanagement {
      */
     async findComputerManagementBySerialNumberSubset(
         req: operations.FindComputerManagementBySerialNumberSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementBySerialNumberSubsetAcceptEnum
     ): Promise<operations.FindComputerManagementBySerialNumberSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementBySerialNumberSubsetRequest(req);
@@ -1343,7 +1557,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -1373,11 +1592,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementBySerialNumberSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementBySerialNumberSubset200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1399,7 +1617,8 @@ export class Computermanagement {
      */
     async findComputerManagementBySerialNumberUsername(
         req: operations.FindComputerManagementBySerialNumberUsernameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementBySerialNumberUsernameAcceptEnum
     ): Promise<operations.FindComputerManagementBySerialNumberUsernameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementBySerialNumberUsernameRequest(req);
@@ -1419,7 +1638,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -1449,11 +1673,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementBySerialNumberUsername200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementBySerialNumberUsername200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1478,7 +1701,8 @@ export class Computermanagement {
      */
     async findComputerManagementBySerialNumberUsernameSubset(
         req: operations.FindComputerManagementBySerialNumberUsernameSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementBySerialNumberUsernameSubsetAcceptEnum
     ): Promise<operations.FindComputerManagementBySerialNumberUsernameSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementBySerialNumberUsernameSubsetRequest(req);
@@ -1498,7 +1722,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -1528,11 +1757,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementBySerialNumberUsernameSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementBySerialNumberUsernameSubset200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1554,7 +1782,8 @@ export class Computermanagement {
      */
     async findComputerManagementByUDID(
         req: operations.FindComputerManagementByUDIDRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByUDIDAcceptEnum
     ): Promise<operations.FindComputerManagementByUDIDResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByUDIDRequest(req);
@@ -1570,7 +1799,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -1600,9 +1834,9 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByUDID200ApplicationJSONObject = utils.objectToClass(
+                    res.computerManagement = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerManagementByUdid200ApplicationJSON
+                        shared.ComputerManagement
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -1628,7 +1862,8 @@ export class Computermanagement {
      */
     async findComputerManagementByUDIDSubset(
         req: operations.FindComputerManagementByUDIDSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByUDIDSubsetAcceptEnum
     ): Promise<operations.FindComputerManagementByUDIDSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByUDIDSubsetRequest(req);
@@ -1648,7 +1883,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -1678,11 +1918,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByUDIDSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementByUDIDSubset200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1704,7 +1943,8 @@ export class Computermanagement {
      */
     async findComputerManagementByUdidPatchFilter(
         req: operations.FindComputerManagementByUdidPatchFilterRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByUdidPatchFilterAcceptEnum
     ): Promise<operations.FindComputerManagementByUdidPatchFilterResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByUdidPatchFilterRequest(req);
@@ -1724,7 +1964,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -1754,11 +1999,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByUdidPatchFilter200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementByUdidPatchFilter200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1780,7 +2024,8 @@ export class Computermanagement {
      */
     async findComputerManagementByUdidUsername(
         req: operations.FindComputerManagementByUdidUsernameRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByUdidUsernameAcceptEnum
     ): Promise<operations.FindComputerManagementByUdidUsernameResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByUdidUsernameRequest(req);
@@ -1800,7 +2045,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -1830,11 +2080,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByUdidUsername200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementByUdidUsername200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -1859,7 +2108,8 @@ export class Computermanagement {
      */
     async findComputerManagementByUdidUsernameSubset(
         req: operations.FindComputerManagementByUdidUsernameSubsetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerManagementByUdidUsernameSubsetAcceptEnum
     ): Promise<operations.FindComputerManagementByUdidUsernameSubsetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerManagementByUdidUsernameSubsetRequest(req);
@@ -1879,7 +2129,12 @@ export class Computermanagement {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -1909,11 +2164,10 @@ export class Computermanagement {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerManagementByUdidUsernameSubset200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerManagementByUdidUsernameSubset200ApplicationJSON
-                        );
+                    res.computerManagement = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerManagement
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose } from "class-transformer";
 
 export class FindDockItemsByNameRequest extends SpeakeasyBase {
     /**
@@ -12,69 +12,6 @@ export class FindDockItemsByNameRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=name" })
     name: string;
-}
-
-export enum FindDockItemsByName200ApplicationXMLType {
-    App = "App",
-    File = "File",
-    Folder = "Folder",
-}
-
-/**
- * OK
- */
-export class FindDockItemsByName200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    contents?: string;
-
-    @SpeakeasyMetadata()
-    id?: number;
-
-    /**
-     * Name of the dock item
-     */
-    @SpeakeasyMetadata()
-    name: string;
-
-    @SpeakeasyMetadata()
-    path: string;
-
-    @SpeakeasyMetadata()
-    type: FindDockItemsByName200ApplicationXMLType;
-}
-
-export enum FindDockItemsByName200ApplicationJSONType {
-    App = "App",
-    File = "File",
-    Folder = "Folder",
-}
-
-/**
- * OK
- */
-export class FindDockItemsByName200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "contents" })
-    contents?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    /**
-     * Name of the dock item
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "path" })
-    path: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "type" })
-    type: FindDockItemsByName200ApplicationJSONType;
 }
 
 export class FindDockItemsByNameResponse extends SpeakeasyBase {
@@ -94,5 +31,5 @@ export class FindDockItemsByNameResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    findDockItemsByName200ApplicationJSONObject?: FindDockItemsByName200ApplicationJSON;
+    dockItem?: shared.DockItem;
 }
