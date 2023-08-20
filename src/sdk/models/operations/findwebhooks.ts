@@ -3,45 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindWebhooks200ApplicationXMLWebhook extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindWebhooks200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    size?: number;
-
-    @SpeakeasyMetadata()
-    webhook?: FindWebhooks200ApplicationXMLWebhook;
-}
-
-export class FindWebhooks200ApplicationJSONWebhook extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindWebhooks200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "webhook" })
-    @Type(() => FindWebhooks200ApplicationJSONWebhook)
-    webhook?: FindWebhooks200ApplicationJSONWebhook;
-}
 
 export class FindWebhooksResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -59,6 +22,6 @@ export class FindWebhooksResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindWebhooks200ApplicationJSON })
-    findWebhooks200ApplicationJSONObjects?: FindWebhooks200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.Webhooks })
+    webhooks?: shared.Webhooks[];
 }
