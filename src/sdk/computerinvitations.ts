@@ -5,8 +5,24 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindComputerInvitationsAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerInvitationsByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindComputerInvitationsByInvitationAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Computerinvitations {
     private sdkConfiguration: SDKConfiguration;
@@ -37,6 +53,7 @@ export class Computerinvitations {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "application/xml";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -106,6 +123,7 @@ export class Computerinvitations {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "application/xml";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -171,6 +189,7 @@ export class Computerinvitations {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -230,6 +249,7 @@ export class Computerinvitations {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -267,7 +287,8 @@ export class Computerinvitations {
      * Finds all computer invitations
      */
     async findComputerInvitations(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerInvitationsAcceptEnum
     ): Promise<operations.FindComputerInvitationsResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -279,7 +300,12 @@ export class Computerinvitations {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -309,11 +335,11 @@ export class Computerinvitations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerInvitations200ApplicationJSONObjects = [];
+                    res.computerInvitations = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findComputerInvitations200ApplicationJSONObjects = utils.objectToClass(
+                    res.computerInvitations = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerInvitations200ApplicationJSON,
+                        shared.ComputerInvitations,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -337,7 +363,8 @@ export class Computerinvitations {
      */
     async findComputerInvitationsById(
         req: operations.FindComputerInvitationsByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerInvitationsByIdAcceptEnum
     ): Promise<operations.FindComputerInvitationsByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerInvitationsByIdRequest(req);
@@ -353,7 +380,12 @@ export class Computerinvitations {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -383,9 +415,9 @@ export class Computerinvitations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerInvitationsById200ApplicationJSONObject = utils.objectToClass(
+                    res.computerInvitation = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindComputerInvitationsById200ApplicationJSON
+                        shared.ComputerInvitation
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
@@ -408,7 +440,8 @@ export class Computerinvitations {
      */
     async findComputerInvitationsByInvitation(
         req: operations.FindComputerInvitationsByInvitationRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindComputerInvitationsByInvitationAcceptEnum
     ): Promise<operations.FindComputerInvitationsByInvitationResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindComputerInvitationsByInvitationRequest(req);
@@ -428,7 +461,12 @@ export class Computerinvitations {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -458,11 +496,10 @@ export class Computerinvitations {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findComputerInvitationsByInvitation200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindComputerInvitationsByInvitation200ApplicationJSON
-                        );
+                    res.computerInvitation = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.ComputerInvitation
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

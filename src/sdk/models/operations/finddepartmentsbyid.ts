@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose } from "class-transformer";
 
 export class FindDepartmentsByIdRequest extends SpeakeasyBase {
     /**
@@ -12,36 +12,6 @@ export class FindDepartmentsByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
-}
-
-/**
- * OK
- */
-export class FindDepartmentsById200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    /**
-     * Name of the department
-     */
-    @SpeakeasyMetadata()
-    name: string;
-}
-
-/**
- * OK
- */
-export class FindDepartmentsById200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    /**
-     * Name of the department
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
 }
 
 export class FindDepartmentsByIdResponse extends SpeakeasyBase {
@@ -61,5 +31,5 @@ export class FindDepartmentsByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    findDepartmentsById200ApplicationJSONObject?: FindDepartmentsById200ApplicationJSON;
+    department?: shared.Department;
 }

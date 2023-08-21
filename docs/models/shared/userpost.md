@@ -1,0 +1,15 @@
+# UserPost
+
+
+## Fields
+
+| Field                                                   | Type                                                    | Required                                                | Description                                             | Example                                                 |
+| ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
+| `email`                                                 | *string*                                                | :heavy_minus_sign:                                      | N/A                                                     | aharrison@company.com                                   |
+| `emailAddress`                                          | *string*                                                | :heavy_minus_sign:                                      | N/A                                                     | aharrison@company.com                                   |
+| `fullName`                                              | *string*                                                | :heavy_minus_sign:                                      | N/A                                                     | Ashley Harrison                                         |
+| `id`                                                    | *number*                                                | :heavy_minus_sign:                                      | N/A                                                     |                                                         |
+| `name`                                                  | *string*                                                | :heavy_check_mark:                                      | Name of the user                                        | AHarrison                                               |
+| `phoneNumber`                                           | *string*                                                | :heavy_minus_sign:                                      | N/A                                                     | 123-555-6789                                            |
+| `position`                                              | *string*                                                | :heavy_minus_sign:                                      | N/A                                                     | Teachers                                                |
+| `sites`                                                 | [UserPostSites](../../models/shared/userpostsites.md)[] | :heavy_minus_sign:                                      | N/A                                                     |                                                         |

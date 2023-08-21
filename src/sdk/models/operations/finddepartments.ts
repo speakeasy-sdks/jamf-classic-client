@@ -3,51 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindDepartments200ApplicationXMLDepartment extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    /**
-     * Name of the department
-     */
-    @SpeakeasyMetadata()
-    name: string;
-}
-
-export class FindDepartments200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    department?: FindDepartments200ApplicationXMLDepartment;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindDepartments200ApplicationJSONDepartment extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    /**
-     * Name of the department
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-}
-
-export class FindDepartments200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "department" })
-    @Type(() => FindDepartments200ApplicationJSONDepartment)
-    department?: FindDepartments200ApplicationJSONDepartment;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindDepartmentsResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -65,6 +22,6 @@ export class FindDepartmentsResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindDepartments200ApplicationJSON })
-    findDepartments200ApplicationJSONObjects?: FindDepartments200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.Departments })
+    departments?: shared.Departments[];
 }

@@ -3,45 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindPackages200ApplicationXMLPackage extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindPackages200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    package?: FindPackages200ApplicationXMLPackage;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindPackages200ApplicationJSONPackage extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindPackages200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "package" })
-    @Type(() => FindPackages200ApplicationJSONPackage)
-    package?: FindPackages200ApplicationJSONPackage;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindPackagesResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -59,6 +22,6 @@ export class FindPackagesResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindPackages200ApplicationJSON })
-    findPackages200ApplicationJSONObjects?: FindPackages200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.Packages })
+    packages?: shared.Packages[];
 }

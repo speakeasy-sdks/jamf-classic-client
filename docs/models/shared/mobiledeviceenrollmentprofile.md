@@ -1,0 +1,13 @@
+# MobileDeviceEnrollmentProfile
+
+OK
+
+
+## Fields
+
+| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `attachments`                                                                                                 | [MobileDeviceEnrollmentProfileAttachments](../../models/shared/mobiledeviceenrollmentprofileattachments.md)[] | :heavy_minus_sign:                                                                                            | N/A                                                                                                           |
+| `general`                                                                                                     | [MobileDeviceEnrollmentProfileGeneral](../../models/shared/mobiledeviceenrollmentprofilegeneral.md)           | :heavy_minus_sign:                                                                                            | N/A                                                                                                           |
+| `location`                                                                                                    | [Location](../../models/shared/location.md)                                                                   | :heavy_minus_sign:                                                                                            | N/A                                                                                                           |
+| `purchasing`                                                                                                  | [Purchasing](../../models/shared/purchasing.md)                                                               | :heavy_minus_sign:                                                                                            | N/A                                                                                                           |
