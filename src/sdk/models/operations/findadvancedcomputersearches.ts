@@ -3,45 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindAdvancedComputerSearches200ApplicationXMLAdvancedComputerSearch extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindAdvancedComputerSearches200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    advancedComputerSearch?: FindAdvancedComputerSearches200ApplicationXMLAdvancedComputerSearch;
-
-    @SpeakeasyMetadata()
-    size?: number;
-}
-
-export class FindAdvancedComputerSearches200ApplicationJSONAdvancedComputerSearch extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindAdvancedComputerSearches200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "advanced_computer_search" })
-    @Type(() => FindAdvancedComputerSearches200ApplicationJSONAdvancedComputerSearch)
-    advancedComputerSearch?: FindAdvancedComputerSearches200ApplicationJSONAdvancedComputerSearch;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
 
 export class FindAdvancedComputerSearchesResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -59,6 +22,6 @@ export class FindAdvancedComputerSearchesResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindAdvancedComputerSearches200ApplicationJSON })
-    findAdvancedComputerSearches200ApplicationJSONObjects?: FindAdvancedComputerSearches200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.AdvancedComputerSearches })
+    advancedComputerSearches?: shared.AdvancedComputerSearches[];
 }

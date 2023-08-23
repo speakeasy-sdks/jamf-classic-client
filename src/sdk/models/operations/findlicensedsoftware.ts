@@ -3,44 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
-
-export class FindLicensedSoftware200ApplicationXMLLicensedSoftware extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    id?: number;
-
-    /**
-     * Name of the licensed software
-     */
-    @SpeakeasyMetadata()
-    name?: string;
-}
-
-export class FindLicensedSoftware200ApplicationXML extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    licensedSoftware?: FindLicensedSoftware200ApplicationXMLLicensedSoftware;
-}
-
-export class FindLicensedSoftware200ApplicationJSONLicensedSoftware extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    /**
-     * Name of the licensed software
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindLicensedSoftware200ApplicationJSON extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "licensed_software" })
-    @Type(() => FindLicensedSoftware200ApplicationJSONLicensedSoftware)
-    licensedSoftware?: FindLicensedSoftware200ApplicationJSONLicensedSoftware;
-}
 
 export class FindLicensedSoftwareResponse extends SpeakeasyBase {
     @SpeakeasyMetadata()
@@ -58,6 +22,6 @@ export class FindLicensedSoftwareResponse extends SpeakeasyBase {
     /**
      * OK
      */
-    @SpeakeasyMetadata({ elemType: FindLicensedSoftware200ApplicationJSON })
-    findLicensedSoftware200ApplicationJSONObjects?: FindLicensedSoftware200ApplicationJSON[];
+    @SpeakeasyMetadata({ elemType: shared.LicensedSoftwareAll })
+    licensedSoftwareAll?: shared.LicensedSoftwareAll[];
 }
