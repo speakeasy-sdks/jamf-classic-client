@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
+import * as shared from "../shared";
 import { AxiosResponse } from "axios";
-import { Expose, Type } from "class-transformer";
 
 export class FindAdvancedUserSearchesByIdRequest extends SpeakeasyBase {
     /**
@@ -12,155 +12,6 @@ export class FindAdvancedUserSearchesByIdRequest extends SpeakeasyBase {
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=id" })
     id: number;
-}
-
-export enum FindAdvancedUserSearchesByIdAdvancedUserSearchCriteriaCriterionAndOr {
-    And = "and",
-    Or = "or",
-}
-
-export class FindAdvancedUserSearchesByIdAdvancedUserSearchCriteriaCriterion extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "and_or" })
-    andOr?: FindAdvancedUserSearchesByIdAdvancedUserSearchCriteriaCriterionAndOr;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "closing_paren" })
-    closingParen?: boolean;
-
-    /**
-     * Name of the criteria
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "opening_paren" })
-    openingParen?: boolean;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "priority" })
-    priority?: number;
-
-    /**
-     * Operator
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "search_type" })
-    searchType?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "value" })
-    value?: string;
-}
-
-export class FindAdvancedUserSearchesByIdAdvancedUserSearchCriteria extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "criterion" })
-    @Type(() => FindAdvancedUserSearchesByIdAdvancedUserSearchCriteriaCriterion)
-    criterion?: FindAdvancedUserSearchesByIdAdvancedUserSearchCriteriaCriterion;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
-
-export class FindAdvancedUserSearchesByIdAdvancedUserSearchDisplayFieldsDisplayField extends SpeakeasyBase {
-    /**
-     * Name of the display field
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindAdvancedUserSearchesByIdAdvancedUserSearchDisplayFields extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "display_field" })
-    @Type(() => FindAdvancedUserSearchesByIdAdvancedUserSearchDisplayFieldsDisplayField)
-    displayField?: FindAdvancedUserSearchesByIdAdvancedUserSearchDisplayFieldsDisplayField;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-}
-
-export class FindAdvancedUserSearchesByIdAdvancedUserSearchSite extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    /**
-     * Name of the site
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-}
-
-export class FindAdvancedUserSearchesByIdAdvancedUserSearchUsersUser extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "Username" })
-    username?: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    /**
-     * Name of the user
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name?: string;
-}
-
-export class FindAdvancedUserSearchesByIdAdvancedUserSearchUsers extends SpeakeasyBase {
-    @SpeakeasyMetadata()
-    @Expose({ name: "size" })
-    size?: number;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "user" })
-    @Type(() => FindAdvancedUserSearchesByIdAdvancedUserSearchUsersUser)
-    user?: FindAdvancedUserSearchesByIdAdvancedUserSearchUsersUser;
-}
-
-/**
- * OK
- */
-export class FindAdvancedUserSearchesByIdAdvancedUserSearch extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: FindAdvancedUserSearchesByIdAdvancedUserSearchCriteria })
-    @Expose({ name: "criteria" })
-    @Type(() => FindAdvancedUserSearchesByIdAdvancedUserSearchCriteria)
-    criteria?: FindAdvancedUserSearchesByIdAdvancedUserSearchCriteria[];
-
-    @SpeakeasyMetadata({ elemType: FindAdvancedUserSearchesByIdAdvancedUserSearchDisplayFields })
-    @Expose({ name: "display_fields" })
-    @Type(() => FindAdvancedUserSearchesByIdAdvancedUserSearchDisplayFields)
-    displayFields?: FindAdvancedUserSearchesByIdAdvancedUserSearchDisplayFields[];
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "id" })
-    id?: number;
-
-    /**
-     * Name of the advanced user search
-     */
-    @SpeakeasyMetadata()
-    @Expose({ name: "name" })
-    name: string;
-
-    @SpeakeasyMetadata()
-    @Expose({ name: "site" })
-    @Type(() => FindAdvancedUserSearchesByIdAdvancedUserSearchSite)
-    site?: FindAdvancedUserSearchesByIdAdvancedUserSearchSite;
-
-    @SpeakeasyMetadata({ elemType: FindAdvancedUserSearchesByIdAdvancedUserSearchUsers })
-    @Expose({ name: "users" })
-    @Type(() => FindAdvancedUserSearchesByIdAdvancedUserSearchUsers)
-    users?: FindAdvancedUserSearchesByIdAdvancedUserSearchUsers[];
 }
 
 export class FindAdvancedUserSearchesByIdResponse extends SpeakeasyBase {
@@ -180,5 +31,5 @@ export class FindAdvancedUserSearchesByIdResponse extends SpeakeasyBase {
      * OK
      */
     @SpeakeasyMetadata()
-    advancedUserSearch?: FindAdvancedUserSearchesByIdAdvancedUserSearch;
+    advancedUserSearch?: shared.AdvancedUserSearch;
 }

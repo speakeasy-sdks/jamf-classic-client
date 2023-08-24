@@ -5,8 +5,19 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum PatchreportsPatchsoftwaretitleidByIdGetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Patchreports {
     private sdkConfiguration: SDKConfiguration;
@@ -18,11 +29,12 @@ export class Patchreports {
     /**
      * Finds patch reports by patch software title ID. (Deprecated) Please transition use to Jamf Pro API endpoint "/v2/patch-software-title-configurations/{id}/patch-report".
      *
-     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     async patchreportsPatchsoftwaretitleidByIdGet(
         req: operations.PatchreportsPatchsoftwaretitleidByIdGetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: PatchreportsPatchsoftwaretitleidByIdGetAcceptEnum
     ): Promise<operations.PatchreportsPatchsoftwaretitleidByIdGetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.PatchreportsPatchsoftwaretitleidByIdGetRequest(req);
@@ -42,7 +54,12 @@ export class Patchreports {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -72,11 +89,10 @@ export class Patchreports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.patchreportsPatchsoftwaretitleidByIdGet200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.PatchreportsPatchsoftwaretitleidByIdGet200ApplicationJSON
-                        );
+                    res.patchReport = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.PatchReport
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -96,11 +112,12 @@ export class Patchreports {
     /**
      * Display computers for a specific version of a patch report. (Deprecated) Please transition use to Jamf Pro API endpoint "/v2/patch-software-title-configurations/{id}/patch-report".
      *
-     * @deprecated this method will be removed in a future release, please migrate away from it as soon as possible
+     * @deprecated method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     async patchreportsPatchsoftwaretitleidVersionByIdAndVersionGet(
         req: operations.PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetAcceptEnum
     ): Promise<operations.PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetRequest(
@@ -122,7 +139,12 @@ export class Patchreports {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -152,11 +174,10 @@ export class Patchreports {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.patchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGet200ApplicationJSON
-                        );
+                    res.patchReport = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.PatchReport
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
