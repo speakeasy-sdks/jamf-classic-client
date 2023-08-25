@@ -5,8 +5,19 @@
 import * as utils from "../internal/utils";
 import * as errors from "./models/errors";
 import * as operations from "./models/operations";
+import * as shared from "./models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+
+export enum FindHealthcareListenerRuleAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
+
+export enum FindHealthcareListenerRulesByIdAcceptEnum {
+    applicationJson = "application/json",
+    applicationXml = "application/xml",
+}
 
 export class Healthcarelistenerrule {
     private sdkConfiguration: SDKConfiguration;
@@ -37,6 +48,7 @@ export class Healthcarelistenerrule {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -74,7 +86,8 @@ export class Healthcarelistenerrule {
      * Find all Healthcare Listener rules
      */
     async findHealthcareListenerRule(
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindHealthcareListenerRuleAcceptEnum
     ): Promise<operations.FindHealthcareListenerRuleResponse> {
         const baseURL: string = utils.templateUrl(
             this.sdkConfiguration.serverURL,
@@ -86,7 +99,12 @@ export class Healthcarelistenerrule {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -116,11 +134,11 @@ export class Healthcarelistenerrule {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findHealthcareListenerRule200ApplicationJSONObjects = [];
+                    res.healthcareListenerRules = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.findHealthcareListenerRule200ApplicationJSONObjects = utils.objectToClass(
+                    res.healthcareListenerRules = utils.objectToClass(
                         JSON.parse(decodedRes),
-                        operations.FindHealthcareListenerRule200ApplicationJSON,
+                        shared.HealthcareListenerRules1,
                         resFieldDepth
                     );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
@@ -144,7 +162,8 @@ export class Healthcarelistenerrule {
      */
     async findHealthcareListenerRulesById(
         req: operations.FindHealthcareListenerRulesByIdRequest,
-        config?: AxiosRequestConfig
+        config?: AxiosRequestConfig,
+        acceptHeaderOverride?: FindHealthcareListenerRulesByIdAcceptEnum
     ): Promise<operations.FindHealthcareListenerRulesByIdResponse> {
         if (!(req instanceof utils.SpeakeasyBase)) {
             req = new operations.FindHealthcareListenerRulesByIdRequest(req);
@@ -160,7 +179,12 @@ export class Healthcarelistenerrule {
             this.sdkConfiguration.securityClient || this.sdkConfiguration.defaultClient;
 
         const headers = { ...config?.headers };
-        headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        if (acceptHeaderOverride !== undefined) {
+            headers["Accept"] = acceptHeaderOverride.toString();
+        } else {
+            headers["Accept"] = "application/json;q=1, application/xml;q=0";
+        }
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;
@@ -190,11 +214,10 @@ export class Healthcarelistenerrule {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.findHealthcareListenerRulesById200ApplicationJSONObject =
-                        utils.objectToClass(
-                            JSON.parse(decodedRes),
-                            operations.FindHealthcareListenerRulesById200ApplicationJSON
-                        );
+                    res.healthcareListenerRule = utils.objectToClass(
+                        JSON.parse(decodedRes),
+                        shared.HealthcareListenerRule
+                    );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
@@ -233,6 +256,7 @@ export class Healthcarelistenerrule {
 
         const headers = { ...config?.headers };
         headers["Accept"] = "*/*";
+
         headers[
             "user-agent"
         ] = `speakeasy-sdk/${this.sdkConfiguration.language} ${this.sdkConfiguration.sdkVersion} ${this.sdkConfiguration.genVersion} ${this.sdkConfiguration.openapiDocVersion}`;

@@ -91,7 +91,7 @@ import { AxiosInstance } from "axios";
 /**
  * Contains the list of servers available to the SDK
  */
-export const ServerList = ["https://yourServer.jamfcloud.com/JSSResource"] as const;
+export const ServerList = ["https://subdomain-goes-here.jamfcloud.com/JSSResource"] as const;
 
 /**
  * The available configuration options for the SDK
@@ -124,8 +124,8 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "10.48.0";
-    sdkVersion = "1.1.2";
-    genVersion = "2.70.2";
+    sdkVersion = "1.2.0";
+    genVersion = "2.87.1";
 
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);
