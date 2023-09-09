@@ -1,7 +1,5 @@
 # GsxConnection
 
-OK
-
 
 ## Fields
 

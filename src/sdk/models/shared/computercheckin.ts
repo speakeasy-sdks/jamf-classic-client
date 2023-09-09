@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * OK
- */
 export class ComputerCheckIn extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "apply_computer_level_managed_preferences" })

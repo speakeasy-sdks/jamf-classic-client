@@ -180,9 +180,6 @@ export class ComputerHardwareSoftwareReportsSoftwareReport extends SpeakeasyBase
     version?: string;
 }
 
-/**
- * OK
- */
 export class ComputerHardwareSoftwareReports extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "font_report" })

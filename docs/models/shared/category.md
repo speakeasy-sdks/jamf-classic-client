@@ -1,7 +1,5 @@
 # Category
 
-OK
-
 
 ## Fields
 

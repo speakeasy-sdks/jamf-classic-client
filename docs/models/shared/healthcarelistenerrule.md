@@ -1,7 +1,5 @@
 # HealthcareListenerRule
 
-OK
-
 
 ## Fields
 

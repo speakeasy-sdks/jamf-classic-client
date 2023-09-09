@@ -383,9 +383,6 @@ export class PatchPolicyUserInteraction extends SpeakeasyBase {
     selfServiceIcon?: PatchPolicyUserInteractionSelfServiceIcon;
 }
 
-/**
- * OK
- */
 export class PatchPolicy extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "general" })

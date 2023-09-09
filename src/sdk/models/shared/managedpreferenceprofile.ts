@@ -23,9 +23,6 @@ export class ManagedPreferenceProfileGeneral extends SpeakeasyBase {
     plist?: string;
 }
 
-/**
- * OK
- */
 export class ManagedPreferenceProfile extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "general" })

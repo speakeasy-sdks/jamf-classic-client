@@ -1,7 +1,5 @@
 # ComputerInventoryCollection
 
-OK
-
 
 ## Fields
 

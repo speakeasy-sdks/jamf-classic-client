@@ -1,7 +1,5 @@
 # ComputerHistory
 
-OK
-
 
 ## Fields
 

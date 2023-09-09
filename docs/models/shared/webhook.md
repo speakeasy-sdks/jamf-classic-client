@@ -1,7 +1,5 @@
 # Webhook
 
-OK
-
 
 ## Fields
 

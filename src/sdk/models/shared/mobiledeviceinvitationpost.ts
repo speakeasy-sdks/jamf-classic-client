@@ -16,9 +16,6 @@ export class MobileDeviceInvitationPostEnrolledIntoSite extends SpeakeasyBase {
     name?: string;
 }
 
-/**
- * Created
- */
 export class MobileDeviceInvitationPost extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "allow_multiple_uses" })

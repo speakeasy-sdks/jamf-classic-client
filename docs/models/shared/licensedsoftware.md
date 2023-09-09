@@ -1,7 +1,5 @@
 # LicensedSoftware
 
-OK
-
 
 ## Fields
 

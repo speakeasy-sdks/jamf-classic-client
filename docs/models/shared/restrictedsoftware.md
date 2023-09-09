@@ -1,7 +1,5 @@
 # RestrictedSoftware
 
-OK
-
 
 ## Fields
 

@@ -16,9 +16,6 @@ export class MobileDeviceInvitationEnrolledIntoSite extends SpeakeasyBase {
     name?: string;
 }
 
-/**
- * OK
- */
 export class MobileDeviceInvitation extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "date_sent" })

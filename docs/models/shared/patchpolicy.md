@@ -1,7 +1,5 @@
 # PatchPolicy
 
-OK
-
 
 ## Fields
 

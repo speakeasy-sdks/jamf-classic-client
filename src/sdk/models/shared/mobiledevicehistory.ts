@@ -398,9 +398,6 @@ export class MobileDeviceHistoryUserLocation extends SpeakeasyBase {
     location?: MobileDeviceHistoryUserLocationLocation;
 }
 
-/**
- * OK
- */
 export class MobileDeviceHistory extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "applications" })

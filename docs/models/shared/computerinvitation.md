@@ -1,7 +1,5 @@
 # ComputerInvitation
 
-OK
-
 
 ## Fields
 

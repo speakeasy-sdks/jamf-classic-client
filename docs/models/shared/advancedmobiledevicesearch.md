@@ -1,7 +1,5 @@
 # AdvancedMobileDeviceSearch
 
-OK
-
 
 ## Fields
 

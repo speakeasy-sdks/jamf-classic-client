@@ -1,7 +1,5 @@
 # MobileDeviceProvisioningProfile
 
-OK
-
 
 ## Fields
 

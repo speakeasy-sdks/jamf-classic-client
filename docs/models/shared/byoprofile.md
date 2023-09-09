@@ -1,7 +1,5 @@
 # Byoprofile
 
-OK
-
 
 ## Fields
 

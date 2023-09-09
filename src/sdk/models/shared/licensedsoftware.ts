@@ -193,9 +193,6 @@ export class LicensedSoftwareSoftwareDefinitions extends SpeakeasyBase {
     definition?: LicensedSoftwareDefintion;
 }
 
-/**
- * OK
- */
 export class LicensedSoftware extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: LicensedSoftwareFontDefinitions })
     @Expose({ name: "font_definitions" })

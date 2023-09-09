@@ -1,7 +1,5 @@
 # ComputerHardwareSoftwareReports
 
-OK
-
 
 ## Fields
 

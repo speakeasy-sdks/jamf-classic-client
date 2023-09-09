@@ -1,7 +1,5 @@
 # UserExtensionAttribute
 
-OK
-
 
 ## Fields
 

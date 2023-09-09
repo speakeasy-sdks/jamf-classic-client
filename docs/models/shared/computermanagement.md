@@ -1,7 +1,5 @@
 # ComputerManagement
 
-OK
-
 
 ## Fields
 

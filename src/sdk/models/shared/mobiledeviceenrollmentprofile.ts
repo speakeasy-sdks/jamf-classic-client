@@ -40,9 +40,6 @@ export class MobileDeviceEnrollmentProfileGeneral extends SpeakeasyBase {
     udid?: string;
 }
 
-/**
- * OK
- */
 export class MobileDeviceEnrollmentProfile extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: MobileDeviceEnrollmentProfileAttachments })
     @Expose({ name: "attachments" })

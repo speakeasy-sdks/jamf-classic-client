@@ -1,7 +1,5 @@
 # MobileDeviceInvitation
 
-OK
-
 
 ## Fields
 

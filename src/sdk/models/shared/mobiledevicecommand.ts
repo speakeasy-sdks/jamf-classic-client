@@ -80,9 +80,6 @@ export class MobileDeviceCommandMobileDevices extends SpeakeasyBase {
     size?: number;
 }
 
-/**
- * OK
- */
 export class MobileDeviceCommand extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "general" })

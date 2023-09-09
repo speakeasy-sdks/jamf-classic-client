@@ -1,7 +1,5 @@
 # DiskEncryptionConfiguration
 
-OK
-
 
 ## Fields
 

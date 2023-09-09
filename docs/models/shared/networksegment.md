@@ -1,7 +1,5 @@
 # NetworkSegment
 
-OK
-
 
 ## Fields
 

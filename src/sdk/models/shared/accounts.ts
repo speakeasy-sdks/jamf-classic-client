@@ -45,9 +45,6 @@ export class AccountsUsers extends SpeakeasyBase {
     user?: AccountsUsersUser[];
 }
 
-/**
- * OK
- */
 export class Accounts extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "groups" })

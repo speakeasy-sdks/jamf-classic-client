@@ -12,9 +12,6 @@ export enum GsxConnectionRegion {
     LatinAmerica = "LatinAmerica",
 }
 
-/**
- * OK
- */
 export class GsxConnection extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "account_number" })

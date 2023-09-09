@@ -1,7 +1,5 @@
 # SoftwareTitle
 
-OK
-
 
 ## Fields
 

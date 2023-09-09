@@ -1,7 +1,5 @@
 # ComputerApplications
 
-OK
-
 
 ## Fields
 

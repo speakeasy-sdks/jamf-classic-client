@@ -1,7 +1,5 @@
 # ComputerExtensionAttribute
 
-OK
-
 
 ## Fields
 

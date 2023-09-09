@@ -21,9 +21,6 @@ export class ComputerApplicationsVersions extends SpeakeasyBase {
     version?: ComputerApplicationsVersion[][];
 }
 
-/**
- * OK
- */
 export class ComputerApplications extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "unique_computers" })

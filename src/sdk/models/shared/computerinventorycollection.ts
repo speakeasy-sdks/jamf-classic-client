@@ -71,9 +71,6 @@ export class ComputerInventoryCollectionPlugins extends SpeakeasyBase {
     plugin?: ComputerInventoryCollectionPluginsPlugin;
 }
 
-/**
- * OK
- */
 export class ComputerInventoryCollection extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "active_services" })

@@ -32,9 +32,6 @@ export class ByoprofileGeneral extends SpeakeasyBase {
     site?: SiteObject;
 }
 
-/**
- * OK
- */
 export class Byoprofile extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "general" })

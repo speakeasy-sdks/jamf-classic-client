@@ -31,9 +31,6 @@ export enum MobileDeviceExtensionAttributeInventoryDisplay {
     ExtensionAttributes = "Extension Attributes",
 }
 
-/**
- * OK
- */
 export class MobileDeviceExtensionAttribute extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "date_type" })

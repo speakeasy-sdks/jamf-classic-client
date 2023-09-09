@@ -106,9 +106,6 @@ export class AdvancedUserSearchUsers extends SpeakeasyBase {
     user?: AdvancedUserSearchUsersUser;
 }
 
-/**
- * OK
- */
 export class AdvancedUserSearch extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: AdvancedUserSearchCriteria })
     @Expose({ name: "criteria" })

@@ -1,7 +1,5 @@
 # LdapServer
 
-OK
-
 
 ## Fields
 

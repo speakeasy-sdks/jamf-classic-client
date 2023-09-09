@@ -1,7 +1,5 @@
 # Building
 
-OK
-
 
 ## Fields
 

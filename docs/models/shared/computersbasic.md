@@ -1,7 +1,5 @@
 # ComputersBasic
 
-OK
-
 
 ## Fields
 

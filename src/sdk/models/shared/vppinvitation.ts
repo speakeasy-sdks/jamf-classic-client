@@ -196,9 +196,6 @@ export class VppInvitationScope extends SpeakeasyBase {
     limitations?: VppInvitationScopeLimitations;
 }
 
-/**
- * OK
- */
 export class VppInvitation extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "general" })

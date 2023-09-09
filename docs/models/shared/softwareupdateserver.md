@@ -1,7 +1,5 @@
 # SoftwareUpdateServer
 
-OK
-
 
 ## Fields
 

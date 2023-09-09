@@ -129,9 +129,6 @@ export class ComputerManagementStaticGroups extends SpeakeasyBase {
     group?: IdName;
 }
 
-/**
- * OK
- */
 export class ComputerManagement extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: ComputerManagementEbooks })
     @Expose({ name: "ebooks" })

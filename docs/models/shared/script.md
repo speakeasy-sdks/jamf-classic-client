@@ -1,7 +1,5 @@
 # Script
 
-OK
-
 
 ## Fields
 

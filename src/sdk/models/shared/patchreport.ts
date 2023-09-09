@@ -44,9 +44,6 @@ export class PatchReportVersions extends SpeakeasyBase {
     version?: PatchReportVersionsVersion;
 }
 
-/**
- * OK
- */
 export class PatchReport extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })

@@ -58,9 +58,6 @@ export class ComputersBasicComputer extends SpeakeasyBase {
     username?: string;
 }
 
-/**
- * OK
- */
 export class ComputersBasic extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })

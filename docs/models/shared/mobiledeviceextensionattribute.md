@@ -1,7 +1,5 @@
 # MobileDeviceExtensionAttribute
 
-OK
-
 
 ## Fields
 

@@ -1,7 +1,5 @@
 # AllowedFileExtension
 
-OK
-
 
 ## Fields
 

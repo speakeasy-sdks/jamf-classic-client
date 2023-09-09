@@ -1,7 +1,5 @@
 # AdvancedUserSearch
 
-OK
-
 
 ## Fields
 

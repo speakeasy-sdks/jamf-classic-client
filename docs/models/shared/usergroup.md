@@ -1,7 +1,5 @@
 # UserGroup
 
-OK
-
 
 ## Fields
 

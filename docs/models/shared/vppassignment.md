@@ -1,7 +1,5 @@
 # VppAssignment
 
-OK
-
 
 ## Fields
 

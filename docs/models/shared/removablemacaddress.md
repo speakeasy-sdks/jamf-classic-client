@@ -1,7 +1,5 @@
 # RemovableMacAddress
 
-OK
-
 
 ## Fields
 

@@ -173,9 +173,6 @@ export class VppAssignmentScope extends SpeakeasyBase {
     limitations?: VppAssignmentScopeLimitations;
 }
 
-/**
- * OK
- */
 export class VppAssignment extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: VppAssignmentEbooks })
     @Expose({ name: "ebooks" })

@@ -1,7 +1,5 @@
 # Department
 
-OK
-
 
 ## Fields
 

@@ -82,9 +82,6 @@ export class SoftwareTitleVersions extends SpeakeasyBase {
     version?: SoftwareTitleVersionsVersion;
 }
 
-/**
- * OK
- */
 export class SoftwareTitle extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "category" })

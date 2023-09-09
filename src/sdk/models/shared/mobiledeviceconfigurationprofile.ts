@@ -463,9 +463,6 @@ export class MobileDeviceConfigurationProfileSelfService extends SpeakeasyBase {
     selfServiceIcon?: MobileDeviceConfigurationProfileSelfServiceSelfServiceIcon;
 }
 
-/**
- * OK
- */
 export class MobileDeviceConfigurationProfile extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "general" })

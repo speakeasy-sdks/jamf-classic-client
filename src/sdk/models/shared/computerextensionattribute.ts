@@ -36,9 +36,6 @@ export enum ComputerExtensionAttributeInventoryDisplay {
     ExtensionAttributes = "Extension Attributes",
 }
 
-/**
- * OK
- */
 export class ComputerExtensionAttribute extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "data_type" })

@@ -438,9 +438,6 @@ export class MacApplicationSelfService extends SpeakeasyBase {
     vpp?: MacApplicationSelfServiceVpp;
 }
 
-/**
- * OK
- */
 export class MacApplication extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "general" })

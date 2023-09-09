@@ -1,7 +1,5 @@
 # MacApplication
 
-OK
-
 
 ## Fields
 

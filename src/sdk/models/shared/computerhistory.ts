@@ -513,9 +513,6 @@ export class ComputerHistoryUserLocation extends SpeakeasyBase {
     location?: ComputerHistoryUserLocationLocation;
 }
 
-/**
- * OK
- */
 export class ComputerHistory extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: ComputerHistoryAudits })
     @Expose({ name: "audits" })

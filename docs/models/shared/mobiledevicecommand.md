@@ -1,7 +1,5 @@
 # MobileDeviceCommand
 
-OK
-
 
 ## Fields
 

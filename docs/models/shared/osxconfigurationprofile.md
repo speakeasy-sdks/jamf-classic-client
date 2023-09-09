@@ -1,7 +1,5 @@
 # OsXConfigurationProfile
 
-OK
-
 
 ## Fields
 

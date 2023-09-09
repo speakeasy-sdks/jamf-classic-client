@@ -106,9 +106,6 @@ export class GroupPrivileges extends SpeakeasyBase {
     recon?: GroupPrivilegesRecon[];
 }
 
-/**
- * OK
- */
 export class Group extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "access_level" })

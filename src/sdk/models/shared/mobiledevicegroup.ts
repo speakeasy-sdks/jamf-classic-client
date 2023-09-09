@@ -54,9 +54,6 @@ export class MobileDeviceGroupMobileDevices extends SpeakeasyBase {
     mobileDevice?: MobileDeviceGroupMobileDevicesMobileDevice;
 }
 
-/**
- * OK
- */
 export class MobileDeviceGroup extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: MobileDeviceGroupCriteria })
     @Expose({ name: "criteria" })

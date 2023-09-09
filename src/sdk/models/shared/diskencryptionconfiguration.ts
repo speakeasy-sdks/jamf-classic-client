@@ -16,9 +16,6 @@ export enum DiskEncryptionConfigurationKeyType {
     IndividualAndInstitutional = "Individual And Institutional",
 }
 
-/**
- * OK
- */
 export class DiskEncryptionConfiguration extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "file_vault_enabled_users" })

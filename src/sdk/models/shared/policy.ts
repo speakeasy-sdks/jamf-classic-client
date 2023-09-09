@@ -1034,9 +1034,6 @@ export class PolicyUserInteraction extends SpeakeasyBase {
     messageStart?: string;
 }
 
-/**
- * OK
- */
 export class Policy extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "account_maintenance" })

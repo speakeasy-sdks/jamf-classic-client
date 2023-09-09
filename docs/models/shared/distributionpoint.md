@@ -1,7 +1,5 @@
 # DistributionPoint
 
-OK
-
 
 ## Fields
 

@@ -1,7 +1,5 @@
 # MobileDeviceEnrollmentProfile
 
-OK
-
 
 ## Fields
 

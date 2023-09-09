@@ -1,7 +1,5 @@
 # PatchExternalSource
 
-OK
-
 
 ## Fields
 

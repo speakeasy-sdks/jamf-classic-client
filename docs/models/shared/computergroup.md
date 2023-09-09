@@ -1,7 +1,5 @@
 # ComputerGroup
 
-OK
-
 
 ## Fields
 

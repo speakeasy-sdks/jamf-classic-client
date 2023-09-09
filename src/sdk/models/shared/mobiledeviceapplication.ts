@@ -553,9 +553,6 @@ export class MobileDeviceApplicationVpp extends SpeakeasyBase {
     vppAdminAccountId?: number;
 }
 
-/**
- * OK
- */
 export class MobileDeviceApplication extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "app_configuration" })

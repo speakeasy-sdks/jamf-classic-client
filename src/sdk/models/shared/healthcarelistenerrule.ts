@@ -24,9 +24,6 @@ export enum HealthcareListenerRuleOperatingSystem {
     Tv = "TV",
 }
 
-/**
- * OK
- */
 export class HealthcareListenerRule extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "adt_message" })

@@ -170,9 +170,6 @@ export class RestrictedSoftwareScope extends SpeakeasyBase {
     exclusions?: RestrictedSoftwareScopeExclusions;
 }
 
-/**
- * OK
- */
 export class RestrictedSoftware extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "general" })

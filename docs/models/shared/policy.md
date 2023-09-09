@@ -1,7 +1,5 @@
 # Policy
 
-OK
-
 
 ## Fields
 

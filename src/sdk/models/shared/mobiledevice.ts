@@ -499,9 +499,6 @@ export class MobileDeviceSecurityObject extends SpeakeasyBase {
     passcodePresent?: boolean;
 }
 
-/**
- * OK
- */
 export class MobileDevice extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: MobileDeviceApplications1 })
     @Expose({ name: "applications" })

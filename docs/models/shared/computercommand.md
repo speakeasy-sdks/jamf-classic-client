@@ -1,7 +1,5 @@
 # ComputerCommand
 
-OK
-
 
 ## Fields
 

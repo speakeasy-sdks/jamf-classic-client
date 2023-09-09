@@ -6,9 +6,6 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { SiteObject } from "./siteobject";
 import { Expose, Type } from "class-transformer";
 
-/**
- * OK
- */
 export class VppAccount extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "account_name" })

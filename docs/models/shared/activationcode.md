@@ -1,7 +1,5 @@
 # ActivationCode
 
-OK
-
 
 ## Fields
 

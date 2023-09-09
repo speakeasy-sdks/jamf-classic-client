@@ -42,9 +42,6 @@ export class PeripheralTypeFields extends SpeakeasyBase {
     field?: PeripheralTypeFieldsField;
 }
 
-/**
- * OK
- */
 export class PeripheralType extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: PeripheralTypeFields })
     @Expose({ name: "fields" })

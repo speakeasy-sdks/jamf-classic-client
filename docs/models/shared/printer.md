@@ -1,7 +1,5 @@
 # Printer
 
-OK
-
 
 ## Fields
 

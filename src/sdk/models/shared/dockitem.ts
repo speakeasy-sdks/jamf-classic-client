@@ -11,9 +11,6 @@ export enum DockItemType {
     Folder = "Folder",
 }
 
-/**
- * OK
- */
 export class DockItem extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "contents" })

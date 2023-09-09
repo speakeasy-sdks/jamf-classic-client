@@ -15,9 +15,6 @@ export enum DistributionPointProtocol {
     Https = "https",
 }
 
-/**
- * OK
- */
 export class DistributionPoint extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "connection_type" })

@@ -1,7 +1,5 @@
 # MobileDeviceConfigurationProfile
 
-OK
-
 
 ## Fields
 

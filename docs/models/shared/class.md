@@ -1,7 +1,5 @@
 # Class
 
-OK
-
 
 ## Fields
 

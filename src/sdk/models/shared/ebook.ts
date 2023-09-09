@@ -584,9 +584,6 @@ export class EbookSelfService extends SpeakeasyBase {
     selfServiceIcon?: EbookSelfServiceSelfServiceIcon;
 }
 
-/**
- * OK
- */
 export class Ebook extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "general" })

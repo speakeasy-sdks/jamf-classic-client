@@ -1,7 +1,5 @@
 # PatchInternalSource
 
-OK
-
 
 ## Fields
 

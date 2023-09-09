@@ -1,7 +1,5 @@
 # PatchReport
 
-OK
-
 
 ## Fields
 

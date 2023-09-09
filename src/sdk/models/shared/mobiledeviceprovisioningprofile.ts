@@ -23,9 +23,6 @@ export class MobileDeviceProvisioningProfileGeneral extends SpeakeasyBase {
     uuid?: string;
 }
 
-/**
- * OK
- */
 export class MobileDeviceProvisioningProfile extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "general" })

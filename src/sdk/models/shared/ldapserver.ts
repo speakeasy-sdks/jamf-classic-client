@@ -299,9 +299,6 @@ export class LdapServerMappingsForUsers extends SpeakeasyBase {
     userMappings?: LdapServerMappingsForUsersUserMappings;
 }
 
-/**
- * OK
- */
 export class LdapServer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "connection" })

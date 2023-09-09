@@ -911,9 +911,6 @@ export class ComputerSoftware extends SpeakeasyBase {
     unixExecutables?: string;
 }
 
-/**
- * OK
- */
 export class Computer extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: ComputerCertificates })
     @Expose({ name: "certificates" })

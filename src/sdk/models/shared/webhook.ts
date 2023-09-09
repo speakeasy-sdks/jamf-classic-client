@@ -56,9 +56,6 @@ export enum WebhookEvent {
     SmartGroupMobileDeviceMembershipChange = "SmartGroupMobileDeviceMembershipChange",
 }
 
-/**
- * OK
- */
 export class Webhook extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "authentication_type" })

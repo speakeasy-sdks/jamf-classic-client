@@ -1,7 +1,5 @@
 # Computer
 
-OK
-
 
 ## Fields
 

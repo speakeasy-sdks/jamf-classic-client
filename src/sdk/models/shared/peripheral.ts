@@ -58,9 +58,6 @@ export class PeripheralGeneral extends SpeakeasyBase {
     type: string;
 }
 
-/**
- * OK
- */
 export class Peripheral extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: PeripheralAttachments })
     @Expose({ name: "attachments" })

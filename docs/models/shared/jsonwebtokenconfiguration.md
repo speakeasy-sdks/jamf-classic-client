@@ -1,7 +1,5 @@
 # JsonWebTokenConfiguration
 
-OK
-
 
 ## Fields
 

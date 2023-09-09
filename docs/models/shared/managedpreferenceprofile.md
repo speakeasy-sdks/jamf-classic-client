@@ -1,7 +1,5 @@
 # ManagedPreferenceProfile
 
-OK
-
 
 ## Fields
 

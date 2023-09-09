@@ -45,9 +45,6 @@ export enum ScriptPriority {
     AtReboot = "At Reboot",
 }
 
-/**
- * OK
- */
 export class Script extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "category" })

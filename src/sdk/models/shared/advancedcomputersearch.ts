@@ -70,9 +70,6 @@ export class AdvancedComputerSearchDisplayFields extends SpeakeasyBase {
     size?: number;
 }
 
-/**
- * OK
- */
 export class AdvancedComputerSearch extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: AdvancedComputerSearchComputers })
     @Expose({ name: "computers" })

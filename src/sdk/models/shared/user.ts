@@ -109,9 +109,6 @@ export class UserSites extends SpeakeasyBase {
     site?: SiteObject;
 }
 
-/**
- * OK
- */
 export class User extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "custom_photo_url" })

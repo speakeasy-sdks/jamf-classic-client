@@ -22,9 +22,6 @@ export class UserExtensionAttributeInputType extends SpeakeasyBase {
     type?: UserExtensionAttributeInputTypeType;
 }
 
-/**
- * OK
- */
 export class UserExtensionAttribute extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "data_type" })

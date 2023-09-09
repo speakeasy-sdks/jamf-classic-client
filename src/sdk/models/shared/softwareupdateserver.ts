@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * OK
- */
 export class SoftwareUpdateServer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })

@@ -16,9 +16,6 @@ export class ComputerInvitationEnrollIntoSite extends SpeakeasyBase {
     name?: string;
 }
 
-/**
- * OK
- */
 export class ComputerInvitation extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "create_account_if_does_not_exist" })

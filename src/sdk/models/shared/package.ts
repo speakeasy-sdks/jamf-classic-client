@@ -11,9 +11,6 @@ export enum PackageRequiredProcessor {
     X86 = "x86",
 }
 
-/**
- * OK
- */
 export class Package extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "allow_uninstalled" })

@@ -54,9 +54,6 @@ export class ComputerGroupCriteria extends SpeakeasyBase {
     size?: number;
 }
 
-/**
- * OK
- */
 export class ComputerGroup extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: ComputerGroupComputers })
     @Expose({ name: "computers" })

@@ -1,7 +1,5 @@
 # MobileDevice
 
-OK
-
 
 ## Fields
 

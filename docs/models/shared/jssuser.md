@@ -1,7 +1,5 @@
 # JssUser
 
-OK
-
 
 ## Fields
 

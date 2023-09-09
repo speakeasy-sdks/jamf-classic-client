@@ -1,7 +1,5 @@
 # MobileDeviceHistory
 
-OK
-
 
 ## Fields
 

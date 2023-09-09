@@ -1,7 +1,5 @@
 # InfrastructureManager
 
-OK
-
 
 ## Fields
 

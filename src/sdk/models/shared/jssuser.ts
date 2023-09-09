@@ -11,9 +11,6 @@ export class JssUserPrivileges extends SpeakeasyBase {
     privilege?: string;
 }
 
-/**
- * OK
- */
 export class JssUser extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "institution" })

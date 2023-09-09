@@ -469,9 +469,6 @@ export class OsXConfigurationProfileSelfService extends SpeakeasyBase {
     selfServiceIcon?: OsXConfigurationProfileSelfServiceSelfServiceIcon;
 }
 
-/**
- * OK
- */
 export class OsXConfigurationProfile extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "general" })

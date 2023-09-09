@@ -91,9 +91,6 @@ export class UserGroupUsers extends SpeakeasyBase {
     user?: UserGroupUsersUser;
 }
 
-/**
- * OK
- */
 export class UserGroup extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: UserGroupCriteria })
     @Expose({ name: "criteria" })

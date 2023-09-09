@@ -1,7 +1,5 @@
 # VppInvitation
 
-OK
-
 
 ## Fields
 

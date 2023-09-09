@@ -34,9 +34,6 @@ export class PatchAvailableTitlesAvailableTitles extends SpeakeasyBase {
     availableTitle?: PatchAvailableTitlesAvailableTitlesAvailableTitle;
 }
 
-/**
- * OK
- */
 export class PatchAvailableTitles extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: PatchAvailableTitlesAvailableTitles })
     @Expose({ name: "available_titles" })

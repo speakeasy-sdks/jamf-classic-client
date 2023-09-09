@@ -1,7 +1,5 @@
 # PeripheralType
 
-OK
-
 
 ## Fields
 

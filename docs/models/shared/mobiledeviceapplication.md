@@ -1,7 +1,5 @@
 # MobileDeviceApplication
 
-OK
-
 
 ## Fields
 

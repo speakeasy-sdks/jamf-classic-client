@@ -1,7 +1,5 @@
 # MobileDeviceInvitationPost
 
-Created
-
 
 ## Fields
 

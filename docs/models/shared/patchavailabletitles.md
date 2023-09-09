@@ -1,7 +1,5 @@
 # PatchAvailableTitles
 
-OK
-
 
 ## Fields
 

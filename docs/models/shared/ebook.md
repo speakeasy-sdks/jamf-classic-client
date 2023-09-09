@@ -1,7 +1,5 @@
 # Ebook
 
-OK
-
 
 ## Fields
 

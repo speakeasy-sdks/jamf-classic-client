@@ -133,9 +133,6 @@ export class ClassTeachers extends SpeakeasyBase {
     teacher?: string;
 }
 
-/**
- * OK
- */
 export class Class extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: ClassAppleTvs })
     @Expose({ name: "apple_tvs" })

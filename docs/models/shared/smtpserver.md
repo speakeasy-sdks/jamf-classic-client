@@ -1,7 +1,5 @@
 # SmtpServer
 
-OK
-
 
 ## Fields
 

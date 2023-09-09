@@ -5,9 +5,6 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-/**
- * OK
- */
 export class PatchExternalSource extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "host_name" })

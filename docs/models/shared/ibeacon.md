@@ -1,7 +1,5 @@
 # Ibeacon
 
-OK
-
 
 ## Fields
 

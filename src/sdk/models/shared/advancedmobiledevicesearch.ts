@@ -70,9 +70,6 @@ export class AdvancedMobileDeviceSearchMobileDevices extends SpeakeasyBase {
     size?: number;
 }
 
-/**
- * OK
- */
 export class AdvancedMobileDeviceSearch extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: AdvancedMobileDeviceSearchCriteria })
     @Expose({ name: "criteria" })

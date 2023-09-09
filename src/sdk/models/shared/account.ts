@@ -113,9 +113,6 @@ export class AccountPrivileges extends SpeakeasyBase {
     recon?: AccountPrivilegesRecon[];
 }
 
-/**
- * OK
- */
 export class Account extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "access_level" })

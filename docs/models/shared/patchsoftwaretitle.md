@@ -1,7 +1,5 @@
 # PatchSoftwareTitle
 
-OK
-
 
 ## Fields
 

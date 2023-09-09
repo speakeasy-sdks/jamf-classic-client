@@ -75,9 +75,6 @@ export class ComputerCommandGeneral extends SpeakeasyBase {
     uuid?: string;
 }
 
-/**
- * OK
- */
 export class ComputerCommand extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computers" })

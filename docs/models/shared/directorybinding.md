@@ -1,7 +1,5 @@
 # DirectoryBinding
 
-OK
-
 
 ## Fields
 

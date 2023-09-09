@@ -1,7 +1,5 @@
 # AdvancedComputerSearch
 
-OK
-
 
 ## Fields
 

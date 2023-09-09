@@ -1,7 +1,5 @@
 # ComputerCheckIn
 
-OK
-
 
 ## Fields
 

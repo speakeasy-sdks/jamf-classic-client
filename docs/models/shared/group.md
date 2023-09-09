@@ -1,7 +1,5 @@
 # Group
 
-OK
-
 
 ## Fields
 
