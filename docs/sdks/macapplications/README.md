@@ -1,4 +1,4 @@
-# macapplications
+# Macapplications
 
 ### Available Operations
 

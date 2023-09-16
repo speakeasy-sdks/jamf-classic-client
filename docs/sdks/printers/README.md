@@ -1,4 +1,4 @@
-# printers
+# Printers
 
 ### Available Operations
 

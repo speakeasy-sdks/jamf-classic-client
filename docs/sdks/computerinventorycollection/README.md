@@ -1,4 +1,4 @@
-# computerinventorycollection
+# Computerinventorycollection
 
 ### Available Operations
 

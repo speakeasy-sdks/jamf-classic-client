@@ -1,4 +1,4 @@
-# mobiledeviceenrollmentprofiles
+# Mobiledeviceenrollmentprofiles
 
 ### Available Operations
 

@@ -1,4 +1,4 @@
-# mobiledeviceconfigurationprofiles
+# Mobiledeviceconfigurationprofiles
 
 ### Available Operations
 

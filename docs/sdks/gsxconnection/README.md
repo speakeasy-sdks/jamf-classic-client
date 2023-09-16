@@ -1,4 +1,4 @@
-# gsxconnection
+# Gsxconnection
 
 ### Available Operations
 

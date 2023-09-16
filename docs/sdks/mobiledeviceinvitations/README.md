@@ -1,4 +1,4 @@
-# mobiledeviceinvitations
+# Mobiledeviceinvitations
 
 ### Available Operations
 

@@ -1,4 +1,4 @@
-# savedsearches
+# Savedsearches
 
 ### Available Operations
 

@@ -1,4 +1,4 @@
-# classes
+# Classes
 
 ### Available Operations
 

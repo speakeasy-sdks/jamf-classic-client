@@ -1,4 +1,4 @@
-# logflush
+# Logflush
 
 ### Available Operations
 

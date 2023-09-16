@@ -1,4 +1,4 @@
-# mobiledevicehistory
+# Mobiledevicehistory
 
 ### Available Operations
 

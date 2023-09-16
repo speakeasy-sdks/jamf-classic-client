@@ -1,4 +1,4 @@
-# advancedusersearches
+# Advancedusersearches
 
 ### Available Operations
 

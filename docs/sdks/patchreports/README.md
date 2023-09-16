@@ -1,4 +1,4 @@
-# patchreports
+# Patchreports
 
 ### Available Operations
 

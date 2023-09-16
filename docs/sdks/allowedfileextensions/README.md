@@ -1,4 +1,4 @@
-# allowedfileextensions
+# Allowedfileextensions
 
 ### Available Operations
 

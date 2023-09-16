@@ -1,4 +1,4 @@
-# ibeacons
+# Ibeacons
 
 ### Available Operations
 

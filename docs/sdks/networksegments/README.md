@@ -1,4 +1,4 @@
-# networksegments
+# Networksegments
 
 ### Available Operations
 

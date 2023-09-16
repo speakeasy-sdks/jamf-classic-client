@@ -1,4 +1,4 @@
-# vppinvitations
+# Vppinvitations
 
 ### Available Operations
 

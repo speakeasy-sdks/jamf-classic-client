@@ -1,4 +1,4 @@
-# jsonwebtokenconfigurations
+# Jsonwebtokenconfigurations
 
 ### Available Operations
 

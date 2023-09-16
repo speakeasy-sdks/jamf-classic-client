@@ -1,4 +1,4 @@
-# categories
+# Categories
 
 ### Available Operations
 

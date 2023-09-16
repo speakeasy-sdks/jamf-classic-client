@@ -1,4 +1,4 @@
-# computermanagement
+# Computermanagement
 
 ### Available Operations
 

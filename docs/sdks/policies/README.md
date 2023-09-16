@@ -1,4 +1,4 @@
-# policies
+# Policies
 
 ### Available Operations
 

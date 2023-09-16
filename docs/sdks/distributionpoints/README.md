@@ -1,4 +1,4 @@
-# distributionpoints
+# Distributionpoints
 
 ### Available Operations
 

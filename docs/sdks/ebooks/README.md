@@ -1,4 +1,4 @@
-# ebooks
+# Ebooks
 
 ### Available Operations
 

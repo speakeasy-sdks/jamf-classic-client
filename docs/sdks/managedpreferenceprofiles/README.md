@@ -1,4 +1,4 @@
-# managedpreferenceprofiles
+# Managedpreferenceprofiles
 
 ### Available Operations
 

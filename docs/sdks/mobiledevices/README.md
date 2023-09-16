@@ -1,4 +1,4 @@
-# mobiledevices
+# Mobiledevices
 
 ### Available Operations
 

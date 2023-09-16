@@ -1,4 +1,4 @@
-# advancedmobiledevicesearches
+# Advancedmobiledevicesearches
 
 ### Available Operations
 

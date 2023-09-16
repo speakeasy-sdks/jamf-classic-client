@@ -1,4 +1,4 @@
-# directorybindings
+# Directorybindings
 
 ### Available Operations
 

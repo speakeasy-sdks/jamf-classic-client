@@ -1,4 +1,4 @@
-# smtpserver
+# Smtpserver
 
 ### Available Operations
 

@@ -1,4 +1,4 @@
-# buildings
+# Buildings
 
 ### Available Operations
 

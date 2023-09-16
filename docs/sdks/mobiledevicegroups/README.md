@@ -1,4 +1,4 @@
-# mobiledevicegroups
+# Mobiledevicegroups
 
 ### Available Operations
 

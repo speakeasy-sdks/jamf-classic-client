@@ -1,4 +1,4 @@
-# usergroups
+# Usergroups
 
 ### Available Operations
 

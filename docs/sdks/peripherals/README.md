@@ -1,4 +1,4 @@
-# peripherals
+# Peripherals
 
 ### Available Operations
 

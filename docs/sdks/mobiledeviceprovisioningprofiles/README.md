@@ -1,4 +1,4 @@
-# mobiledeviceprovisioningprofiles
+# Mobiledeviceprovisioningprofiles
 
 ### Available Operations
 

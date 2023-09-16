@@ -1,4 +1,4 @@
-# osxconfigurationprofiles
+# Osxconfigurationprofiles
 
 ### Available Operations
 

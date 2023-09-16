@@ -1,4 +1,4 @@
-# sites
+# Sites
 
 ### Available Operations
 

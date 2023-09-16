@@ -1,4 +1,4 @@
-# diskencryptionconfigurations
+# Diskencryptionconfigurations
 
 ### Available Operations
 

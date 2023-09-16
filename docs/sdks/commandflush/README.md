@@ -1,4 +1,4 @@
-# commandflush
+# Commandflush
 
 ### Available Operations
 
