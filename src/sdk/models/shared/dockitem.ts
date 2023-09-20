@@ -33,5 +33,5 @@ export class DockItem extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    type: DockItemType;
+    type?: DockItemType;
 }

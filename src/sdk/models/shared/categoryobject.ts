@@ -15,5 +15,5 @@ export class CategoryObject extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
-    name: string;
+    name?: string;
 }
