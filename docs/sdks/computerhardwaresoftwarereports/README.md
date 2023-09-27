@@ -1,4 +1,5 @@
 # Computerhardwaresoftwarereports
+(*computerhardwaresoftwarereports*)
 
 ### Available Operations
 

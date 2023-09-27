@@ -1,4 +1,5 @@
 # Scripts
+(*scripts*)
 
 ### Available Operations
 
