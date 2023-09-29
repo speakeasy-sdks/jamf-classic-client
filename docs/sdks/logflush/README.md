@@ -25,7 +25,7 @@ const sdk = new Jamf({
 });
 
 sdk.logflush.createLogFlushForInterval({
-  interval: "alias",
+  interval: "Fantastic",
   log: CreateLogFlushForIntervalLog.Policy,
 }).then((res: CreateLogFlushForIntervalResponse) => {
   if (res.statusCode == 200) {
@@ -65,8 +65,8 @@ const sdk = new Jamf({
 });
 
 sdk.logflush.createLogFlushWithIdAndInterval({
-  id: "ff2a54a3-1e94-4764-a3e8-65e7956f9251",
-  interval: "animi",
+  id: "<ID>",
+  interval: "South Kia since",
   log: CreateLogFlushWithIdAndIntervalLog.Policy,
 }).then((res: CreateLogFlushWithIdAndIntervalResponse) => {
   if (res.statusCode == 200) {
@@ -106,7 +106,7 @@ const sdk = new Jamf({
   },
 });
 
-sdk.logflush.logFlush("nostrum".encode()).then((res: LogFlushResponse) => {
+sdk.logflush.logFlush("1Rtwf975Yo" as bytes <<<>>>).then((res: LogFlushResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

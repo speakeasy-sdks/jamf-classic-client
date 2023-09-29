@@ -61,7 +61,7 @@ const sdk = new Jamf({
 });
 
 sdk.healthcarelistener.findHealthcareListenersById({
-  id: 750765,
+  id: 309302,
 }).then((res: FindHealthcareListenersByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -100,7 +100,7 @@ const sdk = new Jamf({
 });
 
 sdk.healthcarelistener.updateHealthCareListenerById({
-  id: 24619,
+  id: 68635,
 }).then((res: UpdateHealthCareListenerByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response

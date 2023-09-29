@@ -61,7 +61,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerreports.findComputerReportsById({
-  id: "42907474-778a-47bd-866d-28c10ab3cdca",
+  id: "<ID>",
 }).then((res: FindComputerReportsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -100,7 +100,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerreports.findComputerReportsByName({
-  name: "Ms. Ruby Hintz II",
+  name: "deposit Checking",
 }).then((res: FindComputerReportsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

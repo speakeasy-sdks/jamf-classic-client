@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.byoprofiles.createBYOProfilesById({
-  id: 466311,
+  id: 841343,
 }).then((res: CreateBYOProfilesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.byoprofiles.deleteBYOProfilesById({
-  id: 474697,
+  id: 731434,
 }).then((res: DeleteBYOProfilesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.byoprofiles.deleteBYOProfilesByName({
-  name: "Sabrina Cronin MD",
+  name: "matrix Designer",
 }).then((res: DeleteBYOProfilesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.byoprofiles.findBYOProfilesById({
-  id: 656330,
+  id: 502083,
 }).then((res: FindBYOProfilesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.byoprofiles.findBYOProfilesByName({
-  name: "Christina Satterfield",
+  name: "backing Bronze",
 }).then((res: FindBYOProfilesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.byoprofiles.updateBYOProfilesById({
-  id: 368725,
+  id: 230812,
 }).then((res: UpdateBYOProfilesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.byoprofiles.updateBYOProfilesByName({
-  name: "Miss Rufus Ankunding",
+  name: "Southeast USB",
 }).then((res: UpdateBYOProfilesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

@@ -32,7 +32,7 @@ const sdk = new Jamf({
 });
 
 sdk.managedpreferenceprofiles.createManagedPreferenceProfileById({
-  id: 62636,
+  id: 153966,
 }).then((res: CreateManagedPreferenceProfileByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -71,7 +71,7 @@ const sdk = new Jamf({
 });
 
 sdk.managedpreferenceprofiles.deleteManagedPreferenceProfilesById({
-  id: 21688,
+  id: 174021,
 }).then((res: DeleteManagedPreferenceProfilesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -110,7 +110,7 @@ const sdk = new Jamf({
 });
 
 sdk.managedpreferenceprofiles.deleteManagedPreferenceProfilesByName({
-  name: "Judy Kemmer",
+  name: "analyzing",
 }).then((res: DeleteManagedPreferenceProfilesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -185,7 +185,7 @@ const sdk = new Jamf({
 });
 
 sdk.managedpreferenceprofiles.findManagedPreferenceProfilesById({
-  id: 871083,
+  id: 823664,
 }).then((res: FindManagedPreferenceProfilesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -227,8 +227,8 @@ const sdk = new Jamf({
 });
 
 sdk.managedpreferenceprofiles.findManagedPreferenceProfilesByIdSubset({
-  id: 773084,
-  subset: FindManagedPreferenceProfilesByIdSubsetSubset.General,
+  id: 436755,
+  subset: FindManagedPreferenceProfilesByIdSubsetSubset.Settings,
 }).then((res: FindManagedPreferenceProfilesByIdSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -267,7 +267,7 @@ const sdk = new Jamf({
 });
 
 sdk.managedpreferenceprofiles.findManagedPreferenceProfilesByName({
-  name: "Andre Carroll V",
+  name: "meh maxime commonly",
 }).then((res: FindManagedPreferenceProfilesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -309,7 +309,7 @@ const sdk = new Jamf({
 });
 
 sdk.managedpreferenceprofiles.findManagedPreferenceProfilesByNameSubset({
-  name: "Darin Rodriguez",
+  name: "pleased",
   subset: FindManagedPreferenceProfilesByNameSubsetSubset.General,
 }).then((res: FindManagedPreferenceProfilesByNameSubsetResponse) => {
   if (res.statusCode == 200) {
@@ -349,7 +349,7 @@ const sdk = new Jamf({
 });
 
 sdk.managedpreferenceprofiles.updateManagedPreferenceProfilesById({
-  id: 935833,
+  id: 67711,
 }).then((res: UpdateManagedPreferenceProfilesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -388,7 +388,7 @@ const sdk = new Jamf({
 });
 
 sdk.managedpreferenceprofiles.updateManagedPreferenceProfilesByName({
-  name: "Cary Toy",
+  name: "Volkswagen networks",
 }).then((res: UpdateManagedPreferenceProfilesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

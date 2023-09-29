@@ -33,7 +33,7 @@ const sdk = new Jamf({
 });
 
 sdk.users.createUserById({
-  id: 60892,
+  id: 981054,
 }).then((res: CreateUserByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -72,7 +72,7 @@ const sdk = new Jamf({
 });
 
 sdk.users.deleteUserByEmailAddress({
-  email: "Sheila_Cormier5@gmail.com",
+  email: "Haley71@gmail.com",
 }).then((res: DeleteUserByEmailAddressResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -111,7 +111,7 @@ const sdk = new Jamf({
 });
 
 sdk.users.deleteUserById({
-  id: 567693,
+  id: 867244,
 }).then((res: DeleteUserByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -150,7 +150,7 @@ const sdk = new Jamf({
 });
 
 sdk.users.deleteUserByName({
-  name: "Cary Larkin DVM",
+  name: "functionalities",
 }).then((res: DeleteUserByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -225,7 +225,7 @@ const sdk = new Jamf({
 });
 
 sdk.users.findUsersByEmailAddress({
-  email: "Birdie_Homenick24@yahoo.com",
+  email: "Addie_Frami@hotmail.com",
 }).then((res: FindUsersByEmailAddressResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -264,7 +264,7 @@ const sdk = new Jamf({
 });
 
 sdk.users.findUsersById({
-  id: 260588,
+  id: 665689,
 }).then((res: FindUsersByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -303,7 +303,7 @@ const sdk = new Jamf({
 });
 
 sdk.users.findUsersByName({
-  name: "Mrs. Pearl Rosenbaum",
+  name: "Lead Kentucky",
 }).then((res: FindUsersByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -342,7 +342,7 @@ const sdk = new Jamf({
 });
 
 sdk.users.updateUserByEmailAddress({
-  email: "Alia.Denesik27@yahoo.com",
+  email: "Ludie.Legros@yahoo.com",
 }).then((res: UpdateUserByEmailAddressResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -381,7 +381,7 @@ const sdk = new Jamf({
 });
 
 sdk.users.updateUserById({
-  id: 116558,
+  id: 591512,
 }).then((res: UpdateUserByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -420,7 +420,7 @@ const sdk = new Jamf({
 });
 
 sdk.users.updateUserByName({
-  name: "Miss Dana Prohaska",
+  name: "COM Engineer VGA",
 }).then((res: UpdateUserByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

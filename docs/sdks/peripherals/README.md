@@ -28,7 +28,7 @@ const sdk = new Jamf({
 });
 
 sdk.peripherals.createPeripheralById({
-  id: 552439,
+  id: 887007,
 }).then((res: CreatePeripheralByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -67,7 +67,7 @@ const sdk = new Jamf({
 });
 
 sdk.peripherals.deletePeripheralById({
-  id: 356315,
+  id: 270317,
 }).then((res: DeletePeripheralByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -142,7 +142,7 @@ const sdk = new Jamf({
 });
 
 sdk.peripherals.findPeripheralsById({
-  id: 295950,
+  id: 872945,
 }).then((res: FindPeripheralsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -181,8 +181,8 @@ const sdk = new Jamf({
 });
 
 sdk.peripherals.findPeripheralsByIdSubset({
-  id: 266284,
-  subset: FindPeripheralsByIdSubsetSubset.Attachments,
+  id: 264408,
+  subset: FindPeripheralsByIdSubsetSubset.Purchasing,
 }).then((res: FindPeripheralsByIdSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -221,7 +221,7 @@ const sdk = new Jamf({
 });
 
 sdk.peripherals.updatePeripheralById({
-  id: 807419,
+  id: 777495,
 }).then((res: UpdatePeripheralByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response

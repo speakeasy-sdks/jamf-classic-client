@@ -13,7 +13,7 @@ const sdk = new Jamf({
 });
 
 sdk.accounts.createAccountById({
-  id: 548814,
+  id: 437973,
 }).then((res: CreateAccountByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response

@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.softwareupdateservers.createSoftwareUpdateServerById({
-  id: 247618,
+  id: 192838,
 }).then((res: CreateSoftwareUpdateServerByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.softwareupdateservers.deleteSoftwareUpdateServerById({
-  id: 649534,
+  id: 528836,
 }).then((res: DeleteSoftwareUpdateServerByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.softwareupdateservers.deleteSoftwareUpdateServerByName({
-  name: "Clay Reichel",
+  name: "payment application",
 }).then((res: DeleteSoftwareUpdateServerByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.softwareupdateservers.findSoftwareUpdateServersById({
-  id: 816151,
+  id: 61660,
 }).then((res: FindSoftwareUpdateServersByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.softwareupdateservers.findSoftwareUpdateServersByName({
-  name: "Conrad Pacocha",
+  name: "aha Transexual henry",
 }).then((res: FindSoftwareUpdateServersByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.softwareupdateservers.updateSoftwareUpdateServerById({
-  id: 369523,
+  id: 875421,
 }).then((res: UpdateSoftwareUpdateServerByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.softwareupdateservers.updateSoftwareUpdateServerByName({
-  name: "Yolanda O'Connell",
+  name: "moist Meitnerium",
 }).then((res: UpdateSoftwareUpdateServerByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

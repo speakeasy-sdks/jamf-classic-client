@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.usergroups.createUserGroupsById({
-  id: 460909,
+  id: 253753,
 }).then((res: CreateUserGroupsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.usergroups.deleteUserGroupsById({
-  id: 548849,
+  id: 256319,
 }).then((res: DeleteUserGroupsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.usergroups.deleteUserGroupsByName({
-  name: "Miss Carroll Rutherford",
+  name: "Garden",
 }).then((res: DeleteUserGroupsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.usergroups.findUserGroupsById({
-  id: 385739,
+  id: 121740,
 }).then((res: FindUserGroupsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.usergroups.findUserGroupsByName({
-  name: "Sandra Schumm",
+  name: "Gleason green",
 }).then((res: FindUserGroupsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.usergroups.updateUserGroupsById({
-  id: 9375,
+  id: 967440,
 }).then((res: UpdateUserGroupsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.usergroups.updateUserGroupsByName({
-  name: "Julie Murazik",
+  name: "kilogram compress",
 }).then((res: UpdateUserGroupsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

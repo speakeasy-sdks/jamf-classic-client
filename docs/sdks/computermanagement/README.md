@@ -47,7 +47,7 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementById({
-  id: 703495,
+  id: 800419,
 }).then((res: FindComputerManagementByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -86,8 +86,8 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByIdPatchFilter({
-  filter: "cupiditate",
-  id: 181631,
+  filter: "Southwest blindfold",
+  id: 93239,
 }).then((res: FindComputerManagementByIdPatchFilterResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -126,7 +126,7 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByIdSubset({
-  id: 63955,
+  id: 327799,
   subset: FindComputerManagementByIdSubsetSubset.ManagedPreferenceProfiles,
 }).then((res: FindComputerManagementByIdSubsetResponse) => {
   if (res.statusCode == 200) {
@@ -166,8 +166,8 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByIdUsername({
-  id: 485628,
-  username: "Kris_Wolff60",
+  id: 924331,
+  username: "Kolby_Hirthe16",
 }).then((res: FindComputerManagementByIdUsernameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -209,9 +209,9 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByIdUsernameSubset({
-  id: 338159,
-  subset: FindComputerManagementByIdUsernameSubsetSubset.Ebooks,
-  username: "Vida87",
+  id: 458312,
+  subset: FindComputerManagementByIdUsernameSubsetSubset.SmartGroups,
+  username: "Mckenzie54",
 }).then((res: FindComputerManagementByIdUsernameSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -250,7 +250,7 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByMacAddress({
-  macaddress: "tenetur",
+  macaddress: "Cyclocross",
 }).then((res: FindComputerManagementByMacAddressResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -289,8 +289,8 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByMacAddressPatchFilter({
-  filter: "dignissimos",
-  macaddress: "hic",
+  filter: "Concrete Country",
+  macaddress: "Manager magenta Lilangeni",
 }).then((res: FindComputerManagementByMacAddressPatchFilterResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -332,8 +332,8 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByMacAddressSubset({
-  macaddress: "distinctio",
-  subset: FindComputerManagementByMacAddressSubsetSubset.SmartGroups,
+  macaddress: "Gasoline",
+  subset: FindComputerManagementByMacAddressSubsetSubset.Ebooks,
 }).then((res: FindComputerManagementByMacAddressSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -372,8 +372,8 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByMacAddressUsername({
-  macaddress: "odio",
-  username: "Lon.Quitzon29",
+  macaddress: "lavender magenta Account",
+  username: "Eugenia_Hegmann33",
 }).then((res: FindComputerManagementByMacAddressUsernameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -415,9 +415,9 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByMacAddressUsernameSubset({
-  macaddress: "quibusdam",
-  subset: FindComputerManagementByMacAddressUsernameSubsetSubset.StaticGroups,
-  username: "Clementine.Mosciski97",
+  macaddress: "South Bicycle",
+  subset: FindComputerManagementByMacAddressUsernameSubsetSubset.SmartGroups,
+  username: "Hanna_Hansen",
 }).then((res: FindComputerManagementByMacAddressUsernameSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -456,7 +456,7 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByName({
-  name: "Freda Cormier",
+  name: "hack Buckinghamshire",
 }).then((res: FindComputerManagementByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -495,8 +495,8 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByNamePatchFilter({
-  filter: "doloribus",
-  name: "Miss Vicky Kuphal",
+  filter: "deposit",
+  name: "Senegal Nissan",
 }).then((res: FindComputerManagementByNamePatchFilterResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -538,8 +538,8 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByNameSubset({
-  name: "Terri Collins",
-  subset: FindComputerManagementByNameSubsetSubset.Ebooks,
+  name: "female Group Wooden",
+  subset: FindComputerManagementByNameSubsetSubset.General,
 }).then((res: FindComputerManagementByNameSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -578,8 +578,8 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByNameUsername({
-  name: "Mrs. Vicki Langosh",
-  username: "Ayana_Jaskolski97",
+  name: "lime quietly",
+  username: "Burdette_Altenwerth83",
 }).then((res: FindComputerManagementByNameUsernameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -621,9 +621,9 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByNameUsernameSubset({
-  name: "Dixie Schamberger",
+  name: "auxiliary",
   subset: FindComputerManagementByNameUsernameSubsetSubset.SmartGroups,
-  username: "Flossie.Hartmann",
+  username: "Margarette.Jenkins",
 }).then((res: FindComputerManagementByNameUsernameSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -662,7 +662,7 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementBySerialNumber({
-  serialnumber: "magnam",
+  serialnumber: "Bedfordshire Via parse",
 }).then((res: FindComputerManagementBySerialNumberResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -701,8 +701,8 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementBySerialNumberPatchFilter({
-  filter: "ea",
-  serialnumber: "quo",
+  filter: "pollard UAE Chips",
+  serialnumber: "Genderflux nap",
 }).then((res: FindComputerManagementBySerialNumberPatchFilterResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -744,8 +744,8 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementBySerialNumberSubset({
-  serialnumber: "consectetur",
-  subset: FindComputerManagementBySerialNumberSubsetSubset.PatchReportingSoftwareTitles,
+  serialnumber: "driver Identity",
+  subset: FindComputerManagementBySerialNumberSubsetSubset.Ebooks,
 }).then((res: FindComputerManagementBySerialNumberSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -784,8 +784,8 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementBySerialNumberUsername({
-  serialnumber: "aspernatur",
-  username: "Eriberto_Becker1",
+  serialnumber: "Wisoky Volkswagen Regional",
+  username: "Edgardo95",
 }).then((res: FindComputerManagementBySerialNumberUsernameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -827,9 +827,9 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementBySerialNumberUsernameSubset({
-  serialnumber: "aut",
-  subset: FindComputerManagementBySerialNumberUsernameSubsetSubset.ManagedPreferenceProfiles,
-  username: "Olaf88",
+  serialnumber: "Metal North",
+  subset: FindComputerManagementBySerialNumberUsernameSubsetSubset.StaticGroups,
+  username: "Arnaldo.Deckow86",
 }).then((res: FindComputerManagementBySerialNumberUsernameSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -868,7 +868,7 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByUDID({
-  udid: "inventore",
+  udid: "optical",
 }).then((res: FindComputerManagementByUDIDResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -910,8 +910,8 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByUDIDSubset({
-  subset: FindComputerManagementByUDIDSubsetSubset.Ebooks,
-  udid: "et",
+  subset: FindComputerManagementByUDIDSubsetSubset.MacAppStoreApps,
+  udid: "Transgender",
 }).then((res: FindComputerManagementByUDIDSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -950,8 +950,8 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByUdidPatchFilter({
-  filter: "dolorum",
-  udid: "laborum",
+  filter: "pink Granite",
+  udid: "concerning Pop",
 }).then((res: FindComputerManagementByUdidPatchFilterResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -990,8 +990,8 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByUdidUsername({
-  udid: "placeat",
-  username: "Dejon_Kemmer",
+  udid: "Bicycle enim Orchestrator",
+  username: "Leann_Cronin90",
 }).then((res: FindComputerManagementByUdidUsernameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1033,9 +1033,9 @@ const sdk = new Jamf({
 });
 
 sdk.computermanagement.findComputerManagementByUdidUsernameSubset({
-  subset: FindComputerManagementByUdidUsernameSubsetSubset.ManagedPreferenceProfiles,
-  udid: "assumenda",
-  username: "Sabina.Hoeger27",
+  subset: FindComputerManagementByUdidUsernameSubsetSubset.General,
+  udid: "lime boxspring",
+  username: "Grady.Schmitt",
 }).then((res: FindComputerManagementByUdidUsernameSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response

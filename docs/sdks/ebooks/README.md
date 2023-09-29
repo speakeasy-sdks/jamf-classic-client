@@ -32,7 +32,7 @@ const sdk = new Jamf({
 });
 
 sdk.ebooks.createEBookById({
-  id: 288398,
+  id: 711798,
 }).then((res: CreateEBookByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -71,7 +71,7 @@ const sdk = new Jamf({
 });
 
 sdk.ebooks.deleteEBookById({
-  id: 70447,
+  id: 274478,
 }).then((res: DeleteEBookByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -110,7 +110,7 @@ const sdk = new Jamf({
 });
 
 sdk.ebooks.deleteEBookByName({
-  name: "Kristine Ondricka",
+  name: "Agent Classical Car",
 }).then((res: DeleteEBookByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -185,7 +185,7 @@ const sdk = new Jamf({
 });
 
 sdk.ebooks.findEBooksById({
-  id: 633931,
+  id: 38542,
 }).then((res: FindEBooksByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -224,7 +224,7 @@ const sdk = new Jamf({
 });
 
 sdk.ebooks.findEBooksByName({
-  name: "Clay Larson",
+  name: "North New similique",
 }).then((res: FindEBooksByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -263,8 +263,8 @@ const sdk = new Jamf({
 });
 
 sdk.ebooks.findEBooksByNameSubset({
-  name: "Billie Keebler",
-  subset: FindEBooksByNameSubsetSubset.SelfService,
+  name: "virtual Dodge Southeast",
+  subset: FindEBooksByNameSubsetSubset.General,
 }).then((res: FindEBooksByNameSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -303,8 +303,8 @@ const sdk = new Jamf({
 });
 
 sdk.ebooks.findEbookssByIdSubset({
-  id: "b675fd5e-60b3-475e-94f6-fbee41f33317",
-  subset: FindEbookssByIdSubsetSubset.SelfService,
+  id: "<ID>",
+  subset: FindEbookssByIdSubsetSubset.General,
 }).then((res: FindEbookssByIdSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -343,7 +343,7 @@ const sdk = new Jamf({
 });
 
 sdk.ebooks.updateEBookById({
-  id: 891523,
+  id: 271483,
 }).then((res: UpdateEBookByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -382,7 +382,7 @@ const sdk = new Jamf({
 });
 
 sdk.ebooks.updateEBookByName({
-  name: "Stacy Pollich DVM",
+  name: "infomediaries female",
 }).then((res: UpdateEBookByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

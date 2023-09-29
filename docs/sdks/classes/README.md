@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.classes.createClassById({
-  id: 979587,
+  id: 370285,
 }).then((res: CreateClassByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.classes.deleteClassById({
-  id: 120196,
+  id: 354004,
 }).then((res: DeleteClassByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.classes.deleteClassByName({
-  name: "Miss Valerie Kshlerin",
+  name: "Pula projection Sri",
 }).then((res: DeleteClassByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.classes.findClassesById({
-  id: 880476,
+  id: 15091,
 }).then((res: FindClassesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.classes.findClassesByName({
-  name: "Elvira Bergnaum",
+  name: "Wooden",
 }).then((res: FindClassesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.classes.updateClassById({
-  id: 565189,
+  id: 116071,
 }).then((res: UpdateClassByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.classes.updateClassByName({
-  name: "Ervin Gleason",
+  name: "Watsica",
 }).then((res: UpdateClassByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

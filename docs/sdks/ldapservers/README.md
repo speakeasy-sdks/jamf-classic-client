@@ -36,7 +36,7 @@ const sdk = new Jamf({
 });
 
 sdk.ldapservers.createLDAPServerById({
-  id: 542129,
+  id: 334152,
 }).then((res: CreateLDAPServerByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -75,7 +75,7 @@ const sdk = new Jamf({
 });
 
 sdk.ldapservers.deleteLDAPServerById({
-  id: 541381,
+  id: 550161,
 }).then((res: DeleteLDAPServerByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -114,7 +114,7 @@ const sdk = new Jamf({
 });
 
 sdk.ldapservers.deleteLDAPServerByName({
-  name: "Delia Parisian",
+  name: "interfaces South",
 }).then((res: DeleteLDAPServerByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -153,8 +153,8 @@ const sdk = new Jamf({
 });
 
 sdk.ldapservers.findLDAPServerGroupById({
-  group: "reiciendis",
-  id: 42976,
+  group: "Avon",
+  id: 479019,
 }).then((res: FindLDAPServerGroupByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -193,8 +193,8 @@ const sdk = new Jamf({
 });
 
 sdk.ldapservers.findLDAPServerGroupByName({
-  group: "repudiandae",
-  name: "Ruth Breitenberg",
+  group: "female worship Bicycle",
+  name: "array",
 }).then((res: FindLDAPServerGroupByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -233,9 +233,9 @@ const sdk = new Jamf({
 });
 
 sdk.ldapservers.findLDAPServerGroupUserById({
-  group: "laboriosam",
-  id: 246535,
-  user: "a",
+  group: "jettison",
+  id: 405465,
+  user: "Maudie35",
 }).then((res: FindLDAPServerGroupUserByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -274,9 +274,9 @@ const sdk = new Jamf({
 });
 
 sdk.ldapservers.findLDAPServerGroupUserByName({
-  group: "molestias",
-  name: "Tricia Cronin",
-  user: "perspiciatis",
+  group: "Bike",
+  name: "infrastructure Automotive Tuna",
+  user: "Maudie.Howe",
 }).then((res: FindLDAPServerGroupUserByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -315,8 +315,8 @@ const sdk = new Jamf({
 });
 
 sdk.ldapservers.findLDAPServerUserById({
-  id: 446394,
-  user: "adipisci",
+  id: 331068,
+  user: "Buster40",
 }).then((res: FindLDAPServerUserByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -355,8 +355,8 @@ const sdk = new Jamf({
 });
 
 sdk.ldapservers.findLDAPServerUserByName({
-  name: "Tracy Cronin",
-  user: "quis",
+  name: "Ergonomic Americium",
+  user: "Colten_Kovacek",
 }).then((res: FindLDAPServerUserByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -431,7 +431,7 @@ const sdk = new Jamf({
 });
 
 sdk.ldapservers.findLDAPServersById({
-  id: 440264,
+  id: 434300,
 }).then((res: FindLDAPServersByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -470,7 +470,7 @@ const sdk = new Jamf({
 });
 
 sdk.ldapservers.findLDAPServersByName({
-  name: "Jerry Hessel",
+  name: "secondary placeat neatly",
 }).then((res: FindLDAPServersByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -509,7 +509,7 @@ const sdk = new Jamf({
 });
 
 sdk.ldapservers.updateLDAPServerById({
-  id: 247399,
+  id: 774572,
 }).then((res: UpdateLDAPServerByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -548,7 +548,7 @@ const sdk = new Jamf({
 });
 
 sdk.ldapservers.updateLDAPServerByName({
-  name: "Ms. Brian Kerluke IV",
+  name: "Consultant Representative",
 }).then((res: UpdateLDAPServerByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

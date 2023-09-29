@@ -32,7 +32,7 @@ const sdk = new Jamf({
 });
 
 sdk.macapplications.createMacappById({
-  id: 652309,
+  id: 15219,
 }).then((res: CreateMacappByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -71,7 +71,7 @@ const sdk = new Jamf({
 });
 
 sdk.macapplications.deleteMacappById({
-  id: 591027,
+  id: 367018,
 }).then((res: DeleteMacappByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -110,7 +110,7 @@ const sdk = new Jamf({
 });
 
 sdk.macapplications.deleteMacappByName({
-  name: "Lynn Jacobson DVM",
+  name: "Functionality withdrawal Southeast",
 }).then((res: DeleteMacappByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -185,7 +185,7 @@ const sdk = new Jamf({
 });
 
 sdk.macapplications.findMacappsById({
-  id: 984632,
+  id: 285922,
 }).then((res: FindMacappsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -224,8 +224,8 @@ const sdk = new Jamf({
 });
 
 sdk.macapplications.findMacappsByIdSubset({
-  id: 351893,
-  subset: FindMacappsByIdSubsetSubset.SelfService,
+  id: 538140,
+  subset: FindMacappsByIdSubsetSubset.Scope,
 }).then((res: FindMacappsByIdSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -264,7 +264,7 @@ const sdk = new Jamf({
 });
 
 sdk.macapplications.findMacappsByName({
-  name: "Darin Nienow",
+  name: "Bicycle Future Road",
 }).then((res: FindMacappsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -303,8 +303,8 @@ const sdk = new Jamf({
 });
 
 sdk.macapplications.findMacappsByNameSubset({
-  name: "Tami Maggio",
-  subset: FindMacappsByNameSubsetSubset.VPPCodes,
+  name: "Country participant officia",
+  subset: FindMacappsByNameSubsetSubset.Scope,
 }).then((res: FindMacappsByNameSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -343,7 +343,7 @@ const sdk = new Jamf({
 });
 
 sdk.macapplications.updateMacappById({
-  id: 113486,
+  id: 610856,
 }).then((res: UpdateMacappByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -382,7 +382,7 @@ const sdk = new Jamf({
 });
 
 sdk.macapplications.updateMacappByName({
-  name: "Mr. Ricky Harvey",
+  name: "Transmasculine white",
 }).then((res: UpdateMacappByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

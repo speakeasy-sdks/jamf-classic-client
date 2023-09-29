@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedmobiledevicesearches.createAdvancedMobileDeviceSearchById({
-  id: 944669,
+  id: 827357,
 }).then((res: CreateAdvancedMobileDeviceSearchByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedmobiledevicesearches.deleteAdvancedMobileDeviceSearchById({
-  id: 758616,
+  id: 246857,
 }).then((res: DeleteAdvancedMobileDeviceSearchByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedmobiledevicesearches.deleteAdvancedMobileDeviceSearchByName({
-  name: "Jack Johns",
+  name: "Louisiana",
 }).then((res: DeleteAdvancedMobileDeviceSearchByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedmobiledevicesearches.findAdvancedMobileDeviceSearchesById({
-  id: 186332,
+  id: 507076,
 }).then((res: FindAdvancedMobileDeviceSearchesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedmobiledevicesearches.findMobileDeviceSearchesByName({
-  name: "Jonathon Klocko",
+  name: "compress",
 }).then((res: FindMobileDeviceSearchesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedmobiledevicesearches.updateAdvancedMobileDeviceSearchById({
-  id: 135218,
+  id: 827690,
 }).then((res: UpdateAdvancedMobileDeviceSearchByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedmobiledevicesearches.updateAdvancedMobileDeviceSearchByName({
-  name: "Cathy Mosciski",
+  name: "Gender Producer",
 }).then((res: UpdateAdvancedMobileDeviceSearchByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

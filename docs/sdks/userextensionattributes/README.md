@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.userextensionattributes.createUserextensionattributeById({
-  id: 668218,
+  id: 303263,
 }).then((res: CreateUserextensionattributeByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.userextensionattributes.deleteUserextensionattributeById({
-  id: 577413,
+  id: 889234,
 }).then((res: DeleteUserextensionattributeByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.userextensionattributes.deleteUserextensionattributeByName({
-  name: "Roxanne Aufderhar",
+  name: "Harbor Minivan",
 }).then((res: DeleteUserextensionattributeByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.userextensionattributes.findUserextensionattributesById({
-  id: 301309,
+  id: 950394,
 }).then((res: FindUserextensionattributesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.userextensionattributes.findUserextensionattributesByName({
-  name: "Lynne Weissnat",
+  name: "East",
 }).then((res: FindUserextensionattributesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.userextensionattributes.updateUserextensionattributeById({
-  id: 603650,
+  id: 644439,
 }).then((res: UpdateUserextensionattributeByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.userextensionattributes.updateUserextensionattributeByName({
-  name: "Jeremiah O'Hara",
+  name: "middleware Bike brief",
 }).then((res: UpdateUserextensionattributeByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

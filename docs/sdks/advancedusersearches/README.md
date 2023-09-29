@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedusersearches.createAdvancedUserSearchgById({
-  id: 222321,
+  id: 425027,
 }).then((res: CreateAdvancedUserSearchgByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedusersearches.deleteAdvancedUserSearchById({
-  id: 616934,
+  id: 233208,
 }).then((res: DeleteAdvancedUserSearchByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedusersearches.deleteAdvancedUserSearchByName({
-  name: "May Turcotte",
+  name: "Hybrid inversion consideration",
 }).then((res: DeleteAdvancedUserSearchByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedusersearches.findAdvancedUserSearchesById({
-  id: 359508,
+  id: 42939,
 }).then((res: FindAdvancedUserSearchesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedusersearches.findUserSearchesByName({
-  name: "Brad Turcotte Jr.",
+  name: "evenly",
 }).then((res: FindUserSearchesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedusersearches.updateAdvancedUserSearchById({
-  id: 969810,
+  id: 142195,
 }).then((res: UpdateAdvancedUserSearchByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedusersearches.updateAdvancedUserSearchByName({
-  name: "Shaun Osinski",
+  name: "hacking",
 }).then((res: UpdateAdvancedUserSearchByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

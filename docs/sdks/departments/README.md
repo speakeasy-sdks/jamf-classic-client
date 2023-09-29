@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.departments.createDepartmentById({
-  id: 458139,
+  id: 379964,
 }).then((res: CreateDepartmentByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.departments.deleteDepartmentById({
-  id: 503427,
+  id: 199499,
 }).then((res: DeleteDepartmentByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.departments.deleteDepartmentByName({
-  name: "Randal Stiedemann",
+  name: "paradigm",
 }).then((res: DeleteDepartmentByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.departments.findDepartmentsById({
-  id: 97468,
+  id: 858559,
 }).then((res: FindDepartmentsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.departments.findDepartmentsByName({
-  name: "Jeremiah Mayer",
+  name: "compress Convertible",
 }).then((res: FindDepartmentsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.departments.updateDepartmentById({
-  id: 157632,
+  id: 940506,
 }).then((res: UpdateDepartmentByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.departments.updateDepartmentByName({
-  name: "Mr. Marlon Schultz V",
+  name: "knowledge Borders haptic",
 }).then((res: UpdateDepartmentByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

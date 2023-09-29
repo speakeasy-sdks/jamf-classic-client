@@ -61,7 +61,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchinternalsources.findPatchInternalSourcesById({
-  id: "9eb75dad-636c-4600-903d-8bb31180f739",
+  id: "<ID>",
 }).then((res: FindPatchInternalSourcesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -100,7 +100,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchinternalsources.findPatchInternalSourcesByName({
-  name: "Terence Medhurst III",
+  name: "Shirt Club",
 }).then((res: FindPatchInternalSourcesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

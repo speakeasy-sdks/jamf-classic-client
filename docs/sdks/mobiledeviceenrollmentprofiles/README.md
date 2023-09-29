@@ -35,7 +35,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceenrollmentprofiles.createMobileDeviceEnrollmentProfilesById({
-  id: 307376,
+  id: 791519,
 }).then((res: CreateMobileDeviceEnrollmentProfilesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -74,7 +74,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceenrollmentprofiles.deleteMobileDeviceEnrollmentProfileById({
-  id: 80532,
+  id: 463513,
 }).then((res: DeleteMobileDeviceEnrollmentProfileByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -113,7 +113,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceenrollmentprofiles.deleteMobileDeviceEnrollmentProfileByInvitation({
-  invitation: "deleniti",
+  invitation: "Nissan bandwidth Plastic",
 }).then((res: DeleteMobileDeviceEnrollmentProfileByInvitationResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -152,7 +152,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceenrollmentprofiles.deleteMobileDeviceEnrollmentProfileByName({
-  name: "Mr. Hazel Ernser I",
+  name: "Response",
 }).then((res: DeleteMobileDeviceEnrollmentProfileByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -227,7 +227,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesById({
-  id: 144286,
+  id: 635234,
 }).then((res: FindMobileDeviceEnrollmentProfilesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -269,7 +269,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByIdSubset({
-  id: 66149,
+  id: 793930,
   subset: FindMobileDeviceEnrollmentProfilesByIdSubsetSubset.Purchasing,
 }).then((res: FindMobileDeviceEnrollmentProfilesByIdSubsetResponse) => {
   if (res.statusCode == 200) {
@@ -309,7 +309,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByInvitation({
-  invitation: "quae",
+  invitation: "female Coordinator",
 }).then((res: FindMobileDeviceEnrollmentProfilesByInvitationResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -348,7 +348,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByName({
-  name: "Janis Hills V",
+  name: "B2B",
 }).then((res: FindMobileDeviceEnrollmentProfilesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -390,7 +390,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByNameSubset({
-  name: "Edmund Torp",
+  name: "Southwest Refined",
   subset: FindMobileDeviceEnrollmentProfilesByNameSubsetSubset.General,
 }).then((res: FindMobileDeviceEnrollmentProfilesByNameSubsetResponse) => {
   if (res.statusCode == 200) {
@@ -430,7 +430,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceenrollmentprofiles.updateMobileDeviceEnrollmentProfileById({
-  id: 332191,
+  id: 623408,
 }).then((res: UpdateMobileDeviceEnrollmentProfileByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -469,7 +469,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceenrollmentprofiles.updateMobileDeviceEnrollmentProfileByInvitation({
-  invitation: "nesciunt",
+  invitation: "Wooden Research invoice",
 }).then((res: UpdateMobileDeviceEnrollmentProfileByInvitationResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -508,7 +508,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceenrollmentprofiles.updateMobileDeviceEnrollmentProfileByName({
-  name: "Andre Kautzer",
+  name: "when preach souvenir",
 }).then((res: UpdateMobileDeviceEnrollmentProfileByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.printers.createPrinterById({
-  id: 816365,
+  id: 443860,
 }).then((res: CreatePrinterByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.printers.deletePrinterById({
-  id: 307173,
+  id: 703199,
 }).then((res: DeletePrinterByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.printers.deletePrinterByName({
-  name: "Domingo Stark",
+  name: "bluetooth redundant",
 }).then((res: DeletePrinterByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.printers.findPrintersById({
-  id: 245278,
+  id: 170476,
 }).then((res: FindPrintersByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.printers.findPrintersByName({
-  name: "Dr. Peggy Murray",
+  name: "Jewelery",
 }).then((res: FindPrintersByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.printers.updatePrinterById({
-  id: 987890,
+  id: 303695,
 }).then((res: UpdatePrinterByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.printers.updatePrinterByName({
-  name: "Mrs. Stuart Gorczany",
+  name: "strategic singer",
 }).then((res: UpdatePrinterByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

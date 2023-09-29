@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedcomputersearches.createAdvancedComputerSearchgById({
-  id: 957156,
+  id: 274583,
 }).then((res: CreateAdvancedComputerSearchgByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedcomputersearches.deleteAdvancedComputerSearchById({
-  id: 778157,
+  id: 764480,
 }).then((res: DeleteAdvancedComputerSearchByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedcomputersearches.deleteAdvancedComputerSearchByName({
-  name: "Teri Strosin",
+  name: "generate Berkshire",
 }).then((res: DeleteAdvancedComputerSearchByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedcomputersearches.findAdvancedComputerSearchesById({
-  id: 799159,
+  id: 964070,
 }).then((res: FindAdvancedComputerSearchesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedcomputersearches.findAdvancedComputerSearchesByName({
-  name: "Erik Lebsack",
+  name: "Idaho",
 }).then((res: FindAdvancedComputerSearchesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedcomputersearches.updateAdvancedComputerSearchById({
-  id: 118274,
+  id: 382379,
 }).then((res: UpdateAdvancedComputerSearchByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.advancedcomputersearches.updateAdvancedComputerSearchByName({
-  name: "Luke McCullough",
+  name: "Strategist Ball Analyst",
 }).then((res: UpdateAdvancedComputerSearchByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

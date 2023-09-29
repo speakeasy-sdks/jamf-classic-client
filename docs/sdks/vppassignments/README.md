@@ -27,7 +27,7 @@ const sdk = new Jamf({
 });
 
 sdk.vppassignments.createAssignmentById({
-  id: 555679,
+  id: 66531,
 }).then((res: CreateAssignmentByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -66,7 +66,7 @@ const sdk = new Jamf({
 });
 
 sdk.vppassignments.deleteAssignmentById({
-  id: 85794,
+  id: 128441,
 }).then((res: DeleteAssignmentByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -105,7 +105,7 @@ const sdk = new Jamf({
 });
 
 sdk.vppassignments.findAssignmentById({
-  id: 356440,
+  id: 535485,
 }).then((res: FindAssignmentByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -180,7 +180,7 @@ const sdk = new Jamf({
 });
 
 sdk.vppassignments.updateAssignmentById({
-  id: 62688,
+  id: 260276,
 }).then((res: UpdateAssignmentByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response

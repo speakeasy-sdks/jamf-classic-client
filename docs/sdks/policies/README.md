@@ -34,7 +34,7 @@ const sdk = new Jamf({
 });
 
 sdk.policies.createPolicyById({
-  id: 985109,
+  id: 45063,
 }).then((res: CreatePolicyByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -73,7 +73,7 @@ const sdk = new Jamf({
 });
 
 sdk.policies.deletePolicyById({
-  id: 773711,
+  id: 935775,
 }).then((res: DeletePolicyByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -112,7 +112,7 @@ const sdk = new Jamf({
 });
 
 sdk.policies.deletePolicyByName({
-  name: "Sheldon Leannon V",
+  name: "Pickup",
 }).then((res: DeletePolicyByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -187,7 +187,7 @@ const sdk = new Jamf({
 });
 
 sdk.policies.findPoliciesByCategory({
-  category: "nihil",
+  category: "Recycled Gasoline synthesizing",
 }).then((res: FindPoliciesByCategoryResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -226,7 +226,7 @@ const sdk = new Jamf({
 });
 
 sdk.policies.findPoliciesById({
-  id: 458412,
+  id: 252987,
 }).then((res: FindPoliciesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -265,8 +265,8 @@ const sdk = new Jamf({
 });
 
 sdk.policies.findPoliciesByIdSubset({
-  id: 438256,
-  subset: FindPoliciesByIdSubsetSubset.DockItems,
+  id: 282474,
+  subset: FindPoliciesByIdSubsetSubset.DiskEncryption,
 }).then((res: FindPoliciesByIdSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -305,7 +305,7 @@ const sdk = new Jamf({
 });
 
 sdk.policies.findPoliciesByName({
-  name: "Alyssa Kassulke",
+  name: "Metal",
 }).then((res: FindPoliciesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -344,8 +344,8 @@ const sdk = new Jamf({
 });
 
 sdk.policies.findPoliciesByNameSubset({
-  name: "Kathryn Nitzsche",
-  subset: FindPoliciesByNameSubsetSubset.PackageConfiguration,
+  name: "Cheese Designer elegantly",
+  subset: FindPoliciesByNameSubsetSubset.DiskEncryption,
 }).then((res: FindPoliciesByNameSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -384,7 +384,7 @@ const sdk = new Jamf({
 });
 
 sdk.policies.findPoliciesByType({
-  createdBy: FindPoliciesByTypeCreatedBy.Jss,
+  createdBy: FindPoliciesByTypeCreatedBy.Casper,
 }).then((res: FindPoliciesByTypeResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -423,7 +423,7 @@ const sdk = new Jamf({
 });
 
 sdk.policies.updatePolicyById({
-  id: 522062,
+  id: 272424,
 }).then((res: UpdatePolicyByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -462,7 +462,7 @@ const sdk = new Jamf({
 });
 
 sdk.policies.updatePolicyByName({
-  name: "Steven Harris",
+  name: "Southwest deploy",
 }).then((res: UpdatePolicyByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.scripts.createScriptById({
-  id: 435531,
+  id: 309792,
 }).then((res: CreateScriptByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.scripts.deleteScriptById({
-  id: 842402,
+  id: 565017,
 }).then((res: DeleteScriptByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.scripts.deleteScriptByName({
-  name: "Corey Walker",
+  name: "Sunnyvale Vermont",
 }).then((res: DeleteScriptByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.scripts.findScriptsById({
-  id: 493591,
+  id: 390907,
 }).then((res: FindScriptsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.scripts.findScriptsByName({
-  name: "Jane Kuhlman",
+  name: "blue",
 }).then((res: FindScriptsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.scripts.updateScriptById({
-  id: 739508,
+  id: 837789,
 }).then((res: UpdateScriptByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.scripts.updateScriptByName({
-  name: "Andres Predovic",
+  name: "orange Omnigender",
 }).then((res: UpdateScriptByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

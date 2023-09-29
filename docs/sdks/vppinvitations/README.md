@@ -28,7 +28,7 @@ const sdk = new Jamf({
 });
 
 sdk.vppinvitations.createInvitationById({
-  id: 631719,
+  id: 791905,
 }).then((res: CreateInvitationByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -67,7 +67,7 @@ const sdk = new Jamf({
 });
 
 sdk.vppinvitations.deleteInvitationById({
-  id: 278116,
+  id: 492289,
 }).then((res: DeleteInvitationByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -106,7 +106,7 @@ const sdk = new Jamf({
 });
 
 sdk.vppinvitations.findInvitationById({
-  id: 462583,
+  id: 76477,
 }).then((res: FindInvitationByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -145,7 +145,7 @@ const sdk = new Jamf({
 });
 
 sdk.vppinvitations.findInvitationsByIdSubset({
-  id: 169312,
+  id: 916901,
   subset: FindInvitationsByIdSubsetSubset.Scope,
 }).then((res: FindInvitationsByIdSubsetResponse) => {
   if (res.statusCode == 200) {
@@ -221,7 +221,7 @@ const sdk = new Jamf({
 });
 
 sdk.vppinvitations.updateInvitationById({
-  id: 965095,
+  id: 473557,
 }).then((res: UpdateInvitationByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response

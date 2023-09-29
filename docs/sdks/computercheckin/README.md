@@ -59,7 +59,7 @@ const sdk = new Jamf({
   },
 });
 
-sdk.computercheckin.updateComputerCheckin("accusamus".encode()).then((res: UpdateComputerCheckinResponse) => {
+sdk.computercheckin.updateComputerCheckin("2Iu;QDJ,=5" as bytes <<<>>>).then((res: UpdateComputerCheckinResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

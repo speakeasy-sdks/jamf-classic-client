@@ -26,7 +26,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchreports.patchreportsPatchsoftwaretitleidByIdGet({
-  id: "2810331f-3981-4d4c-b00b-607f3c93c73b",
+  id: "<ID>",
 }).then((res: PatchreportsPatchsoftwaretitleidByIdGetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -67,8 +67,8 @@ const sdk = new Jamf({
 });
 
 sdk.patchreports.patchreportsPatchsoftwaretitleidVersionByIdAndVersionGet({
-  id: "9da3f2ce-da7e-423f-a257-411faf4b7544",
-  version: "repudiandae",
+  id: "<ID>",
+  version: "website",
 }).then((res: PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetResponse) => {
   if (res.statusCode == 200) {
     // handle response

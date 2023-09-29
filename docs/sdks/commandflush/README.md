@@ -24,7 +24,7 @@ const sdk = new Jamf({
   },
 });
 
-sdk.commandflush.commandFlush("voluptates".encode()).then((res: CommandFlushResponse) => {
+sdk.commandflush.commandFlush("0|o@6bRL`," as bytes <<<>>>).then((res: CommandFlushResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -66,8 +66,8 @@ const sdk = new Jamf({
 });
 
 sdk.commandflush.createCommandFlushWithIdAndStatus({
-  id: 93940,
-  idtype: CreateCommandFlushWithIdAndStatusIdtype.Mobiledevicegroups,
+  id: 873570,
+  idtype: CreateCommandFlushWithIdAndStatusIdtype.Computergroups,
   status: CreateCommandFlushWithIdAndStatusStatus.Failed,
 }).then((res: CreateCommandFlushWithIdAndStatusResponse) => {
   if (res.statusCode == 200) {

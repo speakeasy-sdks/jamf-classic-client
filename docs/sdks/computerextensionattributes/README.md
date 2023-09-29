@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerextensionattributes.createComputerextensionattributeById({
-  id: 613966,
+  id: 392399,
 }).then((res: CreateComputerextensionattributeByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerextensionattributes.deleteComputerextensionattributeById({
-  id: 679091,
+  id: 471782,
 }).then((res: DeleteComputerextensionattributeByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerextensionattributes.deleteComputerextensionattributeByName({
-  name: "Ervin McLaughlin",
+  name: "lest",
 }).then((res: DeleteComputerextensionattributeByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerextensionattributes.findComputerextensionattributesById({
-  id: 964490,
+  id: 535794,
 }).then((res: FindComputerextensionattributesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerextensionattributes.findComputerextensionattributesByName({
-  name: "Billie Jacobi",
+  name: "strategic",
 }).then((res: FindComputerextensionattributesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerextensionattributes.updateComputerextensionattributeById({
-  id: 222443,
+  id: 510181,
 }).then((res: UpdateComputerextensionattributeByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerextensionattributes.updateComputerextensionattributeByName({
-  name: "Tiffany Welch",
+  name: "male initiatives override",
 }).then((res: UpdateComputerextensionattributeByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

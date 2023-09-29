@@ -28,9 +28,9 @@ const sdk = new Jamf({
 });
 
 sdk.computerapplicationusage.findComputerApplicationUsageById({
-  endDate: new RFCDate("2021-07-27"),
-  id: "d4426980-2d50-42a9-8bb4-f63c969e9a3e",
-  startDate: new RFCDate("2020-12-17"),
+  endDate: new RFCDate("2022-08-06"),
+  id: "<ID>",
+  startDate: new RFCDate("2023-06-04"),
 }).then((res: FindComputerApplicationUsageByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,9 +69,9 @@ const sdk = new Jamf({
 });
 
 sdk.computerapplicationusage.findComputerApplicationUsageByMacAddress({
-  endDate: "in",
-  macaddress: "in",
-  startDate: "illum",
+  endDate: "Bicycle Northeast",
+  macaddress: "sober organic",
+  startDate: "ew invoice",
 }).then((res: FindComputerApplicationUsageByMacAddressResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -110,9 +110,9 @@ const sdk = new Jamf({
 });
 
 sdk.computerapplicationusage.findComputerApplicationUsageByName({
-  endDate: "maiores",
-  name: "Keith Gulgowski",
-  startDate: "ea",
+  endDate: "Shoes Transmasculine baggie",
+  name: "drive lest",
+  startDate: "users",
 }).then((res: FindComputerApplicationUsageByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -151,9 +151,9 @@ const sdk = new Jamf({
 });
 
 sdk.computerapplicationusage.findComputerApplicationUsageBySerial({
-  endDate: "aliquid",
-  serialnumber: "laborum",
-  startDate: "accusamus",
+  endDate: "cloister",
+  serialnumber: "kissingly South convergence",
+  startDate: "optimize connect policy",
 }).then((res: FindComputerApplicationUsageBySerialResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -192,9 +192,9 @@ const sdk = new Jamf({
 });
 
 sdk.computerapplicationusage.findComputerApplicationUsageByUDID({
-  endDate: "non",
-  startDate: "occaecati",
-  udid: "enim",
+  endDate: "SSD",
+  startDate: "East crafty Directives",
+  udid: "Berkshire Practical Southeast",
 }).then((res: FindComputerApplicationUsageByUDIDResponse) => {
   if (res.statusCode == 200) {
     // handle response

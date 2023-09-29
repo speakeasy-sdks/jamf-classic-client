@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.ibeacons.createIBeaconById({
-  id: 901483,
+  id: 543129,
 }).then((res: CreateIBeaconByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.ibeacons.deleteIBeaconById({
-  id: 253642,
+  id: 231330,
 }).then((res: DeleteIBeaconByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.ibeacons.deleteIBeaconByName({
-  name: "Ms. Pearl Towne",
+  name: "to",
 }).then((res: DeleteIBeaconByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.ibeacons.findIBeaconsById({
-  id: 510629,
+  id: 485712,
 }).then((res: FindIBeaconsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.ibeacons.findIBeaconsByName({
-  name: "Lester Parisian",
+  name: "Forward",
 }).then((res: FindIBeaconsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.ibeacons.updateIBeaconById({
-  id: 944708,
+  id: 508329,
 }).then((res: UpdateIBeaconByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.ibeacons.updateIBeaconByName({
-  name: "Darrel Doyle",
+  name: "Small",
 }).then((res: UpdateIBeaconByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

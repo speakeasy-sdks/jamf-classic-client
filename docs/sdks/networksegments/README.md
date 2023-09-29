@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.networksegments.createNetworkSegmentById({
-  id: 889060,
+  id: 478113,
 }).then((res: CreateNetworkSegmentByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.networksegments.deleteNetworkSegmentById({
-  id: 972912,
+  id: 629182,
 }).then((res: DeleteNetworkSegmentByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.networksegments.deleteNetworkSegmentByName({
-  name: "Josh Abshire",
+  name: "blue",
 }).then((res: DeleteNetworkSegmentByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.networksegments.findNetworkSegmentsById({
-  id: 684126,
+  id: 300997,
 }).then((res: FindNetworkSegmentsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.networksegments.findNetworkSegmentsByName({
-  name: "Steven Rath",
+  name: "Neither",
 }).then((res: FindNetworkSegmentsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.networksegments.updateNetworkSegmentById({
-  id: 844854,
+  id: 393979,
 }).then((res: UpdateNetworkSegmentByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.networksegments.updateNetworkSegmentByName({
-  name: "Mrs. Mabel Connelly",
+  name: "upbeat",
 }).then((res: UpdateNetworkSegmentByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

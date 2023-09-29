@@ -29,7 +29,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceinvitations.createMobileDeviceInvitationsById({
-  id: 300403,
+  id: 850185,
 }).then((res: CreateMobileDeviceInvitationsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -68,7 +68,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceinvitations.createMobileDeviceInvitationsByInvitation({
-  invitation: 836364,
+  invitation: 60639,
 }).then((res: CreateMobileDeviceInvitationsByInvitationResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -107,7 +107,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceinvitations.deleteMobileDeviceInvitationById({
-  id: 549501,
+  id: 377680,
 }).then((res: DeleteMobileDeviceInvitationByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -146,7 +146,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceinvitations.deleteMobileDeviceInvitationByInvitation({
-  invitation: 415280,
+  invitation: 34819,
 }).then((res: DeleteMobileDeviceInvitationByInvitationResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -221,7 +221,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceinvitations.findMobileDeviceInvitationsById({
-  id: 930819,
+  id: 522350,
 }).then((res: FindMobileDeviceInvitationsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -260,7 +260,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceinvitations.findMobileDeviceInvitationsByInvitation({
-  invitation: 415608,
+  invitation: 313759,
 }).then((res: FindMobileDeviceInvitationsByInvitationResponse) => {
   if (res.statusCode == 200) {
     // handle response

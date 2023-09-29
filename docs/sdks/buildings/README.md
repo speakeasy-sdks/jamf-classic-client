@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.buildings.createBuildingById({
-  id: 607831,
+  id: 279323,
 }).then((res: CreateBuildingByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.buildings.deleteBuildingById({
-  id: 363711,
+  id: 19430,
 }).then((res: DeleteBuildingByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.buildings.deleteBuildingByName({
-  name: "Velma Batz",
+  name: "Hop National Legacy",
 }).then((res: DeleteBuildingByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.buildings.findBuildingsById({
-  id: 988374,
+  id: 837307,
 }).then((res: FindBuildingsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.buildings.findBuildingsByName({
-  name: "Juan O'Hara",
+  name: "frame Representative",
 }).then((res: FindBuildingsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.buildings.updateBuildingById({
-  id: 161309,
+  id: 197529,
 }).then((res: UpdateBuildingByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.buildings.updateBuildingByName({
-  name: "Shaun McCullough",
+  name: "Cambridgeshire Ball turquoise",
 }).then((res: UpdateBuildingByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

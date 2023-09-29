@@ -26,7 +26,7 @@ const sdk = new Jamf({
 });
 
 sdk.healthcarelistenerrule.createHealthCareListenerRuleById({
-  id: 699575,
+  id: 256297,
 }).then((res: CreateHealthCareListenerRuleByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -101,7 +101,7 @@ const sdk = new Jamf({
 });
 
 sdk.healthcarelistenerrule.findHealthcareListenerRulesById({
-  id: "2f2fb7b1-94a2-476b-a691-6fe1f08f4294",
+  id: "<ID>",
 }).then((res: FindHealthcareListenerRulesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -140,7 +140,7 @@ const sdk = new Jamf({
 });
 
 sdk.healthcarelistenerrule.updateHealthCareListenerRuleById({
-  id: "e3698f44-7f60-43e8-b445-e80ca55efd20",
+  id: "<ID>",
 }).then((res: UpdateHealthCareListenerRuleByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response

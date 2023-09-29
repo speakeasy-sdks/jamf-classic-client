@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.directorybindings.createDirectoryBindingById({
-  id: 633608,
+  id: 437927,
 }).then((res: CreateDirectoryBindingByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.directorybindings.deleteDirectoryBindingById({
-  id: 398434,
+  id: 452959,
 }).then((res: DeleteDirectoryBindingByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.directorybindings.deleteDirectoryBindingByName({
-  name: "Scott Wehner",
+  name: "Glendale Books",
 }).then((res: DeleteDirectoryBindingByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.directorybindings.findDirectoryBindingsById({
-  id: 258684,
+  id: 953857,
 }).then((res: FindDirectoryBindingsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.directorybindings.findDirectoryBindingsByName({
-  name: "Mrs. Gilberto Roberts",
+  name: "Shoes Salad Assistant",
 }).then((res: FindDirectoryBindingsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.directorybindings.updateDirectoryBindingById({
-  id: 119771,
+  id: 53627,
 }).then((res: UpdateDirectoryBindingByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.directorybindings.updateDirectoryBindingByName({
-  name: "Delores Hermiston IV",
+  name: "Liaison background Israel",
 }).then((res: UpdateDirectoryBindingByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

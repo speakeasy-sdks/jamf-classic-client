@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicegroups.createMobileDeviceGroupById({
-  id: 759283,
+  id: 252460,
 }).then((res: CreateMobileDeviceGroupByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicegroups.deleteMobileDeviceGroupById({
-  id: 579681,
+  id: 258406,
 }).then((res: DeleteMobileDeviceGroupByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicegroups.deleteMobileDeviceGroupByName({
-  name: "Allison Kuvalis",
+  name: "Recycled extend turquoise",
 }).then((res: DeleteMobileDeviceGroupByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicegroups.findMobileDeviceGroupsById({
-  id: 254025,
+  id: 58912,
 }).then((res: FindMobileDeviceGroupsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicegroups.findMobileDeviceGroupsByName({
-  name: "Brandy Gibson",
+  name: "deposit Cambridgeshire",
 }).then((res: FindMobileDeviceGroupsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicegroups.updateMobileDeviceGroupById({
-  id: 200516,
+  id: 837248,
 }).then((res: UpdateMobileDeviceGroupByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicegroups.updateMobileDeviceGroupByName({
-  name: "Ms. Armando Gottlieb",
+  name: "society Fish",
 }).then((res: UpdateMobileDeviceGroupByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

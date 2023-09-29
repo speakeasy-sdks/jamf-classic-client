@@ -60,7 +60,7 @@ const sdk = new Jamf({
   },
 });
 
-sdk.mobiledevicecommands.createMobileDeviceCommand("tempora".encode()).then((res: CreateMobileDeviceCommandResponse) => {
+sdk.mobiledevicecommands.createMobileDeviceCommand("gD;q?y\"bqw" as bytes <<<>>>).then((res: CreateMobileDeviceCommandResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }
@@ -117,8 +117,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicecommands.createMobileDeviceCommandURL({
-  command: CreateMobileDeviceCommandURLCommand.SettingsDisableAppAnalytics,
-  idList: "ex",
+  command: CreateMobileDeviceCommandURLCommand.DeviceLocation,
+  idList: "Granite",
 }).then((res: CreateMobileDeviceCommandURLResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -157,8 +157,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicecommands.createMobileDeviceLockCommandURL({
-  idList: "consectetur",
-  lockMessage: "aliquid",
+  idList: "radian",
+  lockMessage: "Bronze GB",
 }).then((res: CreateMobileDeviceLockCommandURLResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -197,8 +197,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicecommands.createMobileDeviceNameCommandURL({
-  deviceName: "ipsa",
-  idList: "laborum",
+  deviceName: "Future",
+  idList: "metrics",
 }).then((res: CreateMobileDeviceNameCommandURLResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -240,8 +240,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicecommands.createMobileScheduleOSUpdateCommandURL({
-  idList: "sunt",
-  installAction: CreateMobileScheduleOSUpdateCommandURLInstallAction.One,
+  idList: "quantifying",
+  installAction: CreateMobileScheduleOSUpdateCommandURLInstallAction.Two,
 }).then((res: CreateMobileScheduleOSUpdateCommandURLResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -283,9 +283,9 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicecommands.createMobileScheduleOSUpdateCommandWithProductVersionURL({
-  idList: "fugiat",
-  installAction: CreateMobileScheduleOSUpdateCommandWithProductVersionURLInstallAction.Two,
-  productVersion: "aliquid",
+  idList: "Electric male",
+  installAction: CreateMobileScheduleOSUpdateCommandWithProductVersionURLInstallAction.One,
+  productVersion: "XML Park",
 }).then((res: CreateMobileScheduleOSUpdateCommandWithProductVersionURLResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -360,7 +360,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicecommands.findMobileDeviceCommandsByCommand({
-  command: "officia",
+  command: "Electric deposit",
 }).then((res: FindMobileDeviceCommandsByCommandResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -399,7 +399,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicecommands.findMobileDeviceCommandsByName({
-  name: "Jeanne Bahringer",
+  name: "complexity",
 }).then((res: FindMobileDeviceCommandsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -438,7 +438,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicecommands.findMobileDeviceCommandsByUuid({
-  uuid: "9a1adeaa-b585-41d6-8645-b08b61891baa",
+  uuid: "71a67216-a890-416c-90d7-93de2db01d31",
 }).then((res: FindMobileDeviceCommandsByUuidResponse) => {
   if (res.statusCode == 200) {
     // handle response

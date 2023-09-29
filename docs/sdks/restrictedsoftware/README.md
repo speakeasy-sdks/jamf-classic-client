@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.restrictedsoftware.createRestrictedSoftwareById({
-  id: 791762,
+  id: 477725,
 }).then((res: CreateRestrictedSoftwareByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.restrictedsoftware.deleteRestrictedSoftwareById({
-  id: 68880,
+  id: 674620,
 }).then((res: DeleteRestrictedSoftwareByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.restrictedsoftware.deleteRestrictedSoftwareByName({
-  name: "May Huel",
+  name: "vigorous West silver",
 }).then((res: DeleteRestrictedSoftwareByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.restrictedsoftware.findRestrictedSoftwareById({
-  id: 496548,
+  id: 859675,
 }).then((res: FindRestrictedSoftwareByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.restrictedsoftware.findRestrictedSoftwareByName({
-  name: "Warren Brakus",
+  name: "pilgrimage righteously",
 }).then((res: FindRestrictedSoftwareByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.restrictedsoftware.updateRestrictedSoftwareById({
-  id: 166289,
+  id: 574167,
 }).then((res: UpdateRestrictedSoftwareByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.restrictedsoftware.updateRestrictedSoftwareByName({
-  name: "Josephine Lakin",
+  name: "OCR Cambridgeshire Toyota",
 }).then((res: UpdateRestrictedSoftwareByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

@@ -48,7 +48,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.createComputerById({
-  id: 892050,
+  id: 117029,
 }).then((res: CreateComputerByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -87,7 +87,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.deleteComputerById({
-  id: 370853,
+  id: 361320,
 }).then((res: DeleteComputerByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -126,7 +126,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.deleteComputerByMacAddress({
-  macaddress: "aspernatur",
+  macaddress: "Executive",
 }).then((res: DeleteComputerByMacAddressResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -165,7 +165,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.deleteComputerByName({
-  name: "Angelica Koelpin MD",
+  name: "unleash",
 }).then((res: DeleteComputerByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -204,7 +204,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.deleteComputerBySerialNumber({
-  serialnumber: "quod",
+  serialnumber: "Implementation Southeast female",
 }).then((res: DeleteComputerBySerialNumberResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -243,7 +243,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.deleteComputerByUDID({
-  udid: "dignissimos",
+  udid: "Soap Branding",
 }).then((res: DeleteComputerByUDIDResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -354,7 +354,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.findComputersById({
-  id: 76956,
+  id: 962919,
 }).then((res: FindComputersByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -393,8 +393,8 @@ const sdk = new Jamf({
 });
 
 sdk.computers.findComputersByIdSubset({
-  id: 469498,
-  subset: FindComputersByIdSubsetSubset.Certificates,
+  id: 130265,
+  subset: FindComputersByIdSubsetSubset.Peripherals,
 }).then((res: FindComputersByIdSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -433,7 +433,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.findComputersByMacAddress({
-  macaddress: "accusamus",
+  macaddress: "online programming",
 }).then((res: FindComputersByMacAddressResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -472,8 +472,8 @@ const sdk = new Jamf({
 });
 
 sdk.computers.findComputersByMacAddressSubset({
-  macaddress: "aliquam",
-  subset: FindComputersByMacAddressSubsetSubset.Certificates,
+  macaddress: "Supervisor Bugatti female",
+  subset: FindComputersByMacAddressSubsetSubset.Purchasing,
 }).then((res: FindComputersByMacAddressSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -512,7 +512,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.findComputersByName({
-  name: "Leslie Williamson",
+  name: "Legacy",
 }).then((res: FindComputersByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -551,7 +551,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.findComputersByNameSubset({
-  name: "Carol Sawayn",
+  name: "concerning",
   subset: FindComputersByNameSubsetSubset.Certificates,
 }).then((res: FindComputersByNameSubsetResponse) => {
   if (res.statusCode == 200) {
@@ -591,7 +591,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.findComputersBySerialNumber({
-  serialnumber: "consequuntur",
+  serialnumber: "invoice Southwest",
 }).then((res: FindComputersBySerialNumberResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -633,8 +633,8 @@ const sdk = new Jamf({
 });
 
 sdk.computers.findComputersBySerialNumberSubset({
-  serialnumber: "deleniti",
-  subset: FindComputersBySerialNumberSubsetSubset.Location,
+  serialnumber: "tesla haptic",
+  subset: FindComputersBySerialNumberSubsetSubset.ConfigurationProfiles,
 }).then((res: FindComputersBySerialNumberSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -673,7 +673,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.findComputersByUDID({
-  udid: "fuga",
+  udid: "East Jewelery invoice",
 }).then((res: FindComputersByUDIDResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -713,7 +713,7 @@ const sdk = new Jamf({
 
 sdk.computers.findComputersByUDIDSubset({
   subset: FindComputersByUDIDSubsetSubset.ExtensionAttributes,
-  udid: "incidunt",
+  udid: "male Trial",
 }).then((res: FindComputersByUDIDSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -752,7 +752,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.flushComputerExtenstionAttributeData({
-  id: "82562f22-2e98-417e-a17c-be61e6b7b95b",
+  id: "<ID>",
 }).then((res: FlushComputerExtenstionAttributeDataResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -791,7 +791,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.matchComputers({
-  match: "eligendi",
+  match: "matrix",
 }).then((res: MatchComputersResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -830,7 +830,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.matchComputersNames({
-  matchname: "sit",
+  matchname: "silver Actinium",
 }).then((res: MatchComputersNamesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -869,7 +869,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.updateComputerById({
-  id: 636061,
+  id: 576492,
 }).then((res: UpdateComputerByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -908,7 +908,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.updateComputerByMacAddress({
-  macaddress: "tempore",
+  macaddress: "withdrawal",
 }).then((res: UpdateComputerByMacAddressResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -947,7 +947,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.updateComputerByName({
-  name: "Miss Blanca Cronin",
+  name: "ROI",
 }).then((res: UpdateComputerByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -986,7 +986,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.updateComputerBySerialNumber({
-  serialnumber: "sapiente",
+  serialnumber: "applications",
 }).then((res: UpdateComputerBySerialNumberResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -1025,7 +1025,7 @@ const sdk = new Jamf({
 });
 
 sdk.computers.updateComputerByUDID({
-  udid: "consectetur",
+  udid: "Trial Handcrafted",
 }).then((res: UpdateComputerByUDIDResponse) => {
   if (res.statusCode == 200) {
     // handle response

@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.categories.createCategoryById({
-  id: 673660,
+  id: 581302,
 }).then((res: CreateCategoryByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.categories.deleteCategoryById({
-  id: 96098,
+  id: 958520,
 }).then((res: DeleteCategoryByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.categories.deleteCategoryByName({
-  name: 971945,
+  name: 875935,
 }).then((res: DeleteCategoryByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.categories.findCategoriesById({
-  id: 976460,
+  id: 87276,
 }).then((res: FindCategoriesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.categories.findCategoriesByName({
-  name: "Jessie Langosh V",
+  name: "hack Car",
 }).then((res: FindCategoriesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.categories.updateCategoryById({
-  id: 451159,
+  id: 527446,
 }).then((res: UpdateCategoryByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.categories.updateCategoryByName({
-  name: "Thomas Batz",
+  name: "sievert",
 }).then((res: UpdateCategoryByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

@@ -33,9 +33,9 @@ const sdk = new Jamf({
 });
 
 sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsById({
-  endDate: new RFCDate("2022-04-04"),
-  id: "a77a89eb-f737-4ae4-a03c-e5e6a95d8a0d",
-  startDate: new RFCDate("2022-09-23"),
+  endDate: new RFCDate("2022-01-22"),
+  id: "<ID>",
+  startDate: new RFCDate("2021-08-19"),
 }).then((res: FindComputerHardwareSoftwareReportsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -78,10 +78,10 @@ const sdk = new Jamf({
 });
 
 sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByIdSubset({
-  endDate: new RFCDate("2022-03-15"),
-  id: 885338,
-  startDate: new RFCDate("2022-04-27"),
-  subset: FindComputerHardwareSoftwareReportsByIdSubsetSubset.Plugins,
+  endDate: new RFCDate("2022-02-28"),
+  id: 311709,
+  startDate: new RFCDate("2023-03-26"),
+  subset: FindComputerHardwareSoftwareReportsByIdSubsetSubset.Hardwre,
 }).then((res: FindComputerHardwareSoftwareReportsByIdSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -121,9 +121,9 @@ const sdk = new Jamf({
 });
 
 sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByMacAddress({
-  endDate: new RFCDate("2022-04-25"),
-  macaddress: "iusto",
-  startDate: new RFCDate("2022-03-19"),
+  endDate: new RFCDate("2021-11-05"),
+  macaddress: "Northeast transmitting",
+  startDate: new RFCDate("2022-10-26"),
 }).then((res: FindComputerHardwareSoftwareReportsByMacAddressResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -166,9 +166,9 @@ const sdk = new Jamf({
 });
 
 sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByMacAddressSubset({
-  endDate: new RFCDate("2022-04-24"),
-  macaddress: "tempore",
-  startDate: new RFCDate("2022-03-28"),
+  endDate: new RFCDate("2023-05-05"),
+  macaddress: "Miami",
+  startDate: new RFCDate("2023-10-16"),
   subset: FindComputerHardwareSoftwareReportsByMacAddressSubsetSubset.Hardwre,
 }).then((res: FindComputerHardwareSoftwareReportsByMacAddressSubsetResponse) => {
   if (res.statusCode == 200) {
@@ -209,9 +209,9 @@ const sdk = new Jamf({
 });
 
 sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByName({
-  endDate: new RFCDate("2022-01-16"),
-  name: "Christian Balistreri",
-  startDate: new RFCDate("2022-07-29"),
+  endDate: new RFCDate("2023-01-11"),
+  name: "Movies morph",
+  startDate: new RFCDate("2023-12-29"),
 }).then((res: FindComputerHardwareSoftwareReportsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -254,9 +254,9 @@ const sdk = new Jamf({
 });
 
 sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByNameSubset({
-  endDate: new RFCDate("2022-04-02"),
-  name: "Darryl Emard",
-  startDate: new RFCDate("2021-05-21"),
+  endDate: new RFCDate("2021-07-31"),
+  name: "Islands Toyota ugh",
+  startDate: new RFCDate("2022-01-06"),
   subset: FindComputerHardwareSoftwareReportsByNameSubsetSubset.Plugins,
 }).then((res: FindComputerHardwareSoftwareReportsByNameSubsetResponse) => {
   if (res.statusCode == 200) {
@@ -297,9 +297,9 @@ const sdk = new Jamf({
 });
 
 sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsBySerial({
-  endDate: new RFCDate("2022-10-07"),
-  serialnumber: "laborum",
-  startDate: new RFCDate("2022-06-12"),
+  endDate: new RFCDate("2023-10-13"),
+  serialnumber: "Hyundai",
+  startDate: new RFCDate("2021-02-14"),
 }).then((res: FindComputerHardwareSoftwareReportsBySerialResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -342,9 +342,9 @@ const sdk = new Jamf({
 });
 
 sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsBySerialSubset({
-  endDate: new RFCDate("2022-10-29"),
-  serialnumber: "distinctio",
-  startDate: new RFCDate("2022-03-17"),
+  endDate: new RFCDate("2022-03-08"),
+  serialnumber: "kindly Southeast",
+  startDate: new RFCDate("2021-07-21"),
   subset: FindComputerHardwareSoftwareReportsBySerialSubsetSubset.Hardwre,
 }).then((res: FindComputerHardwareSoftwareReportsBySerialSubsetResponse) => {
   if (res.statusCode == 200) {
@@ -385,9 +385,9 @@ const sdk = new Jamf({
 });
 
 sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByUDID({
-  endDate: new RFCDate("2021-04-27"),
-  startDate: new RFCDate("2022-10-18"),
-  udid: "fugit",
+  endDate: new RFCDate("2021-05-02"),
+  startDate: new RFCDate("2023-04-25"),
+  udid: "eaque",
 }).then((res: FindComputerHardwareSoftwareReportsByUDIDResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -430,10 +430,10 @@ const sdk = new Jamf({
 });
 
 sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByUDIDSubset({
-  endDate: new RFCDate("2022-07-06"),
-  startDate: new RFCDate("2022-08-24"),
-  subset: FindComputerHardwareSoftwareReportsByUDIDSubsetSubset.Fonts,
-  udid: "hic",
+  endDate: new RFCDate("2022-09-29"),
+  startDate: new RFCDate("2023-09-30"),
+  subset: FindComputerHardwareSoftwareReportsByUDIDSubsetSubset.Software,
+  udid: "instructive",
 }).then((res: FindComputerHardwareSoftwareReportsByUDIDSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response

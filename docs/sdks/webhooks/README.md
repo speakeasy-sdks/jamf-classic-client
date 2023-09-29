@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.webhooks.createWebhookById({
-  id: 609537,
+  id: 490541,
 }).then((res: CreateWebhookByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.webhooks.deleteWebhookById({
-  id: 151230,
+  id: 734358,
 }).then((res: DeleteWebhookByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.webhooks.deleteWebhookByName({
-  name: "Kendra Hauck",
+  name: "South Mountain Southwest",
 }).then((res: DeleteWebhookByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.webhooks.findWebhooksById({
-  id: 569287,
+  id: 162460,
 }).then((res: FindWebhooksByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.webhooks.findWebhooksByName({
-  name: "Dwight Frami",
+  name: "Buckinghamshire notwithstanding International",
 }).then((res: FindWebhooksByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.webhooks.updateWebhookById({
-  id: 363845,
+  id: 932671,
 }).then((res: UpdateWebhookByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.webhooks.updateWebhookByName({
-  name: "Adrienne White",
+  name: "sievert yahoo revolutionize",
 }).then((res: UpdateWebhookByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

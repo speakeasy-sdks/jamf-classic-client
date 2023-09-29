@@ -27,7 +27,7 @@ const sdk = new Jamf({
 });
 
 sdk.jsonwebtokenconfigurations.createJsonWebTokenConfigurationById({
-  id: 548361,
+  id: 184420,
 }).then((res: CreateJsonWebTokenConfigurationByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -66,7 +66,7 @@ const sdk = new Jamf({
 });
 
 sdk.jsonwebtokenconfigurations.deleteJsonWebTokenConfigurationById({
-  id: "e4824d0a-b407-4508-8e51-862065e904f3",
+  id: "<ID>",
 }).then((res: DeleteJsonWebTokenConfigurationByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -105,7 +105,7 @@ const sdk = new Jamf({
 });
 
 sdk.jsonwebtokenconfigurations.findJsonWebTokenConfigurationById({
-  id: "b1194b8a-bf60-43a7-9f9d-fe0ab7da8a50",
+  id: "<ID>",
 }).then((res: FindJsonWebTokenConfigurationByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -180,7 +180,7 @@ const sdk = new Jamf({
 });
 
 sdk.jsonwebtokenconfigurations.updateJsonWebTokenConfigurationById({
-  id: "ce187f86-bc17-43d6-89ee-e9526f8d986e",
+  id: "<ID>",
 }).then((res: UpdateJsonWebTokenConfigurationByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response

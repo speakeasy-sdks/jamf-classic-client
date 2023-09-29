@@ -67,7 +67,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdDelete({
-  id: "472e8028-57a5-4b40-863a-7d575f1400e7",
+  id: "<ID>",
 }).then((res: PatchsoftwaretitlesIdByIdDeleteResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdGet({
-  id: "64ad7334-ec1b-4781-b36a-08088d100efa",
+  id: "<ID>",
 }).then((res: PatchsoftwaretitlesIdByIdGetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -149,7 +149,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdPost({
-  id: "da200ef0-422e-4b21-a4cf-9ab8366c723f",
+  id: "<ID>",
 }).then((res: PatchsoftwaretitlesIdByIdPostResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -190,7 +190,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdPut({
-  id: "fda9e06b-ee48-425c-9fc0-e115c80bff91",
+  id: "<ID>",
 }).then((res: PatchsoftwaretitlesIdByIdPutResponse) => {
   if (res.statusCode == 200) {
     // handle response

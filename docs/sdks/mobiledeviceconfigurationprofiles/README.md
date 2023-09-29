@@ -32,7 +32,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceconfigurationprofiles.createMobileDeviceConfigurationProfileById({
-  id: 29634,
+  id: 357736,
 }).then((res: CreateMobileDeviceConfigurationProfileByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -71,7 +71,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceconfigurationprofiles.deleteMobileDeviceConfigurationProfileById({
-  id: 959143,
+  id: 401787,
 }).then((res: DeleteMobileDeviceConfigurationProfileByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -110,7 +110,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceconfigurationprofiles.deleteMobileDeviceConfigurationProfileByName({
-  name: "Juan Parker",
+  name: "benchmark female",
 }).then((res: DeleteMobileDeviceConfigurationProfileByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -185,7 +185,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesById({
-  id: 29190,
+  id: 994932,
 }).then((res: FindMobileDeviceConfigurationProfilesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -227,7 +227,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesByIdSubset({
-  id: 1207,
+  id: 1927,
   subset: FindMobileDeviceConfigurationProfilesByIdSubsetSubset.Scope,
 }).then((res: FindMobileDeviceConfigurationProfilesByIdSubsetResponse) => {
   if (res.statusCode == 200) {
@@ -267,7 +267,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesByName({
-  name: "Ruben Williamson",
+  name: "Pickup Northwest kilogram",
 }).then((res: FindMobileDeviceConfigurationProfilesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -309,8 +309,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesByNameSubset({
-  name: "Ollie Dicki PhD",
-  subset: FindMobileDeviceConfigurationProfilesByNameSubsetSubset.Scope,
+  name: "Avon",
+  subset: FindMobileDeviceConfigurationProfilesByNameSubsetSubset.General,
 }).then((res: FindMobileDeviceConfigurationProfilesByNameSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -349,7 +349,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceconfigurationprofiles.updateMobileDeviceConfigurationProfileById({
-  id: 770675,
+  id: 879870,
 }).then((res: UpdateMobileDeviceConfigurationProfileByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -388,7 +388,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceconfigurationprofiles.updateMobileDeviceConfigurationProfileByName({
-  name: "Alton Hintz",
+  name: "Director",
 }).then((res: UpdateMobileDeviceConfigurationProfileByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

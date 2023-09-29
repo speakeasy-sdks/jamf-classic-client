@@ -43,7 +43,7 @@ const sdk = new Jamf({
 });
 
 sdk.computercommands.createComputerCommandByCommand({
-  command: CreateComputerCommandByCommandCommand.UnmanageDevice,
+  command: CreateComputerCommandByCommandCommand.DeleteUser,
 }).then((res: CreateComputerCommandByCommandResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -88,7 +88,7 @@ const sdk = new Jamf({
 sdk.computercommands.createComputerCommandByCommandAndAction({
   action: CreateComputerCommandByCommandAndActionAction.Install,
   command: CreateComputerCommandByCommandAndActionCommand.ScheduleOSUpdate,
-  id: "b9ba88f3-a669-4970-b4ba-4469b6e21419",
+  id: "<ID>",
 }).then((res: CreateComputerCommandByCommandAndActionResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -130,8 +130,8 @@ const sdk = new Jamf({
 });
 
 sdk.computercommands.createComputerCommandByCommandAndId({
-  command: CreateComputerCommandByCommandAndIdCommand.DisableRemoteDesktop,
-  id: "9890afa5-63e2-4516-be4c-8b711e5b7fd2",
+  command: CreateComputerCommandByCommandAndIdCommand.ScheduleOSUpdate,
+  id: "<ID>",
 }).then((res: CreateComputerCommandByCommandAndIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -173,9 +173,9 @@ const sdk = new Jamf({
 });
 
 sdk.computercommands.createComputerCommandByCommandIdAndPasscode({
-  command: CreateComputerCommandByCommandIdAndPasscodeCommand.EraseDevice,
-  id: "d028921c-ddc6-4926-81fb-576b0d5f0d30",
-  passcode: "cumque",
+  command: CreateComputerCommandByCommandIdAndPasscodeCommand.DeviceLock,
+  id: "<ID>",
+  passcode: "24 Rubidium virtual",
 }).then((res: CreateComputerCommandByCommandIdAndPasscodeResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -250,7 +250,7 @@ const sdk = new Jamf({
 });
 
 sdk.computercommands.findComputerCommandsByName({
-  name: "Mindy Renner",
+  name: "Bridge sleet application",
 }).then((res: FindComputerCommandsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -289,7 +289,7 @@ const sdk = new Jamf({
 });
 
 sdk.computercommands.findComputerCommandsByUuid({
-  uuid: "58705320-2c73-4d5f-a9b9-0c28909b3fe4",
+  uuid: "d70e80ba-6e24-40b9-95fb-5378b5fc34fb",
 }).then((res: FindComputerCommandsByUuidResponse) => {
   if (res.statusCode == 200) {
     // handle response

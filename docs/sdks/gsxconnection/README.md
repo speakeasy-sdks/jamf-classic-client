@@ -60,7 +60,7 @@ const sdk = new Jamf({
   },
 });
 
-sdk.gsxconnection.updateGSXConnection("exercitationem".encode()).then((res: UpdateGSXConnectionResponse) => {
+sdk.gsxconnection.updateGSXConnection("d:-E#_ZNpF" as bytes <<<>>>).then((res: UpdateGSXConnectionResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

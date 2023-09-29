@@ -29,7 +29,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerinvitations.createComputerInvitationsById({
-  id: 9240,
+  id: 426166,
 }).then((res: CreateComputerInvitationsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -68,7 +68,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerinvitations.createComputerInvitationsByInvitation({
-  invitation: 669917,
+  invitation: 107268,
 }).then((res: CreateComputerInvitationsByInvitationResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -107,7 +107,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerinvitations.deleteComputerInvitationById({
-  id: 833038,
+  id: 620598,
 }).then((res: DeleteComputerInvitationByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -146,7 +146,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerinvitations.deleteComputerInvitationByInvitation({
-  invitation: 785153,
+  invitation: 706715,
 }).then((res: DeleteComputerInvitationByInvitationResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -221,7 +221,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerinvitations.findComputerInvitationsById({
-  id: 984330,
+  id: 737242,
 }).then((res: FindComputerInvitationsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -260,7 +260,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerinvitations.findComputerInvitationsByInvitation({
-  invitation: 281730,
+  invitation: 681787,
 }).then((res: FindComputerInvitationsByInvitationResponse) => {
   if (res.statusCode == 200) {
     // handle response

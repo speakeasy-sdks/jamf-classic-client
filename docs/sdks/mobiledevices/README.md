@@ -45,7 +45,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.createMobileDeviceById({
-  id: 802894,
+  id: 718866,
 }).then((res: CreateMobileDeviceByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -84,7 +84,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.deleteMobileDeviceById({
-  id: 157222,
+  id: 107477,
 }).then((res: DeleteMobileDeviceByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -123,7 +123,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.deleteMobileDeviceByMacAddress({
-  macaddress: "quia",
+  macaddress: "FTP invoice Representative",
 }).then((res: DeleteMobileDeviceByMacAddressResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -162,7 +162,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.deleteMobileDeviceByName({
-  name: "Miss Geneva Reinger",
+  name: "Future Central Coupe",
 }).then((res: DeleteMobileDeviceByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -201,7 +201,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.deleteMobileDeviceBySerialNumber({
-  serialnumber: "fugiat",
+  serialnumber: "Modern becquerel",
 }).then((res: DeleteMobileDeviceBySerialNumberResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -240,7 +240,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.deleteMobileDeviceByUDID({
-  udid: "officia",
+  udid: "capability Sanford withdrawal",
 }).then((res: DeleteMobileDeviceByUDIDResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -315,7 +315,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.findMobileDevicesById({
-  id: 554603,
+  id: 459333,
 }).then((res: FindMobileDevicesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -354,8 +354,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.findMobileDevicesByIdSubset({
-  id: 811939,
-  subset: FindMobileDevicesByIdSubsetSubset.General,
+  id: 384346,
+  subset: FindMobileDevicesByIdSubsetSubset.Purchasing,
 }).then((res: FindMobileDevicesByIdSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -394,7 +394,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.findMobileDevicesByMacAddress({
-  macaddress: "iusto",
+  macaddress: "Senior pfft firewall",
 }).then((res: FindMobileDevicesByMacAddressResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -436,8 +436,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.findMobileDevicesByMacAddressSubset({
-  macaddress: "ipsa",
-  subset: FindMobileDevicesByMacAddressSubsetSubset.ExtensionAttributes,
+  macaddress: "red oh Luxurious",
+  subset: FindMobileDevicesByMacAddressSubsetSubset.ProvisioningProfiles,
 }).then((res: FindMobileDevicesByMacAddressSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -476,7 +476,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.findMobileDevicesByName({
-  name: "Deborah Larson",
+  name: "West",
 }).then((res: FindMobileDevicesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -515,8 +515,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.findMobileDevicesByNameSubset({
-  name: "Kenneth Johnson",
-  subset: FindMobileDevicesByNameSubsetSubset.MobileDeviceGroups,
+  name: "Corporate",
+  subset: FindMobileDevicesByNameSubsetSubset.Purchasing,
 }).then((res: FindMobileDevicesByNameSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -555,7 +555,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.findMobileDevicesBySerialNumber({
-  serialnumber: "beatae",
+  serialnumber: "fat UDP",
 }).then((res: FindMobileDevicesBySerialNumberResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -597,8 +597,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.findMobileDevicesBySerialNumberSubset({
-  serialnumber: "est",
-  subset: FindMobileDevicesBySerialNumberSubsetSubset.ProvisioningProfiles,
+  serialnumber: "how laudantium",
+  subset: FindMobileDevicesBySerialNumberSubsetSubset.Purchasing,
 }).then((res: FindMobileDevicesBySerialNumberSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -637,7 +637,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.findMobileDevicesByUDID({
-  udid: "corrupti",
+  udid: "Officer ink",
 }).then((res: FindMobileDevicesByUDIDResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -676,8 +676,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.findMobileDevicesByUDIDSubset({
-  subset: FindMobileDevicesByUDIDSubsetSubset.Network,
-  udid: "provident",
+  subset: FindMobileDevicesByUDIDSubsetSubset.Purchasing,
+  udid: "Minivan Jordan Borders",
 }).then((res: FindMobileDevicesByUDIDSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -716,7 +716,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.matchMobileDevices({
-  match: "accusamus",
+  match: "male however absent",
 }).then((res: MatchMobileDevicesResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -755,7 +755,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.updateMobileDeviceById({
-  id: 896480,
+  id: 748548,
 }).then((res: UpdateMobileDeviceByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -794,7 +794,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.updateMobileDeviceByMacAddress({
-  macaddress: "tempore",
+  macaddress: "whether deposit",
 }).then((res: UpdateMobileDeviceByMacAddressResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -833,7 +833,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.updateMobileDeviceByName({
-  name: "Angel Jones",
+  name: "Face Forges if",
 }).then((res: UpdateMobileDeviceByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -872,7 +872,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.updateMobileDeviceBySerialNumber({
-  serialnumber: "laudantium",
+  serialnumber: "male",
 }).then((res: UpdateMobileDeviceBySerialNumberResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -911,7 +911,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevices.updateMobileDeviceByUDID({
-  udid: "corporis",
+  udid: "Computer hack",
 }).then((res: UpdateMobileDeviceByUDIDResponse) => {
   if (res.statusCode == 200) {
     // handle response

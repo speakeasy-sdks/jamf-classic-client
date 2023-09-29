@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.sites.createSiteById({
-  id: 601714,
+  id: 28125,
 }).then((res: CreateSiteByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.sites.deleteSiteById({
-  id: 263767,
+  id: 571780,
 }).then((res: DeleteSiteByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.sites.deleteSiteByName({
-  name: "Irvin Rippin",
+  name: "extensible across",
 }).then((res: DeleteSiteByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.sites.findSitesById({
-  id: 720266,
+  id: 534497,
 }).then((res: FindSitesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.sites.findSitesByName({
-  name: "Sophie Schmeler",
+  name: "as Hybrid",
 }).then((res: FindSitesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.sites.updateSiteById({
-  id: 423054,
+  id: 302425,
 }).then((res: UpdateSiteByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.sites.updateSiteByName({
-  name: "Antonio Stanton",
+  name: "Chicken input",
 }).then((res: UpdateSiteByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

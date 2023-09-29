@@ -27,7 +27,7 @@ const sdk = new Jamf({
 });
 
 sdk.peripheraltypes.createPeripheralTypeById({
-  id: 265905,
+  id: 433976,
 }).then((res: CreatePeripheralTypeByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -66,7 +66,7 @@ const sdk = new Jamf({
 });
 
 sdk.peripheraltypes.deletePeripheralTypeById({
-  id: 163558,
+  id: 534002,
 }).then((res: DeletePeripheralTypeByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -141,7 +141,7 @@ const sdk = new Jamf({
 });
 
 sdk.peripheraltypes.findPeripheralTypesById({
-  id: 828147,
+  id: 367116,
 }).then((res: FindPeripheralTypesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -180,7 +180,7 @@ const sdk = new Jamf({
 });
 
 sdk.peripheraltypes.updatePeripheralTypeById({
-  id: 876840,
+  id: 343809,
 }).then((res: UpdatePeripheralTypeByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response

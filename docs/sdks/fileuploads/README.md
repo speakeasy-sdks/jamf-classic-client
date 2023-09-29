@@ -24,9 +24,9 @@ const sdk = new Jamf({
 
 sdk.fileuploads.uploadFiles({
   forceIpaUpload: false,
-  id: "b1ea4265-55ba-43c2-8744-ed53b88f3a8d",
-  idType: UploadFilesIDType.Name,
-  resource: UploadFilesResource.Diskencryptionconfigurations,
+  id: "<ID>",
+  idType: UploadFilesIDType.Id,
+  resource: UploadFilesResource.Mobiledevices,
 }).then((res: UploadFilesResponse) => {
   if (res.statusCode == 200) {
     // handle response

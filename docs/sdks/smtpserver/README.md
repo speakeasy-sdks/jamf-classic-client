@@ -59,7 +59,7 @@ const sdk = new Jamf({
   },
 });
 
-sdk.smtpserver.updateSMTPServer("facilis".encode()).then((res: UpdateSMTPServerResponse) => {
+sdk.smtpserver.updateSMTPServer("gd#;>U6ZGQ" as bytes <<<>>>).then((res: UpdateSMTPServerResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

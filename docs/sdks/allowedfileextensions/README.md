@@ -27,7 +27,7 @@ const sdk = new Jamf({
 });
 
 sdk.allowedfileextensions.createAllowedFileExtensionById({
-  id: 358152,
+  id: 650142,
 }).then((res: CreateAllowedFileExtensionByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -66,7 +66,7 @@ const sdk = new Jamf({
 });
 
 sdk.allowedfileextensions.deleteAllowedFileExtensionById({
-  id: 128926,
+  id: 717312,
 }).then((res: DeleteAllowedFileExtensionByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -141,7 +141,7 @@ const sdk = new Jamf({
 });
 
 sdk.allowedfileextensions.findAllowedFileExtensionById({
-  id: 750686,
+  id: 668652,
 }).then((res: FindAllowedFileExtensionByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -180,7 +180,7 @@ const sdk = new Jamf({
 });
 
 sdk.allowedfileextensions.findAllowedFileExtensionByName({
-  extension: "enim",
+  extension: "png",
 }).then((res: FindAllowedFileExtensionByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

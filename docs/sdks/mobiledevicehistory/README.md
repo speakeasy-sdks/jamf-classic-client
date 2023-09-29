@@ -32,7 +32,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicehistory.findMobileDeviceHistoryById({
-  id: 117380,
+  id: 84752,
 }).then((res: FindMobileDeviceHistoryByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -74,7 +74,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicehistory.findMobileDeviceHistoryByIdSubset({
-  id: 395544,
+  id: 718186,
   subset: FindMobileDeviceHistoryByIdSubsetSubset.General,
 }).then((res: FindMobileDeviceHistoryByIdSubsetResponse) => {
   if (res.statusCode == 200) {
@@ -114,7 +114,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicehistory.findMobileDeviceHistoryByMacAddress({
-  macaddress: "consectetur",
+  macaddress: "Road",
 }).then((res: FindMobileDeviceHistoryByMacAddressResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -156,8 +156,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicehistory.findMobileDeviceHistoryByMacAddressSubset({
-  macaddress: "aperiam",
-  subset: FindMobileDeviceHistoryByMacAddressSubsetSubset.Audits,
+  macaddress: "Interactions Rhenium green",
+  subset: FindMobileDeviceHistoryByMacAddressSubsetSubset.General,
 }).then((res: FindMobileDeviceHistoryByMacAddressSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -196,7 +196,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicehistory.findMobileDeviceHistoryByName({
-  name: "Dominic Abernathy",
+  name: "silver firmware compress",
 }).then((res: FindMobileDeviceHistoryByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -238,8 +238,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicehistory.findMobileDeviceHistoryByNameSubset({
-  name: "Miss Joey Dach",
-  subset: FindMobileDeviceHistoryByNameSubsetSubset.Ebooks,
+  name: "Buckinghamshire off",
+  subset: FindMobileDeviceHistoryByNameSubsetSubset.General,
 }).then((res: FindMobileDeviceHistoryByNameSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -278,7 +278,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicehistory.findMobileDeviceHistoryBySerialNumber({
-  serialnumber: "distinctio",
+  serialnumber: "Southwest male",
 }).then((res: FindMobileDeviceHistoryBySerialNumberResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -320,8 +320,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicehistory.findMobileDeviceHistoryBySerialNumberSubset({
-  serialnumber: "omnis",
-  subset: FindMobileDeviceHistoryBySerialNumberSubsetSubset.Ebooks,
+  serialnumber: "Oganesson",
+  subset: FindMobileDeviceHistoryBySerialNumberSubsetSubset.ManagementCommands,
 }).then((res: FindMobileDeviceHistoryBySerialNumberSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -360,7 +360,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicehistory.findMobileDeviceHistoryByUDID({
-  udid: "minima",
+  udid: "compressing",
 }).then((res: FindMobileDeviceHistoryByUDIDResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -402,8 +402,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledevicehistory.findMobileDeviceHistoryByUDIDSubset({
-  subset: FindMobileDeviceHistoryByUDIDSubsetSubset.Audits,
-  udid: "maxime",
+  subset: FindMobileDeviceHistoryByUDIDSubsetSubset.ManagementCommands,
+  udid: "punctual",
 }).then((res: FindMobileDeviceHistoryByUDIDSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response

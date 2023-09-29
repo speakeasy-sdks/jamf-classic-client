@@ -27,7 +27,7 @@ const sdk = new Jamf({
 });
 
 sdk.vppaccounts.createVPPAdminAccountById({
-  id: 35581,
+  id: 386805,
 }).then((res: CreateVPPAdminAccountByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -66,7 +66,7 @@ const sdk = new Jamf({
 });
 
 sdk.vppaccounts.deleteVPPAdminAccountById({
-  id: 664197,
+  id: 741460,
 }).then((res: DeleteVPPAdminAccountByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -141,7 +141,7 @@ const sdk = new Jamf({
 });
 
 sdk.vppaccounts.findVPPAdminAccountById({
-  id: 388169,
+  id: 769449,
 }).then((res: FindVPPAdminAccountByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -180,7 +180,7 @@ const sdk = new Jamf({
 });
 
 sdk.vppaccounts.updateVPPAdminAccountById({
-  id: 401688,
+  id: 102957,
 }).then((res: UpdateVPPAdminAccountByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response

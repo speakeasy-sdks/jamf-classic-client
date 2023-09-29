@@ -65,7 +65,7 @@ const sdk = new Jamf({
 });
 
 sdk.savedsearches.savedsearchesIdByIdGet({
-  id: "bbc05a23-a45c-4efc-9fde-10a0ce2169e5",
+  id: "<ID>",
 }).then((res: SavedsearchesIdByIdGetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -106,7 +106,7 @@ const sdk = new Jamf({
 });
 
 sdk.savedsearches.savedsearchesNameByNameGet({
-  name: "Ms. Donna Auer",
+  name: "back",
 }).then((res: SavedsearchesNameByNameGetResponse) => {
   if (res.statusCode == 200) {
     // handle response

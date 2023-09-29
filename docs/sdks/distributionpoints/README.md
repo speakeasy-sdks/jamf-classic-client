@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.distributionpoints.createDistributionPointById({
-  id: 15606,
+  id: 323965,
 }).then((res: CreateDistributionPointByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.distributionpoints.deleteDistributionPointById({
-  id: 513075,
+  id: 378774,
 }).then((res: DeleteDistributionPointByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.distributionpoints.deleteDistributionPointByName({
-  name: "Iris Bernhard",
+  name: "Coupe",
 }).then((res: DeleteDistributionPointByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.distributionpoints.findDistributionPointsById({
-  id: 32465,
+  id: 377606,
 }).then((res: FindDistributionPointsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.distributionpoints.findDistributionPointsByName({
-  name: "Toni Fritsch",
+  name: "Berkshire middleware Radon",
 }).then((res: FindDistributionPointsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.distributionpoints.updateDistributionPointById({
-  id: 376226,
+  id: 397,
 }).then((res: UpdateDistributionPointByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.distributionpoints.updateDistributionPointByName({
-  name: "Marian Buckridge",
+  name: "generation",
 }).then((res: UpdateDistributionPointByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

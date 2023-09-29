@@ -59,7 +59,7 @@ const sdk = new Jamf({
   },
 });
 
-sdk.activationcode.updateActivationCode("repellendus".encode()).then((res: UpdateActivationCodeResponse) => {
+sdk.activationcode.updateActivationCode("lK5^<]Y%q1" as bytes <<<>>>).then((res: UpdateActivationCodeResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

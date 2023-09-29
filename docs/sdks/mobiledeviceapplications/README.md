@@ -38,7 +38,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceapplications.createMobileDeviceApplicationById({
-  id: 380335,
+  id: 622125,
 }).then((res: CreateMobileDeviceApplicationByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -77,7 +77,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceapplications.deleteMobileDeviceApplicationByBundleID({
-  bundleid: "dolorem",
+  bundleid: "deliverables",
 }).then((res: DeleteMobileDeviceApplicationByBundleIDResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -116,8 +116,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceapplications.deleteMobileDeviceApplicationByBundleIDandVersion({
-  bundleid: "fugit",
-  version: "cumque",
+  bundleid: "Future",
+  version: "Solutions Nauru UDP",
 }).then((res: DeleteMobileDeviceApplicationByBundleIDandVersionResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -156,7 +156,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceapplications.deleteMobileDeviceApplicationById({
-  id: 684935,
+  id: 849404,
 }).then((res: DeleteMobileDeviceApplicationByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -195,7 +195,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceapplications.deleteMobileDeviceApplicationByName({
-  name: "Lynda Tromp Sr.",
+  name: "Usability",
 }).then((res: DeleteMobileDeviceApplicationByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -270,7 +270,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceapplications.findMobileDeviceApplicationsByBundleID({
-  bundleid: "et",
+  bundleid: "hm Modern",
 }).then((res: FindMobileDeviceApplicationsByBundleIDResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -309,8 +309,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceapplications.findMobileDeviceApplicationsByBundleIDandVersion({
-  bundleid: "ducimus",
-  version: "natus",
+  bundleid: "Cambridgeshire grey initiatives",
+  version: "World before Latin",
 }).then((res: FindMobileDeviceApplicationsByBundleIDandVersionResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -349,7 +349,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceapplications.findMobileDeviceApplicationsById({
-  id: 581082,
+  id: 735053,
 }).then((res: FindMobileDeviceApplicationsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -388,7 +388,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceapplications.findMobileDeviceApplicationsByName({
-  name: "Josephine Boyer",
+  name: "shed Intersex",
 }).then((res: FindMobileDeviceApplicationsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -430,8 +430,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceapplications.findMobileDeviceApplicationsByNameSubset({
-  name: "Terence Beer",
-  subset: FindMobileDeviceApplicationsByNameSubsetSubset.SelfService,
+  name: "Bronze male Borders",
+  subset: FindMobileDeviceApplicationsByNameSubsetSubset.VPPCodes,
 }).then((res: FindMobileDeviceApplicationsByNameSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -470,8 +470,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceapplications.findMobileDeviceAppsByIdSubset({
-  id: 115834,
-  subset: FindMobileDeviceAppsByIdSubsetSubset.SelfService,
+  id: 285156,
+  subset: FindMobileDeviceAppsByIdSubsetSubset.General,
 }).then((res: FindMobileDeviceAppsByIdSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -510,7 +510,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceapplications.updateMobileDeviceApplicationByBundleID({
-  bundleid: "esse",
+  bundleid: "Northwest Shoes BMW",
 }).then((res: UpdateMobileDeviceApplicationByBundleIDResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -549,8 +549,8 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceapplications.updateMobileDeviceApplicationByBundleIDandVersion({
-  bundleid: "praesentium",
-  version: "maiores",
+  bundleid: "Mobility",
+  version: "Ferrari Northeast payment",
 }).then((res: UpdateMobileDeviceApplicationByBundleIDandVersionResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -589,7 +589,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceapplications.updateMobileDeviceApplicationById({
-  id: 967260,
+  id: 539550,
 }).then((res: UpdateMobileDeviceApplicationByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -628,7 +628,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceapplications.updateMobileDeviceApplicationByName({
-  name: "Mr. Diane Stiedemann",
+  name: "portals East",
 }).then((res: UpdateMobileDeviceApplicationByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.packages.createPackageById({
-  id: 809594,
+  id: 442387,
 }).then((res: CreatePackageByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.packages.deletePackageById({
-  id: 316542,
+  id: 113805,
 }).then((res: DeletePackageByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.packages.deletePackageByName({
-  name: "Pearl Schinner",
+  name: "withdrawal est Nevada",
 }).then((res: DeletePackageByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.packages.findPackagesById({
-  id: 357347,
+  id: 986131,
 }).then((res: FindPackagesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.packages.findPackagesByName({
-  name: "Tasha Wolff DDS",
+  name: "Tuna Plastic Fish",
 }).then((res: FindPackagesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.packages.updatePackageById({
-  id: 189753,
+  id: 620224,
 }).then((res: UpdatePackageByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.packages.updatePackageByName({
-  name: "Deanna Mayert",
+  name: "Passenger",
 }).then((res: UpdatePackageByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

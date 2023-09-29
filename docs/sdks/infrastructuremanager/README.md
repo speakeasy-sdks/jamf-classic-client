@@ -61,7 +61,7 @@ const sdk = new Jamf({
 });
 
 sdk.infrastructuremanager.findInfrastructureManagerById({
-  id: 639028,
+  id: 48223,
 }).then((res: FindInfrastructureManagerByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -100,7 +100,7 @@ const sdk = new Jamf({
 });
 
 sdk.infrastructuremanager.updateInfrastructureManagerById({
-  id: 676243,
+  id: 612584,
 }).then((res: UpdateInfrastructureManagerByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response

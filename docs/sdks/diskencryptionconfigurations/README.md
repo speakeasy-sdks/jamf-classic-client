@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.diskencryptionconfigurations.createDiskEncryptionConfigurationById({
-  id: 185232,
+  id: 82551,
 }).then((res: CreateDiskEncryptionConfigurationByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.diskencryptionconfigurations.deleteDiskEncryptionConfigurationById({
-  id: 845358,
+  id: 191333,
 }).then((res: DeleteDiskEncryptionConfigurationByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.diskencryptionconfigurations.deleteDiskEncryptionConfigurationByName({
-  name: "Cassandra Ward V",
+  name: "ROI",
 }).then((res: DeleteDiskEncryptionConfigurationByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.diskencryptionconfigurations.findDiskEncryptionConfigurationsById({
-  id: 945302,
+  id: 789225,
 }).then((res: FindDiskEncryptionConfigurationsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.diskencryptionconfigurations.findDiskEncryptionConfigurationsByName({
-  name: "Lynette Bosco II",
+  name: "Product XML",
 }).then((res: FindDiskEncryptionConfigurationsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.diskencryptionconfigurations.updateDiskEncryptionConfigurationById({
-  id: 86532,
+  id: 220999,
 }).then((res: UpdateDiskEncryptionConfigurationByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.diskencryptionconfigurations.updateDiskEncryptionConfigurationByName({
-  name: "Sherry Morar IV",
+  name: "Elegant Tricycle",
 }).then((res: UpdateDiskEncryptionConfigurationByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

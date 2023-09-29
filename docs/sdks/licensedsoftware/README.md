@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.licensedsoftware.createLicensedSoftwareById({
-  id: 907733,
+  id: 186021,
 }).then((res: CreateLicensedSoftwareByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.licensedsoftware.deleteLicensedSoftwareById({
-  id: 184362,
+  id: 61769,
 }).then((res: DeleteLicensedSoftwareByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.licensedsoftware.deleteLicensedSoftwareByName({
-  name: "Elmer Treutel",
+  name: "Frisco",
 }).then((res: DeleteLicensedSoftwareByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.licensedsoftware.findLicensedSoftwareById({
-  id: 715208,
+  id: 987654,
 }).then((res: FindLicensedSoftwareByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.licensedsoftware.findLicensedSoftwareByName({
-  name: "Jordan Haag",
+  name: "Strategist",
 }).then((res: FindLicensedSoftwareByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.licensedsoftware.updateLicensedSoftwareById({
-  id: 3099,
+  id: 345542,
 }).then((res: UpdateLicensedSoftwareByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.licensedsoftware.updateLicensedSoftwareByName({
-  name: "Katrina Kovacek",
+  name: "Beauty Awesome",
 }).then((res: UpdateLicensedSoftwareByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

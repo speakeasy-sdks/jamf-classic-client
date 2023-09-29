@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.dockitems.createDockItemById({
-  id: 244651,
+  id: 354934,
 }).then((res: CreateDockItemByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.dockitems.deleteDockItemById({
-  id: 974257,
+  id: 716778,
 }).then((res: DeleteDockItemByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.dockitems.deleteDockItemByName({
-  name: "Tabitha Bayer",
+  name: "deliberately segregate male",
 }).then((res: DeleteDockItemByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.dockitems.findDockItemsById({
-  id: 162954,
+  id: 673100,
 }).then((res: FindDockItemsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.dockitems.findDockItemsByName({
-  name: "Luke Schoen",
+  name: "Shirt incentivize South",
 }).then((res: FindDockItemsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.dockitems.updateDockItemById({
-  id: 989410,
+  id: 115043,
 }).then((res: UpdateDockItemByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.dockitems.updateDockItemByName({
-  name: "Anna Hahn",
+  name: "finance static aside",
 }).then((res: UpdateDockItemByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

@@ -34,7 +34,7 @@ const sdk = new Jamf({
 });
 
 sdk.patches.createPatchSoftwareTitlesById({
-  id: "6ecb5734-09e3-4eb1-a5a2-b12eb07f116d",
+  id: "<ID>",
 }).then((res: CreatePatchSoftwareTitlesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -75,7 +75,7 @@ const sdk = new Jamf({
 });
 
 sdk.patches.deleteSoftwareTitlesById({
-  id: 729448,
+  id: 821143,
 }).then((res: DeleteSoftwareTitlesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -116,7 +116,7 @@ const sdk = new Jamf({
 });
 
 sdk.patches.deleteSoftwareTitlesByName({
-  name: "Marion Hills",
+  name: "Neodymium",
 }).then((res: DeleteSoftwareTitlesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -157,8 +157,8 @@ const sdk = new Jamf({
 });
 
 sdk.patches.findComputersByIDAndTitleVersion({
-  id: 988749,
-  version: "eligendi",
+  id: 188338,
+  version: "encash dish",
 }).then((res: FindComputersByIDAndTitleVersionResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -199,8 +199,8 @@ const sdk = new Jamf({
 });
 
 sdk.patches.findComputersByNameAndTitleVersion({
-  name: "Ronnie Welch",
-  version: "totam",
+  name: "Northwest",
+  version: "feed Avon",
 }).then((res: FindComputersByNameAndTitleVersionResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -279,7 +279,7 @@ const sdk = new Jamf({
 });
 
 sdk.patches.findPatchesById({
-  id: 564667,
+  id: 972398,
 }).then((res: FindPatchesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -320,7 +320,7 @@ const sdk = new Jamf({
 });
 
 sdk.patches.findPatchesByName({
-  name: "Ms. Jessica Turcotte",
+  name: "female quantify",
 }).then((res: FindPatchesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -361,7 +361,7 @@ const sdk = new Jamf({
 });
 
 sdk.patches.updateSoftwareTitlesById({
-  id: 826862,
+  id: 862315,
 }).then((res: UpdateSoftwareTitlesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -402,7 +402,7 @@ const sdk = new Jamf({
 });
 
 sdk.patches.updateSoftwareTitlesByName({
-  name: "Dr. Marco Frami",
+  name: "Minivan",
 }).then((res: UpdateSoftwareTitlesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

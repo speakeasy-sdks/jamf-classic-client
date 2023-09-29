@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.computergroups.createComputerGroupById({
-  id: 452109,
+  id: 822209,
 }).then((res: CreateComputerGroupByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.computergroups.deleteComputerGroupById({
-  id: 490459,
+  id: 126210,
 }).then((res: DeleteComputerGroupByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.computergroups.deleteComputerGroupByName({
-  name: "Allen Parisian Jr.",
+  name: "stable",
 }).then((res: DeleteComputerGroupByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.computergroups.findComputerGroupsById({
-  id: 56418,
+  id: 650461,
 }).then((res: FindComputerGroupsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.computergroups.findComputerGroupsByName({
-  name: "Viola Hahn",
+  name: "sometimes Internal",
 }).then((res: FindComputerGroupsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.computergroups.updateComputerGroupById({
-  id: 976405,
+  id: 814605,
 }).then((res: UpdateComputerGroupByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.computergroups.updateComputerGroupByName({
-  name: "Faye Daugherty PhD",
+  name: "Cerium",
 }).then((res: UpdateComputerGroupByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

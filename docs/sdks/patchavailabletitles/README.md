@@ -23,7 +23,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchavailabletitles.patchavailabletitlesSourceidByIdGet({
-  id: "3ca5acfb-e2fd-4570-b577-929177deac64",
+  id: "<ID>",
 }).then((res: PatchavailabletitlesSourceidByIdGetResponse) => {
   if (res.statusCode == 200) {
     // handle response

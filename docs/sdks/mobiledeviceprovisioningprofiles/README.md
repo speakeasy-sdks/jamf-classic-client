@@ -35,7 +35,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceprovisioningprofiles.createMobileDeviceProvisioningProfilesById({
-  id: 520761,
+  id: 535000,
 }).then((res: CreateMobileDeviceProvisioningProfilesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -74,7 +74,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceprovisioningprofiles.createMobileDeviceProvisioningProfilesByName({
-  name: "Edwin Reichert III",
+  name: "Synchronised",
 }).then((res: CreateMobileDeviceProvisioningProfilesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -113,7 +113,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceprovisioningprofiles.createMobileDeviceProvisioningProfilesByUUID({
-  uuid: "6013f59d-a757-4a59-acfe-f66ef1caa338",
+  uuid: "13ea13b9-fc35-4832-beef-b81d409bacf7",
 }).then((res: CreateMobileDeviceProvisioningProfilesByUUIDResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -152,7 +152,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceprovisioningprofiles.deleteMobileDeviceProvisioningProfilesById({
-  id: 216457,
+  id: 368967,
 }).then((res: DeleteMobileDeviceProvisioningProfilesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -191,7 +191,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceprovisioningprofiles.deleteMobileDeviceProvisioningProfilesByName({
-  name: "Victor Rogahn",
+  name: "Southwest Intranet Lari",
 }).then((res: DeleteMobileDeviceProvisioningProfilesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -230,7 +230,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceprovisioningprofiles.deleteMobileDeviceProvisioningProfilesByUUID({
-  uuid: "477373c8-d72f-464d-9db1-f2c4310661e9",
+  uuid: "1b5d663b-9383-442c-ae3e-a53127d259da",
 }).then((res: DeleteMobileDeviceProvisioningProfilesByUUIDResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -305,7 +305,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceprovisioningprofiles.findMobileDeviceProvisioningProfilesById({
-  id: 431994,
+  id: 627440,
 }).then((res: FindMobileDeviceProvisioningProfilesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -344,7 +344,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceprovisioningprofiles.findMobileDeviceProvisioningProfilesByName({
-  name: "Leslie Metz DDS",
+  name: "Investment",
 }).then((res: FindMobileDeviceProvisioningProfilesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -383,7 +383,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceprovisioningprofiles.findMobileDeviceProvisioningProfilesByUUID({
-  uuid: "f9e06e3a-4370-400a-a6b6-bc9b8f759eac",
+  uuid: "f7d07a4b-4f13-400a-9a71-cfd522cce345",
 }).then((res: FindMobileDeviceProvisioningProfilesByUUIDResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -422,7 +422,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceprovisioningprofiles.updateMobileDeviceProvisioningProfilesById({
-  id: 373040,
+  id: 338588,
 }).then((res: UpdateMobileDeviceProvisioningProfilesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -461,7 +461,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceprovisioningprofiles.updateMobileDeviceProvisioningProfilesByName({
-  name: "Jodi Mueller",
+  name: "Hybrid",
 }).then((res: UpdateMobileDeviceProvisioningProfilesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -500,7 +500,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceprovisioningprofiles.updateMobileDeviceProvisioningProfilesByUUID({
-  uuid: "1d311352-965b-4b8a-b202-611435e139db",
+  uuid: "fa0f0ee4-a5c9-4284-80bb-3bc485e07e4d",
 }).then((res: UpdateMobileDeviceProvisioningProfilesByUUIDResponse) => {
   if (res.statusCode == 200) {
     // handle response

@@ -37,7 +37,7 @@ const sdk = new Jamf({
 });
 
 sdk.accounts.createAccountById({
-  id: 715190,
+  id: 437973,
 }).then((res: CreateAccountByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -76,7 +76,7 @@ const sdk = new Jamf({
 });
 
 sdk.accounts.createGroupById({
-  id: 844266,
+  id: 441479,
 }).then((res: CreateGroupByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -115,7 +115,7 @@ const sdk = new Jamf({
 });
 
 sdk.accounts.deleteAccountById({
-  id: 602763,
+  id: 215117,
 }).then((res: DeleteAccountByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -154,7 +154,7 @@ const sdk = new Jamf({
 });
 
 sdk.accounts.deleteAccountByName({
-  name: "Johnnie Stamm",
+  name: "Cotton forenenst",
 }).then((res: DeleteAccountByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -193,7 +193,7 @@ const sdk = new Jamf({
 });
 
 sdk.accounts.deleteGroupById({
-  id: 645894,
+  id: 444055,
 }).then((res: DeleteGroupByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -232,7 +232,7 @@ const sdk = new Jamf({
 });
 
 sdk.accounts.deleteGroupByName({
-  name: 384382,
+  name: 274902,
 }).then((res: DeleteGroupByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -307,7 +307,7 @@ const sdk = new Jamf({
 });
 
 sdk.accounts.findAccountsById({
-  id: 437587,
+  id: 990137,
 }).then((res: FindAccountsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -346,7 +346,7 @@ const sdk = new Jamf({
 });
 
 sdk.accounts.findAccountsByName({
-  name: "Raquel Bednar",
+  name: "Fishers indexing",
 }).then((res: FindAccountsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -385,7 +385,7 @@ const sdk = new Jamf({
 });
 
 sdk.accounts.findGroupsById({
-  id: 383441,
+  id: 955309,
 }).then((res: FindGroupsByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -424,7 +424,7 @@ const sdk = new Jamf({
 });
 
 sdk.accounts.findGroupsByName({
-  name: "Alexandra Schulist",
+  name: "Santa Identity",
 }).then((res: FindGroupsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -463,7 +463,7 @@ const sdk = new Jamf({
 });
 
 sdk.accounts.updateAccountById({
-  id: 568045,
+  id: 172312,
 }).then((res: UpdateAccountByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -502,7 +502,7 @@ const sdk = new Jamf({
 });
 
 sdk.accounts.updateAccountByName({
-  name: "Mrs. Sophie Smith MD",
+  name: "modulo",
 }).then((res: UpdateAccountByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -541,7 +541,7 @@ const sdk = new Jamf({
 });
 
 sdk.accounts.updateGroupById({
-  id: 20218,
+  id: 597234,
 }).then((res: UpdateGroupByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -580,7 +580,7 @@ const sdk = new Jamf({
 });
 
 sdk.accounts.updateGroupByName({
-  name: 368241,
+  name: 14723,
 }).then((res: UpdateGroupByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

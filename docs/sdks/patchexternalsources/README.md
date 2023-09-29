@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchexternalsources.createPatchExternalSourcesById({
-  id: 741238,
+  id: 274468,
 }).then((res: CreatePatchExternalSourcesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchexternalsources.createPatchExternalSourcesByName({
-  name: "Sylvia Turner II",
+  name: "Transexual foreground ivory",
 }).then((res: CreatePatchExternalSourcesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchexternalsources.deletePatchExternalSourcesById({
-  id: "5b197cd4-4e2f-452d-82d3-513bb6f48b65",
+  id: "<ID>",
 }).then((res: DeletePatchExternalSourcesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchexternalsources.findPatchExternalSourcesById({
-  id: "6bcdb35f-f2e4-4b27-937a-8cd9e7319c17",
+  id: "<ID>",
 }).then((res: FindPatchExternalSourcesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchexternalsources.findPatchExternalSourcesByName({
-  name: "Ginger Hand",
+  name: "custom olive Arkansas",
 }).then((res: FindPatchExternalSourcesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchexternalsources.updatePatchExternalSourcesById({
-  id: "f77b114e-eb52-4ff7-85fc-37814d4c98e0",
+  id: "<ID>",
 }).then((res: UpdatePatchExternalSourcesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchexternalsources.updatePatchExternalSourcesByName({
-  name: "Adam Reilly",
+  name: "area blue",
 }).then((res: UpdatePatchExternalSourcesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

@@ -29,7 +29,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchpolicies.createPatchPolicyBySoftwareTitleConfigId({
-  softwaretitleconfigid: 475826,
+  softwaretitleconfigid: 205122,
 }).then((res: CreatePatchPolicyBySoftwareTitleConfigIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -68,7 +68,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchpolicies.deletePatchPolicyById({
-  id: 930840,
+  id: 891870,
 }).then((res: DeletePatchPolicyByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -145,8 +145,8 @@ const sdk = new Jamf({
 });
 
 sdk.patchpolicies.findPatchPoliciesByIdSubset({
-  id: 708771,
-  subset: FindPatchPoliciesByIdSubsetSubset.Scope,
+  id: 512196,
+  subset: FindPatchPoliciesByIdSubsetSubset.General,
 }).then((res: FindPatchPoliciesByIdSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -187,7 +187,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchpolicies.findPatchPoliciesBySoftwareTitleConfigId({
-  softwaretitleconfigid: 43975,
+  softwaretitleconfigid: 916770,
 }).then((res: FindPatchPoliciesBySoftwareTitleConfigIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -226,7 +226,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchpolicies.findPatchPolicyById({
-  id: 574092,
+  id: 840291,
 }).then((res: FindPatchPolicyByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -265,7 +265,7 @@ const sdk = new Jamf({
 });
 
 sdk.patchpolicies.updatePatchPolicyById({
-  id: 879522,
+  id: 648752,
 }).then((res: UpdatePatchPolicyByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response

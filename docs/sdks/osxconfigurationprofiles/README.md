@@ -32,7 +32,7 @@ const sdk = new Jamf({
 });
 
 sdk.osxconfigurationprofiles.createOsxConfigurationProfileById({
-  id: 937117,
+  id: 774029,
 }).then((res: CreateOsxConfigurationProfileByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -71,7 +71,7 @@ const sdk = new Jamf({
 });
 
 sdk.osxconfigurationprofiles.deleteOsxConfigurationProfileById({
-  id: 239337,
+  id: 564754,
 }).then((res: DeleteOsxConfigurationProfileByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -110,7 +110,7 @@ const sdk = new Jamf({
 });
 
 sdk.osxconfigurationprofiles.deleteOsxConfigurationProfileByName({
-  name: "Otis Grady",
+  name: "Cambridgeshire",
 }).then((res: DeleteOsxConfigurationProfileByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -185,7 +185,7 @@ const sdk = new Jamf({
 });
 
 sdk.osxconfigurationprofiles.findOsxConfigurationProfilesById({
-  id: 106255,
+  id: 118508,
 }).then((res: FindOsxConfigurationProfilesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -227,7 +227,7 @@ const sdk = new Jamf({
 });
 
 sdk.osxconfigurationprofiles.findOsxConfigurationProfilesByIdSubset({
-  id: 600213,
+  id: 370266,
   subset: FindOsxConfigurationProfilesByIdSubsetSubset.Scope,
 }).then((res: FindOsxConfigurationProfilesByIdSubsetResponse) => {
   if (res.statusCode == 200) {
@@ -267,7 +267,7 @@ const sdk = new Jamf({
 });
 
 sdk.osxconfigurationprofiles.findOsxConfigurationProfilesByName({
-  name: "Kent Corkery",
+  name: "Investment Georgia bandwidth",
 }).then((res: FindOsxConfigurationProfilesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -309,8 +309,8 @@ const sdk = new Jamf({
 });
 
 sdk.osxconfigurationprofiles.findOsxConfigurationProfilesByNameSubset({
-  name: "Cristina Nienow",
-  subset: FindOsxConfigurationProfilesByNameSubsetSubset.SelfService,
+  name: "South",
+  subset: FindOsxConfigurationProfilesByNameSubsetSubset.General,
 }).then((res: FindOsxConfigurationProfilesByNameSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -349,7 +349,7 @@ const sdk = new Jamf({
 });
 
 sdk.osxconfigurationprofiles.updateOsxConfigurationProfileById({
-  id: 359111,
+  id: 633054,
 }).then((res: UpdateOsxConfigurationProfileByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -388,7 +388,7 @@ const sdk = new Jamf({
 });
 
 sdk.osxconfigurationprofiles.updateOsxConfigurationProfileByName({
-  name: "Kristy Lemke",
+  name: "National Rhodium hack",
 }).then((res: UpdateOsxConfigurationProfileByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

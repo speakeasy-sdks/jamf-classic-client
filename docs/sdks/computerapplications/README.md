@@ -26,8 +26,8 @@ const sdk = new Jamf({
 });
 
 sdk.computerapplications.findComputerApplicationByNameAndVersion({
-  application: "veritatis",
-  version: "itaque",
+  application: "blue South iterate",
+  version: "azure",
 }).then((res: FindComputerApplicationByNameAndVersionResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -66,7 +66,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerapplications.findComputerApplicationsByName({
-  application: "incidunt",
+  application: "dolore Investor",
 }).then((res: FindComputerApplicationsByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -105,9 +105,9 @@ const sdk = new Jamf({
 });
 
 sdk.computerapplications.findComputerApplicationsByNameAndVersionAndInventory({
-  application: "enim",
-  inventory: "consequatur",
-  version: "est",
+  application: "oh less up",
+  inventory: "Designer New cursor",
+  version: "Borders",
 }).then((res: FindComputerApplicationsByNameAndVersionAndInventoryResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -146,8 +146,8 @@ const sdk = new Jamf({
 });
 
 sdk.computerapplications.findComputerApplicationsByNameInventory({
-  application: "quibusdam",
-  inventory: "explicabo",
+  application: "tesla",
+  inventory: "swimsuit East radian",
 }).then((res: FindComputerApplicationsByNameInventoryResponse) => {
   if (res.statusCode == 200) {
     // handle response

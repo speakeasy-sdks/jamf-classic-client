@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceextensionattributes.createMobiledeviceextensionattributeById({
-  id: 349440,
+  id: 775079,
 }).then((res: CreateMobiledeviceextensionattributeByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceextensionattributes.deleteMobiledeviceextensionattributeById({
-  id: 70410,
+  id: 187773,
 }).then((res: DeleteMobiledeviceextensionattributeByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceextensionattributes.deleteMobiledeviceextensionattributeByName({
-  name: "Raul Rolfson",
+  name: "Northwest panel",
 }).then((res: DeleteMobiledeviceextensionattributeByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceextensionattributes.findMobiledeviceextensionattributesById({
-  id: 160393,
+  id: 629314,
 }).then((res: FindMobiledeviceextensionattributesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceextensionattributes.findMobiledeviceextensionattributesByName({
-  name: "Mrs. June Tremblay",
+  name: "Soft Honda",
 }).then((res: FindMobiledeviceextensionattributesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceextensionattributes.updateMobiledeviceextensionattributeById({
-  id: 878373,
+  id: 268156,
 }).then((res: UpdateMobiledeviceextensionattributeByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.mobiledeviceextensionattributes.updateMobiledeviceextensionattributeByName({
-  name: "Kerry Dickinson",
+  name: "ad Polestar",
 }).then((res: UpdateMobiledeviceextensionattributeByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response

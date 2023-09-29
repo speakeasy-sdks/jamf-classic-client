@@ -64,7 +64,7 @@ const sdk = new Jamf({
   },
 });
 
-sdk.computerinventorycollection.updateComputerInventoryCollection("itaque".encode()).then((res: UpdateComputerInventoryCollectionResponse) => {
+sdk.computerinventorycollection.updateComputerInventoryCollection("#e`N/Q\"g!N" as bytes <<<>>>).then((res: UpdateComputerInventoryCollectionResponse) => {
   if (res.statusCode == 200) {
     // handle response
   }

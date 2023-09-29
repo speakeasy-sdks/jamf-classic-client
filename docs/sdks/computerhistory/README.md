@@ -32,7 +32,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerhistory.findComputerHistoryById({
-  id: 30452,
+  id: 814675,
 }).then((res: FindComputerHistoryByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -71,8 +71,8 @@ const sdk = new Jamf({
 });
 
 sdk.computerhistory.findComputerHistoryByIdSubset({
-  id: 765326,
-  subset: FindComputerHistoryByIdSubsetSubset.Commands,
+  id: 723127,
+  subset: FindComputerHistoryByIdSubsetSubset.CasperImagingLogs,
 }).then((res: FindComputerHistoryByIdSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -111,7 +111,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerhistory.findComputerHistoryByMacAddress({
-  macaddress: "nobis",
+  macaddress: "Identity Genderflux whose",
 }).then((res: FindComputerHistoryByMacAddressResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -153,8 +153,8 @@ const sdk = new Jamf({
 });
 
 sdk.computerhistory.findComputerHistoryByMacAddressSubset({
-  macaddress: "et",
-  subset: FindComputerHistoryByMacAddressSubsetSubset.MacAppStoreApplications,
+  macaddress: "Mews North Indiana",
+  subset: FindComputerHistoryByMacAddressSubsetSubset.UserLocation,
 }).then((res: FindComputerHistoryByMacAddressSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -193,7 +193,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerhistory.findComputerHistoryByName({
-  name: "Carolyn Rohan",
+  name: "Tasty override",
 }).then((res: FindComputerHistoryByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -232,8 +232,8 @@ const sdk = new Jamf({
 });
 
 sdk.computerhistory.findComputerHistoryByNameSubset({
-  name: "Kevin Willms",
-  subset: FindComputerHistoryByNameSubsetSubset.Audits,
+  name: "East Convertible Scandium",
+  subset: FindComputerHistoryByNameSubsetSubset.MacAppStoreApplications,
 }).then((res: FindComputerHistoryByNameSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -272,7 +272,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerhistory.findComputerHistoryBySerialNumber({
-  serialnumber: "adipisci",
+  serialnumber: "calculating",
 }).then((res: FindComputerHistoryBySerialNumberResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -314,8 +314,8 @@ const sdk = new Jamf({
 });
 
 sdk.computerhistory.findComputerHistoryBySerialNumberSubset({
-  serialnumber: "dolorum",
-  subset: FindComputerHistoryBySerialNumberSubsetSubset.ComputerUsageLogs,
+  serialnumber: "white Philippine Rutherfordium",
+  subset: FindComputerHistoryBySerialNumberSubsetSubset.Audits,
 }).then((res: FindComputerHistoryBySerialNumberSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -354,7 +354,7 @@ const sdk = new Jamf({
 });
 
 sdk.computerhistory.findComputerHistoryByUDID({
-  udid: "quae",
+  udid: "quisquam clip",
 }).then((res: FindComputerHistoryByUDIDResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -393,8 +393,8 @@ const sdk = new Jamf({
 });
 
 sdk.computerhistory.findComputerHistoryByUDIDSubset({
-  subset: FindComputerHistoryByUDIDSubsetSubset.General,
-  udid: "quas",
+  subset: FindComputerHistoryByUDIDSubsetSubset.ScreenSharingLogs,
+  udid: "Berkshire",
 }).then((res: FindComputerHistoryByUDIDSubsetResponse) => {
   if (res.statusCode == 200) {
     // handle response

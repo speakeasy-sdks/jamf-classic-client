@@ -30,7 +30,7 @@ const sdk = new Jamf({
 });
 
 sdk.removablemacaddresses.createRemovableMacAddressById({
-  id: 761437,
+  id: 765206,
 }).then((res: CreateRemovableMacAddressByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -69,7 +69,7 @@ const sdk = new Jamf({
 });
 
 sdk.removablemacaddresses.deleteRemovableMacAddressById({
-  id: 2064,
+  id: 777999,
 }).then((res: DeleteRemovableMacAddressByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +108,7 @@ const sdk = new Jamf({
 });
 
 sdk.removablemacaddresses.deleteRemovableMacAddressByName({
-  name: "Antonio Jerde",
+  name: "female override discrete",
 }).then((res: DeleteRemovableMacAddressByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -183,7 +183,7 @@ const sdk = new Jamf({
 });
 
 sdk.removablemacaddresses.findRemovableMacAddressesById({
-  id: 330440,
+  id: 810574,
 }).then((res: FindRemovableMacAddressesByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -222,7 +222,7 @@ const sdk = new Jamf({
 });
 
 sdk.removablemacaddresses.findRemovableMacAddressesByName({
-  name: "Luke Mayer",
+  name: "World",
 }).then((res: FindRemovableMacAddressesByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -261,7 +261,7 @@ const sdk = new Jamf({
 });
 
 sdk.removablemacaddresses.updateRemovableMacAddressById({
-  id: 947822,
+  id: 168869,
 }).then((res: UpdateRemovableMacAddressByIdResponse) => {
   if (res.statusCode == 200) {
     // handle response
@@ -300,7 +300,7 @@ const sdk = new Jamf({
 });
 
 sdk.removablemacaddresses.updateRemovableMacAddressByName({
-  name: "Pam Kirlin",
+  name: "Hybrid invoice back",
 }).then((res: UpdateRemovableMacAddressByNameResponse) => {
   if (res.statusCode == 200) {
     // handle response
