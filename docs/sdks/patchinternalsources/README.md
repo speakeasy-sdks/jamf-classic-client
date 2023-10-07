@@ -15,20 +15,21 @@ Finds all patch internal sources
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPatchInternalSourcesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchinternalsources.findPatchInternalSources().then((res: FindPatchInternalSourcesResponse) => {
+  const res = await sdk.patchinternalsources.findPatchInternalSources();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -51,22 +52,23 @@ Finds a patch internal source by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPatchInternalSourcesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchinternalsources.findPatchInternalSourcesById({
-  id: "<ID>",
-}).then((res: FindPatchInternalSourcesByIdResponse) => {
+  const res = await sdk.patchinternalsources.findPatchInternalSourcesById({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -90,22 +92,23 @@ Finds the first patch internal source with the name provided
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPatchInternalSourcesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchinternalsources.findPatchInternalSourcesByName({
-  name: "Shirt Club",
-}).then((res: FindPatchInternalSourcesByNameResponse) => {
+  const res = await sdk.patchinternalsources.findPatchInternalSourcesByName({
+    name: "Shirt Club",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

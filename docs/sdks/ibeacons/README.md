@@ -20,22 +20,23 @@ Creates a new iBeacon region by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateIBeaconByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ibeacons.createIBeaconById({
-  id: 543129,
-}).then((res: CreateIBeaconByIdResponse) => {
+  const res = await sdk.ibeacons.createIBeaconById({
+    id: 543129,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes an iBeacon region by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteIBeaconByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ibeacons.deleteIBeaconById({
-  id: 231330,
-}).then((res: DeleteIBeaconByIdResponse) => {
+  const res = await sdk.ibeacons.deleteIBeaconById({
+    id: 231330,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes an iBeacon region by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteIBeaconByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ibeacons.deleteIBeaconByName({
-  name: "to",
-}).then((res: DeleteIBeaconByNameResponse) => {
+  const res = await sdk.ibeacons.deleteIBeaconByName({
+    name: "to",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all iBeacon regions
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindIBeaconsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ibeacons.findIBeacons().then((res: FindIBeaconsResponse) => {
+  const res = await sdk.ibeacons.findIBeacons();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds iBeacon regions by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindIBeaconsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ibeacons.findIBeaconsById({
-  id: 485712,
-}).then((res: FindIBeaconsByIdResponse) => {
+  const res = await sdk.ibeacons.findIBeaconsById({
+    id: 485712,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds iBeacon regions by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindIBeaconsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ibeacons.findIBeaconsByName({
-  name: "Forward",
-}).then((res: FindIBeaconsByNameResponse) => {
+  const res = await sdk.ibeacons.findIBeaconsByName({
+    name: "Forward",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Updates an existing iBeacon region by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateIBeaconByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ibeacons.updateIBeaconById({
-  id: 508329,
-}).then((res: UpdateIBeaconByIdResponse) => {
+  const res = await sdk.ibeacons.updateIBeaconById({
+    id: 508329,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Updates an existing iBeacon region by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateIBeaconByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ibeacons.updateIBeaconByName({
-  name: "Small",
-}).then((res: UpdateIBeaconByNameResponse) => {
+  const res = await sdk.ibeacons.updateIBeaconByName({
+    name: "Small",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

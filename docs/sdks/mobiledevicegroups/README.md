@@ -20,22 +20,23 @@ Creates a new mobile device group by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMobileDeviceGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicegroups.createMobileDeviceGroupById({
-  id: 252460,
-}).then((res: CreateMobileDeviceGroupByIdResponse) => {
+  const res = await sdk.mobiledevicegroups.createMobileDeviceGroupById({
+    id: 252460,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a mobile device group by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicegroups.deleteMobileDeviceGroupById({
-  id: 258406,
-}).then((res: DeleteMobileDeviceGroupByIdResponse) => {
+  const res = await sdk.mobiledevicegroups.deleteMobileDeviceGroupById({
+    id: 258406,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a mobile device group by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceGroupByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicegroups.deleteMobileDeviceGroupByName({
-  name: "Recycled extend turquoise",
-}).then((res: DeleteMobileDeviceGroupByNameResponse) => {
+  const res = await sdk.mobiledevicegroups.deleteMobileDeviceGroupByName({
+    name: "Recycled extend turquoise",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all mobile device groups
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceGroupsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicegroups.findMobileDeviceGroups().then((res: FindMobileDeviceGroupsResponse) => {
+  const res = await sdk.mobiledevicegroups.findMobileDeviceGroups();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds mobile device groups by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceGroupsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicegroups.findMobileDeviceGroupsById({
-  id: 58912,
-}).then((res: FindMobileDeviceGroupsByIdResponse) => {
+  const res = await sdk.mobiledevicegroups.findMobileDeviceGroupsById({
+    id: 58912,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds mobile device groups by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceGroupsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicegroups.findMobileDeviceGroupsByName({
-  name: "deposit Cambridgeshire",
-}).then((res: FindMobileDeviceGroupsByNameResponse) => {
+  const res = await sdk.mobiledevicegroups.findMobileDeviceGroupsByName({
+    name: "deposit Cambridgeshire",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ One or more mobile devices can be added by using "mobile_device_additions" inste
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicegroups.updateMobileDeviceGroupById({
-  id: 837248,
-}).then((res: UpdateMobileDeviceGroupByIdResponse) => {
+  const res = await sdk.mobiledevicegroups.updateMobileDeviceGroupById({
+    id: 837248,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ One or more mobile devices can be added by using "mobile_device_additions" inste
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceGroupByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicegroups.updateMobileDeviceGroupByName({
-  name: "society Fish",
-}).then((res: UpdateMobileDeviceGroupByNameResponse) => {
+  const res = await sdk.mobiledevicegroups.updateMobileDeviceGroupByName({
+    name: "society Fish",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

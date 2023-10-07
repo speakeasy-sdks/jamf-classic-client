@@ -22,22 +22,23 @@ Creates a new OS X configuration profile by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateOsxConfigurationProfileByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.osxconfigurationprofiles.createOsxConfigurationProfileById({
-  id: 774029,
-}).then((res: CreateOsxConfigurationProfileByIdResponse) => {
+  const res = await sdk.osxconfigurationprofiles.createOsxConfigurationProfileById({
+    id: 774029,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -61,22 +62,23 @@ Deletes a OS X configuration profile by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteOsxConfigurationProfileByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.osxconfigurationprofiles.deleteOsxConfigurationProfileById({
-  id: 564754,
-}).then((res: DeleteOsxConfigurationProfileByIdResponse) => {
+  const res = await sdk.osxconfigurationprofiles.deleteOsxConfigurationProfileById({
+    id: 564754,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -100,22 +102,23 @@ Deletes a OS X configuration profile by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteOsxConfigurationProfileByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.osxconfigurationprofiles.deleteOsxConfigurationProfileByName({
-  name: "Cambridgeshire",
-}).then((res: DeleteOsxConfigurationProfileByNameResponse) => {
+  const res = await sdk.osxconfigurationprofiles.deleteOsxConfigurationProfileByName({
+    name: "Cambridgeshire",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -139,20 +142,21 @@ Finds all OS X configuration profiles
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindOsxConfigurationProfilesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.osxconfigurationprofiles.findOsxConfigurationProfiles().then((res: FindOsxConfigurationProfilesResponse) => {
+  const res = await sdk.osxconfigurationprofiles.findOsxConfigurationProfiles();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -175,22 +179,23 @@ Finds OS X configuration profiles by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindOsxConfigurationProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.osxconfigurationprofiles.findOsxConfigurationProfilesById({
-  id: 118508,
-}).then((res: FindOsxConfigurationProfilesByIdResponse) => {
+  const res = await sdk.osxconfigurationprofiles.findOsxConfigurationProfilesById({
+    id: 118508,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -214,26 +219,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindOsxConfigurationProfilesByIdSubsetResponse,
-  FindOsxConfigurationProfilesByIdSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindOsxConfigurationProfilesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.osxconfigurationprofiles.findOsxConfigurationProfilesByIdSubset({
-  id: 370266,
-  subset: FindOsxConfigurationProfilesByIdSubsetSubset.Scope,
-}).then((res: FindOsxConfigurationProfilesByIdSubsetResponse) => {
+  const res = await sdk.osxconfigurationprofiles.findOsxConfigurationProfilesByIdSubset({
+    id: 370266,
+    subset: FindOsxConfigurationProfilesByIdSubsetSubset.Scope,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -257,22 +261,23 @@ Finds OS X configuration profiles by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindOsxConfigurationProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.osxconfigurationprofiles.findOsxConfigurationProfilesByName({
-  name: "Investment Georgia bandwidth",
-}).then((res: FindOsxConfigurationProfilesByNameResponse) => {
+  const res = await sdk.osxconfigurationprofiles.findOsxConfigurationProfilesByName({
+    name: "Investment Georgia bandwidth",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -296,26 +301,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindOsxConfigurationProfilesByNameSubsetResponse,
-  FindOsxConfigurationProfilesByNameSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindOsxConfigurationProfilesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.osxconfigurationprofiles.findOsxConfigurationProfilesByNameSubset({
-  name: "South",
-  subset: FindOsxConfigurationProfilesByNameSubsetSubset.General,
-}).then((res: FindOsxConfigurationProfilesByNameSubsetResponse) => {
+  const res = await sdk.osxconfigurationprofiles.findOsxConfigurationProfilesByNameSubset({
+    name: "South",
+    subset: FindOsxConfigurationProfilesByNameSubsetSubset.General,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -339,22 +343,23 @@ Updates an existing OS X configuration profile by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateOsxConfigurationProfileByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.osxconfigurationprofiles.updateOsxConfigurationProfileById({
-  id: 633054,
-}).then((res: UpdateOsxConfigurationProfileByIdResponse) => {
+  const res = await sdk.osxconfigurationprofiles.updateOsxConfigurationProfileById({
+    id: 633054,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -378,22 +383,23 @@ Updates an existing OS X configuration profile by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateOsxConfigurationProfileByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.osxconfigurationprofiles.updateOsxConfigurationProfileByName({
-  name: "National Rhodium hack",
-}).then((res: UpdateOsxConfigurationProfileByNameResponse) => {
+  const res = await sdk.osxconfigurationprofiles.updateOsxConfigurationProfileByName({
+    name: "National Rhodium hack",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

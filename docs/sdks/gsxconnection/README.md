@@ -14,20 +14,21 @@ Finds the Jamf Pro GSX connection information
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindGSXConnectionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.gsxconnection.findGSXConnection().then((res: FindGSXConnectionResponse) => {
+  const res = await sdk.gsxconnection.findGSXConnection();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -50,21 +51,22 @@ Updates the Jamf Pro GSX connection information
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateGSXConnectionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { GsxConnectionRegion } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.gsxconnection.updateGSXConnection("d:-E#_ZNpF" as bytes <<<>>>).then((res: UpdateGSXConnectionResponse) => {
+  const res = await sdk.gsxconnection.updateGSXConnection("d:-E#_ZNpF" as bytes <<<>>>);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

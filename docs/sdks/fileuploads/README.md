@@ -13,25 +13,26 @@ Here is a sample command curl -k -u user:password https://my.server.com:8443/JSS
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UploadFilesIDType, UploadFilesResource, UploadFilesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { UploadFilesIDType, UploadFilesResource } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.fileuploads.uploadFiles({
-  forceIpaUpload: false,
-  id: "<ID>",
-  idType: UploadFilesIDType.Id,
-  resource: UploadFilesResource.Mobiledevices,
-}).then((res: UploadFilesResponse) => {
+  const res = await sdk.fileuploads.uploadFiles({
+    id: "<ID>",
+    idType: UploadFilesIDType.Id,
+    resource: UploadFilesResource.Mobiledevices,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

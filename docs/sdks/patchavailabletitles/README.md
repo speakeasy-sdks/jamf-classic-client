@@ -13,22 +13,23 @@ Finds all available title from a source by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { PatchavailabletitlesSourceidByIdGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchavailabletitles.patchavailabletitlesSourceidByIdGet({
-  id: "<ID>",
-}).then((res: PatchavailabletitlesSourceidByIdGetResponse) => {
+  const res = await sdk.patchavailabletitles.patchavailabletitlesSourceidByIdGet({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

@@ -22,22 +22,23 @@ Finds mobile device history by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceHistoryByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicehistory.findMobileDeviceHistoryById({
-  id: 84752,
-}).then((res: FindMobileDeviceHistoryByIdResponse) => {
+  const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryById({
+    id: 84752,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -61,26 +62,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindMobileDeviceHistoryByIdSubsetResponse,
-  FindMobileDeviceHistoryByIdSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceHistoryByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicehistory.findMobileDeviceHistoryByIdSubset({
-  id: 718186,
-  subset: FindMobileDeviceHistoryByIdSubsetSubset.General,
-}).then((res: FindMobileDeviceHistoryByIdSubsetResponse) => {
+  const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByIdSubset({
+    id: 718186,
+    subset: FindMobileDeviceHistoryByIdSubsetSubset.General,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -104,22 +104,23 @@ Finds mobile device history by wifi mac address
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceHistoryByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicehistory.findMobileDeviceHistoryByMacAddress({
-  macaddress: "Road",
-}).then((res: FindMobileDeviceHistoryByMacAddressResponse) => {
+  const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByMacAddress({
+    macaddress: "Road",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -143,26 +144,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindMobileDeviceHistoryByMacAddressSubsetResponse,
-  FindMobileDeviceHistoryByMacAddressSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceHistoryByMacAddressSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicehistory.findMobileDeviceHistoryByMacAddressSubset({
-  macaddress: "Interactions Rhenium green",
-  subset: FindMobileDeviceHistoryByMacAddressSubsetSubset.General,
-}).then((res: FindMobileDeviceHistoryByMacAddressSubsetResponse) => {
+  const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByMacAddressSubset({
+    macaddress: "Interactions Rhenium green",
+    subset: FindMobileDeviceHistoryByMacAddressSubsetSubset.General,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -186,22 +186,23 @@ Finds mobile device history by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceHistoryByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicehistory.findMobileDeviceHistoryByName({
-  name: "silver firmware compress",
-}).then((res: FindMobileDeviceHistoryByNameResponse) => {
+  const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByName({
+    name: "silver firmware compress",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -225,26 +226,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindMobileDeviceHistoryByNameSubsetResponse,
-  FindMobileDeviceHistoryByNameSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceHistoryByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicehistory.findMobileDeviceHistoryByNameSubset({
-  name: "Buckinghamshire off",
-  subset: FindMobileDeviceHistoryByNameSubsetSubset.General,
-}).then((res: FindMobileDeviceHistoryByNameSubsetResponse) => {
+  const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByNameSubset({
+    name: "Buckinghamshire off",
+    subset: FindMobileDeviceHistoryByNameSubsetSubset.General,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -268,22 +268,23 @@ Finds mobile device history by serial number
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceHistoryBySerialNumberResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicehistory.findMobileDeviceHistoryBySerialNumber({
-  serialnumber: "Southwest male",
-}).then((res: FindMobileDeviceHistoryBySerialNumberResponse) => {
+  const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryBySerialNumber({
+    serialnumber: "Southwest male",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -307,26 +308,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindMobileDeviceHistoryBySerialNumberSubsetResponse,
-  FindMobileDeviceHistoryBySerialNumberSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceHistoryBySerialNumberSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicehistory.findMobileDeviceHistoryBySerialNumberSubset({
-  serialnumber: "Oganesson",
-  subset: FindMobileDeviceHistoryBySerialNumberSubsetSubset.ManagementCommands,
-}).then((res: FindMobileDeviceHistoryBySerialNumberSubsetResponse) => {
+  const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryBySerialNumberSubset({
+    serialnumber: "Oganesson",
+    subset: FindMobileDeviceHistoryBySerialNumberSubsetSubset.ManagementCommands,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -350,22 +350,23 @@ Finds mobile device history by UDID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceHistoryByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicehistory.findMobileDeviceHistoryByUDID({
-  udid: "compressing",
-}).then((res: FindMobileDeviceHistoryByUDIDResponse) => {
+  const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByUDID({
+    udid: "compressing",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -389,26 +390,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindMobileDeviceHistoryByUDIDSubsetResponse,
-  FindMobileDeviceHistoryByUDIDSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceHistoryByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicehistory.findMobileDeviceHistoryByUDIDSubset({
-  subset: FindMobileDeviceHistoryByUDIDSubsetSubset.ManagementCommands,
-  udid: "punctual",
-}).then((res: FindMobileDeviceHistoryByUDIDSubsetResponse) => {
+  const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByUDIDSubset({
+    subset: FindMobileDeviceHistoryByUDIDSubsetSubset.ManagementCommands,
+    udid: "punctual",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

@@ -20,22 +20,23 @@ Only one of script_contents_encoded and script_contents should be submitted.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateScriptByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.scripts.createScriptById({
-  id: 309792,
-}).then((res: CreateScriptByIdResponse) => {
+  const res = await sdk.scripts.createScriptById({
+    id: 309792,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a script by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteScriptByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.scripts.deleteScriptById({
-  id: 565017,
-}).then((res: DeleteScriptByIdResponse) => {
+  const res = await sdk.scripts.deleteScriptById({
+    id: 565017,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a script by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteScriptByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.scripts.deleteScriptByName({
-  name: "Sunnyvale Vermont",
-}).then((res: DeleteScriptByNameResponse) => {
+  const res = await sdk.scripts.deleteScriptByName({
+    name: "Sunnyvale Vermont",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all scripts
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindScriptsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.scripts.findScripts().then((res: FindScriptsResponse) => {
+  const res = await sdk.scripts.findScripts();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ script_contents_encoded is the equivalent of script_contents, but it has been Ba
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindScriptsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.scripts.findScriptsById({
-  id: 390907,
-}).then((res: FindScriptsByIdResponse) => {
+  const res = await sdk.scripts.findScriptsById({
+    id: 390907,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ script_contents_encoded is the equivalent of script_contents, but it has been Ba
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindScriptsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.scripts.findScriptsByName({
-  name: "blue",
-}).then((res: FindScriptsByNameResponse) => {
+  const res = await sdk.scripts.findScriptsByName({
+    name: "blue",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Only one of script_contents_encoded and script_contents should be submitted.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateScriptByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.scripts.updateScriptById({
-  id: 837789,
-}).then((res: UpdateScriptByIdResponse) => {
+  const res = await sdk.scripts.updateScriptById({
+    id: 837789,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Only one of script_contents_encoded and script_contents should be submitted.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateScriptByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.scripts.updateScriptByName({
-  name: "orange Omnigender",
-}).then((res: UpdateScriptByNameResponse) => {
+  const res = await sdk.scripts.updateScriptByName({
+    name: "orange Omnigender",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

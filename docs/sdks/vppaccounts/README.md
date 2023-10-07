@@ -17,22 +17,23 @@ The service_token value may not match another vpp account. account_name and expi
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateVPPAdminAccountByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.vppaccounts.createVPPAdminAccountById({
-  id: 386805,
-}).then((res: CreateVPPAdminAccountByIdResponse) => {
+  const res = await sdk.vppaccounts.createVPPAdminAccountById({
+    id: 386805,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -56,22 +57,23 @@ Deletes a VPP account by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteVPPAdminAccountByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.vppaccounts.deleteVPPAdminAccountById({
-  id: 741460,
-}).then((res: DeleteVPPAdminAccountByIdResponse) => {
+  const res = await sdk.vppaccounts.deleteVPPAdminAccountById({
+    id: 741460,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -95,20 +97,21 @@ Finds all VPP Accounts
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindVPPAdminAccountResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.vppaccounts.findVPPAdminAccount().then((res: FindVPPAdminAccountResponse) => {
+  const res = await sdk.vppaccounts.findVPPAdminAccount();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -131,22 +134,23 @@ Finds VPP Account by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindVPPAdminAccountByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.vppaccounts.findVPPAdminAccountById({
-  id: 769449,
-}).then((res: FindVPPAdminAccountByIdResponse) => {
+  const res = await sdk.vppaccounts.findVPPAdminAccountById({
+    id: 769449,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -170,22 +174,23 @@ The service_token value may not match another vpp account. account_name and expi
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateVPPAdminAccountByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.vppaccounts.updateVPPAdminAccountById({
-  id: 102957,
-}).then((res: UpdateVPPAdminAccountByIdResponse) => {
+  const res = await sdk.vppaccounts.updateVPPAdminAccountById({
+    id: 102957,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

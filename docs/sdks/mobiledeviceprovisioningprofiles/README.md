@@ -25,22 +25,23 @@ Creates a mobile device provisioning profiles by id
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMobileDeviceProvisioningProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceprovisioningprofiles.createMobileDeviceProvisioningProfilesById({
-  id: 535000,
-}).then((res: CreateMobileDeviceProvisioningProfilesByIdResponse) => {
+  const res = await sdk.mobiledeviceprovisioningprofiles.createMobileDeviceProvisioningProfilesById({
+    id: 535000,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -64,22 +65,23 @@ Creates a mobile device provisioning profiles by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMobileDeviceProvisioningProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceprovisioningprofiles.createMobileDeviceProvisioningProfilesByName({
-  name: "Synchronised",
-}).then((res: CreateMobileDeviceProvisioningProfilesByNameResponse) => {
+  const res = await sdk.mobiledeviceprovisioningprofiles.createMobileDeviceProvisioningProfilesByName({
+    name: "Synchronised",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -103,22 +105,23 @@ Creates a mobile device provisioning profiles by uuid
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMobileDeviceProvisioningProfilesByUUIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceprovisioningprofiles.createMobileDeviceProvisioningProfilesByUUID({
-  uuid: "13ea13b9-fc35-4832-beef-b81d409bacf7",
-}).then((res: CreateMobileDeviceProvisioningProfilesByUUIDResponse) => {
+  const res = await sdk.mobiledeviceprovisioningprofiles.createMobileDeviceProvisioningProfilesByUUID({
+    uuid: "13ea13b9-fc35-4832-beef-b81d409bacf7",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -142,22 +145,23 @@ Deletes a mobile device provisioning profiles by id
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceProvisioningProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceprovisioningprofiles.deleteMobileDeviceProvisioningProfilesById({
-  id: 368967,
-}).then((res: DeleteMobileDeviceProvisioningProfilesByIdResponse) => {
+  const res = await sdk.mobiledeviceprovisioningprofiles.deleteMobileDeviceProvisioningProfilesById({
+    id: 368967,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -181,22 +185,23 @@ Deletes a mobile device provisioning profiles by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceProvisioningProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceprovisioningprofiles.deleteMobileDeviceProvisioningProfilesByName({
-  name: "Southwest Intranet Lari",
-}).then((res: DeleteMobileDeviceProvisioningProfilesByNameResponse) => {
+  const res = await sdk.mobiledeviceprovisioningprofiles.deleteMobileDeviceProvisioningProfilesByName({
+    name: "Southwest Intranet Lari",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -220,22 +225,23 @@ Deletes a mobile device provisioning profiles by uuid
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceProvisioningProfilesByUUIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceprovisioningprofiles.deleteMobileDeviceProvisioningProfilesByUUID({
-  uuid: "1b5d663b-9383-442c-ae3e-a53127d259da",
-}).then((res: DeleteMobileDeviceProvisioningProfilesByUUIDResponse) => {
+  const res = await sdk.mobiledeviceprovisioningprofiles.deleteMobileDeviceProvisioningProfilesByUUID({
+    uuid: "1b5d663b-9383-442c-ae3e-a53127d259da",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -259,20 +265,21 @@ Finds all mobile device provisioning profiles
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceProvisioningProfilesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceprovisioningprofiles.findMobileDeviceProvisioningProfiles().then((res: FindMobileDeviceProvisioningProfilesResponse) => {
+  const res = await sdk.mobiledeviceprovisioningprofiles.findMobileDeviceProvisioningProfiles();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -295,22 +302,23 @@ Finds a mobile device provisioning profiles by id
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceProvisioningProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceprovisioningprofiles.findMobileDeviceProvisioningProfilesById({
-  id: 627440,
-}).then((res: FindMobileDeviceProvisioningProfilesByIdResponse) => {
+  const res = await sdk.mobiledeviceprovisioningprofiles.findMobileDeviceProvisioningProfilesById({
+    id: 627440,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -334,22 +342,23 @@ Finds a mobile device provisioning profiles by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceProvisioningProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceprovisioningprofiles.findMobileDeviceProvisioningProfilesByName({
-  name: "Investment",
-}).then((res: FindMobileDeviceProvisioningProfilesByNameResponse) => {
+  const res = await sdk.mobiledeviceprovisioningprofiles.findMobileDeviceProvisioningProfilesByName({
+    name: "Investment",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -373,22 +382,23 @@ Finds a mobile device provisioning profiles by uuid
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceProvisioningProfilesByUUIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceprovisioningprofiles.findMobileDeviceProvisioningProfilesByUUID({
-  uuid: "f7d07a4b-4f13-400a-9a71-cfd522cce345",
-}).then((res: FindMobileDeviceProvisioningProfilesByUUIDResponse) => {
+  const res = await sdk.mobiledeviceprovisioningprofiles.findMobileDeviceProvisioningProfilesByUUID({
+    uuid: "f7d07a4b-4f13-400a-9a71-cfd522cce345",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -412,22 +422,23 @@ Updates an existing mobile device provisioning profiles by id
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceProvisioningProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceprovisioningprofiles.updateMobileDeviceProvisioningProfilesById({
-  id: 338588,
-}).then((res: UpdateMobileDeviceProvisioningProfilesByIdResponse) => {
+  const res = await sdk.mobiledeviceprovisioningprofiles.updateMobileDeviceProvisioningProfilesById({
+    id: 338588,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -451,22 +462,23 @@ Updates an existing mobile device provisioning profiles by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceProvisioningProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceprovisioningprofiles.updateMobileDeviceProvisioningProfilesByName({
-  name: "Hybrid",
-}).then((res: UpdateMobileDeviceProvisioningProfilesByNameResponse) => {
+  const res = await sdk.mobiledeviceprovisioningprofiles.updateMobileDeviceProvisioningProfilesByName({
+    name: "Hybrid",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -490,22 +502,23 @@ Updates an existing mobile device provisioning profiles by uuid
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceProvisioningProfilesByUUIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceprovisioningprofiles.updateMobileDeviceProvisioningProfilesByUUID({
-  uuid: "fa0f0ee4-a5c9-4284-80bb-3bc485e07e4d",
-}).then((res: UpdateMobileDeviceProvisioningProfilesByUUIDResponse) => {
+  const res = await sdk.mobiledeviceprovisioningprofiles.updateMobileDeviceProvisioningProfilesByUUID({
+    uuid: "fa0f0ee4-a5c9-4284-80bb-3bc485e07e4d",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

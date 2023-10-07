@@ -26,22 +26,23 @@ Creates a new LDAP server by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateLDAPServerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ldapservers.createLDAPServerById({
-  id: 334152,
-}).then((res: CreateLDAPServerByIdResponse) => {
+  const res = await sdk.ldapservers.createLDAPServerById({
+    id: 334152,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -65,22 +66,23 @@ Deletes an LDAP server by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteLDAPServerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ldapservers.deleteLDAPServerById({
-  id: 550161,
-}).then((res: DeleteLDAPServerByIdResponse) => {
+  const res = await sdk.ldapservers.deleteLDAPServerById({
+    id: 550161,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -104,22 +106,23 @@ Deletes an LDAP server by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteLDAPServerByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ldapservers.deleteLDAPServerByName({
-  name: "interfaces South",
-}).then((res: DeleteLDAPServerByNameResponse) => {
+  const res = await sdk.ldapservers.deleteLDAPServerByName({
+    name: "interfaces South",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -143,23 +146,24 @@ Displays information about matching groups for an ldap server specified with the
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindLDAPServerGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ldapservers.findLDAPServerGroupById({
-  group: "Avon",
-  id: 479019,
-}).then((res: FindLDAPServerGroupByIdResponse) => {
+  const res = await sdk.ldapservers.findLDAPServerGroupById({
+    group: "Avon",
+    id: 479019,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -183,23 +187,24 @@ Displays information about matching groups for an ldap server specified with the
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindLDAPServerGroupByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ldapservers.findLDAPServerGroupByName({
-  group: "female worship Bicycle",
-  name: "array",
-}).then((res: FindLDAPServerGroupByNameResponse) => {
+  const res = await sdk.ldapservers.findLDAPServerGroupByName({
+    group: "female worship Bicycle",
+    name: "array",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -223,24 +228,25 @@ Displays information about user membership in a group for an ldap server specifi
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindLDAPServerGroupUserByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ldapservers.findLDAPServerGroupUserById({
-  group: "jettison",
-  id: 405465,
-  user: "Maudie35",
-}).then((res: FindLDAPServerGroupUserByIdResponse) => {
+  const res = await sdk.ldapservers.findLDAPServerGroupUserById({
+    group: "jettison",
+    id: 405465,
+    user: "Maudie35",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -264,24 +270,25 @@ Displays information about user membership in a group for an ldap server specifi
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindLDAPServerGroupUserByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ldapservers.findLDAPServerGroupUserByName({
-  group: "Bike",
-  name: "infrastructure Automotive Tuna",
-  user: "Maudie.Howe",
-}).then((res: FindLDAPServerGroupUserByNameResponse) => {
+  const res = await sdk.ldapservers.findLDAPServerGroupUserByName({
+    group: "Bike",
+    name: "infrastructure Automotive Tuna",
+    user: "Maudie.Howe",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -305,23 +312,24 @@ Displays information about matching users for an ldap server specified with the 
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindLDAPServerUserByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ldapservers.findLDAPServerUserById({
-  id: 331068,
-  user: "Buster40",
-}).then((res: FindLDAPServerUserByIdResponse) => {
+  const res = await sdk.ldapservers.findLDAPServerUserById({
+    id: 331068,
+    user: "Buster40",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -345,23 +353,24 @@ Displays information about matching users for an ldap server specified with the 
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindLDAPServerUserByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ldapservers.findLDAPServerUserByName({
-  name: "Ergonomic Americium",
-  user: "Colten_Kovacek",
-}).then((res: FindLDAPServerUserByNameResponse) => {
+  const res = await sdk.ldapservers.findLDAPServerUserByName({
+    name: "Ergonomic Americium",
+    user: "Colten_Kovacek",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -385,20 +394,21 @@ Finds all LDAP servers
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindLDAPServersResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ldapservers.findLDAPServers().then((res: FindLDAPServersResponse) => {
+  const res = await sdk.ldapservers.findLDAPServers();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -421,22 +431,23 @@ Finds LDAP servers by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindLDAPServersByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ldapservers.findLDAPServersById({
-  id: 434300,
-}).then((res: FindLDAPServersByIdResponse) => {
+  const res = await sdk.ldapservers.findLDAPServersById({
+    id: 434300,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -460,22 +471,23 @@ Finds LDAP servers by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindLDAPServersByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ldapservers.findLDAPServersByName({
-  name: "secondary placeat neatly",
-}).then((res: FindLDAPServersByNameResponse) => {
+  const res = await sdk.ldapservers.findLDAPServersByName({
+    name: "secondary placeat neatly",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -499,22 +511,23 @@ Updates an existing LDAP server by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateLDAPServerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ldapservers.updateLDAPServerById({
-  id: 774572,
-}).then((res: UpdateLDAPServerByIdResponse) => {
+  const res = await sdk.ldapservers.updateLDAPServerById({
+    id: 774572,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -538,22 +551,23 @@ Updates an existing LDAP server by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateLDAPServerByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ldapservers.updateLDAPServerByName({
-  name: "Consultant Representative",
-}).then((res: UpdateLDAPServerByNameResponse) => {
+  const res = await sdk.ldapservers.updateLDAPServerByName({
+    name: "Consultant Representative",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

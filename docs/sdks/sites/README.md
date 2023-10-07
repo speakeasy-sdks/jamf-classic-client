@@ -20,22 +20,23 @@ Creates a new site by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateSiteByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.sites.createSiteById({
-  id: 28125,
-}).then((res: CreateSiteByIdResponse) => {
+  const res = await sdk.sites.createSiteById({
+    id: 28125,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a site by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteSiteByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.sites.deleteSiteById({
-  id: 571780,
-}).then((res: DeleteSiteByIdResponse) => {
+  const res = await sdk.sites.deleteSiteById({
+    id: 571780,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a site by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteSiteByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.sites.deleteSiteByName({
-  name: "extensible across",
-}).then((res: DeleteSiteByNameResponse) => {
+  const res = await sdk.sites.deleteSiteByName({
+    name: "extensible across",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all sites
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindSitesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.sites.findSites().then((res: FindSitesResponse) => {
+  const res = await sdk.sites.findSites();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds sites by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindSitesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.sites.findSitesById({
-  id: 534497,
-}).then((res: FindSitesByIdResponse) => {
+  const res = await sdk.sites.findSitesById({
+    id: 534497,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds sites by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindSitesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.sites.findSitesByName({
-  name: "as Hybrid",
-}).then((res: FindSitesByNameResponse) => {
+  const res = await sdk.sites.findSitesByName({
+    name: "as Hybrid",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Updates an existing site by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateSiteByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.sites.updateSiteById({
-  id: 302425,
-}).then((res: UpdateSiteByIdResponse) => {
+  const res = await sdk.sites.updateSiteById({
+    id: 302425,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Updates an existing site by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateSiteByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.sites.updateSiteByName({
-  name: "Chicken input",
-}).then((res: UpdateSiteByNameResponse) => {
+  const res = await sdk.sites.updateSiteByName({
+    name: "Chicken input",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

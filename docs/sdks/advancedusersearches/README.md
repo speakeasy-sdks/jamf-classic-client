@@ -20,22 +20,23 @@ Creates a new advanced user search by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateAdvancedUserSearchgByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedusersearches.createAdvancedUserSearchgById({
-  id: 425027,
-}).then((res: CreateAdvancedUserSearchgByIdResponse) => {
+  const res = await sdk.advancedusersearches.createAdvancedUserSearchgById({
+    id: 425027,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a user search by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteAdvancedUserSearchByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedusersearches.deleteAdvancedUserSearchById({
-  id: 233208,
-}).then((res: DeleteAdvancedUserSearchByIdResponse) => {
+  const res = await sdk.advancedusersearches.deleteAdvancedUserSearchById({
+    id: 233208,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a user search by Name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteAdvancedUserSearchByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedusersearches.deleteAdvancedUserSearchByName({
-  name: "Hybrid inversion consideration",
-}).then((res: DeleteAdvancedUserSearchByNameResponse) => {
+  const res = await sdk.advancedusersearches.deleteAdvancedUserSearchByName({
+    name: "Hybrid inversion consideration",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all advanced user searches
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindAdvancedUserSearchesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedusersearches.findAdvancedUserSearches().then((res: FindAdvancedUserSearchesResponse) => {
+  const res = await sdk.advancedusersearches.findAdvancedUserSearches();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds user searches by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindAdvancedUserSearchesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedusersearches.findAdvancedUserSearchesById({
-  id: 42939,
-}).then((res: FindAdvancedUserSearchesByIdResponse) => {
+  const res = await sdk.advancedusersearches.findAdvancedUserSearchesById({
+    id: 42939,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds user searches by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindUserSearchesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedusersearches.findUserSearchesByName({
-  name: "evenly",
-}).then((res: FindUserSearchesByNameResponse) => {
+  const res = await sdk.advancedusersearches.findUserSearchesByName({
+    name: "evenly",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Updates an existing advanced user search by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateAdvancedUserSearchByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedusersearches.updateAdvancedUserSearchById({
-  id: 142195,
-}).then((res: UpdateAdvancedUserSearchByIdResponse) => {
+  const res = await sdk.advancedusersearches.updateAdvancedUserSearchById({
+    id: 142195,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Updates an existing advanced user search by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateAdvancedUserSearchByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedusersearches.updateAdvancedUserSearchByName({
-  name: "hacking",
-}).then((res: UpdateAdvancedUserSearchByNameResponse) => {
+  const res = await sdk.advancedusersearches.updateAdvancedUserSearchByName({
+    name: "hacking",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

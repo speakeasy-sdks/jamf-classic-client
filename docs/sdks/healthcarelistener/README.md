@@ -15,20 +15,21 @@ Find all Healthcare Listeners
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindHealthcareListenerResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.healthcarelistener.findHealthcareListener().then((res: FindHealthcareListenerResponse) => {
+  const res = await sdk.healthcarelistener.findHealthcareListener();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -51,22 +52,23 @@ Finds healthcare listener by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindHealthcareListenersByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.healthcarelistener.findHealthcareListenersById({
-  id: 309302,
-}).then((res: FindHealthcareListenersByIdResponse) => {
+  const res = await sdk.healthcarelistener.findHealthcareListenersById({
+    id: 309302,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -90,22 +92,23 @@ Updates an existing healthcare listener by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateHealthCareListenerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.healthcarelistener.updateHealthCareListenerById({
-  id: 68635,
-}).then((res: UpdateHealthCareListenerByIdResponse) => {
+  const res = await sdk.healthcarelistener.updateHealthCareListenerById({
+    id: 68635,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

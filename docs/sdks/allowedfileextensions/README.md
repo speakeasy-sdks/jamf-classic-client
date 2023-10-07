@@ -17,22 +17,23 @@ Creates a new allowed file extension value by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateAllowedFileExtensionByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.allowedfileextensions.createAllowedFileExtensionById({
-  id: 650142,
-}).then((res: CreateAllowedFileExtensionByIdResponse) => {
+  const res = await sdk.allowedfileextensions.createAllowedFileExtensionById({
+    id: 650142,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -56,22 +57,23 @@ Deletes an allowed file extension value by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteAllowedFileExtensionByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.allowedfileextensions.deleteAllowedFileExtensionById({
-  id: 717312,
-}).then((res: DeleteAllowedFileExtensionByIdResponse) => {
+  const res = await sdk.allowedfileextensions.deleteAllowedFileExtensionById({
+    id: 717312,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -95,20 +97,21 @@ Finds the allowed file extensions
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindAllowedFileExtensionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.allowedfileextensions.findAllowedFileExtension().then((res: FindAllowedFileExtensionResponse) => {
+  const res = await sdk.allowedfileextensions.findAllowedFileExtension();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -131,22 +134,23 @@ Finds an allowed file extension value by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindAllowedFileExtensionByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.allowedfileextensions.findAllowedFileExtensionById({
-  id: 668652,
-}).then((res: FindAllowedFileExtensionByIdResponse) => {
+  const res = await sdk.allowedfileextensions.findAllowedFileExtensionById({
+    id: 668652,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -170,22 +174,23 @@ Finds an allowed file extension value by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindAllowedFileExtensionByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.allowedfileextensions.findAllowedFileExtensionByName({
-  extension: "png",
-}).then((res: FindAllowedFileExtensionByNameResponse) => {
+  const res = await sdk.allowedfileextensions.findAllowedFileExtensionByName({
+    extension: "png",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

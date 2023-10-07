@@ -20,22 +20,23 @@ Creates a personal device profile by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateBYOProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.byoprofiles.createBYOProfilesById({
-  id: 841343,
-}).then((res: CreateBYOProfilesByIdResponse) => {
+  const res = await sdk.byoprofiles.createBYOProfilesById({
+    id: 841343,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a personal device profile by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteBYOProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.byoprofiles.deleteBYOProfilesById({
-  id: 731434,
-}).then((res: DeleteBYOProfilesByIdResponse) => {
+  const res = await sdk.byoprofiles.deleteBYOProfilesById({
+    id: 731434,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a personal device profile by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteBYOProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.byoprofiles.deleteBYOProfilesByName({
-  name: "matrix Designer",
-}).then((res: DeleteBYOProfilesByNameResponse) => {
+  const res = await sdk.byoprofiles.deleteBYOProfilesByName({
+    name: "matrix Designer",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all personal device profiles
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindBYOProfilesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.byoprofiles.findBYOProfiles().then((res: FindBYOProfilesResponse) => {
+  const res = await sdk.byoprofiles.findBYOProfiles();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds personal device profile by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindBYOProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.byoprofiles.findBYOProfilesById({
-  id: 502083,
-}).then((res: FindBYOProfilesByIdResponse) => {
+  const res = await sdk.byoprofiles.findBYOProfilesById({
+    id: 502083,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds a personal device profile by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindBYOProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.byoprofiles.findBYOProfilesByName({
-  name: "backing Bronze",
-}).then((res: FindBYOProfilesByNameResponse) => {
+  const res = await sdk.byoprofiles.findBYOProfilesByName({
+    name: "backing Bronze",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Updates a personal device profile by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateBYOProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.byoprofiles.updateBYOProfilesById({
-  id: 230812,
-}).then((res: UpdateBYOProfilesByIdResponse) => {
+  const res = await sdk.byoprofiles.updateBYOProfilesById({
+    id: 230812,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ You cannot reassign the site since it is maintained by Jamf Pro.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateBYOProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.byoprofiles.updateBYOProfilesByName({
-  name: "Southeast USB",
-}).then((res: UpdateBYOProfilesByNameResponse) => {
+  const res = await sdk.byoprofiles.updateBYOProfilesByName({
+    name: "Southeast USB",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

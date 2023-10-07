@@ -18,22 +18,23 @@ The following fields are also required if 'Send Emails' distribution method is s
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateInvitationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.vppinvitations.createInvitationById({
-  id: 791905,
-}).then((res: CreateInvitationByIdResponse) => {
+  const res = await sdk.vppinvitations.createInvitationById({
+    id: 791905,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -57,22 +58,23 @@ Deletes a VPP invitation by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteInvitationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.vppinvitations.deleteInvitationById({
-  id: 492289,
-}).then((res: DeleteInvitationByIdResponse) => {
+  const res = await sdk.vppinvitations.deleteInvitationById({
+    id: 492289,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -96,22 +98,23 @@ Finds a VPP Invitation by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindInvitationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.vppinvitations.findInvitationById({
-  id: 76477,
-}).then((res: FindInvitationByIdResponse) => {
+  const res = await sdk.vppinvitations.findInvitationById({
+    id: 76477,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -135,23 +138,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindInvitationsByIdSubsetResponse, FindInvitationsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindInvitationsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.vppinvitations.findInvitationsByIdSubset({
-  id: 916901,
-  subset: FindInvitationsByIdSubsetSubset.Scope,
-}).then((res: FindInvitationsByIdSubsetResponse) => {
+  const res = await sdk.vppinvitations.findInvitationsByIdSubset({
+    id: 916901,
+    subset: FindInvitationsByIdSubsetSubset.Scope,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -175,20 +180,21 @@ Finds all VPP Invitations
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindVPPAdminInvitationResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.vppinvitations.findVPPAdminInvitation().then((res: FindVPPAdminInvitationResponse) => {
+  const res = await sdk.vppinvitations.findVPPAdminInvitation();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -211,22 +217,23 @@ Usages are ignored for this operation
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateInvitationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.vppinvitations.updateInvitationById({
-  id: 473557,
-}).then((res: UpdateInvitationByIdResponse) => {
+  const res = await sdk.vppinvitations.updateInvitationById({
+    id: 473557,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

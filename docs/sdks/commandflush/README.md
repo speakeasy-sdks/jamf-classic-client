@@ -14,21 +14,22 @@ Flushes commands based on information specified in an XML file
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CommandFlushResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { CommandflushStatus } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.commandflush.commandFlush("0|o@6bRL`," as bytes <<<>>>).then((res: CommandFlushResponse) => {
+  const res = await sdk.commandflush.commandFlush("0|o@6bRL`," as bytes <<<>>>);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -52,28 +53,26 @@ Flushes commands for devices
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  CreateCommandFlushWithIdAndStatusIdtype,
-  CreateCommandFlushWithIdAndStatusResponse,
-  CreateCommandFlushWithIdAndStatusStatus,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { CreateCommandFlushWithIdAndStatusIdtype, CreateCommandFlushWithIdAndStatusStatus } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.commandflush.createCommandFlushWithIdAndStatus({
-  id: 873570,
-  idtype: CreateCommandFlushWithIdAndStatusIdtype.Computergroups,
-  status: CreateCommandFlushWithIdAndStatusStatus.Failed,
-}).then((res: CreateCommandFlushWithIdAndStatusResponse) => {
+  const res = await sdk.commandflush.createCommandFlushWithIdAndStatus({
+    id: 873570,
+    idtype: CreateCommandFlushWithIdAndStatusIdtype.Computergroups,
+    status: CreateCommandFlushWithIdAndStatusStatus.Failed,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

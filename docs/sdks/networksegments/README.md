@@ -20,22 +20,23 @@ Creates a new network segment by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateNetworkSegmentByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.networksegments.createNetworkSegmentById({
-  id: 478113,
-}).then((res: CreateNetworkSegmentByIdResponse) => {
+  const res = await sdk.networksegments.createNetworkSegmentById({
+    id: 478113,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a network segment by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteNetworkSegmentByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.networksegments.deleteNetworkSegmentById({
-  id: 629182,
-}).then((res: DeleteNetworkSegmentByIdResponse) => {
+  const res = await sdk.networksegments.deleteNetworkSegmentById({
+    id: 629182,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a network segment by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteNetworkSegmentByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.networksegments.deleteNetworkSegmentByName({
-  name: "blue",
-}).then((res: DeleteNetworkSegmentByNameResponse) => {
+  const res = await sdk.networksegments.deleteNetworkSegmentByName({
+    name: "blue",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all network segments
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindNetworkSegmentsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.networksegments.findNetworkSegments().then((res: FindNetworkSegmentsResponse) => {
+  const res = await sdk.networksegments.findNetworkSegments();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds network segments by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindNetworkSegmentsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.networksegments.findNetworkSegmentsById({
-  id: 300997,
-}).then((res: FindNetworkSegmentsByIdResponse) => {
+  const res = await sdk.networksegments.findNetworkSegmentsById({
+    id: 300997,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds network segments by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindNetworkSegmentsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.networksegments.findNetworkSegmentsByName({
-  name: "Neither",
-}).then((res: FindNetworkSegmentsByNameResponse) => {
+  const res = await sdk.networksegments.findNetworkSegmentsByName({
+    name: "Neither",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Updates an existing network segment by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateNetworkSegmentByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.networksegments.updateNetworkSegmentById({
-  id: 393979,
-}).then((res: UpdateNetworkSegmentByIdResponse) => {
+  const res = await sdk.networksegments.updateNetworkSegmentById({
+    id: 393979,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Updates an existing network segment by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateNetworkSegmentByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.networksegments.updateNetworkSegmentByName({
-  name: "upbeat",
-}).then((res: UpdateNetworkSegmentByNameResponse) => {
+  const res = await sdk.networksegments.updateNetworkSegmentByName({
+    name: "upbeat",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

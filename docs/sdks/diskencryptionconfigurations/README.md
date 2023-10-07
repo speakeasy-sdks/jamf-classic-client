@@ -20,22 +20,23 @@ Creates a new disk encryption configuration by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateDiskEncryptionConfigurationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.diskencryptionconfigurations.createDiskEncryptionConfigurationById({
-  id: 82551,
-}).then((res: CreateDiskEncryptionConfigurationByIdResponse) => {
+  const res = await sdk.diskencryptionconfigurations.createDiskEncryptionConfigurationById({
+    id: 82551,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a disk encryption configuration by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteDiskEncryptionConfigurationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.diskencryptionconfigurations.deleteDiskEncryptionConfigurationById({
-  id: 191333,
-}).then((res: DeleteDiskEncryptionConfigurationByIdResponse) => {
+  const res = await sdk.diskencryptionconfigurations.deleteDiskEncryptionConfigurationById({
+    id: 191333,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a disk encryption configuration by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteDiskEncryptionConfigurationByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.diskencryptionconfigurations.deleteDiskEncryptionConfigurationByName({
-  name: "ROI",
-}).then((res: DeleteDiskEncryptionConfigurationByNameResponse) => {
+  const res = await sdk.diskencryptionconfigurations.deleteDiskEncryptionConfigurationByName({
+    name: "ROI",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all disk encryption configurations
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindDiskEncryptionConfigurationsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.diskencryptionconfigurations.findDiskEncryptionConfigurations().then((res: FindDiskEncryptionConfigurationsResponse) => {
+  const res = await sdk.diskencryptionconfigurations.findDiskEncryptionConfigurations();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds disk encryption configurations by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindDiskEncryptionConfigurationsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.diskencryptionconfigurations.findDiskEncryptionConfigurationsById({
-  id: 789225,
-}).then((res: FindDiskEncryptionConfigurationsByIdResponse) => {
+  const res = await sdk.diskencryptionconfigurations.findDiskEncryptionConfigurationsById({
+    id: 789225,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds disk encryption configurations by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindDiskEncryptionConfigurationsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.diskencryptionconfigurations.findDiskEncryptionConfigurationsByName({
-  name: "Product XML",
-}).then((res: FindDiskEncryptionConfigurationsByNameResponse) => {
+  const res = await sdk.diskencryptionconfigurations.findDiskEncryptionConfigurationsByName({
+    name: "Product XML",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Updates an existing disk encryption configuration by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateDiskEncryptionConfigurationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.diskencryptionconfigurations.updateDiskEncryptionConfigurationById({
-  id: 220999,
-}).then((res: UpdateDiskEncryptionConfigurationByIdResponse) => {
+  const res = await sdk.diskencryptionconfigurations.updateDiskEncryptionConfigurationById({
+    id: 220999,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Updates an existing disk encryption configuration by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateDiskEncryptionConfigurationByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.diskencryptionconfigurations.updateDiskEncryptionConfigurationByName({
-  name: "Elegant Tricycle",
-}).then((res: UpdateDiskEncryptionConfigurationByNameResponse) => {
+  const res = await sdk.diskencryptionconfigurations.updateDiskEncryptionConfigurationByName({
+    name: "Elegant Tricycle",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

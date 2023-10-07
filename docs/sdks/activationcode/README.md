@@ -14,20 +14,21 @@ Finds the Jamf Pro activation code
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindactivationcodeResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.activationcode.findactivationcode().then((res: FindactivationcodeResponse) => {
+  const res = await sdk.activationcode.findactivationcode();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -50,20 +51,21 @@ Updates the Jamf Pro activation code
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateActivationCodeResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.activationcode.updateActivationCode("lK5^<]Y%q1" as bytes <<<>>>).then((res: UpdateActivationCodeResponse) => {
+  const res = await sdk.activationcode.updateActivationCode("lK5^<]Y%q1" as bytes <<<>>>);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

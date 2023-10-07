@@ -50,21 +50,22 @@ The chart below includes additional requirements for usage of specific commands
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMobileDeviceCommandResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { MobileDeviceCommandPostGeneralCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicecommands.createMobileDeviceCommand("gD;q?y\"bqw" as bytes <<<>>>).then((res: CreateMobileDeviceCommandResponse) => {
+  const res = await sdk.mobiledevicecommands.createMobileDeviceCommand("gD;q?y\"bqw" as bytes <<<>>>);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -107,23 +108,25 @@ The chart below includes additional requirements for usage of specific commands
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMobileDeviceCommandURLCommand, CreateMobileDeviceCommandURLResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { CreateMobileDeviceCommandURLCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicecommands.createMobileDeviceCommandURL({
-  command: CreateMobileDeviceCommandURLCommand.DeviceLocation,
-  idList: "Granite",
-}).then((res: CreateMobileDeviceCommandURLResponse) => {
+  const res = await sdk.mobiledevicecommands.createMobileDeviceCommandURL({
+    command: CreateMobileDeviceCommandURLCommand.DeviceLocation,
+    idList: "Granite",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -147,23 +150,24 @@ Sends a new lock command to a list of mobile devices
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMobileDeviceLockCommandURLResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicecommands.createMobileDeviceLockCommandURL({
-  idList: "radian",
-  lockMessage: "Bronze GB",
-}).then((res: CreateMobileDeviceLockCommandURLResponse) => {
+  const res = await sdk.mobiledevicecommands.createMobileDeviceLockCommandURL({
+    idList: "radian",
+    lockMessage: "Bronze GB",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -187,23 +191,24 @@ Creates a new command to set the name of a mobile device.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMobileDeviceNameCommandURLResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicecommands.createMobileDeviceNameCommandURL({
-  deviceName: "Future",
-  idList: "metrics",
-}).then((res: CreateMobileDeviceNameCommandURLResponse) => {
+  const res = await sdk.mobiledevicecommands.createMobileDeviceNameCommandURL({
+    deviceName: "Future",
+    idList: "metrics",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -227,26 +232,25 @@ Creates a new command to request that a mobile device update its OS. Command and
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  CreateMobileScheduleOSUpdateCommandURLInstallAction,
-  CreateMobileScheduleOSUpdateCommandURLResponse,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { CreateMobileScheduleOSUpdateCommandURLInstallAction } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicecommands.createMobileScheduleOSUpdateCommandURL({
-  idList: "quantifying",
-  installAction: CreateMobileScheduleOSUpdateCommandURLInstallAction.Two,
-}).then((res: CreateMobileScheduleOSUpdateCommandURLResponse) => {
+  const res = await sdk.mobiledevicecommands.createMobileScheduleOSUpdateCommandURL({
+    idList: "quantifying",
+    installAction: CreateMobileScheduleOSUpdateCommandURLInstallAction.Two,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -270,27 +274,26 @@ Creates a new command to request that a mobile device update its OS. Command and
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  CreateMobileScheduleOSUpdateCommandWithProductVersionURLInstallAction,
-  CreateMobileScheduleOSUpdateCommandWithProductVersionURLResponse,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { CreateMobileScheduleOSUpdateCommandWithProductVersionURLInstallAction } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicecommands.createMobileScheduleOSUpdateCommandWithProductVersionURL({
-  idList: "Electric male",
-  installAction: CreateMobileScheduleOSUpdateCommandWithProductVersionURLInstallAction.One,
-  productVersion: "XML Park",
-}).then((res: CreateMobileScheduleOSUpdateCommandWithProductVersionURLResponse) => {
+  const res = await sdk.mobiledevicecommands.createMobileScheduleOSUpdateCommandWithProductVersionURL({
+    idList: "Electric male",
+    installAction: CreateMobileScheduleOSUpdateCommandWithProductVersionURLInstallAction.One,
+    productVersion: "XML Park",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -314,20 +317,21 @@ Finds all mobile device commands
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceCommandsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicecommands.findMobileDeviceCommands().then((res: FindMobileDeviceCommandsResponse) => {
+  const res = await sdk.mobiledevicecommands.findMobileDeviceCommands();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -350,22 +354,23 @@ Finds all mobile device commands for specified command
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceCommandsByCommandResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicecommands.findMobileDeviceCommandsByCommand({
-  command: "Electric deposit",
-}).then((res: FindMobileDeviceCommandsByCommandResponse) => {
+  const res = await sdk.mobiledevicecommands.findMobileDeviceCommandsByCommand({
+    command: "Electric deposit",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -389,22 +394,23 @@ Finds all mobile device commands by command name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceCommandsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicecommands.findMobileDeviceCommandsByName({
-  name: "complexity",
-}).then((res: FindMobileDeviceCommandsByNameResponse) => {
+  const res = await sdk.mobiledevicecommands.findMobileDeviceCommandsByName({
+    name: "complexity",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -428,22 +434,23 @@ Finds a mobile device command by UUID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceCommandsByUuidResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevicecommands.findMobileDeviceCommandsByUuid({
-  uuid: "71a67216-a890-416c-90d7-93de2db01d31",
-}).then((res: FindMobileDeviceCommandsByUuidResponse) => {
+  const res = await sdk.mobiledevicecommands.findMobileDeviceCommandsByUuid({
+    uuid: "71a67216-a890-416c-90d7-93de2db01d31",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

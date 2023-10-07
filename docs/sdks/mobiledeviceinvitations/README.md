@@ -19,22 +19,23 @@ Creates a new mobile device invitation by id
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMobileDeviceInvitationsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceinvitations.createMobileDeviceInvitationsById({
-  id: 850185,
-}).then((res: CreateMobileDeviceInvitationsByIdResponse) => {
+  const res = await sdk.mobiledeviceinvitations.createMobileDeviceInvitationsById({
+    id: 850185,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -58,22 +59,23 @@ Creates a new mobile device invitation by invitation
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMobileDeviceInvitationsByInvitationResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceinvitations.createMobileDeviceInvitationsByInvitation({
-  invitation: 60639,
-}).then((res: CreateMobileDeviceInvitationsByInvitationResponse) => {
+  const res = await sdk.mobiledeviceinvitations.createMobileDeviceInvitationsByInvitation({
+    invitation: 60639,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -97,22 +99,23 @@ Deletes a mobile device invitation by id
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceInvitationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceinvitations.deleteMobileDeviceInvitationById({
-  id: 377680,
-}).then((res: DeleteMobileDeviceInvitationByIdResponse) => {
+  const res = await sdk.mobiledeviceinvitations.deleteMobileDeviceInvitationById({
+    id: 377680,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -136,22 +139,23 @@ Deletes a mobile device invitation by invitation
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceInvitationByInvitationResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceinvitations.deleteMobileDeviceInvitationByInvitation({
-  invitation: 34819,
-}).then((res: DeleteMobileDeviceInvitationByInvitationResponse) => {
+  const res = await sdk.mobiledeviceinvitations.deleteMobileDeviceInvitationByInvitation({
+    invitation: 34819,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -175,20 +179,21 @@ Finds all mobile device invitations
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceInvitationsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceinvitations.findMobileDeviceInvitations().then((res: FindMobileDeviceInvitationsResponse) => {
+  const res = await sdk.mobiledeviceinvitations.findMobileDeviceInvitations();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -211,22 +216,23 @@ Finds mobile device invitations by id
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceInvitationsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceinvitations.findMobileDeviceInvitationsById({
-  id: 522350,
-}).then((res: FindMobileDeviceInvitationsByIdResponse) => {
+  const res = await sdk.mobiledeviceinvitations.findMobileDeviceInvitationsById({
+    id: 522350,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -250,22 +256,23 @@ Finds mobile device invitations by invitation
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceInvitationsByInvitationResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceinvitations.findMobileDeviceInvitationsByInvitation({
-  invitation: 313759,
-}).then((res: FindMobileDeviceInvitationsByInvitationResponse) => {
+  const res = await sdk.mobiledeviceinvitations.findMobileDeviceInvitationsByInvitation({
+    invitation: 313759,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

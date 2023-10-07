@@ -20,22 +20,23 @@ The mobile device list is not used by this operation, the mobile device group is
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateClassByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.classes.createClassById({
-  id: 370285,
-}).then((res: CreateClassByIdResponse) => {
+  const res = await sdk.classes.createClassById({
+    id: 370285,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a class by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteClassByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.classes.deleteClassById({
-  id: 354004,
-}).then((res: DeleteClassByIdResponse) => {
+  const res = await sdk.classes.deleteClassById({
+    id: 354004,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a class by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteClassByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.classes.deleteClassByName({
-  name: "Pula projection Sri",
-}).then((res: DeleteClassByNameResponse) => {
+  const res = await sdk.classes.deleteClassByName({
+    name: "Pula projection Sri",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all classes
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindClassesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.classes.findClasses().then((res: FindClassesResponse) => {
+  const res = await sdk.classes.findClasses();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds classes by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindClassesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.classes.findClassesById({
-  id: 15091,
-}).then((res: FindClassesByIdResponse) => {
+  const res = await sdk.classes.findClassesById({
+    id: 15091,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds classes by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindClassesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.classes.findClassesByName({
-  name: "Wooden",
-}).then((res: FindClassesByNameResponse) => {
+  const res = await sdk.classes.findClassesByName({
+    name: "Wooden",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ The mobile device list is not used by this operation, the mobile device group is
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateClassByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.classes.updateClassById({
-  id: 116071,
-}).then((res: UpdateClassByIdResponse) => {
+  const res = await sdk.classes.updateClassById({
+    id: 116071,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ The mobile device list is not used by this operation, the mobile device group is
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateClassByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.classes.updateClassByName({
-  name: "Watsica",
-}).then((res: UpdateClassByNameResponse) => {
+  const res = await sdk.classes.updateClassByName({
+    name: "Watsica",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

@@ -28,22 +28,23 @@ App configuration preferences should be listed using character entities, e.g. <p
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMobileDeviceApplicationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceapplications.createMobileDeviceApplicationById({
-  id: 622125,
-}).then((res: CreateMobileDeviceApplicationByIdResponse) => {
+  const res = await sdk.mobiledeviceapplications.createMobileDeviceApplicationById({
+    id: 622125,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -67,22 +68,23 @@ Deletes a mobile device application by bundle ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceApplicationByBundleIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceapplications.deleteMobileDeviceApplicationByBundleID({
-  bundleid: "deliverables",
-}).then((res: DeleteMobileDeviceApplicationByBundleIDResponse) => {
+  const res = await sdk.mobiledeviceapplications.deleteMobileDeviceApplicationByBundleID({
+    bundleid: "deliverables",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -106,23 +108,24 @@ Deletes a mobile device application by bundle ID and version
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceApplicationByBundleIDandVersionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceapplications.deleteMobileDeviceApplicationByBundleIDandVersion({
-  bundleid: "Future",
-  version: "Solutions Nauru UDP",
-}).then((res: DeleteMobileDeviceApplicationByBundleIDandVersionResponse) => {
+  const res = await sdk.mobiledeviceapplications.deleteMobileDeviceApplicationByBundleIDandVersion({
+    bundleid: "Future",
+    version: "Solutions Nauru UDP",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -146,22 +149,23 @@ Deletes a mobile device application by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceApplicationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceapplications.deleteMobileDeviceApplicationById({
-  id: 849404,
-}).then((res: DeleteMobileDeviceApplicationByIdResponse) => {
+  const res = await sdk.mobiledeviceapplications.deleteMobileDeviceApplicationById({
+    id: 849404,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -185,22 +189,23 @@ Deletes a mobile device application by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceApplicationByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceapplications.deleteMobileDeviceApplicationByName({
-  name: "Usability",
-}).then((res: DeleteMobileDeviceApplicationByNameResponse) => {
+  const res = await sdk.mobiledeviceapplications.deleteMobileDeviceApplicationByName({
+    name: "Usability",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -224,20 +229,21 @@ Finds all mobile device applications
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceApplicationsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceapplications.findMobileDeviceApplications().then((res: FindMobileDeviceApplicationsResponse) => {
+  const res = await sdk.mobiledeviceapplications.findMobileDeviceApplications();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -260,22 +266,23 @@ If multiple applications match, no application is returned. You may specify both
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceApplicationsByBundleIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceapplications.findMobileDeviceApplicationsByBundleID({
-  bundleid: "hm Modern",
-}).then((res: FindMobileDeviceApplicationsByBundleIDResponse) => {
+  const res = await sdk.mobiledeviceapplications.findMobileDeviceApplicationsByBundleID({
+    bundleid: "hm Modern",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -299,23 +306,24 @@ Finds mobile device applications by bundle ID and version
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceApplicationsByBundleIDandVersionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceapplications.findMobileDeviceApplicationsByBundleIDandVersion({
-  bundleid: "Cambridgeshire grey initiatives",
-  version: "World before Latin",
-}).then((res: FindMobileDeviceApplicationsByBundleIDandVersionResponse) => {
+  const res = await sdk.mobiledeviceapplications.findMobileDeviceApplicationsByBundleIDandVersion({
+    bundleid: "Cambridgeshire grey initiatives",
+    version: "World before Latin",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -339,22 +347,23 @@ Finds mobile device applications by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceApplicationsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceapplications.findMobileDeviceApplicationsById({
-  id: 735053,
-}).then((res: FindMobileDeviceApplicationsByIdResponse) => {
+  const res = await sdk.mobiledeviceapplications.findMobileDeviceApplicationsById({
+    id: 735053,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -378,22 +387,23 @@ Finds mobile device applications by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceApplicationsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceapplications.findMobileDeviceApplicationsByName({
-  name: "shed Intersex",
-}).then((res: FindMobileDeviceApplicationsByNameResponse) => {
+  const res = await sdk.mobiledeviceapplications.findMobileDeviceApplicationsByName({
+    name: "shed Intersex",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -417,26 +427,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindMobileDeviceApplicationsByNameSubsetResponse,
-  FindMobileDeviceApplicationsByNameSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceApplicationsByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceapplications.findMobileDeviceApplicationsByNameSubset({
-  name: "Bronze male Borders",
-  subset: FindMobileDeviceApplicationsByNameSubsetSubset.VPPCodes,
-}).then((res: FindMobileDeviceApplicationsByNameSubsetResponse) => {
+  const res = await sdk.mobiledeviceapplications.findMobileDeviceApplicationsByNameSubset({
+    name: "Bronze male Borders",
+    subset: FindMobileDeviceApplicationsByNameSubsetSubset.VPPCodes,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -460,23 +469,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceAppsByIdSubsetResponse, FindMobileDeviceAppsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceAppsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceapplications.findMobileDeviceAppsByIdSubset({
-  id: 285156,
-  subset: FindMobileDeviceAppsByIdSubsetSubset.General,
-}).then((res: FindMobileDeviceAppsByIdSubsetResponse) => {
+  const res = await sdk.mobiledeviceapplications.findMobileDeviceAppsByIdSubset({
+    id: 285156,
+    subset: FindMobileDeviceAppsByIdSubsetSubset.General,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -500,22 +511,23 @@ Updates an existing mobile device application by bundle ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceApplicationByBundleIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceapplications.updateMobileDeviceApplicationByBundleID({
-  bundleid: "Northwest Shoes BMW",
-}).then((res: UpdateMobileDeviceApplicationByBundleIDResponse) => {
+  const res = await sdk.mobiledeviceapplications.updateMobileDeviceApplicationByBundleID({
+    bundleid: "Northwest Shoes BMW",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -539,23 +551,24 @@ Updates an existing mobile device application by bundle ID and version
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceApplicationByBundleIDandVersionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceapplications.updateMobileDeviceApplicationByBundleIDandVersion({
-  bundleid: "Mobility",
-  version: "Ferrari Northeast payment",
-}).then((res: UpdateMobileDeviceApplicationByBundleIDandVersionResponse) => {
+  const res = await sdk.mobiledeviceapplications.updateMobileDeviceApplicationByBundleIDandVersion({
+    bundleid: "Mobility",
+    version: "Ferrari Northeast payment",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -579,22 +592,23 @@ App configuration preferences should be listed using character entities, e.g. <p
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceApplicationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceapplications.updateMobileDeviceApplicationById({
-  id: 539550,
-}).then((res: UpdateMobileDeviceApplicationByIdResponse) => {
+  const res = await sdk.mobiledeviceapplications.updateMobileDeviceApplicationById({
+    id: 539550,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -618,22 +632,23 @@ Updates an existing mobile device application by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceApplicationByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceapplications.updateMobileDeviceApplicationByName({
-  name: "portals East",
-}).then((res: UpdateMobileDeviceApplicationByNameResponse) => {
+  const res = await sdk.mobiledeviceapplications.updateMobileDeviceApplicationByName({
+    name: "portals East",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

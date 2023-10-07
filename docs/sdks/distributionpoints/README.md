@@ -20,22 +20,23 @@ Creates a new distribution point by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateDistributionPointByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.distributionpoints.createDistributionPointById({
-  id: 323965,
-}).then((res: CreateDistributionPointByIdResponse) => {
+  const res = await sdk.distributionpoints.createDistributionPointById({
+    id: 323965,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a distribution point by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteDistributionPointByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.distributionpoints.deleteDistributionPointById({
-  id: 378774,
-}).then((res: DeleteDistributionPointByIdResponse) => {
+  const res = await sdk.distributionpoints.deleteDistributionPointById({
+    id: 378774,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a distribution point by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteDistributionPointByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.distributionpoints.deleteDistributionPointByName({
-  name: "Coupe",
-}).then((res: DeleteDistributionPointByNameResponse) => {
+  const res = await sdk.distributionpoints.deleteDistributionPointByName({
+    name: "Coupe",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all distribution points
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindDistributionPointsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.distributionpoints.findDistributionPoints().then((res: FindDistributionPointsResponse) => {
+  const res = await sdk.distributionpoints.findDistributionPoints();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds distribution points by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindDistributionPointsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.distributionpoints.findDistributionPointsById({
-  id: 377606,
-}).then((res: FindDistributionPointsByIdResponse) => {
+  const res = await sdk.distributionpoints.findDistributionPointsById({
+    id: 377606,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds distribution points by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindDistributionPointsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.distributionpoints.findDistributionPointsByName({
-  name: "Berkshire middleware Radon",
-}).then((res: FindDistributionPointsByNameResponse) => {
+  const res = await sdk.distributionpoints.findDistributionPointsByName({
+    name: "Berkshire middleware Radon",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Updates an existing distribution point by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateDistributionPointByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.distributionpoints.updateDistributionPointById({
-  id: 397,
-}).then((res: UpdateDistributionPointByIdResponse) => {
+  const res = await sdk.distributionpoints.updateDistributionPointById({
+    id: 397,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Updates an existing distribution point by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateDistributionPointByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.distributionpoints.updateDistributionPointByName({
-  name: "generation",
-}).then((res: UpdateDistributionPointByNameResponse) => {
+  const res = await sdk.distributionpoints.updateDistributionPointByName({
+    name: "generation",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

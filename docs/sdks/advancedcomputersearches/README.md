@@ -20,22 +20,23 @@ Creates a new advanced computer search
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateAdvancedComputerSearchgByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedcomputersearches.createAdvancedComputerSearchgById({
-  id: 274583,
-}).then((res: CreateAdvancedComputerSearchgByIdResponse) => {
+  const res = await sdk.advancedcomputersearches.createAdvancedComputerSearchgById({
+    id: 274583,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a computer search by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteAdvancedComputerSearchByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedcomputersearches.deleteAdvancedComputerSearchById({
-  id: 764480,
-}).then((res: DeleteAdvancedComputerSearchByIdResponse) => {
+  const res = await sdk.advancedcomputersearches.deleteAdvancedComputerSearchById({
+    id: 764480,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a computer search by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteAdvancedComputerSearchByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedcomputersearches.deleteAdvancedComputerSearchByName({
-  name: "generate Berkshire",
-}).then((res: DeleteAdvancedComputerSearchByNameResponse) => {
+  const res = await sdk.advancedcomputersearches.deleteAdvancedComputerSearchByName({
+    name: "generate Berkshire",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all advanced computer searches
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindAdvancedComputerSearchesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedcomputersearches.findAdvancedComputerSearches().then((res: FindAdvancedComputerSearchesResponse) => {
+  const res = await sdk.advancedcomputersearches.findAdvancedComputerSearches();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Additional display fields are returned within the `Computer` object
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindAdvancedComputerSearchesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedcomputersearches.findAdvancedComputerSearchesById({
-  id: 964070,
-}).then((res: FindAdvancedComputerSearchesByIdResponse) => {
+  const res = await sdk.advancedcomputersearches.findAdvancedComputerSearchesById({
+    id: 964070,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Additional display fields are returned within the `Computer` object
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindAdvancedComputerSearchesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedcomputersearches.findAdvancedComputerSearchesByName({
-  name: "Idaho",
-}).then((res: FindAdvancedComputerSearchesByNameResponse) => {
+  const res = await sdk.advancedcomputersearches.findAdvancedComputerSearchesByName({
+    name: "Idaho",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Updates an existing advanced computer search by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateAdvancedComputerSearchByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedcomputersearches.updateAdvancedComputerSearchById({
-  id: 382379,
-}).then((res: UpdateAdvancedComputerSearchByIdResponse) => {
+  const res = await sdk.advancedcomputersearches.updateAdvancedComputerSearchById({
+    id: 382379,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Updates an existing advanced computer search by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateAdvancedComputerSearchByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedcomputersearches.updateAdvancedComputerSearchByName({
-  name: "Strategist Ball Analyst",
-}).then((res: UpdateAdvancedComputerSearchByNameResponse) => {
+  const res = await sdk.advancedcomputersearches.updateAdvancedComputerSearchByName({
+    name: "Strategist Ball Analyst",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

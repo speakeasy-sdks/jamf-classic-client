@@ -16,22 +16,23 @@ Creates a new Healthcare Listener rule
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateHealthCareListenerRuleByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.healthcarelistenerrule.createHealthCareListenerRuleById({
-  id: 256297,
-}).then((res: CreateHealthCareListenerRuleByIdResponse) => {
+  const res = await sdk.healthcarelistenerrule.createHealthCareListenerRuleById({
+    id: 256297,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -55,20 +56,21 @@ Find all Healthcare Listener rules
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindHealthcareListenerRuleResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.healthcarelistenerrule.findHealthcareListenerRule().then((res: FindHealthcareListenerRuleResponse) => {
+  const res = await sdk.healthcarelistenerrule.findHealthcareListenerRule();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -91,22 +93,23 @@ Finds Healthcare Listener rules by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindHealthcareListenerRulesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.healthcarelistenerrule.findHealthcareListenerRulesById({
-  id: "<ID>",
-}).then((res: FindHealthcareListenerRulesByIdResponse) => {
+  const res = await sdk.healthcarelistenerrule.findHealthcareListenerRulesById({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -130,22 +133,23 @@ Updates an existing Healthcare Listener rule by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateHealthCareListenerRuleByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.healthcarelistenerrule.updateHealthCareListenerRuleById({
-  id: "<ID>",
-}).then((res: UpdateHealthCareListenerRuleByIdResponse) => {
+  const res = await sdk.healthcarelistenerrule.updateHealthCareListenerRuleById({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

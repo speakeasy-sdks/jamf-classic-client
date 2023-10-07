@@ -24,22 +24,23 @@ Creates a new policy by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreatePolicyByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.policies.createPolicyById({
-  id: 45063,
-}).then((res: CreatePolicyByIdResponse) => {
+  const res = await sdk.policies.createPolicyById({
+    id: 45063,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -63,22 +64,23 @@ Deletes a policy by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeletePolicyByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.policies.deletePolicyById({
-  id: 935775,
-}).then((res: DeletePolicyByIdResponse) => {
+  const res = await sdk.policies.deletePolicyById({
+    id: 935775,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -102,22 +104,23 @@ Deletes a policy by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeletePolicyByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.policies.deletePolicyByName({
-  name: "Pickup",
-}).then((res: DeletePolicyByNameResponse) => {
+  const res = await sdk.policies.deletePolicyByName({
+    name: "Pickup",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -141,20 +144,21 @@ Finds all policies
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPoliciesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.policies.findPolicies().then((res: FindPoliciesResponse) => {
+  const res = await sdk.policies.findPolicies();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -177,22 +181,23 @@ Category may be specified by id or name, or 'None' for policies with no category
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPoliciesByCategoryResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.policies.findPoliciesByCategory({
-  category: "Recycled Gasoline synthesizing",
-}).then((res: FindPoliciesByCategoryResponse) => {
+  const res = await sdk.policies.findPoliciesByCategory({
+    category: "Recycled Gasoline synthesizing",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -216,22 +221,23 @@ Finds policies by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPoliciesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.policies.findPoliciesById({
-  id: 252987,
-}).then((res: FindPoliciesByIdResponse) => {
+  const res = await sdk.policies.findPoliciesById({
+    id: 252987,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -255,23 +261,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPoliciesByIdSubsetResponse, FindPoliciesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindPoliciesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.policies.findPoliciesByIdSubset({
-  id: 282474,
-  subset: FindPoliciesByIdSubsetSubset.DiskEncryption,
-}).then((res: FindPoliciesByIdSubsetResponse) => {
+  const res = await sdk.policies.findPoliciesByIdSubset({
+    id: 282474,
+    subset: FindPoliciesByIdSubsetSubset.DiskEncryption,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -295,22 +303,23 @@ Finds policies by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPoliciesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.policies.findPoliciesByName({
-  name: "Metal",
-}).then((res: FindPoliciesByNameResponse) => {
+  const res = await sdk.policies.findPoliciesByName({
+    name: "Metal",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -334,23 +343,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPoliciesByNameSubsetResponse, FindPoliciesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindPoliciesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.policies.findPoliciesByNameSubset({
-  name: "Cheese Designer elegantly",
-  subset: FindPoliciesByNameSubsetSubset.DiskEncryption,
-}).then((res: FindPoliciesByNameSubsetResponse) => {
+  const res = await sdk.policies.findPoliciesByNameSubset({
+    name: "Cheese Designer elegantly",
+    subset: FindPoliciesByNameSubsetSubset.DiskEncryption,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -374,22 +385,24 @@ The value 'casper' refers to Casper Remote. The value 'jss' refers to policies c
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPoliciesByTypeCreatedBy, FindPoliciesByTypeResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindPoliciesByTypeCreatedBy } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.policies.findPoliciesByType({
-  createdBy: FindPoliciesByTypeCreatedBy.Casper,
-}).then((res: FindPoliciesByTypeResponse) => {
+  const res = await sdk.policies.findPoliciesByType({
+    createdBy: FindPoliciesByTypeCreatedBy.Casper,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -413,22 +426,23 @@ Updates an existing policy by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdatePolicyByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.policies.updatePolicyById({
-  id: 272424,
-}).then((res: UpdatePolicyByIdResponse) => {
+  const res = await sdk.policies.updatePolicyById({
+    id: 272424,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -452,22 +466,23 @@ Updates an existing policy by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdatePolicyByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.policies.updatePolicyByName({
-  name: "Southwest deploy",
-}).then((res: UpdatePolicyByNameResponse) => {
+  const res = await sdk.policies.updatePolicyByName({
+    name: "Southwest deploy",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

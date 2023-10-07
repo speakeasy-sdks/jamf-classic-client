@@ -15,23 +15,25 @@ Flushes all logs for a given interval
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateLogFlushForIntervalLog, CreateLogFlushForIntervalResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { CreateLogFlushForIntervalLog } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.logflush.createLogFlushForInterval({
-  interval: "Fantastic",
-  log: CreateLogFlushForIntervalLog.Policy,
-}).then((res: CreateLogFlushForIntervalResponse) => {
+  const res = await sdk.logflush.createLogFlushForInterval({
+    interval: "Fantastic",
+    log: CreateLogFlushForIntervalLog.Policy,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -55,24 +57,26 @@ Flushes a single log for a given interval
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateLogFlushWithIdAndIntervalLog, CreateLogFlushWithIdAndIntervalResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { CreateLogFlushWithIdAndIntervalLog } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.logflush.createLogFlushWithIdAndInterval({
-  id: "<ID>",
-  interval: "South Kia since",
-  log: CreateLogFlushWithIdAndIntervalLog.Policy,
-}).then((res: CreateLogFlushWithIdAndIntervalResponse) => {
+  const res = await sdk.logflush.createLogFlushWithIdAndInterval({
+    id: "<ID>",
+    interval: "South Kia since",
+    log: CreateLogFlushWithIdAndIntervalLog.Policy,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -96,21 +100,22 @@ Flushes a log specified in an XML file
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { LogFlushResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { LogflushInterval, LogflushLog } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.logflush.logFlush("1Rtwf975Yo" as bytes <<<>>>).then((res: LogFlushResponse) => {
+  const res = await sdk.logflush.logFlush("1Rtwf975Yo" as bytes <<<>>>);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

@@ -20,22 +20,23 @@ Creates a new restricted software by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateRestrictedSoftwareByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.restrictedsoftware.createRestrictedSoftwareById({
-  id: 477725,
-}).then((res: CreateRestrictedSoftwareByIdResponse) => {
+  const res = await sdk.restrictedsoftware.createRestrictedSoftwareById({
+    id: 477725,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a restricted software by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteRestrictedSoftwareByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.restrictedsoftware.deleteRestrictedSoftwareById({
-  id: 674620,
-}).then((res: DeleteRestrictedSoftwareByIdResponse) => {
+  const res = await sdk.restrictedsoftware.deleteRestrictedSoftwareById({
+    id: 674620,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a restricted software by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteRestrictedSoftwareByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.restrictedsoftware.deleteRestrictedSoftwareByName({
-  name: "vigorous West silver",
-}).then((res: DeleteRestrictedSoftwareByNameResponse) => {
+  const res = await sdk.restrictedsoftware.deleteRestrictedSoftwareByName({
+    name: "vigorous West silver",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all restricted software
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindRestrictedSoftwareResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.restrictedsoftware.findRestrictedSoftware().then((res: FindRestrictedSoftwareResponse) => {
+  const res = await sdk.restrictedsoftware.findRestrictedSoftware();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds restricted software by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindRestrictedSoftwareByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.restrictedsoftware.findRestrictedSoftwareById({
-  id: 859675,
-}).then((res: FindRestrictedSoftwareByIdResponse) => {
+  const res = await sdk.restrictedsoftware.findRestrictedSoftwareById({
+    id: 859675,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds restricted software by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindRestrictedSoftwareByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.restrictedsoftware.findRestrictedSoftwareByName({
-  name: "pilgrimage righteously",
-}).then((res: FindRestrictedSoftwareByNameResponse) => {
+  const res = await sdk.restrictedsoftware.findRestrictedSoftwareByName({
+    name: "pilgrimage righteously",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Updates an existing restricted software by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateRestrictedSoftwareByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.restrictedsoftware.updateRestrictedSoftwareById({
-  id: 574167,
-}).then((res: UpdateRestrictedSoftwareByIdResponse) => {
+  const res = await sdk.restrictedsoftware.updateRestrictedSoftwareById({
+    id: 574167,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Updates an existing restricted software by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateRestrictedSoftwareByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.restrictedsoftware.updateRestrictedSoftwareByName({
-  name: "OCR Cambridgeshire Toyota",
-}).then((res: UpdateRestrictedSoftwareByNameResponse) => {
+  const res = await sdk.restrictedsoftware.updateRestrictedSoftwareByName({
+    name: "OCR Cambridgeshire Toyota",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

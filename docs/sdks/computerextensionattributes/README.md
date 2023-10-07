@@ -20,22 +20,23 @@ Creates a new computer extension attribute by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateComputerextensionattributeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerextensionattributes.createComputerextensionattributeById({
-  id: 392399,
-}).then((res: CreateComputerextensionattributeByIdResponse) => {
+  const res = await sdk.computerextensionattributes.createComputerextensionattributeById({
+    id: 392399,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a computer extension attribute by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteComputerextensionattributeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerextensionattributes.deleteComputerextensionattributeById({
-  id: 471782,
-}).then((res: DeleteComputerextensionattributeByIdResponse) => {
+  const res = await sdk.computerextensionattributes.deleteComputerextensionattributeById({
+    id: 471782,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a computer extension attribute by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteComputerextensionattributeByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerextensionattributes.deleteComputerextensionattributeByName({
-  name: "lest",
-}).then((res: DeleteComputerextensionattributeByNameResponse) => {
+  const res = await sdk.computerextensionattributes.deleteComputerextensionattributeByName({
+    name: "lest",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all computer extension attributes
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerextensionattributesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerextensionattributes.findComputerextensionattributes().then((res: FindComputerextensionattributesResponse) => {
+  const res = await sdk.computerextensionattributes.findComputerextensionattributes();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds computer extension attributes by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerextensionattributesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerextensionattributes.findComputerextensionattributesById({
-  id: 535794,
-}).then((res: FindComputerextensionattributesByIdResponse) => {
+  const res = await sdk.computerextensionattributes.findComputerextensionattributesById({
+    id: 535794,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds computer extension attributes by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerextensionattributesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerextensionattributes.findComputerextensionattributesByName({
-  name: "strategic",
-}).then((res: FindComputerextensionattributesByNameResponse) => {
+  const res = await sdk.computerextensionattributes.findComputerextensionattributesByName({
+    name: "strategic",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Updates an existing computer extension attribute by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateComputerextensionattributeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerextensionattributes.updateComputerextensionattributeById({
-  id: 510181,
-}).then((res: UpdateComputerextensionattributeByIdResponse) => {
+  const res = await sdk.computerextensionattributes.updateComputerextensionattributeById({
+    id: 510181,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Updates an existing computer extension attribute by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateComputerextensionattributeByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerextensionattributes.updateComputerextensionattributeByName({
-  name: "male initiatives override",
-}).then((res: UpdateComputerextensionattributeByNameResponse) => {
+  const res = await sdk.computerextensionattributes.updateComputerextensionattributeByName({
+    name: "male initiatives override",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

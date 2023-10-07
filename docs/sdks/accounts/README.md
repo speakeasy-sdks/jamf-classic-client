@@ -27,22 +27,23 @@ Creates a new account by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateAccountByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.accounts.createAccountById({
-  id: 437973,
-}).then((res: CreateAccountByIdResponse) => {
+  const res = await sdk.accounts.createAccountById({
+    id: 437973,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -66,22 +67,23 @@ Groups created via this endpoint are created only within Jamf Pro and will not a
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.accounts.createGroupById({
-  id: 441479,
-}).then((res: CreateGroupByIdResponse) => {
+  const res = await sdk.accounts.createGroupById({
+    id: 441479,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -105,22 +107,23 @@ Deletes an account by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteAccountByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.accounts.deleteAccountById({
-  id: 215117,
-}).then((res: DeleteAccountByIdResponse) => {
+  const res = await sdk.accounts.deleteAccountById({
+    id: 215117,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -144,22 +147,23 @@ Deletes an account by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteAccountByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.accounts.deleteAccountByName({
-  name: "Cotton forenenst",
-}).then((res: DeleteAccountByNameResponse) => {
+  const res = await sdk.accounts.deleteAccountByName({
+    name: "Cotton forenenst",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -183,22 +187,23 @@ Deletes a group by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.accounts.deleteGroupById({
-  id: 444055,
-}).then((res: DeleteGroupByIdResponse) => {
+  const res = await sdk.accounts.deleteGroupById({
+    id: 444055,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -222,22 +227,23 @@ Deletes a group by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteGroupByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.accounts.deleteGroupByName({
-  name: 274902,
-}).then((res: DeleteGroupByNameResponse) => {
+  const res = await sdk.accounts.deleteGroupByName({
+    name: 274902,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -261,20 +267,21 @@ Finds all accounts
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindAccountsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.accounts.findAccounts().then((res: FindAccountsResponse) => {
+  const res = await sdk.accounts.findAccounts();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -297,22 +304,23 @@ Finds accounts by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindAccountsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.accounts.findAccountsById({
-  id: 990137,
-}).then((res: FindAccountsByIdResponse) => {
+  const res = await sdk.accounts.findAccountsById({
+    id: 990137,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -336,22 +344,23 @@ Finds accounts by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindAccountsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.accounts.findAccountsByName({
-  name: "Fishers indexing",
-}).then((res: FindAccountsByNameResponse) => {
+  const res = await sdk.accounts.findAccountsByName({
+    name: "Fishers indexing",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -375,22 +384,23 @@ Finds groups by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindGroupsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.accounts.findGroupsById({
-  id: 955309,
-}).then((res: FindGroupsByIdResponse) => {
+  const res = await sdk.accounts.findGroupsById({
+    id: 955309,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -414,22 +424,23 @@ Finds groups by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindGroupsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.accounts.findGroupsByName({
-  name: "Santa Identity",
-}).then((res: FindGroupsByNameResponse) => {
+  const res = await sdk.accounts.findGroupsByName({
+    name: "Santa Identity",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -453,22 +464,23 @@ Updates an existing account by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateAccountByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.accounts.updateAccountById({
-  id: 172312,
-}).then((res: UpdateAccountByIdResponse) => {
+  const res = await sdk.accounts.updateAccountById({
+    id: 172312,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -492,22 +504,23 @@ Updates an existing account by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateAccountByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.accounts.updateAccountByName({
-  name: "modulo",
-}).then((res: UpdateAccountByNameResponse) => {
+  const res = await sdk.accounts.updateAccountByName({
+    name: "modulo",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -531,22 +544,23 @@ Groups updated via this endpoint are updated only within Jamf Pro and will not a
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.accounts.updateGroupById({
-  id: 597234,
-}).then((res: UpdateGroupByIdResponse) => {
+  const res = await sdk.accounts.updateGroupById({
+    id: 597234,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -570,22 +584,23 @@ Groups updated via this endpoint are updated only within Jamf Pro and will not a
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateGroupByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.accounts.updateGroupByName({
-  name: 14723,
-}).then((res: UpdateGroupByNameResponse) => {
+  const res = await sdk.accounts.updateGroupByName({
+    name: 14723,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

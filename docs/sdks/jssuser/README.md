@@ -15,20 +15,21 @@ Returns basic information about Jamf Pro, as well as privileges of the person re
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { JssuserGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.jssuser.jssuserGet().then((res: JssuserGetResponse) => {
+  const res = await sdk.jssuser.jssuserGet();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

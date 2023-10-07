@@ -16,23 +16,24 @@ Finds computer applications by name and version
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerApplicationByNameAndVersionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerapplications.findComputerApplicationByNameAndVersion({
-  application: "blue South iterate",
-  version: "azure",
-}).then((res: FindComputerApplicationByNameAndVersionResponse) => {
+  const res = await sdk.computerapplications.findComputerApplicationByNameAndVersion({
+    application: "blue South iterate",
+    version: "azure",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -56,22 +57,23 @@ Finds computer applications by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerApplicationsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerapplications.findComputerApplicationsByName({
-  application: "dolore Investor",
-}).then((res: FindComputerApplicationsByNameResponse) => {
+  const res = await sdk.computerapplications.findComputerApplicationsByName({
+    application: "dolore Investor",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -95,24 +97,25 @@ Generates additional inventory data for the devices matching the search criteria
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerApplicationsByNameAndVersionAndInventoryResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerapplications.findComputerApplicationsByNameAndVersionAndInventory({
-  application: "oh less up",
-  inventory: "Designer New cursor",
-  version: "Borders",
-}).then((res: FindComputerApplicationsByNameAndVersionAndInventoryResponse) => {
+  const res = await sdk.computerapplications.findComputerApplicationsByNameAndVersionAndInventory({
+    application: "oh less up",
+    inventory: "Designer New cursor",
+    version: "Borders",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -136,23 +139,24 @@ Valid values for inventory are comma separated Display Fields for computers. Dis
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerApplicationsByNameInventoryResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerapplications.findComputerApplicationsByNameInventory({
-  application: "tesla",
-  inventory: "swimsuit East radian",
-}).then((res: FindComputerApplicationsByNameInventoryResponse) => {
+  const res = await sdk.computerapplications.findComputerApplicationsByNameInventory({
+    application: "tesla",
+    inventory: "swimsuit East radian",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

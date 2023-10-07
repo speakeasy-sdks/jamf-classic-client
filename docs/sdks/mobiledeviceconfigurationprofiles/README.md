@@ -22,22 +22,23 @@ Creates a new mobile device configuration profile by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMobileDeviceConfigurationProfileByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceconfigurationprofiles.createMobileDeviceConfigurationProfileById({
-  id: 357736,
-}).then((res: CreateMobileDeviceConfigurationProfileByIdResponse) => {
+  const res = await sdk.mobiledeviceconfigurationprofiles.createMobileDeviceConfigurationProfileById({
+    id: 357736,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -61,22 +62,23 @@ Deletes a mobile device configuration profile by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceConfigurationProfileByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceconfigurationprofiles.deleteMobileDeviceConfigurationProfileById({
-  id: 401787,
-}).then((res: DeleteMobileDeviceConfigurationProfileByIdResponse) => {
+  const res = await sdk.mobiledeviceconfigurationprofiles.deleteMobileDeviceConfigurationProfileById({
+    id: 401787,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -100,22 +102,23 @@ Deletes a mobile device configuration profile by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceConfigurationProfileByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceconfigurationprofiles.deleteMobileDeviceConfigurationProfileByName({
-  name: "benchmark female",
-}).then((res: DeleteMobileDeviceConfigurationProfileByNameResponse) => {
+  const res = await sdk.mobiledeviceconfigurationprofiles.deleteMobileDeviceConfigurationProfileByName({
+    name: "benchmark female",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -139,20 +142,21 @@ Finds all mobile device configuration profiles
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceConfigurationProfilesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfiles().then((res: FindMobileDeviceConfigurationProfilesResponse) => {
+  const res = await sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfiles();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -175,22 +179,23 @@ Finds mobile device configuration profiles by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceConfigurationProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesById({
-  id: 994932,
-}).then((res: FindMobileDeviceConfigurationProfilesByIdResponse) => {
+  const res = await sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesById({
+    id: 994932,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -214,26 +219,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindMobileDeviceConfigurationProfilesByIdSubsetResponse,
-  FindMobileDeviceConfigurationProfilesByIdSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceConfigurationProfilesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesByIdSubset({
-  id: 1927,
-  subset: FindMobileDeviceConfigurationProfilesByIdSubsetSubset.Scope,
-}).then((res: FindMobileDeviceConfigurationProfilesByIdSubsetResponse) => {
+  const res = await sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesByIdSubset({
+    id: 1927,
+    subset: FindMobileDeviceConfigurationProfilesByIdSubsetSubset.Scope,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -257,22 +261,23 @@ Finds mobile device configuration profiles by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceConfigurationProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesByName({
-  name: "Pickup Northwest kilogram",
-}).then((res: FindMobileDeviceConfigurationProfilesByNameResponse) => {
+  const res = await sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesByName({
+    name: "Pickup Northwest kilogram",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -296,26 +301,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindMobileDeviceConfigurationProfilesByNameSubsetResponse,
-  FindMobileDeviceConfigurationProfilesByNameSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceConfigurationProfilesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesByNameSubset({
-  name: "Avon",
-  subset: FindMobileDeviceConfigurationProfilesByNameSubsetSubset.General,
-}).then((res: FindMobileDeviceConfigurationProfilesByNameSubsetResponse) => {
+  const res = await sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesByNameSubset({
+    name: "Avon",
+    subset: FindMobileDeviceConfigurationProfilesByNameSubsetSubset.General,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -339,22 +343,23 @@ Updates an existing mobile device configuration profile by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceConfigurationProfileByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceconfigurationprofiles.updateMobileDeviceConfigurationProfileById({
-  id: 879870,
-}).then((res: UpdateMobileDeviceConfigurationProfileByIdResponse) => {
+  const res = await sdk.mobiledeviceconfigurationprofiles.updateMobileDeviceConfigurationProfileById({
+    id: 879870,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -378,22 +383,23 @@ Updates an existing mobile device configuration profile by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceConfigurationProfileByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceconfigurationprofiles.updateMobileDeviceConfigurationProfileByName({
-  name: "Director",
-}).then((res: UpdateMobileDeviceConfigurationProfileByNameResponse) => {
+  const res = await sdk.mobiledeviceconfigurationprofiles.updateMobileDeviceConfigurationProfileByName({
+    name: "Director",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

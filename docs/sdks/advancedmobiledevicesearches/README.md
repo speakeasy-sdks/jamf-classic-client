@@ -20,22 +20,23 @@ Creates a new advanced mobile device search
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateAdvancedMobileDeviceSearchByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedmobiledevicesearches.createAdvancedMobileDeviceSearchById({
-  id: 827357,
-}).then((res: CreateAdvancedMobileDeviceSearchByIdResponse) => {
+  const res = await sdk.advancedmobiledevicesearches.createAdvancedMobileDeviceSearchById({
+    id: 827357,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a mobile device search by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteAdvancedMobileDeviceSearchByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedmobiledevicesearches.deleteAdvancedMobileDeviceSearchById({
-  id: 246857,
-}).then((res: DeleteAdvancedMobileDeviceSearchByIdResponse) => {
+  const res = await sdk.advancedmobiledevicesearches.deleteAdvancedMobileDeviceSearchById({
+    id: 246857,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a mobile device search by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteAdvancedMobileDeviceSearchByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedmobiledevicesearches.deleteAdvancedMobileDeviceSearchByName({
-  name: "Louisiana",
-}).then((res: DeleteAdvancedMobileDeviceSearchByNameResponse) => {
+  const res = await sdk.advancedmobiledevicesearches.deleteAdvancedMobileDeviceSearchByName({
+    name: "Louisiana",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all advanced mobile device searches
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindAdvancedMobileDeviceSearchesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedmobiledevicesearches.findAdvancedMobileDeviceSearches().then((res: FindAdvancedMobileDeviceSearchesResponse) => {
+  const res = await sdk.advancedmobiledevicesearches.findAdvancedMobileDeviceSearches();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds mobile device searches by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindAdvancedMobileDeviceSearchesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedmobiledevicesearches.findAdvancedMobileDeviceSearchesById({
-  id: 507076,
-}).then((res: FindAdvancedMobileDeviceSearchesByIdResponse) => {
+  const res = await sdk.advancedmobiledevicesearches.findAdvancedMobileDeviceSearchesById({
+    id: 507076,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds advanced mobile device searches by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceSearchesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedmobiledevicesearches.findMobileDeviceSearchesByName({
-  name: "compress",
-}).then((res: FindMobileDeviceSearchesByNameResponse) => {
+  const res = await sdk.advancedmobiledevicesearches.findMobileDeviceSearchesByName({
+    name: "compress",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Updates an existing advanced mobile device search by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateAdvancedMobileDeviceSearchByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedmobiledevicesearches.updateAdvancedMobileDeviceSearchById({
-  id: 827690,
-}).then((res: UpdateAdvancedMobileDeviceSearchByIdResponse) => {
+  const res = await sdk.advancedmobiledevicesearches.updateAdvancedMobileDeviceSearchById({
+    id: 827690,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Updates an existing advanced mobile device search by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateAdvancedMobileDeviceSearchByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.advancedmobiledevicesearches.updateAdvancedMobileDeviceSearchByName({
-  name: "Gender Producer",
-}).then((res: UpdateAdvancedMobileDeviceSearchByNameResponse) => {
+  const res = await sdk.advancedmobiledevicesearches.updateAdvancedMobileDeviceSearchByName({
+    name: "Gender Producer",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

@@ -20,22 +20,23 @@ Creates a new directory binding by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateDirectoryBindingByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.directorybindings.createDirectoryBindingById({
-  id: 437927,
-}).then((res: CreateDirectoryBindingByIdResponse) => {
+  const res = await sdk.directorybindings.createDirectoryBindingById({
+    id: 437927,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a directory binding by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteDirectoryBindingByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.directorybindings.deleteDirectoryBindingById({
-  id: 452959,
-}).then((res: DeleteDirectoryBindingByIdResponse) => {
+  const res = await sdk.directorybindings.deleteDirectoryBindingById({
+    id: 452959,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a directory binding by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteDirectoryBindingByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.directorybindings.deleteDirectoryBindingByName({
-  name: "Glendale Books",
-}).then((res: DeleteDirectoryBindingByNameResponse) => {
+  const res = await sdk.directorybindings.deleteDirectoryBindingByName({
+    name: "Glendale Books",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all directory bindings
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindDirectoryBindingsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.directorybindings.findDirectoryBindings().then((res: FindDirectoryBindingsResponse) => {
+  const res = await sdk.directorybindings.findDirectoryBindings();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds directory bindings by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindDirectoryBindingsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.directorybindings.findDirectoryBindingsById({
-  id: 953857,
-}).then((res: FindDirectoryBindingsByIdResponse) => {
+  const res = await sdk.directorybindings.findDirectoryBindingsById({
+    id: 953857,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds directory bindings by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindDirectoryBindingsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.directorybindings.findDirectoryBindingsByName({
-  name: "Shoes Salad Assistant",
-}).then((res: FindDirectoryBindingsByNameResponse) => {
+  const res = await sdk.directorybindings.findDirectoryBindingsByName({
+    name: "Shoes Salad Assistant",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Updates an existing directory binding by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateDirectoryBindingByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.directorybindings.updateDirectoryBindingById({
-  id: 53627,
-}).then((res: UpdateDirectoryBindingByIdResponse) => {
+  const res = await sdk.directorybindings.updateDirectoryBindingById({
+    id: 53627,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Updates an existing directory binding by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateDirectoryBindingByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.directorybindings.updateDirectoryBindingByName({
-  name: "Liaison background Israel",
-}).then((res: UpdateDirectoryBindingByNameResponse) => {
+  const res = await sdk.directorybindings.updateDirectoryBindingByName({
+    name: "Liaison background Israel",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

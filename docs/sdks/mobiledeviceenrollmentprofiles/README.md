@@ -25,22 +25,23 @@ Creates a new mobile device enrollment profile by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMobileDeviceEnrollmentProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceenrollmentprofiles.createMobileDeviceEnrollmentProfilesById({
-  id: 791519,
-}).then((res: CreateMobileDeviceEnrollmentProfilesByIdResponse) => {
+  const res = await sdk.mobiledeviceenrollmentprofiles.createMobileDeviceEnrollmentProfilesById({
+    id: 791519,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -64,22 +65,23 @@ Deletes a mobile device enrollment profile by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceEnrollmentProfileByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceenrollmentprofiles.deleteMobileDeviceEnrollmentProfileById({
-  id: 463513,
-}).then((res: DeleteMobileDeviceEnrollmentProfileByIdResponse) => {
+  const res = await sdk.mobiledeviceenrollmentprofiles.deleteMobileDeviceEnrollmentProfileById({
+    id: 463513,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -103,22 +105,23 @@ Deletes a mobile device enrollment profile by invitation
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceEnrollmentProfileByInvitationResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceenrollmentprofiles.deleteMobileDeviceEnrollmentProfileByInvitation({
-  invitation: "Nissan bandwidth Plastic",
-}).then((res: DeleteMobileDeviceEnrollmentProfileByInvitationResponse) => {
+  const res = await sdk.mobiledeviceenrollmentprofiles.deleteMobileDeviceEnrollmentProfileByInvitation({
+    invitation: "Nissan bandwidth Plastic",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -142,22 +145,23 @@ Deletes a mobile device enrollment profile by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceEnrollmentProfileByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceenrollmentprofiles.deleteMobileDeviceEnrollmentProfileByName({
-  name: "Response",
-}).then((res: DeleteMobileDeviceEnrollmentProfileByNameResponse) => {
+  const res = await sdk.mobiledeviceenrollmentprofiles.deleteMobileDeviceEnrollmentProfileByName({
+    name: "Response",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -181,20 +185,21 @@ Finds all mobile device enrollment profiles
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceEnrollmentProfilesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfiles().then((res: FindMobileDeviceEnrollmentProfilesResponse) => {
+  const res = await sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfiles();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -217,22 +222,23 @@ Finds mobile device enrollment profiles by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceEnrollmentProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesById({
-  id: 635234,
-}).then((res: FindMobileDeviceEnrollmentProfilesByIdResponse) => {
+  const res = await sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesById({
+    id: 635234,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -256,26 +262,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindMobileDeviceEnrollmentProfilesByIdSubsetResponse,
-  FindMobileDeviceEnrollmentProfilesByIdSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceEnrollmentProfilesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByIdSubset({
-  id: 793930,
-  subset: FindMobileDeviceEnrollmentProfilesByIdSubsetSubset.Purchasing,
-}).then((res: FindMobileDeviceEnrollmentProfilesByIdSubsetResponse) => {
+  const res = await sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByIdSubset({
+    id: 793930,
+    subset: FindMobileDeviceEnrollmentProfilesByIdSubsetSubset.Purchasing,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -299,22 +304,23 @@ Finds mobile device enrollment profiles by invitation
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceEnrollmentProfilesByInvitationResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByInvitation({
-  invitation: "female Coordinator",
-}).then((res: FindMobileDeviceEnrollmentProfilesByInvitationResponse) => {
+  const res = await sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByInvitation({
+    invitation: "female Coordinator",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -338,22 +344,23 @@ Finds mobile device enrollment profiles by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceEnrollmentProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByName({
-  name: "B2B",
-}).then((res: FindMobileDeviceEnrollmentProfilesByNameResponse) => {
+  const res = await sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByName({
+    name: "B2B",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -377,26 +384,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindMobileDeviceEnrollmentProfilesByNameSubsetResponse,
-  FindMobileDeviceEnrollmentProfilesByNameSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceEnrollmentProfilesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByNameSubset({
-  name: "Southwest Refined",
-  subset: FindMobileDeviceEnrollmentProfilesByNameSubsetSubset.General,
-}).then((res: FindMobileDeviceEnrollmentProfilesByNameSubsetResponse) => {
+  const res = await sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByNameSubset({
+    name: "Southwest Refined",
+    subset: FindMobileDeviceEnrollmentProfilesByNameSubsetSubset.General,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -420,22 +426,23 @@ Updates an existing mobile device enrollment profile by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceEnrollmentProfileByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceenrollmentprofiles.updateMobileDeviceEnrollmentProfileById({
-  id: 623408,
-}).then((res: UpdateMobileDeviceEnrollmentProfileByIdResponse) => {
+  const res = await sdk.mobiledeviceenrollmentprofiles.updateMobileDeviceEnrollmentProfileById({
+    id: 623408,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -459,22 +466,23 @@ Updates an existing mobile device enrollment profile by invitation
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceEnrollmentProfileByInvitationResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceenrollmentprofiles.updateMobileDeviceEnrollmentProfileByInvitation({
-  invitation: "Wooden Research invoice",
-}).then((res: UpdateMobileDeviceEnrollmentProfileByInvitationResponse) => {
+  const res = await sdk.mobiledeviceenrollmentprofiles.updateMobileDeviceEnrollmentProfileByInvitation({
+    invitation: "Wooden Research invoice",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -498,22 +506,23 @@ Updates an existing mobile device enrollment profile by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceEnrollmentProfileByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledeviceenrollmentprofiles.updateMobileDeviceEnrollmentProfileByName({
-  name: "when preach souvenir",
-}).then((res: UpdateMobileDeviceEnrollmentProfileByNameResponse) => {
+  const res = await sdk.mobiledeviceenrollmentprofiles.updateMobileDeviceEnrollmentProfileByName({
+    name: "when preach souvenir",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

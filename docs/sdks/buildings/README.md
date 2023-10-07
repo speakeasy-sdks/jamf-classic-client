@@ -20,22 +20,23 @@ Creates a new building
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateBuildingByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.buildings.createBuildingById({
-  id: 279323,
-}).then((res: CreateBuildingByIdResponse) => {
+  const res = await sdk.buildings.createBuildingById({
+    id: 279323,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a building by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteBuildingByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.buildings.deleteBuildingById({
-  id: 19430,
-}).then((res: DeleteBuildingByIdResponse) => {
+  const res = await sdk.buildings.deleteBuildingById({
+    id: 19430,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a building by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteBuildingByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.buildings.deleteBuildingByName({
-  name: "Hop National Legacy",
-}).then((res: DeleteBuildingByNameResponse) => {
+  const res = await sdk.buildings.deleteBuildingByName({
+    name: "Hop National Legacy",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all buildings
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindBuildingsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.buildings.findBuildings().then((res: FindBuildingsResponse) => {
+  const res = await sdk.buildings.findBuildings();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds buildings by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindBuildingsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.buildings.findBuildingsById({
-  id: 837307,
-}).then((res: FindBuildingsByIdResponse) => {
+  const res = await sdk.buildings.findBuildingsById({
+    id: 837307,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds buildings by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindBuildingsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.buildings.findBuildingsByName({
-  name: "frame Representative",
-}).then((res: FindBuildingsByNameResponse) => {
+  const res = await sdk.buildings.findBuildingsByName({
+    name: "frame Representative",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Updates an existing building by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateBuildingByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.buildings.updateBuildingById({
-  id: 197529,
-}).then((res: UpdateBuildingByIdResponse) => {
+  const res = await sdk.buildings.updateBuildingById({
+    id: 197529,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Updates an existing building by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateBuildingByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.buildings.updateBuildingByName({
-  name: "Cambridgeshire Ball turquoise",
-}).then((res: UpdateBuildingByNameResponse) => {
+  const res = await sdk.buildings.updateBuildingByName({
+    name: "Cambridgeshire Ball turquoise",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

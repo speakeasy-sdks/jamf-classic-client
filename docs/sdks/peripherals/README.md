@@ -18,22 +18,23 @@ Creates a new peripheral by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreatePeripheralByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.peripherals.createPeripheralById({
-  id: 887007,
-}).then((res: CreatePeripheralByIdResponse) => {
+  const res = await sdk.peripherals.createPeripheralById({
+    id: 887007,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -57,22 +58,23 @@ Deletes a peripheral by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeletePeripheralByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.peripherals.deletePeripheralById({
-  id: 270317,
-}).then((res: DeletePeripheralByIdResponse) => {
+  const res = await sdk.peripherals.deletePeripheralById({
+    id: 270317,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -96,20 +98,21 @@ Finds all peripherals
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPeripheralsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.peripherals.findPeripherals().then((res: FindPeripheralsResponse) => {
+  const res = await sdk.peripherals.findPeripherals();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -132,22 +135,23 @@ Finds peripherals by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPeripheralsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.peripherals.findPeripheralsById({
-  id: 872945,
-}).then((res: FindPeripheralsByIdResponse) => {
+  const res = await sdk.peripherals.findPeripheralsById({
+    id: 872945,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -171,23 +175,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPeripheralsByIdSubsetResponse, FindPeripheralsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindPeripheralsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.peripherals.findPeripheralsByIdSubset({
-  id: 264408,
-  subset: FindPeripheralsByIdSubsetSubset.Purchasing,
-}).then((res: FindPeripheralsByIdSubsetResponse) => {
+  const res = await sdk.peripherals.findPeripheralsByIdSubset({
+    id: 264408,
+    subset: FindPeripheralsByIdSubsetSubset.Purchasing,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -211,22 +217,23 @@ Updates an existing peripheral by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdatePeripheralByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.peripherals.updatePeripheralById({
-  id: 777495,
-}).then((res: UpdatePeripheralByIdResponse) => {
+  const res = await sdk.peripherals.updatePeripheralById({
+    id: 777495,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

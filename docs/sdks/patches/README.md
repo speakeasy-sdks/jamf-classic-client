@@ -24,22 +24,23 @@ The patch title must exist within a specific site or Full Jamf Pro. Use this end
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreatePatchSoftwareTitlesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patches.createPatchSoftwareTitlesById({
-  id: "<ID>",
-}).then((res: CreatePatchSoftwareTitlesByIdResponse) => {
+  const res = await sdk.patches.createPatchSoftwareTitlesById({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -65,22 +66,23 @@ Deletes a Patch Software Title by ID (Deprecated - Please transition use to Jamf
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteSoftwareTitlesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patches.deleteSoftwareTitlesById({
-  id: 821143,
-}).then((res: DeleteSoftwareTitlesByIdResponse) => {
+  const res = await sdk.patches.deleteSoftwareTitlesById({
+    id: 821143,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -106,22 +108,23 @@ Deletes a Patch Software Title by name (Deprecated - Please transition use to Ja
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteSoftwareTitlesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patches.deleteSoftwareTitlesByName({
-  name: "Neodymium",
-}).then((res: DeleteSoftwareTitlesByNameResponse) => {
+  const res = await sdk.patches.deleteSoftwareTitlesByName({
+    name: "Neodymium",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -147,23 +150,24 @@ Displays information specified with the {version} parameter for a patch specifie
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersByIDAndTitleVersionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patches.findComputersByIDAndTitleVersion({
-  id: 188338,
-  version: "encash dish",
-}).then((res: FindComputersByIDAndTitleVersionResponse) => {
+  const res = await sdk.patches.findComputersByIDAndTitleVersion({
+    id: 188338,
+    version: "encash dish",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -189,23 +193,24 @@ Displays information specified with the {version} parameter for a patch specifie
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersByNameAndTitleVersionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patches.findComputersByNameAndTitleVersion({
-  name: "Northwest",
-  version: "feed Avon",
-}).then((res: FindComputersByNameAndTitleVersionResponse) => {
+  const res = await sdk.patches.findComputersByNameAndTitleVersion({
+    name: "Northwest",
+    version: "feed Avon",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -231,20 +236,21 @@ Finds all patches (Deprecated - Please transition use to Jamf Pro API endpoint "
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPatchesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patches.findPatches().then((res: FindPatchesResponse) => {
+  const res = await sdk.patches.findPatches();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -269,22 +275,23 @@ Finds patches by ID (Deprecated - Please transition use to Jamf Pro API endpoint
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPatchesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patches.findPatchesById({
-  id: 972398,
-}).then((res: FindPatchesByIdResponse) => {
+  const res = await sdk.patches.findPatchesById({
+    id: 972398,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -310,22 +317,23 @@ Finds the first patch with the name provided (Deprecated - Please transition use
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPatchesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patches.findPatchesByName({
-  name: "female quantify",
-}).then((res: FindPatchesByNameResponse) => {
+  const res = await sdk.patches.findPatchesByName({
+    name: "female quantify",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -351,22 +359,23 @@ Using an empty <package/> tag will disassociate any previous packages associated
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateSoftwareTitlesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patches.updateSoftwareTitlesById({
-  id: 862315,
-}).then((res: UpdateSoftwareTitlesByIdResponse) => {
+  const res = await sdk.patches.updateSoftwareTitlesById({
+    id: 862315,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -392,22 +401,23 @@ Using an empty <package/> tag will disassociate any previous packages associated
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateSoftwareTitlesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patches.updateSoftwareTitlesByName({
-  name: "Minivan",
-}).then((res: UpdateSoftwareTitlesByNameResponse) => {
+  const res = await sdk.patches.updateSoftwareTitlesByName({
+    name: "Minivan",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

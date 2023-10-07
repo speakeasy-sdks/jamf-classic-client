@@ -33,22 +33,24 @@ The chart below includes additional requirements for usage of specific commands
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateComputerCommandByCommandCommand, CreateComputerCommandByCommandResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { CreateComputerCommandByCommandCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computercommands.createComputerCommandByCommand({
-  command: CreateComputerCommandByCommandCommand.DeleteUser,
-}).then((res: CreateComputerCommandByCommandResponse) => {
+  const res = await sdk.computercommands.createComputerCommandByCommand({
+    command: CreateComputerCommandByCommandCommand.DeleteUser,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -75,25 +77,26 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
   CreateComputerCommandByCommandAndActionAction,
   CreateComputerCommandByCommandAndActionCommand,
-  CreateComputerCommandByCommandAndActionResponse,
 } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computercommands.createComputerCommandByCommandAndAction({
-  action: CreateComputerCommandByCommandAndActionAction.Install,
-  command: CreateComputerCommandByCommandAndActionCommand.ScheduleOSUpdate,
-  id: "<ID>",
-}).then((res: CreateComputerCommandByCommandAndActionResponse) => {
+  const res = await sdk.computercommands.createComputerCommandByCommandAndAction({
+    action: CreateComputerCommandByCommandAndActionAction.Install,
+    command: CreateComputerCommandByCommandAndActionCommand.ScheduleOSUpdate,
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -117,26 +120,25 @@ Creates a new computer command using command name and device IDs
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  CreateComputerCommandByCommandAndIdCommand,
-  CreateComputerCommandByCommandAndIdResponse,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { CreateComputerCommandByCommandAndIdCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computercommands.createComputerCommandByCommandAndId({
-  command: CreateComputerCommandByCommandAndIdCommand.ScheduleOSUpdate,
-  id: "<ID>",
-}).then((res: CreateComputerCommandByCommandAndIdResponse) => {
+  const res = await sdk.computercommands.createComputerCommandByCommandAndId({
+    command: CreateComputerCommandByCommandAndIdCommand.ScheduleOSUpdate,
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -160,27 +162,26 @@ Issuing a DeviceLock and EraseDevice command requires a 6 character passcode.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  CreateComputerCommandByCommandIdAndPasscodeCommand,
-  CreateComputerCommandByCommandIdAndPasscodeResponse,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { CreateComputerCommandByCommandIdAndPasscodeCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computercommands.createComputerCommandByCommandIdAndPasscode({
-  command: CreateComputerCommandByCommandIdAndPasscodeCommand.DeviceLock,
-  id: "<ID>",
-  passcode: "24 Rubidium virtual",
-}).then((res: CreateComputerCommandByCommandIdAndPasscodeResponse) => {
+  const res = await sdk.computercommands.createComputerCommandByCommandIdAndPasscode({
+    command: CreateComputerCommandByCommandIdAndPasscodeCommand.DeviceLock,
+    id: "<ID>",
+    passcode: "24 Rubidium virtual",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -204,20 +205,21 @@ Finds all computer commands
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerCommandsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computercommands.findComputerCommands().then((res: FindComputerCommandsResponse) => {
+  const res = await sdk.computercommands.findComputerCommands();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -240,22 +242,23 @@ Finds all computer commands by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerCommandsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computercommands.findComputerCommandsByName({
-  name: "Bridge sleet application",
-}).then((res: FindComputerCommandsByNameResponse) => {
+  const res = await sdk.computercommands.findComputerCommandsByName({
+    name: "Bridge sleet application",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -279,22 +282,23 @@ Finds a computer command by UUID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerCommandsByUuidResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computercommands.findComputerCommandsByUuid({
-  uuid: "d70e80ba-6e24-40b9-95fb-5378b5fc34fb",
-}).then((res: FindComputerCommandsByUuidResponse) => {
+  const res = await sdk.computercommands.findComputerCommandsByUuid({
+    uuid: "d70e80ba-6e24-40b9-95fb-5378b5fc34fb",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

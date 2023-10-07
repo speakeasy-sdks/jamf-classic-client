@@ -38,22 +38,23 @@ Certificates and mdm_capable are ignored.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateComputerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.createComputerById({
-  id: 117029,
-}).then((res: CreateComputerByIdResponse) => {
+  const res = await sdk.computers.createComputerById({
+    id: 117029,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -77,22 +78,23 @@ Deletes a computer by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteComputerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.deleteComputerById({
-  id: 361320,
-}).then((res: DeleteComputerByIdResponse) => {
+  const res = await sdk.computers.deleteComputerById({
+    id: 361320,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -116,22 +118,23 @@ Deletes a computer by MAC address
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteComputerByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.deleteComputerByMacAddress({
-  macaddress: "Executive",
-}).then((res: DeleteComputerByMacAddressResponse) => {
+  const res = await sdk.computers.deleteComputerByMacAddress({
+    macaddress: "Executive",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -155,22 +158,23 @@ Deletes a computer by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteComputerByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.deleteComputerByName({
-  name: "unleash",
-}).then((res: DeleteComputerByNameResponse) => {
+  const res = await sdk.computers.deleteComputerByName({
+    name: "unleash",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -194,22 +198,23 @@ Deletes a computer by serial number
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteComputerBySerialNumberResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.deleteComputerBySerialNumber({
-  serialnumber: "Implementation Southeast female",
-}).then((res: DeleteComputerBySerialNumberResponse) => {
+  const res = await sdk.computers.deleteComputerBySerialNumber({
+    serialnumber: "Implementation Southeast female",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -233,22 +238,23 @@ Deletes a computer by UDID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteComputerByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.deleteComputerByUDID({
-  udid: "Soap Branding",
-}).then((res: DeleteComputerByUDIDResponse) => {
+  const res = await sdk.computers.deleteComputerByUDID({
+    udid: "Soap Branding",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -272,20 +278,21 @@ Finds all computers
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.findComputers().then((res: FindComputersResponse) => {
+  const res = await sdk.computers.findComputers();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -308,20 +315,21 @@ Finds basic information for all computers
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersBasicResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.findComputersBasic().then((res: FindComputersBasicResponse) => {
+  const res = await sdk.computers.findComputersBasic();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -344,22 +352,23 @@ Finds computers by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.findComputersById({
-  id: 962919,
-}).then((res: FindComputersByIdResponse) => {
+  const res = await sdk.computers.findComputersById({
+    id: 962919,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -383,23 +392,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersByIdSubsetResponse, FindComputersByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputersByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.findComputersByIdSubset({
-  id: 130265,
-  subset: FindComputersByIdSubsetSubset.Peripherals,
-}).then((res: FindComputersByIdSubsetResponse) => {
+  const res = await sdk.computers.findComputersByIdSubset({
+    id: 130265,
+    subset: FindComputersByIdSubsetSubset.Peripherals,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -423,22 +434,23 @@ Finds computers by MAC address
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.findComputersByMacAddress({
-  macaddress: "online programming",
-}).then((res: FindComputersByMacAddressResponse) => {
+  const res = await sdk.computers.findComputersByMacAddress({
+    macaddress: "online programming",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -462,23 +474,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersByMacAddressSubsetResponse, FindComputersByMacAddressSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputersByMacAddressSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.findComputersByMacAddressSubset({
-  macaddress: "Supervisor Bugatti female",
-  subset: FindComputersByMacAddressSubsetSubset.Purchasing,
-}).then((res: FindComputersByMacAddressSubsetResponse) => {
+  const res = await sdk.computers.findComputersByMacAddressSubset({
+    macaddress: "Supervisor Bugatti female",
+    subset: FindComputersByMacAddressSubsetSubset.Purchasing,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -502,22 +516,23 @@ Finds the first computer with the given name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.findComputersByName({
-  name: "Legacy",
-}).then((res: FindComputersByNameResponse) => {
+  const res = await sdk.computers.findComputersByName({
+    name: "Legacy",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -541,23 +556,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersByNameSubsetResponse, FindComputersByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputersByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.findComputersByNameSubset({
-  name: "concerning",
-  subset: FindComputersByNameSubsetSubset.Certificates,
-}).then((res: FindComputersByNameSubsetResponse) => {
+  const res = await sdk.computers.findComputersByNameSubset({
+    name: "concerning",
+    subset: FindComputersByNameSubsetSubset.Certificates,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -581,22 +598,23 @@ Finds computers by serial number
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersBySerialNumberResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.findComputersBySerialNumber({
-  serialnumber: "invoice Southwest",
-}).then((res: FindComputersBySerialNumberResponse) => {
+  const res = await sdk.computers.findComputersBySerialNumber({
+    serialnumber: "invoice Southwest",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -620,26 +638,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindComputersBySerialNumberSubsetResponse,
-  FindComputersBySerialNumberSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputersBySerialNumberSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.findComputersBySerialNumberSubset({
-  serialnumber: "tesla haptic",
-  subset: FindComputersBySerialNumberSubsetSubset.ConfigurationProfiles,
-}).then((res: FindComputersBySerialNumberSubsetResponse) => {
+  const res = await sdk.computers.findComputersBySerialNumberSubset({
+    serialnumber: "tesla haptic",
+    subset: FindComputersBySerialNumberSubsetSubset.ConfigurationProfiles,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -663,22 +680,23 @@ Finds computers by UDID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.findComputersByUDID({
-  udid: "East Jewelery invoice",
-}).then((res: FindComputersByUDIDResponse) => {
+  const res = await sdk.computers.findComputersByUDID({
+    udid: "East Jewelery invoice",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -702,23 +720,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersByUDIDSubsetResponse, FindComputersByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputersByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.findComputersByUDIDSubset({
-  subset: FindComputersByUDIDSubsetSubset.ExtensionAttributes,
-  udid: "male Trial",
-}).then((res: FindComputersByUDIDSubsetResponse) => {
+  const res = await sdk.computers.findComputersByUDIDSubset({
+    subset: FindComputersByUDIDSubsetSubset.ExtensionAttributes,
+    udid: "male Trial",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -742,22 +762,23 @@ Deletes data collected by an extension attribute
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FlushComputerExtenstionAttributeDataResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.flushComputerExtenstionAttributeData({
-  id: "<ID>",
-}).then((res: FlushComputerExtenstionAttributeDataResponse) => {
+  const res = await sdk.computers.flushComputerExtenstionAttributeData({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -781,22 +802,23 @@ Match performs the same function as a simple search in the GUI.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { MatchComputersResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.matchComputers({
-  match: "matrix",
-}).then((res: MatchComputersResponse) => {
+  const res = await sdk.computers.matchComputers({
+    match: "matrix",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -820,22 +842,23 @@ Searches for computers that match the provided name parameter
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { MatchComputersNamesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.matchComputersNames({
-  matchname: "silver Actinium",
-}).then((res: MatchComputersNamesResponse) => {
+  const res = await sdk.computers.matchComputersNames({
+    matchname: "silver Actinium",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -859,22 +882,23 @@ Certificates and mdm_capable are ignored.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateComputerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.updateComputerById({
-  id: 576492,
-}).then((res: UpdateComputerByIdResponse) => {
+  const res = await sdk.computers.updateComputerById({
+    id: 576492,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -898,22 +922,23 @@ Certificates and mdm_capable are ignored.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateComputerByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.updateComputerByMacAddress({
-  macaddress: "withdrawal",
-}).then((res: UpdateComputerByMacAddressResponse) => {
+  const res = await sdk.computers.updateComputerByMacAddress({
+    macaddress: "withdrawal",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -937,22 +962,23 @@ Certificates and mdm_capable are ignored.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateComputerByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.updateComputerByName({
-  name: "ROI",
-}).then((res: UpdateComputerByNameResponse) => {
+  const res = await sdk.computers.updateComputerByName({
+    name: "ROI",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -976,22 +1002,23 @@ Certificates and mdm_capable are ignored.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateComputerBySerialNumberResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.updateComputerBySerialNumber({
-  serialnumber: "applications",
-}).then((res: UpdateComputerBySerialNumberResponse) => {
+  const res = await sdk.computers.updateComputerBySerialNumber({
+    serialnumber: "applications",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -1015,22 +1042,23 @@ Certificates and mdm_capable are ignored.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateComputerByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computers.updateComputerByUDID({
-  udid: "Trial Handcrafted",
-}).then((res: UpdateComputerByUDIDResponse) => {
+  const res = await sdk.computers.updateComputerByUDID({
+    udid: "Trial Handcrafted",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

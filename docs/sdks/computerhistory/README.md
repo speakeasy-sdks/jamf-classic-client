@@ -22,22 +22,23 @@ Finds computer history by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHistoryByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhistory.findComputerHistoryById({
-  id: 814675,
-}).then((res: FindComputerHistoryByIdResponse) => {
+  const res = await sdk.computerhistory.findComputerHistoryById({
+    id: 814675,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -61,23 +62,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHistoryByIdSubsetResponse, FindComputerHistoryByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHistoryByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhistory.findComputerHistoryByIdSubset({
-  id: 723127,
-  subset: FindComputerHistoryByIdSubsetSubset.CasperImagingLogs,
-}).then((res: FindComputerHistoryByIdSubsetResponse) => {
+  const res = await sdk.computerhistory.findComputerHistoryByIdSubset({
+    id: 723127,
+    subset: FindComputerHistoryByIdSubsetSubset.CasperImagingLogs,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -101,22 +104,23 @@ Finds computer history by MAC address
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHistoryByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhistory.findComputerHistoryByMacAddress({
-  macaddress: "Identity Genderflux whose",
-}).then((res: FindComputerHistoryByMacAddressResponse) => {
+  const res = await sdk.computerhistory.findComputerHistoryByMacAddress({
+    macaddress: "Identity Genderflux whose",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -140,26 +144,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindComputerHistoryByMacAddressSubsetResponse,
-  FindComputerHistoryByMacAddressSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHistoryByMacAddressSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhistory.findComputerHistoryByMacAddressSubset({
-  macaddress: "Mews North Indiana",
-  subset: FindComputerHistoryByMacAddressSubsetSubset.UserLocation,
-}).then((res: FindComputerHistoryByMacAddressSubsetResponse) => {
+  const res = await sdk.computerhistory.findComputerHistoryByMacAddressSubset({
+    macaddress: "Mews North Indiana",
+    subset: FindComputerHistoryByMacAddressSubsetSubset.UserLocation,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -183,22 +186,23 @@ Finds computer history by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHistoryByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhistory.findComputerHistoryByName({
-  name: "Tasty override",
-}).then((res: FindComputerHistoryByNameResponse) => {
+  const res = await sdk.computerhistory.findComputerHistoryByName({
+    name: "Tasty override",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -222,23 +226,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHistoryByNameSubsetResponse, FindComputerHistoryByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHistoryByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhistory.findComputerHistoryByNameSubset({
-  name: "East Convertible Scandium",
-  subset: FindComputerHistoryByNameSubsetSubset.MacAppStoreApplications,
-}).then((res: FindComputerHistoryByNameSubsetResponse) => {
+  const res = await sdk.computerhistory.findComputerHistoryByNameSubset({
+    name: "East Convertible Scandium",
+    subset: FindComputerHistoryByNameSubsetSubset.MacAppStoreApplications,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -262,22 +268,23 @@ Finds computer history by serial number
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHistoryBySerialNumberResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhistory.findComputerHistoryBySerialNumber({
-  serialnumber: "calculating",
-}).then((res: FindComputerHistoryBySerialNumberResponse) => {
+  const res = await sdk.computerhistory.findComputerHistoryBySerialNumber({
+    serialnumber: "calculating",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -301,26 +308,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindComputerHistoryBySerialNumberSubsetResponse,
-  FindComputerHistoryBySerialNumberSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHistoryBySerialNumberSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhistory.findComputerHistoryBySerialNumberSubset({
-  serialnumber: "white Philippine Rutherfordium",
-  subset: FindComputerHistoryBySerialNumberSubsetSubset.Audits,
-}).then((res: FindComputerHistoryBySerialNumberSubsetResponse) => {
+  const res = await sdk.computerhistory.findComputerHistoryBySerialNumberSubset({
+    serialnumber: "white Philippine Rutherfordium",
+    subset: FindComputerHistoryBySerialNumberSubsetSubset.Audits,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -344,22 +350,23 @@ Finds computer history by UDID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHistoryByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhistory.findComputerHistoryByUDID({
-  udid: "quisquam clip",
-}).then((res: FindComputerHistoryByUDIDResponse) => {
+  const res = await sdk.computerhistory.findComputerHistoryByUDID({
+    udid: "quisquam clip",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -383,23 +390,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHistoryByUDIDSubsetResponse, FindComputerHistoryByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHistoryByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhistory.findComputerHistoryByUDIDSubset({
-  subset: FindComputerHistoryByUDIDSubsetSubset.ScreenSharingLogs,
-  udid: "Berkshire",
-}).then((res: FindComputerHistoryByUDIDSubsetResponse) => {
+  const res = await sdk.computerhistory.findComputerHistoryByUDIDSubset({
+    subset: FindComputerHistoryByUDIDSubsetSubset.ScreenSharingLogs,
+    udid: "Berkshire",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

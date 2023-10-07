@@ -20,22 +20,23 @@ The `display_fields` are only applicable to the `SmartGroupMobileDeviceMembershi
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateWebhookByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.webhooks.createWebhookById({
-  id: 490541,
-}).then((res: CreateWebhookByIdResponse) => {
+  const res = await sdk.webhooks.createWebhookById({
+    id: 490541,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a webhook by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteWebhookByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.webhooks.deleteWebhookById({
-  id: 734358,
-}).then((res: DeleteWebhookByIdResponse) => {
+  const res = await sdk.webhooks.deleteWebhookById({
+    id: 734358,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a webhook by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteWebhookByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.webhooks.deleteWebhookByName({
-  name: "South Mountain Southwest",
-}).then((res: DeleteWebhookByNameResponse) => {
+  const res = await sdk.webhooks.deleteWebhookByName({
+    name: "South Mountain Southwest",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all webhooks
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindWebhooksResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.webhooks.findWebhooks().then((res: FindWebhooksResponse) => {
+  const res = await sdk.webhooks.findWebhooks();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds webhooks by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindWebhooksByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.webhooks.findWebhooksById({
-  id: 162460,
-}).then((res: FindWebhooksByIdResponse) => {
+  const res = await sdk.webhooks.findWebhooksById({
+    id: 162460,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds webhooks by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindWebhooksByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.webhooks.findWebhooksByName({
-  name: "Buckinghamshire notwithstanding International",
-}).then((res: FindWebhooksByNameResponse) => {
+  const res = await sdk.webhooks.findWebhooksByName({
+    name: "Buckinghamshire notwithstanding International",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ The `display_fields` are only applicable to the `SmartGroupMobileDeviceMembershi
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateWebhookByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.webhooks.updateWebhookById({
-  id: 932671,
-}).then((res: UpdateWebhookByIdResponse) => {
+  const res = await sdk.webhooks.updateWebhookById({
+    id: 932671,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Updates an existing webhook by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateWebhookByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.webhooks.updateWebhookByName({
-  name: "sievert yahoo revolutionize",
-}).then((res: UpdateWebhookByNameResponse) => {
+  const res = await sdk.webhooks.updateWebhookByName({
+    name: "sievert yahoo revolutionize",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

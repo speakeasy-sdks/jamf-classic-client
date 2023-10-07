@@ -16,22 +16,23 @@ Finds patch reports by patch software title ID. (Deprecated) Please transition u
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { PatchreportsPatchsoftwaretitleidByIdGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchreports.patchreportsPatchsoftwaretitleidByIdGet({
-  id: "<ID>",
-}).then((res: PatchreportsPatchsoftwaretitleidByIdGetResponse) => {
+  const res = await sdk.patchreports.patchreportsPatchsoftwaretitleidByIdGet({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -57,23 +58,24 @@ Display computers for a specific version of a patch report. (Deprecated) Please 
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchreports.patchreportsPatchsoftwaretitleidVersionByIdAndVersionGet({
-  id: "<ID>",
-  version: "website",
-}).then((res: PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetResponse) => {
+  const res = await sdk.patchreports.patchreportsPatchsoftwaretitleidVersionByIdAndVersionGet({
+    id: "<ID>",
+    version: "website",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

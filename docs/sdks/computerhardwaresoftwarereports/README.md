@@ -22,25 +22,26 @@ Finds hardware/software reports by computer ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHardwareSoftwareReportsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsById({
-  endDate: new RFCDate("2022-01-22"),
-  id: "<ID>",
-  startDate: new RFCDate("2021-08-19"),
-}).then((res: FindComputerHardwareSoftwareReportsByIdResponse) => {
+  const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsById({
+    endDate: new RFCDate("2022-01-22"),
+    id: "<ID>",
+    startDate: new RFCDate("2021-08-19"),
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -64,29 +65,28 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindComputerHardwareSoftwareReportsByIdSubsetResponse,
-  FindComputerHardwareSoftwareReportsByIdSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHardwareSoftwareReportsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByIdSubset({
-  endDate: new RFCDate("2022-02-28"),
-  id: 311709,
-  startDate: new RFCDate("2023-03-26"),
-  subset: FindComputerHardwareSoftwareReportsByIdSubsetSubset.Hardwre,
-}).then((res: FindComputerHardwareSoftwareReportsByIdSubsetResponse) => {
+  const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByIdSubset({
+    endDate: new RFCDate("2022-02-28"),
+    id: 311709,
+    startDate: new RFCDate("2023-03-26"),
+    subset: FindComputerHardwareSoftwareReportsByIdSubsetSubset.Hardwre,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -110,25 +110,26 @@ Finds hardware/software reports by computer MAC address
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHardwareSoftwareReportsByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByMacAddress({
-  endDate: new RFCDate("2021-11-05"),
-  macaddress: "Northeast transmitting",
-  startDate: new RFCDate("2022-10-26"),
-}).then((res: FindComputerHardwareSoftwareReportsByMacAddressResponse) => {
+  const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByMacAddress({
+    endDate: new RFCDate("2021-11-05"),
+    macaddress: "Northeast transmitting",
+    startDate: new RFCDate("2022-10-26"),
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -152,29 +153,28 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindComputerHardwareSoftwareReportsByMacAddressSubsetResponse,
-  FindComputerHardwareSoftwareReportsByMacAddressSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHardwareSoftwareReportsByMacAddressSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByMacAddressSubset({
-  endDate: new RFCDate("2023-05-05"),
-  macaddress: "Miami",
-  startDate: new RFCDate("2023-10-16"),
-  subset: FindComputerHardwareSoftwareReportsByMacAddressSubsetSubset.Hardwre,
-}).then((res: FindComputerHardwareSoftwareReportsByMacAddressSubsetResponse) => {
+  const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByMacAddressSubset({
+    endDate: new RFCDate("2023-05-05"),
+    macaddress: "Miami",
+    startDate: new RFCDate("2023-10-16"),
+    subset: FindComputerHardwareSoftwareReportsByMacAddressSubsetSubset.Hardwre,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -198,25 +198,26 @@ Finds hardware/software reports by computer name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHardwareSoftwareReportsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByName({
-  endDate: new RFCDate("2023-01-11"),
-  name: "Movies morph",
-  startDate: new RFCDate("2023-12-29"),
-}).then((res: FindComputerHardwareSoftwareReportsByNameResponse) => {
+  const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByName({
+    endDate: new RFCDate("2023-01-11"),
+    name: "Movies morph",
+    startDate: new RFCDate("2023-12-29"),
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -240,29 +241,28 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindComputerHardwareSoftwareReportsByNameSubsetResponse,
-  FindComputerHardwareSoftwareReportsByNameSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHardwareSoftwareReportsByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByNameSubset({
-  endDate: new RFCDate("2021-07-31"),
-  name: "Islands Toyota ugh",
-  startDate: new RFCDate("2022-01-06"),
-  subset: FindComputerHardwareSoftwareReportsByNameSubsetSubset.Plugins,
-}).then((res: FindComputerHardwareSoftwareReportsByNameSubsetResponse) => {
+  const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByNameSubset({
+    endDate: new RFCDate("2021-07-31"),
+    name: "Islands Toyota ugh",
+    startDate: new RFCDate("2022-01-06"),
+    subset: FindComputerHardwareSoftwareReportsByNameSubsetSubset.Plugins,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -286,25 +286,26 @@ Finds hardware/software reports by computer serial number
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHardwareSoftwareReportsBySerialResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsBySerial({
-  endDate: new RFCDate("2023-10-13"),
-  serialnumber: "Hyundai",
-  startDate: new RFCDate("2021-02-14"),
-}).then((res: FindComputerHardwareSoftwareReportsBySerialResponse) => {
+  const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsBySerial({
+    endDate: new RFCDate("2023-10-13"),
+    serialnumber: "Hyundai",
+    startDate: new RFCDate("2021-02-14"),
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -328,29 +329,28 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindComputerHardwareSoftwareReportsBySerialSubsetResponse,
-  FindComputerHardwareSoftwareReportsBySerialSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHardwareSoftwareReportsBySerialSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsBySerialSubset({
-  endDate: new RFCDate("2022-03-08"),
-  serialnumber: "kindly Southeast",
-  startDate: new RFCDate("2021-07-21"),
-  subset: FindComputerHardwareSoftwareReportsBySerialSubsetSubset.Hardwre,
-}).then((res: FindComputerHardwareSoftwareReportsBySerialSubsetResponse) => {
+  const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsBySerialSubset({
+    endDate: new RFCDate("2022-03-08"),
+    serialnumber: "kindly Southeast",
+    startDate: new RFCDate("2021-07-21"),
+    subset: FindComputerHardwareSoftwareReportsBySerialSubsetSubset.Hardwre,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -374,25 +374,26 @@ Finds hardware/software reports by computer UDID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHardwareSoftwareReportsByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByUDID({
-  endDate: new RFCDate("2021-05-02"),
-  startDate: new RFCDate("2023-04-25"),
-  udid: "eaque",
-}).then((res: FindComputerHardwareSoftwareReportsByUDIDResponse) => {
+  const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByUDID({
+    endDate: new RFCDate("2021-05-02"),
+    startDate: new RFCDate("2023-04-25"),
+    udid: "eaque",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -416,29 +417,28 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindComputerHardwareSoftwareReportsByUDIDSubsetResponse,
-  FindComputerHardwareSoftwareReportsByUDIDSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHardwareSoftwareReportsByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByUDIDSubset({
-  endDate: new RFCDate("2022-09-29"),
-  startDate: new RFCDate("2023-09-30"),
-  subset: FindComputerHardwareSoftwareReportsByUDIDSubsetSubset.Software,
-  udid: "instructive",
-}).then((res: FindComputerHardwareSoftwareReportsByUDIDSubsetResponse) => {
+  const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByUDIDSubset({
+    endDate: new RFCDate("2022-09-29"),
+    startDate: new RFCDate("2023-09-30"),
+    subset: FindComputerHardwareSoftwareReportsByUDIDSubsetSubset.Software,
+    udid: "instructive",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

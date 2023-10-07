@@ -20,22 +20,23 @@ Creates a new computer group by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateComputerGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computergroups.createComputerGroupById({
-  id: 822209,
-}).then((res: CreateComputerGroupByIdResponse) => {
+  const res = await sdk.computergroups.createComputerGroupById({
+    id: 822209,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a computer group by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteComputerGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computergroups.deleteComputerGroupById({
-  id: 126210,
-}).then((res: DeleteComputerGroupByIdResponse) => {
+  const res = await sdk.computergroups.deleteComputerGroupById({
+    id: 126210,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a computer group by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteComputerGroupByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computergroups.deleteComputerGroupByName({
-  name: "stable",
-}).then((res: DeleteComputerGroupByNameResponse) => {
+  const res = await sdk.computergroups.deleteComputerGroupByName({
+    name: "stable",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all computer groups
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerGroupsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computergroups.findComputerGroups().then((res: FindComputerGroupsResponse) => {
+  const res = await sdk.computergroups.findComputerGroups();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds computer groups by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerGroupsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computergroups.findComputerGroupsById({
-  id: 650461,
-}).then((res: FindComputerGroupsByIdResponse) => {
+  const res = await sdk.computergroups.findComputerGroupsById({
+    id: 650461,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds computer groups by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerGroupsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computergroups.findComputerGroupsByName({
-  name: "sometimes Internal",
-}).then((res: FindComputerGroupsByNameResponse) => {
+  const res = await sdk.computergroups.findComputerGroupsByName({
+    name: "sometimes Internal",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ One or more computers can be added by using "computer_additions" instead of "com
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateComputerGroupByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computergroups.updateComputerGroupById({
-  id: 814605,
-}).then((res: UpdateComputerGroupByIdResponse) => {
+  const res = await sdk.computergroups.updateComputerGroupById({
+    id: 814605,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ One or more computers can be added by using "computer_additions" instead of "com
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateComputerGroupByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computergroups.updateComputerGroupByName({
-  name: "Cerium",
-}).then((res: UpdateComputerGroupByNameResponse) => {
+  const res = await sdk.computergroups.updateComputerGroupByName({
+    name: "Cerium",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

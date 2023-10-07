@@ -22,22 +22,23 @@ Creates a new managed preference profile by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateManagedPreferenceProfileByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.managedpreferenceprofiles.createManagedPreferenceProfileById({
-  id: 153966,
-}).then((res: CreateManagedPreferenceProfileByIdResponse) => {
+  const res = await sdk.managedpreferenceprofiles.createManagedPreferenceProfileById({
+    id: 153966,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -61,22 +62,23 @@ Deletes a managed preference profiles by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteManagedPreferenceProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.managedpreferenceprofiles.deleteManagedPreferenceProfilesById({
-  id: 174021,
-}).then((res: DeleteManagedPreferenceProfilesByIdResponse) => {
+  const res = await sdk.managedpreferenceprofiles.deleteManagedPreferenceProfilesById({
+    id: 174021,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -100,22 +102,23 @@ Deletes a managed preference profiles by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteManagedPreferenceProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.managedpreferenceprofiles.deleteManagedPreferenceProfilesByName({
-  name: "analyzing",
-}).then((res: DeleteManagedPreferenceProfilesByNameResponse) => {
+  const res = await sdk.managedpreferenceprofiles.deleteManagedPreferenceProfilesByName({
+    name: "analyzing",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -139,20 +142,21 @@ Finds all managed preference profiles
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindManagedPreferenceProfilesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.managedpreferenceprofiles.findManagedPreferenceProfiles().then((res: FindManagedPreferenceProfilesResponse) => {
+  const res = await sdk.managedpreferenceprofiles.findManagedPreferenceProfiles();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -175,22 +179,23 @@ Finds managed preference profiles by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindManagedPreferenceProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.managedpreferenceprofiles.findManagedPreferenceProfilesById({
-  id: 823664,
-}).then((res: FindManagedPreferenceProfilesByIdResponse) => {
+  const res = await sdk.managedpreferenceprofiles.findManagedPreferenceProfilesById({
+    id: 823664,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -214,26 +219,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindManagedPreferenceProfilesByIdSubsetResponse,
-  FindManagedPreferenceProfilesByIdSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindManagedPreferenceProfilesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.managedpreferenceprofiles.findManagedPreferenceProfilesByIdSubset({
-  id: 436755,
-  subset: FindManagedPreferenceProfilesByIdSubsetSubset.Settings,
-}).then((res: FindManagedPreferenceProfilesByIdSubsetResponse) => {
+  const res = await sdk.managedpreferenceprofiles.findManagedPreferenceProfilesByIdSubset({
+    id: 436755,
+    subset: FindManagedPreferenceProfilesByIdSubsetSubset.Settings,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -257,22 +261,23 @@ Finds managed preference profiles by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindManagedPreferenceProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.managedpreferenceprofiles.findManagedPreferenceProfilesByName({
-  name: "meh maxime commonly",
-}).then((res: FindManagedPreferenceProfilesByNameResponse) => {
+  const res = await sdk.managedpreferenceprofiles.findManagedPreferenceProfilesByName({
+    name: "meh maxime commonly",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -296,26 +301,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindManagedPreferenceProfilesByNameSubsetResponse,
-  FindManagedPreferenceProfilesByNameSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindManagedPreferenceProfilesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.managedpreferenceprofiles.findManagedPreferenceProfilesByNameSubset({
-  name: "pleased",
-  subset: FindManagedPreferenceProfilesByNameSubsetSubset.General,
-}).then((res: FindManagedPreferenceProfilesByNameSubsetResponse) => {
+  const res = await sdk.managedpreferenceprofiles.findManagedPreferenceProfilesByNameSubset({
+    name: "pleased",
+    subset: FindManagedPreferenceProfilesByNameSubsetSubset.General,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -339,22 +343,23 @@ Updates an existing managed preference profiles by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateManagedPreferenceProfilesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.managedpreferenceprofiles.updateManagedPreferenceProfilesById({
-  id: 67711,
-}).then((res: UpdateManagedPreferenceProfilesByIdResponse) => {
+  const res = await sdk.managedpreferenceprofiles.updateManagedPreferenceProfilesById({
+    id: 67711,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -378,22 +383,23 @@ Updates an existing managed preference profiles by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateManagedPreferenceProfilesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.managedpreferenceprofiles.updateManagedPreferenceProfilesByName({
-  name: "Volkswagen networks",
-}).then((res: UpdateManagedPreferenceProfilesByNameResponse) => {
+  const res = await sdk.managedpreferenceprofiles.updateManagedPreferenceProfilesByName({
+    name: "Volkswagen networks",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

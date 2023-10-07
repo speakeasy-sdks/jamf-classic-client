@@ -35,22 +35,23 @@ To distinguish between mobile device types (e.g., iPad, iPhone, or Apple TV), us
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMobileDeviceByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.createMobileDeviceById({
-  id: 718866,
-}).then((res: CreateMobileDeviceByIdResponse) => {
+  const res = await sdk.mobiledevices.createMobileDeviceById({
+    id: 718866,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -74,22 +75,23 @@ Deletes a mobile device by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.deleteMobileDeviceById({
-  id: 107477,
-}).then((res: DeleteMobileDeviceByIdResponse) => {
+  const res = await sdk.mobiledevices.deleteMobileDeviceById({
+    id: 107477,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -113,22 +115,23 @@ Deletes a mobile device by Mac address
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.deleteMobileDeviceByMacAddress({
-  macaddress: "FTP invoice Representative",
-}).then((res: DeleteMobileDeviceByMacAddressResponse) => {
+  const res = await sdk.mobiledevices.deleteMobileDeviceByMacAddress({
+    macaddress: "FTP invoice Representative",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -152,22 +155,23 @@ Deletes a mobile device by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.deleteMobileDeviceByName({
-  name: "Future Central Coupe",
-}).then((res: DeleteMobileDeviceByNameResponse) => {
+  const res = await sdk.mobiledevices.deleteMobileDeviceByName({
+    name: "Future Central Coupe",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -191,22 +195,23 @@ Deletes a mobile device by serial number
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceBySerialNumberResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.deleteMobileDeviceBySerialNumber({
-  serialnumber: "Modern becquerel",
-}).then((res: DeleteMobileDeviceBySerialNumberResponse) => {
+  const res = await sdk.mobiledevices.deleteMobileDeviceBySerialNumber({
+    serialnumber: "Modern becquerel",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -230,22 +235,23 @@ Deletes a mobile device by UDID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMobileDeviceByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.deleteMobileDeviceByUDID({
-  udid: "capability Sanford withdrawal",
-}).then((res: DeleteMobileDeviceByUDIDResponse) => {
+  const res = await sdk.mobiledevices.deleteMobileDeviceByUDID({
+    udid: "capability Sanford withdrawal",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -269,20 +275,21 @@ Finds all mobile devices
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDevicesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.findMobileDevices().then((res: FindMobileDevicesResponse) => {
+  const res = await sdk.mobiledevices.findMobileDevices();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -305,22 +312,23 @@ Finds mobile devices by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDevicesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.findMobileDevicesById({
-  id: 459333,
-}).then((res: FindMobileDevicesByIdResponse) => {
+  const res = await sdk.mobiledevices.findMobileDevicesById({
+    id: 459333,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -344,23 +352,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDevicesByIdSubsetResponse, FindMobileDevicesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDevicesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.findMobileDevicesByIdSubset({
-  id: 384346,
-  subset: FindMobileDevicesByIdSubsetSubset.Purchasing,
-}).then((res: FindMobileDevicesByIdSubsetResponse) => {
+  const res = await sdk.mobiledevices.findMobileDevicesByIdSubset({
+    id: 384346,
+    subset: FindMobileDevicesByIdSubsetSubset.Purchasing,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -384,22 +394,23 @@ Finds mobile devices by Mac address
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDevicesByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.findMobileDevicesByMacAddress({
-  macaddress: "Senior pfft firewall",
-}).then((res: FindMobileDevicesByMacAddressResponse) => {
+  const res = await sdk.mobiledevices.findMobileDevicesByMacAddress({
+    macaddress: "Senior pfft firewall",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -423,26 +434,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindMobileDevicesByMacAddressSubsetResponse,
-  FindMobileDevicesByMacAddressSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDevicesByMacAddressSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.findMobileDevicesByMacAddressSubset({
-  macaddress: "red oh Luxurious",
-  subset: FindMobileDevicesByMacAddressSubsetSubset.ProvisioningProfiles,
-}).then((res: FindMobileDevicesByMacAddressSubsetResponse) => {
+  const res = await sdk.mobiledevices.findMobileDevicesByMacAddressSubset({
+    macaddress: "red oh Luxurious",
+    subset: FindMobileDevicesByMacAddressSubsetSubset.ProvisioningProfiles,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -466,22 +476,23 @@ Finds mobile devices by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDevicesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.findMobileDevicesByName({
-  name: "West",
-}).then((res: FindMobileDevicesByNameResponse) => {
+  const res = await sdk.mobiledevices.findMobileDevicesByName({
+    name: "West",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -505,23 +516,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDevicesByNameSubsetResponse, FindMobileDevicesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDevicesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.findMobileDevicesByNameSubset({
-  name: "Corporate",
-  subset: FindMobileDevicesByNameSubsetSubset.Purchasing,
-}).then((res: FindMobileDevicesByNameSubsetResponse) => {
+  const res = await sdk.mobiledevices.findMobileDevicesByNameSubset({
+    name: "Corporate",
+    subset: FindMobileDevicesByNameSubsetSubset.Purchasing,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -545,22 +558,23 @@ Finds mobile devices by serial number
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDevicesBySerialNumberResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.findMobileDevicesBySerialNumber({
-  serialnumber: "fat UDP",
-}).then((res: FindMobileDevicesBySerialNumberResponse) => {
+  const res = await sdk.mobiledevices.findMobileDevicesBySerialNumber({
+    serialnumber: "fat UDP",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -584,26 +598,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  FindMobileDevicesBySerialNumberSubsetResponse,
-  FindMobileDevicesBySerialNumberSubsetSubset,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDevicesBySerialNumberSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.findMobileDevicesBySerialNumberSubset({
-  serialnumber: "how laudantium",
-  subset: FindMobileDevicesBySerialNumberSubsetSubset.Purchasing,
-}).then((res: FindMobileDevicesBySerialNumberSubsetResponse) => {
+  const res = await sdk.mobiledevices.findMobileDevicesBySerialNumberSubset({
+    serialnumber: "how laudantium",
+    subset: FindMobileDevicesBySerialNumberSubsetSubset.Purchasing,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -627,22 +640,23 @@ Finds mobile devices by UDID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDevicesByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.findMobileDevicesByUDID({
-  udid: "Officer ink",
-}).then((res: FindMobileDevicesByUDIDResponse) => {
+  const res = await sdk.mobiledevices.findMobileDevicesByUDID({
+    udid: "Officer ink",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -666,23 +680,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDevicesByUDIDSubsetResponse, FindMobileDevicesByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDevicesByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.findMobileDevicesByUDIDSubset({
-  subset: FindMobileDevicesByUDIDSubsetSubset.Purchasing,
-  udid: "Minivan Jordan Borders",
-}).then((res: FindMobileDevicesByUDIDSubsetResponse) => {
+  const res = await sdk.mobiledevices.findMobileDevicesByUDIDSubset({
+    subset: FindMobileDevicesByUDIDSubsetSubset.Purchasing,
+    udid: "Minivan Jordan Borders",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -706,22 +722,23 @@ Match performs the same function as a simple search in the GUI.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { MatchMobileDevicesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.matchMobileDevices({
-  match: "male however absent",
-}).then((res: MatchMobileDevicesResponse) => {
+  const res = await sdk.mobiledevices.matchMobileDevices({
+    match: "male however absent",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -745,22 +762,23 @@ sdk.mobiledevices.matchMobileDevices({
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.updateMobileDeviceById({
-  id: 748548,
-}).then((res: UpdateMobileDeviceByIdResponse) => {
+  const res = await sdk.mobiledevices.updateMobileDeviceById({
+    id: 748548,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -784,22 +802,23 @@ sdk.mobiledevices.updateMobileDeviceById({
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.updateMobileDeviceByMacAddress({
-  macaddress: "whether deposit",
-}).then((res: UpdateMobileDeviceByMacAddressResponse) => {
+  const res = await sdk.mobiledevices.updateMobileDeviceByMacAddress({
+    macaddress: "whether deposit",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -823,22 +842,23 @@ sdk.mobiledevices.updateMobileDeviceByMacAddress({
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.updateMobileDeviceByName({
-  name: "Face Forges if",
-}).then((res: UpdateMobileDeviceByNameResponse) => {
+  const res = await sdk.mobiledevices.updateMobileDeviceByName({
+    name: "Face Forges if",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -862,22 +882,23 @@ sdk.mobiledevices.updateMobileDeviceByName({
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceBySerialNumberResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.updateMobileDeviceBySerialNumber({
-  serialnumber: "male",
-}).then((res: UpdateMobileDeviceBySerialNumberResponse) => {
+  const res = await sdk.mobiledevices.updateMobileDeviceBySerialNumber({
+    serialnumber: "male",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -901,22 +922,23 @@ sdk.mobiledevices.updateMobileDeviceBySerialNumber({
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMobileDeviceByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.mobiledevices.updateMobileDeviceByUDID({
-  udid: "Computer hack",
-}).then((res: UpdateMobileDeviceByUDIDResponse) => {
+  const res = await sdk.mobiledevices.updateMobileDeviceByUDID({
+    udid: "Computer hack",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

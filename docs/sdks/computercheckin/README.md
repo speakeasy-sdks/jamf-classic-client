@@ -14,20 +14,21 @@ Finds the Jamf Pro computer checkin information
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerCheckinResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computercheckin.findComputerCheckin().then((res: FindComputerCheckinResponse) => {
+  const res = await sdk.computercheckin.findComputerCheckin();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -50,20 +51,21 @@ Updates the Jamf Pro computer checkin information
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateComputerCheckinResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computercheckin.updateComputerCheckin("2Iu;QDJ,=5" as bytes <<<>>>).then((res: UpdateComputerCheckinResponse) => {
+  const res = await sdk.computercheckin.updateComputerCheckin("2Iu;QDJ,=5" as bytes <<<>>>);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

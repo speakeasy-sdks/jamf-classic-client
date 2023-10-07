@@ -20,22 +20,23 @@ Matching computers are derived from software definitions, therefore they cannot 
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateLicensedSoftwareByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.licensedsoftware.createLicensedSoftwareById({
-  id: 186021,
-}).then((res: CreateLicensedSoftwareByIdResponse) => {
+  const res = await sdk.licensedsoftware.createLicensedSoftwareById({
+    id: 186021,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes licensed software by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteLicensedSoftwareByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.licensedsoftware.deleteLicensedSoftwareById({
-  id: 61769,
-}).then((res: DeleteLicensedSoftwareByIdResponse) => {
+  const res = await sdk.licensedsoftware.deleteLicensedSoftwareById({
+    id: 61769,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes licensed software by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteLicensedSoftwareByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.licensedsoftware.deleteLicensedSoftwareByName({
-  name: "Frisco",
-}).then((res: DeleteLicensedSoftwareByNameResponse) => {
+  const res = await sdk.licensedsoftware.deleteLicensedSoftwareByName({
+    name: "Frisco",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all licensed software
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindLicensedSoftwareResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.licensedsoftware.findLicensedSoftware().then((res: FindLicensedSoftwareResponse) => {
+  const res = await sdk.licensedsoftware.findLicensedSoftware();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds licensed software by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindLicensedSoftwareByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.licensedsoftware.findLicensedSoftwareById({
-  id: 987654,
-}).then((res: FindLicensedSoftwareByIdResponse) => {
+  const res = await sdk.licensedsoftware.findLicensedSoftwareById({
+    id: 987654,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds licensed software by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindLicensedSoftwareByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.licensedsoftware.findLicensedSoftwareByName({
-  name: "Strategist",
-}).then((res: FindLicensedSoftwareByNameResponse) => {
+  const res = await sdk.licensedsoftware.findLicensedSoftwareByName({
+    name: "Strategist",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Matching computers are derived from software definitions, therefore they cannot 
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateLicensedSoftwareByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.licensedsoftware.updateLicensedSoftwareById({
-  id: 345542,
-}).then((res: UpdateLicensedSoftwareByIdResponse) => {
+  const res = await sdk.licensedsoftware.updateLicensedSoftwareById({
+    id: 345542,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Matching computers are derived from software definitions, therefore they cannot 
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateLicensedSoftwareByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.licensedsoftware.updateLicensedSoftwareByName({
-  name: "Beauty Awesome",
-}).then((res: UpdateLicensedSoftwareByNameResponse) => {
+  const res = await sdk.licensedsoftware.updateLicensedSoftwareByName({
+    name: "Beauty Awesome",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

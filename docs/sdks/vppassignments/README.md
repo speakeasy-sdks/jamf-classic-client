@@ -17,22 +17,23 @@ Creates a new VPP assignment by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateAssignmentByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.vppassignments.createAssignmentById({
-  id: 66531,
-}).then((res: CreateAssignmentByIdResponse) => {
+  const res = await sdk.vppassignments.createAssignmentById({
+    id: 66531,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -56,22 +57,23 @@ Deletes a VPP assignment by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteAssignmentByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.vppassignments.deleteAssignmentById({
-  id: 128441,
-}).then((res: DeleteAssignmentByIdResponse) => {
+  const res = await sdk.vppassignments.deleteAssignmentById({
+    id: 128441,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -95,22 +97,23 @@ Finds VPP Assignment by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindAssignmentByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.vppassignments.findAssignmentById({
-  id: 535485,
-}).then((res: FindAssignmentByIdResponse) => {
+  const res = await sdk.vppassignments.findAssignmentById({
+    id: 535485,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -134,20 +137,21 @@ Finds all VPP Assignments
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindVPPAdminAssignmentResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.vppassignments.findVPPAdminAssignment().then((res: FindVPPAdminAssignmentResponse) => {
+  const res = await sdk.vppassignments.findVPPAdminAssignment();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -170,22 +174,23 @@ Updates a VPP assignment by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateAssignmentByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.vppassignments.updateAssignmentById({
-  id: 260276,
-}).then((res: UpdateAssignmentByIdResponse) => {
+  const res = await sdk.vppassignments.updateAssignmentById({
+    id: 260276,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

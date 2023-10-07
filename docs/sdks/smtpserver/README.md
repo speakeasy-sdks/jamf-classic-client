@@ -14,20 +14,21 @@ Finds the Jamf Pro SMTP server information
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindSMTPServerResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.smtpserver.findSMTPServer().then((res: FindSMTPServerResponse) => {
+  const res = await sdk.smtpserver.findSMTPServer();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -50,20 +51,21 @@ Password can be changed via the <password> element. Password should be clear tex
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateSMTPServerResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.smtpserver.updateSMTPServer("gd#;>U6ZGQ" as bytes <<<>>>).then((res: UpdateSMTPServerResponse) => {
+  const res = await sdk.smtpserver.updateSMTPServer("gd#;>U6ZGQ" as bytes <<<>>>);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

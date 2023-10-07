@@ -22,22 +22,23 @@ Does not support vpp codes.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMacappByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.macapplications.createMacappById({
-  id: 15219,
-}).then((res: CreateMacappByIdResponse) => {
+  const res = await sdk.macapplications.createMacappById({
+    id: 15219,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -61,22 +62,23 @@ Deletes a mac application by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMacappByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.macapplications.deleteMacappById({
-  id: 367018,
-}).then((res: DeleteMacappByIdResponse) => {
+  const res = await sdk.macapplications.deleteMacappById({
+    id: 367018,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -100,22 +102,23 @@ Deletes a mac application by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteMacappByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.macapplications.deleteMacappByName({
-  name: "Functionality withdrawal Southeast",
-}).then((res: DeleteMacappByNameResponse) => {
+  const res = await sdk.macapplications.deleteMacappByName({
+    name: "Functionality withdrawal Southeast",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -139,20 +142,21 @@ Finds all mac applications
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMacappsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.macapplications.findMacapps().then((res: FindMacappsResponse) => {
+  const res = await sdk.macapplications.findMacapps();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -175,22 +179,23 @@ Finds mac applications by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMacappsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.macapplications.findMacappsById({
-  id: 285922,
-}).then((res: FindMacappsByIdResponse) => {
+  const res = await sdk.macapplications.findMacappsById({
+    id: 285922,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -214,23 +219,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMacappsByIdSubsetResponse, FindMacappsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMacappsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.macapplications.findMacappsByIdSubset({
-  id: 538140,
-  subset: FindMacappsByIdSubsetSubset.Scope,
-}).then((res: FindMacappsByIdSubsetResponse) => {
+  const res = await sdk.macapplications.findMacappsByIdSubset({
+    id: 538140,
+    subset: FindMacappsByIdSubsetSubset.Scope,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -254,22 +261,23 @@ Finds mac applications by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMacappsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.macapplications.findMacappsByName({
-  name: "Bicycle Future Road",
-}).then((res: FindMacappsByNameResponse) => {
+  const res = await sdk.macapplications.findMacappsByName({
+    name: "Bicycle Future Road",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -293,23 +301,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMacappsByNameSubsetResponse, FindMacappsByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMacappsByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.macapplications.findMacappsByNameSubset({
-  name: "Country participant officia",
-  subset: FindMacappsByNameSubsetSubset.Scope,
-}).then((res: FindMacappsByNameSubsetResponse) => {
+  const res = await sdk.macapplications.findMacappsByNameSubset({
+    name: "Country participant officia",
+    subset: FindMacappsByNameSubsetSubset.Scope,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -333,22 +343,23 @@ Does not support vpp codes.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMacappByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.macapplications.updateMacappById({
-  id: 610856,
-}).then((res: UpdateMacappByIdResponse) => {
+  const res = await sdk.macapplications.updateMacappById({
+    id: 610856,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -372,22 +383,23 @@ Does not support vpp codes.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateMacappByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.macapplications.updateMacappByName({
-  name: "Transmasculine white",
-}).then((res: UpdateMacappByNameResponse) => {
+  const res = await sdk.macapplications.updateMacappByName({
+    name: "Transmasculine white",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

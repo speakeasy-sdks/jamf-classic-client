@@ -19,22 +19,23 @@ Creates a new computer invitation by id
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateComputerInvitationsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerinvitations.createComputerInvitationsById({
-  id: 426166,
-}).then((res: CreateComputerInvitationsByIdResponse) => {
+  const res = await sdk.computerinvitations.createComputerInvitationsById({
+    id: 426166,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -58,22 +59,23 @@ Creates a new computer invitation by invitation
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateComputerInvitationsByInvitationResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerinvitations.createComputerInvitationsByInvitation({
-  invitation: 107268,
-}).then((res: CreateComputerInvitationsByInvitationResponse) => {
+  const res = await sdk.computerinvitations.createComputerInvitationsByInvitation({
+    invitation: 107268,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -97,22 +99,23 @@ Deletes a computer invitation by id
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteComputerInvitationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerinvitations.deleteComputerInvitationById({
-  id: 620598,
-}).then((res: DeleteComputerInvitationByIdResponse) => {
+  const res = await sdk.computerinvitations.deleteComputerInvitationById({
+    id: 620598,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -136,22 +139,23 @@ Deletes a computer invitation by invitation
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteComputerInvitationByInvitationResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerinvitations.deleteComputerInvitationByInvitation({
-  invitation: 706715,
-}).then((res: DeleteComputerInvitationByInvitationResponse) => {
+  const res = await sdk.computerinvitations.deleteComputerInvitationByInvitation({
+    invitation: 706715,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -175,20 +179,21 @@ Finds all computer invitations
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerInvitationsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerinvitations.findComputerInvitations().then((res: FindComputerInvitationsResponse) => {
+  const res = await sdk.computerinvitations.findComputerInvitations();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -211,22 +216,23 @@ Finds computer invitations by id
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerInvitationsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerinvitations.findComputerInvitationsById({
-  id: 737242,
-}).then((res: FindComputerInvitationsByIdResponse) => {
+  const res = await sdk.computerinvitations.findComputerInvitationsById({
+    id: 737242,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -250,22 +256,23 @@ Finds computer invitations by invitation
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerInvitationsByInvitationResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerinvitations.findComputerInvitationsByInvitation({
-  invitation: 681787,
-}).then((res: FindComputerInvitationsByInvitationResponse) => {
+  const res = await sdk.computerinvitations.findComputerInvitationsByInvitation({
+    invitation: 681787,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

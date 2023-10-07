@@ -14,20 +14,21 @@ Finds the Jamf Pro computer inventory collection information
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerInventoryCollectionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerinventorycollection.findComputerInventoryCollection().then((res: FindComputerInventoryCollectionResponse) => {
+  const res = await sdk.computerinventorycollection.findComputerInventoryCollection();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -50,25 +51,26 @@ Updates the Jamf Pro computer inventory collection information
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateComputerInventoryCollectionResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import {
   ComputerInventoryCollectionApplicationsApplicationPlatform,
   ComputerInventoryCollectionFontsFontPlatform,
   ComputerInventoryCollectionPluginsPluginPlatform,
 } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerinventorycollection.updateComputerInventoryCollection("#e`N/Q\"g!N" as bytes <<<>>>).then((res: UpdateComputerInventoryCollectionResponse) => {
+  const res = await sdk.computerinventorycollection.updateComputerInventoryCollection("#e`N/Q\"g!N" as bytes <<<>>>);
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

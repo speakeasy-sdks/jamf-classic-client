@@ -17,25 +17,26 @@ Finds computer application usage by computer ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerApplicationUsageByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerapplicationusage.findComputerApplicationUsageById({
-  endDate: new RFCDate("2022-08-06"),
-  id: "<ID>",
-  startDate: new RFCDate("2023-06-04"),
-}).then((res: FindComputerApplicationUsageByIdResponse) => {
+  const res = await sdk.computerapplicationusage.findComputerApplicationUsageById({
+    endDate: new RFCDate("2022-08-06"),
+    id: "<ID>",
+    startDate: new RFCDate("2023-06-04"),
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,24 +60,25 @@ Finds computer application usage by computer MAC address
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerApplicationUsageByMacAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerapplicationusage.findComputerApplicationUsageByMacAddress({
-  endDate: "Bicycle Northeast",
-  macaddress: "sober organic",
-  startDate: "ew invoice",
-}).then((res: FindComputerApplicationUsageByMacAddressResponse) => {
+  const res = await sdk.computerapplicationusage.findComputerApplicationUsageByMacAddress({
+    endDate: "Bicycle Northeast",
+    macaddress: "sober organic",
+    startDate: "ew invoice",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -100,24 +102,25 @@ Finds computer application usage by computer name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerApplicationUsageByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerapplicationusage.findComputerApplicationUsageByName({
-  endDate: "Shoes Transmasculine baggie",
-  name: "drive lest",
-  startDate: "users",
-}).then((res: FindComputerApplicationUsageByNameResponse) => {
+  const res = await sdk.computerapplicationusage.findComputerApplicationUsageByName({
+    endDate: "Shoes Transmasculine baggie",
+    name: "drive lest",
+    startDate: "users",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -141,24 +144,25 @@ Finds computer application usage by computer serial number
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerApplicationUsageBySerialResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerapplicationusage.findComputerApplicationUsageBySerial({
-  endDate: "cloister",
-  serialnumber: "kissingly South convergence",
-  startDate: "optimize connect policy",
-}).then((res: FindComputerApplicationUsageBySerialResponse) => {
+  const res = await sdk.computerapplicationusage.findComputerApplicationUsageBySerial({
+    endDate: "cloister",
+    serialnumber: "kissingly South convergence",
+    startDate: "optimize connect policy",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -182,24 +186,25 @@ Finds computer application usage by computer UDID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerApplicationUsageByUDIDResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.computerapplicationusage.findComputerApplicationUsageByUDID({
-  endDate: "SSD",
-  startDate: "East crafty Directives",
-  udid: "Berkshire Practical Southeast",
-}).then((res: FindComputerApplicationUsageByUDIDResponse) => {
+  const res = await sdk.computerapplicationusage.findComputerApplicationUsageByUDID({
+    endDate: "SSD",
+    startDate: "East crafty Directives",
+    udid: "Berkshire Practical Southeast",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

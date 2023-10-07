@@ -23,22 +23,23 @@ This operation cannot be used to add computers, mobile devices, peripherals, vpp
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateUserByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.users.createUserById({
-  id: 981054,
-}).then((res: CreateUserByIdResponse) => {
+  const res = await sdk.users.createUserById({
+    id: 981054,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -62,22 +63,23 @@ Deletes a user by email address
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteUserByEmailAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.users.deleteUserByEmailAddress({
-  email: "Haley71@gmail.com",
-}).then((res: DeleteUserByEmailAddressResponse) => {
+  const res = await sdk.users.deleteUserByEmailAddress({
+    email: "Haley71@gmail.com",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -101,22 +103,23 @@ Deletes a user by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteUserByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.users.deleteUserById({
-  id: 867244,
-}).then((res: DeleteUserByIdResponse) => {
+  const res = await sdk.users.deleteUserById({
+    id: 867244,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -140,22 +143,23 @@ Deletes a user by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteUserByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.users.deleteUserByName({
-  name: "functionalities",
-}).then((res: DeleteUserByNameResponse) => {
+  const res = await sdk.users.deleteUserByName({
+    name: "functionalities",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -179,20 +183,21 @@ Finds all users
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindUsersResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.users.findUsers().then((res: FindUsersResponse) => {
+  const res = await sdk.users.findUsers();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -215,22 +220,23 @@ Because email addresses may not be unique, this operation may return a list of u
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindUsersByEmailAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.users.findUsersByEmailAddress({
-  email: "Addie_Frami@hotmail.com",
-}).then((res: FindUsersByEmailAddressResponse) => {
+  const res = await sdk.users.findUsersByEmailAddress({
+    email: "Addie_Frami@hotmail.com",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -254,22 +260,23 @@ Finds users by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindUsersByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.users.findUsersById({
-  id: 665689,
-}).then((res: FindUsersByIdResponse) => {
+  const res = await sdk.users.findUsersById({
+    id: 665689,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -293,22 +300,23 @@ Finds users by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindUsersByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.users.findUsersByName({
-  name: "Lead Kentucky",
-}).then((res: FindUsersByNameResponse) => {
+  const res = await sdk.users.findUsersByName({
+    name: "Lead Kentucky",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -332,22 +340,23 @@ Updates an existing user by email address
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateUserByEmailAddressResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.users.updateUserByEmailAddress({
-  email: "Ludie.Legros@yahoo.com",
-}).then((res: UpdateUserByEmailAddressResponse) => {
+  const res = await sdk.users.updateUserByEmailAddress({
+    email: "Ludie.Legros@yahoo.com",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -371,22 +380,23 @@ This operation cannot be used to add computers, mobile devices, peripherals, vpp
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateUserByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.users.updateUserById({
-  id: 591512,
-}).then((res: UpdateUserByIdResponse) => {
+  const res = await sdk.users.updateUserById({
+    id: 591512,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -410,22 +420,23 @@ This operation cannot be used to add computers, mobile devices, peripherals, vpp
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateUserByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.users.updateUserByName({
-  name: "COM Engineer VGA",
-}).then((res: UpdateUserByNameResponse) => {
+  const res = await sdk.users.updateUserByName({
+    name: "COM Engineer VGA",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

@@ -19,20 +19,21 @@ Finds all patch software titles. (Deprecated) Please transition use to Jamf Pro 
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { PatchsoftwaretitlesGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchsoftwaretitles.patchsoftwaretitlesGet().then((res: PatchsoftwaretitlesGetResponse) => {
+  const res = await sdk.patchsoftwaretitles.patchsoftwaretitlesGet();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -57,22 +58,23 @@ Deletes a patch software title by ID. (Deprecated) Please transition use to Jamf
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { PatchsoftwaretitlesIdByIdDeleteResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdDelete({
-  id: "<ID>",
-}).then((res: PatchsoftwaretitlesIdByIdDeleteResponse) => {
+  const res = await sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdDelete({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Finds a patch software titles by ID. (Deprecated) Please transition use to Jamf 
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { PatchsoftwaretitlesIdByIdGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdGet({
-  id: "<ID>",
-}).then((res: PatchsoftwaretitlesIdByIdGetResponse) => {
+  const res = await sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdGet({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -139,22 +142,23 @@ Creates new patch software title by ID. (Deprecated) Please transition use to Ja
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { PatchsoftwaretitlesIdByIdPostResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdPost({
-  id: "<ID>",
-}).then((res: PatchsoftwaretitlesIdByIdPostResponse) => {
+  const res = await sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdPost({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -180,22 +184,23 @@ Including an empty package element <package/> within the version element will di
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { PatchsoftwaretitlesIdByIdPutResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdPut({
-  id: "<ID>",
-}).then((res: PatchsoftwaretitlesIdByIdPutResponse) => {
+  const res = await sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdPut({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

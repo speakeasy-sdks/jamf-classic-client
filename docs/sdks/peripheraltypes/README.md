@@ -17,22 +17,23 @@ Creates a new peripheral by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreatePeripheralTypeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.peripheraltypes.createPeripheralTypeById({
-  id: 433976,
-}).then((res: CreatePeripheralTypeByIdResponse) => {
+  const res = await sdk.peripheraltypes.createPeripheralTypeById({
+    id: 433976,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -56,22 +57,23 @@ Deletes a peripheral by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeletePeripheralTypeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.peripheraltypes.deletePeripheralTypeById({
-  id: 534002,
-}).then((res: DeletePeripheralTypeByIdResponse) => {
+  const res = await sdk.peripheraltypes.deletePeripheralTypeById({
+    id: 534002,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -95,20 +97,21 @@ Finds all peripheral types
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPeripheralTypesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.peripheraltypes.findPeripheralTypes().then((res: FindPeripheralTypesResponse) => {
+  const res = await sdk.peripheraltypes.findPeripheralTypes();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -131,22 +134,23 @@ Finds peripheral types by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPeripheralTypesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.peripheraltypes.findPeripheralTypesById({
-  id: 367116,
-}).then((res: FindPeripheralTypesByIdResponse) => {
+  const res = await sdk.peripheraltypes.findPeripheralTypesById({
+    id: 367116,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -170,22 +174,23 @@ Updates an existing peripheral by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdatePeripheralTypeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.peripheraltypes.updatePeripheralTypeById({
-  id: 343809,
-}).then((res: UpdatePeripheralTypeByIdResponse) => {
+  const res = await sdk.peripheraltypes.updatePeripheralTypeById({
+    id: 343809,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

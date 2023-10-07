@@ -15,20 +15,21 @@ Find all Infrastructure Managers
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindInfrastructureManagerResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.infrastructuremanager.findInfrastructureManager().then((res: FindInfrastructureManagerResponse) => {
+  const res = await sdk.infrastructuremanager.findInfrastructureManager();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -51,22 +52,23 @@ Finds infrastructure manager by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindInfrastructureManagerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.infrastructuremanager.findInfrastructureManagerById({
-  id: 48223,
-}).then((res: FindInfrastructureManagerByIdResponse) => {
+  const res = await sdk.infrastructuremanager.findInfrastructureManagerById({
+    id: 48223,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -90,22 +92,23 @@ Updates an existing infrastructure manager by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateInfrastructureManagerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.infrastructuremanager.updateInfrastructureManagerById({
-  id: 612584,
-}).then((res: UpdateInfrastructureManagerByIdResponse) => {
+  const res = await sdk.infrastructuremanager.updateInfrastructureManagerById({
+    id: 612584,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

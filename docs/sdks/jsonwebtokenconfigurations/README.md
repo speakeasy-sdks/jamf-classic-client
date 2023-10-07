@@ -17,22 +17,23 @@ Creates a new JSON Web Token configuration by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateJsonWebTokenConfigurationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.jsonwebtokenconfigurations.createJsonWebTokenConfigurationById({
-  id: 184420,
-}).then((res: CreateJsonWebTokenConfigurationByIdResponse) => {
+  const res = await sdk.jsonwebtokenconfigurations.createJsonWebTokenConfigurationById({
+    id: 184420,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -56,22 +57,23 @@ Deletes a JSON Web Token configuration by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteJsonWebTokenConfigurationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.jsonwebtokenconfigurations.deleteJsonWebTokenConfigurationById({
-  id: "<ID>",
-}).then((res: DeleteJsonWebTokenConfigurationByIdResponse) => {
+  const res = await sdk.jsonwebtokenconfigurations.deleteJsonWebTokenConfigurationById({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -95,22 +97,23 @@ Find JSON Web Token configuration by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindJsonWebTokenConfigurationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.jsonwebtokenconfigurations.findJsonWebTokenConfigurationById({
-  id: "<ID>",
-}).then((res: FindJsonWebTokenConfigurationByIdResponse) => {
+  const res = await sdk.jsonwebtokenconfigurations.findJsonWebTokenConfigurationById({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -134,20 +137,21 @@ Finds all JSON Web Token configurations
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindJsonWebTokenConfigurationsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.jsonwebtokenconfigurations.findJsonWebTokenConfigurations().then((res: FindJsonWebTokenConfigurationsResponse) => {
+  const res = await sdk.jsonwebtokenconfigurations.findJsonWebTokenConfigurations();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -170,22 +174,23 @@ Updates an existing JSON Web Token configuration by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateJsonWebTokenConfigurationByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.jsonwebtokenconfigurations.updateJsonWebTokenConfigurationById({
-  id: "<ID>",
-}).then((res: UpdateJsonWebTokenConfigurationByIdResponse) => {
+  const res = await sdk.jsonwebtokenconfigurations.updateJsonWebTokenConfigurationById({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

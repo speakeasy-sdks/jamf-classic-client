@@ -20,22 +20,23 @@ Create a new patch external source by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreatePatchExternalSourcesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchexternalsources.createPatchExternalSourcesById({
-  id: 274468,
-}).then((res: CreatePatchExternalSourcesByIdResponse) => {
+  const res = await sdk.patchexternalsources.createPatchExternalSourcesById({
+    id: 274468,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Create a new patch external source by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreatePatchExternalSourcesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchexternalsources.createPatchExternalSourcesByName({
-  name: "Transexual foreground ivory",
-}).then((res: CreatePatchExternalSourcesByNameResponse) => {
+  const res = await sdk.patchexternalsources.createPatchExternalSourcesByName({
+    name: "Transexual foreground ivory",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a patch external source by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeletePatchExternalSourcesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchexternalsources.deletePatchExternalSourcesById({
-  id: "<ID>",
-}).then((res: DeletePatchExternalSourcesByIdResponse) => {
+  const res = await sdk.patchexternalsources.deletePatchExternalSourcesById({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all patch external sources
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPatchExternalSourcesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchexternalsources.findPatchExternalSources().then((res: FindPatchExternalSourcesResponse) => {
+  const res = await sdk.patchexternalsources.findPatchExternalSources();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds a patch external source by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPatchExternalSourcesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchexternalsources.findPatchExternalSourcesById({
-  id: "<ID>",
-}).then((res: FindPatchExternalSourcesByIdResponse) => {
+  const res = await sdk.patchexternalsources.findPatchExternalSourcesById({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds the first patch external source with the name provided
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPatchExternalSourcesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchexternalsources.findPatchExternalSourcesByName({
-  name: "custom olive Arkansas",
-}).then((res: FindPatchExternalSourcesByNameResponse) => {
+  const res = await sdk.patchexternalsources.findPatchExternalSourcesByName({
+    name: "custom olive Arkansas",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Updates a patch external source by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdatePatchExternalSourcesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchexternalsources.updatePatchExternalSourcesById({
-  id: "<ID>",
-}).then((res: UpdatePatchExternalSourcesByIdResponse) => {
+  const res = await sdk.patchexternalsources.updatePatchExternalSourcesById({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Updates a patch external source by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdatePatchExternalSourcesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchexternalsources.updatePatchExternalSourcesByName({
-  name: "area blue",
-}).then((res: UpdatePatchExternalSourcesByNameResponse) => {
+  const res = await sdk.patchexternalsources.updatePatchExternalSourcesByName({
+    name: "area blue",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

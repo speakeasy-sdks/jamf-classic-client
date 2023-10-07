@@ -17,20 +17,21 @@ Finds all saved searches (Deprecated - use advancedcomputersearches, advancedmob
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { SavedsearchesGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.savedsearches.savedsearchesGet().then((res: SavedsearchesGetResponse) => {
+  const res = await sdk.savedsearches.savedsearchesGet();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -55,22 +56,23 @@ Finds saved searches by ID (Deprecated - use advancedcomputersearches, advancedm
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { SavedsearchesIdByIdGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.savedsearches.savedsearchesIdByIdGet({
-  id: "<ID>",
-}).then((res: SavedsearchesIdByIdGetResponse) => {
+  const res = await sdk.savedsearches.savedsearchesIdByIdGet({
+    id: "<ID>",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -96,22 +98,23 @@ Finds saved searches by name (Deprecated - use advancedcomputersearches, advance
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { SavedsearchesNameByNameGetResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.savedsearches.savedsearchesNameByNameGet({
-  name: "back",
-}).then((res: SavedsearchesNameByNameGetResponse) => {
+  const res = await sdk.savedsearches.savedsearchesNameByNameGet({
+    name: "back",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

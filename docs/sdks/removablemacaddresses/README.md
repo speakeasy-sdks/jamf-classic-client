@@ -20,22 +20,23 @@ Creates a new removable Mac address by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateRemovableMacAddressByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.removablemacaddresses.createRemovableMacAddressById({
-  id: 765206,
-}).then((res: CreateRemovableMacAddressByIdResponse) => {
+  const res = await sdk.removablemacaddresses.createRemovableMacAddressById({
+    id: 765206,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a removable Mac address by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteRemovableMacAddressByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.removablemacaddresses.deleteRemovableMacAddressById({
-  id: 777999,
-}).then((res: DeleteRemovableMacAddressByIdResponse) => {
+  const res = await sdk.removablemacaddresses.deleteRemovableMacAddressById({
+    id: 777999,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a removable Mac address by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteRemovableMacAddressByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.removablemacaddresses.deleteRemovableMacAddressByName({
-  name: "female override discrete",
-}).then((res: DeleteRemovableMacAddressByNameResponse) => {
+  const res = await sdk.removablemacaddresses.deleteRemovableMacAddressByName({
+    name: "female override discrete",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all removable Mac addresses
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindRemovableMacAddressesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.removablemacaddresses.findRemovableMacAddresses().then((res: FindRemovableMacAddressesResponse) => {
+  const res = await sdk.removablemacaddresses.findRemovableMacAddresses();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds removable Mac addresses by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindRemovableMacAddressesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.removablemacaddresses.findRemovableMacAddressesById({
-  id: 810574,
-}).then((res: FindRemovableMacAddressesByIdResponse) => {
+  const res = await sdk.removablemacaddresses.findRemovableMacAddressesById({
+    id: 810574,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds removable Mac addresses by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindRemovableMacAddressesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.removablemacaddresses.findRemovableMacAddressesByName({
-  name: "World",
-}).then((res: FindRemovableMacAddressesByNameResponse) => {
+  const res = await sdk.removablemacaddresses.findRemovableMacAddressesByName({
+    name: "World",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Updates an existing removable Mac address by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateRemovableMacAddressByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.removablemacaddresses.updateRemovableMacAddressById({
-  id: 168869,
-}).then((res: UpdateRemovableMacAddressByIdResponse) => {
+  const res = await sdk.removablemacaddresses.updateRemovableMacAddressById({
+    id: 168869,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Updates an existing removable Mac address by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateRemovableMacAddressByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.removablemacaddresses.updateRemovableMacAddressByName({
-  name: "Hybrid invoice back",
-}).then((res: UpdateRemovableMacAddressByNameResponse) => {
+  const res = await sdk.removablemacaddresses.updateRemovableMacAddressByName({
+    name: "Hybrid invoice back",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

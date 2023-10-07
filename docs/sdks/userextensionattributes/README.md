@@ -20,22 +20,23 @@ Creates a new user extension attribute by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateUserextensionattributeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.userextensionattributes.createUserextensionattributeById({
-  id: 303263,
-}).then((res: CreateUserextensionattributeByIdResponse) => {
+  const res = await sdk.userextensionattributes.createUserextensionattributeById({
+    id: 303263,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a user extension attribute by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteUserextensionattributeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.userextensionattributes.deleteUserextensionattributeById({
-  id: 889234,
-}).then((res: DeleteUserextensionattributeByIdResponse) => {
+  const res = await sdk.userextensionattributes.deleteUserextensionattributeById({
+    id: 889234,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a user extension attribute by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteUserextensionattributeByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.userextensionattributes.deleteUserextensionattributeByName({
-  name: "Harbor Minivan",
-}).then((res: DeleteUserextensionattributeByNameResponse) => {
+  const res = await sdk.userextensionattributes.deleteUserextensionattributeByName({
+    name: "Harbor Minivan",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all user extension attributes
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindUserextensionattributesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.userextensionattributes.findUserextensionattributes().then((res: FindUserextensionattributesResponse) => {
+  const res = await sdk.userextensionattributes.findUserextensionattributes();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds user extension attributes by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindUserextensionattributesByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.userextensionattributes.findUserextensionattributesById({
-  id: 950394,
-}).then((res: FindUserextensionattributesByIdResponse) => {
+  const res = await sdk.userextensionattributes.findUserextensionattributesById({
+    id: 950394,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds user extension attributes by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindUserextensionattributesByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.userextensionattributes.findUserextensionattributesByName({
-  name: "East",
-}).then((res: FindUserextensionattributesByNameResponse) => {
+  const res = await sdk.userextensionattributes.findUserextensionattributesByName({
+    name: "East",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Updates an existing user extension attribute by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateUserextensionattributeByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.userextensionattributes.updateUserextensionattributeById({
-  id: 644439,
-}).then((res: UpdateUserextensionattributeByIdResponse) => {
+  const res = await sdk.userextensionattributes.updateUserextensionattributeById({
+    id: 644439,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Updates an existing user extension attribute by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateUserextensionattributeByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.userextensionattributes.updateUserextensionattributeByName({
-  name: "middleware Bike brief",
-}).then((res: UpdateUserextensionattributeByNameResponse) => {
+  const res = await sdk.userextensionattributes.updateUserextensionattributeByName({
+    name: "middleware Bike brief",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

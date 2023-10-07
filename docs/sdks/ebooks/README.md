@@ -22,22 +22,23 @@ Creates a new ebook by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateEBookByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ebooks.createEBookById({
-  id: 711798,
-}).then((res: CreateEBookByIdResponse) => {
+  const res = await sdk.ebooks.createEBookById({
+    id: 711798,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -61,22 +62,23 @@ Deletes an ebook by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteEBookByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ebooks.deleteEBookById({
-  id: 274478,
-}).then((res: DeleteEBookByIdResponse) => {
+  const res = await sdk.ebooks.deleteEBookById({
+    id: 274478,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -100,22 +102,23 @@ Deletes an ebook by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteEBookByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ebooks.deleteEBookByName({
-  name: "Agent Classical Car",
-}).then((res: DeleteEBookByNameResponse) => {
+  const res = await sdk.ebooks.deleteEBookByName({
+    name: "Agent Classical Car",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -139,20 +142,21 @@ Finds all ebooks
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindEBooksResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ebooks.findEBooks().then((res: FindEBooksResponse) => {
+  const res = await sdk.ebooks.findEBooks();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -175,22 +179,23 @@ Finds ebooks by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindEBooksByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ebooks.findEBooksById({
-  id: 38542,
-}).then((res: FindEBooksByIdResponse) => {
+  const res = await sdk.ebooks.findEBooksById({
+    id: 38542,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -214,22 +219,23 @@ Finds ebooks by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindEBooksByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ebooks.findEBooksByName({
-  name: "North New similique",
-}).then((res: FindEBooksByNameResponse) => {
+  const res = await sdk.ebooks.findEBooksByName({
+    name: "North New similique",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -253,23 +259,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindEBooksByNameSubsetResponse, FindEBooksByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindEBooksByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ebooks.findEBooksByNameSubset({
-  name: "virtual Dodge Southeast",
-  subset: FindEBooksByNameSubsetSubset.General,
-}).then((res: FindEBooksByNameSubsetResponse) => {
+  const res = await sdk.ebooks.findEBooksByNameSubset({
+    name: "virtual Dodge Southeast",
+    subset: FindEBooksByNameSubsetSubset.General,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -293,23 +301,25 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindEbookssByIdSubsetResponse, FindEbookssByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindEbookssByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ebooks.findEbookssByIdSubset({
-  id: "<ID>",
-  subset: FindEbookssByIdSubsetSubset.General,
-}).then((res: FindEbookssByIdSubsetResponse) => {
+  const res = await sdk.ebooks.findEbookssByIdSubset({
+    id: "<ID>",
+    subset: FindEbookssByIdSubsetSubset.General,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -333,22 +343,23 @@ Updates an existing ebook by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateEBookByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ebooks.updateEBookById({
-  id: 271483,
-}).then((res: UpdateEBookByIdResponse) => {
+  const res = await sdk.ebooks.updateEBookById({
+    id: 271483,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -372,22 +383,23 @@ Updates an existing ebook by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateEBookByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.ebooks.updateEBookByName({
-  name: "infomediaries female",
-}).then((res: UpdateEBookByNameResponse) => {
+  const res = await sdk.ebooks.updateEBookByName({
+    name: "infomediaries female",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

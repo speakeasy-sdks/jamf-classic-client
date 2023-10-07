@@ -20,22 +20,23 @@ Creates user groups by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateUserGroupsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.usergroups.createUserGroupsById({
-  id: 253753,
-}).then((res: CreateUserGroupsByIdResponse) => {
+  const res = await sdk.usergroups.createUserGroupsById({
+    id: 253753,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes user groups by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteUserGroupsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.usergroups.deleteUserGroupsById({
-  id: 256319,
-}).then((res: DeleteUserGroupsByIdResponse) => {
+  const res = await sdk.usergroups.deleteUserGroupsById({
+    id: 256319,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes user groups by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteUserGroupsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.usergroups.deleteUserGroupsByName({
-  name: "Garden",
-}).then((res: DeleteUserGroupsByNameResponse) => {
+  const res = await sdk.usergroups.deleteUserGroupsByName({
+    name: "Garden",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all user groups
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindUserGroupsResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.usergroups.findUserGroups().then((res: FindUserGroupsResponse) => {
+  const res = await sdk.usergroups.findUserGroups();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds user groups by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindUserGroupsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.usergroups.findUserGroupsById({
-  id: 121740,
-}).then((res: FindUserGroupsByIdResponse) => {
+  const res = await sdk.usergroups.findUserGroupsById({
+    id: 121740,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds user groups by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindUserGroupsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.usergroups.findUserGroupsByName({
-  name: "Gleason green",
-}).then((res: FindUserGroupsByNameResponse) => {
+  const res = await sdk.usergroups.findUserGroupsByName({
+    name: "Gleason green",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ One or more users can be added by using "user_additions" instead of "users". One
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateUserGroupsByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.usergroups.updateUserGroupsById({
-  id: 967440,
-}).then((res: UpdateUserGroupsByIdResponse) => {
+  const res = await sdk.usergroups.updateUserGroupsById({
+    id: 967440,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ One or more users can be added by using "user_additions" instead of "users". One
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateUserGroupsByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.usergroups.updateUserGroupsByName({
-  name: "kilogram compress",
-}).then((res: UpdateUserGroupsByNameResponse) => {
+  const res = await sdk.usergroups.updateUserGroupsByName({
+    name: "kilogram compress",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

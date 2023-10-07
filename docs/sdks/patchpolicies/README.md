@@ -19,22 +19,23 @@ softwaretitleconfig refers to the ID of the patch software title the policy is t
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreatePatchPolicyBySoftwareTitleConfigIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchpolicies.createPatchPolicyBySoftwareTitleConfigId({
-  softwaretitleconfigid: 205122,
-}).then((res: CreatePatchPolicyBySoftwareTitleConfigIdResponse) => {
+  const res = await sdk.patchpolicies.createPatchPolicyBySoftwareTitleConfigId({
+    softwaretitleconfigid: 205122,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -58,22 +59,23 @@ Deletes a patch policy by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeletePatchPolicyByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchpolicies.deletePatchPolicyById({
-  id: 891870,
-}).then((res: DeletePatchPolicyByIdResponse) => {
+  const res = await sdk.patchpolicies.deletePatchPolicyById({
+    id: 891870,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -99,20 +101,21 @@ Finds all patch policies. (Deprecated). Please transition use to Jamf Pro API en
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPatchPoliciesResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchpolicies.findPatchPolicies().then((res: FindPatchPoliciesResponse) => {
+  const res = await sdk.patchpolicies.findPatchPolicies();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -135,23 +138,25 @@ Display subsets of information for a patch policy
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPatchPoliciesByIdSubsetResponse, FindPatchPoliciesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindPatchPoliciesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchpolicies.findPatchPoliciesByIdSubset({
-  id: 512196,
-  subset: FindPatchPoliciesByIdSubsetSubset.General,
-}).then((res: FindPatchPoliciesByIdSubsetResponse) => {
+  const res = await sdk.patchpolicies.findPatchPoliciesByIdSubset({
+    id: 512196,
+    subset: FindPatchPoliciesByIdSubsetSubset.General,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -177,22 +182,23 @@ softwaretitleconfigid refers to the ID of the patch software title the policy is
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPatchPoliciesBySoftwareTitleConfigIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchpolicies.findPatchPoliciesBySoftwareTitleConfigId({
-  softwaretitleconfigid: 916770,
-}).then((res: FindPatchPoliciesBySoftwareTitleConfigIdResponse) => {
+  const res = await sdk.patchpolicies.findPatchPoliciesBySoftwareTitleConfigId({
+    softwaretitleconfigid: 916770,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -216,22 +222,23 @@ Finds a patch policy by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPatchPolicyByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchpolicies.findPatchPolicyById({
-  id: 840291,
-}).then((res: FindPatchPolicyByIdResponse) => {
+  const res = await sdk.patchpolicies.findPatchPolicyById({
+    id: 840291,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -255,22 +262,23 @@ Updates an existing patch policy by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdatePatchPolicyByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.patchpolicies.updatePatchPolicyById({
-  id: 648752,
-}).then((res: UpdatePatchPolicyByIdResponse) => {
+  const res = await sdk.patchpolicies.updatePatchPolicyById({
+    id: 648752,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters

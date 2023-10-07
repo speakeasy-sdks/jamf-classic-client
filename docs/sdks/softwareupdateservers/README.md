@@ -20,22 +20,23 @@ Creates a new software update server by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateSoftwareUpdateServerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.softwareupdateservers.createSoftwareUpdateServerById({
-  id: 192838,
-}).then((res: CreateSoftwareUpdateServerByIdResponse) => {
+  const res = await sdk.softwareupdateservers.createSoftwareUpdateServerById({
+    id: 192838,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -59,22 +60,23 @@ Deletes a software update server by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteSoftwareUpdateServerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.softwareupdateservers.deleteSoftwareUpdateServerById({
-  id: 528836,
-}).then((res: DeleteSoftwareUpdateServerByIdResponse) => {
+  const res = await sdk.softwareupdateservers.deleteSoftwareUpdateServerById({
+    id: 528836,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -98,22 +100,23 @@ Deletes a software update server by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { DeleteSoftwareUpdateServerByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.softwareupdateservers.deleteSoftwareUpdateServerByName({
-  name: "payment application",
-}).then((res: DeleteSoftwareUpdateServerByNameResponse) => {
+  const res = await sdk.softwareupdateservers.deleteSoftwareUpdateServerByName({
+    name: "payment application",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -137,20 +140,21 @@ Finds all software update servers
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindSoftwareUpdateServersResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.softwareupdateservers.findSoftwareUpdateServers().then((res: FindSoftwareUpdateServersResponse) => {
+  const res = await sdk.softwareupdateservers.findSoftwareUpdateServers();
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -173,22 +177,23 @@ Finds software update servers by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindSoftwareUpdateServersByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.softwareupdateservers.findSoftwareUpdateServersById({
-  id: 61660,
-}).then((res: FindSoftwareUpdateServersByIdResponse) => {
+  const res = await sdk.softwareupdateservers.findSoftwareUpdateServersById({
+    id: 61660,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -212,22 +217,23 @@ Finds software update servers by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindSoftwareUpdateServersByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.softwareupdateservers.findSoftwareUpdateServersByName({
-  name: "aha Transexual henry",
-}).then((res: FindSoftwareUpdateServersByNameResponse) => {
+  const res = await sdk.softwareupdateservers.findSoftwareUpdateServersByName({
+    name: "aha Transexual henry",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -251,22 +257,23 @@ Updates an existing software update server by ID
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateSoftwareUpdateServerByIdResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.softwareupdateservers.updateSoftwareUpdateServerById({
-  id: 875421,
-}).then((res: UpdateSoftwareUpdateServerByIdResponse) => {
+  const res = await sdk.softwareupdateservers.updateSoftwareUpdateServerById({
+    id: 875421,
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
@@ -290,22 +297,23 @@ Updates an existing software update server by name
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UpdateSoftwareUpdateServerByNameResponse } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-const sdk = new Jamf({
-  security: {
-    password: "",
-    username: "",
-  },
-});
+(async() => {
+  const sdk = new Jamf({
+    security: {
+      password: "",
+      username: "",
+    },
+  });
 
-sdk.softwareupdateservers.updateSoftwareUpdateServerByName({
-  name: "moist Meitnerium",
-}).then((res: UpdateSoftwareUpdateServerByNameResponse) => {
+  const res = await sdk.softwareupdateservers.updateSoftwareUpdateServerByName({
+    name: "moist Meitnerium",
+  });
+
   if (res.statusCode == 200) {
     // handle response
   }
-});
+})();
 ```
 
 ### Parameters
