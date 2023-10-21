@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.webhooks.deleteWebhookByName({
-    name: "South Mountain Southwest",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.webhooks.findWebhooksByName({
-    name: "Buckinghamshire notwithstanding International",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.webhooks.updateWebhookByName({
-    name: "sievert yahoo revolutionize",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

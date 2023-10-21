@@ -75,7 +75,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceprovisioningprofiles.createMobileDeviceProvisioningProfilesByName({
-    name: "Synchronised",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -195,7 +195,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceprovisioningprofiles.deleteMobileDeviceProvisioningProfilesByName({
-    name: "Southwest Intranet Lari",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -352,7 +352,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceprovisioningprofiles.findMobileDeviceProvisioningProfilesByName({
-    name: "Investment",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -472,7 +472,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceprovisioningprofiles.updateMobileDeviceProvisioningProfilesByName({
-    name: "Hybrid",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

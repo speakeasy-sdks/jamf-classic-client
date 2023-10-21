@@ -70,9 +70,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerapplicationusage.findComputerApplicationUsageByMacAddress({
-    endDate: "Bicycle Northeast",
-    macaddress: "sober organic",
-    startDate: "ew invoice",
+    endDate: "string",
+    macaddress: "string",
+    startDate: "string",
   });
 
   if (res.statusCode == 200) {
@@ -112,9 +112,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerapplicationusage.findComputerApplicationUsageByName({
-    endDate: "Shoes Transmasculine baggie",
-    name: "drive lest",
-    startDate: "users",
+    endDate: "string",
+    name: "string",
+    startDate: "string",
   });
 
   if (res.statusCode == 200) {
@@ -154,9 +154,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerapplicationusage.findComputerApplicationUsageBySerial({
-    endDate: "cloister",
-    serialnumber: "kissingly South convergence",
-    startDate: "optimize connect policy",
+    endDate: "string",
+    serialnumber: "string",
+    startDate: "string",
   });
 
   if (res.statusCode == 200) {
@@ -196,9 +196,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerapplicationusage.findComputerApplicationUsageByUDID({
-    endDate: "SSD",
-    startDate: "East crafty Directives",
-    udid: "Berkshire Practical Southeast",
+    endDate: "string",
+    startDate: "string",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {

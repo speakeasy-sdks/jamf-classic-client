@@ -78,7 +78,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceapplications.deleteMobileDeviceApplicationByBundleID({
-    bundleid: "deliverables",
+    bundleid: "string",
   });
 
   if (res.statusCode == 200) {
@@ -118,8 +118,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceapplications.deleteMobileDeviceApplicationByBundleIDandVersion({
-    bundleid: "Future",
-    version: "Solutions Nauru UDP",
+    bundleid: "string",
+    version: "string",
   });
 
   if (res.statusCode == 200) {
@@ -199,7 +199,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceapplications.deleteMobileDeviceApplicationByName({
-    name: "Usability",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -276,7 +276,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceapplications.findMobileDeviceApplicationsByBundleID({
-    bundleid: "hm Modern",
+    bundleid: "string",
   });
 
   if (res.statusCode == 200) {
@@ -316,8 +316,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceapplications.findMobileDeviceApplicationsByBundleIDandVersion({
-    bundleid: "Cambridgeshire grey initiatives",
-    version: "World before Latin",
+    bundleid: "string",
+    version: "string",
   });
 
   if (res.statusCode == 200) {
@@ -397,7 +397,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceapplications.findMobileDeviceApplicationsByName({
-    name: "shed Intersex",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -438,8 +438,8 @@ import { FindMobileDeviceApplicationsByNameSubsetSubset } from "jamf-classic-sdk
   });
 
   const res = await sdk.mobiledeviceapplications.findMobileDeviceApplicationsByNameSubset({
-    name: "Bronze male Borders",
-    subset: FindMobileDeviceApplicationsByNameSubsetSubset.VPPCodes,
+    name: "string",
+    subset: FindMobileDeviceApplicationsByNameSubsetSubset.AppConfiguration,
   });
 
   if (res.statusCode == 200) {
@@ -521,7 +521,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceapplications.updateMobileDeviceApplicationByBundleID({
-    bundleid: "Northwest Shoes BMW",
+    bundleid: "string",
   });
 
   if (res.statusCode == 200) {
@@ -561,8 +561,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceapplications.updateMobileDeviceApplicationByBundleIDandVersion({
-    bundleid: "Mobility",
-    version: "Ferrari Northeast payment",
+    bundleid: "string",
+    version: "string",
   });
 
   if (res.statusCode == 200) {
@@ -642,7 +642,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceapplications.updateMobileDeviceApplicationByName({
-    name: "portals East",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

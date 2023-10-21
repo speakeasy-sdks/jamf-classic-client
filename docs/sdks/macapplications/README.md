@@ -112,7 +112,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.macapplications.deleteMacappByName({
-    name: "Functionality withdrawal Southeast",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -271,7 +271,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.macapplications.findMacappsByName({
-    name: "Bicycle Future Road",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -312,8 +312,8 @@ import { FindMacappsByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/
   });
 
   const res = await sdk.macapplications.findMacappsByNameSubset({
-    name: "Country participant officia",
-    subset: FindMacappsByNameSubsetSubset.Scope,
+    name: "string",
+    subset: FindMacappsByNameSubsetSubset.Vpp,
   });
 
   if (res.statusCode == 200) {
@@ -393,7 +393,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.macapplications.updateMacappByName({
-    name: "Transmasculine white",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

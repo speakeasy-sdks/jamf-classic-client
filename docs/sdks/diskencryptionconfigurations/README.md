@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.diskencryptionconfigurations.deleteDiskEncryptionConfigurationByName({
-    name: "ROI",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.diskencryptionconfigurations.findDiskEncryptionConfigurationsByName({
-    name: "Product XML",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.diskencryptionconfigurations.updateDiskEncryptionConfigurationByName({
-    name: "Elegant Tricycle",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

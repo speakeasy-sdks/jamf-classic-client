@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.dockitems.deleteDockItemByName({
-    name: "deliberately segregate male",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.dockitems.findDockItemsByName({
-    name: "Shirt incentivize South",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.dockitems.updateDockItemByName({
-    name: "finance static aside",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

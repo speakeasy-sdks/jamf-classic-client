@@ -116,7 +116,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.ldapservers.deleteLDAPServerByName({
-    name: "interfaces South",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -156,8 +156,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.ldapservers.findLDAPServerGroupById({
-    group: "Avon",
-    id: 479019,
+    group: "string",
+    id: 279778,
   });
 
   if (res.statusCode == 200) {
@@ -197,8 +197,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.ldapservers.findLDAPServerGroupByName({
-    group: "female worship Bicycle",
-    name: "array",
+    group: "string",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -238,9 +238,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.ldapservers.findLDAPServerGroupUserById({
-    group: "jettison",
-    id: 405465,
-    user: "Maudie35",
+    group: "string",
+    id: 12011,
+    user: "Zula_Krajcik",
   });
 
   if (res.statusCode == 200) {
@@ -280,9 +280,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.ldapservers.findLDAPServerGroupUserByName({
-    group: "Bike",
-    name: "infrastructure Automotive Tuna",
-    user: "Maudie.Howe",
+    group: "string",
+    name: "string",
+    user: "Elena81",
   });
 
   if (res.statusCode == 200) {
@@ -363,8 +363,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.ldapservers.findLDAPServerUserByName({
-    name: "Ergonomic Americium",
-    user: "Colten_Kovacek",
+    name: "string",
+    user: "Justen73",
   });
 
   if (res.statusCode == 200) {
@@ -481,7 +481,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.ldapservers.findLDAPServersByName({
-    name: "secondary placeat neatly",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -561,7 +561,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.ldapservers.updateLDAPServerByName({
-    name: "Consultant Representative",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

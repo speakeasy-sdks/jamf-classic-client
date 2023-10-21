@@ -108,7 +108,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.savedsearches.savedsearchesNameByNameGet({
-    name: "back",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

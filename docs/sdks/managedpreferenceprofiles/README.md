@@ -112,7 +112,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.managedpreferenceprofiles.deleteManagedPreferenceProfilesByName({
-    name: "analyzing",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -271,7 +271,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.managedpreferenceprofiles.findManagedPreferenceProfilesByName({
-    name: "meh maxime commonly",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -312,7 +312,7 @@ import { FindManagedPreferenceProfilesByNameSubsetSubset } from "jamf-classic-sd
   });
 
   const res = await sdk.managedpreferenceprofiles.findManagedPreferenceProfilesByNameSubset({
-    name: "pleased",
+    name: "string",
     subset: FindManagedPreferenceProfilesByNameSubsetSubset.General,
   });
 
@@ -393,7 +393,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.managedpreferenceprofiles.updateManagedPreferenceProfilesByName({
-    name: "Volkswagen networks",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

@@ -2,27 +2,30 @@ configVersion: 1.0.0
 management:
   docChecksum: 6c666f8514d4102cea0bdf1e68fde734
   docVersion: 10.48.0
-  speakeasyVersion: 1.96.1
-  generationVersion: 2.150.0
+  speakeasyVersion: 1.104.0
+  generationVersion: 2.169.0
 generation:
   comments:
     disableComments: false
     omitDescriptionIfSummaryPresent: false
   baseServerURL: ""
+  repoURL: https://github.com/speakeasy-sdks/jamf-classic-client.git
   sdkClassName: jamf
   singleTagPerOp: false
   tagNamespacingDisabled: false
 features:
   typescript:
     acceptHeaders: 2.81.1
-    core: 2.90.4
+    core: 2.93.0
     deprecations: 2.81.1
     globalSecurity: 2.82.0
     globalServerURLs: 2.82.0
-    includes: 2.81.1
 typescript:
-  version: 1.10.0
+  version: 1.11.0
   author: halosync
   flattenGlobalSecurity: false
+  installationURL: https://github.com/speakeasy-sdks/jamf-classic-client
   maxMethodParams: 0
   packageName: jamf-classic-sdk-nodejs
+  published: true
+  repoSubDirectory: .

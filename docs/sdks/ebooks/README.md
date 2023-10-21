@@ -112,7 +112,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.ebooks.deleteEBookByName({
-    name: "Agent Classical Car",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -229,7 +229,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.ebooks.findEBooksByName({
-    name: "North New similique",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -270,8 +270,8 @@ import { FindEBooksByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/m
   });
 
   const res = await sdk.ebooks.findEBooksByNameSubset({
-    name: "virtual Dodge Southeast",
-    subset: FindEBooksByNameSubsetSubset.General,
+    name: "string",
+    subset: FindEBooksByNameSubsetSubset.SelfService,
   });
 
   if (res.statusCode == 200) {
@@ -393,7 +393,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.ebooks.updateEBookByName({
-    name: "infomediaries female",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

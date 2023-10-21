@@ -114,7 +114,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerhistory.findComputerHistoryByMacAddress({
-    macaddress: "Identity Genderflux whose",
+    macaddress: "string",
   });
 
   if (res.statusCode == 200) {
@@ -155,8 +155,8 @@ import { FindComputerHistoryByMacAddressSubsetSubset } from "jamf-classic-sdk-no
   });
 
   const res = await sdk.computerhistory.findComputerHistoryByMacAddressSubset({
-    macaddress: "Mews North Indiana",
-    subset: FindComputerHistoryByMacAddressSubsetSubset.UserLocation,
+    macaddress: "string",
+    subset: FindComputerHistoryByMacAddressSubsetSubset.Commands,
   });
 
   if (res.statusCode == 200) {
@@ -196,7 +196,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerhistory.findComputerHistoryByName({
-    name: "Tasty override",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -237,8 +237,8 @@ import { FindComputerHistoryByNameSubsetSubset } from "jamf-classic-sdk-nodejs/d
   });
 
   const res = await sdk.computerhistory.findComputerHistoryByNameSubset({
-    name: "East Convertible Scandium",
-    subset: FindComputerHistoryByNameSubsetSubset.MacAppStoreApplications,
+    name: "string",
+    subset: FindComputerHistoryByNameSubsetSubset.UserLocation,
   });
 
   if (res.statusCode == 200) {
@@ -278,7 +278,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerhistory.findComputerHistoryBySerialNumber({
-    serialnumber: "calculating",
+    serialnumber: "string",
   });
 
   if (res.statusCode == 200) {
@@ -319,8 +319,8 @@ import { FindComputerHistoryBySerialNumberSubsetSubset } from "jamf-classic-sdk-
   });
 
   const res = await sdk.computerhistory.findComputerHistoryBySerialNumberSubset({
-    serialnumber: "white Philippine Rutherfordium",
-    subset: FindComputerHistoryBySerialNumberSubsetSubset.Audits,
+    serialnumber: "string",
+    subset: FindComputerHistoryBySerialNumberSubsetSubset.Commands,
   });
 
   if (res.statusCode == 200) {
@@ -360,7 +360,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerhistory.findComputerHistoryByUDID({
-    udid: "quisquam clip",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {
@@ -402,7 +402,7 @@ import { FindComputerHistoryByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/d
 
   const res = await sdk.computerhistory.findComputerHistoryByUDIDSubset({
     subset: FindComputerHistoryByUDIDSubsetSubset.ScreenSharingLogs,
-    udid: "Berkshire",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {

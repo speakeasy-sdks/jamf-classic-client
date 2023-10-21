@@ -102,7 +102,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerreports.findComputerReportsByName({
-    name: "deposit Checking",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

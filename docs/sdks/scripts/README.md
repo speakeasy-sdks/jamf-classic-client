@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.scripts.deleteScriptByName({
-    name: "Sunnyvale Vermont",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.scripts.findScriptsByName({
-    name: "blue",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.scripts.updateScriptByName({
-    name: "orange Omnigender",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.softwareupdateservers.deleteSoftwareUpdateServerByName({
-    name: "payment application",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.softwareupdateservers.findSoftwareUpdateServersByName({
-    name: "aha Transexual henry",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.softwareupdateservers.updateSoftwareUpdateServerByName({
-    name: "moist Meitnerium",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

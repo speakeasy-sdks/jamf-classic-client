@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevicegroups.deleteMobileDeviceGroupByName({
-    name: "Recycled extend turquoise",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevicegroups.findMobileDeviceGroupsByName({
-    name: "deposit Cambridgeshire",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevicegroups.updateMobileDeviceGroupByName({
-    name: "society Fish",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

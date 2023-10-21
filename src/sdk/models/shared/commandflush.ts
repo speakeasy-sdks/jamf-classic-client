@@ -3,18 +3,14 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { Expose, Type } from "class-transformer";
 
 export class CommandflushMobileDevicesMobileDevice extends SpeakeasyBase {
     @SpeakeasyMetadata()
-    @Expose({ name: "id" })
     id: number;
 }
 
 export class CommandflushMobileDevices extends SpeakeasyBase {
     @SpeakeasyMetadata()
-    @Expose({ name: "mobile_device" })
-    @Type(() => CommandflushMobileDevicesMobileDevice)
     mobileDevice?: CommandflushMobileDevicesMobileDevice;
 }
 
@@ -26,11 +22,8 @@ export enum CommandflushStatus {
 
 export class Commandflush extends SpeakeasyBase {
     @SpeakeasyMetadata()
-    @Expose({ name: "mobile_devices" })
-    @Type(() => CommandflushMobileDevices)
     mobileDevices?: CommandflushMobileDevices;
 
     @SpeakeasyMetadata()
-    @Expose({ name: "status" })
     status: CommandflushStatus;
 }

@@ -175,7 +175,7 @@ import { CreateComputerCommandByCommandIdAndPasscodeCommand } from "jamf-classic
   const res = await sdk.computercommands.createComputerCommandByCommandIdAndPasscode({
     command: CreateComputerCommandByCommandIdAndPasscodeCommand.DeviceLock,
     id: "<ID>",
-    passcode: "24 Rubidium virtual",
+    passcode: "string",
   });
 
   if (res.statusCode == 200) {
@@ -252,7 +252,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computercommands.findComputerCommandsByName({
-    name: "Bridge sleet application",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

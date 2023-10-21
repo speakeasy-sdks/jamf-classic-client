@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.removablemacaddresses.deleteRemovableMacAddressByName({
-    name: "female override discrete",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.removablemacaddresses.findRemovableMacAddressesByName({
-    name: "World",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.removablemacaddresses.updateRemovableMacAddressByName({
-    name: "Hybrid invoice back",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

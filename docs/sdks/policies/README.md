@@ -114,7 +114,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.policies.deletePolicyByName({
-    name: "Pickup",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -191,7 +191,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.policies.findPoliciesByCategory({
-    category: "Recycled Gasoline synthesizing",
+    category: "string",
   });
 
   if (res.statusCode == 200) {
@@ -313,7 +313,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.policies.findPoliciesByName({
-    name: "Metal",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -354,7 +354,7 @@ import { FindPoliciesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk
   });
 
   const res = await sdk.policies.findPoliciesByNameSubset({
-    name: "Cheese Designer elegantly",
+    name: "string",
     subset: FindPoliciesByNameSubsetSubset.DiskEncryption,
   });
 
@@ -476,7 +476,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.policies.updatePolicyByName({
-    name: "Southwest deploy",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

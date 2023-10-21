@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.buildings.deleteBuildingByName({
-    name: "Hop National Legacy",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.buildings.findBuildingsByName({
-    name: "frame Representative",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.buildings.updateBuildingByName({
-    name: "Cambridgeshire Ball turquoise",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

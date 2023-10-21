@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.categories.findCategoriesByName({
-    name: "hack Car",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.categories.updateCategoryByName({
-    name: "sievert",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

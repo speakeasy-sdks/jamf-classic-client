@@ -128,7 +128,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computers.deleteComputerByMacAddress({
-    macaddress: "Executive",
+    macaddress: "string",
   });
 
   if (res.statusCode == 200) {
@@ -168,7 +168,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computers.deleteComputerByName({
-    name: "unleash",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -208,7 +208,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computers.deleteComputerBySerialNumber({
-    serialnumber: "Implementation Southeast female",
+    serialnumber: "string",
   });
 
   if (res.statusCode == 200) {
@@ -248,7 +248,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computers.deleteComputerByUDID({
-    udid: "Soap Branding",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {
@@ -444,7 +444,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computers.findComputersByMacAddress({
-    macaddress: "online programming",
+    macaddress: "string",
   });
 
   if (res.statusCode == 200) {
@@ -485,8 +485,8 @@ import { FindComputersByMacAddressSubsetSubset } from "jamf-classic-sdk-nodejs/d
   });
 
   const res = await sdk.computers.findComputersByMacAddressSubset({
-    macaddress: "Supervisor Bugatti female",
-    subset: FindComputersByMacAddressSubsetSubset.Purchasing,
+    macaddress: "string",
+    subset: FindComputersByMacAddressSubsetSubset.ConfigurationProfiles,
   });
 
   if (res.statusCode == 200) {
@@ -526,7 +526,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computers.findComputersByName({
-    name: "Legacy",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -567,8 +567,8 @@ import { FindComputersByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sd
   });
 
   const res = await sdk.computers.findComputersByNameSubset({
-    name: "concerning",
-    subset: FindComputersByNameSubsetSubset.Certificates,
+    name: "string",
+    subset: FindComputersByNameSubsetSubset.Location,
   });
 
   if (res.statusCode == 200) {
@@ -608,7 +608,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computers.findComputersBySerialNumber({
-    serialnumber: "invoice Southwest",
+    serialnumber: "string",
   });
 
   if (res.statusCode == 200) {
@@ -649,8 +649,8 @@ import { FindComputersBySerialNumberSubsetSubset } from "jamf-classic-sdk-nodejs
   });
 
   const res = await sdk.computers.findComputersBySerialNumberSubset({
-    serialnumber: "tesla haptic",
-    subset: FindComputersBySerialNumberSubsetSubset.ConfigurationProfiles,
+    serialnumber: "string",
+    subset: FindComputersBySerialNumberSubsetSubset.Software,
   });
 
   if (res.statusCode == 200) {
@@ -690,7 +690,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computers.findComputersByUDID({
-    udid: "East Jewelery invoice",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {
@@ -732,7 +732,7 @@ import { FindComputersByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sd
 
   const res = await sdk.computers.findComputersByUDIDSubset({
     subset: FindComputersByUDIDSubsetSubset.ExtensionAttributes,
-    udid: "male Trial",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {
@@ -812,7 +812,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computers.matchComputers({
-    match: "matrix",
+    match: "string",
   });
 
   if (res.statusCode == 200) {
@@ -852,7 +852,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computers.matchComputersNames({
-    matchname: "silver Actinium",
+    matchname: "string",
   });
 
   if (res.statusCode == 200) {
@@ -932,7 +932,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computers.updateComputerByMacAddress({
-    macaddress: "withdrawal",
+    macaddress: "string",
   });
 
   if (res.statusCode == 200) {
@@ -972,7 +972,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computers.updateComputerByName({
-    name: "ROI",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -1012,7 +1012,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computers.updateComputerBySerialNumber({
-    serialnumber: "applications",
+    serialnumber: "string",
   });
 
   if (res.statusCode == 200) {
@@ -1052,7 +1052,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computers.updateComputerByUDID({
-    udid: "Trial Handcrafted",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {

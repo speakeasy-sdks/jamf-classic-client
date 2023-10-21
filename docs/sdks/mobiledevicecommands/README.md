@@ -120,7 +120,7 @@ import { CreateMobileDeviceCommandURLCommand } from "jamf-classic-sdk-nodejs/dis
 
   const res = await sdk.mobiledevicecommands.createMobileDeviceCommandURL({
     command: CreateMobileDeviceCommandURLCommand.DeviceLocation,
-    idList: "Granite",
+    idList: "string",
   });
 
   if (res.statusCode == 200) {
@@ -160,8 +160,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevicecommands.createMobileDeviceLockCommandURL({
-    idList: "radian",
-    lockMessage: "Bronze GB",
+    idList: "string",
+    lockMessage: "string",
   });
 
   if (res.statusCode == 200) {
@@ -201,8 +201,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevicecommands.createMobileDeviceNameCommandURL({
-    deviceName: "Future",
-    idList: "metrics",
+    deviceName: "string",
+    idList: "string",
   });
 
   if (res.statusCode == 200) {
@@ -243,8 +243,8 @@ import { CreateMobileScheduleOSUpdateCommandURLInstallAction } from "jamf-classi
   });
 
   const res = await sdk.mobiledevicecommands.createMobileScheduleOSUpdateCommandURL({
-    idList: "quantifying",
-    installAction: CreateMobileScheduleOSUpdateCommandURLInstallAction.Two,
+    idList: "string",
+    installAction: CreateMobileScheduleOSUpdateCommandURLInstallAction.One,
   });
 
   if (res.statusCode == 200) {
@@ -285,9 +285,9 @@ import { CreateMobileScheduleOSUpdateCommandWithProductVersionURLInstallAction }
   });
 
   const res = await sdk.mobiledevicecommands.createMobileScheduleOSUpdateCommandWithProductVersionURL({
-    idList: "Electric male",
+    idList: "string",
     installAction: CreateMobileScheduleOSUpdateCommandWithProductVersionURLInstallAction.One,
-    productVersion: "XML Park",
+    productVersion: "string",
   });
 
   if (res.statusCode == 200) {
@@ -364,7 +364,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevicecommands.findMobileDeviceCommandsByCommand({
-    command: "Electric deposit",
+    command: "string",
   });
 
   if (res.statusCode == 200) {
@@ -404,7 +404,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevicecommands.findMobileDeviceCommandsByName({
-    name: "complexity",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.userextensionattributes.deleteUserextensionattributeByName({
-    name: "Harbor Minivan",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.userextensionattributes.findUserextensionattributesByName({
-    name: "East",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.userextensionattributes.updateUserextensionattributeByName({
-    name: "middleware Bike brief",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

@@ -122,8 +122,8 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
   const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByMacAddress({
     endDate: new RFCDate("2021-11-05"),
-    macaddress: "Northeast transmitting",
-    startDate: new RFCDate("2022-10-26"),
+    macaddress: "string",
+    startDate: new RFCDate("2022-02-03"),
   });
 
   if (res.statusCode == 200) {
@@ -166,9 +166,9 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
   const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByMacAddressSubset({
     endDate: new RFCDate("2023-05-05"),
-    macaddress: "Miami",
-    startDate: new RFCDate("2023-10-16"),
-    subset: FindComputerHardwareSoftwareReportsByMacAddressSubsetSubset.Hardwre,
+    macaddress: "string",
+    startDate: new RFCDate("2021-06-26"),
+    subset: FindComputerHardwareSoftwareReportsByMacAddressSubsetSubset.Software,
   });
 
   if (res.statusCode == 200) {
@@ -210,8 +210,8 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
   const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByName({
     endDate: new RFCDate("2023-01-11"),
-    name: "Movies morph",
-    startDate: new RFCDate("2023-12-29"),
+    name: "string",
+    startDate: new RFCDate("2022-07-15"),
   });
 
   if (res.statusCode == 200) {
@@ -254,9 +254,9 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
   const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByNameSubset({
     endDate: new RFCDate("2021-07-31"),
-    name: "Islands Toyota ugh",
-    startDate: new RFCDate("2022-01-06"),
-    subset: FindComputerHardwareSoftwareReportsByNameSubsetSubset.Plugins,
+    name: "string",
+    startDate: new RFCDate("2023-09-07"),
+    subset: FindComputerHardwareSoftwareReportsByNameSubsetSubset.Software,
   });
 
   if (res.statusCode == 200) {
@@ -298,8 +298,8 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
   const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsBySerial({
     endDate: new RFCDate("2023-10-13"),
-    serialnumber: "Hyundai",
-    startDate: new RFCDate("2021-02-14"),
+    serialnumber: "string",
+    startDate: new RFCDate("2021-05-25"),
   });
 
   if (res.statusCode == 200) {
@@ -342,9 +342,9 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
   const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsBySerialSubset({
     endDate: new RFCDate("2022-03-08"),
-    serialnumber: "kindly Southeast",
-    startDate: new RFCDate("2021-07-21"),
-    subset: FindComputerHardwareSoftwareReportsBySerialSubsetSubset.Hardwre,
+    serialnumber: "string",
+    startDate: new RFCDate("2022-10-09"),
+    subset: FindComputerHardwareSoftwareReportsBySerialSubsetSubset.Plugins,
   });
 
   if (res.statusCode == 200) {
@@ -387,7 +387,7 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
   const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByUDID({
     endDate: new RFCDate("2021-05-02"),
     startDate: new RFCDate("2023-04-25"),
-    udid: "eaque",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {
@@ -432,7 +432,7 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     endDate: new RFCDate("2022-09-29"),
     startDate: new RFCDate("2023-09-30"),
     subset: FindComputerHardwareSoftwareReportsByUDIDSubsetSubset.Software,
-    udid: "instructive",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {

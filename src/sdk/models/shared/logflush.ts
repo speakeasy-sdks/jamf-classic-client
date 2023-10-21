@@ -3,18 +3,14 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { Expose, Type } from "class-transformer";
 
 export class LogflushComputersComputer extends SpeakeasyBase {
     @SpeakeasyMetadata()
-    @Expose({ name: "id" })
     id?: number;
 }
 
 export class LogflushComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
-    @Expose({ name: "computer" })
-    @Type(() => LogflushComputersComputer)
     computer?: LogflushComputersComputer;
 }
 
@@ -47,19 +43,14 @@ export enum LogflushLog {
 
 export class Logflush extends SpeakeasyBase {
     @SpeakeasyMetadata()
-    @Expose({ name: "computers" })
-    @Type(() => LogflushComputers)
     computers?: LogflushComputers;
 
     @SpeakeasyMetadata()
-    @Expose({ name: "interval" })
     interval: LogflushInterval;
 
     @SpeakeasyMetadata()
-    @Expose({ name: "log" })
     log: LogflushLog;
 
     @SpeakeasyMetadata()
-    @Expose({ name: "log_id" })
     logId: number;
 }

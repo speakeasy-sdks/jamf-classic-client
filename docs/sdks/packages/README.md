@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.packages.deletePackageByName({
-    name: "withdrawal est Nevada",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.packages.findPackagesByName({
-    name: "Tuna Plastic Fish",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.packages.updatePackageByName({
-    name: "Passenger",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

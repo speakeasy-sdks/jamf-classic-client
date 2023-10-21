@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.byoprofiles.deleteBYOProfilesByName({
-    name: "matrix Designer",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.byoprofiles.findBYOProfilesByName({
-    name: "backing Bronze",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.byoprofiles.updateBYOProfilesByName({
-    name: "Southeast USB",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

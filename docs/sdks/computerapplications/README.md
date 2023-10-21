@@ -26,8 +26,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerapplications.findComputerApplicationByNameAndVersion({
-    application: "blue South iterate",
-    version: "azure",
+    application: "string",
+    version: "string",
   });
 
   if (res.statusCode == 200) {
@@ -67,7 +67,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerapplications.findComputerApplicationsByName({
-    application: "dolore Investor",
+    application: "string",
   });
 
   if (res.statusCode == 200) {
@@ -107,9 +107,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerapplications.findComputerApplicationsByNameAndVersionAndInventory({
-    application: "oh less up",
-    inventory: "Designer New cursor",
-    version: "Borders",
+    application: "string",
+    inventory: "string",
+    version: "string",
   });
 
   if (res.statusCode == 200) {
@@ -149,8 +149,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerapplications.findComputerApplicationsByNameInventory({
-    application: "tesla",
-    inventory: "swimsuit East radian",
+    application: "string",
+    inventory: "string",
   });
 
   if (res.statusCode == 200) {

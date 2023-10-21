@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.ibeacons.deleteIBeaconByName({
-    name: "to",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.ibeacons.findIBeaconsByName({
-    name: "Forward",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.ibeacons.updateIBeaconByName({
-    name: "Small",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

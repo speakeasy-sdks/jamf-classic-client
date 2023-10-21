@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.departments.deleteDepartmentByName({
-    name: "paradigm",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.departments.findDepartmentsByName({
-    name: "compress Convertible",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.departments.updateDepartmentByName({
-    name: "knowledge Borders haptic",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

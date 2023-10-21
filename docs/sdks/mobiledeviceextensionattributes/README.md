@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceextensionattributes.deleteMobiledeviceextensionattributeByName({
-    name: "Northwest panel",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceextensionattributes.findMobiledeviceextensionattributesByName({
-    name: "Soft Honda",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceextensionattributes.updateMobiledeviceextensionattributeByName({
-    name: "ad Polestar",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

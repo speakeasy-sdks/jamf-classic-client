@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.printers.deletePrinterByName({
-    name: "bluetooth redundant",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.printers.findPrintersByName({
-    name: "Jewelery",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.printers.updatePrinterByName({
-    name: "strategic singer",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

@@ -114,7 +114,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByMacAddress({
-    macaddress: "Road",
+    macaddress: "string",
   });
 
   if (res.statusCode == 200) {
@@ -155,8 +155,8 @@ import { FindMobileDeviceHistoryByMacAddressSubsetSubset } from "jamf-classic-sd
   });
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByMacAddressSubset({
-    macaddress: "Interactions Rhenium green",
-    subset: FindMobileDeviceHistoryByMacAddressSubsetSubset.General,
+    macaddress: "string",
+    subset: FindMobileDeviceHistoryByMacAddressSubsetSubset.Applications,
   });
 
   if (res.statusCode == 200) {
@@ -196,7 +196,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByName({
-    name: "silver firmware compress",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -237,8 +237,8 @@ import { FindMobileDeviceHistoryByNameSubsetSubset } from "jamf-classic-sdk-node
   });
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByNameSubset({
-    name: "Buckinghamshire off",
-    subset: FindMobileDeviceHistoryByNameSubsetSubset.General,
+    name: "string",
+    subset: FindMobileDeviceHistoryByNameSubsetSubset.UserLocation,
   });
 
   if (res.statusCode == 200) {
@@ -278,7 +278,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryBySerialNumber({
-    serialnumber: "Southwest male",
+    serialnumber: "string",
   });
 
   if (res.statusCode == 200) {
@@ -319,8 +319,8 @@ import { FindMobileDeviceHistoryBySerialNumberSubsetSubset } from "jamf-classic-
   });
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryBySerialNumberSubset({
-    serialnumber: "Oganesson",
-    subset: FindMobileDeviceHistoryBySerialNumberSubsetSubset.ManagementCommands,
+    serialnumber: "string",
+    subset: FindMobileDeviceHistoryBySerialNumberSubsetSubset.General,
   });
 
   if (res.statusCode == 200) {
@@ -360,7 +360,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByUDID({
-    udid: "compressing",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {
@@ -402,7 +402,7 @@ import { FindMobileDeviceHistoryByUDIDSubsetSubset } from "jamf-classic-sdk-node
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByUDIDSubset({
     subset: FindMobileDeviceHistoryByUDIDSubsetSubset.ManagementCommands,
-    udid: "punctual",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {

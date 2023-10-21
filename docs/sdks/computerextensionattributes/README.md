@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerextensionattributes.deleteComputerextensionattributeByName({
-    name: "lest",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerextensionattributes.findComputerextensionattributesByName({
-    name: "strategic",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerextensionattributes.updateComputerextensionattributeByName({
-    name: "male initiatives override",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

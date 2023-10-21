@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.usergroups.deleteUserGroupsByName({
-    name: "Garden",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.usergroups.findUserGroupsByName({
-    name: "Gleason green",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.usergroups.updateUserGroupsByName({
-    name: "kilogram compress",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

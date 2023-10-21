@@ -26,7 +26,7 @@ import { CreateLogFlushForIntervalLog } from "jamf-classic-sdk-nodejs/dist/sdk/m
   });
 
   const res = await sdk.logflush.createLogFlushForInterval({
-    interval: "Fantastic",
+    interval: "string",
     log: CreateLogFlushForIntervalLog.Policy,
   });
 
@@ -69,7 +69,7 @@ import { CreateLogFlushWithIdAndIntervalLog } from "jamf-classic-sdk-nodejs/dist
 
   const res = await sdk.logflush.createLogFlushWithIdAndInterval({
     id: "<ID>",
-    interval: "South Kia since",
+    interval: "string",
     log: CreateLogFlushWithIdAndIntervalLog.Policy,
   });
 

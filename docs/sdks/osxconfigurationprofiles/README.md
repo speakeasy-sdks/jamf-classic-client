@@ -112,7 +112,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.osxconfigurationprofiles.deleteOsxConfigurationProfileByName({
-    name: "Cambridgeshire",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -271,7 +271,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.osxconfigurationprofiles.findOsxConfigurationProfilesByName({
-    name: "Investment Georgia bandwidth",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -312,7 +312,7 @@ import { FindOsxConfigurationProfilesByNameSubsetSubset } from "jamf-classic-sdk
   });
 
   const res = await sdk.osxconfigurationprofiles.findOsxConfigurationProfilesByNameSubset({
-    name: "South",
+    name: "string",
     subset: FindOsxConfigurationProfilesByNameSubsetSubset.General,
   });
 
@@ -393,7 +393,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.osxconfigurationprofiles.updateOsxConfigurationProfileByName({
-    name: "National Rhodium hack",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

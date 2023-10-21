@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.restrictedsoftware.deleteRestrictedSoftwareByName({
-    name: "vigorous West silver",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.restrictedsoftware.findRestrictedSoftwareByName({
-    name: "pilgrimage righteously",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.restrictedsoftware.updateRestrictedSoftwareByName({
-    name: "OCR Cambridgeshire Toyota",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

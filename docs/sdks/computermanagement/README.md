@@ -87,8 +87,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computermanagement.findComputerManagementByIdPatchFilter({
-    filter: "Southwest blindfold",
-    id: 93239,
+    filter: "string",
+    id: 596013,
   });
 
   if (res.statusCode == 200) {
@@ -254,7 +254,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computermanagement.findComputerManagementByMacAddress({
-    macaddress: "Cyclocross",
+    macaddress: "string",
   });
 
   if (res.statusCode == 200) {
@@ -294,8 +294,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computermanagement.findComputerManagementByMacAddressPatchFilter({
-    filter: "Concrete Country",
-    macaddress: "Manager magenta Lilangeni",
+    filter: "string",
+    macaddress: "string",
   });
 
   if (res.statusCode == 200) {
@@ -336,8 +336,8 @@ import { FindComputerManagementByMacAddressSubsetSubset } from "jamf-classic-sdk
   });
 
   const res = await sdk.computermanagement.findComputerManagementByMacAddressSubset({
-    macaddress: "Gasoline",
-    subset: FindComputerManagementByMacAddressSubsetSubset.Ebooks,
+    macaddress: "string",
+    subset: FindComputerManagementByMacAddressSubsetSubset.General,
   });
 
   if (res.statusCode == 200) {
@@ -377,8 +377,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computermanagement.findComputerManagementByMacAddressUsername({
-    macaddress: "lavender magenta Account",
-    username: "Eugenia_Hegmann33",
+    macaddress: "string",
+    username: "Uriah_Dach70",
   });
 
   if (res.statusCode == 200) {
@@ -419,9 +419,9 @@ import { FindComputerManagementByMacAddressUsernameSubsetSubset } from "jamf-cla
   });
 
   const res = await sdk.computermanagement.findComputerManagementByMacAddressUsernameSubset({
-    macaddress: "South Bicycle",
-    subset: FindComputerManagementByMacAddressUsernameSubsetSubset.SmartGroups,
-    username: "Hanna_Hansen",
+    macaddress: "string",
+    subset: FindComputerManagementByMacAddressUsernameSubsetSubset.OSXConfigurationProfiles,
+    username: "Aida_Murazik94",
   });
 
   if (res.statusCode == 200) {
@@ -461,7 +461,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computermanagement.findComputerManagementByName({
-    name: "hack Buckinghamshire",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -501,8 +501,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computermanagement.findComputerManagementByNamePatchFilter({
-    filter: "deposit",
-    name: "Senegal Nissan",
+    filter: "string",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -543,8 +543,8 @@ import { FindComputerManagementByNameSubsetSubset } from "jamf-classic-sdk-nodej
   });
 
   const res = await sdk.computermanagement.findComputerManagementByNameSubset({
-    name: "female Group Wooden",
-    subset: FindComputerManagementByNameSubsetSubset.General,
+    name: "string",
+    subset: FindComputerManagementByNameSubsetSubset.StaticGroups,
   });
 
   if (res.statusCode == 200) {
@@ -584,8 +584,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computermanagement.findComputerManagementByNameUsername({
-    name: "lime quietly",
-    username: "Burdette_Altenwerth83",
+    name: "string",
+    username: "Giovanni_Daugherty63",
   });
 
   if (res.statusCode == 200) {
@@ -626,9 +626,9 @@ import { FindComputerManagementByNameUsernameSubsetSubset } from "jamf-classic-s
   });
 
   const res = await sdk.computermanagement.findComputerManagementByNameUsernameSubset({
-    name: "auxiliary",
-    subset: FindComputerManagementByNameUsernameSubsetSubset.SmartGroups,
-    username: "Margarette.Jenkins",
+    name: "string",
+    subset: FindComputerManagementByNameUsernameSubsetSubset.General,
+    username: "Jermain_Batz41",
   });
 
   if (res.statusCode == 200) {
@@ -668,7 +668,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computermanagement.findComputerManagementBySerialNumber({
-    serialnumber: "Bedfordshire Via parse",
+    serialnumber: "string",
   });
 
   if (res.statusCode == 200) {
@@ -708,8 +708,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computermanagement.findComputerManagementBySerialNumberPatchFilter({
-    filter: "pollard UAE Chips",
-    serialnumber: "Genderflux nap",
+    filter: "string",
+    serialnumber: "string",
   });
 
   if (res.statusCode == 200) {
@@ -750,8 +750,8 @@ import { FindComputerManagementBySerialNumberSubsetSubset } from "jamf-classic-s
   });
 
   const res = await sdk.computermanagement.findComputerManagementBySerialNumberSubset({
-    serialnumber: "driver Identity",
-    subset: FindComputerManagementBySerialNumberSubsetSubset.Ebooks,
+    serialnumber: "string",
+    subset: FindComputerManagementBySerialNumberSubsetSubset.OSXConfigurationProfiles,
   });
 
   if (res.statusCode == 200) {
@@ -791,8 +791,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computermanagement.findComputerManagementBySerialNumberUsername({
-    serialnumber: "Wisoky Volkswagen Regional",
-    username: "Edgardo95",
+    serialnumber: "string",
+    username: "Reilly_Considine52",
   });
 
   if (res.statusCode == 200) {
@@ -833,9 +833,9 @@ import { FindComputerManagementBySerialNumberUsernameSubsetSubset } from "jamf-c
   });
 
   const res = await sdk.computermanagement.findComputerManagementBySerialNumberUsernameSubset({
-    serialnumber: "Metal North",
-    subset: FindComputerManagementBySerialNumberUsernameSubsetSubset.StaticGroups,
-    username: "Arnaldo.Deckow86",
+    serialnumber: "string",
+    subset: FindComputerManagementBySerialNumberUsernameSubsetSubset.RestrictedSoftware,
+    username: "Deja22",
   });
 
   if (res.statusCode == 200) {
@@ -875,7 +875,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computermanagement.findComputerManagementByUDID({
-    udid: "optical",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {
@@ -917,7 +917,7 @@ import { FindComputerManagementByUDIDSubsetSubset } from "jamf-classic-sdk-nodej
 
   const res = await sdk.computermanagement.findComputerManagementByUDIDSubset({
     subset: FindComputerManagementByUDIDSubsetSubset.MacAppStoreApps,
-    udid: "Transgender",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {
@@ -957,8 +957,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computermanagement.findComputerManagementByUdidPatchFilter({
-    filter: "pink Granite",
-    udid: "concerning Pop",
+    filter: "string",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {
@@ -998,8 +998,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computermanagement.findComputerManagementByUdidUsername({
-    udid: "Bicycle enim Orchestrator",
-    username: "Leann_Cronin90",
+    udid: "string",
+    username: "Shyanne_Satterfield",
   });
 
   if (res.statusCode == 200) {
@@ -1041,8 +1041,8 @@ import { FindComputerManagementByUdidUsernameSubsetSubset } from "jamf-classic-s
 
   const res = await sdk.computermanagement.findComputerManagementByUdidUsernameSubset({
     subset: FindComputerManagementByUdidUsernameSubsetSubset.General,
-    udid: "lime boxspring",
-    username: "Grady.Schmitt",
+    udid: "string",
+    username: "Hilda_Schimmel10",
   });
 
   if (res.statusCode == 200) {

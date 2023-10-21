@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computergroups.deleteComputerGroupByName({
-    name: "stable",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computergroups.findComputerGroupsByName({
-    name: "sometimes Internal",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computergroups.updateComputerGroupByName({
-    name: "Cerium",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

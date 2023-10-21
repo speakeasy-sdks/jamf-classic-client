@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.networksegments.deleteNetworkSegmentByName({
-    name: "blue",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.networksegments.findNetworkSegmentsByName({
-    name: "Neither",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.networksegments.updateNetworkSegmentByName({
-    name: "upbeat",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

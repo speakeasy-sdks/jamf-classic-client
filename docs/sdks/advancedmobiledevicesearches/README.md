@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.advancedmobiledevicesearches.deleteAdvancedMobileDeviceSearchByName({
-    name: "Louisiana",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.advancedmobiledevicesearches.findMobileDeviceSearchesByName({
-    name: "compress",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.advancedmobiledevicesearches.updateAdvancedMobileDeviceSearchByName({
-    name: "Gender Producer",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

@@ -69,7 +69,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.patchreports.patchreportsPatchsoftwaretitleidVersionByIdAndVersionGet({
     id: "<ID>",
-    version: "website",
+    version: "string",
   });
 
   if (res.statusCode == 200) {

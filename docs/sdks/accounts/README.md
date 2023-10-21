@@ -157,7 +157,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.accounts.deleteAccountByName({
-    name: "Cotton forenenst",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -354,7 +354,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.accounts.findAccountsByName({
-    name: "Fishers indexing",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -434,7 +434,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.accounts.findGroupsByName({
-    name: "Santa Identity",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -514,7 +514,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.accounts.updateAccountByName({
-    name: "modulo",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

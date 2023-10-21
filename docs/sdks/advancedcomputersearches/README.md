@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.advancedcomputersearches.deleteAdvancedComputerSearchByName({
-    name: "generate Berkshire",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.advancedcomputersearches.findAdvancedComputerSearchesByName({
-    name: "Idaho",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.advancedcomputersearches.updateAdvancedComputerSearchByName({
-    name: "Strategist Ball Analyst",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

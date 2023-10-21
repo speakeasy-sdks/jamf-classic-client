@@ -115,7 +115,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceenrollmentprofiles.deleteMobileDeviceEnrollmentProfileByInvitation({
-    invitation: "Nissan bandwidth Plastic",
+    invitation: "string",
   });
 
   if (res.statusCode == 200) {
@@ -155,7 +155,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceenrollmentprofiles.deleteMobileDeviceEnrollmentProfileByName({
-    name: "Response",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -314,7 +314,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByInvitation({
-    invitation: "female Coordinator",
+    invitation: "string",
   });
 
   if (res.statusCode == 200) {
@@ -354,7 +354,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByName({
-    name: "B2B",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -395,8 +395,8 @@ import { FindMobileDeviceEnrollmentProfilesByNameSubsetSubset } from "jamf-class
   });
 
   const res = await sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByNameSubset({
-    name: "Southwest Refined",
-    subset: FindMobileDeviceEnrollmentProfilesByNameSubsetSubset.General,
+    name: "string",
+    subset: FindMobileDeviceEnrollmentProfilesByNameSubsetSubset.Purchasing,
   });
 
   if (res.statusCode == 200) {
@@ -476,7 +476,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceenrollmentprofiles.updateMobileDeviceEnrollmentProfileByInvitation({
-    invitation: "Wooden Research invoice",
+    invitation: "string",
   });
 
   if (res.statusCode == 200) {
@@ -516,7 +516,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceenrollmentprofiles.updateMobileDeviceEnrollmentProfileByName({
-    name: "when preach souvenir",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

@@ -112,7 +112,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceconfigurationprofiles.deleteMobileDeviceConfigurationProfileByName({
-    name: "benchmark female",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -271,7 +271,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesByName({
-    name: "Pickup Northwest kilogram",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -312,7 +312,7 @@ import { FindMobileDeviceConfigurationProfilesByNameSubsetSubset } from "jamf-cl
   });
 
   const res = await sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesByNameSubset({
-    name: "Avon",
+    name: "string",
     subset: FindMobileDeviceConfigurationProfilesByNameSubsetSubset.General,
   });
 
@@ -393,7 +393,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceconfigurationprofiles.updateMobileDeviceConfigurationProfileByName({
-    name: "Director",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

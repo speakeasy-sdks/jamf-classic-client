@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.directorybindings.deleteDirectoryBindingByName({
-    name: "Glendale Books",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.directorybindings.findDirectoryBindingsByName({
-    name: "Shoes Salad Assistant",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.directorybindings.updateDirectoryBindingByName({
-    name: "Liaison background Israel",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

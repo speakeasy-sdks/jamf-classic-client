@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.distributionpoints.deleteDistributionPointByName({
-    name: "Coupe",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.distributionpoints.findDistributionPointsByName({
-    name: "Berkshire middleware Radon",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.distributionpoints.updateDistributionPointByName({
-    name: "generation",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

@@ -118,7 +118,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.patches.deleteSoftwareTitlesByName({
-    name: "Neodymium",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -161,7 +161,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.patches.findComputersByIDAndTitleVersion({
     id: 188338,
-    version: "encash dish",
+    version: "string",
   });
 
   if (res.statusCode == 200) {
@@ -203,8 +203,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.patches.findComputersByNameAndTitleVersion({
-    name: "Northwest",
-    version: "feed Avon",
+    name: "string",
+    version: "string",
   });
 
   if (res.statusCode == 200) {
@@ -327,7 +327,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.patches.findPatchesByName({
-    name: "female quantify",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -411,7 +411,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.patches.updateSoftwareTitlesByName({
-    name: "Minivan",
+    name: "string",
   });
 
   if (res.statusCode == 200) {

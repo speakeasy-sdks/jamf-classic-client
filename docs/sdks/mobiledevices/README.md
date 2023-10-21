@@ -125,7 +125,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevices.deleteMobileDeviceByMacAddress({
-    macaddress: "FTP invoice Representative",
+    macaddress: "string",
   });
 
   if (res.statusCode == 200) {
@@ -165,7 +165,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevices.deleteMobileDeviceByName({
-    name: "Future Central Coupe",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -205,7 +205,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevices.deleteMobileDeviceBySerialNumber({
-    serialnumber: "Modern becquerel",
+    serialnumber: "string",
   });
 
   if (res.statusCode == 200) {
@@ -245,7 +245,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevices.deleteMobileDeviceByUDID({
-    udid: "capability Sanford withdrawal",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {
@@ -404,7 +404,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevices.findMobileDevicesByMacAddress({
-    macaddress: "Senior pfft firewall",
+    macaddress: "string",
   });
 
   if (res.statusCode == 200) {
@@ -445,8 +445,8 @@ import { FindMobileDevicesByMacAddressSubsetSubset } from "jamf-classic-sdk-node
   });
 
   const res = await sdk.mobiledevices.findMobileDevicesByMacAddressSubset({
-    macaddress: "red oh Luxurious",
-    subset: FindMobileDevicesByMacAddressSubsetSubset.ProvisioningProfiles,
+    macaddress: "string",
+    subset: FindMobileDevicesByMacAddressSubsetSubset.MobileDeviceGroups,
   });
 
   if (res.statusCode == 200) {
@@ -486,7 +486,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevices.findMobileDevicesByName({
-    name: "West",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -527,7 +527,7 @@ import { FindMobileDevicesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dis
   });
 
   const res = await sdk.mobiledevices.findMobileDevicesByNameSubset({
-    name: "Corporate",
+    name: "string",
     subset: FindMobileDevicesByNameSubsetSubset.Purchasing,
   });
 
@@ -568,7 +568,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevices.findMobileDevicesBySerialNumber({
-    serialnumber: "fat UDP",
+    serialnumber: "string",
   });
 
   if (res.statusCode == 200) {
@@ -609,8 +609,8 @@ import { FindMobileDevicesBySerialNumberSubsetSubset } from "jamf-classic-sdk-no
   });
 
   const res = await sdk.mobiledevices.findMobileDevicesBySerialNumberSubset({
-    serialnumber: "how laudantium",
-    subset: FindMobileDevicesBySerialNumberSubsetSubset.Purchasing,
+    serialnumber: "string",
+    subset: FindMobileDevicesBySerialNumberSubsetSubset.Security,
   });
 
   if (res.statusCode == 200) {
@@ -650,7 +650,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevices.findMobileDevicesByUDID({
-    udid: "Officer ink",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {
@@ -692,7 +692,7 @@ import { FindMobileDevicesByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dis
 
   const res = await sdk.mobiledevices.findMobileDevicesByUDIDSubset({
     subset: FindMobileDevicesByUDIDSubsetSubset.Purchasing,
-    udid: "Minivan Jordan Borders",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {
@@ -732,7 +732,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevices.matchMobileDevices({
-    match: "male however absent",
+    match: "string",
   });
 
   if (res.statusCode == 200) {
@@ -812,7 +812,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevices.updateMobileDeviceByMacAddress({
-    macaddress: "whether deposit",
+    macaddress: "string",
   });
 
   if (res.statusCode == 200) {
@@ -852,7 +852,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevices.updateMobileDeviceByName({
-    name: "Face Forges if",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -892,7 +892,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevices.updateMobileDeviceBySerialNumber({
-    serialnumber: "male",
+    serialnumber: "string",
   });
 
   if (res.statusCode == 200) {
@@ -932,7 +932,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledevices.updateMobileDeviceByUDID({
-    udid: "Computer hack",
+    udid: "string",
   });
 
   if (res.statusCode == 200) {

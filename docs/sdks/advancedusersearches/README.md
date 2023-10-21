@@ -110,7 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.advancedusersearches.deleteAdvancedUserSearchByName({
-    name: "Hybrid inversion consideration",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -227,7 +227,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.advancedusersearches.findUserSearchesByName({
-    name: "evenly",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.advancedusersearches.updateAdvancedUserSearchByName({
-    name: "hacking",
+    name: "string",
   });
 
   if (res.statusCode == 200) {
