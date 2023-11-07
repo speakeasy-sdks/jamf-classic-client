@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Subset to filter by
  */
-export enum FindComputerHistoryByUDIDSubsetSubset {
+export enum FindComputerHistoryByUDIDSubsetPathParamSubset {
     General = "General",
     ComputerUsageLogs = "ComputerUsageLogs",
     Audits = "Audits",
@@ -27,7 +27,7 @@ export class FindComputerHistoryByUDIDSubsetRequest extends SpeakeasyBase {
      * Subset to filter by
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=subset" })
-    subset: FindComputerHistoryByUDIDSubsetSubset;
+    subset: FindComputerHistoryByUDIDSubsetPathParamSubset;
 
     /**
      * Computer UDID to filter by

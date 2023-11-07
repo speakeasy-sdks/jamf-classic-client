@@ -1,5 +1,5 @@
 # Managedpreferenceprofiles
-(*managedpreferenceprofiles*)
+(*.managedpreferenceprofiles*)
 
 ### Available Operations
 
@@ -34,6 +34,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.managedpreferenceprofiles.createManagedPreferenceProfileById({
     id: 153966,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -75,6 +76,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 174021,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -115,6 +117,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -152,6 +155,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.managedpreferenceprofiles.findManagedPreferenceProfiles();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -192,6 +196,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 823664,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -219,7 +224,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindManagedPreferenceProfilesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindManagedPreferenceProfilesByIdSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -231,8 +236,9 @@ import { FindManagedPreferenceProfilesByIdSubsetSubset } from "jamf-classic-sdk-
 
   const res = await sdk.managedpreferenceprofiles.findManagedPreferenceProfilesByIdSubset({
     id: 436755,
-    subset: FindManagedPreferenceProfilesByIdSubsetSubset.Settings,
+    subset: FindManagedPreferenceProfilesByIdSubsetPathParamSubset.Settings,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -274,6 +280,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -301,7 +308,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindManagedPreferenceProfilesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindManagedPreferenceProfilesByNameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -313,8 +320,9 @@ import { FindManagedPreferenceProfilesByNameSubsetSubset } from "jamf-classic-sd
 
   const res = await sdk.managedpreferenceprofiles.findManagedPreferenceProfilesByNameSubset({
     name: "string",
-    subset: FindManagedPreferenceProfilesByNameSubsetSubset.General,
+    subset: FindManagedPreferenceProfilesByNameSubsetPathParamSubset.General,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -356,6 +364,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 67711,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -395,6 +404,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.managedpreferenceprofiles.updateManagedPreferenceProfilesByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

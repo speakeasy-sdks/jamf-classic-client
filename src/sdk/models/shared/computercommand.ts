@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class ComputerCommandComputersComputer extends SpeakeasyBase {
+export class ComputerCommandComputer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -22,8 +22,8 @@ export class ComputerCommandComputersComputer extends SpeakeasyBase {
 export class ComputerCommandComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
-    @Type(() => ComputerCommandComputersComputer)
-    computer?: ComputerCommandComputersComputer;
+    @Type(() => ComputerCommandComputer)
+    computer?: ComputerCommandComputer;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })

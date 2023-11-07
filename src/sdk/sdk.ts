@@ -3,6 +3,7 @@
  */
 
 import * as utils from "../internal/utils";
+import * as shared from "../sdk/models/shared";
 import { Accounts } from "./accounts";
 import { Activationcode } from "./activationcode";
 import { Advancedcomputersearches } from "./advancedcomputersearches";
@@ -56,7 +57,6 @@ import { Mobiledevicehistory } from "./mobiledevicehistory";
 import { Mobiledeviceinvitations } from "./mobiledeviceinvitations";
 import { Mobiledeviceprovisioningprofiles } from "./mobiledeviceprovisioningprofiles";
 import { Mobiledevices } from "./mobiledevices";
-import * as shared from "./models/shared";
 import { Networksegments } from "./networksegments";
 import { Osxconfigurationprofiles } from "./osxconfigurationprofiles";
 import { Packages } from "./packages";
@@ -129,9 +129,9 @@ export class SDKConfiguration {
     serverDefaults: any;
     language = "typescript";
     openapiDocVersion = "10.48.0";
-    sdkVersion = "1.12.0";
-    genVersion = "2.171.0";
-    userAgent = "speakeasy-sdk/typescript 1.12.0 2.171.0 10.48.0 jamf-classic-sdk-nodejs";
+    sdkVersion = "2.0.0";
+    genVersion = "2.181.1";
+    userAgent = "speakeasy-sdk/typescript 2.0.0 2.181.1 10.48.0 jamf-classic-sdk-nodejs";
     retryConfig?: utils.RetryConfig;
     public constructor(init?: Partial<SDKConfiguration>) {
         Object.assign(this, init);

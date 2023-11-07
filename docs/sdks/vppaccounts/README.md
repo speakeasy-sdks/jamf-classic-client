@@ -1,5 +1,5 @@
 # Vppaccounts
-(*vppaccounts*)
+(*.vppaccounts*)
 
 ### Available Operations
 
@@ -29,6 +29,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.vppaccounts.createVPPAdminAccountById({
     id: 386805,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -70,6 +71,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 741460,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -107,6 +109,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.vppaccounts.findVPPAdminAccount();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -147,6 +150,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 769449,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -186,6 +190,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.vppaccounts.updateVPPAdminAccountById({
     id: 102957,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

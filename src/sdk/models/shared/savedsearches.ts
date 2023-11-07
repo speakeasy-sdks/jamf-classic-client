@@ -5,13 +5,13 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export enum SavedSearchesSavedSearchType {
+export enum SavedSearchesType {
     Computers = "Computers",
     MobileDevices = "Mobile Devices",
     Users = "Users",
 }
 
-export class SavedSearchesSavedSearch extends SpeakeasyBase {
+export class SavedSearch extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -22,14 +22,14 @@ export class SavedSearchesSavedSearch extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    type?: SavedSearchesSavedSearchType;
+    type?: SavedSearchesType;
 }
 
 export class SavedSearches extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "saved_search" })
-    @Type(() => SavedSearchesSavedSearch)
-    savedSearch?: SavedSearchesSavedSearch;
+    @Type(() => SavedSearch)
+    savedSearch?: SavedSearch;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })

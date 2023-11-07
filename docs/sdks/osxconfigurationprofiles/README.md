@@ -1,5 +1,5 @@
 # Osxconfigurationprofiles
-(*osxconfigurationprofiles*)
+(*.osxconfigurationprofiles*)
 
 ### Available Operations
 
@@ -34,6 +34,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.osxconfigurationprofiles.createOsxConfigurationProfileById({
     id: 774029,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -75,6 +76,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 564754,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -115,6 +117,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -152,6 +155,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.osxconfigurationprofiles.findOsxConfigurationProfiles();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -192,6 +196,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 118508,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -219,7 +224,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindOsxConfigurationProfilesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindOsxConfigurationProfilesByIdSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -231,8 +236,9 @@ import { FindOsxConfigurationProfilesByIdSubsetSubset } from "jamf-classic-sdk-n
 
   const res = await sdk.osxconfigurationprofiles.findOsxConfigurationProfilesByIdSubset({
     id: 370266,
-    subset: FindOsxConfigurationProfilesByIdSubsetSubset.Scope,
+    subset: FindOsxConfigurationProfilesByIdSubsetPathParamSubset.Scope,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -274,6 +280,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -301,7 +308,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindOsxConfigurationProfilesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindOsxConfigurationProfilesByNameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -313,8 +320,9 @@ import { FindOsxConfigurationProfilesByNameSubsetSubset } from "jamf-classic-sdk
 
   const res = await sdk.osxconfigurationprofiles.findOsxConfigurationProfilesByNameSubset({
     name: "string",
-    subset: FindOsxConfigurationProfilesByNameSubsetSubset.General,
+    subset: FindOsxConfigurationProfilesByNameSubsetPathParamSubset.General,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -356,6 +364,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 633054,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -395,6 +404,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.osxconfigurationprofiles.updateOsxConfigurationProfileByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

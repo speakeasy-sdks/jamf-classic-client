@@ -1,5 +1,5 @@
 # Advancedcomputersearches
-(*advancedcomputersearches*)
+(*.advancedcomputersearches*)
 
 ### Available Operations
 
@@ -32,6 +32,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.advancedcomputersearches.createAdvancedComputerSearchgById({
     id: 274583,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -73,6 +74,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 764480,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -113,6 +115,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -150,6 +153,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.advancedcomputersearches.findAdvancedComputerSearches();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -189,6 +193,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.advancedcomputersearches.findAdvancedComputerSearchesById({
     id: 964070,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -230,6 +235,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -270,6 +276,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 382379,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -309,6 +316,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.advancedcomputersearches.updateAdvancedComputerSearchByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

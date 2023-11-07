@@ -47,21 +47,21 @@ export class MacApplicationGeneral extends SpeakeasyBase {
     version: string;
 }
 
-export class MacApplicationScopeBuildings extends SpeakeasyBase {
+export class MacApplicationBuildings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "building" })
     @Type(() => IdName)
     building?: IdName;
 }
 
-export class MacApplicationScopeComputerGroups extends SpeakeasyBase {
+export class MacApplicationComputerGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer_group" })
     @Type(() => IdName)
     computerGroup?: IdName;
 }
 
-export class MacApplicationScopeComputersComputer extends SpeakeasyBase {
+export class MacApplicationComputer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -78,35 +78,35 @@ export class MacApplicationScopeComputersComputer extends SpeakeasyBase {
     udid?: string;
 }
 
-export class MacApplicationScopeComputers extends SpeakeasyBase {
+export class MacApplicationComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
-    @Type(() => MacApplicationScopeComputersComputer)
-    computer?: MacApplicationScopeComputersComputer;
+    @Type(() => MacApplicationComputer)
+    computer?: MacApplicationComputer;
 }
 
-export class MacApplicationScopeDepartments extends SpeakeasyBase {
+export class MacApplicationDepartments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "department" })
     @Type(() => IdName)
     department?: IdName;
 }
 
-export class MacApplicationScopeExclusionsBuildings extends SpeakeasyBase {
+export class MacApplicationSchemasBuildings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "building" })
     @Type(() => IdName)
     building?: IdName;
 }
 
-export class MacApplicationScopeExclusionsComputerGroups extends SpeakeasyBase {
+export class MacApplicationSchemasComputerGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer_group" })
     @Type(() => IdName)
     computerGroup?: IdName;
 }
 
-export class MacApplicationScopeExclusionsComputersComputer extends SpeakeasyBase {
+export class MacApplicationSchemasComputer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -123,35 +123,35 @@ export class MacApplicationScopeExclusionsComputersComputer extends SpeakeasyBas
     udid?: string;
 }
 
-export class MacApplicationScopeExclusionsComputers extends SpeakeasyBase {
+export class MacApplicationSchemasComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
-    @Type(() => MacApplicationScopeExclusionsComputersComputer)
-    computer?: MacApplicationScopeExclusionsComputersComputer;
+    @Type(() => MacApplicationSchemasComputer)
+    computer?: MacApplicationSchemasComputer;
 }
 
-export class MacApplicationScopeExclusionsDepartments extends SpeakeasyBase {
+export class MacApplicationSchemasDepartments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "department" })
     @Type(() => IdName)
     department?: IdName;
 }
 
-export class MacApplicationScopeExclusionsJssUserGroups extends SpeakeasyBase {
+export class MacApplicationSchemasJssUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class MacApplicationScopeExclusionsJssUsers extends SpeakeasyBase {
+export class MacApplicationSchemasJssUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     @Type(() => IdName)
     user?: IdName;
 }
 
-export class MacApplicationScopeExclusionsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+export class MacApplicationNetworkSegment extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -168,130 +168,130 @@ export class MacApplicationScopeExclusionsNetworkSegmentsNetworkSegment extends 
     uid?: string;
 }
 
-export class MacApplicationScopeExclusionsNetworkSegments extends SpeakeasyBase {
+export class MacApplicationNetworkSegments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "network_segment" })
-    @Type(() => MacApplicationScopeExclusionsNetworkSegmentsNetworkSegment)
-    networkSegment?: MacApplicationScopeExclusionsNetworkSegmentsNetworkSegment;
+    @Type(() => MacApplicationNetworkSegment)
+    networkSegment?: MacApplicationNetworkSegment;
 }
 
-export class MacApplicationScopeExclusionsUserGroups extends SpeakeasyBase {
+export class MacApplicationUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class MacApplicationScopeExclusionsUsersUser extends SpeakeasyBase {
+export class MacApplicationUser extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
 }
 
-export class MacApplicationScopeExclusionsUsers extends SpeakeasyBase {
+export class MacApplicationUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
-    @Type(() => MacApplicationScopeExclusionsUsersUser)
-    user?: MacApplicationScopeExclusionsUsersUser;
+    @Type(() => MacApplicationUser)
+    user?: MacApplicationUser;
 }
 
-export class MacApplicationScopeExclusions extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeExclusionsBuildings })
+export class MacApplicationExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: MacApplicationSchemasBuildings })
     @Expose({ name: "buildings" })
-    @Type(() => MacApplicationScopeExclusionsBuildings)
-    buildings?: MacApplicationScopeExclusionsBuildings[];
+    @Type(() => MacApplicationSchemasBuildings)
+    buildings?: MacApplicationSchemasBuildings[];
 
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeExclusionsComputerGroups })
+    @SpeakeasyMetadata({ elemType: MacApplicationSchemasComputerGroups })
     @Expose({ name: "computer_groups" })
-    @Type(() => MacApplicationScopeExclusionsComputerGroups)
-    computerGroups?: MacApplicationScopeExclusionsComputerGroups[];
+    @Type(() => MacApplicationSchemasComputerGroups)
+    computerGroups?: MacApplicationSchemasComputerGroups[];
 
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeExclusionsComputers })
+    @SpeakeasyMetadata({ elemType: MacApplicationSchemasComputers })
     @Expose({ name: "computers" })
-    @Type(() => MacApplicationScopeExclusionsComputers)
-    computers?: MacApplicationScopeExclusionsComputers[];
+    @Type(() => MacApplicationSchemasComputers)
+    computers?: MacApplicationSchemasComputers[];
 
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeExclusionsDepartments })
+    @SpeakeasyMetadata({ elemType: MacApplicationSchemasDepartments })
     @Expose({ name: "departments" })
-    @Type(() => MacApplicationScopeExclusionsDepartments)
-    departments?: MacApplicationScopeExclusionsDepartments[];
+    @Type(() => MacApplicationSchemasDepartments)
+    departments?: MacApplicationSchemasDepartments[];
 
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeExclusionsJssUserGroups })
+    @SpeakeasyMetadata({ elemType: MacApplicationSchemasJssUserGroups })
     @Expose({ name: "jss_user_groups" })
-    @Type(() => MacApplicationScopeExclusionsJssUserGroups)
-    jssUserGroups?: MacApplicationScopeExclusionsJssUserGroups[];
+    @Type(() => MacApplicationSchemasJssUserGroups)
+    jssUserGroups?: MacApplicationSchemasJssUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeExclusionsJssUsers })
+    @SpeakeasyMetadata({ elemType: MacApplicationSchemasJssUsers })
     @Expose({ name: "jss_users" })
-    @Type(() => MacApplicationScopeExclusionsJssUsers)
-    jssUsers?: MacApplicationScopeExclusionsJssUsers[];
+    @Type(() => MacApplicationSchemasJssUsers)
+    jssUsers?: MacApplicationSchemasJssUsers[];
 
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeExclusionsNetworkSegments })
+    @SpeakeasyMetadata({ elemType: MacApplicationNetworkSegments })
     @Expose({ name: "network_segments" })
-    @Type(() => MacApplicationScopeExclusionsNetworkSegments)
-    networkSegments?: MacApplicationScopeExclusionsNetworkSegments[];
+    @Type(() => MacApplicationNetworkSegments)
+    networkSegments?: MacApplicationNetworkSegments[];
 
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeExclusionsUserGroups })
+    @SpeakeasyMetadata({ elemType: MacApplicationUserGroups })
     @Expose({ name: "user_groups" })
-    @Type(() => MacApplicationScopeExclusionsUserGroups)
-    userGroups?: MacApplicationScopeExclusionsUserGroups[];
+    @Type(() => MacApplicationUserGroups)
+    userGroups?: MacApplicationUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeExclusionsUsers })
+    @SpeakeasyMetadata({ elemType: MacApplicationUsers })
     @Expose({ name: "users" })
-    @Type(() => MacApplicationScopeExclusionsUsers)
-    users?: MacApplicationScopeExclusionsUsers[];
+    @Type(() => MacApplicationUsers)
+    users?: MacApplicationUsers[];
 }
 
-export class MacApplicationScopeJssUserGroups extends SpeakeasyBase {
+export class MacApplicationJssUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class MacApplicationScopeJssUsers extends SpeakeasyBase {
+export class MacApplicationJssUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     @Type(() => IdName)
     user?: IdName;
 }
 
-export class MacApplicationScopeLimitationsNetworkSegments extends SpeakeasyBase {
+export class MacApplicationSchemasNetworkSegments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "network_segment" })
     @Type(() => IdName)
     networkSegment?: IdName;
 }
 
-export class MacApplicationScopeLimitationsUserGroups extends SpeakeasyBase {
+export class MacApplicationSchemasUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class MacApplicationScopeLimitationsUsers extends SpeakeasyBase {
+export class MacApplicationSchemasUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     @Type(() => IdName)
     user?: IdName;
 }
 
-export class MacApplicationScopeLimitations extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeLimitationsNetworkSegments })
+export class MacApplicationLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: MacApplicationSchemasNetworkSegments })
     @Expose({ name: "network_segments" })
-    @Type(() => MacApplicationScopeLimitationsNetworkSegments)
-    networkSegments?: MacApplicationScopeLimitationsNetworkSegments[];
+    @Type(() => MacApplicationSchemasNetworkSegments)
+    networkSegments?: MacApplicationSchemasNetworkSegments[];
 
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeLimitationsUserGroups })
+    @SpeakeasyMetadata({ elemType: MacApplicationSchemasUserGroups })
     @Expose({ name: "user_groups" })
-    @Type(() => MacApplicationScopeLimitationsUserGroups)
-    userGroups?: MacApplicationScopeLimitationsUserGroups[];
+    @Type(() => MacApplicationSchemasUserGroups)
+    userGroups?: MacApplicationSchemasUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeLimitationsUsers })
+    @SpeakeasyMetadata({ elemType: MacApplicationSchemasUsers })
     @Expose({ name: "users" })
-    @Type(() => MacApplicationScopeLimitationsUsers)
-    users?: MacApplicationScopeLimitationsUsers[];
+    @Type(() => MacApplicationSchemasUsers)
+    users?: MacApplicationSchemasUsers[];
 }
 
 export class MacApplicationScope extends SpeakeasyBase {
@@ -303,48 +303,48 @@ export class MacApplicationScope extends SpeakeasyBase {
     @Expose({ name: "all_jss_users" })
     allJssUsers?: boolean;
 
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeBuildings })
+    @SpeakeasyMetadata({ elemType: MacApplicationBuildings })
     @Expose({ name: "buildings" })
-    @Type(() => MacApplicationScopeBuildings)
-    buildings?: MacApplicationScopeBuildings[];
+    @Type(() => MacApplicationBuildings)
+    buildings?: MacApplicationBuildings[];
 
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeComputerGroups })
+    @SpeakeasyMetadata({ elemType: MacApplicationComputerGroups })
     @Expose({ name: "computer_groups" })
-    @Type(() => MacApplicationScopeComputerGroups)
-    computerGroups?: MacApplicationScopeComputerGroups[];
+    @Type(() => MacApplicationComputerGroups)
+    computerGroups?: MacApplicationComputerGroups[];
 
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeComputers })
+    @SpeakeasyMetadata({ elemType: MacApplicationComputers })
     @Expose({ name: "computers" })
-    @Type(() => MacApplicationScopeComputers)
-    computers?: MacApplicationScopeComputers[];
+    @Type(() => MacApplicationComputers)
+    computers?: MacApplicationComputers[];
 
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeDepartments })
+    @SpeakeasyMetadata({ elemType: MacApplicationDepartments })
     @Expose({ name: "departments" })
-    @Type(() => MacApplicationScopeDepartments)
-    departments?: MacApplicationScopeDepartments[];
+    @Type(() => MacApplicationDepartments)
+    departments?: MacApplicationDepartments[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "exclusions" })
-    @Type(() => MacApplicationScopeExclusions)
-    exclusions?: MacApplicationScopeExclusions;
+    @Type(() => MacApplicationExclusions)
+    exclusions?: MacApplicationExclusions;
 
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeJssUserGroups })
+    @SpeakeasyMetadata({ elemType: MacApplicationJssUserGroups })
     @Expose({ name: "jss_user_groups" })
-    @Type(() => MacApplicationScopeJssUserGroups)
-    jssUserGroups?: MacApplicationScopeJssUserGroups[];
+    @Type(() => MacApplicationJssUserGroups)
+    jssUserGroups?: MacApplicationJssUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: MacApplicationScopeJssUsers })
+    @SpeakeasyMetadata({ elemType: MacApplicationJssUsers })
     @Expose({ name: "jss_users" })
-    @Type(() => MacApplicationScopeJssUsers)
-    jssUsers?: MacApplicationScopeJssUsers[];
+    @Type(() => MacApplicationJssUsers)
+    jssUsers?: MacApplicationJssUsers[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "limitations" })
-    @Type(() => MacApplicationScopeLimitations)
-    limitations?: MacApplicationScopeLimitations;
+    @Type(() => MacApplicationLimitations)
+    limitations?: MacApplicationLimitations;
 }
 
-export class MacApplicationSelfServiceSelfServiceCategoriesCategory extends SpeakeasyBase {
+export class MacApplicationCategory extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "display_in" })
     displayIn?: boolean;
@@ -362,14 +362,14 @@ export class MacApplicationSelfServiceSelfServiceCategoriesCategory extends Spea
     name?: string;
 }
 
-export class MacApplicationSelfServiceSelfServiceCategories extends SpeakeasyBase {
+export class MacApplicationSelfServiceCategories extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "category" })
-    @Type(() => MacApplicationSelfServiceSelfServiceCategoriesCategory)
-    category?: MacApplicationSelfServiceSelfServiceCategoriesCategory;
+    @Type(() => MacApplicationCategory)
+    category?: MacApplicationCategory;
 }
 
-export class MacApplicationSelfServiceSelfServiceIcon extends SpeakeasyBase {
+export class MacApplicationSelfServiceIcon extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "data" })
     data?: string;
@@ -383,7 +383,7 @@ export class MacApplicationSelfServiceSelfServiceIcon extends SpeakeasyBase {
     uri?: string;
 }
 
-export class MacApplicationSelfServiceVpp extends SpeakeasyBase {
+export class MacApplicationVpp extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "assign_vpp_device_based_licenses" })
     assignVppDeviceBasedLicenses?: boolean;
@@ -418,10 +418,10 @@ export class MacApplicationSelfService extends SpeakeasyBase {
     @Expose({ name: "notification_subject" })
     notificationSubject?: string;
 
-    @SpeakeasyMetadata({ elemType: MacApplicationSelfServiceSelfServiceCategories })
+    @SpeakeasyMetadata({ elemType: MacApplicationSelfServiceCategories })
     @Expose({ name: "self_service_categories" })
-    @Type(() => MacApplicationSelfServiceSelfServiceCategories)
-    selfServiceCategories?: MacApplicationSelfServiceSelfServiceCategories[];
+    @Type(() => MacApplicationSelfServiceCategories)
+    selfServiceCategories?: MacApplicationSelfServiceCategories[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "self_service_description" })
@@ -429,13 +429,13 @@ export class MacApplicationSelfService extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "self_service_icon" })
-    @Type(() => MacApplicationSelfServiceSelfServiceIcon)
-    selfServiceIcon?: MacApplicationSelfServiceSelfServiceIcon;
+    @Type(() => MacApplicationSelfServiceIcon)
+    selfServiceIcon?: MacApplicationSelfServiceIcon;
 
     @SpeakeasyMetadata()
     @Expose({ name: "vpp" })
-    @Type(() => MacApplicationSelfServiceVpp)
-    vpp?: MacApplicationSelfServiceVpp;
+    @Type(() => MacApplicationVpp)
+    vpp?: MacApplicationVpp;
 }
 
 export class MacApplication extends SpeakeasyBase {

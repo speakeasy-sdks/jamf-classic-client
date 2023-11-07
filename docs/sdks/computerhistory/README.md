@@ -1,5 +1,5 @@
 # Computerhistory
-(*computerhistory*)
+(*.computerhistory*)
 
 ### Available Operations
 
@@ -35,6 +35,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 814675,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -62,7 +63,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHistoryByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHistoryByIdSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -74,8 +75,9 @@ import { FindComputerHistoryByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dis
 
   const res = await sdk.computerhistory.findComputerHistoryByIdSubset({
     id: 723127,
-    subset: FindComputerHistoryByIdSubsetSubset.CasperImagingLogs,
+    subset: FindComputerHistoryByIdSubsetPathParamSubset.CasperImagingLogs,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -117,6 +119,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     macaddress: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -144,7 +147,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHistoryByMacAddressSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHistoryByMacAddressSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -156,8 +159,9 @@ import { FindComputerHistoryByMacAddressSubsetSubset } from "jamf-classic-sdk-no
 
   const res = await sdk.computerhistory.findComputerHistoryByMacAddressSubset({
     macaddress: "string",
-    subset: FindComputerHistoryByMacAddressSubsetSubset.Commands,
+    subset: FindComputerHistoryByMacAddressSubsetPathParamSubset.Commands,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -199,6 +203,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -226,7 +231,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHistoryByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHistoryByNameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -238,8 +243,9 @@ import { FindComputerHistoryByNameSubsetSubset } from "jamf-classic-sdk-nodejs/d
 
   const res = await sdk.computerhistory.findComputerHistoryByNameSubset({
     name: "string",
-    subset: FindComputerHistoryByNameSubsetSubset.UserLocation,
+    subset: FindComputerHistoryByNameSubsetPathParamSubset.UserLocation,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -281,6 +287,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     serialnumber: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -308,7 +315,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHistoryBySerialNumberSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHistoryBySerialNumberSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -320,8 +327,9 @@ import { FindComputerHistoryBySerialNumberSubsetSubset } from "jamf-classic-sdk-
 
   const res = await sdk.computerhistory.findComputerHistoryBySerialNumberSubset({
     serialnumber: "string",
-    subset: FindComputerHistoryBySerialNumberSubsetSubset.Commands,
+    subset: FindComputerHistoryBySerialNumberSubsetPathParamSubset.Commands,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -363,6 +371,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     udid: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -390,7 +399,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHistoryByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHistoryByUDIDSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -401,9 +410,10 @@ import { FindComputerHistoryByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/d
   });
 
   const res = await sdk.computerhistory.findComputerHistoryByUDIDSubset({
-    subset: FindComputerHistoryByUDIDSubsetSubset.ScreenSharingLogs,
+    subset: FindComputerHistoryByUDIDSubsetPathParamSubset.ScreenSharingLogs,
     udid: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

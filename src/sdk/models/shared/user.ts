@@ -7,13 +7,13 @@ import { IdName } from "./idname";
 import { SiteObject } from "./siteobject";
 import { Expose, Type } from "class-transformer";
 
-export enum UserExtensionAttributesExtensionAttributeType {
+export enum UserType {
     String = "String",
     Integer = "Integer",
     Date = "Date",
 }
 
-export class UserExtensionAttributesExtensionAttribute extends SpeakeasyBase {
+export class UserSchemasExtensionAttribute extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -24,18 +24,18 @@ export class UserExtensionAttributesExtensionAttribute extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    type?: UserExtensionAttributesExtensionAttributeType;
+    type?: UserType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "value" })
     value?: string;
 }
 
-export class UserExtensionAttributes1 extends SpeakeasyBase {
+export class UserSchemasExtensionAttributes extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "extension_attribute" })
-    @Type(() => UserExtensionAttributesExtensionAttribute)
-    extensionAttribute?: UserExtensionAttributesExtensionAttribute;
+    @Type(() => UserSchemasExtensionAttribute)
+    extensionAttribute?: UserSchemasExtensionAttribute;
 }
 
 export class UserLdapServer extends SpeakeasyBase {
@@ -48,49 +48,49 @@ export class UserLdapServer extends SpeakeasyBase {
     name?: string;
 }
 
-export class UserLinksComputers extends SpeakeasyBase {
+export class UserComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
     @Type(() => IdName)
     computer?: IdName;
 }
 
-export class UserLinksMobileDevices extends SpeakeasyBase {
+export class UserMobileDevices extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "mobile_device" })
     @Type(() => IdName)
     mobileDevice?: IdName;
 }
 
-export class UserLinksPeripherals extends SpeakeasyBase {
+export class UserPeripherals extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "peripheral" })
     @Type(() => IdName)
     peripheral?: IdName;
 }
 
-export class UserLinksVppAssignments extends SpeakeasyBase {
+export class UserVppAssignments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "vpp_assignment" })
     @Type(() => IdName)
     vppAssignment?: IdName;
 }
 
-export class UserLinks extends SpeakeasyBase {
+export class Links extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computers" })
-    @Type(() => UserLinksComputers)
-    computers?: UserLinksComputers;
+    @Type(() => UserComputers)
+    computers?: UserComputers;
 
     @SpeakeasyMetadata()
     @Expose({ name: "mobile_devices" })
-    @Type(() => UserLinksMobileDevices)
-    mobileDevices?: UserLinksMobileDevices;
+    @Type(() => UserMobileDevices)
+    mobileDevices?: UserMobileDevices;
 
     @SpeakeasyMetadata()
     @Expose({ name: "peripherals" })
-    @Type(() => UserLinksPeripherals)
-    peripherals?: UserLinksPeripherals;
+    @Type(() => UserPeripherals)
+    peripherals?: UserPeripherals;
 
     @SpeakeasyMetadata()
     @Expose({ name: "total_vpp_code_count" })
@@ -98,8 +98,8 @@ export class UserLinks extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "vpp_assignments" })
-    @Type(() => UserLinksVppAssignments)
-    vppAssignments?: UserLinksVppAssignments;
+    @Type(() => UserVppAssignments)
+    vppAssignments?: UserVppAssignments;
 }
 
 export class UserSites extends SpeakeasyBase {
@@ -126,10 +126,10 @@ export class User extends SpeakeasyBase {
     @Expose({ name: "enable_custom_photo_url" })
     enableCustomPhotoUrl?: boolean;
 
-    @SpeakeasyMetadata({ elemType: UserExtensionAttributes1 })
+    @SpeakeasyMetadata({ elemType: UserSchemasExtensionAttributes })
     @Expose({ name: "extension_attributes" })
-    @Type(() => UserExtensionAttributes1)
-    extensionAttributes?: UserExtensionAttributes1[];
+    @Type(() => UserSchemasExtensionAttributes)
+    extensionAttributes?: UserSchemasExtensionAttributes[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "full_name" })
@@ -146,8 +146,8 @@ export class User extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "links" })
-    @Type(() => UserLinks)
-    links?: UserLinks;
+    @Type(() => Links)
+    links?: Links;
 
     /**
      * Name of the user

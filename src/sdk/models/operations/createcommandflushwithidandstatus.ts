@@ -8,7 +8,7 @@ import { AxiosResponse } from "axios";
 /**
  * Type of device to be flushed
  */
-export enum CreateCommandFlushWithIdAndStatusIdtype {
+export enum Idtype {
     Computers = "computers",
     Computergroups = "computergroups",
     Mobiledevices = "mobiledevices",
@@ -18,7 +18,7 @@ export enum CreateCommandFlushWithIdAndStatusIdtype {
 /**
  * Command status to be flushed
  */
-export enum CreateCommandFlushWithIdAndStatusStatus {
+export enum Status {
     Pending = "Pending",
     Failed = "Failed",
     PendingPlusFailed = "Pending+Failed",
@@ -35,13 +35,13 @@ export class CreateCommandFlushWithIdAndStatusRequest extends SpeakeasyBase {
      * Type of device to be flushed
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=idtype" })
-    idtype: CreateCommandFlushWithIdAndStatusIdtype;
+    idtype: Idtype;
 
     /**
      * Command status to be flushed
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=status" })
-    status: CreateCommandFlushWithIdAndStatusStatus;
+    status: Status;
 }
 
 export class CreateCommandFlushWithIdAndStatusResponse extends SpeakeasyBase {

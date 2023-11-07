@@ -8,7 +8,7 @@ import { Location } from "./location";
 import { Purchasing } from "./purchasing";
 import { Expose, Type } from "class-transformer";
 
-export class MobileDeviceApplicationsApplication extends SpeakeasyBase {
+export class MobileDeviceSchemasApplication extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "application_name" })
     applicationName?: string;
@@ -22,18 +22,18 @@ export class MobileDeviceApplicationsApplication extends SpeakeasyBase {
     identifier?: string;
 }
 
-export class MobileDeviceApplications1 extends SpeakeasyBase {
+export class MobileDeviceSchemasApplications extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "application" })
-    @Type(() => MobileDeviceApplicationsApplication)
-    application?: MobileDeviceApplicationsApplication;
+    @Type(() => MobileDeviceSchemasApplication)
+    application?: MobileDeviceSchemasApplication;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class MobileDeviceCertificatesCertificate extends SpeakeasyBase {
+export class MobileDeviceCertificate extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "common_name" })
     commonName?: string;
@@ -46,15 +46,15 @@ export class MobileDeviceCertificatesCertificate extends SpeakeasyBase {
 export class MobileDeviceCertificates extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "certificate" })
-    @Type(() => MobileDeviceCertificatesCertificate)
-    certificate?: MobileDeviceCertificatesCertificate;
+    @Type(() => MobileDeviceCertificate)
+    certificate?: MobileDeviceCertificate;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class MobileDeviceConfigurationProfilesConfigurationProfile1 extends SpeakeasyBase {
+export class MobileDeviceSchemasConfigurationProfile extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "display_name" })
     displayName?: string;
@@ -72,18 +72,18 @@ export class MobileDeviceConfigurationProfilesConfigurationProfile1 extends Spea
     version?: number;
 }
 
-export class MobileDeviceConfigurationProfiles1 extends SpeakeasyBase {
+export class MobileDeviceSchemasConfigurationProfiles extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "configuration_profile" })
-    @Type(() => MobileDeviceConfigurationProfilesConfigurationProfile1)
-    configurationProfile?: MobileDeviceConfigurationProfilesConfigurationProfile1;
+    @Type(() => MobileDeviceSchemasConfigurationProfile)
+    configurationProfile?: MobileDeviceSchemasConfigurationProfile;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class MobileDeviceExtensionAttributes1 extends SpeakeasyBase {
+export class MobileDeviceSchemasExtensionAttributes extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -306,7 +306,7 @@ export class MobileDeviceMobileDeviceGroups extends SpeakeasyBase {
     size?: number;
 }
 
-export class MobileDeviceNetwork extends SpeakeasyBase {
+export class Network extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "carrier_settings_version" })
     carrierSettingsVersion?: string;
@@ -360,7 +360,7 @@ export class MobileDeviceNetwork extends SpeakeasyBase {
     voiceRoamingEnabled?: string;
 }
 
-export class MobileDeviceProvisioningProfilesMobileDeviceProvisioningProfile1 extends SpeakeasyBase {
+export class MobileDeviceMobileDeviceProvisioningProfile extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "display_name" })
     displayName?: string;
@@ -382,18 +382,18 @@ export class MobileDeviceProvisioningProfilesMobileDeviceProvisioningProfile1 ex
     uuid?: string;
 }
 
-export class MobileDeviceProvisioningProfiles1 extends SpeakeasyBase {
+export class ProvisioningProfiles extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "mobile_device_provisioning_profile" })
-    @Type(() => MobileDeviceProvisioningProfilesMobileDeviceProvisioningProfile1)
-    mobileDeviceProvisioningProfile?: MobileDeviceProvisioningProfilesMobileDeviceProvisioningProfile1;
+    @Type(() => MobileDeviceMobileDeviceProvisioningProfile)
+    mobileDeviceProvisioningProfile?: MobileDeviceMobileDeviceProvisioningProfile;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class MobileDeviceSecurityObject extends SpeakeasyBase {
+export class SecurityObject extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "activation_lock_enabled" })
     activationLockEnabled?: boolean;
@@ -500,25 +500,25 @@ export class MobileDeviceSecurityObject extends SpeakeasyBase {
 }
 
 export class MobileDevice extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: MobileDeviceApplications1 })
+    @SpeakeasyMetadata({ elemType: MobileDeviceSchemasApplications })
     @Expose({ name: "applications" })
-    @Type(() => MobileDeviceApplications1)
-    applications?: MobileDeviceApplications1[];
+    @Type(() => MobileDeviceSchemasApplications)
+    applications?: MobileDeviceSchemasApplications[];
 
     @SpeakeasyMetadata({ elemType: MobileDeviceCertificates })
     @Expose({ name: "certificates" })
     @Type(() => MobileDeviceCertificates)
     certificates?: MobileDeviceCertificates[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfiles1 })
+    @SpeakeasyMetadata({ elemType: MobileDeviceSchemasConfigurationProfiles })
     @Expose({ name: "configuration_profiles" })
-    @Type(() => MobileDeviceConfigurationProfiles1)
-    configurationProfiles?: MobileDeviceConfigurationProfiles1[];
+    @Type(() => MobileDeviceSchemasConfigurationProfiles)
+    configurationProfiles?: MobileDeviceSchemasConfigurationProfiles[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceExtensionAttributes1 })
+    @SpeakeasyMetadata({ elemType: MobileDeviceSchemasExtensionAttributes })
     @Expose({ name: "extension_attributes" })
-    @Type(() => MobileDeviceExtensionAttributes1)
-    extensionAttributes?: MobileDeviceExtensionAttributes1[];
+    @Type(() => MobileDeviceSchemasExtensionAttributes)
+    extensionAttributes?: MobileDeviceSchemasExtensionAttributes[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "general" })
@@ -537,13 +537,13 @@ export class MobileDevice extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "network" })
-    @Type(() => MobileDeviceNetwork)
-    network?: MobileDeviceNetwork;
+    @Type(() => Network)
+    network?: Network;
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceProvisioningProfiles1 })
+    @SpeakeasyMetadata({ elemType: ProvisioningProfiles })
     @Expose({ name: "provisioning_profiles" })
-    @Type(() => MobileDeviceProvisioningProfiles1)
-    provisioningProfiles?: MobileDeviceProvisioningProfiles1[];
+    @Type(() => ProvisioningProfiles)
+    provisioningProfiles?: ProvisioningProfiles[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "purchasing" })
@@ -552,6 +552,6 @@ export class MobileDevice extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "security_object" })
-    @Type(() => MobileDeviceSecurityObject)
-    securityObject?: MobileDeviceSecurityObject;
+    @Type(() => SecurityObject)
+    securityObject?: SecurityObject;
 }

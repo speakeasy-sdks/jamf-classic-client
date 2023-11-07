@@ -5,22 +5,22 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class PeripheralTypeFieldsFieldChoices extends SpeakeasyBase {
+export class Choices extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "choice" })
     choice?: string;
 }
 
-export enum PeripheralTypeFieldsFieldType {
+export enum PeripheralTypeType {
     Menu = "menu",
     Text = "text",
 }
 
-export class PeripheralTypeFieldsField extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: PeripheralTypeFieldsFieldChoices })
+export class Field extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: Choices })
     @Expose({ name: "choices" })
-    @Type(() => PeripheralTypeFieldsFieldChoices)
-    choices?: PeripheralTypeFieldsFieldChoices[];
+    @Type(() => Choices)
+    choices?: Choices[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
@@ -32,21 +32,21 @@ export class PeripheralTypeFieldsField extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    type?: PeripheralTypeFieldsFieldType;
+    type?: PeripheralTypeType;
 }
 
-export class PeripheralTypeFields extends SpeakeasyBase {
+export class Fields extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "field" })
-    @Type(() => PeripheralTypeFieldsField)
-    field?: PeripheralTypeFieldsField;
+    @Type(() => Field)
+    field?: Field;
 }
 
 export class PeripheralType extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: PeripheralTypeFields })
+    @SpeakeasyMetadata({ elemType: Fields })
     @Expose({ name: "fields" })
-    @Type(() => PeripheralTypeFields)
-    fields?: PeripheralTypeFields[];
+    @Type(() => Fields)
+    fields?: Fields[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "id" })

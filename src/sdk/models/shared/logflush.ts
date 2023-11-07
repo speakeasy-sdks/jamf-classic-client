@@ -4,17 +4,17 @@
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 
-export class LogflushComputersComputer extends SpeakeasyBase {
+export class LogflushComputer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     id?: number;
 }
 
 export class LogflushComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
-    computer?: LogflushComputersComputer;
+    computer?: LogflushComputer;
 }
 
-export enum LogflushInterval {
+export enum Interval {
     ZeroDays = "Zero Days",
     ZeroWeeks = "Zero Weeks",
     ZeroMonths = "Zero Months",
@@ -37,7 +37,7 @@ export enum LogflushInterval {
     SixYears = "Six Years",
 }
 
-export enum LogflushLog {
+export enum Log {
     Policy = "policy",
 }
 
@@ -46,10 +46,10 @@ export class Logflush extends SpeakeasyBase {
     computers?: LogflushComputers;
 
     @SpeakeasyMetadata()
-    interval: LogflushInterval;
+    interval: Interval;
 
     @SpeakeasyMetadata()
-    log: LogflushLog;
+    log: Log;
 
     @SpeakeasyMetadata()
     logId: number;

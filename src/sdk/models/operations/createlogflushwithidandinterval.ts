@@ -8,7 +8,7 @@ import { AxiosResponse } from "axios";
 /**
  * At this time, only 'policy' logs are supported
  */
-export enum CreateLogFlushWithIdAndIntervalLog {
+export enum PathParamLog {
     Policy = "policy",
 }
 
@@ -29,7 +29,7 @@ export class CreateLogFlushWithIdAndIntervalRequest extends SpeakeasyBase {
      * At this time, only 'policy' logs are supported
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=log" })
-    log: CreateLogFlushWithIdAndIntervalLog;
+    log: PathParamLog;
 }
 
 export class CreateLogFlushWithIdAndIntervalResponse extends SpeakeasyBase {

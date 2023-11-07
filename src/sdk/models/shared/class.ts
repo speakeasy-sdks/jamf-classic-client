@@ -7,7 +7,7 @@ import { IdName } from "./idname";
 import { SiteObject } from "./siteobject";
 import { Expose, Type } from "class-transformer";
 
-export class ClassAppleTvsAppleTv extends SpeakeasyBase {
+export class AppleTv extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "airplay_password" })
     airplayPassword?: string;
@@ -29,14 +29,14 @@ export class ClassAppleTvsAppleTv extends SpeakeasyBase {
     wifiMacAddress?: string;
 }
 
-export class ClassAppleTvs extends SpeakeasyBase {
+export class AppleTvs extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "apple_tv" })
-    @Type(() => ClassAppleTvsAppleTv)
-    appleTv?: ClassAppleTvsAppleTv;
+    @Type(() => AppleTv)
+    appleTv?: AppleTv;
 }
 
-export enum ClassMeetingTimesMeetingTimeDays {
+export enum Days {
     M = "M",
     T = "T",
     W = "W",
@@ -46,10 +46,10 @@ export enum ClassMeetingTimesMeetingTimeDays {
     Su = "Su",
 }
 
-export class ClassMeetingTimesMeetingTime extends SpeakeasyBase {
+export class MeetingTime extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "days" })
-    days?: ClassMeetingTimesMeetingTimeDays;
+    days?: Days;
 
     @SpeakeasyMetadata()
     @Expose({ name: "end_time" })
@@ -60,20 +60,20 @@ export class ClassMeetingTimesMeetingTime extends SpeakeasyBase {
     startTime?: number;
 }
 
-export class ClassMeetingTimes extends SpeakeasyBase {
+export class MeetingTimes extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "meeting_time" })
-    @Type(() => ClassMeetingTimesMeetingTime)
-    meetingTime?: ClassMeetingTimesMeetingTime;
+    @Type(() => MeetingTime)
+    meetingTime?: MeetingTime;
 }
 
-export class ClassMobileDeviceGroupId extends SpeakeasyBase {
+export class MobileDeviceGroupId extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
 }
 
-export class ClassMobileDevicesMobileDevice extends SpeakeasyBase {
+export class ClassMobileDevice extends SpeakeasyBase {
     /**
      * Name of the device
      */
@@ -93,17 +93,17 @@ export class ClassMobileDevicesMobileDevice extends SpeakeasyBase {
 export class ClassMobileDevices extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "mobile_device" })
-    @Type(() => ClassMobileDevicesMobileDevice)
-    mobileDevice?: ClassMobileDevicesMobileDevice;
+    @Type(() => ClassMobileDevice)
+    mobileDevice?: ClassMobileDevice;
 }
 
-export class ClassStudentGroupIds extends SpeakeasyBase {
+export class StudentGroupIds extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
 }
 
-export class ClassStudents extends SpeakeasyBase {
+export class Students extends SpeakeasyBase {
     /**
      * Name of the student
      */
@@ -112,19 +112,19 @@ export class ClassStudents extends SpeakeasyBase {
     student?: string;
 }
 
-export class ClassTeacherGroupIds extends SpeakeasyBase {
+export class TeacherGroupIds extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
 }
 
-export class ClassTeacherIds extends SpeakeasyBase {
+export class TeacherIds extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
 }
 
-export class ClassTeachers extends SpeakeasyBase {
+export class Teachers extends SpeakeasyBase {
     /**
      * Name of the teacher
      */
@@ -134,10 +134,10 @@ export class ClassTeachers extends SpeakeasyBase {
 }
 
 export class Class extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: ClassAppleTvs })
+    @SpeakeasyMetadata({ elemType: AppleTvs })
     @Expose({ name: "apple_tvs" })
-    @Type(() => ClassAppleTvs)
-    appleTvs?: ClassAppleTvs[];
+    @Type(() => AppleTvs)
+    appleTvs?: AppleTvs[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "description" })
@@ -149,18 +149,18 @@ export class Class extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "meeting_times" })
-    @Type(() => ClassMeetingTimes)
-    meetingTimes?: ClassMeetingTimes;
+    @Type(() => MeetingTimes)
+    meetingTimes?: MeetingTimes;
 
     @SpeakeasyMetadata()
     @Expose({ name: "mobile_device_group" })
     @Type(() => IdName)
     mobileDeviceGroup?: IdName;
 
-    @SpeakeasyMetadata({ elemType: ClassMobileDeviceGroupId })
+    @SpeakeasyMetadata({ elemType: MobileDeviceGroupId })
     @Expose({ name: "mobile_device_group_id" })
-    @Type(() => ClassMobileDeviceGroupId)
-    mobileDeviceGroupId?: ClassMobileDeviceGroupId[];
+    @Type(() => MobileDeviceGroupId)
+    mobileDeviceGroupId?: MobileDeviceGroupId[];
 
     @SpeakeasyMetadata({ elemType: ClassMobileDevices })
     @Expose({ name: "mobile_devices" })
@@ -183,28 +183,28 @@ export class Class extends SpeakeasyBase {
     @Expose({ name: "source" })
     source?: string;
 
-    @SpeakeasyMetadata({ elemType: ClassStudentGroupIds })
+    @SpeakeasyMetadata({ elemType: StudentGroupIds })
     @Expose({ name: "student_group_ids" })
-    @Type(() => ClassStudentGroupIds)
-    studentGroupIds?: ClassStudentGroupIds[];
+    @Type(() => StudentGroupIds)
+    studentGroupIds?: StudentGroupIds[];
 
-    @SpeakeasyMetadata({ elemType: ClassStudents })
+    @SpeakeasyMetadata({ elemType: Students })
     @Expose({ name: "students" })
-    @Type(() => ClassStudents)
-    students?: ClassStudents[];
+    @Type(() => Students)
+    students?: Students[];
 
-    @SpeakeasyMetadata({ elemType: ClassTeacherGroupIds })
+    @SpeakeasyMetadata({ elemType: TeacherGroupIds })
     @Expose({ name: "teacher_group_ids" })
-    @Type(() => ClassTeacherGroupIds)
-    teacherGroupIds?: ClassTeacherGroupIds[];
+    @Type(() => TeacherGroupIds)
+    teacherGroupIds?: TeacherGroupIds[];
 
-    @SpeakeasyMetadata({ elemType: ClassTeacherIds })
+    @SpeakeasyMetadata({ elemType: TeacherIds })
     @Expose({ name: "teacher_ids" })
-    @Type(() => ClassTeacherIds)
-    teacherIds?: ClassTeacherIds[];
+    @Type(() => TeacherIds)
+    teacherIds?: TeacherIds[];
 
-    @SpeakeasyMetadata({ elemType: ClassTeachers })
+    @SpeakeasyMetadata({ elemType: Teachers })
     @Expose({ name: "teachers" })
-    @Type(() => ClassTeachers)
-    teachers?: ClassTeachers[];
+    @Type(() => Teachers)
+    teachers?: Teachers[];
 }

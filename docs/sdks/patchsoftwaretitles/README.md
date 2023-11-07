@@ -1,5 +1,5 @@
 # Patchsoftwaretitles
-(*patchsoftwaretitles*)
+(*.patchsoftwaretitles*)
 
 ### Available Operations
 
@@ -29,6 +29,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.patchsoftwaretitles.patchsoftwaretitlesGet();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -70,6 +71,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdDelete({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -113,6 +115,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -155,6 +158,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -196,6 +200,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdPut({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -1,5 +1,5 @@
 # Gsxconnection
-(*gsxconnection*)
+(*.gsxconnection*)
 
 ### Available Operations
 
@@ -24,6 +24,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.gsxconnection.findGSXConnection();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -51,7 +52,7 @@ Updates the Jamf Pro GSX connection information
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { GsxConnectionRegion } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
+import { Region } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Jamf({
@@ -61,7 +62,8 @@ import { GsxConnectionRegion } from "jamf-classic-sdk-nodejs/dist/sdk/models/sha
     },
   });
 
-  const res = await sdk.gsxconnection.updateGSXConnection("d:-E#_ZNpF" as bytes <<<>>>);
+  const res = await sdk.gsxconnection.updateGSXConnection(new TextEncoder().encode("0xf6280edaC8"));
+
 
   if (res.statusCode == 200) {
     // handle response

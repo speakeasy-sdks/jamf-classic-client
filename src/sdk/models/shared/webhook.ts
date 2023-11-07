@@ -5,17 +5,17 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export enum WebhookAuthenticationType {
+export enum AuthenticationType {
     None = "NONE",
     Basic = "BASIC",
 }
 
-export enum WebhookContentType {
+export enum ContentType {
     TextXml = "text/xml",
     ApplicationJson = "application/json",
 }
 
-export class WebhookDisplayFieldsDisplayField extends SpeakeasyBase {
+export class WebhookDisplayField extends SpeakeasyBase {
     /**
      * Name of the display field to include for smart group based webhook events
      */
@@ -27,15 +27,15 @@ export class WebhookDisplayFieldsDisplayField extends SpeakeasyBase {
 export class WebhookDisplayFields extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "display_field" })
-    @Type(() => WebhookDisplayFieldsDisplayField)
-    displayField?: WebhookDisplayFieldsDisplayField;
+    @Type(() => WebhookDisplayField)
+    displayField?: WebhookDisplayField;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export enum WebhookEvent {
+export enum Event {
     ComputerAdded = "ComputerAdded",
     ComputerCheckIn = "ComputerCheckIn",
     ComputerInventoryCompleted = "ComputerInventoryCompleted",
@@ -59,7 +59,7 @@ export enum WebhookEvent {
 export class Webhook extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "authentication_type" })
-    authenticationType?: WebhookAuthenticationType;
+    authenticationType?: AuthenticationType;
 
     /**
      * Number of seconds to attempt to connect to the webhooks host server
@@ -70,7 +70,7 @@ export class Webhook extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "content_type" })
-    contentType?: WebhookContentType;
+    contentType?: ContentType;
 
     @SpeakeasyMetadata({ elemType: WebhookDisplayFields })
     @Expose({ name: "display_fields" })
@@ -87,7 +87,7 @@ export class Webhook extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "event" })
-    event: WebhookEvent;
+    event: Event;
 
     @SpeakeasyMetadata()
     @Expose({ name: "id" })

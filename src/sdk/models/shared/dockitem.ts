@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum DockItemType {
+export enum TypeT {
     App = "App",
     File = "File",
     Folder = "Folder",
@@ -33,5 +33,5 @@ export class DockItem extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    type?: DockItemType;
+    type?: TypeT;
 }

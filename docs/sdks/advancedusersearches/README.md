@@ -1,5 +1,5 @@
 # Advancedusersearches
-(*advancedusersearches*)
+(*.advancedusersearches*)
 
 ### Available Operations
 
@@ -32,6 +32,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.advancedusersearches.createAdvancedUserSearchgById({
     id: 425027,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -73,6 +74,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 233208,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -113,6 +115,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -150,6 +153,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.advancedusersearches.findAdvancedUserSearches();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -189,6 +193,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.advancedusersearches.findAdvancedUserSearchesById({
     id: 42939,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -230,6 +235,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -270,6 +276,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 142195,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -309,6 +316,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.advancedusersearches.updateAdvancedUserSearchByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -1,5 +1,5 @@
 # Vppinvitations
-(*vppinvitations*)
+(*.vppinvitations*)
 
 ### Available Operations
 
@@ -30,6 +30,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.vppinvitations.createInvitationById({
     id: 791905,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -71,6 +72,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 492289,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -111,6 +113,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 76477,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -138,7 +141,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindInvitationsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindInvitationsByIdSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -150,8 +153,9 @@ import { FindInvitationsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sd
 
   const res = await sdk.vppinvitations.findInvitationsByIdSubset({
     id: 916901,
-    subset: FindInvitationsByIdSubsetSubset.Scope,
+    subset: FindInvitationsByIdSubsetPathParamSubset.Scope,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -191,6 +195,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.vppinvitations.findVPPAdminInvitation();
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -229,6 +234,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.vppinvitations.updateInvitationById({
     id: 473557,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -8,14 +8,14 @@ import { AxiosResponse } from "axios";
 /**
  * A value of "install" is similar to clicking the "Download and Install Updates" button on the UI. Any other value mimics the behavior of "Download Updates" from the UI.
  */
-export enum CreateComputerCommandByCommandAndActionAction {
+export enum Action {
     Install = "install",
 }
 
 /**
  * Command to send to device.
  */
-export enum CreateComputerCommandByCommandAndActionCommand {
+export enum PathParamCommand {
     ScheduleOSUpdate = "ScheduleOSUpdate",
 }
 
@@ -24,13 +24,13 @@ export class CreateComputerCommandByCommandAndActionRequest extends SpeakeasyBas
      * A value of "install" is similar to clicking the "Download and Install Updates" button on the UI. Any other value mimics the behavior of "Download Updates" from the UI.
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=action" })
-    action: CreateComputerCommandByCommandAndActionAction;
+    action: Action;
 
     /**
      * Command to send to device.
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=command" })
-    command: CreateComputerCommandByCommandAndActionCommand;
+    command: PathParamCommand;
 
     /**
      * Id of computer or computers (supports comma separated values e.g. /id/8,10,55) to send the command

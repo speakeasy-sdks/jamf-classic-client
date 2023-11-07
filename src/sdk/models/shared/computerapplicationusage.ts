@@ -6,18 +6,18 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { ComputerApplicationUsageApp } from "./computerapplicationusageapp";
 import { Expose, Type } from "class-transformer";
 
-export class ComputerApplicationUsageUsageApps extends SpeakeasyBase {
+export class Apps extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "app" })
     @Type(() => ComputerApplicationUsageApp)
     app?: ComputerApplicationUsageApp;
 }
 
-export class ComputerApplicationUsageUsage extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: ComputerApplicationUsageUsageApps })
+export class Usage extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: Apps })
     @Expose({ name: "apps" })
-    @Type(() => ComputerApplicationUsageUsageApps)
-    apps?: ComputerApplicationUsageUsageApps[];
+    @Type(() => Apps)
+    apps?: Apps[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "date" })
@@ -27,6 +27,6 @@ export class ComputerApplicationUsageUsage extends SpeakeasyBase {
 export class ComputerApplicationUsage extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "usage" })
-    @Type(() => ComputerApplicationUsageUsage)
-    usage?: ComputerApplicationUsageUsage;
+    @Type(() => Usage)
+    usage?: Usage;
 }

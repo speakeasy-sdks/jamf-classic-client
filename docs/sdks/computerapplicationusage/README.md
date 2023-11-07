@@ -1,5 +1,5 @@
 # Computerapplicationusage
-(*computerapplicationusage*)
+(*.computerapplicationusage*)
 
 ### Available Operations
 
@@ -32,6 +32,7 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     id: "<ID>",
     startDate: new RFCDate("2023-06-04"),
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -75,6 +76,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     startDate: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -116,6 +118,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
     startDate: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -159,6 +162,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     startDate: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -200,6 +204,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     startDate: "string",
     udid: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Subset to filter by
  */
-export enum FindComputerManagementByIdUsernameSubsetSubset {
+export enum FindComputerManagementByIdUsernameSubsetPathParamSubset {
     General = "General",
     Policies = "Policies",
     Ebooks = "Ebooks",
@@ -33,7 +33,7 @@ export class FindComputerManagementByIdUsernameSubsetRequest extends SpeakeasyBa
      * Subset to filter by
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=subset" })
-    subset: FindComputerManagementByIdUsernameSubsetSubset;
+    subset: FindComputerManagementByIdUsernameSubsetPathParamSubset;
 
     /**
      * Username to filter by

@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Subset to filter by
  */
-export enum FindMobileDeviceApplicationsByNameSubsetSubset {
+export enum FindMobileDeviceApplicationsByNameSubsetPathParamSubset {
     General = "General",
     Scope = "Scope",
     SelfService = "SelfService",
@@ -29,7 +29,7 @@ export class FindMobileDeviceApplicationsByNameSubsetRequest extends SpeakeasyBa
      * Subset to filter by
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=subset" })
-    subset: FindMobileDeviceApplicationsByNameSubsetSubset;
+    subset: FindMobileDeviceApplicationsByNameSubsetPathParamSubset;
 }
 
 export class FindMobileDeviceApplicationsByNameSubsetResponse extends SpeakeasyBase {

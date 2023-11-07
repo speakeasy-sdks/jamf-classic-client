@@ -1,5 +1,5 @@
 # Mobiledevicecommands
-(*mobiledevicecommands*)
+(*.mobiledevicecommands*)
 
 ### Available Operations
 
@@ -50,7 +50,7 @@ The chart below includes additional requirements for usage of specific commands
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { MobileDeviceCommandPostGeneralCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
+import { Command } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Jamf({
@@ -60,7 +60,8 @@ import { MobileDeviceCommandPostGeneralCommand } from "jamf-classic-sdk-nodejs/d
     },
   });
 
-  const res = await sdk.mobiledevicecommands.createMobileDeviceCommand("gD;q?y\"bqw" as bytes <<<>>>);
+  const res = await sdk.mobiledevicecommands.createMobileDeviceCommand(new TextEncoder().encode("0xA86D7E0fDE"));
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -108,7 +109,7 @@ The chart below includes additional requirements for usage of specific commands
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMobileDeviceCommandURLCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { CreateMobileDeviceCommandURLPathParamCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -119,9 +120,10 @@ import { CreateMobileDeviceCommandURLCommand } from "jamf-classic-sdk-nodejs/dis
   });
 
   const res = await sdk.mobiledevicecommands.createMobileDeviceCommandURL({
-    command: CreateMobileDeviceCommandURLCommand.DeviceLocation,
+    command: CreateMobileDeviceCommandURLPathParamCommand.DeviceLocation,
     idList: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -164,6 +166,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     lockMessage: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -205,6 +208,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     idList: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -232,7 +236,7 @@ Creates a new command to request that a mobile device update its OS. Command and
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMobileScheduleOSUpdateCommandURLInstallAction } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { InstallAction } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -244,8 +248,9 @@ import { CreateMobileScheduleOSUpdateCommandURLInstallAction } from "jamf-classi
 
   const res = await sdk.mobiledevicecommands.createMobileScheduleOSUpdateCommandURL({
     idList: "string",
-    installAction: CreateMobileScheduleOSUpdateCommandURLInstallAction.One,
+    installAction: InstallAction.One,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -274,7 +279,7 @@ Creates a new command to request that a mobile device update its OS. Command and
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateMobileScheduleOSUpdateCommandWithProductVersionURLInstallAction } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { PathParamInstallAction } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -286,9 +291,10 @@ import { CreateMobileScheduleOSUpdateCommandWithProductVersionURLInstallAction }
 
   const res = await sdk.mobiledevicecommands.createMobileScheduleOSUpdateCommandWithProductVersionURL({
     idList: "string",
-    installAction: CreateMobileScheduleOSUpdateCommandWithProductVersionURLInstallAction.One,
+    installAction: PathParamInstallAction.One,
     productVersion: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -328,6 +334,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.mobiledevicecommands.findMobileDeviceCommands();
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -366,6 +373,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledevicecommands.findMobileDeviceCommandsByCommand({
     command: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -407,6 +415,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -446,6 +455,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledevicecommands.findMobileDeviceCommandsByUuid({
     uuid: "71a67216-a890-416c-90d7-93de2db01d31",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

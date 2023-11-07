@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class ScriptParameters extends SpeakeasyBase {
+export class ParametersT extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "parameter10" })
     parameter10?: string;
@@ -39,7 +39,7 @@ export class ScriptParameters extends SpeakeasyBase {
     parameter9?: string;
 }
 
-export enum ScriptPriority {
+export enum Priority {
     Before = "Before",
     After = "After",
     AtReboot = "At Reboot",
@@ -79,12 +79,12 @@ export class Script extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "parameters" })
-    @Type(() => ScriptParameters)
-    parameters?: ScriptParameters;
+    @Type(() => ParametersT)
+    parameters?: ParametersT;
 
     @SpeakeasyMetadata()
     @Expose({ name: "priority" })
-    priority?: ScriptPriority;
+    priority?: Priority;
 
     @SpeakeasyMetadata()
     @Expose({ name: "script_contents" })

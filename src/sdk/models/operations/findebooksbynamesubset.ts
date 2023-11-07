@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Subset to filter by
  */
-export enum FindEBooksByNameSubsetSubset {
+export enum FindEBooksByNameSubsetPathParamSubset {
     General = "General",
     Scope = "Scope",
     SelfService = "SelfService",
@@ -26,7 +26,7 @@ export class FindEBooksByNameSubsetRequest extends SpeakeasyBase {
      * Subset to filter by
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=subset" })
-    subset: FindEBooksByNameSubsetSubset;
+    subset: FindEBooksByNameSubsetPathParamSubset;
 }
 
 export class FindEBooksByNameSubsetResponse extends SpeakeasyBase {

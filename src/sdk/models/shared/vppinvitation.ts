@@ -6,13 +6,13 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { IdName } from "./idname";
 import { Expose, Type } from "class-transformer";
 
-export enum VppInvitationGeneralDistributionMethod {
+export enum VppInvitationDistributionMethod {
     PromptUsersToAcceptMakeAvailableInSelfService = "Prompt users to accept/make available in Self Service",
     SendEmails = "Send emails",
     MakeAvailableInSelfServiceOnly = "Make available in Self Service only",
 }
 
-export class VppInvitationGeneralVppAccount extends SpeakeasyBase {
+export class VppInvitationVppAccount extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id: number;
@@ -21,7 +21,7 @@ export class VppInvitationGeneralVppAccount extends SpeakeasyBase {
 export class VppInvitationGeneral extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "distribution_method" })
-    distributionMethod?: VppInvitationGeneralDistributionMethod;
+    distributionMethod?: VppInvitationDistributionMethod;
 
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
@@ -53,11 +53,11 @@ export class VppInvitationGeneral extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "vpp_account" })
-    @Type(() => VppInvitationGeneralVppAccount)
-    vppAccount?: VppInvitationGeneralVppAccount;
+    @Type(() => VppInvitationVppAccount)
+    vppAccount?: VppInvitationVppAccount;
 }
 
-export class VppInvitationInvitationUsageUsage extends SpeakeasyBase {
+export class VppInvitationUsage extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "email_address" })
     emailAddress?: string;
@@ -87,87 +87,87 @@ export class VppInvitationInvitationUsageUsage extends SpeakeasyBase {
     vppAccount?: string;
 }
 
-export class VppInvitationInvitationUsage extends SpeakeasyBase {
+export class InvitationUsage extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 
     @SpeakeasyMetadata()
     @Expose({ name: "usage" })
-    @Type(() => VppInvitationInvitationUsageUsage)
-    usage?: VppInvitationInvitationUsageUsage;
+    @Type(() => VppInvitationUsage)
+    usage?: VppInvitationUsage;
 }
 
-export class VppInvitationScopeExclusionsJssUserGroups extends SpeakeasyBase {
+export class VppInvitationSchemasJssUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class VppInvitationScopeExclusionsJssUsers extends SpeakeasyBase {
+export class VppInvitationSchemasJssUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     @Type(() => IdName)
     user?: IdName;
 }
 
-export class VppInvitationScopeExclusionsUserGroupsUserGroup extends SpeakeasyBase {
+export class VppInvitationUserGroup extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
 }
 
-export class VppInvitationScopeExclusionsUserGroups extends SpeakeasyBase {
+export class VppInvitationUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
-    @Type(() => VppInvitationScopeExclusionsUserGroupsUserGroup)
-    userGroup?: VppInvitationScopeExclusionsUserGroupsUserGroup;
+    @Type(() => VppInvitationUserGroup)
+    userGroup?: VppInvitationUserGroup;
 }
 
-export class VppInvitationScopeExclusions extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: VppInvitationScopeExclusionsJssUserGroups })
+export class VppInvitationExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: VppInvitationSchemasJssUserGroups })
     @Expose({ name: "jss_user_groups" })
-    @Type(() => VppInvitationScopeExclusionsJssUserGroups)
-    jssUserGroups?: VppInvitationScopeExclusionsJssUserGroups[];
+    @Type(() => VppInvitationSchemasJssUserGroups)
+    jssUserGroups?: VppInvitationSchemasJssUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: VppInvitationScopeExclusionsJssUsers })
+    @SpeakeasyMetadata({ elemType: VppInvitationSchemasJssUsers })
     @Expose({ name: "jss_users" })
-    @Type(() => VppInvitationScopeExclusionsJssUsers)
-    jssUsers?: VppInvitationScopeExclusionsJssUsers[];
+    @Type(() => VppInvitationSchemasJssUsers)
+    jssUsers?: VppInvitationSchemasJssUsers[];
 
-    @SpeakeasyMetadata({ elemType: VppInvitationScopeExclusionsUserGroups })
+    @SpeakeasyMetadata({ elemType: VppInvitationUserGroups })
     @Expose({ name: "user_groups" })
-    @Type(() => VppInvitationScopeExclusionsUserGroups)
-    userGroups?: VppInvitationScopeExclusionsUserGroups[];
+    @Type(() => VppInvitationUserGroups)
+    userGroups?: VppInvitationUserGroups[];
 }
 
-export class VppInvitationScopeJssUserGroups extends SpeakeasyBase {
+export class VppInvitationJssUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class VppInvitationScopeJssUsers extends SpeakeasyBase {
+export class VppInvitationJssUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     @Type(() => IdName)
     user?: IdName;
 }
 
-export class VppInvitationScopeLimitationsUserGroups extends SpeakeasyBase {
+export class VppInvitationSchemasUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class VppInvitationScopeLimitations extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: VppInvitationScopeLimitationsUserGroups })
+export class VppInvitationLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: VppInvitationSchemasUserGroups })
     @Expose({ name: "user_groups" })
-    @Type(() => VppInvitationScopeLimitationsUserGroups)
-    userGroups?: VppInvitationScopeLimitationsUserGroups[];
+    @Type(() => VppInvitationSchemasUserGroups)
+    userGroups?: VppInvitationSchemasUserGroups[];
 }
 
 export class VppInvitationScope extends SpeakeasyBase {
@@ -177,23 +177,23 @@ export class VppInvitationScope extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "exclusions" })
-    @Type(() => VppInvitationScopeExclusions)
-    exclusions?: VppInvitationScopeExclusions;
+    @Type(() => VppInvitationExclusions)
+    exclusions?: VppInvitationExclusions;
 
-    @SpeakeasyMetadata({ elemType: VppInvitationScopeJssUserGroups })
+    @SpeakeasyMetadata({ elemType: VppInvitationJssUserGroups })
     @Expose({ name: "jss_user_groups" })
-    @Type(() => VppInvitationScopeJssUserGroups)
-    jssUserGroups?: VppInvitationScopeJssUserGroups[];
+    @Type(() => VppInvitationJssUserGroups)
+    jssUserGroups?: VppInvitationJssUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: VppInvitationScopeJssUsers })
+    @SpeakeasyMetadata({ elemType: VppInvitationJssUsers })
     @Expose({ name: "jss_users" })
-    @Type(() => VppInvitationScopeJssUsers)
-    jssUsers?: VppInvitationScopeJssUsers[];
+    @Type(() => VppInvitationJssUsers)
+    jssUsers?: VppInvitationJssUsers[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "limitations" })
-    @Type(() => VppInvitationScopeLimitations)
-    limitations?: VppInvitationScopeLimitations;
+    @Type(() => VppInvitationLimitations)
+    limitations?: VppInvitationLimitations;
 }
 
 export class VppInvitation extends SpeakeasyBase {
@@ -202,10 +202,10 @@ export class VppInvitation extends SpeakeasyBase {
     @Type(() => VppInvitationGeneral)
     general?: VppInvitationGeneral;
 
-    @SpeakeasyMetadata({ elemType: VppInvitationInvitationUsage })
+    @SpeakeasyMetadata({ elemType: InvitationUsage })
     @Expose({ name: "invitation_usage" })
-    @Type(() => VppInvitationInvitationUsage)
-    invitationUsage?: VppInvitationInvitationUsage[];
+    @Type(() => InvitationUsage)
+    invitationUsage?: InvitationUsage[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "scope" })

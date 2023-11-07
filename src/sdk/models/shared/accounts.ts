@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class AccountsGroupsGroup extends SpeakeasyBase {
+export class AccountsGroup extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -18,14 +18,14 @@ export class AccountsGroupsGroup extends SpeakeasyBase {
     name: string;
 }
 
-export class AccountsGroups extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: AccountsGroupsGroup })
+export class Groups extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: AccountsGroup })
     @Expose({ name: "group" })
-    @Type(() => AccountsGroupsGroup)
-    group?: AccountsGroupsGroup[];
+    @Type(() => AccountsGroup)
+    group?: AccountsGroup[];
 }
 
-export class AccountsUsersUser extends SpeakeasyBase {
+export class AccountsUser extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -39,17 +39,17 @@ export class AccountsUsersUser extends SpeakeasyBase {
 }
 
 export class AccountsUsers extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: AccountsUsersUser })
+    @SpeakeasyMetadata({ elemType: AccountsUser })
     @Expose({ name: "user" })
-    @Type(() => AccountsUsersUser)
-    user?: AccountsUsersUser[];
+    @Type(() => AccountsUser)
+    user?: AccountsUser[];
 }
 
 export class Accounts extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "groups" })
-    @Type(() => AccountsGroups)
-    groups?: AccountsGroups;
+    @Type(() => Groups)
+    groups?: Groups;
 
     @SpeakeasyMetadata()
     @Expose({ name: "users" })

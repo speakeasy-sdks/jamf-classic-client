@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum PackageRequiredProcessor {
+export enum RequiredProcessor {
     None = "None",
     Ppc = "ppc",
     X86 = "x86",
@@ -73,7 +73,7 @@ export class Package extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "required_processor" })
-    requiredProcessor?: PackageRequiredProcessor;
+    requiredProcessor?: RequiredProcessor;
 
     @SpeakeasyMetadata()
     @Expose({ name: "send_notification" })

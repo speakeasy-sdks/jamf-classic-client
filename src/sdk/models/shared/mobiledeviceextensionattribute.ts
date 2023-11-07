@@ -5,13 +5,13 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export enum MobileDeviceExtensionAttributeDateType {
+export enum DateType {
     String = "String",
     Date = "Date",
     Integer = "Integer",
 }
 
-export enum MobileDeviceExtensionAttributeInputTypeType {
+export enum MobileDeviceExtensionAttributeType {
     TextField = "Text Field",
     PopUpMenu = "Pop-up Menu",
     LDAPAttributeMapping = "LDAP Attribute Mapping",
@@ -20,7 +20,7 @@ export enum MobileDeviceExtensionAttributeInputTypeType {
 export class MobileDeviceExtensionAttributeInputType extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    type?: MobileDeviceExtensionAttributeInputTypeType;
+    type?: MobileDeviceExtensionAttributeType;
 }
 
 export enum MobileDeviceExtensionAttributeInventoryDisplay {
@@ -34,7 +34,7 @@ export enum MobileDeviceExtensionAttributeInventoryDisplay {
 export class MobileDeviceExtensionAttribute extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "date_type" })
-    dateType?: MobileDeviceExtensionAttributeDateType;
+    dateType?: DateType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "description" })

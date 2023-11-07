@@ -3,10 +3,16 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class FindComputerCommandsResponse extends SpeakeasyBase {
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata({ elemType: shared.ComputerCommands })
+    twoHundredApplicationJsonComputerCommands?: shared.ComputerCommands[];
+
     @SpeakeasyMetadata()
     body?: Uint8Array;
 
@@ -27,10 +33,4 @@ export class FindComputerCommandsResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
-
-    /**
-     * OK
-     */
-    @SpeakeasyMetadata({ elemType: shared.ComputerCommands })
-    computerCommands?: shared.ComputerCommands[];
 }

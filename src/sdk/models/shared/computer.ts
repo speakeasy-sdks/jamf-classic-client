@@ -9,7 +9,7 @@ import { Purchasing } from "./purchasing";
 import { SiteObject } from "./siteobject";
 import { Expose, Type } from "class-transformer";
 
-export class ComputerCertificatesCertificate extends SpeakeasyBase {
+export class Certificate extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "common_name" })
     commonName?: string;
@@ -31,14 +31,14 @@ export class ComputerCertificatesCertificate extends SpeakeasyBase {
     name?: string;
 }
 
-export class ComputerCertificates extends SpeakeasyBase {
+export class Certificates extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "certificate" })
-    @Type(() => ComputerCertificatesCertificate)
-    certificate?: ComputerCertificatesCertificate;
+    @Type(() => Certificate)
+    certificate?: Certificate;
 }
 
-export class ComputerConfigurationProfilesConfigurationProfile extends SpeakeasyBase {
+export class ComputerConfigurationProfile extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -56,18 +56,18 @@ export class ComputerConfigurationProfilesConfigurationProfile extends Speakeasy
     uuid?: string;
 }
 
-export class ComputerConfigurationProfiles extends SpeakeasyBase {
+export class ConfigurationProfiles extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "configuration_profile" })
-    @Type(() => ComputerConfigurationProfilesConfigurationProfile)
-    configurationProfile?: ComputerConfigurationProfilesConfigurationProfile;
+    @Type(() => ComputerConfigurationProfile)
+    configurationProfile?: ComputerConfigurationProfile;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class ComputerExtensionAttributesExtensionAttribute extends SpeakeasyBase {
+export class ExtensionAttribute extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -85,14 +85,14 @@ export class ComputerExtensionAttributesExtensionAttribute extends SpeakeasyBase
     value?: string;
 }
 
-export class ComputerExtensionAttributes1 extends SpeakeasyBase {
+export class ExtensionAttributes extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "extension_attribute" })
-    @Type(() => ComputerExtensionAttributesExtensionAttribute)
-    extensionAttribute?: ComputerExtensionAttributesExtensionAttribute;
+    @Type(() => ExtensionAttribute)
+    extensionAttribute?: ExtensionAttribute;
 }
 
-export class ComputerGeneralManagementStatus extends SpeakeasyBase {
+export class ComputerManagementStatus extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "enrolled_via_dep" })
     enrolledViaDep?: boolean;
@@ -106,13 +106,13 @@ export class ComputerGeneralManagementStatus extends SpeakeasyBase {
     userApprovedMdm?: boolean;
 }
 
-export class ComputerGeneralMdmCapableUsers extends SpeakeasyBase {
+export class MdmCapableUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "mdm_capable_user" })
     mdmCapableUser?: string;
 }
 
-export class ComputerGeneralRemoteManagement extends SpeakeasyBase {
+export class RemoteManagement extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "managed" })
     managed?: boolean;
@@ -213,8 +213,8 @@ export class ComputerGeneral extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "management_status" })
-    @Type(() => ComputerGeneralManagementStatus)
-    managementStatus?: ComputerGeneralManagementStatus;
+    @Type(() => ComputerManagementStatus)
+    managementStatus?: ComputerManagementStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "mdm_capable" })
@@ -222,8 +222,8 @@ export class ComputerGeneral extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "mdm_capable_users" })
-    @Type(() => ComputerGeneralMdmCapableUsers)
-    mdmCapableUsers?: ComputerGeneralMdmCapableUsers;
+    @Type(() => MdmCapableUsers)
+    mdmCapableUsers?: MdmCapableUsers;
 
     /**
      * Name of computer
@@ -242,8 +242,8 @@ export class ComputerGeneral extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "remote_management" })
-    @Type(() => ComputerGeneralRemoteManagement)
-    remoteManagement?: ComputerGeneralRemoteManagement;
+    @Type(() => RemoteManagement)
+    remoteManagement?: RemoteManagement;
 
     @SpeakeasyMetadata()
     @Expose({ name: "report_date" })
@@ -275,13 +275,13 @@ export class ComputerGeneral extends SpeakeasyBase {
     udid?: string;
 }
 
-export class ComputerGroupsAccountsComputerGroupMemberships extends SpeakeasyBase {
+export class ComputerGroupMemberships extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "group" })
     group?: string;
 }
 
-export class ComputerGroupsAccountsLocalAccountsUser extends SpeakeasyBase {
+export class ComputerUser extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "administrator" })
     administrator?: boolean;
@@ -315,32 +315,32 @@ export class ComputerGroupsAccountsLocalAccountsUser extends SpeakeasyBase {
     uid?: string;
 }
 
-export class ComputerGroupsAccountsLocalAccounts extends SpeakeasyBase {
+export class LocalAccounts extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
-    @Type(() => ComputerGroupsAccountsLocalAccountsUser)
-    user?: ComputerGroupsAccountsLocalAccountsUser;
+    @Type(() => ComputerUser)
+    user?: ComputerUser;
 }
 
-export class ComputerGroupsAccounts extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: ComputerGroupsAccountsComputerGroupMemberships })
+export class GroupsAccounts extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: ComputerGroupMemberships })
     @Expose({ name: "computer_group_memberships" })
-    @Type(() => ComputerGroupsAccountsComputerGroupMemberships)
-    computerGroupMemberships?: ComputerGroupsAccountsComputerGroupMemberships[];
+    @Type(() => ComputerGroupMemberships)
+    computerGroupMemberships?: ComputerGroupMemberships[];
 
-    @SpeakeasyMetadata({ elemType: ComputerGroupsAccountsLocalAccounts })
+    @SpeakeasyMetadata({ elemType: LocalAccounts })
     @Expose({ name: "local_accounts" })
-    @Type(() => ComputerGroupsAccountsLocalAccounts)
-    localAccounts?: ComputerGroupsAccountsLocalAccounts[];
+    @Type(() => LocalAccounts)
+    localAccounts?: LocalAccounts[];
 }
 
-export class ComputerHardwareFilevault2Users extends SpeakeasyBase {
+export class Filevault2Users extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     user?: string;
 }
 
-export class ComputerHardwareMappedPrintersPrinter extends SpeakeasyBase {
+export class ComputerPrinter extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "location" })
     location?: string;
@@ -358,19 +358,19 @@ export class ComputerHardwareMappedPrintersPrinter extends SpeakeasyBase {
     uri?: string;
 }
 
-export class ComputerHardwareMappedPrinters extends SpeakeasyBase {
+export class MappedPrinters extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "printer" })
-    @Type(() => ComputerHardwareMappedPrintersPrinter)
-    printer?: ComputerHardwareMappedPrintersPrinter;
+    @Type(() => ComputerPrinter)
+    printer?: ComputerPrinter;
 }
 
-export enum ComputerHardwareSipStatus {
+export enum SipStatus {
     Enabled = "Enabled",
     Disabled = "Disabled",
 }
 
-export class ComputerHardwareStorageDevicePartition extends SpeakeasyBase {
+export class Partition extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "boot_drive_available_mb" })
     bootDriveAvailableMb?: number;
@@ -424,7 +424,7 @@ export class ComputerHardwareStorageDevicePartition extends SpeakeasyBase {
     type?: string;
 }
 
-export class ComputerHardwareStorageDevice extends SpeakeasyBase {
+export class Device extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "connection_type" })
     connectionType?: string;
@@ -441,10 +441,10 @@ export class ComputerHardwareStorageDevice extends SpeakeasyBase {
     @Expose({ name: "model" })
     model?: string;
 
-    @SpeakeasyMetadata({ elemType: ComputerHardwareStorageDevicePartition })
+    @SpeakeasyMetadata({ elemType: Partition })
     @Expose({ name: "partition" })
-    @Type(() => ComputerHardwareStorageDevicePartition)
-    partition?: ComputerHardwareStorageDevicePartition[];
+    @Type(() => Partition)
+    partition?: Partition[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "revision" })
@@ -463,14 +463,14 @@ export class ComputerHardwareStorageDevice extends SpeakeasyBase {
     smartStatus?: string;
 }
 
-export class ComputerHardwareStorage extends SpeakeasyBase {
+export class Storage extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "device" })
-    @Type(() => ComputerHardwareStorageDevice)
-    device?: ComputerHardwareStorageDevice;
+    @Type(() => Device)
+    device?: Device;
 }
 
-export class ComputerHardware extends SpeakeasyBase {
+export class Hardware extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "active_directory_status" })
     activeDirectoryStatus?: string;
@@ -511,10 +511,10 @@ export class ComputerHardware extends SpeakeasyBase {
     @Expose({ name: "disk_encryption_configuration" })
     diskEncryptionConfiguration?: string;
 
-    @SpeakeasyMetadata({ elemType: ComputerHardwareFilevault2Users })
+    @SpeakeasyMetadata({ elemType: Filevault2Users })
     @Expose({ name: "filevault_2_users" })
-    @Type(() => ComputerHardwareFilevault2Users)
-    filevault2Users?: ComputerHardwareFilevault2Users[];
+    @Type(() => Filevault2Users)
+    filevault2Users?: Filevault2Users[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "gatekeeper_status" })
@@ -528,10 +528,10 @@ export class ComputerHardware extends SpeakeasyBase {
     @Expose({ name: "make" })
     make?: string;
 
-    @SpeakeasyMetadata({ elemType: ComputerHardwareMappedPrinters })
+    @SpeakeasyMetadata({ elemType: MappedPrinters })
     @Expose({ name: "mapped_printers" })
-    @Type(() => ComputerHardwareMappedPrinters)
-    mappedPrinters?: ComputerHardwareMappedPrinters[];
+    @Type(() => MappedPrinters)
+    mappedPrinters?: MappedPrinters[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "master_password_set" })
@@ -595,16 +595,16 @@ export class ComputerHardware extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "sip_status" })
-    sipStatus?: ComputerHardwareSipStatus;
+    sipStatus?: SipStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "smc_version" })
     smcVersion?: string;
 
-    @SpeakeasyMetadata({ elemType: ComputerHardwareStorage })
+    @SpeakeasyMetadata({ elemType: Storage })
     @Expose({ name: "storage" })
-    @Type(() => ComputerHardwareStorage)
-    storage?: ComputerHardwareStorage[];
+    @Type(() => Storage)
+    storage?: Storage[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "total_ram" })
@@ -619,7 +619,7 @@ export class ComputerHardware extends SpeakeasyBase {
     xprotectVersion?: string;
 }
 
-export class ComputerPeripheralsPeripheralsAttachments extends SpeakeasyBase {
+export class ComputerAttachments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "attachment" })
     @Type(() => Attachment)
@@ -630,7 +630,7 @@ export class ComputerPeripheralsPeripheralsAttachments extends SpeakeasyBase {
     size?: number;
 }
 
-export class ComputerPeripheralsPeripheralsPeripheralFieldsField extends SpeakeasyBase {
+export class ComputerField extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
@@ -640,14 +640,14 @@ export class ComputerPeripheralsPeripheralsPeripheralFieldsField extends Speakea
     value?: string;
 }
 
-export class ComputerPeripheralsPeripheralsPeripheralFields extends SpeakeasyBase {
+export class ComputerFields extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "field" })
-    @Type(() => ComputerPeripheralsPeripheralsPeripheralFieldsField)
-    field?: ComputerPeripheralsPeripheralsPeripheralFieldsField;
+    @Type(() => ComputerField)
+    field?: ComputerField;
 }
 
-export class ComputerPeripheralsPeripheralsPeripheral extends SpeakeasyBase {
+export class ComputerPeripheral extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "bar_code_1" })
     barCode1?: string;
@@ -658,8 +658,8 @@ export class ComputerPeripheralsPeripheralsPeripheral extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "fields" })
-    @Type(() => ComputerPeripheralsPeripheralsPeripheralFields)
-    fields?: ComputerPeripheralsPeripheralsPeripheralFields;
+    @Type(() => ComputerFields)
+    fields?: ComputerFields;
 
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
@@ -673,16 +673,16 @@ export class ComputerPeripheralsPeripheralsPeripheral extends SpeakeasyBase {
     type?: string;
 }
 
-export class ComputerPeripheralsPeripherals extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: ComputerPeripheralsPeripheralsAttachments })
+export class ComputerSchemasPeripherals extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: ComputerAttachments })
     @Expose({ name: "attachments" })
-    @Type(() => ComputerPeripheralsPeripheralsAttachments)
-    attachments?: ComputerPeripheralsPeripheralsAttachments[];
+    @Type(() => ComputerAttachments)
+    attachments?: ComputerAttachments[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "peripheral" })
-    @Type(() => ComputerPeripheralsPeripheralsPeripheral)
-    peripheral?: ComputerPeripheralsPeripheralsPeripheral;
+    @Type(() => ComputerPeripheral)
+    peripheral?: ComputerPeripheral;
 
     @SpeakeasyMetadata()
     @Expose({ name: "purchasing" })
@@ -691,10 +691,10 @@ export class ComputerPeripheralsPeripherals extends SpeakeasyBase {
 }
 
 export class ComputerPeripherals extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: ComputerPeripheralsPeripherals })
+    @SpeakeasyMetadata({ elemType: ComputerSchemasPeripherals })
     @Expose({ name: "peripherals" })
-    @Type(() => ComputerPeripheralsPeripherals)
-    peripherals?: ComputerPeripheralsPeripherals[];
+    @Type(() => ComputerSchemasPeripherals)
+    peripherals?: ComputerSchemasPeripherals[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
@@ -723,7 +723,7 @@ export class ComputerSecurity extends SpeakeasyBase {
     secureBootLevel?: string;
 }
 
-export class ComputerSoftwareApplicationsApplication extends SpeakeasyBase {
+export class ComputerApplication extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
@@ -737,24 +737,24 @@ export class ComputerSoftwareApplicationsApplication extends SpeakeasyBase {
     version?: string;
 }
 
-export class ComputerSoftwareApplications extends SpeakeasyBase {
+export class ComputerSchemasApplications extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "application" })
-    @Type(() => ComputerSoftwareApplicationsApplication)
-    application?: ComputerSoftwareApplicationsApplication;
+    @Type(() => ComputerApplication)
+    application?: ComputerApplication;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class ComputerSoftwareAvailableSoftwareUpdates extends SpeakeasyBase {
+export class AvailableSoftwareUpdates extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
 }
 
-export class ComputerSoftwareAvailableUpdatesUpdate extends SpeakeasyBase {
+export class Update extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
@@ -768,20 +768,20 @@ export class ComputerSoftwareAvailableUpdatesUpdate extends SpeakeasyBase {
     version?: string;
 }
 
-export class ComputerSoftwareAvailableUpdates extends SpeakeasyBase {
+export class AvailableUpdates extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "update" })
-    @Type(() => ComputerSoftwareAvailableUpdatesUpdate)
-    update?: ComputerSoftwareAvailableUpdatesUpdate;
+    @Type(() => Update)
+    update?: Update;
 }
 
-export class ComputerSoftwareCachedByCasper extends SpeakeasyBase {
+export class CachedByCasper extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "package" })
     package?: string;
 }
 
-export class ComputerSoftwareFontsFont extends SpeakeasyBase {
+export class ComputerFont extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
@@ -795,36 +795,36 @@ export class ComputerSoftwareFontsFont extends SpeakeasyBase {
     version?: string;
 }
 
-export class ComputerSoftwareFonts extends SpeakeasyBase {
+export class ComputerFonts extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "font" })
-    @Type(() => ComputerSoftwareFontsFont)
-    font?: ComputerSoftwareFontsFont;
+    @Type(() => ComputerFont)
+    font?: ComputerFont;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class ComputerSoftwareInstalledByCasper extends SpeakeasyBase {
+export class InstalledByCasper extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "package" })
     package?: string;
 }
 
-export class ComputerSoftwareInstalledByInstallerSwu extends SpeakeasyBase {
+export class InstalledByInstallerSwu extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "package" })
     package?: string;
 }
 
-export class ComputerSoftwareLicensedSoftware extends SpeakeasyBase {
+export class ComputerLicensedSoftware extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
 }
 
-export class ComputerSoftwarePluginsPlugin extends SpeakeasyBase {
+export class ComputerPlugin extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
@@ -838,73 +838,73 @@ export class ComputerSoftwarePluginsPlugin extends SpeakeasyBase {
     version?: string;
 }
 
-export class ComputerSoftwarePlugins extends SpeakeasyBase {
+export class ComputerPlugins extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "plugin" })
-    @Type(() => ComputerSoftwarePluginsPlugin)
-    plugin?: ComputerSoftwarePluginsPlugin;
+    @Type(() => ComputerPlugin)
+    plugin?: ComputerPlugin;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class ComputerSoftwareRunningServices extends SpeakeasyBase {
+export class RunningServices extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
 }
 
-export class ComputerSoftware extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: ComputerSoftwareApplications })
+export class Software extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: ComputerSchemasApplications })
     @Expose({ name: "applications" })
-    @Type(() => ComputerSoftwareApplications)
-    applications?: ComputerSoftwareApplications[];
+    @Type(() => ComputerSchemasApplications)
+    applications?: ComputerSchemasApplications[];
 
-    @SpeakeasyMetadata({ elemType: ComputerSoftwareAvailableSoftwareUpdates })
+    @SpeakeasyMetadata({ elemType: AvailableSoftwareUpdates })
     @Expose({ name: "available_software_updates" })
-    @Type(() => ComputerSoftwareAvailableSoftwareUpdates)
-    availableSoftwareUpdates?: ComputerSoftwareAvailableSoftwareUpdates[];
+    @Type(() => AvailableSoftwareUpdates)
+    availableSoftwareUpdates?: AvailableSoftwareUpdates[];
 
-    @SpeakeasyMetadata({ elemType: ComputerSoftwareAvailableUpdates })
+    @SpeakeasyMetadata({ elemType: AvailableUpdates })
     @Expose({ name: "available_updates" })
-    @Type(() => ComputerSoftwareAvailableUpdates)
-    availableUpdates?: ComputerSoftwareAvailableUpdates[];
+    @Type(() => AvailableUpdates)
+    availableUpdates?: AvailableUpdates[];
 
-    @SpeakeasyMetadata({ elemType: ComputerSoftwareCachedByCasper })
+    @SpeakeasyMetadata({ elemType: CachedByCasper })
     @Expose({ name: "cached_by_casper" })
-    @Type(() => ComputerSoftwareCachedByCasper)
-    cachedByCasper?: ComputerSoftwareCachedByCasper[];
+    @Type(() => CachedByCasper)
+    cachedByCasper?: CachedByCasper[];
 
-    @SpeakeasyMetadata({ elemType: ComputerSoftwareFonts })
+    @SpeakeasyMetadata({ elemType: ComputerFonts })
     @Expose({ name: "fonts" })
-    @Type(() => ComputerSoftwareFonts)
-    fonts?: ComputerSoftwareFonts[];
+    @Type(() => ComputerFonts)
+    fonts?: ComputerFonts[];
 
-    @SpeakeasyMetadata({ elemType: ComputerSoftwareInstalledByCasper })
+    @SpeakeasyMetadata({ elemType: InstalledByCasper })
     @Expose({ name: "installed_by_casper" })
-    @Type(() => ComputerSoftwareInstalledByCasper)
-    installedByCasper?: ComputerSoftwareInstalledByCasper[];
+    @Type(() => InstalledByCasper)
+    installedByCasper?: InstalledByCasper[];
 
-    @SpeakeasyMetadata({ elemType: ComputerSoftwareInstalledByInstallerSwu })
+    @SpeakeasyMetadata({ elemType: InstalledByInstallerSwu })
     @Expose({ name: "installed_by_installer_swu" })
-    @Type(() => ComputerSoftwareInstalledByInstallerSwu)
-    installedByInstallerSwu?: ComputerSoftwareInstalledByInstallerSwu[];
+    @Type(() => InstalledByInstallerSwu)
+    installedByInstallerSwu?: InstalledByInstallerSwu[];
 
-    @SpeakeasyMetadata({ elemType: ComputerSoftwareLicensedSoftware })
+    @SpeakeasyMetadata({ elemType: ComputerLicensedSoftware })
     @Expose({ name: "licensed_software" })
-    @Type(() => ComputerSoftwareLicensedSoftware)
-    licensedSoftware?: ComputerSoftwareLicensedSoftware[];
+    @Type(() => ComputerLicensedSoftware)
+    licensedSoftware?: ComputerLicensedSoftware[];
 
-    @SpeakeasyMetadata({ elemType: ComputerSoftwarePlugins })
+    @SpeakeasyMetadata({ elemType: ComputerPlugins })
     @Expose({ name: "plugins" })
-    @Type(() => ComputerSoftwarePlugins)
-    plugins?: ComputerSoftwarePlugins[];
+    @Type(() => ComputerPlugins)
+    plugins?: ComputerPlugins[];
 
-    @SpeakeasyMetadata({ elemType: ComputerSoftwareRunningServices })
+    @SpeakeasyMetadata({ elemType: RunningServices })
     @Expose({ name: "running_services" })
-    @Type(() => ComputerSoftwareRunningServices)
-    runningServices?: ComputerSoftwareRunningServices[];
+    @Type(() => RunningServices)
+    runningServices?: RunningServices[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "unix_executables" })
@@ -912,20 +912,20 @@ export class ComputerSoftware extends SpeakeasyBase {
 }
 
 export class Computer extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: ComputerCertificates })
+    @SpeakeasyMetadata({ elemType: Certificates })
     @Expose({ name: "certificates" })
-    @Type(() => ComputerCertificates)
-    certificates?: ComputerCertificates[];
+    @Type(() => Certificates)
+    certificates?: Certificates[];
 
-    @SpeakeasyMetadata({ elemType: ComputerConfigurationProfiles })
+    @SpeakeasyMetadata({ elemType: ConfigurationProfiles })
     @Expose({ name: "configuration_profiles" })
-    @Type(() => ComputerConfigurationProfiles)
-    configurationProfiles?: ComputerConfigurationProfiles[];
+    @Type(() => ConfigurationProfiles)
+    configurationProfiles?: ConfigurationProfiles[];
 
-    @SpeakeasyMetadata({ elemType: ComputerExtensionAttributes1 })
+    @SpeakeasyMetadata({ elemType: ExtensionAttributes })
     @Expose({ name: "extension_attributes" })
-    @Type(() => ComputerExtensionAttributes1)
-    extensionAttributes?: ComputerExtensionAttributes1[];
+    @Type(() => ExtensionAttributes)
+    extensionAttributes?: ExtensionAttributes[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "general" })
@@ -934,13 +934,13 @@ export class Computer extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "groups_accounts" })
-    @Type(() => ComputerGroupsAccounts)
-    groupsAccounts?: ComputerGroupsAccounts;
+    @Type(() => GroupsAccounts)
+    groupsAccounts?: GroupsAccounts;
 
     @SpeakeasyMetadata()
     @Expose({ name: "hardware" })
-    @Type(() => ComputerHardware)
-    hardware?: ComputerHardware;
+    @Type(() => Hardware)
+    hardware?: Hardware;
 
     @SpeakeasyMetadata()
     @Expose({ name: "location" })
@@ -964,6 +964,6 @@ export class Computer extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "software" })
-    @Type(() => ComputerSoftware)
-    software?: ComputerSoftware;
+    @Type(() => Software)
+    software?: Software;
 }

@@ -1,5 +1,5 @@
 # Computerinventorycollection
-(*computerinventorycollection*)
+(*.computerinventorycollection*)
 
 ### Available Operations
 
@@ -24,6 +24,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerinventorycollection.findComputerInventoryCollection();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -52,9 +53,9 @@ Updates the Jamf Pro computer inventory collection information
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import {
-  ComputerInventoryCollectionApplicationsApplicationPlatform,
-  ComputerInventoryCollectionFontsFontPlatform,
-  ComputerInventoryCollectionPluginsPluginPlatform,
+  ComputerInventoryCollectionPlatform,
+  ComputerInventoryCollectionSchemasPlatform,
+  Platform,
 } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
 (async() => {
@@ -65,7 +66,8 @@ import {
     },
   });
 
-  const res = await sdk.computerinventorycollection.updateComputerInventoryCollection("#e`N/Q\"g!N" as bytes <<<>>>);
+  const res = await sdk.computerinventorycollection.updateComputerInventoryCollection(new TextEncoder().encode("0x0Aea3b0A0a"));
+
 
   if (res.statusCode == 200) {
     // handle response

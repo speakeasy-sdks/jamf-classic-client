@@ -1,5 +1,5 @@
 # Activationcode
-(*activationcode*)
+(*.activationcode*)
 
 ### Available Operations
 
@@ -24,6 +24,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.activationcode.findactivationcode();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -60,7 +61,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     },
   });
 
-  const res = await sdk.activationcode.updateActivationCode("lK5^<]Y%q1" as bytes <<<>>>);
+  const res = await sdk.activationcode.updateActivationCode(new TextEncoder().encode("0xBa4e6ed1D3"));
+
 
   if (res.statusCode == 200) {
     // handle response

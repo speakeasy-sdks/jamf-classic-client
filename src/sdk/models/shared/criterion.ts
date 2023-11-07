@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum CriterionAndOr {
+export enum AndOr {
     And = "and",
     Or = "or",
 }
@@ -13,7 +13,7 @@ export enum CriterionAndOr {
 export class Criterion extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "and_or" })
-    andOr?: CriterionAndOr;
+    andOr?: AndOr;
 
     @SpeakeasyMetadata()
     @Expose({ name: "closing_paren" })

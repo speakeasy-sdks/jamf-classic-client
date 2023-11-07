@@ -1,5 +1,5 @@
 # Logflush
-(*logflush*)
+(*.logflush*)
 
 ### Available Operations
 
@@ -15,7 +15,7 @@ Flushes all logs for a given interval
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateLogFlushForIntervalLog } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { Log } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -27,8 +27,9 @@ import { CreateLogFlushForIntervalLog } from "jamf-classic-sdk-nodejs/dist/sdk/m
 
   const res = await sdk.logflush.createLogFlushForInterval({
     interval: "string",
-    log: CreateLogFlushForIntervalLog.Policy,
+    log: Log.Policy,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -57,7 +58,7 @@ Flushes a single log for a given interval
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateLogFlushWithIdAndIntervalLog } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { PathParamLog } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -70,8 +71,9 @@ import { CreateLogFlushWithIdAndIntervalLog } from "jamf-classic-sdk-nodejs/dist
   const res = await sdk.logflush.createLogFlushWithIdAndInterval({
     id: "<ID>",
     interval: "string",
-    log: CreateLogFlushWithIdAndIntervalLog.Policy,
+    log: PathParamLog.Policy,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -100,7 +102,7 @@ Flushes a log specified in an XML file
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { LogflushInterval, LogflushLog } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
+import { Interval, Log } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Jamf({
@@ -110,7 +112,8 @@ import { LogflushInterval, LogflushLog } from "jamf-classic-sdk-nodejs/dist/sdk/
     },
   });
 
-  const res = await sdk.logflush.logFlush("1Rtwf975Yo" as bytes <<<>>>);
+  const res = await sdk.logflush.logFlush(new TextEncoder().encode("0x3bDEA554dC"));
+
 
   if (res.statusCode == 200) {
     // handle response

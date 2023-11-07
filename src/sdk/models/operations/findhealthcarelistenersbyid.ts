@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class FindHealthcareListenersByIdRequest extends SpeakeasyBase {
@@ -15,6 +15,12 @@ export class FindHealthcareListenersByIdRequest extends SpeakeasyBase {
 }
 
 export class FindHealthcareListenersByIdResponse extends SpeakeasyBase {
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata({ elemType: shared.HealthcareListener })
+    twoHundredApplicationJsonHealthcareListener?: shared.HealthcareListener[];
+
     @SpeakeasyMetadata()
     body?: Uint8Array;
 
@@ -35,10 +41,4 @@ export class FindHealthcareListenersByIdResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
-
-    /**
-     * OK
-     */
-    @SpeakeasyMetadata({ elemType: shared.HealthcareListener })
-    healthcareListener?: shared.HealthcareListener[];
 }

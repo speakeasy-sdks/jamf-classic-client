@@ -9,7 +9,7 @@ import { IdName } from "./idname";
 import { SiteObject } from "./siteobject";
 import { Expose, Type } from "class-transformer";
 
-export enum MobileDeviceConfigurationProfileGeneralDeploymentMethod {
+export enum DeploymentMethod {
     InstallAutomatically = "Install Automatically",
     MakeAvailableInSelfService = "Make Available in Self Service",
 }
@@ -17,7 +17,7 @@ export enum MobileDeviceConfigurationProfileGeneralDeploymentMethod {
 /**
  * Level of the configuration profile
  */
-export enum MobileDeviceConfigurationProfileGeneralLevel {
+export enum Level {
     System = "System",
     User = "User",
 }
@@ -30,7 +30,7 @@ export class MobileDeviceConfigurationProfileGeneral extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "deployment_method" })
-    deploymentMethod?: MobileDeviceConfigurationProfileGeneralDeploymentMethod;
+    deploymentMethod?: DeploymentMethod;
 
     @SpeakeasyMetadata()
     @Expose({ name: "description" })
@@ -45,7 +45,7 @@ export class MobileDeviceConfigurationProfileGeneral extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     @Expose({ name: "level" })
-    level?: MobileDeviceConfigurationProfileGeneralLevel;
+    level?: Level;
 
     /**
      * Name of the configuration profile
@@ -76,63 +76,63 @@ export class MobileDeviceConfigurationProfileGeneral extends SpeakeasyBase {
     uuid?: string;
 }
 
-export class MobileDeviceConfigurationProfileScopeBuildings extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileBuildings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "building" })
     @Type(() => IdName)
     building?: IdName;
 }
 
-export class MobileDeviceConfigurationProfileScopeDepartments extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileDepartments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "department" })
     @Type(() => IdName)
     department?: IdName;
 }
 
-export class MobileDeviceConfigurationProfileScopeExclusionsBuildings extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileSchemasBuildings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "building" })
     @Type(() => IdName)
     building?: IdName;
 }
 
-export class MobileDeviceConfigurationProfileScopeExclusionsDepartments extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileSchemasDepartments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "department" })
     @Type(() => IdName)
     department?: IdName;
 }
 
-export class MobileDeviceConfigurationProfileScopeExclusionsIbeacons extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileIbeacons extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "ibeacon" })
     @Type(() => IdName)
     ibeacon?: IdName;
 }
 
-export class MobileDeviceConfigurationProfileScopeExclusionsJssUserGroups extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileSchemasJssUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class MobileDeviceConfigurationProfileScopeExclusionsJssUsers extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileSchemasJssUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     @Type(() => IdName)
     user?: IdName;
 }
 
-export class MobileDeviceConfigurationProfileScopeExclusionsMobileDeviceGroups extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileSchemasMobileDeviceGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "mobile_device_group" })
     @Type(() => IdName)
     mobileDeviceGroup?: IdName;
 }
 
-export class MobileDeviceConfigurationProfileScopeExclusionsMobileDevicesMobileDevice extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileSchemasMobileDevice extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -153,14 +153,14 @@ export class MobileDeviceConfigurationProfileScopeExclusionsMobileDevicesMobileD
     wifiMacAddress?: string;
 }
 
-export class MobileDeviceConfigurationProfileScopeExclusionsMobileDevices extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileSchemasMobileDevices extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "mobile_device" })
-    @Type(() => MobileDeviceConfigurationProfileScopeExclusionsMobileDevicesMobileDevice)
-    mobileDevice?: MobileDeviceConfigurationProfileScopeExclusionsMobileDevicesMobileDevice;
+    @Type(() => MobileDeviceConfigurationProfileSchemasMobileDevice)
+    mobileDevice?: MobileDeviceConfigurationProfileSchemasMobileDevice;
 }
 
-export class MobileDeviceConfigurationProfileScopeExclusionsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileNetworkSegment extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -177,161 +177,157 @@ export class MobileDeviceConfigurationProfileScopeExclusionsNetworkSegmentsNetwo
     uid?: string;
 }
 
-export class MobileDeviceConfigurationProfileScopeExclusionsNetworkSegments extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileNetworkSegments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "network_segment" })
-    @Type(() => MobileDeviceConfigurationProfileScopeExclusionsNetworkSegmentsNetworkSegment)
-    networkSegment?: MobileDeviceConfigurationProfileScopeExclusionsNetworkSegmentsNetworkSegment;
+    @Type(() => MobileDeviceConfigurationProfileNetworkSegment)
+    networkSegment?: MobileDeviceConfigurationProfileNetworkSegment;
 }
 
-export class MobileDeviceConfigurationProfileScopeExclusionsUserGroups extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class MobileDeviceConfigurationProfileScopeExclusionsUsersUser extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileUser extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
 }
 
-export class MobileDeviceConfigurationProfileScopeExclusionsUsers extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
-    @Type(() => MobileDeviceConfigurationProfileScopeExclusionsUsersUser)
-    user?: MobileDeviceConfigurationProfileScopeExclusionsUsersUser;
+    @Type(() => MobileDeviceConfigurationProfileUser)
+    user?: MobileDeviceConfigurationProfileUser;
 }
 
-export class MobileDeviceConfigurationProfileScopeExclusions extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeExclusionsBuildings })
+export class MobileDeviceConfigurationProfileExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileSchemasBuildings })
     @Expose({ name: "buildings" })
-    @Type(() => MobileDeviceConfigurationProfileScopeExclusionsBuildings)
-    buildings?: MobileDeviceConfigurationProfileScopeExclusionsBuildings[];
+    @Type(() => MobileDeviceConfigurationProfileSchemasBuildings)
+    buildings?: MobileDeviceConfigurationProfileSchemasBuildings[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeExclusionsDepartments })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileSchemasDepartments })
     @Expose({ name: "departments" })
-    @Type(() => MobileDeviceConfigurationProfileScopeExclusionsDepartments)
-    departments?: MobileDeviceConfigurationProfileScopeExclusionsDepartments[];
+    @Type(() => MobileDeviceConfigurationProfileSchemasDepartments)
+    departments?: MobileDeviceConfigurationProfileSchemasDepartments[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeExclusionsIbeacons })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileIbeacons })
     @Expose({ name: "ibeacons" })
-    @Type(() => MobileDeviceConfigurationProfileScopeExclusionsIbeacons)
-    ibeacons?: MobileDeviceConfigurationProfileScopeExclusionsIbeacons[];
+    @Type(() => MobileDeviceConfigurationProfileIbeacons)
+    ibeacons?: MobileDeviceConfigurationProfileIbeacons[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeExclusionsJssUserGroups })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileSchemasJssUserGroups })
     @Expose({ name: "jss_user_groups" })
-    @Type(() => MobileDeviceConfigurationProfileScopeExclusionsJssUserGroups)
-    jssUserGroups?: MobileDeviceConfigurationProfileScopeExclusionsJssUserGroups[];
+    @Type(() => MobileDeviceConfigurationProfileSchemasJssUserGroups)
+    jssUserGroups?: MobileDeviceConfigurationProfileSchemasJssUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeExclusionsJssUsers })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileSchemasJssUsers })
     @Expose({ name: "jss_users" })
-    @Type(() => MobileDeviceConfigurationProfileScopeExclusionsJssUsers)
-    jssUsers?: MobileDeviceConfigurationProfileScopeExclusionsJssUsers[];
+    @Type(() => MobileDeviceConfigurationProfileSchemasJssUsers)
+    jssUsers?: MobileDeviceConfigurationProfileSchemasJssUsers[];
 
-    @SpeakeasyMetadata({
-        elemType: MobileDeviceConfigurationProfileScopeExclusionsMobileDeviceGroups,
-    })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileSchemasMobileDeviceGroups })
     @Expose({ name: "mobile_device_groups" })
-    @Type(() => MobileDeviceConfigurationProfileScopeExclusionsMobileDeviceGroups)
-    mobileDeviceGroups?: MobileDeviceConfigurationProfileScopeExclusionsMobileDeviceGroups[];
+    @Type(() => MobileDeviceConfigurationProfileSchemasMobileDeviceGroups)
+    mobileDeviceGroups?: MobileDeviceConfigurationProfileSchemasMobileDeviceGroups[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeExclusionsMobileDevices })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileSchemasMobileDevices })
     @Expose({ name: "mobile_devices" })
-    @Type(() => MobileDeviceConfigurationProfileScopeExclusionsMobileDevices)
-    mobileDevices?: MobileDeviceConfigurationProfileScopeExclusionsMobileDevices[];
+    @Type(() => MobileDeviceConfigurationProfileSchemasMobileDevices)
+    mobileDevices?: MobileDeviceConfigurationProfileSchemasMobileDevices[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeExclusionsNetworkSegments })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileNetworkSegments })
     @Expose({ name: "network_segments" })
-    @Type(() => MobileDeviceConfigurationProfileScopeExclusionsNetworkSegments)
-    networkSegments?: MobileDeviceConfigurationProfileScopeExclusionsNetworkSegments[];
+    @Type(() => MobileDeviceConfigurationProfileNetworkSegments)
+    networkSegments?: MobileDeviceConfigurationProfileNetworkSegments[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeExclusionsUserGroups })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileUserGroups })
     @Expose({ name: "user_groups" })
-    @Type(() => MobileDeviceConfigurationProfileScopeExclusionsUserGroups)
-    userGroups?: MobileDeviceConfigurationProfileScopeExclusionsUserGroups[];
+    @Type(() => MobileDeviceConfigurationProfileUserGroups)
+    userGroups?: MobileDeviceConfigurationProfileUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeExclusionsUsers })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileUsers })
     @Expose({ name: "users" })
-    @Type(() => MobileDeviceConfigurationProfileScopeExclusionsUsers)
-    users?: MobileDeviceConfigurationProfileScopeExclusionsUsers[];
+    @Type(() => MobileDeviceConfigurationProfileUsers)
+    users?: MobileDeviceConfigurationProfileUsers[];
 }
 
-export class MobileDeviceConfigurationProfileScopeJssUserGroups extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileJssUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class MobileDeviceConfigurationProfileScopeJssUsers extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileJssUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     @Type(() => IdName)
     user?: IdName;
 }
 
-export class MobileDeviceConfigurationProfileScopeLimitationsIbeacons extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileSchemasIbeacons extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "ibeacon" })
     @Type(() => IdName)
     ibeacon?: IdName;
 }
 
-export class MobileDeviceConfigurationProfileScopeLimitationsNetworkSegments extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileSchemasNetworkSegments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "network_segment" })
     @Type(() => IdName)
     networkSegment?: IdName;
 }
 
-export class MobileDeviceConfigurationProfileScopeLimitationsUserGroups extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileSchemasUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class MobileDeviceConfigurationProfileScopeLimitationsUsers extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileSchemasUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     @Type(() => IdName)
     user?: IdName;
 }
 
-export class MobileDeviceConfigurationProfileScopeLimitations extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeLimitationsIbeacons })
+export class MobileDeviceConfigurationProfileLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileSchemasIbeacons })
     @Expose({ name: "ibeacons" })
-    @Type(() => MobileDeviceConfigurationProfileScopeLimitationsIbeacons)
-    ibeacons?: MobileDeviceConfigurationProfileScopeLimitationsIbeacons[];
+    @Type(() => MobileDeviceConfigurationProfileSchemasIbeacons)
+    ibeacons?: MobileDeviceConfigurationProfileSchemasIbeacons[];
 
-    @SpeakeasyMetadata({
-        elemType: MobileDeviceConfigurationProfileScopeLimitationsNetworkSegments,
-    })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileSchemasNetworkSegments })
     @Expose({ name: "network_segments" })
-    @Type(() => MobileDeviceConfigurationProfileScopeLimitationsNetworkSegments)
-    networkSegments?: MobileDeviceConfigurationProfileScopeLimitationsNetworkSegments[];
+    @Type(() => MobileDeviceConfigurationProfileSchemasNetworkSegments)
+    networkSegments?: MobileDeviceConfigurationProfileSchemasNetworkSegments[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeLimitationsUserGroups })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileSchemasUserGroups })
     @Expose({ name: "user_groups" })
-    @Type(() => MobileDeviceConfigurationProfileScopeLimitationsUserGroups)
-    userGroups?: MobileDeviceConfigurationProfileScopeLimitationsUserGroups[];
+    @Type(() => MobileDeviceConfigurationProfileSchemasUserGroups)
+    userGroups?: MobileDeviceConfigurationProfileSchemasUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeLimitationsUsers })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileSchemasUsers })
     @Expose({ name: "users" })
-    @Type(() => MobileDeviceConfigurationProfileScopeLimitationsUsers)
-    users?: MobileDeviceConfigurationProfileScopeLimitationsUsers[];
+    @Type(() => MobileDeviceConfigurationProfileSchemasUsers)
+    users?: MobileDeviceConfigurationProfileSchemasUsers[];
 }
 
-export class MobileDeviceConfigurationProfileScopeMobileDeviceGroups extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileMobileDeviceGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "mobile_device_group" })
     @Type(() => IdName)
     mobileDeviceGroup?: IdName;
 }
 
-export class MobileDeviceConfigurationProfileScopeMobileDevicesMobileDevice extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileMobileDevice extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -352,11 +348,11 @@ export class MobileDeviceConfigurationProfileScopeMobileDevicesMobileDevice exte
     wifiMacAddress?: string;
 }
 
-export class MobileDeviceConfigurationProfileScopeMobileDevices extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileMobileDevices extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "mobile_device" })
-    @Type(() => MobileDeviceConfigurationProfileScopeMobileDevicesMobileDevice)
-    mobileDevice?: MobileDeviceConfigurationProfileScopeMobileDevicesMobileDevice;
+    @Type(() => MobileDeviceConfigurationProfileMobileDevice)
+    mobileDevice?: MobileDeviceConfigurationProfileMobileDevice;
 }
 
 export class MobileDeviceConfigurationProfileScope extends SpeakeasyBase {
@@ -368,61 +364,61 @@ export class MobileDeviceConfigurationProfileScope extends SpeakeasyBase {
     @Expose({ name: "all_mobile_devices" })
     allMobileDevices?: boolean;
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeBuildings })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileBuildings })
     @Expose({ name: "buildings" })
-    @Type(() => MobileDeviceConfigurationProfileScopeBuildings)
-    buildings?: MobileDeviceConfigurationProfileScopeBuildings[];
+    @Type(() => MobileDeviceConfigurationProfileBuildings)
+    buildings?: MobileDeviceConfigurationProfileBuildings[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeDepartments })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileDepartments })
     @Expose({ name: "departments" })
-    @Type(() => MobileDeviceConfigurationProfileScopeDepartments)
-    departments?: MobileDeviceConfigurationProfileScopeDepartments[];
+    @Type(() => MobileDeviceConfigurationProfileDepartments)
+    departments?: MobileDeviceConfigurationProfileDepartments[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "exclusions" })
-    @Type(() => MobileDeviceConfigurationProfileScopeExclusions)
-    exclusions?: MobileDeviceConfigurationProfileScopeExclusions;
+    @Type(() => MobileDeviceConfigurationProfileExclusions)
+    exclusions?: MobileDeviceConfigurationProfileExclusions;
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeJssUserGroups })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileJssUserGroups })
     @Expose({ name: "jss_user_groups" })
-    @Type(() => MobileDeviceConfigurationProfileScopeJssUserGroups)
-    jssUserGroups?: MobileDeviceConfigurationProfileScopeJssUserGroups[];
+    @Type(() => MobileDeviceConfigurationProfileJssUserGroups)
+    jssUserGroups?: MobileDeviceConfigurationProfileJssUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeJssUsers })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileJssUsers })
     @Expose({ name: "jss_users" })
-    @Type(() => MobileDeviceConfigurationProfileScopeJssUsers)
-    jssUsers?: MobileDeviceConfigurationProfileScopeJssUsers[];
+    @Type(() => MobileDeviceConfigurationProfileJssUsers)
+    jssUsers?: MobileDeviceConfigurationProfileJssUsers[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "limitations" })
-    @Type(() => MobileDeviceConfigurationProfileScopeLimitations)
-    limitations?: MobileDeviceConfigurationProfileScopeLimitations;
+    @Type(() => MobileDeviceConfigurationProfileLimitations)
+    limitations?: MobileDeviceConfigurationProfileLimitations;
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeMobileDeviceGroups })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileMobileDeviceGroups })
     @Expose({ name: "mobile_device_groups" })
-    @Type(() => MobileDeviceConfigurationProfileScopeMobileDeviceGroups)
-    mobileDeviceGroups?: MobileDeviceConfigurationProfileScopeMobileDeviceGroups[];
+    @Type(() => MobileDeviceConfigurationProfileMobileDeviceGroups)
+    mobileDeviceGroups?: MobileDeviceConfigurationProfileMobileDeviceGroups[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileScopeMobileDevices })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileMobileDevices })
     @Expose({ name: "mobile_devices" })
-    @Type(() => MobileDeviceConfigurationProfileScopeMobileDevices)
-    mobileDevices?: MobileDeviceConfigurationProfileScopeMobileDevices[];
+    @Type(() => MobileDeviceConfigurationProfileMobileDevices)
+    mobileDevices?: MobileDeviceConfigurationProfileMobileDevices[];
 }
 
-export class MobileDeviceConfigurationProfileSelfServiceSecurityName extends SpeakeasyBase {
+export class SecurityName extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "removal_disallowed" })
     removalDisallowed?: string;
 }
 
-export class MobileDeviceConfigurationProfileSelfServiceSelfServiceCategories extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileSelfServiceCategories extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "category" })
     @Type(() => Category)
     category?: Category;
 }
 
-export class MobileDeviceConfigurationProfileSelfServiceSelfServiceIcon extends SpeakeasyBase {
+export class MobileDeviceConfigurationProfileSelfServiceIcon extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "data" })
     data?: string;
@@ -443,15 +439,13 @@ export class MobileDeviceConfigurationProfileSelfService extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "security_name" })
-    @Type(() => MobileDeviceConfigurationProfileSelfServiceSecurityName)
-    securityName?: MobileDeviceConfigurationProfileSelfServiceSecurityName;
+    @Type(() => SecurityName)
+    securityName?: SecurityName;
 
-    @SpeakeasyMetadata({
-        elemType: MobileDeviceConfigurationProfileSelfServiceSelfServiceCategories,
-    })
+    @SpeakeasyMetadata({ elemType: MobileDeviceConfigurationProfileSelfServiceCategories })
     @Expose({ name: "self_service_categories" })
-    @Type(() => MobileDeviceConfigurationProfileSelfServiceSelfServiceCategories)
-    selfServiceCategories?: MobileDeviceConfigurationProfileSelfServiceSelfServiceCategories[];
+    @Type(() => MobileDeviceConfigurationProfileSelfServiceCategories)
+    selfServiceCategories?: MobileDeviceConfigurationProfileSelfServiceCategories[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "self_service_description" })
@@ -459,8 +453,8 @@ export class MobileDeviceConfigurationProfileSelfService extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "self_service_icon" })
-    @Type(() => MobileDeviceConfigurationProfileSelfServiceSelfServiceIcon)
-    selfServiceIcon?: MobileDeviceConfigurationProfileSelfServiceSelfServiceIcon;
+    @Type(() => MobileDeviceConfigurationProfileSelfServiceIcon)
+    selfServiceIcon?: MobileDeviceConfigurationProfileSelfServiceIcon;
 }
 
 export class MobileDeviceConfigurationProfile extends SpeakeasyBase {

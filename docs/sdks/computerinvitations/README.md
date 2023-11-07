@@ -1,5 +1,5 @@
 # Computerinvitations
-(*computerinvitations*)
+(*.computerinvitations*)
 
 ### Available Operations
 
@@ -31,6 +31,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.computerinvitations.createComputerInvitationsById({
     id: 426166,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -72,6 +73,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     invitation: 107268,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -111,6 +113,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.computerinvitations.deleteComputerInvitationById({
     id: 620598,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -152,6 +155,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     invitation: 706715,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -189,6 +193,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerinvitations.findComputerInvitations();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -229,6 +234,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 737242,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -268,6 +274,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.computerinvitations.findComputerInvitationsByInvitation({
     invitation: 681787,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

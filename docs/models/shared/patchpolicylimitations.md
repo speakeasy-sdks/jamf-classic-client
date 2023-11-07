@@ -1,0 +1,9 @@
+# PatchPolicyLimitations
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ibeacons`                                                                                             | [shared.PatchPolicySchemasIbeacons](../../models/shared/patchpolicyschemasibeacons.md)[]               | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `networkSegments`                                                                                      | [shared.PatchPolicySchemasNetworkSegments](../../models/shared/patchpolicyschemasnetworksegments.md)[] | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |

@@ -1,5 +1,5 @@
 # Mobiledevicehistory
-(*mobiledevicehistory*)
+(*.mobiledevicehistory*)
 
 ### Available Operations
 
@@ -35,6 +35,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 84752,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -62,7 +63,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceHistoryByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceHistoryByIdSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -74,8 +75,9 @@ import { FindMobileDeviceHistoryByIdSubsetSubset } from "jamf-classic-sdk-nodejs
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByIdSubset({
     id: 718186,
-    subset: FindMobileDeviceHistoryByIdSubsetSubset.General,
+    subset: FindMobileDeviceHistoryByIdSubsetPathParamSubset.General,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -117,6 +119,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     macaddress: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -144,7 +147,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceHistoryByMacAddressSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceHistoryByMacAddressSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -156,8 +159,9 @@ import { FindMobileDeviceHistoryByMacAddressSubsetSubset } from "jamf-classic-sd
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByMacAddressSubset({
     macaddress: "string",
-    subset: FindMobileDeviceHistoryByMacAddressSubsetSubset.Applications,
+    subset: FindMobileDeviceHistoryByMacAddressSubsetPathParamSubset.Applications,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -199,6 +203,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -226,7 +231,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceHistoryByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceHistoryByNameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -238,8 +243,9 @@ import { FindMobileDeviceHistoryByNameSubsetSubset } from "jamf-classic-sdk-node
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByNameSubset({
     name: "string",
-    subset: FindMobileDeviceHistoryByNameSubsetSubset.UserLocation,
+    subset: FindMobileDeviceHistoryByNameSubsetPathParamSubset.UserLocation,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -281,6 +287,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     serialnumber: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -308,7 +315,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceHistoryBySerialNumberSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceHistoryBySerialNumberSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -320,8 +327,9 @@ import { FindMobileDeviceHistoryBySerialNumberSubsetSubset } from "jamf-classic-
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryBySerialNumberSubset({
     serialnumber: "string",
-    subset: FindMobileDeviceHistoryBySerialNumberSubsetSubset.General,
+    subset: FindMobileDeviceHistoryBySerialNumberSubsetPathParamSubset.General,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -363,6 +371,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     udid: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -390,7 +399,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceHistoryByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceHistoryByUDIDSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -401,9 +410,10 @@ import { FindMobileDeviceHistoryByUDIDSubsetSubset } from "jamf-classic-sdk-node
   });
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByUDIDSubset({
-    subset: FindMobileDeviceHistoryByUDIDSubsetSubset.ManagementCommands,
+    subset: FindMobileDeviceHistoryByUDIDSubsetPathParamSubset.ManagementCommands,
     udid: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

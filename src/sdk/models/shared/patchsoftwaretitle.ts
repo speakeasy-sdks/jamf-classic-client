@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { CategoryObject } from "./categoryobject";
 import { Expose, Type } from "class-transformer";
 
-export class PatchSoftwareTitleNotifications extends SpeakeasyBase {
+export class Notifications extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "email_notification" })
     emailNotification?: boolean;
@@ -16,7 +16,7 @@ export class PatchSoftwareTitleNotifications extends SpeakeasyBase {
     webNotification?: boolean;
 }
 
-export class PatchSoftwareTitleVersionsVersionPackage extends SpeakeasyBase {
+export class PatchSoftwareTitlePackage extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -26,11 +26,11 @@ export class PatchSoftwareTitleVersionsVersionPackage extends SpeakeasyBase {
     name?: string;
 }
 
-export class PatchSoftwareTitleVersionsVersion extends SpeakeasyBase {
+export class PatchSoftwareTitleVersion extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "package" })
-    @Type(() => PatchSoftwareTitleVersionsVersionPackage)
-    package?: PatchSoftwareTitleVersionsVersionPackage;
+    @Type(() => PatchSoftwareTitlePackage)
+    package?: PatchSoftwareTitlePackage;
 
     @SpeakeasyMetadata()
     @Expose({ name: "software_version" })
@@ -40,8 +40,8 @@ export class PatchSoftwareTitleVersionsVersion extends SpeakeasyBase {
 export class PatchSoftwareTitleVersions extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "version" })
-    @Type(() => PatchSoftwareTitleVersionsVersion)
-    version?: PatchSoftwareTitleVersionsVersion;
+    @Type(() => PatchSoftwareTitleVersion)
+    version?: PatchSoftwareTitleVersion;
 }
 
 export class PatchSoftwareTitle extends SpeakeasyBase {
@@ -64,8 +64,8 @@ export class PatchSoftwareTitle extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "notifications" })
-    @Type(() => PatchSoftwareTitleNotifications)
-    notifications?: PatchSoftwareTitleNotifications;
+    @Type(() => Notifications)
+    notifications?: Notifications;
 
     @SpeakeasyMetadata()
     @Expose({ name: "source_id" })

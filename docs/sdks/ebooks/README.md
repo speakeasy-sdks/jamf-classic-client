@@ -1,5 +1,5 @@
 # Ebooks
-(*ebooks*)
+(*.ebooks*)
 
 ### Available Operations
 
@@ -34,6 +34,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.ebooks.createEBookById({
     id: 711798,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -75,6 +76,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 274478,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -115,6 +117,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -152,6 +155,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.ebooks.findEBooks();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -191,6 +195,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.ebooks.findEBooksById({
     id: 38542,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -232,6 +237,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -259,7 +265,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindEBooksByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindEBooksByNameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -271,8 +277,9 @@ import { FindEBooksByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/m
 
   const res = await sdk.ebooks.findEBooksByNameSubset({
     name: "string",
-    subset: FindEBooksByNameSubsetSubset.SelfService,
+    subset: FindEBooksByNameSubsetPathParamSubset.SelfService,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -301,7 +308,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindEbookssByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindEbookssByIdSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -313,8 +320,9 @@ import { FindEbookssByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/mo
 
   const res = await sdk.ebooks.findEbookssByIdSubset({
     id: "<ID>",
-    subset: FindEbookssByIdSubsetSubset.General,
+    subset: FindEbookssByIdSubsetPathParamSubset.General,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -356,6 +364,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 271483,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -395,6 +404,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.ebooks.updateEBookByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

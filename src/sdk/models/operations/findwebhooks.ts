@@ -3,10 +3,16 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class FindWebhooksResponse extends SpeakeasyBase {
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata({ elemType: shared.Webhooks })
+    twoHundredApplicationJsonWebhooks?: shared.Webhooks[];
+
     @SpeakeasyMetadata()
     body?: Uint8Array;
 
@@ -27,10 +33,4 @@ export class FindWebhooksResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
-
-    /**
-     * OK
-     */
-    @SpeakeasyMetadata({ elemType: shared.Webhooks })
-    webhooks?: shared.Webhooks[];
 }

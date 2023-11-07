@@ -1,5 +1,5 @@
 # Patchreports
-(*patchreports*)
+(*.patchreports*)
 
 ### Available Operations
 
@@ -28,6 +28,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.patchreports.patchreportsPatchsoftwaretitleidByIdGet({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -71,6 +72,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: "<ID>",
     version: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

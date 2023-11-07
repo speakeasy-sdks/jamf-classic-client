@@ -1,5 +1,5 @@
 # Peripheraltypes
-(*peripheraltypes*)
+(*.peripheraltypes*)
 
 ### Available Operations
 
@@ -29,6 +29,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.peripheraltypes.createPeripheralTypeById({
     id: 433976,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -70,6 +71,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 534002,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -107,6 +109,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.peripheraltypes.findPeripheralTypes();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -147,6 +150,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 367116,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -186,6 +190,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.peripheraltypes.updatePeripheralTypeById({
     id: 343809,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

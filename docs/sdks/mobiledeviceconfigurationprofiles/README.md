@@ -1,5 +1,5 @@
 # Mobiledeviceconfigurationprofiles
-(*mobiledeviceconfigurationprofiles*)
+(*.mobiledeviceconfigurationprofiles*)
 
 ### Available Operations
 
@@ -34,6 +34,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceconfigurationprofiles.createMobileDeviceConfigurationProfileById({
     id: 357736,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -75,6 +76,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 401787,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -115,6 +117,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -152,6 +155,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfiles();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -192,6 +196,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 994932,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -219,7 +224,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceConfigurationProfilesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceConfigurationProfilesByIdSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -231,8 +236,9 @@ import { FindMobileDeviceConfigurationProfilesByIdSubsetSubset } from "jamf-clas
 
   const res = await sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesByIdSubset({
     id: 1927,
-    subset: FindMobileDeviceConfigurationProfilesByIdSubsetSubset.Scope,
+    subset: FindMobileDeviceConfigurationProfilesByIdSubsetPathParamSubset.Scope,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -274,6 +280,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -301,7 +308,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceConfigurationProfilesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceConfigurationProfilesByNameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -313,8 +320,9 @@ import { FindMobileDeviceConfigurationProfilesByNameSubsetSubset } from "jamf-cl
 
   const res = await sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesByNameSubset({
     name: "string",
-    subset: FindMobileDeviceConfigurationProfilesByNameSubsetSubset.General,
+    subset: FindMobileDeviceConfigurationProfilesByNameSubsetPathParamSubset.General,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -356,6 +364,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 879870,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -395,6 +404,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceconfigurationprofiles.updateMobileDeviceConfigurationProfileByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

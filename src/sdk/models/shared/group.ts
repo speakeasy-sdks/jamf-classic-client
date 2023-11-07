@@ -13,7 +13,7 @@ export enum GroupAccessLevel {
     GroupAccess = "Group Access",
 }
 
-export class GroupMembers extends SpeakeasyBase {
+export class Members extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     @Type(() => IdName)
@@ -27,83 +27,83 @@ export enum GroupPrivilegeSet {
     Custom = "Custom",
 }
 
-export class GroupPrivilegesCasperAdmin extends SpeakeasyBase {
+export class GroupCasperAdmin extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "privilege" })
     privilege?: string;
 }
 
-export class GroupPrivilegesCasperImaging extends SpeakeasyBase {
+export class GroupCasperImaging extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "privilege" })
     privilege?: string;
 }
 
-export class GroupPrivilegesCasperRemote extends SpeakeasyBase {
+export class GroupCasperRemote extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "privilege" })
     privilege?: string;
 }
 
-export class GroupPrivilegesJssActions extends SpeakeasyBase {
+export class GroupJssActions extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "privilege" })
     privilege?: string;
 }
 
-export class GroupPrivilegesJssObjects extends SpeakeasyBase {
+export class GroupJssObjects extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "privilege" })
     privilege?: string;
 }
 
-export class GroupPrivilegesJssSettings extends SpeakeasyBase {
+export class GroupJssSettings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "privilege" })
     privilege?: string;
 }
 
-export class GroupPrivilegesRecon extends SpeakeasyBase {
+export class GroupRecon extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "privilege" })
     privilege?: string;
 }
 
 export class GroupPrivileges extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: GroupPrivilegesCasperAdmin })
+    @SpeakeasyMetadata({ elemType: GroupCasperAdmin })
     @Expose({ name: "casper_admin" })
-    @Type(() => GroupPrivilegesCasperAdmin)
-    casperAdmin?: GroupPrivilegesCasperAdmin[];
+    @Type(() => GroupCasperAdmin)
+    casperAdmin?: GroupCasperAdmin[];
 
-    @SpeakeasyMetadata({ elemType: GroupPrivilegesCasperImaging })
+    @SpeakeasyMetadata({ elemType: GroupCasperImaging })
     @Expose({ name: "casper_imaging" })
-    @Type(() => GroupPrivilegesCasperImaging)
-    casperImaging?: GroupPrivilegesCasperImaging[];
+    @Type(() => GroupCasperImaging)
+    casperImaging?: GroupCasperImaging[];
 
-    @SpeakeasyMetadata({ elemType: GroupPrivilegesCasperRemote })
+    @SpeakeasyMetadata({ elemType: GroupCasperRemote })
     @Expose({ name: "casper_remote" })
-    @Type(() => GroupPrivilegesCasperRemote)
-    casperRemote?: GroupPrivilegesCasperRemote[];
+    @Type(() => GroupCasperRemote)
+    casperRemote?: GroupCasperRemote[];
 
-    @SpeakeasyMetadata({ elemType: GroupPrivilegesJssActions })
+    @SpeakeasyMetadata({ elemType: GroupJssActions })
     @Expose({ name: "jss_actions" })
-    @Type(() => GroupPrivilegesJssActions)
-    jssActions?: GroupPrivilegesJssActions[];
+    @Type(() => GroupJssActions)
+    jssActions?: GroupJssActions[];
 
-    @SpeakeasyMetadata({ elemType: GroupPrivilegesJssObjects })
+    @SpeakeasyMetadata({ elemType: GroupJssObjects })
     @Expose({ name: "jss_objects" })
-    @Type(() => GroupPrivilegesJssObjects)
-    jssObjects?: GroupPrivilegesJssObjects[];
+    @Type(() => GroupJssObjects)
+    jssObjects?: GroupJssObjects[];
 
-    @SpeakeasyMetadata({ elemType: GroupPrivilegesJssSettings })
+    @SpeakeasyMetadata({ elemType: GroupJssSettings })
     @Expose({ name: "jss_settings" })
-    @Type(() => GroupPrivilegesJssSettings)
-    jssSettings?: GroupPrivilegesJssSettings[];
+    @Type(() => GroupJssSettings)
+    jssSettings?: GroupJssSettings[];
 
-    @SpeakeasyMetadata({ elemType: GroupPrivilegesRecon })
+    @SpeakeasyMetadata({ elemType: GroupRecon })
     @Expose({ name: "recon" })
-    @Type(() => GroupPrivilegesRecon)
-    recon?: GroupPrivilegesRecon[];
+    @Type(() => GroupRecon)
+    recon?: GroupRecon[];
 }
 
 export class Group extends SpeakeasyBase {
@@ -115,10 +115,10 @@ export class Group extends SpeakeasyBase {
     @Expose({ name: "id" })
     id?: number;
 
-    @SpeakeasyMetadata({ elemType: GroupMembers })
+    @SpeakeasyMetadata({ elemType: Members })
     @Expose({ name: "members" })
-    @Type(() => GroupMembers)
-    members?: GroupMembers[];
+    @Type(() => Members)
+    members?: Members[];
 
     /**
      * Group name

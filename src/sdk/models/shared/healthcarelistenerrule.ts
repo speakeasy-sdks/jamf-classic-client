@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export enum HealthcareListenerRuleMdmCommand {
+export enum MdmCommand {
     EraseDevice = "EraseDevice",
     DeviceLock = "DeviceLock",
     ClearPasscode = "ClearPasscode",
@@ -13,13 +13,13 @@ export enum HealthcareListenerRuleMdmCommand {
     DisableLostMode = "DisableLostMode",
 }
 
-export class HealthcareListenerRuleNotificationEmails extends SpeakeasyBase {
+export class NotificationEmails extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "email" })
     email?: string;
 }
 
-export enum HealthcareListenerRuleOperatingSystem {
+export enum OperatingSystem {
     IPhone = "iPhone",
     Tv = "TV",
 }
@@ -50,7 +50,7 @@ export class HealthcareListenerRule extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "mdm_command" })
-    mdmCommand?: HealthcareListenerRuleMdmCommand;
+    mdmCommand?: MdmCommand;
 
     @SpeakeasyMetadata()
     @Expose({ name: "mdm_command_additional_data" })
@@ -62,8 +62,8 @@ export class HealthcareListenerRule extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "notification_emails" })
-    @Type(() => HealthcareListenerRuleNotificationEmails)
-    notificationEmails?: HealthcareListenerRuleNotificationEmails;
+    @Type(() => NotificationEmails)
+    notificationEmails?: NotificationEmails;
 
     @SpeakeasyMetadata()
     @Expose({ name: "notification_enabled" })
@@ -79,5 +79,5 @@ export class HealthcareListenerRule extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "operating_system" })
-    operatingSystem?: HealthcareListenerRuleOperatingSystem;
+    operatingSystem?: OperatingSystem;
 }

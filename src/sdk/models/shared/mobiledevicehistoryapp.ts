@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum MobileDeviceHistoryAppManagementStatus {
+export enum ManagementStatus {
     Unmanaged = "Unmanaged",
     Managed = "Managed",
 }
@@ -21,7 +21,7 @@ export class MobileDeviceHistoryApp extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "management_status" })
-    managementStatus?: MobileDeviceHistoryAppManagementStatus;
+    managementStatus?: ManagementStatus;
 
     @SpeakeasyMetadata()
     @Expose({ name: "name" })

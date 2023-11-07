@@ -1,5 +1,5 @@
 # Mobiledeviceapplications
-(*mobiledeviceapplications*)
+(*.mobiledeviceapplications*)
 
 ### Available Operations
 
@@ -41,6 +41,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 622125,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -80,6 +81,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceapplications.deleteMobileDeviceApplicationByBundleID({
     bundleid: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -122,6 +124,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     version: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -161,6 +164,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceapplications.deleteMobileDeviceApplicationById({
     id: 849404,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -202,6 +206,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -239,6 +244,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceapplications.findMobileDeviceApplications();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -278,6 +284,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceapplications.findMobileDeviceApplicationsByBundleID({
     bundleid: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -320,6 +327,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     version: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -359,6 +367,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceapplications.findMobileDeviceApplicationsById({
     id: 735053,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -400,6 +409,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -427,7 +437,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceApplicationsByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceApplicationsByNameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -439,8 +449,9 @@ import { FindMobileDeviceApplicationsByNameSubsetSubset } from "jamf-classic-sdk
 
   const res = await sdk.mobiledeviceapplications.findMobileDeviceApplicationsByNameSubset({
     name: "string",
-    subset: FindMobileDeviceApplicationsByNameSubsetSubset.AppConfiguration,
+    subset: FindMobileDeviceApplicationsByNameSubsetPathParamSubset.AppConfiguration,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -469,7 +480,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceAppsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceAppsByIdSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -481,8 +492,9 @@ import { FindMobileDeviceAppsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/di
 
   const res = await sdk.mobiledeviceapplications.findMobileDeviceAppsByIdSubset({
     id: 285156,
-    subset: FindMobileDeviceAppsByIdSubsetSubset.General,
+    subset: FindMobileDeviceAppsByIdSubsetPathParamSubset.General,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -523,6 +535,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceapplications.updateMobileDeviceApplicationByBundleID({
     bundleid: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -565,6 +578,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     version: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -605,6 +619,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 539550,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -644,6 +659,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceapplications.updateMobileDeviceApplicationByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

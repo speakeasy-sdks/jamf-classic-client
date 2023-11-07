@@ -7,7 +7,7 @@ import { Criterion } from "./criterion";
 import { SiteObject } from "./siteobject";
 import { Expose, Type } from "class-transformer";
 
-export class ComputerGroupComputersComputer extends SpeakeasyBase {
+export class ComputerGroupComputer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "alt_mac_address" })
     altMacAddress?: string;
@@ -35,8 +35,8 @@ export class ComputerGroupComputersComputer extends SpeakeasyBase {
 export class ComputerGroupComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
-    @Type(() => ComputerGroupComputersComputer)
-    computer?: ComputerGroupComputersComputer;
+    @Type(() => ComputerGroupComputer)
+    computer?: ComputerGroupComputer;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })

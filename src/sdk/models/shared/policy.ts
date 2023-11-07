@@ -8,17 +8,17 @@ import { IdName } from "./idname";
 import { SiteObject } from "./siteobject";
 import { Expose, Type } from "class-transformer";
 
-export enum PolicyAccountMaintenanceAccountsAccountAction {
+export enum PolicySchemasAccountMaintenanceAction {
     Create = "Create",
     Reset = "Reset",
     Delete = "Delete",
     DisableFileVault = "DisableFileVault",
 }
 
-export class PolicyAccountMaintenanceAccountsAccount extends SpeakeasyBase {
+export class PolicyAccount extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "action" })
-    action?: PolicyAccountMaintenanceAccountsAccountAction;
+    action?: PolicySchemasAccountMaintenanceAction;
 
     @SpeakeasyMetadata()
     @Expose({ name: "admin" })
@@ -57,18 +57,18 @@ export class PolicyAccountMaintenanceAccountsAccount extends SpeakeasyBase {
     username?: string;
 }
 
-export class PolicyAccountMaintenanceAccounts extends SpeakeasyBase {
+export class PolicyAccounts extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "account" })
-    @Type(() => PolicyAccountMaintenanceAccountsAccount)
-    account?: PolicyAccountMaintenanceAccountsAccount;
+    @Type(() => PolicyAccount)
+    account?: PolicyAccount;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class PolicyAccountMaintenanceDirectoryBindings extends SpeakeasyBase {
+export class PolicyDirectoryBindings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "binding" })
     @Type(() => IdName)
@@ -79,7 +79,7 @@ export class PolicyAccountMaintenanceDirectoryBindings extends SpeakeasyBase {
     size?: number;
 }
 
-export enum PolicyAccountMaintenanceManagementAccountAction {
+export enum PolicyAction {
     Specified = "specified",
     Random = "random",
     Reset = "reset",
@@ -87,10 +87,10 @@ export enum PolicyAccountMaintenanceManagementAccountAction {
     FileVaultDisable = "fileVaultDisable",
 }
 
-export class PolicyAccountMaintenanceManagementAccount extends SpeakeasyBase {
+export class ManagementAccount extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "action" })
-    action?: PolicyAccountMaintenanceManagementAccountAction;
+    action?: PolicyAction;
 
     @SpeakeasyMetadata()
     @Expose({ name: "managed_password" })
@@ -104,58 +104,58 @@ export class PolicyAccountMaintenanceManagementAccount extends SpeakeasyBase {
     managedPasswordLength?: number;
 }
 
-export enum PolicyAccountMaintenanceOpenFirmwareEfiPasswordOfMode {
+export enum OfMode {
     Command = "command",
     None = "none",
 }
 
-export class PolicyAccountMaintenanceOpenFirmwareEfiPassword extends SpeakeasyBase {
+export class OpenFirmwareEfiPassword extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "of_mode" })
-    ofMode?: PolicyAccountMaintenanceOpenFirmwareEfiPasswordOfMode;
+    ofMode?: OfMode;
 
     @SpeakeasyMetadata()
     @Expose({ name: "of_password" })
     ofPassword?: string;
 }
 
-export class PolicyAccountMaintenance extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: PolicyAccountMaintenanceAccounts })
+export class AccountMaintenance extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: PolicyAccounts })
     @Expose({ name: "accounts" })
-    @Type(() => PolicyAccountMaintenanceAccounts)
-    accounts?: PolicyAccountMaintenanceAccounts[];
+    @Type(() => PolicyAccounts)
+    accounts?: PolicyAccounts[];
 
-    @SpeakeasyMetadata({ elemType: PolicyAccountMaintenanceDirectoryBindings })
+    @SpeakeasyMetadata({ elemType: PolicyDirectoryBindings })
     @Expose({ name: "directory_bindings" })
-    @Type(() => PolicyAccountMaintenanceDirectoryBindings)
-    directoryBindings?: PolicyAccountMaintenanceDirectoryBindings[];
+    @Type(() => PolicyDirectoryBindings)
+    directoryBindings?: PolicyDirectoryBindings[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "management_account" })
-    @Type(() => PolicyAccountMaintenanceManagementAccount)
-    managementAccount?: PolicyAccountMaintenanceManagementAccount;
+    @Type(() => ManagementAccount)
+    managementAccount?: ManagementAccount;
 
     @SpeakeasyMetadata()
     @Expose({ name: "open_firmware_efi_password" })
-    @Type(() => PolicyAccountMaintenanceOpenFirmwareEfiPassword)
-    openFirmwareEfiPassword?: PolicyAccountMaintenanceOpenFirmwareEfiPassword;
+    @Type(() => OpenFirmwareEfiPassword)
+    openFirmwareEfiPassword?: OpenFirmwareEfiPassword;
 }
 
-export enum PolicyDiskEncryptionAction {
+export enum Action {
     Apply = "apply",
     Remediate = "remediate",
 }
 
-export enum PolicyDiskEncryptionRemediateKeyType {
+export enum RemediateKeyType {
     Individual = "Individual",
     Institutional = "Institutional",
     IndividualAndInstitutional = "Individual And Institutional",
 }
 
-export class PolicyDiskEncryption extends SpeakeasyBase {
+export class DiskEncryption extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "action" })
-    action?: PolicyDiskEncryptionAction;
+    action?: Action;
 
     @SpeakeasyMetadata()
     @Expose({ name: "auth_restart" })
@@ -174,19 +174,19 @@ export class PolicyDiskEncryption extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "remediate_key_type" })
-    remediateKeyType?: PolicyDiskEncryptionRemediateKeyType;
+    remediateKeyType?: RemediateKeyType;
 }
 
-export enum PolicyDockItemsDockItemAction {
+export enum PolicySchemasAction {
     AddToBeginning = "Add To Beginning",
     AddToEnd = "Add To End",
     Remove = "Remove",
 }
 
-export class PolicyDockItemsDockItem extends SpeakeasyBase {
+export class PolicyDockItem extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "action" })
-    action?: PolicyDockItemsDockItemAction;
+    action?: PolicySchemasAction;
 
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
@@ -200,15 +200,15 @@ export class PolicyDockItemsDockItem extends SpeakeasyBase {
 export class PolicyDockItems extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "dock_item" })
-    @Type(() => PolicyDockItemsDockItem)
-    dockItem?: PolicyDockItemsDockItem;
+    @Type(() => PolicyDockItem)
+    dockItem?: PolicyDockItem;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class PolicyFilesProcesses extends SpeakeasyBase {
+export class FilesProcesses extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "delete_file" })
     deleteFile?: boolean;
@@ -242,7 +242,7 @@ export class PolicyFilesProcesses extends SpeakeasyBase {
     updateLocateDatabase?: boolean;
 }
 
-export enum PolicyGeneralDateTimeLimitationsNoExecuteOnDay {
+export enum Day {
     Sun = "Sun",
     Mon = "Mon",
     Tue = "Tue",
@@ -252,13 +252,13 @@ export enum PolicyGeneralDateTimeLimitationsNoExecuteOnDay {
     Sat = "Sat",
 }
 
-export class PolicyGeneralDateTimeLimitationsNoExecuteOn extends SpeakeasyBase {
+export class NoExecuteOn extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "day" })
-    day?: PolicyGeneralDateTimeLimitationsNoExecuteOnDay;
+    day?: Day;
 }
 
-export class PolicyGeneralDateTimeLimitations extends SpeakeasyBase {
+export class DateTimeLimitations extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "activation_date" })
     activationDate?: string;
@@ -289,15 +289,15 @@ export class PolicyGeneralDateTimeLimitations extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "no_execute_on" })
-    @Type(() => PolicyGeneralDateTimeLimitationsNoExecuteOn)
-    noExecuteOn?: PolicyGeneralDateTimeLimitationsNoExecuteOn;
+    @Type(() => NoExecuteOn)
+    noExecuteOn?: NoExecuteOn;
 
     @SpeakeasyMetadata()
     @Expose({ name: "no_execute_start" })
     noExecuteStart?: string;
 }
 
-export enum PolicyGeneralFrequency {
+export enum Frequency {
     OncePerComputer = "Once per computer",
     OncePerUserPerComputer = "Once per user per computer",
     OncePerUser = "Once per user",
@@ -307,27 +307,27 @@ export enum PolicyGeneralFrequency {
     Ongoing = "Ongoing",
 }
 
-export enum PolicyGeneralNetworkLimitationsMinimumNetworkConnection {
+export enum MinimumNetworkConnection {
     NoMinimum = "No Minimum",
     Ethernet = "Ethernet",
 }
 
-export class PolicyGeneralNetworkLimitations extends SpeakeasyBase {
+export class NetworkLimitations extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "any_ip_address" })
     anyIpAddress?: boolean;
 
     @SpeakeasyMetadata()
     @Expose({ name: "minimum_network_connection" })
-    minimumNetworkConnection?: PolicyGeneralNetworkLimitationsMinimumNetworkConnection;
+    minimumNetworkConnection?: MinimumNetworkConnection;
 }
 
-export enum PolicyGeneralNetworkRequirements {
+export enum NetworkRequirements {
     Any = "Any",
     Ethernet = "Ethernet",
 }
 
-export class PolicyGeneralOverrideDefaultSettings extends SpeakeasyBase {
+export class OverrideDefaultSettings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "distribution_point" })
     distributionPoint?: string;
@@ -345,7 +345,7 @@ export class PolicyGeneralOverrideDefaultSettings extends SpeakeasyBase {
     targetDrive?: string;
 }
 
-export enum PolicyGeneralRetryEvent {
+export enum RetryEvent {
     None = "none",
     Trigger = "trigger",
     CheckIn = "check-in",
@@ -359,8 +359,8 @@ export class PolicyGeneral extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "date_time_limitations" })
-    @Type(() => PolicyGeneralDateTimeLimitations)
-    dateTimeLimitations?: PolicyGeneralDateTimeLimitations;
+    @Type(() => DateTimeLimitations)
+    dateTimeLimitations?: DateTimeLimitations;
 
     @SpeakeasyMetadata()
     @Expose({ name: "enabled" })
@@ -368,7 +368,7 @@ export class PolicyGeneral extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "frequency" })
-    frequency?: PolicyGeneralFrequency;
+    frequency?: Frequency;
 
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
@@ -384,12 +384,12 @@ export class PolicyGeneral extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "network_limitations" })
-    @Type(() => PolicyGeneralNetworkLimitations)
-    networkLimitations?: PolicyGeneralNetworkLimitations;
+    @Type(() => NetworkLimitations)
+    networkLimitations?: NetworkLimitations;
 
     @SpeakeasyMetadata()
     @Expose({ name: "network_requirements" })
-    networkRequirements?: PolicyGeneralNetworkRequirements;
+    networkRequirements?: NetworkRequirements;
 
     @SpeakeasyMetadata()
     @Expose({ name: "notify_on_each_failed_retry" })
@@ -401,8 +401,8 @@ export class PolicyGeneral extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "override_default_settings" })
-    @Type(() => PolicyGeneralOverrideDefaultSettings)
-    overrideDefaultSettings?: PolicyGeneralOverrideDefaultSettings;
+    @Type(() => OverrideDefaultSettings)
+    overrideDefaultSettings?: OverrideDefaultSettings;
 
     @SpeakeasyMetadata()
     @Expose({ name: "retry_attempts" })
@@ -410,7 +410,7 @@ export class PolicyGeneral extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "retry_event" })
-    retryEvent?: PolicyGeneralRetryEvent;
+    retryEvent?: RetryEvent;
 
     @SpeakeasyMetadata()
     @Expose({ name: "site" })
@@ -454,7 +454,7 @@ export class PolicyGeneral extends SpeakeasyBase {
     triggerStartup?: boolean;
 }
 
-export class PolicyMaintenance extends SpeakeasyBase {
+export class Maintenance extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "byhost" })
     byhost?: boolean;
@@ -496,16 +496,16 @@ export class PolicyMaintenance extends SpeakeasyBase {
     verify?: boolean;
 }
 
-export enum PolicyPackageConfigurationPackagesPackageAction {
+export enum PolicySchemasPackageConfigurationAction {
     Install = "Install",
     Cache = "Cache",
     InstallCached = "Install Cached",
 }
 
-export class PolicyPackageConfigurationPackagesPackage extends SpeakeasyBase {
+export class PolicyPackage extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "action" })
-    action?: PolicyPackageConfigurationPackagesPackageAction;
+    action?: PolicySchemasPackageConfigurationAction;
 
     @SpeakeasyMetadata()
     @Expose({ name: "feu" })
@@ -528,33 +528,33 @@ export class PolicyPackageConfigurationPackagesPackage extends SpeakeasyBase {
     updateAutorun?: boolean;
 }
 
-export class PolicyPackageConfigurationPackages extends SpeakeasyBase {
+export class PolicyPackages extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "package" })
-    @Type(() => PolicyPackageConfigurationPackagesPackage)
-    package?: PolicyPackageConfigurationPackagesPackage;
+    @Type(() => PolicyPackage)
+    package?: PolicyPackage;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class PolicyPackageConfiguration extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: PolicyPackageConfigurationPackages })
+export class PackageConfiguration extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: PolicyPackages })
     @Expose({ name: "packages" })
-    @Type(() => PolicyPackageConfigurationPackages)
-    packages?: PolicyPackageConfigurationPackages[];
+    @Type(() => PolicyPackages)
+    packages?: PolicyPackages[];
 }
 
-export enum PolicyPrintersPrinterAction {
+export enum PolicySchemasPrintersAction {
     Install = "install",
     Uninstall = "uninstall",
 }
 
-export class PolicyPrintersPrinter extends SpeakeasyBase {
+export class PolicyPrinter extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "action" })
-    action?: PolicyPrintersPrinterAction;
+    action?: PolicySchemasPrintersAction;
 
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
@@ -576,29 +576,29 @@ export class PolicyPrinters extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "printer" })
-    @Type(() => PolicyPrintersPrinter)
-    printer?: PolicyPrintersPrinter;
+    @Type(() => PolicyPrinter)
+    printer?: PolicyPrinter;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class PolicyScopeBuildings extends SpeakeasyBase {
+export class PolicyBuildings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "building" })
     @Type(() => IdName)
     building?: IdName;
 }
 
-export class PolicyScopeComputerGroups extends SpeakeasyBase {
+export class PolicyComputerGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer_group" })
     @Type(() => IdName)
     computerGroup?: IdName;
 }
 
-export class PolicyScopeComputersComputer extends SpeakeasyBase {
+export class PolicyComputer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -615,35 +615,35 @@ export class PolicyScopeComputersComputer extends SpeakeasyBase {
     udid?: string;
 }
 
-export class PolicyScopeComputers extends SpeakeasyBase {
+export class PolicyComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
-    @Type(() => PolicyScopeComputersComputer)
-    computer?: PolicyScopeComputersComputer;
+    @Type(() => PolicyComputer)
+    computer?: PolicyComputer;
 }
 
-export class PolicyScopeDepartments extends SpeakeasyBase {
+export class PolicyDepartments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "department" })
     @Type(() => IdName)
     department?: IdName;
 }
 
-export class PolicyScopeExclusionsBuildings extends SpeakeasyBase {
+export class PolicySchemasBuildings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "building" })
     @Type(() => IdName)
     building?: IdName;
 }
 
-export class PolicyScopeExclusionsComputerGroups extends SpeakeasyBase {
+export class PolicySchemasComputerGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer_group" })
     @Type(() => IdName)
     computerGroup?: IdName;
 }
 
-export class PolicyScopeExclusionsComputersComputer extends SpeakeasyBase {
+export class PolicySchemasComputer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -660,28 +660,28 @@ export class PolicyScopeExclusionsComputersComputer extends SpeakeasyBase {
     udid?: string;
 }
 
-export class PolicyScopeExclusionsComputers extends SpeakeasyBase {
+export class PolicySchemasComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
-    @Type(() => PolicyScopeExclusionsComputersComputer)
-    computer?: PolicyScopeExclusionsComputersComputer;
+    @Type(() => PolicySchemasComputer)
+    computer?: PolicySchemasComputer;
 }
 
-export class PolicyScopeExclusionsDepartments extends SpeakeasyBase {
+export class PolicySchemasDepartments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "department" })
     @Type(() => IdName)
     department?: IdName;
 }
 
-export class PolicyScopeExclusionsIbeacons extends SpeakeasyBase {
+export class PolicyIbeacons extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "ibeacon" })
     @Type(() => IdName)
     ibeacon?: IdName;
 }
 
-export class PolicyScopeExclusionsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+export class PolicyNetworkSegment extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -698,136 +698,136 @@ export class PolicyScopeExclusionsNetworkSegmentsNetworkSegment extends Speakeas
     uid?: string;
 }
 
-export class PolicyScopeExclusionsNetworkSegments extends SpeakeasyBase {
+export class PolicyNetworkSegments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "network_segment" })
-    @Type(() => PolicyScopeExclusionsNetworkSegmentsNetworkSegment)
-    networkSegment?: PolicyScopeExclusionsNetworkSegmentsNetworkSegment;
+    @Type(() => PolicyNetworkSegment)
+    networkSegment?: PolicyNetworkSegment;
 }
 
-export class PolicyScopeExclusionsUserGroups extends SpeakeasyBase {
+export class PolicyUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class PolicyScopeExclusionsUsersUser extends SpeakeasyBase {
+export class PolicyUser extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
 }
 
-export class PolicyScopeExclusionsUsers extends SpeakeasyBase {
+export class PolicyUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
-    @Type(() => PolicyScopeExclusionsUsersUser)
-    user?: PolicyScopeExclusionsUsersUser;
+    @Type(() => PolicyUser)
+    user?: PolicyUser;
 }
 
-export class PolicyScopeExclusions extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: PolicyScopeExclusionsBuildings })
+export class PolicyExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: PolicySchemasBuildings })
     @Expose({ name: "buildings" })
-    @Type(() => PolicyScopeExclusionsBuildings)
-    buildings?: PolicyScopeExclusionsBuildings[];
+    @Type(() => PolicySchemasBuildings)
+    buildings?: PolicySchemasBuildings[];
 
-    @SpeakeasyMetadata({ elemType: PolicyScopeExclusionsComputerGroups })
+    @SpeakeasyMetadata({ elemType: PolicySchemasComputerGroups })
     @Expose({ name: "computer_groups" })
-    @Type(() => PolicyScopeExclusionsComputerGroups)
-    computerGroups?: PolicyScopeExclusionsComputerGroups[];
+    @Type(() => PolicySchemasComputerGroups)
+    computerGroups?: PolicySchemasComputerGroups[];
 
-    @SpeakeasyMetadata({ elemType: PolicyScopeExclusionsComputers })
+    @SpeakeasyMetadata({ elemType: PolicySchemasComputers })
     @Expose({ name: "computers" })
-    @Type(() => PolicyScopeExclusionsComputers)
-    computers?: PolicyScopeExclusionsComputers[];
+    @Type(() => PolicySchemasComputers)
+    computers?: PolicySchemasComputers[];
 
-    @SpeakeasyMetadata({ elemType: PolicyScopeExclusionsDepartments })
+    @SpeakeasyMetadata({ elemType: PolicySchemasDepartments })
     @Expose({ name: "departments" })
-    @Type(() => PolicyScopeExclusionsDepartments)
-    departments?: PolicyScopeExclusionsDepartments[];
+    @Type(() => PolicySchemasDepartments)
+    departments?: PolicySchemasDepartments[];
 
-    @SpeakeasyMetadata({ elemType: PolicyScopeExclusionsIbeacons })
+    @SpeakeasyMetadata({ elemType: PolicyIbeacons })
     @Expose({ name: "ibeacons" })
-    @Type(() => PolicyScopeExclusionsIbeacons)
-    ibeacons?: PolicyScopeExclusionsIbeacons[];
+    @Type(() => PolicyIbeacons)
+    ibeacons?: PolicyIbeacons[];
 
-    @SpeakeasyMetadata({ elemType: PolicyScopeExclusionsNetworkSegments })
+    @SpeakeasyMetadata({ elemType: PolicyNetworkSegments })
     @Expose({ name: "network_segments" })
-    @Type(() => PolicyScopeExclusionsNetworkSegments)
-    networkSegments?: PolicyScopeExclusionsNetworkSegments[];
+    @Type(() => PolicyNetworkSegments)
+    networkSegments?: PolicyNetworkSegments[];
 
-    @SpeakeasyMetadata({ elemType: PolicyScopeExclusionsUserGroups })
+    @SpeakeasyMetadata({ elemType: PolicyUserGroups })
     @Expose({ name: "user_groups" })
-    @Type(() => PolicyScopeExclusionsUserGroups)
-    userGroups?: PolicyScopeExclusionsUserGroups[];
+    @Type(() => PolicyUserGroups)
+    userGroups?: PolicyUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: PolicyScopeExclusionsUsers })
+    @SpeakeasyMetadata({ elemType: PolicyUsers })
     @Expose({ name: "users" })
-    @Type(() => PolicyScopeExclusionsUsers)
-    users?: PolicyScopeExclusionsUsers[];
+    @Type(() => PolicyUsers)
+    users?: PolicyUsers[];
 }
 
-export class PolicyScopeLimitToUsersUserGroups extends SpeakeasyBase {
+export class PolicySchemasUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     userGroup?: string;
 }
 
-export class PolicyScopeLimitToUsers extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: PolicyScopeLimitToUsersUserGroups })
+export class LimitToUsers extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: PolicySchemasUserGroups })
     @Expose({ name: "user_groups" })
-    @Type(() => PolicyScopeLimitToUsersUserGroups)
-    userGroups?: PolicyScopeLimitToUsersUserGroups[];
+    @Type(() => PolicySchemasUserGroups)
+    userGroups?: PolicySchemasUserGroups[];
 }
 
-export class PolicyScopeLimitationsIbeacons extends SpeakeasyBase {
+export class PolicySchemasIbeacons extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "ibeacon" })
     @Type(() => IdName)
     ibeacon?: IdName;
 }
 
-export class PolicyScopeLimitationsNetworkSegments extends SpeakeasyBase {
+export class PolicySchemasNetworkSegments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "network_segment" })
     @Type(() => IdName)
     networkSegment?: IdName;
 }
 
-export class PolicyScopeLimitationsUserGroups extends SpeakeasyBase {
+export class PolicySchemasScopeUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class PolicyScopeLimitationsUsers extends SpeakeasyBase {
+export class PolicySchemasUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     @Type(() => IdName)
     user?: IdName;
 }
 
-export class PolicyScopeLimitations extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: PolicyScopeLimitationsIbeacons })
+export class PolicyLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: PolicySchemasIbeacons })
     @Expose({ name: "ibeacons" })
-    @Type(() => PolicyScopeLimitationsIbeacons)
-    ibeacons?: PolicyScopeLimitationsIbeacons[];
+    @Type(() => PolicySchemasIbeacons)
+    ibeacons?: PolicySchemasIbeacons[];
 
-    @SpeakeasyMetadata({ elemType: PolicyScopeLimitationsNetworkSegments })
+    @SpeakeasyMetadata({ elemType: PolicySchemasNetworkSegments })
     @Expose({ name: "network_segments" })
-    @Type(() => PolicyScopeLimitationsNetworkSegments)
-    networkSegments?: PolicyScopeLimitationsNetworkSegments[];
+    @Type(() => PolicySchemasNetworkSegments)
+    networkSegments?: PolicySchemasNetworkSegments[];
 
-    @SpeakeasyMetadata({ elemType: PolicyScopeLimitationsUserGroups })
+    @SpeakeasyMetadata({ elemType: PolicySchemasScopeUserGroups })
     @Expose({ name: "user_groups" })
-    @Type(() => PolicyScopeLimitationsUserGroups)
-    userGroups?: PolicyScopeLimitationsUserGroups[];
+    @Type(() => PolicySchemasScopeUserGroups)
+    userGroups?: PolicySchemasScopeUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: PolicyScopeLimitationsUsers })
+    @SpeakeasyMetadata({ elemType: PolicySchemasUsers })
     @Expose({ name: "users" })
-    @Type(() => PolicyScopeLimitationsUsers)
-    users?: PolicyScopeLimitationsUsers[];
+    @Type(() => PolicySchemasUsers)
+    users?: PolicySchemasUsers[];
 }
 
 export class PolicyScope extends SpeakeasyBase {
@@ -835,48 +835,48 @@ export class PolicyScope extends SpeakeasyBase {
     @Expose({ name: "all_computers" })
     allComputers?: boolean;
 
-    @SpeakeasyMetadata({ elemType: PolicyScopeBuildings })
+    @SpeakeasyMetadata({ elemType: PolicyBuildings })
     @Expose({ name: "buildings" })
-    @Type(() => PolicyScopeBuildings)
-    buildings?: PolicyScopeBuildings[];
+    @Type(() => PolicyBuildings)
+    buildings?: PolicyBuildings[];
 
-    @SpeakeasyMetadata({ elemType: PolicyScopeComputerGroups })
+    @SpeakeasyMetadata({ elemType: PolicyComputerGroups })
     @Expose({ name: "computer_groups" })
-    @Type(() => PolicyScopeComputerGroups)
-    computerGroups?: PolicyScopeComputerGroups[];
+    @Type(() => PolicyComputerGroups)
+    computerGroups?: PolicyComputerGroups[];
 
-    @SpeakeasyMetadata({ elemType: PolicyScopeComputers })
+    @SpeakeasyMetadata({ elemType: PolicyComputers })
     @Expose({ name: "computers" })
-    @Type(() => PolicyScopeComputers)
-    computers?: PolicyScopeComputers[];
+    @Type(() => PolicyComputers)
+    computers?: PolicyComputers[];
 
-    @SpeakeasyMetadata({ elemType: PolicyScopeDepartments })
+    @SpeakeasyMetadata({ elemType: PolicyDepartments })
     @Expose({ name: "departments" })
-    @Type(() => PolicyScopeDepartments)
-    departments?: PolicyScopeDepartments[];
+    @Type(() => PolicyDepartments)
+    departments?: PolicyDepartments[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "exclusions" })
-    @Type(() => PolicyScopeExclusions)
-    exclusions?: PolicyScopeExclusions;
+    @Type(() => PolicyExclusions)
+    exclusions?: PolicyExclusions;
 
     @SpeakeasyMetadata()
     @Expose({ name: "limit_to_users" })
-    @Type(() => PolicyScopeLimitToUsers)
-    limitToUsers?: PolicyScopeLimitToUsers;
+    @Type(() => LimitToUsers)
+    limitToUsers?: LimitToUsers;
 
     @SpeakeasyMetadata()
     @Expose({ name: "limitations" })
-    @Type(() => PolicyScopeLimitations)
-    limitations?: PolicyScopeLimitations;
+    @Type(() => PolicyLimitations)
+    limitations?: PolicyLimitations;
 }
 
-export enum PolicyScriptsScriptPriority {
+export enum PolicyPriority {
     Before = "Before",
     After = "After",
 }
 
-export class PolicyScriptsScript extends SpeakeasyBase {
+export class PolicyScript extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -919,21 +919,21 @@ export class PolicyScriptsScript extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "priority" })
-    priority?: PolicyScriptsScriptPriority;
+    priority?: PolicyPriority;
 }
 
 export class PolicyScripts extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: PolicyScriptsScript })
+    @SpeakeasyMetadata({ elemType: PolicyScript })
     @Expose({ name: "script" })
-    @Type(() => PolicyScriptsScript)
-    script?: PolicyScriptsScript[];
+    @Type(() => PolicyScript)
+    script?: PolicyScript[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class PolicySelfServiceSelfServiceCategoriesCategory extends SpeakeasyBase {
+export class PolicyCategory extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "display_in" })
     displayIn?: boolean;
@@ -951,14 +951,14 @@ export class PolicySelfServiceSelfServiceCategoriesCategory extends SpeakeasyBas
     name?: string;
 }
 
-export class PolicySelfServiceSelfServiceCategories extends SpeakeasyBase {
+export class PolicySelfServiceCategories extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "category" })
-    @Type(() => PolicySelfServiceSelfServiceCategoriesCategory)
-    category?: PolicySelfServiceSelfServiceCategoriesCategory;
+    @Type(() => PolicyCategory)
+    category?: PolicyCategory;
 }
 
-export class PolicySelfServiceSelfServiceIcon extends SpeakeasyBase {
+export class PolicySelfServiceIcon extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "filename" })
     filename?: string;
@@ -991,8 +991,8 @@ export class PolicySelfService extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "self_service_categories" })
-    @Type(() => PolicySelfServiceSelfServiceCategories)
-    selfServiceCategories?: PolicySelfServiceSelfServiceCategories;
+    @Type(() => PolicySelfServiceCategories)
+    selfServiceCategories?: PolicySelfServiceCategories;
 
     @SpeakeasyMetadata()
     @Expose({ name: "self_service_description" })
@@ -1004,8 +1004,8 @@ export class PolicySelfService extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "self_service_icon" })
-    @Type(() => PolicySelfServiceSelfServiceIcon)
-    selfServiceIcon?: PolicySelfServiceSelfServiceIcon;
+    @Type(() => PolicySelfServiceIcon)
+    selfServiceIcon?: PolicySelfServiceIcon;
 
     @SpeakeasyMetadata()
     @Expose({ name: "use_for_self_service" })
@@ -1037,13 +1037,13 @@ export class PolicyUserInteraction extends SpeakeasyBase {
 export class Policy extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "account_maintenance" })
-    @Type(() => PolicyAccountMaintenance)
-    accountMaintenance?: PolicyAccountMaintenance;
+    @Type(() => AccountMaintenance)
+    accountMaintenance?: AccountMaintenance;
 
     @SpeakeasyMetadata()
     @Expose({ name: "disk_encryption" })
-    @Type(() => PolicyDiskEncryption)
-    diskEncryption?: PolicyDiskEncryption;
+    @Type(() => DiskEncryption)
+    diskEncryption?: DiskEncryption;
 
     @SpeakeasyMetadata({ elemType: PolicyDockItems })
     @Expose({ name: "dock_items" })
@@ -1052,8 +1052,8 @@ export class Policy extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "files_processes" })
-    @Type(() => PolicyFilesProcesses)
-    filesProcesses?: PolicyFilesProcesses;
+    @Type(() => FilesProcesses)
+    filesProcesses?: FilesProcesses;
 
     @SpeakeasyMetadata()
     @Expose({ name: "general" })
@@ -1062,13 +1062,13 @@ export class Policy extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "maintenance" })
-    @Type(() => PolicyMaintenance)
-    maintenance?: PolicyMaintenance;
+    @Type(() => Maintenance)
+    maintenance?: Maintenance;
 
     @SpeakeasyMetadata()
     @Expose({ name: "package_configuration" })
-    @Type(() => PolicyPackageConfiguration)
-    packageConfiguration?: PolicyPackageConfiguration;
+    @Type(() => PackageConfiguration)
+    packageConfiguration?: PackageConfiguration;
 
     @SpeakeasyMetadata({ elemType: PolicyPrinters })
     @Expose({ name: "printers" })

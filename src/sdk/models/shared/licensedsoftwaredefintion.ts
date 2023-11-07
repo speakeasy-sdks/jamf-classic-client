@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum LicensedSoftwareDefintionCompareType {
+export enum CompareType {
     Like = "like",
     Is = "is",
 }
@@ -13,7 +13,7 @@ export enum LicensedSoftwareDefintionCompareType {
 export class LicensedSoftwareDefintion extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "compare_type" })
-    compareType?: LicensedSoftwareDefintionCompareType;
+    compareType?: CompareType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "name" })

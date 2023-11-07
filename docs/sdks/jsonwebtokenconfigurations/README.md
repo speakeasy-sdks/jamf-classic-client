@@ -1,5 +1,5 @@
 # Jsonwebtokenconfigurations
-(*jsonwebtokenconfigurations*)
+(*.jsonwebtokenconfigurations*)
 
 ### Available Operations
 
@@ -29,6 +29,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.jsonwebtokenconfigurations.createJsonWebTokenConfigurationById({
     id: 184420,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -70,6 +71,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -110,6 +112,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -147,6 +150,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.jsonwebtokenconfigurations.findJsonWebTokenConfigurations();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -186,6 +190,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.jsonwebtokenconfigurations.updateJsonWebTokenConfigurationById({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

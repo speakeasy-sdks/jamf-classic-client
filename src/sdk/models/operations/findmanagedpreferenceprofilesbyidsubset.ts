@@ -8,7 +8,7 @@ import { AxiosResponse } from "axios";
 /**
  * Subset to filter by
  */
-export enum FindManagedPreferenceProfilesByIdSubsetSubset {
+export enum FindManagedPreferenceProfilesByIdSubsetPathParamSubset {
     General = "General",
     Scope = "Scope",
     Settings = "Settings",
@@ -25,7 +25,7 @@ export class FindManagedPreferenceProfilesByIdSubsetRequest extends SpeakeasyBas
      * Subset to filter by
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=subset" })
-    subset: FindManagedPreferenceProfilesByIdSubsetSubset;
+    subset: FindManagedPreferenceProfilesByIdSubsetPathParamSubset;
 }
 
 export class FindManagedPreferenceProfilesByIdSubsetResponse extends SpeakeasyBase {

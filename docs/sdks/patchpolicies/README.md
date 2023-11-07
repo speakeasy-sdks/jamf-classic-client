@@ -1,5 +1,5 @@
 # Patchpolicies
-(*patchpolicies*)
+(*.patchpolicies*)
 
 ### Available Operations
 
@@ -31,6 +31,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.patchpolicies.createPatchPolicyBySoftwareTitleConfigId({
     softwaretitleconfigid: 205122,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -72,6 +73,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 891870,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -112,6 +114,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.patchpolicies.findPatchPolicies();
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -138,7 +141,7 @@ Display subsets of information for a patch policy
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPatchPoliciesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindPatchPoliciesByIdSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -150,8 +153,9 @@ import { FindPatchPoliciesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/
 
   const res = await sdk.patchpolicies.findPatchPoliciesByIdSubset({
     id: 512196,
-    subset: FindPatchPoliciesByIdSubsetSubset.General,
+    subset: FindPatchPoliciesByIdSubsetPathParamSubset.General,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -195,6 +199,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     softwaretitleconfigid: 916770,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -235,6 +240,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 840291,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -274,6 +280,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.patchpolicies.updatePatchPolicyById({
     id: 648752,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

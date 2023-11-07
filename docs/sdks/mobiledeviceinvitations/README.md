@@ -1,5 +1,5 @@
 # Mobiledeviceinvitations
-(*mobiledeviceinvitations*)
+(*.mobiledeviceinvitations*)
 
 ### Available Operations
 
@@ -31,6 +31,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceinvitations.createMobileDeviceInvitationsById({
     id: 850185,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -72,6 +73,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     invitation: 60639,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -111,6 +113,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceinvitations.deleteMobileDeviceInvitationById({
     id: 377680,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -152,6 +155,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     invitation: 34819,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -189,6 +193,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceinvitations.findMobileDeviceInvitations();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -229,6 +234,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 522350,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -268,6 +274,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceinvitations.findMobileDeviceInvitationsByInvitation({
     invitation: 313759,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

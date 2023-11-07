@@ -8,7 +8,7 @@ import { AxiosResponse } from "axios";
 /**
  * Command to send device
  */
-export enum CreateMobileDeviceCommandURLCommand {
+export enum CreateMobileDeviceCommandURLPathParamCommand {
     BlankPush = "BlankPush",
     ClearPasscode = "ClearPasscode",
     ClearRestrictionsPassword = "ClearRestrictionsPassword",
@@ -42,7 +42,7 @@ export class CreateMobileDeviceCommandURLRequest extends SpeakeasyBase {
      * Command to send device
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=command" })
-    command: CreateMobileDeviceCommandURLCommand;
+    command: CreateMobileDeviceCommandURLPathParamCommand;
 
     /**
      * Mobile device ID values, multiple IDs may be separated by commas (e.g. /id/13,14,15)

@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class MobileDeviceConfigurationProfilesConfigurationProfile extends SpeakeasyBase {
+export class ConfigurationProfile extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -21,6 +21,6 @@ export class MobileDeviceConfigurationProfilesConfigurationProfile extends Speak
 export class MobileDeviceConfigurationProfiles extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "configuration_profile" })
-    @Type(() => MobileDeviceConfigurationProfilesConfigurationProfile)
-    configurationProfile?: MobileDeviceConfigurationProfilesConfigurationProfile;
+    @Type(() => ConfigurationProfile)
+    configurationProfile?: ConfigurationProfile;
 }

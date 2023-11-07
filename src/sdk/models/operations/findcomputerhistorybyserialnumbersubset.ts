@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Subset to filter by
  */
-export enum FindComputerHistoryBySerialNumberSubsetSubset {
+export enum FindComputerHistoryBySerialNumberSubsetPathParamSubset {
     General = "General",
     ComputerUsageLogs = "ComputerUsageLogs",
     Audits = "Audits",
@@ -33,7 +33,7 @@ export class FindComputerHistoryBySerialNumberSubsetRequest extends SpeakeasyBas
      * Subset to filter by
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=subset" })
-    subset: FindComputerHistoryBySerialNumberSubsetSubset;
+    subset: FindComputerHistoryBySerialNumberSubsetPathParamSubset;
 }
 
 export class FindComputerHistoryBySerialNumberSubsetResponse extends SpeakeasyBase {

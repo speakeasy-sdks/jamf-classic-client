@@ -8,7 +8,7 @@ import { LicensedSoftwareDefintion } from "./licensedsoftwaredefintion";
 import { SiteObject } from "./siteobject";
 import { Expose, Type } from "class-transformer";
 
-export class LicensedSoftwareFontDefinitions extends SpeakeasyBase {
+export class FontDefinitions extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "definition" })
     @Type(() => LicensedSoftwareDefintion)
@@ -57,20 +57,20 @@ export class LicensedSoftwareGeneral extends SpeakeasyBase {
     site?: SiteObject;
 }
 
-export class LicensedSoftwareLicensesLicenseAttachments extends SpeakeasyBase {
+export class LicensedSoftwareAttachments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "attachment" })
     @Type(() => Attachment)
     attachment?: Attachment;
 }
 
-export enum LicensedSoftwareLicensesLicenseLicenseType {
+export enum LicenseType {
     Standard = "Standard",
     Concurrent = "Concurrent",
     SiteLicense = "Site License",
 }
 
-export class LicensedSoftwareLicensesLicensePurchasing extends SpeakeasyBase {
+export class LicensedSoftwarePurchasing extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "is_annual" })
     isAnnual?: boolean;
@@ -128,11 +128,11 @@ export class LicensedSoftwareLicensesLicensePurchasing extends SpeakeasyBase {
     vendor?: string;
 }
 
-export class LicensedSoftwareLicensesLicense extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: LicensedSoftwareLicensesLicenseAttachments })
+export class License extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: LicensedSoftwareAttachments })
     @Expose({ name: "attachments" })
-    @Type(() => LicensedSoftwareLicensesLicenseAttachments)
-    attachments?: LicensedSoftwareLicensesLicenseAttachments[];
+    @Type(() => LicensedSoftwareAttachments)
+    attachments?: LicensedSoftwareAttachments[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "license_count" })
@@ -140,7 +140,7 @@ export class LicensedSoftwareLicensesLicense extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "license_type" })
-    licenseType?: LicensedSoftwareLicensesLicenseLicenseType;
+    licenseType?: LicenseType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "notes" })
@@ -152,8 +152,8 @@ export class LicensedSoftwareLicensesLicense extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "purchasing" })
-    @Type(() => LicensedSoftwareLicensesLicensePurchasing)
-    purchasing?: LicensedSoftwareLicensesLicensePurchasing;
+    @Type(() => LicensedSoftwarePurchasing)
+    purchasing?: LicensedSoftwarePurchasing;
 
     @SpeakeasyMetadata()
     @Expose({ name: "registered_to" })
@@ -168,25 +168,25 @@ export class LicensedSoftwareLicensesLicense extends SpeakeasyBase {
     serialNumber2?: string;
 }
 
-export class LicensedSoftwareLicenses extends SpeakeasyBase {
+export class Licenses extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "license" })
-    @Type(() => LicensedSoftwareLicensesLicense)
-    license?: LicensedSoftwareLicensesLicense;
+    @Type(() => License)
+    license?: License;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class LicensedSoftwarePluginDefinitions extends SpeakeasyBase {
+export class PluginDefinitions extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "definition" })
     @Type(() => LicensedSoftwareDefintion)
     definition?: LicensedSoftwareDefintion;
 }
 
-export class LicensedSoftwareSoftwareDefinitions extends SpeakeasyBase {
+export class SoftwareDefinitions extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "definition" })
     @Type(() => LicensedSoftwareDefintion)
@@ -194,28 +194,28 @@ export class LicensedSoftwareSoftwareDefinitions extends SpeakeasyBase {
 }
 
 export class LicensedSoftware extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: LicensedSoftwareFontDefinitions })
+    @SpeakeasyMetadata({ elemType: FontDefinitions })
     @Expose({ name: "font_definitions" })
-    @Type(() => LicensedSoftwareFontDefinitions)
-    fontDefinitions?: LicensedSoftwareFontDefinitions[];
+    @Type(() => FontDefinitions)
+    fontDefinitions?: FontDefinitions[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "general" })
     @Type(() => LicensedSoftwareGeneral)
     general?: LicensedSoftwareGeneral;
 
-    @SpeakeasyMetadata({ elemType: LicensedSoftwareLicenses })
+    @SpeakeasyMetadata({ elemType: Licenses })
     @Expose({ name: "licenses" })
-    @Type(() => LicensedSoftwareLicenses)
-    licenses?: LicensedSoftwareLicenses[];
+    @Type(() => Licenses)
+    licenses?: Licenses[];
 
-    @SpeakeasyMetadata({ elemType: LicensedSoftwarePluginDefinitions })
+    @SpeakeasyMetadata({ elemType: PluginDefinitions })
     @Expose({ name: "plugin_definitions" })
-    @Type(() => LicensedSoftwarePluginDefinitions)
-    pluginDefinitions?: LicensedSoftwarePluginDefinitions[];
+    @Type(() => PluginDefinitions)
+    pluginDefinitions?: PluginDefinitions[];
 
-    @SpeakeasyMetadata({ elemType: LicensedSoftwareSoftwareDefinitions })
+    @SpeakeasyMetadata({ elemType: SoftwareDefinitions })
     @Expose({ name: "software_definitions" })
-    @Type(() => LicensedSoftwareSoftwareDefinitions)
-    softwareDefinitions?: LicensedSoftwareSoftwareDefinitions[];
+    @Type(() => SoftwareDefinitions)
+    softwareDefinitions?: SoftwareDefinitions[];
 }

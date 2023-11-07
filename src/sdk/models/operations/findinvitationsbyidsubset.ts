@@ -8,7 +8,7 @@ import { AxiosResponse } from "axios";
 /**
  * Subset to filter by
  */
-export enum FindInvitationsByIdSubsetSubset {
+export enum FindInvitationsByIdSubsetPathParamSubset {
     General = "General",
     Scope = "Scope",
     InvitationUsages = "InvitationUsages",
@@ -25,7 +25,7 @@ export class FindInvitationsByIdSubsetRequest extends SpeakeasyBase {
      * Subset to filter by
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=subset" })
-    subset: FindInvitationsByIdSubsetSubset;
+    subset: FindInvitationsByIdSubsetPathParamSubset;
 }
 
 export class FindInvitationsByIdSubsetResponse extends SpeakeasyBase {

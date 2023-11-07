@@ -7,14 +7,14 @@ import { ComputerApplicationsComputer } from "./computerapplicationscomputer";
 import { ComputerApplicationsVersion } from "./computerapplicationsversion";
 import { Expose, Type } from "class-transformer";
 
-export class ComputerApplicationsUniqueComputers extends SpeakeasyBase {
+export class UniqueComputers extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: ComputerApplicationsComputer })
     @Expose({ name: "computer" })
     @Type(() => ComputerApplicationsComputer)
     computer?: ComputerApplicationsComputer[];
 }
 
-export class ComputerApplicationsVersions extends SpeakeasyBase {
+export class Versions extends SpeakeasyBase {
     @SpeakeasyMetadata({ elemType: ComputerApplicationsVersion, elemDepth: 2 })
     @Expose({ name: "version" })
     @Type(() => ComputerApplicationsVersion)
@@ -24,11 +24,11 @@ export class ComputerApplicationsVersions extends SpeakeasyBase {
 export class ComputerApplications extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "unique_computers" })
-    @Type(() => ComputerApplicationsUniqueComputers)
-    uniqueComputers?: ComputerApplicationsUniqueComputers;
+    @Type(() => UniqueComputers)
+    uniqueComputers?: UniqueComputers;
 
     @SpeakeasyMetadata()
     @Expose({ name: "versions" })
-    @Type(() => ComputerApplicationsVersions)
-    versions?: ComputerApplicationsVersions;
+    @Type(() => Versions)
+    versions?: Versions;
 }

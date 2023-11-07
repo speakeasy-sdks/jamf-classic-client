@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { MobileDeviceHistoryApp } from "./mobiledevicehistoryapp";
 import { Expose, Type } from "class-transformer";
 
-export class MobileDeviceHistoryApplicationsFailedApp extends SpeakeasyBase {
+export class MobileDeviceHistorySchemasApp extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "management_status" })
     managementStatus?: string;
@@ -20,14 +20,14 @@ export class MobileDeviceHistoryApplicationsFailedApp extends SpeakeasyBase {
     version?: string;
 }
 
-export class MobileDeviceHistoryApplicationsFailed extends SpeakeasyBase {
+export class MobileDeviceHistoryFailed extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "app" })
-    @Type(() => MobileDeviceHistoryApplicationsFailedApp)
-    app?: MobileDeviceHistoryApplicationsFailedApp;
+    @Type(() => MobileDeviceHistorySchemasApp)
+    app?: MobileDeviceHistorySchemasApp;
 }
 
-export class MobileDeviceHistoryApplicationsInstalled extends SpeakeasyBase {
+export class MobileDeviceHistoryInstalled extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "app_store_from_mobile_device_app_catalog" })
     @Type(() => MobileDeviceHistoryApp)
@@ -44,7 +44,7 @@ export class MobileDeviceHistoryApplicationsInstalled extends SpeakeasyBase {
     other?: MobileDeviceHistoryApp;
 }
 
-export class MobileDeviceHistoryApplicationsPendingApp extends SpeakeasyBase {
+export class MobileDeviceHistorySchemasApplicationsApp extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "management_status" })
     managementStatus?: string;
@@ -58,31 +58,31 @@ export class MobileDeviceHistoryApplicationsPendingApp extends SpeakeasyBase {
     version?: string;
 }
 
-export class MobileDeviceHistoryApplicationsPending extends SpeakeasyBase {
+export class MobileDeviceHistoryPending extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "app" })
-    @Type(() => MobileDeviceHistoryApplicationsPendingApp)
-    app?: MobileDeviceHistoryApplicationsPendingApp;
+    @Type(() => MobileDeviceHistorySchemasApplicationsApp)
+    app?: MobileDeviceHistorySchemasApplicationsApp;
 }
 
 export class MobileDeviceHistoryApplications extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: MobileDeviceHistoryApplicationsFailed })
+    @SpeakeasyMetadata({ elemType: MobileDeviceHistoryFailed })
     @Expose({ name: "failed" })
-    @Type(() => MobileDeviceHistoryApplicationsFailed)
-    failed?: MobileDeviceHistoryApplicationsFailed[];
+    @Type(() => MobileDeviceHistoryFailed)
+    failed?: MobileDeviceHistoryFailed[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceHistoryApplicationsInstalled })
+    @SpeakeasyMetadata({ elemType: MobileDeviceHistoryInstalled })
     @Expose({ name: "installed" })
-    @Type(() => MobileDeviceHistoryApplicationsInstalled)
-    installed?: MobileDeviceHistoryApplicationsInstalled[];
+    @Type(() => MobileDeviceHistoryInstalled)
+    installed?: MobileDeviceHistoryInstalled[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceHistoryApplicationsPending })
+    @SpeakeasyMetadata({ elemType: MobileDeviceHistoryPending })
     @Expose({ name: "pending" })
-    @Type(() => MobileDeviceHistoryApplicationsPending)
-    pending?: MobileDeviceHistoryApplicationsPending[];
+    @Type(() => MobileDeviceHistoryPending)
+    pending?: MobileDeviceHistoryPending[];
 }
 
-export class MobileDeviceHistoryAuditsAudit extends SpeakeasyBase {
+export class MobileDeviceHistoryAudit extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "date_time" })
     dateTime?: string;
@@ -103,11 +103,11 @@ export class MobileDeviceHistoryAuditsAudit extends SpeakeasyBase {
 export class MobileDeviceHistoryAudits extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "audit" })
-    @Type(() => MobileDeviceHistoryAuditsAudit)
-    audit?: MobileDeviceHistoryAuditsAudit;
+    @Type(() => MobileDeviceHistoryAudit)
+    audit?: MobileDeviceHistoryAudit;
 }
 
-export class MobileDeviceHistoryEbooksFailed extends SpeakeasyBase {
+export class MobileDeviceHistorySchemasFailed extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "author" })
     author?: string;
@@ -129,7 +129,7 @@ export class MobileDeviceHistoryEbooksFailed extends SpeakeasyBase {
     version?: string;
 }
 
-export class MobileDeviceHistoryEbooksInstalledIbookstore extends SpeakeasyBase {
+export class Ibookstore extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "author" })
     author?: string;
@@ -151,7 +151,7 @@ export class MobileDeviceHistoryEbooksInstalledIbookstore extends SpeakeasyBase 
     version?: string;
 }
 
-export class MobileDeviceHistoryEbooksInstalledInhouse extends SpeakeasyBase {
+export class Inhouse extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "author" })
     author?: string;
@@ -173,19 +173,19 @@ export class MobileDeviceHistoryEbooksInstalledInhouse extends SpeakeasyBase {
     version?: string;
 }
 
-export class MobileDeviceHistoryEbooksInstalled extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: MobileDeviceHistoryEbooksInstalledIbookstore })
+export class MobileDeviceHistorySchemasInstalled extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: Ibookstore })
     @Expose({ name: "ibookstore" })
-    @Type(() => MobileDeviceHistoryEbooksInstalledIbookstore)
-    ibookstore?: MobileDeviceHistoryEbooksInstalledIbookstore[];
+    @Type(() => Ibookstore)
+    ibookstore?: Ibookstore[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceHistoryEbooksInstalledInhouse })
+    @SpeakeasyMetadata({ elemType: Inhouse })
     @Expose({ name: "inhouse" })
-    @Type(() => MobileDeviceHistoryEbooksInstalledInhouse)
-    inhouse?: MobileDeviceHistoryEbooksInstalledInhouse[];
+    @Type(() => Inhouse)
+    inhouse?: Inhouse[];
 }
 
-export class MobileDeviceHistoryEbooksPending extends SpeakeasyBase {
+export class MobileDeviceHistorySchemasPending extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "author" })
     author?: string;
@@ -208,20 +208,20 @@ export class MobileDeviceHistoryEbooksPending extends SpeakeasyBase {
 }
 
 export class MobileDeviceHistoryEbooks extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: MobileDeviceHistoryEbooksFailed })
+    @SpeakeasyMetadata({ elemType: MobileDeviceHistorySchemasFailed })
     @Expose({ name: "failed" })
-    @Type(() => MobileDeviceHistoryEbooksFailed)
-    failed?: MobileDeviceHistoryEbooksFailed[];
+    @Type(() => MobileDeviceHistorySchemasFailed)
+    failed?: MobileDeviceHistorySchemasFailed[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "installed" })
-    @Type(() => MobileDeviceHistoryEbooksInstalled)
-    installed?: MobileDeviceHistoryEbooksInstalled;
+    @Type(() => MobileDeviceHistorySchemasInstalled)
+    installed?: MobileDeviceHistorySchemasInstalled;
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceHistoryEbooksPending })
+    @SpeakeasyMetadata({ elemType: MobileDeviceHistorySchemasPending })
     @Expose({ name: "pending" })
-    @Type(() => MobileDeviceHistoryEbooksPending)
-    pending?: MobileDeviceHistoryEbooksPending[];
+    @Type(() => MobileDeviceHistorySchemasPending)
+    pending?: MobileDeviceHistorySchemasPending[];
 }
 
 export class MobileDeviceHistoryGeneral extends SpeakeasyBase {
@@ -249,7 +249,7 @@ export class MobileDeviceHistoryGeneral extends SpeakeasyBase {
     udid?: string;
 }
 
-export class MobileDeviceHistoryManagementCommandsCompletedCommand extends SpeakeasyBase {
+export class MobileDeviceHistoryCommand extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "date_time_completed" })
     dateTimeCompleted?: string;
@@ -263,14 +263,14 @@ export class MobileDeviceHistoryManagementCommandsCompletedCommand extends Speak
     name?: string;
 }
 
-export class MobileDeviceHistoryManagementCommandsCompleted extends SpeakeasyBase {
+export class MobileDeviceHistoryCompleted extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "command" })
-    @Type(() => MobileDeviceHistoryManagementCommandsCompletedCommand)
-    command?: MobileDeviceHistoryManagementCommandsCompletedCommand;
+    @Type(() => MobileDeviceHistoryCommand)
+    command?: MobileDeviceHistoryCommand;
 }
 
-export class MobileDeviceHistoryManagementCommandsFailedCommand extends SpeakeasyBase {
+export class MobileDeviceHistorySchemasCommand extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "date_time_failed" })
     dateTimeFailed?: string;
@@ -296,14 +296,14 @@ export class MobileDeviceHistoryManagementCommandsFailedCommand extends Speakeas
     name?: string;
 }
 
-export class MobileDeviceHistoryManagementCommandsFailed extends SpeakeasyBase {
+export class MobileDeviceHistorySchemasManagementCommandsFailed extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "command" })
-    @Type(() => MobileDeviceHistoryManagementCommandsFailedCommand)
-    command?: MobileDeviceHistoryManagementCommandsFailedCommand;
+    @Type(() => MobileDeviceHistorySchemasCommand)
+    command?: MobileDeviceHistorySchemasCommand;
 }
 
-export class MobileDeviceHistoryManagementCommandsPendingCommand extends SpeakeasyBase {
+export class MobileDeviceHistorySchemasManagementCommandsCommand extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "date_time_failed" })
     dateTimeFailed?: string;
@@ -325,31 +325,31 @@ export class MobileDeviceHistoryManagementCommandsPendingCommand extends Speakea
     name?: string;
 }
 
-export class MobileDeviceHistoryManagementCommandsPending extends SpeakeasyBase {
+export class MobileDeviceHistorySchemasManagementCommandsPending extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "command" })
-    @Type(() => MobileDeviceHistoryManagementCommandsPendingCommand)
-    command?: MobileDeviceHistoryManagementCommandsPendingCommand;
+    @Type(() => MobileDeviceHistorySchemasManagementCommandsCommand)
+    command?: MobileDeviceHistorySchemasManagementCommandsCommand;
 }
 
-export class MobileDeviceHistoryManagementCommands extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: MobileDeviceHistoryManagementCommandsCompleted })
+export class ManagementCommands extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: MobileDeviceHistoryCompleted })
     @Expose({ name: "completed" })
-    @Type(() => MobileDeviceHistoryManagementCommandsCompleted)
-    completed?: MobileDeviceHistoryManagementCommandsCompleted[];
+    @Type(() => MobileDeviceHistoryCompleted)
+    completed?: MobileDeviceHistoryCompleted[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceHistoryManagementCommandsFailed })
+    @SpeakeasyMetadata({ elemType: MobileDeviceHistorySchemasManagementCommandsFailed })
     @Expose({ name: "failed" })
-    @Type(() => MobileDeviceHistoryManagementCommandsFailed)
-    failed?: MobileDeviceHistoryManagementCommandsFailed[];
+    @Type(() => MobileDeviceHistorySchemasManagementCommandsFailed)
+    failed?: MobileDeviceHistorySchemasManagementCommandsFailed[];
 
-    @SpeakeasyMetadata({ elemType: MobileDeviceHistoryManagementCommandsPending })
+    @SpeakeasyMetadata({ elemType: MobileDeviceHistorySchemasManagementCommandsPending })
     @Expose({ name: "pending" })
-    @Type(() => MobileDeviceHistoryManagementCommandsPending)
-    pending?: MobileDeviceHistoryManagementCommandsPending[];
+    @Type(() => MobileDeviceHistorySchemasManagementCommandsPending)
+    pending?: MobileDeviceHistorySchemasManagementCommandsPending[];
 }
 
-export class MobileDeviceHistoryUserLocationLocation extends SpeakeasyBase {
+export class MobileDeviceHistoryLocation extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "building" })
     building?: string;
@@ -394,8 +394,8 @@ export class MobileDeviceHistoryUserLocationLocation extends SpeakeasyBase {
 export class MobileDeviceHistoryUserLocation extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "location" })
-    @Type(() => MobileDeviceHistoryUserLocationLocation)
-    location?: MobileDeviceHistoryUserLocationLocation;
+    @Type(() => MobileDeviceHistoryLocation)
+    location?: MobileDeviceHistoryLocation;
 }
 
 export class MobileDeviceHistory extends SpeakeasyBase {
@@ -421,8 +421,8 @@ export class MobileDeviceHistory extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "management_commands" })
-    @Type(() => MobileDeviceHistoryManagementCommands)
-    managementCommands?: MobileDeviceHistoryManagementCommands;
+    @Type(() => ManagementCommands)
+    managementCommands?: ManagementCommands;
 
     @SpeakeasyMetadata({ elemType: MobileDeviceHistoryUserLocation })
     @Expose({ name: "user_location" })

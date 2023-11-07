@@ -3,8 +3,8 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { RFCDate } from "../../types";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
+import { RFCDate } from "../../../sdk/types";
 import { AxiosResponse } from "axios";
 
 export class FindComputerApplicationUsageByIdRequest extends SpeakeasyBase {
@@ -28,6 +28,12 @@ export class FindComputerApplicationUsageByIdRequest extends SpeakeasyBase {
 }
 
 export class FindComputerApplicationUsageByIdResponse extends SpeakeasyBase {
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata({ elemType: shared.ComputerApplicationUsage })
+    twoHundredApplicationJsonComputerApplicationUsage?: shared.ComputerApplicationUsage[];
+
     @SpeakeasyMetadata()
     body?: Uint8Array;
 
@@ -48,10 +54,4 @@ export class FindComputerApplicationUsageByIdResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
-
-    /**
-     * OK
-     */
-    @SpeakeasyMetadata({ elemType: shared.ComputerApplicationUsage })
-    computerApplicationUsage?: shared.ComputerApplicationUsage[];
 }

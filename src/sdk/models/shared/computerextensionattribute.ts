@@ -5,29 +5,29 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export enum ComputerExtensionAttributeDataType {
+export enum DataType {
     String = "String",
     Integer = "Integer",
     Date = "Date",
 }
 
-export enum ComputerExtensionAttributeInputTypeType {
+export enum ComputerExtensionAttributeType {
     Script = "script",
     TextField = "Text Field",
     LDAPMapping = "LDAP Mapping",
     PopUpMenu = "Pop-up Menu",
 }
 
-export class ComputerExtensionAttributeInputType extends SpeakeasyBase {
+export class InputType extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    type?: ComputerExtensionAttributeInputTypeType;
+    type?: ComputerExtensionAttributeType;
 }
 
 /**
  * Category in which to display the extension attribute in Jamf Pro
  */
-export enum ComputerExtensionAttributeInventoryDisplay {
+export enum InventoryDisplay {
     General = "General",
     Hardware = "Hardware",
     OperatingSystem = "Operating System",
@@ -39,7 +39,7 @@ export enum ComputerExtensionAttributeInventoryDisplay {
 export class ComputerExtensionAttribute extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "data_type" })
-    dataType?: ComputerExtensionAttributeDataType;
+    dataType?: DataType;
 
     /**
      * Description of the extension attribute
@@ -61,15 +61,15 @@ export class ComputerExtensionAttribute extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "input_type" })
-    @Type(() => ComputerExtensionAttributeInputType)
-    inputType?: ComputerExtensionAttributeInputType;
+    @Type(() => InputType)
+    inputType?: InputType;
 
     /**
      * Category in which to display the extension attribute in Jamf Pro
      */
     @SpeakeasyMetadata()
     @Expose({ name: "inventory_display" })
-    inventoryDisplay?: ComputerExtensionAttributeInventoryDisplay;
+    inventoryDisplay?: InventoryDisplay;
 
     /**
      * Extension attribute name

@@ -18,7 +18,7 @@ export class MobileDeviceGroupCriteria extends SpeakeasyBase {
     size?: number;
 }
 
-export class MobileDeviceGroupMobileDevicesMobileDevice extends SpeakeasyBase {
+export class MobileDeviceGroupMobileDevice extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -50,8 +50,8 @@ export class MobileDeviceGroupMobileDevicesMobileDevice extends SpeakeasyBase {
 export class MobileDeviceGroupMobileDevices extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "mobile_device" })
-    @Type(() => MobileDeviceGroupMobileDevicesMobileDevice)
-    mobileDevice?: MobileDeviceGroupMobileDevicesMobileDevice;
+    @Type(() => MobileDeviceGroupMobileDevice)
+    mobileDevice?: MobileDeviceGroupMobileDevice;
 }
 
 export class MobileDeviceGroup extends SpeakeasyBase {

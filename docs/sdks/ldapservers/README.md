@@ -1,5 +1,5 @@
 # Ldapservers
-(*ldapservers*)
+(*.ldapservers*)
 
 ### Available Operations
 
@@ -38,6 +38,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.ldapservers.createLDAPServerById({
     id: 334152,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -79,6 +80,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 550161,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -118,6 +120,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.ldapservers.deleteLDAPServerByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -160,6 +163,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 279778,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -200,6 +204,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     group: "string",
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -243,6 +248,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     user: "Zula_Krajcik",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -285,6 +291,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     user: "Elena81",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -325,6 +332,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 331068,
     user: "Buster40",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -367,6 +375,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     user: "Justen73",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -404,6 +413,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.ldapservers.findLDAPServers();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -443,6 +453,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.ldapservers.findLDAPServersById({
     id: 434300,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -484,6 +495,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -524,6 +536,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 774572,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -563,6 +576,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.ldapservers.updateLDAPServerByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

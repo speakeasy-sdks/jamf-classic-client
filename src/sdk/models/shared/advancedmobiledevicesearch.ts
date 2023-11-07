@@ -18,7 +18,7 @@ export class AdvancedMobileDeviceSearchCriteria extends SpeakeasyBase {
     size?: number;
 }
 
-export class AdvancedMobileDeviceSearchDisplayFieldsDisplayField extends SpeakeasyBase {
+export class AdvancedMobileDeviceSearchDisplayField extends SpeakeasyBase {
     /**
      * Name of the display field
      */
@@ -30,15 +30,15 @@ export class AdvancedMobileDeviceSearchDisplayFieldsDisplayField extends Speakea
 export class AdvancedMobileDeviceSearchDisplayFields extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "display_field" })
-    @Type(() => AdvancedMobileDeviceSearchDisplayFieldsDisplayField)
-    displayField?: AdvancedMobileDeviceSearchDisplayFieldsDisplayField;
+    @Type(() => AdvancedMobileDeviceSearchDisplayField)
+    displayField?: AdvancedMobileDeviceSearchDisplayField;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class AdvancedMobileDeviceSearchMobileDevicesMobileDevice extends SpeakeasyBase {
+export class AdvancedMobileDeviceSearchMobileDevice extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "Display_Name" })
     displayName?: string;
@@ -62,8 +62,8 @@ export class AdvancedMobileDeviceSearchMobileDevicesMobileDevice extends Speakea
 export class AdvancedMobileDeviceSearchMobileDevices extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "mobile_device" })
-    @Type(() => AdvancedMobileDeviceSearchMobileDevicesMobileDevice)
-    mobileDevice?: AdvancedMobileDeviceSearchMobileDevicesMobileDevice;
+    @Type(() => AdvancedMobileDeviceSearchMobileDevice)
+    mobileDevice?: AdvancedMobileDeviceSearchMobileDevice;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })

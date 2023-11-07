@@ -6,12 +6,12 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { IdName } from "./idname";
 import { Expose, Type } from "class-transformer";
 
-export enum PatchPolicyGeneralDistributionMethod {
+export enum PatchPolicyDistributionMethod {
     Selfservice = "selfservice",
     Prompt = "prompt",
 }
 
-export class PatchPolicyGeneralKillAppsKillApp extends SpeakeasyBase {
+export class KillApp extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "kill_app_bundle_id" })
     killAppBundleId?: string;
@@ -21,11 +21,11 @@ export class PatchPolicyGeneralKillAppsKillApp extends SpeakeasyBase {
     killAppName?: string;
 }
 
-export class PatchPolicyGeneralKillApps extends SpeakeasyBase {
+export class KillApps extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "kill_app" })
-    @Type(() => PatchPolicyGeneralKillAppsKillApp)
-    killApp?: PatchPolicyGeneralKillAppsKillApp;
+    @Type(() => KillApp)
+    killApp?: KillApp;
 }
 
 export class PatchPolicyGeneral extends SpeakeasyBase {
@@ -35,7 +35,7 @@ export class PatchPolicyGeneral extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "distribution_method" })
-    distributionMethod?: PatchPolicyGeneralDistributionMethod;
+    distributionMethod?: PatchPolicyDistributionMethod;
 
     @SpeakeasyMetadata()
     @Expose({ name: "enabled" })
@@ -49,10 +49,10 @@ export class PatchPolicyGeneral extends SpeakeasyBase {
     @Expose({ name: "incremental_updates" })
     incrementalUpdates?: boolean;
 
-    @SpeakeasyMetadata({ elemType: PatchPolicyGeneralKillApps })
+    @SpeakeasyMetadata({ elemType: KillApps })
     @Expose({ name: "kill_apps" })
-    @Type(() => PatchPolicyGeneralKillApps)
-    killApps?: PatchPolicyGeneralKillApps[];
+    @Type(() => KillApps)
+    killApps?: KillApps[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "minimum_os" })
@@ -82,21 +82,21 @@ export class PatchPolicyGeneral extends SpeakeasyBase {
     targetVersion: string;
 }
 
-export class PatchPolicyScopeBuildings extends SpeakeasyBase {
+export class PatchPolicyBuildings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "building" })
     @Type(() => IdName)
     building?: IdName;
 }
 
-export class PatchPolicyScopeComputerGroups extends SpeakeasyBase {
+export class PatchPolicyComputerGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer_group" })
     @Type(() => IdName)
     computerGroup?: IdName;
 }
 
-export class PatchPolicyScopeComputersComputer extends SpeakeasyBase {
+export class PatchPolicyComputer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -110,35 +110,35 @@ export class PatchPolicyScopeComputersComputer extends SpeakeasyBase {
     udid?: string;
 }
 
-export class PatchPolicyScopeComputers extends SpeakeasyBase {
+export class PatchPolicyComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
-    @Type(() => PatchPolicyScopeComputersComputer)
-    computer?: PatchPolicyScopeComputersComputer;
+    @Type(() => PatchPolicyComputer)
+    computer?: PatchPolicyComputer;
 }
 
-export class PatchPolicyScopeDepartments extends SpeakeasyBase {
+export class PatchPolicyDepartments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "department" })
     @Type(() => IdName)
     department?: IdName;
 }
 
-export class PatchPolicyScopeExclusionsBuildings extends SpeakeasyBase {
+export class PatchPolicySchemasBuildings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "building" })
     @Type(() => IdName)
     building?: IdName;
 }
 
-export class PatchPolicyScopeExclusionsComputerGroups extends SpeakeasyBase {
+export class PatchPolicySchemasComputerGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer_group" })
     @Type(() => IdName)
     computerGroup?: IdName;
 }
 
-export class PatchPolicyScopeExclusionsComputersComputer extends SpeakeasyBase {
+export class PatchPolicySchemasComputer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -152,90 +152,90 @@ export class PatchPolicyScopeExclusionsComputersComputer extends SpeakeasyBase {
     udid?: string;
 }
 
-export class PatchPolicyScopeExclusionsComputers extends SpeakeasyBase {
+export class PatchPolicySchemasComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
-    @Type(() => PatchPolicyScopeExclusionsComputersComputer)
-    computer?: PatchPolicyScopeExclusionsComputersComputer;
+    @Type(() => PatchPolicySchemasComputer)
+    computer?: PatchPolicySchemasComputer;
 }
 
-export class PatchPolicyScopeExclusionsDepartments extends SpeakeasyBase {
+export class PatchPolicySchemasDepartments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "department" })
     @Type(() => IdName)
     department?: IdName;
 }
 
-export class PatchPolicyScopeExclusionsIbeacons extends SpeakeasyBase {
+export class PatchPolicyIbeacons extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "ibeacon" })
     @Type(() => IdName)
     ibeacon?: IdName;
 }
 
-export class PatchPolicyScopeExclusionsNetworkSegments extends SpeakeasyBase {
+export class PatchPolicyNetworkSegments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "network_segment" })
     @Type(() => IdName)
     networkSegment?: IdName;
 }
 
-export class PatchPolicyScopeExclusions extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: PatchPolicyScopeExclusionsBuildings })
+export class PatchPolicyExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: PatchPolicySchemasBuildings })
     @Expose({ name: "buildings" })
-    @Type(() => PatchPolicyScopeExclusionsBuildings)
-    buildings?: PatchPolicyScopeExclusionsBuildings[];
+    @Type(() => PatchPolicySchemasBuildings)
+    buildings?: PatchPolicySchemasBuildings[];
 
-    @SpeakeasyMetadata({ elemType: PatchPolicyScopeExclusionsComputerGroups })
+    @SpeakeasyMetadata({ elemType: PatchPolicySchemasComputerGroups })
     @Expose({ name: "computer_groups" })
-    @Type(() => PatchPolicyScopeExclusionsComputerGroups)
-    computerGroups?: PatchPolicyScopeExclusionsComputerGroups[];
+    @Type(() => PatchPolicySchemasComputerGroups)
+    computerGroups?: PatchPolicySchemasComputerGroups[];
 
-    @SpeakeasyMetadata({ elemType: PatchPolicyScopeExclusionsComputers })
+    @SpeakeasyMetadata({ elemType: PatchPolicySchemasComputers })
     @Expose({ name: "computers" })
-    @Type(() => PatchPolicyScopeExclusionsComputers)
-    computers?: PatchPolicyScopeExclusionsComputers[];
+    @Type(() => PatchPolicySchemasComputers)
+    computers?: PatchPolicySchemasComputers[];
 
-    @SpeakeasyMetadata({ elemType: PatchPolicyScopeExclusionsDepartments })
+    @SpeakeasyMetadata({ elemType: PatchPolicySchemasDepartments })
     @Expose({ name: "departments" })
-    @Type(() => PatchPolicyScopeExclusionsDepartments)
-    departments?: PatchPolicyScopeExclusionsDepartments[];
+    @Type(() => PatchPolicySchemasDepartments)
+    departments?: PatchPolicySchemasDepartments[];
 
-    @SpeakeasyMetadata({ elemType: PatchPolicyScopeExclusionsIbeacons })
+    @SpeakeasyMetadata({ elemType: PatchPolicyIbeacons })
     @Expose({ name: "ibeacons" })
-    @Type(() => PatchPolicyScopeExclusionsIbeacons)
-    ibeacons?: PatchPolicyScopeExclusionsIbeacons[];
+    @Type(() => PatchPolicyIbeacons)
+    ibeacons?: PatchPolicyIbeacons[];
 
-    @SpeakeasyMetadata({ elemType: PatchPolicyScopeExclusionsNetworkSegments })
+    @SpeakeasyMetadata({ elemType: PatchPolicyNetworkSegments })
     @Expose({ name: "network_segments" })
-    @Type(() => PatchPolicyScopeExclusionsNetworkSegments)
-    networkSegments?: PatchPolicyScopeExclusionsNetworkSegments[];
+    @Type(() => PatchPolicyNetworkSegments)
+    networkSegments?: PatchPolicyNetworkSegments[];
 }
 
-export class PatchPolicyScopeLimitationsIbeacons extends SpeakeasyBase {
+export class PatchPolicySchemasIbeacons extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "ibeacon" })
     @Type(() => IdName)
     ibeacon?: IdName;
 }
 
-export class PatchPolicyScopeLimitationsNetworkSegments extends SpeakeasyBase {
+export class PatchPolicySchemasNetworkSegments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "network_segment" })
     @Type(() => IdName)
     networkSegment?: IdName;
 }
 
-export class PatchPolicyScopeLimitations extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: PatchPolicyScopeLimitationsIbeacons })
+export class PatchPolicyLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: PatchPolicySchemasIbeacons })
     @Expose({ name: "ibeacons" })
-    @Type(() => PatchPolicyScopeLimitationsIbeacons)
-    ibeacons?: PatchPolicyScopeLimitationsIbeacons[];
+    @Type(() => PatchPolicySchemasIbeacons)
+    ibeacons?: PatchPolicySchemasIbeacons[];
 
-    @SpeakeasyMetadata({ elemType: PatchPolicyScopeLimitationsNetworkSegments })
+    @SpeakeasyMetadata({ elemType: PatchPolicySchemasNetworkSegments })
     @Expose({ name: "network_segments" })
-    @Type(() => PatchPolicyScopeLimitationsNetworkSegments)
-    networkSegments?: PatchPolicyScopeLimitationsNetworkSegments[];
+    @Type(() => PatchPolicySchemasNetworkSegments)
+    networkSegments?: PatchPolicySchemasNetworkSegments[];
 }
 
 export class PatchPolicyScope extends SpeakeasyBase {
@@ -243,38 +243,38 @@ export class PatchPolicyScope extends SpeakeasyBase {
     @Expose({ name: "all_computers" })
     allComputers?: boolean;
 
-    @SpeakeasyMetadata({ elemType: PatchPolicyScopeBuildings })
+    @SpeakeasyMetadata({ elemType: PatchPolicyBuildings })
     @Expose({ name: "buildings" })
-    @Type(() => PatchPolicyScopeBuildings)
-    buildings?: PatchPolicyScopeBuildings[];
+    @Type(() => PatchPolicyBuildings)
+    buildings?: PatchPolicyBuildings[];
 
-    @SpeakeasyMetadata({ elemType: PatchPolicyScopeComputerGroups })
+    @SpeakeasyMetadata({ elemType: PatchPolicyComputerGroups })
     @Expose({ name: "computer_groups" })
-    @Type(() => PatchPolicyScopeComputerGroups)
-    computerGroups?: PatchPolicyScopeComputerGroups[];
+    @Type(() => PatchPolicyComputerGroups)
+    computerGroups?: PatchPolicyComputerGroups[];
 
-    @SpeakeasyMetadata({ elemType: PatchPolicyScopeComputers })
+    @SpeakeasyMetadata({ elemType: PatchPolicyComputers })
     @Expose({ name: "computers" })
-    @Type(() => PatchPolicyScopeComputers)
-    computers?: PatchPolicyScopeComputers[];
+    @Type(() => PatchPolicyComputers)
+    computers?: PatchPolicyComputers[];
 
-    @SpeakeasyMetadata({ elemType: PatchPolicyScopeDepartments })
+    @SpeakeasyMetadata({ elemType: PatchPolicyDepartments })
     @Expose({ name: "departments" })
-    @Type(() => PatchPolicyScopeDepartments)
-    departments?: PatchPolicyScopeDepartments[];
+    @Type(() => PatchPolicyDepartments)
+    departments?: PatchPolicyDepartments[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "exclusions" })
-    @Type(() => PatchPolicyScopeExclusions)
-    exclusions?: PatchPolicyScopeExclusions;
+    @Type(() => PatchPolicyExclusions)
+    exclusions?: PatchPolicyExclusions;
 
     @SpeakeasyMetadata()
     @Expose({ name: "limitations" })
-    @Type(() => PatchPolicyScopeLimitations)
-    limitations?: PatchPolicyScopeLimitations;
+    @Type(() => PatchPolicyLimitations)
+    limitations?: PatchPolicyLimitations;
 }
 
-export class PatchPolicyUserInteractionDeadlines extends SpeakeasyBase {
+export class Deadlines extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "deadline_enabled" })
     deadlineEnabled?: boolean;
@@ -284,7 +284,7 @@ export class PatchPolicyUserInteractionDeadlines extends SpeakeasyBase {
     deadlinePeriod?: number;
 }
 
-export class PatchPolicyUserInteractionGracePeriod extends SpeakeasyBase {
+export class GracePeriod extends SpeakeasyBase {
     /**
      * Number of minutes to wait before automatically closing all apps required to be closed for an update
      */
@@ -301,12 +301,12 @@ export class PatchPolicyUserInteractionGracePeriod extends SpeakeasyBase {
     notificationCenterSubject?: string;
 }
 
-export enum PatchPolicyUserInteractionNotificationsNotificationType {
+export enum NotificationType {
     SelfService = "Self Service",
     SelfServiceAndNotificationCenter = "Self Service and Notification Center",
 }
 
-export class PatchPolicyUserInteractionNotificationsReminders extends SpeakeasyBase {
+export class Reminders extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "notification_reminder_frequency" })
     notificationReminderFrequency?: number;
@@ -316,7 +316,7 @@ export class PatchPolicyUserInteractionNotificationsReminders extends SpeakeasyB
     notificationRemindersEnabled?: boolean;
 }
 
-export class PatchPolicyUserInteractionNotifications extends SpeakeasyBase {
+export class PatchPolicyNotifications extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "notification_enabled" })
     notificationEnabled?: boolean;
@@ -331,15 +331,15 @@ export class PatchPolicyUserInteractionNotifications extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "notification_type" })
-    notificationType?: PatchPolicyUserInteractionNotificationsNotificationType;
+    notificationType?: NotificationType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "reminders" })
-    @Type(() => PatchPolicyUserInteractionNotificationsReminders)
-    reminders?: PatchPolicyUserInteractionNotificationsReminders;
+    @Type(() => Reminders)
+    reminders?: Reminders;
 }
 
-export class PatchPolicyUserInteractionSelfServiceIcon extends SpeakeasyBase {
+export class PatchPolicySelfServiceIcon extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "filename" })
     filename?: string;
@@ -353,16 +353,16 @@ export class PatchPolicyUserInteractionSelfServiceIcon extends SpeakeasyBase {
     uri?: string;
 }
 
-export class PatchPolicyUserInteraction extends SpeakeasyBase {
+export class UserInteraction extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "deadlines" })
-    @Type(() => PatchPolicyUserInteractionDeadlines)
-    deadlines?: PatchPolicyUserInteractionDeadlines;
+    @Type(() => Deadlines)
+    deadlines?: Deadlines;
 
     @SpeakeasyMetadata()
     @Expose({ name: "grace_period" })
-    @Type(() => PatchPolicyUserInteractionGracePeriod)
-    gracePeriod?: PatchPolicyUserInteractionGracePeriod;
+    @Type(() => GracePeriod)
+    gracePeriod?: GracePeriod;
 
     @SpeakeasyMetadata()
     @Expose({ name: "install_button_text" })
@@ -370,8 +370,8 @@ export class PatchPolicyUserInteraction extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "notifications" })
-    @Type(() => PatchPolicyUserInteractionNotifications)
-    notifications?: PatchPolicyUserInteractionNotifications;
+    @Type(() => PatchPolicyNotifications)
+    notifications?: PatchPolicyNotifications;
 
     @SpeakeasyMetadata()
     @Expose({ name: "self_service_description" })
@@ -379,8 +379,8 @@ export class PatchPolicyUserInteraction extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "self_service_icon" })
-    @Type(() => PatchPolicyUserInteractionSelfServiceIcon)
-    selfServiceIcon?: PatchPolicyUserInteractionSelfServiceIcon;
+    @Type(() => PatchPolicySelfServiceIcon)
+    selfServiceIcon?: PatchPolicySelfServiceIcon;
 }
 
 export class PatchPolicy extends SpeakeasyBase {
@@ -400,6 +400,6 @@ export class PatchPolicy extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "user_interaction" })
-    @Type(() => PatchPolicyUserInteraction)
-    userInteraction?: PatchPolicyUserInteraction;
+    @Type(() => UserInteraction)
+    userInteraction?: UserInteraction;
 }

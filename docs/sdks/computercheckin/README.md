@@ -1,5 +1,5 @@
 # Computercheckin
-(*computercheckin*)
+(*.computercheckin*)
 
 ### Available Operations
 
@@ -24,6 +24,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computercheckin.findComputerCheckin();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -60,7 +61,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     },
   });
 
-  const res = await sdk.computercheckin.updateComputerCheckin("2Iu;QDJ,=5" as bytes <<<>>>);
+  const res = await sdk.computercheckin.updateComputerCheckin(new TextEncoder().encode("0x49E6b89264"));
+
 
   if (res.statusCode == 200) {
     // handle response

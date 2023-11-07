@@ -1,5 +1,5 @@
 # Users
-(*users*)
+(*.users*)
 
 ### Available Operations
 
@@ -35,6 +35,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.users.createUserById({
     id: 981054,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -76,6 +77,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     email: "Haley71@gmail.com",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -115,6 +117,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.users.deleteUserById({
     id: 867244,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -156,6 +159,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -193,6 +197,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.users.findUsers();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -232,6 +237,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.users.findUsersByEmailAddress({
     email: "Addie_Frami@hotmail.com",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -273,6 +279,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 665689,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -312,6 +319,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.users.findUsersByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -353,6 +361,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     email: "Ludie.Legros@yahoo.com",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -393,6 +402,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 591512,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -432,6 +442,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.users.updateUserByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

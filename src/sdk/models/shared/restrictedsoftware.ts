@@ -49,94 +49,94 @@ export class RestrictedSoftwareGeneral extends SpeakeasyBase {
     site?: SiteObject;
 }
 
-export class RestrictedSoftwareScopeBuildings extends SpeakeasyBase {
+export class RestrictedSoftwareBuildings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "building" })
     @Type(() => IdName)
     building?: IdName;
 }
 
-export class RestrictedSoftwareScopeComputerGroups extends SpeakeasyBase {
+export class RestrictedSoftwareComputerGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer_group" })
     @Type(() => IdName)
     computerGroup?: IdName;
 }
 
-export class RestrictedSoftwareScopeComputers extends SpeakeasyBase {
+export class RestrictedSoftwareComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
     @Type(() => IdName)
     computer?: IdName;
 }
 
-export class RestrictedSoftwareScopeDepartments extends SpeakeasyBase {
+export class RestrictedSoftwareDepartments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "department" })
     @Type(() => IdName)
     department?: IdName;
 }
 
-export class RestrictedSoftwareScopeExclusionsBuildings extends SpeakeasyBase {
+export class RestrictedSoftwareSchemasBuildings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "building" })
     @Type(() => IdName)
     building?: IdName;
 }
 
-export class RestrictedSoftwareScopeExclusionsComputerGroups extends SpeakeasyBase {
+export class RestrictedSoftwareSchemasComputerGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer_group" })
     @Type(() => IdName)
     computerGroup?: IdName;
 }
 
-export class RestrictedSoftwareScopeExclusionsComputers extends SpeakeasyBase {
+export class RestrictedSoftwareSchemasComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
     @Type(() => IdName)
     computer?: IdName;
 }
 
-export class RestrictedSoftwareScopeExclusionsDepartments extends SpeakeasyBase {
+export class RestrictedSoftwareSchemasDepartments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "department" })
     @Type(() => IdName)
     department?: IdName;
 }
 
-export class RestrictedSoftwareScopeExclusionsUsers extends SpeakeasyBase {
+export class RestrictedSoftwareUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     @Type(() => IdName)
     user?: IdName;
 }
 
-export class RestrictedSoftwareScopeExclusions extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: RestrictedSoftwareScopeExclusionsBuildings })
+export class RestrictedSoftwareExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: RestrictedSoftwareSchemasBuildings })
     @Expose({ name: "buildings" })
-    @Type(() => RestrictedSoftwareScopeExclusionsBuildings)
-    buildings?: RestrictedSoftwareScopeExclusionsBuildings[];
+    @Type(() => RestrictedSoftwareSchemasBuildings)
+    buildings?: RestrictedSoftwareSchemasBuildings[];
 
-    @SpeakeasyMetadata({ elemType: RestrictedSoftwareScopeExclusionsComputerGroups })
+    @SpeakeasyMetadata({ elemType: RestrictedSoftwareSchemasComputerGroups })
     @Expose({ name: "computer_groups" })
-    @Type(() => RestrictedSoftwareScopeExclusionsComputerGroups)
-    computerGroups?: RestrictedSoftwareScopeExclusionsComputerGroups[];
+    @Type(() => RestrictedSoftwareSchemasComputerGroups)
+    computerGroups?: RestrictedSoftwareSchemasComputerGroups[];
 
-    @SpeakeasyMetadata({ elemType: RestrictedSoftwareScopeExclusionsComputers })
+    @SpeakeasyMetadata({ elemType: RestrictedSoftwareSchemasComputers })
     @Expose({ name: "computers" })
-    @Type(() => RestrictedSoftwareScopeExclusionsComputers)
-    computers?: RestrictedSoftwareScopeExclusionsComputers[];
+    @Type(() => RestrictedSoftwareSchemasComputers)
+    computers?: RestrictedSoftwareSchemasComputers[];
 
-    @SpeakeasyMetadata({ elemType: RestrictedSoftwareScopeExclusionsDepartments })
+    @SpeakeasyMetadata({ elemType: RestrictedSoftwareSchemasDepartments })
     @Expose({ name: "departments" })
-    @Type(() => RestrictedSoftwareScopeExclusionsDepartments)
-    departments?: RestrictedSoftwareScopeExclusionsDepartments[];
+    @Type(() => RestrictedSoftwareSchemasDepartments)
+    departments?: RestrictedSoftwareSchemasDepartments[];
 
-    @SpeakeasyMetadata({ elemType: RestrictedSoftwareScopeExclusionsUsers })
+    @SpeakeasyMetadata({ elemType: RestrictedSoftwareUsers })
     @Expose({ name: "users" })
-    @Type(() => RestrictedSoftwareScopeExclusionsUsers)
-    users?: RestrictedSoftwareScopeExclusionsUsers[];
+    @Type(() => RestrictedSoftwareUsers)
+    users?: RestrictedSoftwareUsers[];
 }
 
 export class RestrictedSoftwareScope extends SpeakeasyBase {
@@ -144,30 +144,30 @@ export class RestrictedSoftwareScope extends SpeakeasyBase {
     @Expose({ name: "all_computers" })
     allComputers?: boolean;
 
-    @SpeakeasyMetadata({ elemType: RestrictedSoftwareScopeBuildings })
+    @SpeakeasyMetadata({ elemType: RestrictedSoftwareBuildings })
     @Expose({ name: "buildings" })
-    @Type(() => RestrictedSoftwareScopeBuildings)
-    buildings?: RestrictedSoftwareScopeBuildings[];
+    @Type(() => RestrictedSoftwareBuildings)
+    buildings?: RestrictedSoftwareBuildings[];
 
-    @SpeakeasyMetadata({ elemType: RestrictedSoftwareScopeComputerGroups })
+    @SpeakeasyMetadata({ elemType: RestrictedSoftwareComputerGroups })
     @Expose({ name: "computer_groups" })
-    @Type(() => RestrictedSoftwareScopeComputerGroups)
-    computerGroups?: RestrictedSoftwareScopeComputerGroups[];
+    @Type(() => RestrictedSoftwareComputerGroups)
+    computerGroups?: RestrictedSoftwareComputerGroups[];
 
-    @SpeakeasyMetadata({ elemType: RestrictedSoftwareScopeComputers })
+    @SpeakeasyMetadata({ elemType: RestrictedSoftwareComputers })
     @Expose({ name: "computers" })
-    @Type(() => RestrictedSoftwareScopeComputers)
-    computers?: RestrictedSoftwareScopeComputers[];
+    @Type(() => RestrictedSoftwareComputers)
+    computers?: RestrictedSoftwareComputers[];
 
-    @SpeakeasyMetadata({ elemType: RestrictedSoftwareScopeDepartments })
+    @SpeakeasyMetadata({ elemType: RestrictedSoftwareDepartments })
     @Expose({ name: "departments" })
-    @Type(() => RestrictedSoftwareScopeDepartments)
-    departments?: RestrictedSoftwareScopeDepartments[];
+    @Type(() => RestrictedSoftwareDepartments)
+    departments?: RestrictedSoftwareDepartments[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "exclusions" })
-    @Type(() => RestrictedSoftwareScopeExclusions)
-    exclusions?: RestrictedSoftwareScopeExclusions;
+    @Type(() => RestrictedSoftwareExclusions)
+    exclusions?: RestrictedSoftwareExclusions;
 }
 
 export class RestrictedSoftware extends SpeakeasyBase {

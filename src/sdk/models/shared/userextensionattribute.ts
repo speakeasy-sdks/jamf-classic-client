@@ -11,7 +11,7 @@ export enum UserExtensionAttributeDataType {
     Date = "Date",
 }
 
-export enum UserExtensionAttributeInputTypeType {
+export enum UserExtensionAttributeType {
     TextField = "Text Field",
     PopUpMenu = "Pop-up Menu",
 }
@@ -19,7 +19,7 @@ export enum UserExtensionAttributeInputTypeType {
 export class UserExtensionAttributeInputType extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    type?: UserExtensionAttributeInputTypeType;
+    type?: UserExtensionAttributeType;
 }
 
 export class UserExtensionAttribute extends SpeakeasyBase {

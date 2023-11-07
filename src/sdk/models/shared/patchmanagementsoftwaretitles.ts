@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class PatchManagementSoftwareTitlesPatchManagementSoftwareTitle extends SpeakeasyBase {
+export class PatchManagementSoftwareTitle extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -26,8 +26,8 @@ export class PatchManagementSoftwareTitlesPatchManagementSoftwareTitle extends S
 export class PatchManagementSoftwareTitles extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "patch_management_software_title" })
-    @Type(() => PatchManagementSoftwareTitlesPatchManagementSoftwareTitle)
-    patchManagementSoftwareTitle?: PatchManagementSoftwareTitlesPatchManagementSoftwareTitle;
+    @Type(() => PatchManagementSoftwareTitle)
+    patchManagementSoftwareTitle?: PatchManagementSoftwareTitle;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })

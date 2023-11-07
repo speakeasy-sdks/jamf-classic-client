@@ -5,12 +5,12 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum DistributionPointConnectionType {
+export enum ConnectionType {
     Smb = "SMB",
     Afp = "AFP",
 }
 
-export enum DistributionPointProtocol {
+export enum Protocol {
     Http = "http",
     Https = "https",
 }
@@ -18,7 +18,7 @@ export enum DistributionPointProtocol {
 export class DistributionPoint extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "connection_type" })
-    connectionType?: DistributionPointConnectionType;
+    connectionType?: ConnectionType;
 
     /**
      * Path to the share
@@ -107,7 +107,7 @@ export class DistributionPoint extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "protocol" })
-    protocol?: DistributionPointProtocol;
+    protocol?: Protocol;
 
     /**
      * Password for the read only account

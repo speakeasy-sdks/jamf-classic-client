@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class LdapServerConnectionAccount extends SpeakeasyBase {
+export class LdapServerAccount extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "distinguished_username" })
     distinguishedUsername?: string;
@@ -15,34 +15,34 @@ export class LdapServerConnectionAccount extends SpeakeasyBase {
     password?: string;
 }
 
-export enum LdapServerConnectionAuthenticationType {
+export enum LdapServerAuthenticationType {
     Simple = "simple",
     CramMd5 = "CRAM-MD5",
     DigestMd5 = "DIGEST-MD5",
     None = "none",
 }
 
-export enum LdapServerConnectionReferralResponse {
+export enum ReferralResponse {
     Ignore = "ignore",
     Follow = "follow",
 }
 
-export enum LdapServerConnectionServerType {
+export enum ServerType {
     ActiveDirectory = "Active Directory",
     OpenDirectory = "Open Directory",
     EDirectory = "eDirectory",
     Custom = "Custom",
 }
 
-export class LdapServerConnection extends SpeakeasyBase {
+export class Connection extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "account" })
-    @Type(() => LdapServerConnectionAccount)
-    account?: LdapServerConnectionAccount;
+    @Type(() => LdapServerAccount)
+    account?: LdapServerAccount;
 
     @SpeakeasyMetadata()
     @Expose({ name: "authentication_type" })
-    authenticationType?: LdapServerConnectionAuthenticationType;
+    authenticationType?: LdapServerAuthenticationType;
 
     /**
      * Hostname or IP address of the server
@@ -75,7 +75,7 @@ export class LdapServerConnection extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "referral_response" })
-    referralResponse?: LdapServerConnectionReferralResponse;
+    referralResponse?: ReferralResponse;
 
     /**
      * Timeout in seconds
@@ -86,7 +86,7 @@ export class LdapServerConnection extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "server_type" })
-    serverType?: LdapServerConnectionServerType;
+    serverType?: ServerType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "use_ssl" })
@@ -97,17 +97,17 @@ export class LdapServerConnection extends SpeakeasyBase {
     useWildcards?: boolean;
 }
 
-export enum LdapServerMappingsForUsersUserGroupMappingsMapObjectClassToAnyOrAll {
+export enum MapObjectClassToAnyOrAll {
     All = "all",
     Any = "any",
 }
 
-export enum LdapServerMappingsForUsersUserGroupMappingsSearchScope {
+export enum SearchScope {
     AllSubtrees = "All Subtrees",
     FirstLevelOnly = "First Level Only",
 }
 
-export class LdapServerMappingsForUsersUserGroupMappings extends SpeakeasyBase {
+export class UserGroupMappings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "map_group_id" })
     mapGroupId?: string;
@@ -122,7 +122,7 @@ export class LdapServerMappingsForUsersUserGroupMappings extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "map_object_class_to_any_or_all" })
-    mapObjectClassToAnyOrAll?: LdapServerMappingsForUsersUserGroupMappingsMapObjectClassToAnyOrAll;
+    mapObjectClassToAnyOrAll?: MapObjectClassToAnyOrAll;
 
     @SpeakeasyMetadata()
     @Expose({ name: "object_classes" })
@@ -134,25 +134,25 @@ export class LdapServerMappingsForUsersUserGroupMappings extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "search_scope" })
-    searchScope?: LdapServerMappingsForUsersUserGroupMappingsSearchScope;
+    searchScope?: SearchScope;
 }
 
-export enum LdapServerMappingsForUsersUserGroupMembershipMappingsMapObjectClassToAnyOrAll {
+export enum LdapServerMapObjectClassToAnyOrAll {
     All = "all",
     Any = "any",
 }
 
-export enum LdapServerMappingsForUsersUserGroupMembershipMappingsSearchScope {
+export enum LdapServerSearchScope {
     AllSubtrees = "All Subtrees",
     FirstLevelOnly = "First Level Only",
 }
 
-export enum LdapServerMappingsForUsersUserGroupMembershipMappingsUserGroupMembershipStoredIn {
+export enum UserGroupMembershipStoredIn {
     UserObject = "user object",
     GroupObject = "group object",
 }
 
-export class LdapServerMappingsForUsersUserGroupMembershipMappings extends SpeakeasyBase {
+export class UserGroupMembershipMappings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "append_to_username" })
     appendToUsername?: string;
@@ -167,7 +167,7 @@ export class LdapServerMappingsForUsersUserGroupMembershipMappings extends Speak
 
     @SpeakeasyMetadata()
     @Expose({ name: "map_object_class_to_any_or_all" })
-    mapObjectClassToAnyOrAll?: LdapServerMappingsForUsersUserGroupMembershipMappingsMapObjectClassToAnyOrAll;
+    mapObjectClassToAnyOrAll?: LdapServerMapObjectClassToAnyOrAll;
 
     @SpeakeasyMetadata()
     @Expose({ name: "map_user_membership_to_group_field" })
@@ -191,7 +191,7 @@ export class LdapServerMappingsForUsersUserGroupMembershipMappings extends Speak
 
     @SpeakeasyMetadata()
     @Expose({ name: "search_scope" })
-    searchScope?: LdapServerMappingsForUsersUserGroupMembershipMappingsSearchScope;
+    searchScope?: LdapServerSearchScope;
 
     @SpeakeasyMetadata()
     @Expose({ name: "use_dn" })
@@ -199,7 +199,7 @@ export class LdapServerMappingsForUsersUserGroupMembershipMappings extends Speak
 
     @SpeakeasyMetadata()
     @Expose({ name: "user_group_membership_stored_in" })
-    userGroupMembershipStoredIn?: LdapServerMappingsForUsersUserGroupMembershipMappingsUserGroupMembershipStoredIn;
+    userGroupMembershipStoredIn?: UserGroupMembershipStoredIn;
 
     @SpeakeasyMetadata()
     @Expose({ name: "user_group_membership_use_ldap_compare" })
@@ -210,17 +210,17 @@ export class LdapServerMappingsForUsersUserGroupMembershipMappings extends Speak
     username?: string;
 }
 
-export enum LdapServerMappingsForUsersUserMappingsMapObjectClassToAnyOrAll {
+export enum LdapServerSchemasMapObjectClassToAnyOrAll {
     All = "all",
     Any = "any",
 }
 
-export enum LdapServerMappingsForUsersUserMappingsSearchScope {
+export enum LdapServerSchemasSearchScope {
     AllSubtrees = "All Subtrees",
     FirstLevelOnly = "First Level Only",
 }
 
-export class LdapServerMappingsForUsersUserMappings extends SpeakeasyBase {
+export class UserMappings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "append_to_email_results" })
     appendToEmailResults?: string;
@@ -239,7 +239,7 @@ export class LdapServerMappingsForUsersUserMappings extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "map_object_class_to_any_or_all" })
-    mapObjectClassToAnyOrAll?: LdapServerMappingsForUsersUserMappingsMapObjectClassToAnyOrAll;
+    mapObjectClassToAnyOrAll?: LdapServerSchemasMapObjectClassToAnyOrAll;
 
     @SpeakeasyMetadata()
     @Expose({ name: "map_position" })
@@ -279,34 +279,34 @@ export class LdapServerMappingsForUsersUserMappings extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "search_scope" })
-    searchScope?: LdapServerMappingsForUsersUserMappingsSearchScope;
+    searchScope?: LdapServerSchemasSearchScope;
 }
 
-export class LdapServerMappingsForUsers extends SpeakeasyBase {
+export class MappingsForUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group_mappings" })
-    @Type(() => LdapServerMappingsForUsersUserGroupMappings)
-    userGroupMappings?: LdapServerMappingsForUsersUserGroupMappings;
+    @Type(() => UserGroupMappings)
+    userGroupMappings?: UserGroupMappings;
 
     @SpeakeasyMetadata()
     @Expose({ name: "user_group_membership_mappings" })
-    @Type(() => LdapServerMappingsForUsersUserGroupMembershipMappings)
-    userGroupMembershipMappings?: LdapServerMappingsForUsersUserGroupMembershipMappings;
+    @Type(() => UserGroupMembershipMappings)
+    userGroupMembershipMappings?: UserGroupMembershipMappings;
 
     @SpeakeasyMetadata()
     @Expose({ name: "user_mappings" })
-    @Type(() => LdapServerMappingsForUsersUserMappings)
-    userMappings?: LdapServerMappingsForUsersUserMappings;
+    @Type(() => UserMappings)
+    userMappings?: UserMappings;
 }
 
 export class LdapServer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "connection" })
-    @Type(() => LdapServerConnection)
-    connection?: LdapServerConnection;
+    @Type(() => Connection)
+    connection?: Connection;
 
     @SpeakeasyMetadata()
     @Expose({ name: "mappings_for_users" })
-    @Type(() => LdapServerMappingsForUsers)
-    mappingsForUsers?: LdapServerMappingsForUsers;
+    @Type(() => MappingsForUsers)
+    mappingsForUsers?: MappingsForUsers;
 }

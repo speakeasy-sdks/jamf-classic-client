@@ -8,7 +8,7 @@ import { AxiosResponse } from "axios";
 /**
  * Command to send (SettingsEnableBluetooth and SettingsDisableBluetooth require macOS 10.13.4 or later, EnableRemoteDesktop and DisableRemoteDesktop require macOS 10.14.4, ScheduleOSUpdate (deprecated on 2022-10-17) requires macOS 10.12.0 or later)
  */
-export enum CreateComputerCommandByCommandAndIdCommand {
+export enum CreateComputerCommandByCommandAndIdPathParamCommand {
     BlankPush = "BlankPush",
     EnableRemoteDesktop = "EnableRemoteDesktop",
     DisableRemoteDesktop = "DisableRemoteDesktop",
@@ -23,7 +23,7 @@ export class CreateComputerCommandByCommandAndIdRequest extends SpeakeasyBase {
      * Command to send (SettingsEnableBluetooth and SettingsDisableBluetooth require macOS 10.13.4 or later, EnableRemoteDesktop and DisableRemoteDesktop require macOS 10.14.4, ScheduleOSUpdate (deprecated on 2022-10-17) requires macOS 10.12.0 or later)
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=command" })
-    command: CreateComputerCommandByCommandAndIdCommand;
+    command: CreateComputerCommandByCommandAndIdPathParamCommand;
 
     /**
      * Computer ID - supports comma separated values (e.g. id/8,10,55)

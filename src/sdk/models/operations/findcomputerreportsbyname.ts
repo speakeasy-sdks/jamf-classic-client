@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class FindComputerReportsByNameRequest extends SpeakeasyBase {
@@ -15,6 +15,12 @@ export class FindComputerReportsByNameRequest extends SpeakeasyBase {
 }
 
 export class FindComputerReportsByNameResponse extends SpeakeasyBase {
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata({ elemType: shared.ComputerReport })
+    twoHundredApplicationJsonComputerReport?: shared.ComputerReport[];
+
     @SpeakeasyMetadata()
     body?: Uint8Array;
 
@@ -35,10 +41,4 @@ export class FindComputerReportsByNameResponse extends SpeakeasyBase {
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
-
-    /**
-     * OK
-     */
-    @SpeakeasyMetadata({ elemType: shared.ComputerReport })
-    computerReport?: shared.ComputerReport[];
 }

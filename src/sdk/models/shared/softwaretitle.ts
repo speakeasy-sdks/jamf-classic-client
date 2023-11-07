@@ -16,7 +16,7 @@ export class SoftwareTitleNotifications extends SpeakeasyBase {
     jssNotification?: boolean;
 }
 
-export class SoftwareTitleVersionsVersionComputersComputer extends SpeakeasyBase {
+export class SoftwareTitleComputer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "alt_mac_address" })
     altMacAddress?: string;
@@ -38,14 +38,14 @@ export class SoftwareTitleVersionsVersionComputersComputer extends SpeakeasyBase
     serialNumber?: string;
 }
 
-export class SoftwareTitleVersionsVersionComputers extends SpeakeasyBase {
+export class SoftwareTitleComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
-    @Type(() => SoftwareTitleVersionsVersionComputersComputer)
-    computer?: SoftwareTitleVersionsVersionComputersComputer;
+    @Type(() => SoftwareTitleComputer)
+    computer?: SoftwareTitleComputer;
 }
 
-export class SoftwareTitleVersionsVersionPackage extends SpeakeasyBase {
+export class SoftwareTitlePackage extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -55,16 +55,16 @@ export class SoftwareTitleVersionsVersionPackage extends SpeakeasyBase {
     name?: string;
 }
 
-export class SoftwareTitleVersionsVersion extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: SoftwareTitleVersionsVersionComputers })
+export class SoftwareTitleVersion extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: SoftwareTitleComputers })
     @Expose({ name: "computers" })
-    @Type(() => SoftwareTitleVersionsVersionComputers)
-    computers?: SoftwareTitleVersionsVersionComputers[];
+    @Type(() => SoftwareTitleComputers)
+    computers?: SoftwareTitleComputers[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "package" })
-    @Type(() => SoftwareTitleVersionsVersionPackage)
-    package?: SoftwareTitleVersionsVersionPackage;
+    @Type(() => SoftwareTitlePackage)
+    package?: SoftwareTitlePackage;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
@@ -78,8 +78,8 @@ export class SoftwareTitleVersionsVersion extends SpeakeasyBase {
 export class SoftwareTitleVersions extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "version" })
-    @Type(() => SoftwareTitleVersionsVersion)
-    version?: SoftwareTitleVersionsVersion;
+    @Type(() => SoftwareTitleVersion)
+    version?: SoftwareTitleVersion;
 }
 
 export class SoftwareTitle extends SpeakeasyBase {

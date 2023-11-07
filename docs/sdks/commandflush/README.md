@@ -1,5 +1,5 @@
 # Commandflush
-(*commandflush*)
+(*.commandflush*)
 
 ### Available Operations
 
@@ -14,7 +14,7 @@ Flushes commands based on information specified in an XML file
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CommandflushStatus } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
+import { Status } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
 (async() => {
   const sdk = new Jamf({
@@ -24,7 +24,8 @@ import { CommandflushStatus } from "jamf-classic-sdk-nodejs/dist/sdk/models/shar
     },
   });
 
-  const res = await sdk.commandflush.commandFlush("0|o@6bRL`," as bytes <<<>>>);
+  const res = await sdk.commandflush.commandFlush(new TextEncoder().encode("0x3FC75fbae2"));
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -53,7 +54,7 @@ Flushes commands for devices
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateCommandFlushWithIdAndStatusIdtype, CreateCommandFlushWithIdAndStatusStatus } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { Idtype, Status } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -65,9 +66,10 @@ import { CreateCommandFlushWithIdAndStatusIdtype, CreateCommandFlushWithIdAndSta
 
   const res = await sdk.commandflush.createCommandFlushWithIdAndStatus({
     id: 873570,
-    idtype: CreateCommandFlushWithIdAndStatusIdtype.Computergroups,
-    status: CreateCommandFlushWithIdAndStatusStatus.Failed,
+    idtype: Idtype.Computergroups,
+    status: Status.Failed,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

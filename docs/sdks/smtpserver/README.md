@@ -1,5 +1,5 @@
 # Smtpserver
-(*smtpserver*)
+(*.smtpserver*)
 
 ### Available Operations
 
@@ -24,6 +24,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.smtpserver.findSMTPServer();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -60,7 +61,8 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     },
   });
 
-  const res = await sdk.smtpserver.updateSMTPServer("gd#;>U6ZGQ" as bytes <<<>>>);
+  const res = await sdk.smtpserver.updateSMTPServer(new TextEncoder().encode("0xAA066c5d9b"));
+
 
   if (res.statusCode == 200) {
     // handle response

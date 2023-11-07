@@ -1,5 +1,5 @@
 # Vppassignments
-(*vppassignments*)
+(*.vppassignments*)
 
 ### Available Operations
 
@@ -29,6 +29,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.vppassignments.createAssignmentById({
     id: 66531,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -70,6 +71,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 128441,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -110,6 +112,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 535485,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -147,6 +150,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.vppassignments.findVPPAdminAssignment();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -186,6 +190,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.vppassignments.updateAssignmentById({
     id: 260276,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

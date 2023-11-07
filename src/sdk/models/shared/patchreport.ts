@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class PatchReportVersionsVersionComputersComputer extends SpeakeasyBase {
+export class PatchReportComputer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -15,22 +15,22 @@ export class PatchReportVersionsVersionComputersComputer extends SpeakeasyBase {
     name?: string;
 }
 
-export class PatchReportVersionsVersionComputers extends SpeakeasyBase {
+export class PatchReportComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
-    @Type(() => PatchReportVersionsVersionComputersComputer)
-    computer?: PatchReportVersionsVersionComputersComputer;
+    @Type(() => PatchReportComputer)
+    computer?: PatchReportComputer;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class PatchReportVersionsVersion extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: PatchReportVersionsVersionComputers })
+export class Version extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: PatchReportComputers })
     @Expose({ name: "computers" })
-    @Type(() => PatchReportVersionsVersionComputers)
-    computers?: PatchReportVersionsVersionComputers[];
+    @Type(() => PatchReportComputers)
+    computers?: PatchReportComputers[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "software_version" })
@@ -40,8 +40,8 @@ export class PatchReportVersionsVersion extends SpeakeasyBase {
 export class PatchReportVersions extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "version" })
-    @Type(() => PatchReportVersionsVersion)
-    version?: PatchReportVersionsVersion;
+    @Type(() => Version)
+    version?: Version;
 }
 
 export class PatchReport extends SpeakeasyBase {

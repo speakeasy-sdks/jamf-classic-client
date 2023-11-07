@@ -8,7 +8,7 @@ import { AxiosResponse } from "axios";
 /**
  * Subset to filter by
  */
-export enum FindOsxConfigurationProfilesByIdSubsetSubset {
+export enum FindOsxConfigurationProfilesByIdSubsetPathParamSubset {
     General = "General",
     Scope = "Scope",
     SelfService = "SelfService",
@@ -25,7 +25,7 @@ export class FindOsxConfigurationProfilesByIdSubsetRequest extends SpeakeasyBase
      * Subset to filter by
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=subset" })
-    subset: FindOsxConfigurationProfilesByIdSubsetSubset;
+    subset: FindOsxConfigurationProfilesByIdSubsetPathParamSubset;
 }
 
 export class FindOsxConfigurationProfilesByIdSubsetResponse extends SpeakeasyBase {

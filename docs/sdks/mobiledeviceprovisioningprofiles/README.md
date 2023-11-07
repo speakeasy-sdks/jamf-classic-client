@@ -1,5 +1,5 @@
 # Mobiledeviceprovisioningprofiles
-(*mobiledeviceprovisioningprofiles*)
+(*.mobiledeviceprovisioningprofiles*)
 
 ### Available Operations
 
@@ -37,6 +37,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceprovisioningprofiles.createMobileDeviceProvisioningProfilesById({
     id: 535000,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -78,6 +79,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -117,6 +119,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceprovisioningprofiles.createMobileDeviceProvisioningProfilesByUUID({
     uuid: "13ea13b9-fc35-4832-beef-b81d409bacf7",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -158,6 +161,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 368967,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -197,6 +201,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceprovisioningprofiles.deleteMobileDeviceProvisioningProfilesByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -238,6 +243,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     uuid: "1b5d663b-9383-442c-ae3e-a53127d259da",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -275,6 +281,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceprovisioningprofiles.findMobileDeviceProvisioningProfiles();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -314,6 +321,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceprovisioningprofiles.findMobileDeviceProvisioningProfilesById({
     id: 627440,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -355,6 +363,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -394,6 +403,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceprovisioningprofiles.findMobileDeviceProvisioningProfilesByUUID({
     uuid: "f7d07a4b-4f13-400a-9a71-cfd522cce345",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -435,6 +445,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 338588,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -475,6 +486,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -514,6 +526,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceprovisioningprofiles.updateMobileDeviceProvisioningProfilesByUUID({
     uuid: "fa0f0ee4-a5c9-4284-80bb-3bc485e07e4d",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

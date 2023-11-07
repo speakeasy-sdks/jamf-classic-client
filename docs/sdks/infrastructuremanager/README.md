@@ -1,5 +1,5 @@
 # Infrastructuremanager
-(*infrastructuremanager*)
+(*.infrastructuremanager*)
 
 ### Available Operations
 
@@ -25,6 +25,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.infrastructuremanager.findInfrastructureManager();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -65,6 +66,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 48223,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -104,6 +106,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.infrastructuremanager.updateInfrastructureManagerById({
     id: 612584,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

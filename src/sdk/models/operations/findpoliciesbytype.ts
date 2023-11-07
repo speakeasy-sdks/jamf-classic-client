@@ -8,7 +8,7 @@ import { AxiosResponse } from "axios";
 /**
  * Type to filter by
  */
-export enum FindPoliciesByTypeCreatedBy {
+export enum CreatedBy {
     Jss = "jss",
     Casper = "casper",
 }
@@ -18,7 +18,7 @@ export class FindPoliciesByTypeRequest extends SpeakeasyBase {
      * Type to filter by
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=createdBy" })
-    createdBy: FindPoliciesByTypeCreatedBy;
+    createdBy: CreatedBy;
 }
 
 export class FindPoliciesByTypeResponse extends SpeakeasyBase {

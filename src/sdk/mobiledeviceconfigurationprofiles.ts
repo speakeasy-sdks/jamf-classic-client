@@ -3,9 +3,9 @@
  */
 
 import * as utils from "../internal/utils";
-import * as errors from "./models/errors";
-import * as operations from "./models/operations";
-import * as shared from "./models/shared";
+import * as errors from "../sdk/models/errors";
+import * as operations from "../sdk/models/operations";
+import * as shared from "../sdk/models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
@@ -280,13 +280,14 @@ export class Mobiledeviceconfigurationprofiles {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.mobileDeviceConfigurationProfiles = [];
+                    res.twoHundredApplicationJsonMobileDeviceConfigurationProfiles = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.mobileDeviceConfigurationProfiles = utils.objectToClass(
-                        JSON.parse(decodedRes),
-                        shared.MobileDeviceConfigurationProfiles,
-                        resFieldDepth
-                    );
+                    res.twoHundredApplicationJsonMobileDeviceConfigurationProfiles =
+                        utils.objectToClass(
+                            JSON.parse(decodedRes),
+                            shared.MobileDeviceConfigurationProfiles,
+                            resFieldDepth
+                        );
                 } else if (utils.matchContentType(contentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {

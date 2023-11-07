@@ -1,5 +1,5 @@
 # Computers
-(*computers*)
+(*.computers*)
 
 ### Available Operations
 
@@ -51,6 +51,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 117029,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -90,6 +91,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.computers.deleteComputerById({
     id: 361320,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -131,6 +133,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     macaddress: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -170,6 +173,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.computers.deleteComputerByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -211,6 +215,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     serialnumber: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -251,6 +256,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     udid: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -289,6 +295,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.computers.findComputers();
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -325,6 +332,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computers.findComputersBasic();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -365,6 +373,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 962919,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -392,7 +401,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputersByIdSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -404,8 +413,9 @@ import { FindComputersByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/
 
   const res = await sdk.computers.findComputersByIdSubset({
     id: 130265,
-    subset: FindComputersByIdSubsetSubset.Peripherals,
+    subset: FindComputersByIdSubsetPathParamSubset.Peripherals,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -447,6 +457,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     macaddress: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -474,7 +485,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersByMacAddressSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputersByMacAddressSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -486,8 +497,9 @@ import { FindComputersByMacAddressSubsetSubset } from "jamf-classic-sdk-nodejs/d
 
   const res = await sdk.computers.findComputersByMacAddressSubset({
     macaddress: "string",
-    subset: FindComputersByMacAddressSubsetSubset.ConfigurationProfiles,
+    subset: FindComputersByMacAddressSubsetPathParamSubset.ConfigurationProfiles,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -529,6 +541,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -556,7 +569,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputersByNameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -568,8 +581,9 @@ import { FindComputersByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sd
 
   const res = await sdk.computers.findComputersByNameSubset({
     name: "string",
-    subset: FindComputersByNameSubsetSubset.Location,
+    subset: FindComputersByNameSubsetPathParamSubset.Location,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -611,6 +625,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     serialnumber: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -638,7 +653,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersBySerialNumberSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputersBySerialNumberSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -650,8 +665,9 @@ import { FindComputersBySerialNumberSubsetSubset } from "jamf-classic-sdk-nodejs
 
   const res = await sdk.computers.findComputersBySerialNumberSubset({
     serialnumber: "string",
-    subset: FindComputersBySerialNumberSubsetSubset.Software,
+    subset: FindComputersBySerialNumberSubsetPathParamSubset.Software,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -693,6 +709,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     udid: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -720,7 +737,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputersByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputersByUDIDSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -731,9 +748,10 @@ import { FindComputersByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sd
   });
 
   const res = await sdk.computers.findComputersByUDIDSubset({
-    subset: FindComputersByUDIDSubsetSubset.ExtensionAttributes,
+    subset: FindComputersByUDIDSubsetPathParamSubset.ExtensionAttributes,
     udid: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -775,6 +793,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -814,6 +833,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.computers.matchComputers({
     match: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -855,6 +875,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     matchname: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -894,6 +915,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.computers.updateComputerById({
     id: 576492,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -935,6 +957,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     macaddress: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -974,6 +997,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.computers.updateComputerByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -1015,6 +1039,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     serialnumber: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1054,6 +1079,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.computers.updateComputerByUDID({
     udid: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

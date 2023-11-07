@@ -1,5 +1,5 @@
 # Computerreports
-(*computerreports*)
+(*.computerreports*)
 
 ### Available Operations
 
@@ -25,6 +25,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computerreports.findComputerReports();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -65,6 +66,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -104,6 +106,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.computerreports.findComputerReportsByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

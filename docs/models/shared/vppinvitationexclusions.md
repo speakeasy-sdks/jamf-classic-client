@@ -1,0 +1,10 @@
+# VppInvitationExclusions
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `jssUserGroups`                                                                                        | [shared.VppInvitationSchemasJssUserGroups](../../models/shared/vppinvitationschemasjssusergroups.md)[] | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `jssUsers`                                                                                             | [shared.VppInvitationSchemasJssUsers](../../models/shared/vppinvitationschemasjssusers.md)[]           | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |
+| `userGroups`                                                                                           | [shared.VppInvitationUserGroups](../../models/shared/vppinvitationusergroups.md)[]                     | :heavy_minus_sign:                                                                                     | N/A                                                                                                    |

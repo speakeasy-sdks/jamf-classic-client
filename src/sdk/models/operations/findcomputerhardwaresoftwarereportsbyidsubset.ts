@@ -3,14 +3,14 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import { RFCDate } from "../../types";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
+import { RFCDate } from "../../../sdk/types";
 import { AxiosResponse } from "axios";
 
 /**
  * Subset to filter by
  */
-export enum FindComputerHardwareSoftwareReportsByIdSubsetSubset {
+export enum Subset {
     Software = "Software",
     Hardwre = "Hardwre",
     Fonts = "Fonts",
@@ -40,7 +40,7 @@ export class FindComputerHardwareSoftwareReportsByIdSubsetRequest extends Speake
      * Subset to filter by
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=subset" })
-    subset: FindComputerHardwareSoftwareReportsByIdSubsetSubset;
+    subset: Subset;
 }
 
 export class FindComputerHardwareSoftwareReportsByIdSubsetResponse extends SpeakeasyBase {

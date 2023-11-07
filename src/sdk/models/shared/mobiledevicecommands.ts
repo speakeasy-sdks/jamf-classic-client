@@ -23,7 +23,7 @@ export class MobileDeviceCommandsMobileDeviceCommand extends SpeakeasyBase {
     udid?: string;
 }
 
-export class MobileDeviceCommandsMobileDevicesMobileDevice extends SpeakeasyBase {
+export class MobileDeviceCommandsMobileDevice extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -48,8 +48,8 @@ export class MobileDeviceCommandsMobileDevicesMobileDevice extends SpeakeasyBase
 export class MobileDeviceCommandsMobileDevices extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "mobile_device" })
-    @Type(() => MobileDeviceCommandsMobileDevicesMobileDevice)
-    mobileDevice?: MobileDeviceCommandsMobileDevicesMobileDevice;
+    @Type(() => MobileDeviceCommandsMobileDevice)
+    mobileDevice?: MobileDeviceCommandsMobileDevice;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })

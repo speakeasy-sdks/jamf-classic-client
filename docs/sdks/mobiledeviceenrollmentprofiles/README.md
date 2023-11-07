@@ -1,5 +1,5 @@
 # Mobiledeviceenrollmentprofiles
-(*mobiledeviceenrollmentprofiles*)
+(*.mobiledeviceenrollmentprofiles*)
 
 ### Available Operations
 
@@ -37,6 +37,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceenrollmentprofiles.createMobileDeviceEnrollmentProfilesById({
     id: 791519,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -78,6 +79,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 463513,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -117,6 +119,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceenrollmentprofiles.deleteMobileDeviceEnrollmentProfileByInvitation({
     invitation: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -158,6 +161,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -195,6 +199,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfiles();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -235,6 +240,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 635234,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -262,7 +268,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceEnrollmentProfilesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceEnrollmentProfilesByIdSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -274,8 +280,9 @@ import { FindMobileDeviceEnrollmentProfilesByIdSubsetSubset } from "jamf-classic
 
   const res = await sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByIdSubset({
     id: 793930,
-    subset: FindMobileDeviceEnrollmentProfilesByIdSubsetSubset.Purchasing,
+    subset: FindMobileDeviceEnrollmentProfilesByIdSubsetPathParamSubset.Purchasing,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -317,6 +324,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     invitation: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -357,6 +365,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -384,7 +393,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMobileDeviceEnrollmentProfilesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMobileDeviceEnrollmentProfilesByNameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -396,8 +405,9 @@ import { FindMobileDeviceEnrollmentProfilesByNameSubsetSubset } from "jamf-class
 
   const res = await sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByNameSubset({
     name: "string",
-    subset: FindMobileDeviceEnrollmentProfilesByNameSubsetSubset.Purchasing,
+    subset: FindMobileDeviceEnrollmentProfilesByNameSubsetPathParamSubset.Purchasing,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -439,6 +449,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 623408,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -479,6 +490,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     invitation: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -518,6 +530,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.mobiledeviceenrollmentprofiles.updateMobileDeviceEnrollmentProfileByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

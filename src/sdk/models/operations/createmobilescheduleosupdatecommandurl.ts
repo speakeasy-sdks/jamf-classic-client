@@ -8,7 +8,7 @@ import { AxiosResponse } from "axios";
 /**
  * Specify the behavior of the install. Possible integer values are: 1 (Download the update for users to install), 2 (Download and install the update, and restart devices after installation)
  */
-export enum CreateMobileScheduleOSUpdateCommandURLInstallAction {
+export enum InstallAction {
     One = 1,
     Two = 2,
 }
@@ -24,7 +24,7 @@ export class CreateMobileScheduleOSUpdateCommandURLRequest extends SpeakeasyBase
      * Specify the behavior of the install. Possible integer values are: 1 (Download the update for users to install), 2 (Download and install the update, and restart devices after installation)
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=install_action" })
-    installAction: CreateMobileScheduleOSUpdateCommandURLInstallAction;
+    installAction: InstallAction;
 }
 
 export class CreateMobileScheduleOSUpdateCommandURLResponse extends SpeakeasyBase {

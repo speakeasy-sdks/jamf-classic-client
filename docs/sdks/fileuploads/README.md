@@ -1,5 +1,5 @@
 # Fileuploads
-(*fileuploads*)
+(*.fileuploads*)
 
 ### Available Operations
 
@@ -13,7 +13,7 @@ Here is a sample command curl -k -u user:password https://my.server.com:8443/JSS
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { UploadFilesIDType, UploadFilesResource } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { PathParamIdType, Resource } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -25,9 +25,10 @@ import { UploadFilesIDType, UploadFilesResource } from "jamf-classic-sdk-nodejs/
 
   const res = await sdk.fileuploads.uploadFiles({
     id: "<ID>",
-    idType: UploadFilesIDType.Id,
-    resource: UploadFilesResource.Mobiledevices,
+    idType: PathParamIdType.Id,
+    resource: Resource.Mobiledevices,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

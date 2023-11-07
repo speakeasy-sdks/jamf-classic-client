@@ -5,70 +5,70 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export enum ComputerInventoryCollectionApplicationsApplicationPlatform {
+export enum Platform {
     Mac = "Mac",
     Windows = "Windows",
 }
 
-export class ComputerInventoryCollectionApplicationsApplication extends SpeakeasyBase {
+export class Application extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "path" })
     path?: string;
 
     @SpeakeasyMetadata()
     @Expose({ name: "platform" })
-    platform?: ComputerInventoryCollectionApplicationsApplicationPlatform;
+    platform?: Platform;
 }
 
-export class ComputerInventoryCollectionApplications extends SpeakeasyBase {
+export class Applications extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "application" })
-    @Type(() => ComputerInventoryCollectionApplicationsApplication)
-    application?: ComputerInventoryCollectionApplicationsApplication;
+    @Type(() => Application)
+    application?: Application;
 }
 
-export enum ComputerInventoryCollectionFontsFontPlatform {
+export enum ComputerInventoryCollectionPlatform {
     Mac = "Mac",
     Windows = "Windows",
 }
 
-export class ComputerInventoryCollectionFontsFont extends SpeakeasyBase {
+export class Font extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "path" })
     path?: string;
 
     @SpeakeasyMetadata()
     @Expose({ name: "platform" })
-    platform?: ComputerInventoryCollectionFontsFontPlatform;
+    platform?: ComputerInventoryCollectionPlatform;
 }
 
-export class ComputerInventoryCollectionFonts extends SpeakeasyBase {
+export class Fonts extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "font" })
-    @Type(() => ComputerInventoryCollectionFontsFont)
-    font?: ComputerInventoryCollectionFontsFont;
+    @Type(() => Font)
+    font?: Font;
 }
 
-export enum ComputerInventoryCollectionPluginsPluginPlatform {
+export enum ComputerInventoryCollectionSchemasPlatform {
     Mac = "Mac",
     Windows = "Windows",
 }
 
-export class ComputerInventoryCollectionPluginsPlugin extends SpeakeasyBase {
+export class Plugin extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "path" })
     path?: string;
 
     @SpeakeasyMetadata()
     @Expose({ name: "platform" })
-    platform?: ComputerInventoryCollectionPluginsPluginPlatform;
+    platform?: ComputerInventoryCollectionSchemasPlatform;
 }
 
-export class ComputerInventoryCollectionPlugins extends SpeakeasyBase {
+export class Plugins extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "plugin" })
-    @Type(() => ComputerInventoryCollectionPluginsPlugin)
-    plugin?: ComputerInventoryCollectionPluginsPlugin;
+    @Type(() => Plugin)
+    plugin?: Plugin;
 }
 
 export class ComputerInventoryCollection extends SpeakeasyBase {
@@ -76,10 +76,10 @@ export class ComputerInventoryCollection extends SpeakeasyBase {
     @Expose({ name: "active_services" })
     activeServices?: boolean;
 
-    @SpeakeasyMetadata({ elemType: ComputerInventoryCollectionApplications })
+    @SpeakeasyMetadata({ elemType: Applications })
     @Expose({ name: "applications" })
-    @Type(() => ComputerInventoryCollectionApplications)
-    applications?: ComputerInventoryCollectionApplications[];
+    @Type(() => Applications)
+    applications?: Applications[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "available_software_updates" })
@@ -89,10 +89,10 @@ export class ComputerInventoryCollection extends SpeakeasyBase {
     @Expose({ name: "computer_location_information" })
     computerLocationInformation?: boolean;
 
-    @SpeakeasyMetadata({ elemType: ComputerInventoryCollectionFonts })
+    @SpeakeasyMetadata({ elemType: Fonts })
     @Expose({ name: "fonts" })
-    @Type(() => ComputerInventoryCollectionFonts)
-    fonts?: ComputerInventoryCollectionFonts[];
+    @Type(() => Fonts)
+    fonts?: Fonts[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "hidden_accounts" })
@@ -126,10 +126,10 @@ export class ComputerInventoryCollection extends SpeakeasyBase {
     @Expose({ name: "package_receipts" })
     packageReceipts?: boolean;
 
-    @SpeakeasyMetadata({ elemType: ComputerInventoryCollectionPlugins })
+    @SpeakeasyMetadata({ elemType: Plugins })
     @Expose({ name: "plugins" })
-    @Type(() => ComputerInventoryCollectionPlugins)
-    plugins?: ComputerInventoryCollectionPlugins[];
+    @Type(() => Plugins)
+    plugins?: Plugins[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "printers" })

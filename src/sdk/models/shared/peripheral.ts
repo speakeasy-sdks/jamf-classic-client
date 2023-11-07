@@ -15,7 +15,7 @@ export class PeripheralAttachments extends SpeakeasyBase {
     attachment?: Attachment;
 }
 
-export class PeripheralGeneralFieldsField extends SpeakeasyBase {
+export class PeripheralField extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
@@ -25,11 +25,11 @@ export class PeripheralGeneralFieldsField extends SpeakeasyBase {
     value?: string;
 }
 
-export class PeripheralGeneralFields extends SpeakeasyBase {
+export class PeripheralFields extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "field" })
-    @Type(() => PeripheralGeneralFieldsField)
-    field?: PeripheralGeneralFieldsField;
+    @Type(() => PeripheralField)
+    field?: PeripheralField;
 }
 
 export class PeripheralGeneral extends SpeakeasyBase {
@@ -41,10 +41,10 @@ export class PeripheralGeneral extends SpeakeasyBase {
     @Expose({ name: "bar_code_2" })
     barCode2?: string;
 
-    @SpeakeasyMetadata({ elemType: PeripheralGeneralFields })
+    @SpeakeasyMetadata({ elemType: PeripheralFields })
     @Expose({ name: "fields" })
-    @Type(() => PeripheralGeneralFields)
-    fields?: PeripheralGeneralFields[];
+    @Type(() => PeripheralFields)
+    fields?: PeripheralFields[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "id" })

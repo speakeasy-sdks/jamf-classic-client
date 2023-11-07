@@ -1,5 +1,5 @@
 # Computermanagement
-(*computermanagement*)
+(*.computermanagement*)
 
 ### Available Operations
 
@@ -50,6 +50,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 800419,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -91,6 +92,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 596013,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -118,7 +120,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerManagementByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerManagementByIdSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -130,8 +132,9 @@ import { FindComputerManagementByIdSubsetSubset } from "jamf-classic-sdk-nodejs/
 
   const res = await sdk.computermanagement.findComputerManagementByIdSubset({
     id: 327799,
-    subset: FindComputerManagementByIdSubsetSubset.ManagedPreferenceProfiles,
+    subset: FindComputerManagementByIdSubsetPathParamSubset.ManagedPreferenceProfiles,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -174,6 +177,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     username: "Kolby_Hirthe16",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -201,7 +205,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerManagementByIdUsernameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerManagementByIdUsernameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -213,9 +217,10 @@ import { FindComputerManagementByIdUsernameSubsetSubset } from "jamf-classic-sdk
 
   const res = await sdk.computermanagement.findComputerManagementByIdUsernameSubset({
     id: 458312,
-    subset: FindComputerManagementByIdUsernameSubsetSubset.SmartGroups,
+    subset: FindComputerManagementByIdUsernameSubsetPathParamSubset.SmartGroups,
     username: "Mckenzie54",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -256,6 +261,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.computermanagement.findComputerManagementByMacAddress({
     macaddress: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -298,6 +304,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     macaddress: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -325,7 +332,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerManagementByMacAddressSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerManagementByMacAddressSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -337,8 +344,9 @@ import { FindComputerManagementByMacAddressSubsetSubset } from "jamf-classic-sdk
 
   const res = await sdk.computermanagement.findComputerManagementByMacAddressSubset({
     macaddress: "string",
-    subset: FindComputerManagementByMacAddressSubsetSubset.General,
+    subset: FindComputerManagementByMacAddressSubsetPathParamSubset.General,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -381,6 +389,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     username: "Uriah_Dach70",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -408,7 +417,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerManagementByMacAddressUsernameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerManagementByMacAddressUsernameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -420,9 +429,10 @@ import { FindComputerManagementByMacAddressUsernameSubsetSubset } from "jamf-cla
 
   const res = await sdk.computermanagement.findComputerManagementByMacAddressUsernameSubset({
     macaddress: "string",
-    subset: FindComputerManagementByMacAddressUsernameSubsetSubset.OSXConfigurationProfiles,
+    subset: FindComputerManagementByMacAddressUsernameSubsetPathParamSubset.OSXConfigurationProfiles,
     username: "Aida_Murazik94",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -463,6 +473,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.computermanagement.findComputerManagementByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -505,6 +516,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -532,7 +544,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerManagementByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerManagementByNameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -544,8 +556,9 @@ import { FindComputerManagementByNameSubsetSubset } from "jamf-classic-sdk-nodej
 
   const res = await sdk.computermanagement.findComputerManagementByNameSubset({
     name: "string",
-    subset: FindComputerManagementByNameSubsetSubset.StaticGroups,
+    subset: FindComputerManagementByNameSubsetPathParamSubset.StaticGroups,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -588,6 +601,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     username: "Giovanni_Daugherty63",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -615,7 +629,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerManagementByNameUsernameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerManagementByNameUsernameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -627,9 +641,10 @@ import { FindComputerManagementByNameUsernameSubsetSubset } from "jamf-classic-s
 
   const res = await sdk.computermanagement.findComputerManagementByNameUsernameSubset({
     name: "string",
-    subset: FindComputerManagementByNameUsernameSubsetSubset.General,
+    subset: FindComputerManagementByNameUsernameSubsetPathParamSubset.General,
     username: "Jermain_Batz41",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -670,6 +685,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.computermanagement.findComputerManagementBySerialNumber({
     serialnumber: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -712,6 +728,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     serialnumber: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -739,7 +756,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerManagementBySerialNumberSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerManagementBySerialNumberSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -751,8 +768,9 @@ import { FindComputerManagementBySerialNumberSubsetSubset } from "jamf-classic-s
 
   const res = await sdk.computermanagement.findComputerManagementBySerialNumberSubset({
     serialnumber: "string",
-    subset: FindComputerManagementBySerialNumberSubsetSubset.OSXConfigurationProfiles,
+    subset: FindComputerManagementBySerialNumberSubsetPathParamSubset.OSXConfigurationProfiles,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -795,6 +813,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     username: "Reilly_Considine52",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -822,7 +841,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerManagementBySerialNumberUsernameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerManagementBySerialNumberUsernameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -834,9 +853,10 @@ import { FindComputerManagementBySerialNumberUsernameSubsetSubset } from "jamf-c
 
   const res = await sdk.computermanagement.findComputerManagementBySerialNumberUsernameSubset({
     serialnumber: "string",
-    subset: FindComputerManagementBySerialNumberUsernameSubsetSubset.RestrictedSoftware,
+    subset: FindComputerManagementBySerialNumberUsernameSubsetPathParamSubset.RestrictedSoftware,
     username: "Deja22",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -878,6 +898,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     udid: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -905,7 +926,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerManagementByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerManagementByUDIDSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -916,9 +937,10 @@ import { FindComputerManagementByUDIDSubsetSubset } from "jamf-classic-sdk-nodej
   });
 
   const res = await sdk.computermanagement.findComputerManagementByUDIDSubset({
-    subset: FindComputerManagementByUDIDSubsetSubset.MacAppStoreApps,
+    subset: FindComputerManagementByUDIDSubsetPathParamSubset.MacAppStoreApps,
     udid: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -961,6 +983,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     udid: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1002,6 +1025,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     username: "Shyanne_Satterfield",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1029,7 +1053,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerManagementByUdidUsernameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerManagementByUdidUsernameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -1040,10 +1064,11 @@ import { FindComputerManagementByUdidUsernameSubsetSubset } from "jamf-classic-s
   });
 
   const res = await sdk.computermanagement.findComputerManagementByUdidUsernameSubset({
-    subset: FindComputerManagementByUdidUsernameSubsetSubset.General,
+    subset: FindComputerManagementByUdidUsernameSubsetPathParamSubset.General,
     udid: "string",
     username: "Hilda_Schimmel10",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

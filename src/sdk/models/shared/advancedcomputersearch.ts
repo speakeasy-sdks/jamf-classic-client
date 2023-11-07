@@ -7,7 +7,7 @@ import { Criterion } from "./criterion";
 import { SiteObject } from "./siteobject";
 import { Expose, Type } from "class-transformer";
 
-export class AdvancedComputerSearchComputersComputer extends SpeakeasyBase {
+export class AdvancedComputerSearchComputer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "Computer_Name" })
     computerName?: string;
@@ -31,15 +31,15 @@ export class AdvancedComputerSearchComputersComputer extends SpeakeasyBase {
 export class AdvancedComputerSearchComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
-    @Type(() => AdvancedComputerSearchComputersComputer)
-    computer?: AdvancedComputerSearchComputersComputer;
+    @Type(() => AdvancedComputerSearchComputer)
+    computer?: AdvancedComputerSearchComputer;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class AdvancedComputerSearchCriteria extends SpeakeasyBase {
+export class Criteria extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "criterion" })
     @Type(() => Criterion)
@@ -50,7 +50,7 @@ export class AdvancedComputerSearchCriteria extends SpeakeasyBase {
     size?: number;
 }
 
-export class AdvancedComputerSearchDisplayFieldsDisplayField extends SpeakeasyBase {
+export class DisplayField extends SpeakeasyBase {
     /**
      * Name of the display field
      */
@@ -59,11 +59,11 @@ export class AdvancedComputerSearchDisplayFieldsDisplayField extends SpeakeasyBa
     name?: string;
 }
 
-export class AdvancedComputerSearchDisplayFields extends SpeakeasyBase {
+export class DisplayFields extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "display_field" })
-    @Type(() => AdvancedComputerSearchDisplayFieldsDisplayField)
-    displayField?: AdvancedComputerSearchDisplayFieldsDisplayField;
+    @Type(() => DisplayField)
+    displayField?: DisplayField;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
@@ -76,15 +76,15 @@ export class AdvancedComputerSearch extends SpeakeasyBase {
     @Type(() => AdvancedComputerSearchComputers)
     computers?: AdvancedComputerSearchComputers[];
 
-    @SpeakeasyMetadata({ elemType: AdvancedComputerSearchCriteria })
+    @SpeakeasyMetadata({ elemType: Criteria })
     @Expose({ name: "criteria" })
-    @Type(() => AdvancedComputerSearchCriteria)
-    criteria?: AdvancedComputerSearchCriteria[];
+    @Type(() => Criteria)
+    criteria?: Criteria[];
 
-    @SpeakeasyMetadata({ elemType: AdvancedComputerSearchDisplayFields })
+    @SpeakeasyMetadata({ elemType: DisplayFields })
     @Expose({ name: "display_fields" })
-    @Type(() => AdvancedComputerSearchDisplayFields)
-    displayFields?: AdvancedComputerSearchDisplayFields[];
+    @Type(() => DisplayFields)
+    displayFields?: DisplayFields[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "id" })

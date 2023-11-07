@@ -1,5 +1,5 @@
 # Patches
-(*patches*)
+(*.patches*)
 
 ### Available Operations
 
@@ -36,6 +36,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.patches.createPatchSoftwareTitlesById({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -79,6 +80,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 821143,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -120,6 +122,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.patches.deleteSoftwareTitlesByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -164,6 +167,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     version: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -207,6 +211,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     version: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -246,6 +251,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.patches.findPatches();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -287,6 +293,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.patches.findPatchesById({
     id: 972398,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -330,6 +337,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -372,6 +380,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 862315,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -413,6 +422,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.patches.updateSoftwareTitlesByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

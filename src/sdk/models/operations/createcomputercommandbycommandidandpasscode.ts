@@ -8,7 +8,7 @@ import { AxiosResponse } from "axios";
 /**
  * Command to send
  */
-export enum CreateComputerCommandByCommandIdAndPasscodeCommand {
+export enum CreateComputerCommandByCommandIdAndPasscodePathParamCommand {
     DeviceLock = "DeviceLock",
     EraseDevice = "EraseDevice",
 }
@@ -18,7 +18,7 @@ export class CreateComputerCommandByCommandIdAndPasscodeRequest extends Speakeas
      * Command to send
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=command" })
-    command: CreateComputerCommandByCommandIdAndPasscodeCommand;
+    command: CreateComputerCommandByCommandIdAndPasscodePathParamCommand;
 
     /**
      * Computer ID - supports comma separated values (e.g id/8,10,55)

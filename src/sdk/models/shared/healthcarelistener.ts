@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class HealthcareListenerRulesRuleMdmCommandAdditionalData extends SpeakeasyBase {
+export class MdmCommandAdditionalData extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "lost_mode_footnote" })
     lostModeFootnote?: string;
@@ -31,13 +31,13 @@ export class HealthcareListenerRulesRuleMdmCommandAdditionalData extends Speakea
     lostModeSound?: boolean;
 }
 
-export class HealthcareListenerRulesRuleNotificationEmails extends SpeakeasyBase {
+export class HealthcareListenerNotificationEmails extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "email" })
     email?: string;
 }
 
-export class HealthcareListenerRulesRule extends SpeakeasyBase {
+export class Rule extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "adt_message" })
     adtMessage?: string;
@@ -64,8 +64,8 @@ export class HealthcareListenerRulesRule extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "mdm_command_additional_data" })
-    @Type(() => HealthcareListenerRulesRuleMdmCommandAdditionalData)
-    mdmCommandAdditionalData?: HealthcareListenerRulesRuleMdmCommandAdditionalData;
+    @Type(() => MdmCommandAdditionalData)
+    mdmCommandAdditionalData?: MdmCommandAdditionalData;
 
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
@@ -73,8 +73,8 @@ export class HealthcareListenerRulesRule extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "notification_emails" })
-    @Type(() => HealthcareListenerRulesRuleNotificationEmails)
-    notificationEmails?: HealthcareListenerRulesRuleNotificationEmails;
+    @Type(() => HealthcareListenerNotificationEmails)
+    notificationEmails?: HealthcareListenerNotificationEmails;
 
     @SpeakeasyMetadata()
     @Expose({ name: "notification_enabled" })
@@ -93,11 +93,11 @@ export class HealthcareListenerRulesRule extends SpeakeasyBase {
     operatingSystem?: string;
 }
 
-export class HealthcareListenerRules extends SpeakeasyBase {
+export class Rules extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "rule" })
-    @Type(() => HealthcareListenerRulesRule)
-    rule?: HealthcareListenerRulesRule;
+    @Type(() => Rule)
+    rule?: Rule;
 }
 
 export class HealthcareListener extends SpeakeasyBase {
@@ -125,10 +125,10 @@ export class HealthcareListener extends SpeakeasyBase {
     @Expose({ name: "range_ips" })
     rangeIps?: string;
 
-    @SpeakeasyMetadata({ elemType: HealthcareListenerRules })
+    @SpeakeasyMetadata({ elemType: Rules })
     @Expose({ name: "rules" })
-    @Type(() => HealthcareListenerRules)
-    rules?: HealthcareListenerRules[];
+    @Type(() => Rules)
+    rules?: Rules[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "single_ips" })

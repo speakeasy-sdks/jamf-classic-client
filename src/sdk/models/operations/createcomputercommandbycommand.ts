@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { AxiosResponse } from "axios";
 
-export enum CreateComputerCommandByCommandCommand {
+export enum Command {
     BlankPush = "BlankPush",
     DeleteUser = "DeleteUser",
     DeviceLock = "DeviceLock",
@@ -21,7 +21,7 @@ export enum CreateComputerCommandByCommandCommand {
 
 export class CreateComputerCommandByCommandRequest extends SpeakeasyBase {
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=command" })
-    command: CreateComputerCommandByCommandCommand;
+    command: Command;
 }
 
 export class CreateComputerCommandByCommandResponse extends SpeakeasyBase {

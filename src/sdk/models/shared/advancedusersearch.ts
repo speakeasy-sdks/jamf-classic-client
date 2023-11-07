@@ -6,15 +6,15 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { SiteObject } from "./siteobject";
 import { Expose, Type } from "class-transformer";
 
-export enum AdvancedUserSearchCriteriaCriterionAndOr {
+export enum AdvancedUserSearchAndOr {
     And = "and",
     Or = "or",
 }
 
-export class AdvancedUserSearchCriteriaCriterion extends SpeakeasyBase {
+export class AdvancedUserSearchCriterion extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "and_or" })
-    andOr?: AdvancedUserSearchCriteriaCriterionAndOr;
+    andOr?: AdvancedUserSearchAndOr;
 
     @SpeakeasyMetadata()
     @Expose({ name: "closing_paren" })
@@ -50,15 +50,15 @@ export class AdvancedUserSearchCriteriaCriterion extends SpeakeasyBase {
 export class AdvancedUserSearchCriteria extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "criterion" })
-    @Type(() => AdvancedUserSearchCriteriaCriterion)
-    criterion?: AdvancedUserSearchCriteriaCriterion;
+    @Type(() => AdvancedUserSearchCriterion)
+    criterion?: AdvancedUserSearchCriterion;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class AdvancedUserSearchDisplayFieldsDisplayField extends SpeakeasyBase {
+export class AdvancedUserSearchDisplayField extends SpeakeasyBase {
     /**
      * Name of the display field
      */
@@ -70,15 +70,15 @@ export class AdvancedUserSearchDisplayFieldsDisplayField extends SpeakeasyBase {
 export class AdvancedUserSearchDisplayFields extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "display_field" })
-    @Type(() => AdvancedUserSearchDisplayFieldsDisplayField)
-    displayField?: AdvancedUserSearchDisplayFieldsDisplayField;
+    @Type(() => AdvancedUserSearchDisplayField)
+    displayField?: AdvancedUserSearchDisplayField;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class AdvancedUserSearchUsersUser extends SpeakeasyBase {
+export class AdvancedUserSearchUser extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "Username" })
     username?: string;
@@ -102,8 +102,8 @@ export class AdvancedUserSearchUsers extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
-    @Type(() => AdvancedUserSearchUsersUser)
-    user?: AdvancedUserSearchUsersUser;
+    @Type(() => AdvancedUserSearchUser)
+    user?: AdvancedUserSearchUser;
 }
 
 export class AdvancedUserSearch extends SpeakeasyBase {

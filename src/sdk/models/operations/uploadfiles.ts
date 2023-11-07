@@ -8,7 +8,7 @@ import { AxiosResponse } from "axios";
 /**
  * Name is supported for all but the peripherals resource
  */
-export enum UploadFilesIDType {
+export enum PathParamIdType {
     Id = "id",
     Name = "name",
 }
@@ -16,7 +16,7 @@ export enum UploadFilesIDType {
 /**
  * Resource to attach the file to
  */
-export enum UploadFilesResource {
+export enum Resource {
     Computers = "computers",
     Mobiledevices = "mobiledevices",
     Enrollmentprofiles = "enrollmentprofiles",
@@ -43,13 +43,13 @@ export class UploadFilesRequest extends SpeakeasyBase {
      * Name is supported for all but the peripherals resource
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=idType" })
-    idType: UploadFilesIDType;
+    idType: PathParamIdType;
 
     /**
      * Resource to attach the file to
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=resource" })
-    resource: UploadFilesResource;
+    resource: Resource;
 }
 
 export class UploadFilesResponse extends SpeakeasyBase {

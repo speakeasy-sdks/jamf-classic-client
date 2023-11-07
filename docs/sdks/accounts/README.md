@@ -1,5 +1,5 @@
 # Accounts
-(*accounts*)
+(*.accounts*)
 
 ### Available Operations
 
@@ -39,6 +39,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.accounts.createAccountById({
     id: 437973,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -80,6 +81,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 441479,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -119,6 +121,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.accounts.deleteAccountById({
     id: 215117,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -160,6 +163,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -199,6 +203,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.accounts.deleteGroupById({
     id: 444055,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -240,6 +245,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: 274902,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -277,6 +283,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.accounts.findAccounts();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -316,6 +323,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.accounts.findAccountsById({
     id: 990137,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -357,6 +365,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -396,6 +405,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.accounts.findGroupsById({
     id: 955309,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -437,6 +447,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -476,6 +487,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.accounts.updateAccountById({
     id: 172312,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -517,6 +529,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -557,6 +570,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 597234,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -596,6 +610,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.accounts.updateGroupByName({
     name: 14723,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

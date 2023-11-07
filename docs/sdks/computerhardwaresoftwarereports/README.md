@@ -1,5 +1,5 @@
 # Computerhardwaresoftwarereports
-(*computerhardwaresoftwarereports*)
+(*.computerhardwaresoftwarereports*)
 
 ### Available Operations
 
@@ -38,6 +38,7 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     startDate: new RFCDate("2021-08-19"),
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -65,7 +66,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHardwareSoftwareReportsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { Subset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 (async() => {
@@ -80,8 +81,9 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     endDate: new RFCDate("2022-02-28"),
     id: 311709,
     startDate: new RFCDate("2023-03-26"),
-    subset: FindComputerHardwareSoftwareReportsByIdSubsetSubset.Hardwre,
+    subset: Subset.Hardwre,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -126,6 +128,7 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     startDate: new RFCDate("2022-02-03"),
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -153,7 +156,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHardwareSoftwareReportsByMacAddressSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { PathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 (async() => {
@@ -168,8 +171,9 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     endDate: new RFCDate("2023-05-05"),
     macaddress: "string",
     startDate: new RFCDate("2021-06-26"),
-    subset: FindComputerHardwareSoftwareReportsByMacAddressSubsetSubset.Software,
+    subset: PathParamSubset.Software,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -214,6 +218,7 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     startDate: new RFCDate("2022-07-15"),
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -241,7 +246,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHardwareSoftwareReportsByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHardwareSoftwareReportsByNameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 (async() => {
@@ -256,8 +261,9 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     endDate: new RFCDate("2021-07-31"),
     name: "string",
     startDate: new RFCDate("2023-09-07"),
-    subset: FindComputerHardwareSoftwareReportsByNameSubsetSubset.Software,
+    subset: FindComputerHardwareSoftwareReportsByNameSubsetPathParamSubset.Software,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -302,6 +308,7 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     startDate: new RFCDate("2021-05-25"),
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -329,7 +336,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHardwareSoftwareReportsBySerialSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHardwareSoftwareReportsBySerialSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 (async() => {
@@ -344,8 +351,9 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     endDate: new RFCDate("2022-03-08"),
     serialnumber: "string",
     startDate: new RFCDate("2022-10-09"),
-    subset: FindComputerHardwareSoftwareReportsBySerialSubsetSubset.Plugins,
+    subset: FindComputerHardwareSoftwareReportsBySerialSubsetPathParamSubset.Plugins,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -390,6 +398,7 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     udid: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -417,7 +426,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindComputerHardwareSoftwareReportsByUDIDSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindComputerHardwareSoftwareReportsByUDIDSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 (async() => {
@@ -431,9 +440,10 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
   const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByUDIDSubset({
     endDate: new RFCDate("2022-09-29"),
     startDate: new RFCDate("2023-09-30"),
-    subset: FindComputerHardwareSoftwareReportsByUDIDSubsetSubset.Software,
+    subset: FindComputerHardwareSoftwareReportsByUDIDSubsetPathParamSubset.Software,
     udid: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -1,5 +1,5 @@
 # Peripherals
-(*peripherals*)
+(*.peripherals*)
 
 ### Available Operations
 
@@ -30,6 +30,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.peripherals.createPeripheralById({
     id: 887007,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -71,6 +72,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 270317,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -108,6 +110,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.peripherals.findPeripherals();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -148,6 +151,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 872945,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -175,7 +179,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPeripheralsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindPeripheralsByIdSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -187,8 +191,9 @@ import { FindPeripheralsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sd
 
   const res = await sdk.peripherals.findPeripheralsByIdSubset({
     id: 264408,
-    subset: FindPeripheralsByIdSubsetSubset.Purchasing,
+    subset: FindPeripheralsByIdSubsetPathParamSubset.Purchasing,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -229,6 +234,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.peripherals.updatePeripheralById({
     id: 777495,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -1,5 +1,5 @@
 # Computerapplications
-(*computerapplications*)
+(*.computerapplications*)
 
 ### Available Operations
 
@@ -29,6 +29,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     application: "string",
     version: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -69,6 +70,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.computerapplications.findComputerApplicationsByName({
     application: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -112,6 +114,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     version: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -152,6 +155,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     application: "string",
     inventory: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

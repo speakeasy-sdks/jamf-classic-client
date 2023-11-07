@@ -3,9 +3,9 @@
  */
 
 import * as utils from "../internal/utils";
-import * as errors from "./models/errors";
-import * as operations from "./models/operations";
-import * as shared from "./models/shared";
+import * as errors from "../sdk/models/errors";
+import * as operations from "../sdk/models/operations";
+import * as shared from "../sdk/models/shared";
 import { SDKConfiguration } from "./sdk";
 import { AxiosInstance, AxiosRequestConfig, AxiosResponse, RawAxiosRequestHeaders } from "axios";
 
@@ -263,9 +263,9 @@ export class Computergroups {
         switch (true) {
             case httpRes?.status == 200:
                 if (utils.matchContentType(contentType, `application/json`)) {
-                    res.computerGroups = [];
+                    res.twoHundredApplicationJsonComputerGroups = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
-                    res.computerGroups = utils.objectToClass(
+                    res.twoHundredApplicationJsonComputerGroups = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.ComputerGroups,
                         resFieldDepth

@@ -1,5 +1,5 @@
 # Computercommands
-(*computercommands*)
+(*.computercommands*)
 
 ### Available Operations
 
@@ -33,7 +33,7 @@ The chart below includes additional requirements for usage of specific commands
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateComputerCommandByCommandCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { Command } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -44,8 +44,9 @@ import { CreateComputerCommandByCommandCommand } from "jamf-classic-sdk-nodejs/d
   });
 
   const res = await sdk.computercommands.createComputerCommandByCommand({
-    command: CreateComputerCommandByCommandCommand.DeleteUser,
+    command: Command.DeleteUser,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -74,10 +75,7 @@ Creates a new computer command with a command specific action. Commands supporte
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import {
-  CreateComputerCommandByCommandAndActionAction,
-  CreateComputerCommandByCommandAndActionCommand,
-} from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { Action, PathParamCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -88,10 +86,11 @@ import {
   });
 
   const res = await sdk.computercommands.createComputerCommandByCommandAndAction({
-    action: CreateComputerCommandByCommandAndActionAction.Install,
-    command: CreateComputerCommandByCommandAndActionCommand.ScheduleOSUpdate,
+    action: Action.Install,
+    command: PathParamCommand.ScheduleOSUpdate,
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -120,7 +119,7 @@ Creates a new computer command using command name and device IDs
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateComputerCommandByCommandAndIdCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { CreateComputerCommandByCommandAndIdPathParamCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -131,9 +130,10 @@ import { CreateComputerCommandByCommandAndIdCommand } from "jamf-classic-sdk-nod
   });
 
   const res = await sdk.computercommands.createComputerCommandByCommandAndId({
-    command: CreateComputerCommandByCommandAndIdCommand.ScheduleOSUpdate,
+    command: CreateComputerCommandByCommandAndIdPathParamCommand.ScheduleOSUpdate,
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -162,7 +162,7 @@ Issuing a DeviceLock and EraseDevice command requires a 6 character passcode.
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { CreateComputerCommandByCommandIdAndPasscodeCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { CreateComputerCommandByCommandIdAndPasscodePathParamCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -173,10 +173,11 @@ import { CreateComputerCommandByCommandIdAndPasscodeCommand } from "jamf-classic
   });
 
   const res = await sdk.computercommands.createComputerCommandByCommandIdAndPasscode({
-    command: CreateComputerCommandByCommandIdAndPasscodeCommand.DeviceLock,
+    command: CreateComputerCommandByCommandIdAndPasscodePathParamCommand.DeviceLock,
     id: "<ID>",
     passcode: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -215,6 +216,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.computercommands.findComputerCommands();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -255,6 +257,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -294,6 +297,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.computercommands.findComputerCommandsByUuid({
     uuid: "d70e80ba-6e24-40b9-95fb-5378b5fc34fb",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

@@ -1,5 +1,5 @@
 # Jssuser
-(*jssuser*)
+(*.jssuser*)
 
 ### Available Operations
 
@@ -25,6 +25,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.jssuser.jssuserGet();
+
 
   if (res.statusCode == 200) {
     // handle response

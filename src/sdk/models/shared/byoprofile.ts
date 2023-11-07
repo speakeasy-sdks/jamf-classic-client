@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { SiteObject } from "./siteobject";
 import { Expose, Type } from "class-transformer";
 
-export class ByoprofileGeneral extends SpeakeasyBase {
+export class General extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "description" })
     description?: string;
@@ -35,6 +35,6 @@ export class ByoprofileGeneral extends SpeakeasyBase {
 export class Byoprofile extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "general" })
-    @Type(() => ByoprofileGeneral)
-    general?: ByoprofileGeneral;
+    @Type(() => General)
+    general?: General;
 }

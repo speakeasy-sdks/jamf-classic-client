@@ -38,7 +38,7 @@ export class ComputerManagementGeneral extends SpeakeasyBase {
     udid?: string;
 }
 
-export class ComputerManagementMacAppStoreApps extends SpeakeasyBase {
+export class MacAppStoreApps extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "mac_app_store_app" })
     @Type(() => IdName)
@@ -66,7 +66,7 @@ export class ComputerManagementPatchPolicies extends SpeakeasyBase {
     patchPolicy?: IdName;
 }
 
-export class ComputerManagementPatchReportingSoftwareTitlesTitle extends SpeakeasyBase {
+export class Title extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "installed_version" })
     installedVersion?: string;
@@ -80,14 +80,14 @@ export class ComputerManagementPatchReportingSoftwareTitlesTitle extends Speakea
     name?: string;
 }
 
-export class ComputerManagementPatchReportingSoftwareTitles extends SpeakeasyBase {
+export class PatchReportingSoftwareTitles extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "title" })
-    @Type(() => ComputerManagementPatchReportingSoftwareTitlesTitle)
-    title?: ComputerManagementPatchReportingSoftwareTitlesTitle;
+    @Type(() => Title)
+    title?: Title;
 }
 
-export class ComputerManagementPoliciesPolicy extends SpeakeasyBase {
+export class ComputerManagementPolicy extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -104,8 +104,8 @@ export class ComputerManagementPoliciesPolicy extends SpeakeasyBase {
 export class ComputerManagementPolicies extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "policy" })
-    @Type(() => ComputerManagementPoliciesPolicy)
-    policy?: ComputerManagementPoliciesPolicy;
+    @Type(() => ComputerManagementPolicy)
+    policy?: ComputerManagementPolicy;
 }
 
 export class ComputerManagementRestrictedSoftware extends SpeakeasyBase {
@@ -115,14 +115,14 @@ export class ComputerManagementRestrictedSoftware extends SpeakeasyBase {
     software?: IdName;
 }
 
-export class ComputerManagementSmartGroups extends SpeakeasyBase {
+export class SmartGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "group" })
     @Type(() => IdName)
     group?: IdName;
 }
 
-export class ComputerManagementStaticGroups extends SpeakeasyBase {
+export class StaticGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "group" })
     @Type(() => IdName)
@@ -140,10 +140,10 @@ export class ComputerManagement extends SpeakeasyBase {
     @Type(() => ComputerManagementGeneral)
     general?: ComputerManagementGeneral;
 
-    @SpeakeasyMetadata({ elemType: ComputerManagementMacAppStoreApps })
+    @SpeakeasyMetadata({ elemType: MacAppStoreApps })
     @Expose({ name: "mac_app_store_apps" })
-    @Type(() => ComputerManagementMacAppStoreApps)
-    macAppStoreApps?: ComputerManagementMacAppStoreApps[];
+    @Type(() => MacAppStoreApps)
+    macAppStoreApps?: MacAppStoreApps[];
 
     @SpeakeasyMetadata({ elemType: ComputerManagementManagedPreferenceProfiles })
     @Expose({ name: "managed_preference_profiles" })
@@ -160,10 +160,10 @@ export class ComputerManagement extends SpeakeasyBase {
     @Type(() => ComputerManagementPatchPolicies)
     patchPolicies?: ComputerManagementPatchPolicies[];
 
-    @SpeakeasyMetadata({ elemType: ComputerManagementPatchReportingSoftwareTitles })
+    @SpeakeasyMetadata({ elemType: PatchReportingSoftwareTitles })
     @Expose({ name: "patch_reporting_software_titles" })
-    @Type(() => ComputerManagementPatchReportingSoftwareTitles)
-    patchReportingSoftwareTitles?: ComputerManagementPatchReportingSoftwareTitles[];
+    @Type(() => PatchReportingSoftwareTitles)
+    patchReportingSoftwareTitles?: PatchReportingSoftwareTitles[];
 
     @SpeakeasyMetadata({ elemType: ComputerManagementPolicies })
     @Expose({ name: "policies" })
@@ -175,13 +175,13 @@ export class ComputerManagement extends SpeakeasyBase {
     @Type(() => ComputerManagementRestrictedSoftware)
     restrictedSoftware?: ComputerManagementRestrictedSoftware[];
 
-    @SpeakeasyMetadata({ elemType: ComputerManagementSmartGroups })
+    @SpeakeasyMetadata({ elemType: SmartGroups })
     @Expose({ name: "smart_groups" })
-    @Type(() => ComputerManagementSmartGroups)
-    smartGroups?: ComputerManagementSmartGroups[];
+    @Type(() => SmartGroups)
+    smartGroups?: SmartGroups[];
 
-    @SpeakeasyMetadata({ elemType: ComputerManagementStaticGroups })
+    @SpeakeasyMetadata({ elemType: StaticGroups })
     @Expose({ name: "static_groups" })
-    @Type(() => ComputerManagementStaticGroups)
-    staticGroups?: ComputerManagementStaticGroups[];
+    @Type(() => StaticGroups)
+    staticGroups?: StaticGroups[];
 }

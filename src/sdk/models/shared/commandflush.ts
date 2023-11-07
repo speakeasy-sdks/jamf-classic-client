@@ -4,17 +4,17 @@
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 
-export class CommandflushMobileDevicesMobileDevice extends SpeakeasyBase {
+export class CommandflushMobileDevice extends SpeakeasyBase {
     @SpeakeasyMetadata()
     id: number;
 }
 
 export class CommandflushMobileDevices extends SpeakeasyBase {
     @SpeakeasyMetadata()
-    mobileDevice?: CommandflushMobileDevicesMobileDevice;
+    mobileDevice?: CommandflushMobileDevice;
 }
 
-export enum CommandflushStatus {
+export enum Status {
     Pending = "Pending",
     Failed = "Failed",
     PendingPlusFailed = "Pending+Failed",
@@ -25,5 +25,5 @@ export class Commandflush extends SpeakeasyBase {
     mobileDevices?: CommandflushMobileDevices;
 
     @SpeakeasyMetadata()
-    status: CommandflushStatus;
+    status: Status;
 }

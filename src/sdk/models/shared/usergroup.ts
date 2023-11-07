@@ -6,15 +6,15 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { SiteObject } from "./siteobject";
 import { Expose, Type } from "class-transformer";
 
-export enum UserGroupCriteriaCriterionAndOr {
+export enum UserGroupAndOr {
     And = "and",
     Or = "or",
 }
 
-export class UserGroupCriteriaCriterion extends SpeakeasyBase {
+export class UserGroupCriterion extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "and_or" })
-    andOr?: UserGroupCriteriaCriterionAndOr;
+    andOr?: UserGroupAndOr;
 
     @SpeakeasyMetadata()
     @Expose({ name: "closing_paren" })
@@ -50,15 +50,15 @@ export class UserGroupCriteriaCriterion extends SpeakeasyBase {
 export class UserGroupCriteria extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "criterion" })
-    @Type(() => UserGroupCriteriaCriterion)
-    criterion?: UserGroupCriteriaCriterion;
+    @Type(() => UserGroupCriterion)
+    criterion?: UserGroupCriterion;
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })
     size?: number;
 }
 
-export class UserGroupUsersUser extends SpeakeasyBase {
+export class UserGroupUser extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "email_address" })
     emailAddress?: string;
@@ -87,8 +87,8 @@ export class UserGroupUsers extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
-    @Type(() => UserGroupUsersUser)
-    user?: UserGroupUsersUser;
+    @Type(() => UserGroupUser)
+    user?: UserGroupUser;
 }
 
 export class UserGroup extends SpeakeasyBase {

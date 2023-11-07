@@ -6,13 +6,13 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { SiteObject } from "./siteobject";
 import { Expose, Type } from "class-transformer";
 
-export enum AccountAccessLevel {
+export enum AccessLevel {
     FullAccess = "Full Access",
     SiteAccess = "Site Access",
     GroupAccess = "Group Access",
 }
 
-export enum AccountEnabled {
+export enum Enabled {
     Enabled = "Enabled",
     Disabled = "Disabled",
 }
@@ -27,96 +27,96 @@ export class AccountLdapServer extends SpeakeasyBase {
     name?: string;
 }
 
-export enum AccountPrivilegeSet {
+export enum PrivilegeSet {
     Administrator = "Administrator",
     Auditor = "Auditor",
     EnrollmentOnly = "Enrollment Only",
     Custom = "Custom",
 }
 
-export class AccountPrivilegesCasperAdmin extends SpeakeasyBase {
+export class CasperAdmin extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "privilege" })
     privilege?: string;
 }
 
-export class AccountPrivilegesCasperImaging extends SpeakeasyBase {
+export class CasperImaging extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "privilege" })
     privilege?: string;
 }
 
-export class AccountPrivilegesCasperRemote extends SpeakeasyBase {
+export class CasperRemote extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "privilege" })
     privilege?: string;
 }
 
-export class AccountPrivilegesJssActions extends SpeakeasyBase {
+export class JssActions extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "privilege" })
     privilege?: string;
 }
 
-export class AccountPrivilegesJssObjects extends SpeakeasyBase {
+export class JssObjects extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "privilege" })
     privilege?: string;
 }
 
-export class AccountPrivilegesJssSettings extends SpeakeasyBase {
+export class JssSettings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "privilege" })
     privilege?: string;
 }
 
-export class AccountPrivilegesRecon extends SpeakeasyBase {
+export class Recon extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "privilege" })
     privilege?: string;
 }
 
-export class AccountPrivileges extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: AccountPrivilegesCasperAdmin })
+export class Privileges extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: CasperAdmin })
     @Expose({ name: "casper_admin" })
-    @Type(() => AccountPrivilegesCasperAdmin)
-    casperAdmin?: AccountPrivilegesCasperAdmin[];
+    @Type(() => CasperAdmin)
+    casperAdmin?: CasperAdmin[];
 
-    @SpeakeasyMetadata({ elemType: AccountPrivilegesCasperImaging })
+    @SpeakeasyMetadata({ elemType: CasperImaging })
     @Expose({ name: "casper_imaging" })
-    @Type(() => AccountPrivilegesCasperImaging)
-    casperImaging?: AccountPrivilegesCasperImaging[];
+    @Type(() => CasperImaging)
+    casperImaging?: CasperImaging[];
 
-    @SpeakeasyMetadata({ elemType: AccountPrivilegesCasperRemote })
+    @SpeakeasyMetadata({ elemType: CasperRemote })
     @Expose({ name: "casper_remote" })
-    @Type(() => AccountPrivilegesCasperRemote)
-    casperRemote?: AccountPrivilegesCasperRemote[];
+    @Type(() => CasperRemote)
+    casperRemote?: CasperRemote[];
 
-    @SpeakeasyMetadata({ elemType: AccountPrivilegesJssActions })
+    @SpeakeasyMetadata({ elemType: JssActions })
     @Expose({ name: "jss_actions" })
-    @Type(() => AccountPrivilegesJssActions)
-    jssActions?: AccountPrivilegesJssActions[];
+    @Type(() => JssActions)
+    jssActions?: JssActions[];
 
-    @SpeakeasyMetadata({ elemType: AccountPrivilegesJssObjects })
+    @SpeakeasyMetadata({ elemType: JssObjects })
     @Expose({ name: "jss_objects" })
-    @Type(() => AccountPrivilegesJssObjects)
-    jssObjects?: AccountPrivilegesJssObjects[];
+    @Type(() => JssObjects)
+    jssObjects?: JssObjects[];
 
-    @SpeakeasyMetadata({ elemType: AccountPrivilegesJssSettings })
+    @SpeakeasyMetadata({ elemType: JssSettings })
     @Expose({ name: "jss_settings" })
-    @Type(() => AccountPrivilegesJssSettings)
-    jssSettings?: AccountPrivilegesJssSettings[];
+    @Type(() => JssSettings)
+    jssSettings?: JssSettings[];
 
-    @SpeakeasyMetadata({ elemType: AccountPrivilegesRecon })
+    @SpeakeasyMetadata({ elemType: Recon })
     @Expose({ name: "recon" })
-    @Type(() => AccountPrivilegesRecon)
-    recon?: AccountPrivilegesRecon[];
+    @Type(() => Recon)
+    recon?: Recon[];
 }
 
 export class Account extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "access_level" })
-    accessLevel?: AccountAccessLevel;
+    accessLevel?: AccessLevel;
 
     @SpeakeasyMetadata()
     @Expose({ name: "directory_user" })
@@ -132,7 +132,7 @@ export class Account extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "enabled" })
-    enabled?: AccountEnabled;
+    enabled?: Enabled;
 
     @SpeakeasyMetadata()
     @Expose({ name: "force_password_change" })
@@ -160,12 +160,12 @@ export class Account extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "privilege_set" })
-    privilegeSet?: AccountPrivilegeSet;
+    privilegeSet?: PrivilegeSet;
 
     @SpeakeasyMetadata()
     @Expose({ name: "privileges" })
-    @Type(() => AccountPrivileges)
-    privileges?: AccountPrivileges;
+    @Type(() => Privileges)
+    privileges?: Privileges;
 
     @SpeakeasyMetadata()
     @Expose({ name: "site" })

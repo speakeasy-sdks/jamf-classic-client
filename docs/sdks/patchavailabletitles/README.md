@@ -1,5 +1,5 @@
 # Patchavailabletitles
-(*patchavailabletitles*)
+(*.patchavailabletitles*)
 
 ### Available Operations
 
@@ -25,6 +25,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.patchavailabletitles.patchavailabletitlesSourceidByIdGet({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

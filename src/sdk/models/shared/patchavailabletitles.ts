@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class PatchAvailableTitlesAvailableTitlesAvailableTitle extends SpeakeasyBase {
+export class AvailableTitle extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "app_name" })
     appName?: string;
@@ -27,18 +27,18 @@ export class PatchAvailableTitlesAvailableTitlesAvailableTitle extends Speakeasy
     publisher?: string;
 }
 
-export class PatchAvailableTitlesAvailableTitles extends SpeakeasyBase {
+export class AvailableTitles extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "available_title" })
-    @Type(() => PatchAvailableTitlesAvailableTitlesAvailableTitle)
-    availableTitle?: PatchAvailableTitlesAvailableTitlesAvailableTitle;
+    @Type(() => AvailableTitle)
+    availableTitle?: AvailableTitle;
 }
 
 export class PatchAvailableTitles extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: PatchAvailableTitlesAvailableTitles })
+    @SpeakeasyMetadata({ elemType: AvailableTitles })
     @Expose({ name: "available_titles" })
-    @Type(() => PatchAvailableTitlesAvailableTitles)
-    availableTitles?: PatchAvailableTitlesAvailableTitles[];
+    @Type(() => AvailableTitles)
+    availableTitles?: AvailableTitles[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "size" })

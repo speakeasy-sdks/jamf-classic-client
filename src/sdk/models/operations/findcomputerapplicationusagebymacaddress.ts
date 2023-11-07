@@ -3,7 +3,7 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 export class FindComputerApplicationUsageByMacAddressRequest extends SpeakeasyBase {
@@ -27,6 +27,12 @@ export class FindComputerApplicationUsageByMacAddressRequest extends SpeakeasyBa
 }
 
 export class FindComputerApplicationUsageByMacAddressResponse extends SpeakeasyBase {
+    /**
+     * OK
+     */
+    @SpeakeasyMetadata({ elemType: shared.ComputerApplicationUsage })
+    twoHundredApplicationJsonComputerApplicationUsage?: shared.ComputerApplicationUsage[];
+
     @SpeakeasyMetadata()
     body?: Uint8Array;
 
@@ -47,10 +53,4 @@ export class FindComputerApplicationUsageByMacAddressResponse extends SpeakeasyB
      */
     @SpeakeasyMetadata()
     rawResponse?: AxiosResponse;
-
-    /**
-     * OK
-     */
-    @SpeakeasyMetadata({ elemType: shared.ComputerApplicationUsage })
-    computerApplicationUsage?: shared.ComputerApplicationUsage[];
 }

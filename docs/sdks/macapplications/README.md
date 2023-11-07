@@ -1,5 +1,5 @@
 # Macapplications
-(*macapplications*)
+(*.macapplications*)
 
 ### Available Operations
 
@@ -34,6 +34,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.macapplications.createMacappById({
     id: 15219,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -75,6 +76,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 367018,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -115,6 +117,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -152,6 +155,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.macapplications.findMacapps();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -192,6 +196,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 285922,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -219,7 +224,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMacappsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMacappsByIdSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -231,8 +236,9 @@ import { FindMacappsByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/mo
 
   const res = await sdk.macapplications.findMacappsByIdSubset({
     id: 538140,
-    subset: FindMacappsByIdSubsetSubset.Scope,
+    subset: FindMacappsByIdSubsetPathParamSubset.Scope,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -274,6 +280,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -301,7 +308,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindMacappsByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindMacappsByNameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -313,8 +320,9 @@ import { FindMacappsByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/
 
   const res = await sdk.macapplications.findMacappsByNameSubset({
     name: "string",
-    subset: FindMacappsByNameSubsetSubset.Vpp,
+    subset: FindMacappsByNameSubsetPathParamSubset.Vpp,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -356,6 +364,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 610856,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -395,6 +404,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.macapplications.updateMacappByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

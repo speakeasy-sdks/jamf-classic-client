@@ -5,12 +5,12 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum DiskEncryptionConfigurationFileVaultEnabledUsers {
+export enum FileVaultEnabledUsers {
     CurrentOrNextUser = "Current or Next User",
     ManagementAccount = "Management Account",
 }
 
-export enum DiskEncryptionConfigurationKeyType {
+export enum KeyType {
     Individual = "Individual",
     Institutional = "Institutional",
     IndividualAndInstitutional = "Individual And Institutional",
@@ -19,7 +19,7 @@ export enum DiskEncryptionConfigurationKeyType {
 export class DiskEncryptionConfiguration extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "file_vault_enabled_users" })
-    fileVaultEnabledUsers?: DiskEncryptionConfigurationFileVaultEnabledUsers;
+    fileVaultEnabledUsers?: FileVaultEnabledUsers;
 
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
@@ -27,7 +27,7 @@ export class DiskEncryptionConfiguration extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "key_type" })
-    keyType?: DiskEncryptionConfigurationKeyType;
+    keyType?: KeyType;
 
     /**
      * Name of the disk encryption configuration

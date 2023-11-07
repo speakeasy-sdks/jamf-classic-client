@@ -1,5 +1,5 @@
 # Policies
-(*policies*)
+(*.policies*)
 
 ### Available Operations
 
@@ -36,6 +36,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.policies.createPolicyById({
     id: 45063,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -77,6 +78,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 935775,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -117,6 +119,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -154,6 +157,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.policies.findPolicies();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -193,6 +197,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.policies.findPoliciesByCategory({
     category: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -234,6 +239,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 252987,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -261,7 +267,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPoliciesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindPoliciesByIdSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -273,8 +279,9 @@ import { FindPoliciesByIdSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/m
 
   const res = await sdk.policies.findPoliciesByIdSubset({
     id: 282474,
-    subset: FindPoliciesByIdSubsetSubset.DiskEncryption,
+    subset: FindPoliciesByIdSubsetPathParamSubset.DiskEncryption,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -316,6 +323,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -343,7 +351,7 @@ Subset values can also be appended using an ampersand to return multiple subsets
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPoliciesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { FindPoliciesByNameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -355,8 +363,9 @@ import { FindPoliciesByNameSubsetSubset } from "jamf-classic-sdk-nodejs/dist/sdk
 
   const res = await sdk.policies.findPoliciesByNameSubset({
     name: "string",
-    subset: FindPoliciesByNameSubsetSubset.DiskEncryption,
+    subset: FindPoliciesByNameSubsetPathParamSubset.DiskEncryption,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -385,7 +394,7 @@ The value 'casper' refers to Casper Remote. The value 'jss' refers to policies c
 
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
-import { FindPoliciesByTypeCreatedBy } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
+import { CreatedBy } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 (async() => {
   const sdk = new Jamf({
@@ -396,8 +405,9 @@ import { FindPoliciesByTypeCreatedBy } from "jamf-classic-sdk-nodejs/dist/sdk/mo
   });
 
   const res = await sdk.policies.findPoliciesByType({
-    createdBy: FindPoliciesByTypeCreatedBy.Casper,
+    createdBy: CreatedBy.Casper,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -439,6 +449,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 272424,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -478,6 +489,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.policies.updatePolicyByName({
     name: "string",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

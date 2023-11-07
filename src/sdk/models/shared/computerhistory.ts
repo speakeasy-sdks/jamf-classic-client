@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export class ComputerHistoryAuditsAudit extends SpeakeasyBase {
+export class Audit extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "date_time" })
     dateTime?: string;
@@ -27,14 +27,14 @@ export class ComputerHistoryAuditsAudit extends SpeakeasyBase {
     username?: string;
 }
 
-export class ComputerHistoryAudits extends SpeakeasyBase {
+export class Audits extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "audit" })
-    @Type(() => ComputerHistoryAuditsAudit)
-    audit?: ComputerHistoryAuditsAudit;
+    @Type(() => Audit)
+    audit?: Audit;
 }
 
-export class ComputerHistoryCasperImagingLogsCasperImagingLog extends SpeakeasyBase {
+export class CasperImagingLog extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "date_time" })
     dateTime?: string;
@@ -52,14 +52,14 @@ export class ComputerHistoryCasperImagingLogsCasperImagingLog extends SpeakeasyB
     status?: string;
 }
 
-export class ComputerHistoryCasperImagingLogs extends SpeakeasyBase {
+export class CasperImagingLogs extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "casper_imaging_log" })
-    @Type(() => ComputerHistoryCasperImagingLogsCasperImagingLog)
-    casperImagingLog?: ComputerHistoryCasperImagingLogsCasperImagingLog;
+    @Type(() => CasperImagingLog)
+    casperImagingLog?: CasperImagingLog;
 }
 
-export class ComputerHistoryCasperRemoteLogsCasperRemoteLog extends SpeakeasyBase {
+export class CasperRemoteLog extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "date_time" })
     dateTime?: string;
@@ -77,14 +77,14 @@ export class ComputerHistoryCasperRemoteLogsCasperRemoteLog extends SpeakeasyBas
     status?: string;
 }
 
-export class ComputerHistoryCasperRemoteLogs extends SpeakeasyBase {
+export class CasperRemoteLogs extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "casper_remote_log" })
-    @Type(() => ComputerHistoryCasperRemoteLogsCasperRemoteLog)
-    casperRemoteLog?: ComputerHistoryCasperRemoteLogsCasperRemoteLog;
+    @Type(() => CasperRemoteLog)
+    casperRemoteLog?: CasperRemoteLog;
 }
 
-export class ComputerHistoryCommandsCompletedCommand extends SpeakeasyBase {
+export class ComputerHistorySchemasCommandsCommand extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "completed" })
     completed?: string;
@@ -106,14 +106,14 @@ export class ComputerHistoryCommandsCompletedCommand extends SpeakeasyBase {
     username?: string;
 }
 
-export class ComputerHistoryCommandsCompleted extends SpeakeasyBase {
+export class Completed extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "command" })
-    @Type(() => ComputerHistoryCommandsCompletedCommand)
-    command?: ComputerHistoryCommandsCompletedCommand;
+    @Type(() => ComputerHistorySchemasCommandsCommand)
+    command?: ComputerHistorySchemasCommandsCommand;
 }
 
-export class ComputerHistoryCommandsFailedCommand extends SpeakeasyBase {
+export class ComputerHistoryCommand extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "failed" })
     failed?: string;
@@ -147,14 +147,14 @@ export class ComputerHistoryCommandsFailedCommand extends SpeakeasyBase {
     status?: string;
 }
 
-export class ComputerHistoryCommandsFailed extends SpeakeasyBase {
+export class Failed extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "command" })
-    @Type(() => ComputerHistoryCommandsFailedCommand)
-    command?: ComputerHistoryCommandsFailedCommand;
+    @Type(() => ComputerHistoryCommand)
+    command?: ComputerHistoryCommand;
 }
 
-export class ComputerHistoryCommandsPendingCommand extends SpeakeasyBase {
+export class ComputerHistorySchemasCommand extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "issued" })
     issued?: string;
@@ -192,31 +192,31 @@ export class ComputerHistoryCommandsPendingCommand extends SpeakeasyBase {
     username?: string;
 }
 
-export class ComputerHistoryCommandsPending extends SpeakeasyBase {
+export class Pending extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "command" })
-    @Type(() => ComputerHistoryCommandsPendingCommand)
-    command?: ComputerHistoryCommandsPendingCommand;
+    @Type(() => ComputerHistorySchemasCommand)
+    command?: ComputerHistorySchemasCommand;
 }
 
-export class ComputerHistoryCommands extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: ComputerHistoryCommandsCompleted })
+export class Commands extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: Completed })
     @Expose({ name: "completed" })
-    @Type(() => ComputerHistoryCommandsCompleted)
-    completed?: ComputerHistoryCommandsCompleted[];
+    @Type(() => Completed)
+    completed?: Completed[];
 
-    @SpeakeasyMetadata({ elemType: ComputerHistoryCommandsFailed })
+    @SpeakeasyMetadata({ elemType: Failed })
     @Expose({ name: "failed" })
-    @Type(() => ComputerHistoryCommandsFailed)
-    failed?: ComputerHistoryCommandsFailed[];
+    @Type(() => Failed)
+    failed?: Failed[];
 
-    @SpeakeasyMetadata({ elemType: ComputerHistoryCommandsPending })
+    @SpeakeasyMetadata({ elemType: Pending })
     @Expose({ name: "pending" })
-    @Type(() => ComputerHistoryCommandsPending)
-    pending?: ComputerHistoryCommandsPending[];
+    @Type(() => Pending)
+    pending?: Pending[];
 }
 
-export class ComputerHistoryComputerUsageLogsUsageLog extends SpeakeasyBase {
+export class UsageLog extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "date_time" })
     dateTime?: string;
@@ -238,11 +238,11 @@ export class ComputerHistoryComputerUsageLogsUsageLog extends SpeakeasyBase {
     username?: string;
 }
 
-export class ComputerHistoryComputerUsageLogs extends SpeakeasyBase {
+export class ComputerUsageLogs extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "usage_log" })
-    @Type(() => ComputerHistoryComputerUsageLogsUsageLog)
-    usageLog?: ComputerHistoryComputerUsageLogsUsageLog;
+    @Type(() => UsageLog)
+    usageLog?: UsageLog;
 }
 
 export class ComputerHistoryGeneral extends SpeakeasyBase {
@@ -270,7 +270,7 @@ export class ComputerHistoryGeneral extends SpeakeasyBase {
     udid?: string;
 }
 
-export class ComputerHistoryMacAppStoreApplicationsFailedApp extends SpeakeasyBase {
+export class App extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "deployed" })
     deployed?: string;
@@ -308,14 +308,14 @@ export class ComputerHistoryMacAppStoreApplicationsFailedApp extends SpeakeasyBa
     version?: string;
 }
 
-export class ComputerHistoryMacAppStoreApplicationsFailed extends SpeakeasyBase {
+export class ComputerHistoryFailed extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "app" })
-    @Type(() => ComputerHistoryMacAppStoreApplicationsFailedApp)
-    app?: ComputerHistoryMacAppStoreApplicationsFailedApp;
+    @Type(() => App)
+    app?: App;
 }
 
-export class ComputerHistoryMacAppStoreApplicationsInstalledApp extends SpeakeasyBase {
+export class ComputerHistoryApp extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
@@ -329,14 +329,14 @@ export class ComputerHistoryMacAppStoreApplicationsInstalledApp extends Speakeas
     version?: string;
 }
 
-export class ComputerHistoryMacAppStoreApplicationsInstalled extends SpeakeasyBase {
+export class Installed extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "app" })
-    @Type(() => ComputerHistoryMacAppStoreApplicationsInstalledApp)
-    app?: ComputerHistoryMacAppStoreApplicationsInstalledApp;
+    @Type(() => ComputerHistoryApp)
+    app?: ComputerHistoryApp;
 }
 
-export class ComputerHistoryMacAppStoreApplicationsPendingApp extends SpeakeasyBase {
+export class ComputerHistorySchemasApp extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "deployed" })
     deployed?: string;
@@ -370,31 +370,31 @@ export class ComputerHistoryMacAppStoreApplicationsPendingApp extends SpeakeasyB
     version?: string;
 }
 
-export class ComputerHistoryMacAppStoreApplicationsPending extends SpeakeasyBase {
+export class ComputerHistoryPending extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "app" })
-    @Type(() => ComputerHistoryMacAppStoreApplicationsPendingApp)
-    app?: ComputerHistoryMacAppStoreApplicationsPendingApp;
+    @Type(() => ComputerHistorySchemasApp)
+    app?: ComputerHistorySchemasApp;
 }
 
-export class ComputerHistoryMacAppStoreApplications extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: ComputerHistoryMacAppStoreApplicationsFailed })
+export class MacAppStoreApplications extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: ComputerHistoryFailed })
     @Expose({ name: "failed" })
-    @Type(() => ComputerHistoryMacAppStoreApplicationsFailed)
-    failed?: ComputerHistoryMacAppStoreApplicationsFailed[];
+    @Type(() => ComputerHistoryFailed)
+    failed?: ComputerHistoryFailed[];
 
-    @SpeakeasyMetadata({ elemType: ComputerHistoryMacAppStoreApplicationsInstalled })
+    @SpeakeasyMetadata({ elemType: Installed })
     @Expose({ name: "installed" })
-    @Type(() => ComputerHistoryMacAppStoreApplicationsInstalled)
-    installed?: ComputerHistoryMacAppStoreApplicationsInstalled[];
+    @Type(() => Installed)
+    installed?: Installed[];
 
-    @SpeakeasyMetadata({ elemType: ComputerHistoryMacAppStoreApplicationsPending })
+    @SpeakeasyMetadata({ elemType: ComputerHistoryPending })
     @Expose({ name: "pending" })
-    @Type(() => ComputerHistoryMacAppStoreApplicationsPending)
-    pending?: ComputerHistoryMacAppStoreApplicationsPending[];
+    @Type(() => ComputerHistoryPending)
+    pending?: ComputerHistoryPending[];
 }
 
-export class ComputerHistoryPolicyLogsPolicyLog extends SpeakeasyBase {
+export class PolicyLog extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "date_time" })
     dateTime?: string;
@@ -424,14 +424,14 @@ export class ComputerHistoryPolicyLogsPolicyLog extends SpeakeasyBase {
     username?: string;
 }
 
-export class ComputerHistoryPolicyLogs extends SpeakeasyBase {
+export class PolicyLogs extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "policy_log" })
-    @Type(() => ComputerHistoryPolicyLogsPolicyLog)
-    policyLog?: ComputerHistoryPolicyLogsPolicyLog;
+    @Type(() => PolicyLog)
+    policyLog?: PolicyLog;
 }
 
-export class ComputerHistoryScreenSharingLogsScreenSharingLog extends SpeakeasyBase {
+export class ScreenSharingLog extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "date_time" })
     dateTime?: string;
@@ -453,14 +453,14 @@ export class ComputerHistoryScreenSharingLogsScreenSharingLog extends SpeakeasyB
     status?: string;
 }
 
-export class ComputerHistoryScreenSharingLogs extends SpeakeasyBase {
+export class ScreenSharingLogs extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "screen_sharing_log" })
-    @Type(() => ComputerHistoryScreenSharingLogsScreenSharingLog)
-    screenSharingLog?: ComputerHistoryScreenSharingLogsScreenSharingLog;
+    @Type(() => ScreenSharingLog)
+    screenSharingLog?: ScreenSharingLog;
 }
 
-export class ComputerHistoryUserLocationLocation extends SpeakeasyBase {
+export class ComputerHistoryLocation extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "building" })
     building?: string;
@@ -506,38 +506,38 @@ export class ComputerHistoryUserLocationLocation extends SpeakeasyBase {
     username?: string;
 }
 
-export class ComputerHistoryUserLocation extends SpeakeasyBase {
+export class UserLocation extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "location" })
-    @Type(() => ComputerHistoryUserLocationLocation)
-    location?: ComputerHistoryUserLocationLocation;
+    @Type(() => ComputerHistoryLocation)
+    location?: ComputerHistoryLocation;
 }
 
 export class ComputerHistory extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: ComputerHistoryAudits })
+    @SpeakeasyMetadata({ elemType: Audits })
     @Expose({ name: "audits" })
-    @Type(() => ComputerHistoryAudits)
-    audits?: ComputerHistoryAudits[];
+    @Type(() => Audits)
+    audits?: Audits[];
 
-    @SpeakeasyMetadata({ elemType: ComputerHistoryCasperImagingLogs })
+    @SpeakeasyMetadata({ elemType: CasperImagingLogs })
     @Expose({ name: "casper_imaging_logs" })
-    @Type(() => ComputerHistoryCasperImagingLogs)
-    casperImagingLogs?: ComputerHistoryCasperImagingLogs[];
+    @Type(() => CasperImagingLogs)
+    casperImagingLogs?: CasperImagingLogs[];
 
-    @SpeakeasyMetadata({ elemType: ComputerHistoryCasperRemoteLogs })
+    @SpeakeasyMetadata({ elemType: CasperRemoteLogs })
     @Expose({ name: "casper_remote_logs" })
-    @Type(() => ComputerHistoryCasperRemoteLogs)
-    casperRemoteLogs?: ComputerHistoryCasperRemoteLogs[];
+    @Type(() => CasperRemoteLogs)
+    casperRemoteLogs?: CasperRemoteLogs[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "commands" })
-    @Type(() => ComputerHistoryCommands)
-    commands?: ComputerHistoryCommands;
+    @Type(() => Commands)
+    commands?: Commands;
 
-    @SpeakeasyMetadata({ elemType: ComputerHistoryComputerUsageLogs })
+    @SpeakeasyMetadata({ elemType: ComputerUsageLogs })
     @Expose({ name: "computer_usage_logs" })
-    @Type(() => ComputerHistoryComputerUsageLogs)
-    computerUsageLogs?: ComputerHistoryComputerUsageLogs[];
+    @Type(() => ComputerUsageLogs)
+    computerUsageLogs?: ComputerUsageLogs[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "general" })
@@ -546,21 +546,21 @@ export class ComputerHistory extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "mac_app_store_applications" })
-    @Type(() => ComputerHistoryMacAppStoreApplications)
-    macAppStoreApplications?: ComputerHistoryMacAppStoreApplications;
+    @Type(() => MacAppStoreApplications)
+    macAppStoreApplications?: MacAppStoreApplications;
 
-    @SpeakeasyMetadata({ elemType: ComputerHistoryPolicyLogs })
+    @SpeakeasyMetadata({ elemType: PolicyLogs })
     @Expose({ name: "policy_logs" })
-    @Type(() => ComputerHistoryPolicyLogs)
-    policyLogs?: ComputerHistoryPolicyLogs[];
+    @Type(() => PolicyLogs)
+    policyLogs?: PolicyLogs[];
 
-    @SpeakeasyMetadata({ elemType: ComputerHistoryScreenSharingLogs })
+    @SpeakeasyMetadata({ elemType: ScreenSharingLogs })
     @Expose({ name: "screen_sharing_logs" })
-    @Type(() => ComputerHistoryScreenSharingLogs)
-    screenSharingLogs?: ComputerHistoryScreenSharingLogs[];
+    @Type(() => ScreenSharingLogs)
+    screenSharingLogs?: ScreenSharingLogs[];
 
-    @SpeakeasyMetadata({ elemType: ComputerHistoryUserLocation })
+    @SpeakeasyMetadata({ elemType: UserLocation })
     @Expose({ name: "user_location" })
-    @Type(() => ComputerHistoryUserLocation)
-    userLocation?: ComputerHistoryUserLocation[];
+    @Type(() => UserLocation)
+    userLocation?: UserLocation[];
 }

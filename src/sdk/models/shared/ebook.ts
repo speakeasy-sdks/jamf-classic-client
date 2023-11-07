@@ -8,18 +8,18 @@ import { IdName } from "./idname";
 import { SiteObject } from "./siteobject";
 import { Expose, Type } from "class-transformer";
 
-export enum EbookGeneralDeploymentType {
+export enum DeploymentType {
     MakeAvailableInSelfService = "Make Available in Self Service",
     InstallAutomaticallyPromptUsersToInstall = "Install Automatically/Prompt Users to Install",
 }
 
-export enum EbookGeneralFileType {
+export enum FileType {
     Pdf = "PDF",
     Ibook = "IBOOK",
     Epub = "EPUB",
 }
 
-export class EbookGeneralSelfServiceIcon extends SpeakeasyBase {
+export class SelfServiceIcon extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "data" })
     data?: string;
@@ -49,11 +49,11 @@ export class EbookGeneral extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "deployment_type" })
-    deploymentType?: EbookGeneralDeploymentType;
+    deploymentType?: DeploymentType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "file_type" })
-    fileType?: EbookGeneralFileType;
+    fileType?: FileType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "free" })
@@ -72,8 +72,8 @@ export class EbookGeneral extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "self_service_icon" })
-    @Type(() => EbookGeneralSelfServiceIcon)
-    selfServiceIcon?: EbookGeneralSelfServiceIcon;
+    @Type(() => SelfServiceIcon)
+    selfServiceIcon?: SelfServiceIcon;
 
     @SpeakeasyMetadata()
     @Expose({ name: "site" })
@@ -92,28 +92,28 @@ export class EbookGeneral extends SpeakeasyBase {
     version?: string;
 }
 
-export class EbookScopeBuildings extends SpeakeasyBase {
+export class EbookBuildings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "building" })
     @Type(() => IdName)
     building?: IdName;
 }
 
-export class EbookScopeClasses extends SpeakeasyBase {
+export class EbookClasses extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "class" })
     @Type(() => IdName)
     class?: IdName;
 }
 
-export class EbookScopeComputerGroups extends SpeakeasyBase {
+export class EbookComputerGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer_group" })
     @Type(() => IdName)
     computerGroup?: IdName;
 }
 
-export class EbookScopeComputersComputer extends SpeakeasyBase {
+export class EbookComputer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -130,35 +130,35 @@ export class EbookScopeComputersComputer extends SpeakeasyBase {
     udid?: string;
 }
 
-export class EbookScopeComputers extends SpeakeasyBase {
+export class EbookComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
-    @Type(() => EbookScopeComputersComputer)
-    computer?: EbookScopeComputersComputer;
+    @Type(() => EbookComputer)
+    computer?: EbookComputer;
 }
 
-export class EbookScopeDepartments extends SpeakeasyBase {
+export class EbookDepartments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "department" })
     @Type(() => IdName)
     department?: IdName;
 }
 
-export class EbookScopeExclusionsBuildings extends SpeakeasyBase {
+export class EbookSchemasBuildings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "building" })
     @Type(() => IdName)
     building?: IdName;
 }
 
-export class EbookScopeExclusionsComputerGroups extends SpeakeasyBase {
+export class EbookSchemasComputerGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer_group" })
     @Type(() => IdName)
     computerGroup?: IdName;
 }
 
-export class EbookScopeExclusionsComputersComputer extends SpeakeasyBase {
+export class EbookSchemasComputer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -175,42 +175,42 @@ export class EbookScopeExclusionsComputersComputer extends SpeakeasyBase {
     udid?: string;
 }
 
-export class EbookScopeExclusionsComputers extends SpeakeasyBase {
+export class EbookSchemasComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
-    @Type(() => EbookScopeExclusionsComputersComputer)
-    computer?: EbookScopeExclusionsComputersComputer;
+    @Type(() => EbookSchemasComputer)
+    computer?: EbookSchemasComputer;
 }
 
-export class EbookScopeExclusionsDepartments extends SpeakeasyBase {
+export class EbookSchemasDepartments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "department" })
     @Type(() => IdName)
     department?: IdName;
 }
 
-export class EbookScopeExclusionsJssUserGroups extends SpeakeasyBase {
+export class EbookJssUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class EbookScopeExclusionsJssUsers extends SpeakeasyBase {
+export class EbookJssUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     @Type(() => IdName)
     user?: IdName;
 }
 
-export class EbookScopeExclusionsMobileDeviceGroups extends SpeakeasyBase {
+export class EbookSchemasMobileDeviceGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "mobile_device_group" })
     @Type(() => IdName)
     mobileDeviceGroup?: IdName;
 }
 
-export class EbookScopeExclusionsMobileDevicesMobileDevice extends SpeakeasyBase {
+export class EbookSchemasMobileDevice extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -231,14 +231,14 @@ export class EbookScopeExclusionsMobileDevicesMobileDevice extends SpeakeasyBase
     wifiMacAddress?: string;
 }
 
-export class EbookScopeExclusionsMobileDevices extends SpeakeasyBase {
+export class EbookSchemasMobileDevices extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "mobile_device" })
-    @Type(() => EbookScopeExclusionsMobileDevicesMobileDevice)
-    mobileDevice?: EbookScopeExclusionsMobileDevicesMobileDevice;
+    @Type(() => EbookSchemasMobileDevice)
+    mobileDevice?: EbookSchemasMobileDevice;
 }
 
-export class EbookScopeExclusionsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+export class EbookNetworkSegment extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -255,150 +255,150 @@ export class EbookScopeExclusionsNetworkSegmentsNetworkSegment extends Speakeasy
     uid?: string;
 }
 
-export class EbookScopeExclusionsNetworkSegments extends SpeakeasyBase {
+export class EbookSchemasNetworkSegments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "network_segment" })
-    @Type(() => EbookScopeExclusionsNetworkSegmentsNetworkSegment)
-    networkSegment?: EbookScopeExclusionsNetworkSegmentsNetworkSegment;
+    @Type(() => EbookNetworkSegment)
+    networkSegment?: EbookNetworkSegment;
 }
 
-export class EbookScopeExclusionsUserGroups extends SpeakeasyBase {
+export class EbookSchemasUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class EbookScopeExclusionsUsersUser extends SpeakeasyBase {
+export class EbookUser extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
 }
 
-export class EbookScopeExclusionsUsers extends SpeakeasyBase {
+export class EbookUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
-    @Type(() => EbookScopeExclusionsUsersUser)
-    user?: EbookScopeExclusionsUsersUser;
+    @Type(() => EbookUser)
+    user?: EbookUser;
 }
 
-export class EbookScopeExclusions extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: EbookScopeExclusionsBuildings })
+export class Exclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: EbookSchemasBuildings })
     @Expose({ name: "buildings" })
-    @Type(() => EbookScopeExclusionsBuildings)
-    buildings?: EbookScopeExclusionsBuildings[];
+    @Type(() => EbookSchemasBuildings)
+    buildings?: EbookSchemasBuildings[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeExclusionsComputerGroups })
+    @SpeakeasyMetadata({ elemType: EbookSchemasComputerGroups })
     @Expose({ name: "computer_groups" })
-    @Type(() => EbookScopeExclusionsComputerGroups)
-    computerGroups?: EbookScopeExclusionsComputerGroups[];
+    @Type(() => EbookSchemasComputerGroups)
+    computerGroups?: EbookSchemasComputerGroups[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeExclusionsComputers })
+    @SpeakeasyMetadata({ elemType: EbookSchemasComputers })
     @Expose({ name: "computers" })
-    @Type(() => EbookScopeExclusionsComputers)
-    computers?: EbookScopeExclusionsComputers[];
+    @Type(() => EbookSchemasComputers)
+    computers?: EbookSchemasComputers[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeExclusionsDepartments })
+    @SpeakeasyMetadata({ elemType: EbookSchemasDepartments })
     @Expose({ name: "departments" })
-    @Type(() => EbookScopeExclusionsDepartments)
-    departments?: EbookScopeExclusionsDepartments[];
+    @Type(() => EbookSchemasDepartments)
+    departments?: EbookSchemasDepartments[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeExclusionsJssUserGroups })
+    @SpeakeasyMetadata({ elemType: EbookJssUserGroups })
     @Expose({ name: "jss_user_groups" })
-    @Type(() => EbookScopeExclusionsJssUserGroups)
-    jssUserGroups?: EbookScopeExclusionsJssUserGroups[];
+    @Type(() => EbookJssUserGroups)
+    jssUserGroups?: EbookJssUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeExclusionsJssUsers })
+    @SpeakeasyMetadata({ elemType: EbookJssUsers })
     @Expose({ name: "jss_users" })
-    @Type(() => EbookScopeExclusionsJssUsers)
-    jssUsers?: EbookScopeExclusionsJssUsers[];
+    @Type(() => EbookJssUsers)
+    jssUsers?: EbookJssUsers[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeExclusionsMobileDeviceGroups })
+    @SpeakeasyMetadata({ elemType: EbookSchemasMobileDeviceGroups })
     @Expose({ name: "mobile_device_groups" })
-    @Type(() => EbookScopeExclusionsMobileDeviceGroups)
-    mobileDeviceGroups?: EbookScopeExclusionsMobileDeviceGroups[];
+    @Type(() => EbookSchemasMobileDeviceGroups)
+    mobileDeviceGroups?: EbookSchemasMobileDeviceGroups[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeExclusionsMobileDevices })
+    @SpeakeasyMetadata({ elemType: EbookSchemasMobileDevices })
     @Expose({ name: "mobile_devices" })
-    @Type(() => EbookScopeExclusionsMobileDevices)
-    mobileDevices?: EbookScopeExclusionsMobileDevices[];
+    @Type(() => EbookSchemasMobileDevices)
+    mobileDevices?: EbookSchemasMobileDevices[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeExclusionsNetworkSegments })
+    @SpeakeasyMetadata({ elemType: EbookSchemasNetworkSegments })
     @Expose({ name: "network_segments" })
-    @Type(() => EbookScopeExclusionsNetworkSegments)
-    networkSegments?: EbookScopeExclusionsNetworkSegments[];
+    @Type(() => EbookSchemasNetworkSegments)
+    networkSegments?: EbookSchemasNetworkSegments[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeExclusionsUserGroups })
+    @SpeakeasyMetadata({ elemType: EbookSchemasUserGroups })
     @Expose({ name: "user_groups" })
-    @Type(() => EbookScopeExclusionsUserGroups)
-    userGroups?: EbookScopeExclusionsUserGroups[];
+    @Type(() => EbookSchemasUserGroups)
+    userGroups?: EbookSchemasUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeExclusionsUsers })
+    @SpeakeasyMetadata({ elemType: EbookUsers })
     @Expose({ name: "users" })
-    @Type(() => EbookScopeExclusionsUsers)
-    users?: EbookScopeExclusionsUsers[];
+    @Type(() => EbookUsers)
+    users?: EbookUsers[];
 }
 
-export class EbookScopeJssUserGroups extends SpeakeasyBase {
+export class JssUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class EbookScopeJssUsers extends SpeakeasyBase {
+export class JssUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     @Type(() => IdName)
     user?: IdName;
 }
 
-export class EbookScopeLimitationsNetworkSegments extends SpeakeasyBase {
+export class EbookNetworkSegments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "network_segment" })
     @Type(() => IdName)
     networkSegment?: IdName;
 }
 
-export class EbookScopeLimitationsUserGroups extends SpeakeasyBase {
+export class EbookUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class EbookScopeLimitationsUsers extends SpeakeasyBase {
+export class EbookSchemasUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     @Type(() => IdName)
     user?: IdName;
 }
 
-export class EbookScopeLimitations extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: EbookScopeLimitationsNetworkSegments })
+export class Limitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: EbookNetworkSegments })
     @Expose({ name: "network_segments" })
-    @Type(() => EbookScopeLimitationsNetworkSegments)
-    networkSegments?: EbookScopeLimitationsNetworkSegments[];
+    @Type(() => EbookNetworkSegments)
+    networkSegments?: EbookNetworkSegments[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeLimitationsUserGroups })
+    @SpeakeasyMetadata({ elemType: EbookUserGroups })
     @Expose({ name: "user_groups" })
-    @Type(() => EbookScopeLimitationsUserGroups)
-    userGroups?: EbookScopeLimitationsUserGroups[];
+    @Type(() => EbookUserGroups)
+    userGroups?: EbookUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeLimitationsUsers })
+    @SpeakeasyMetadata({ elemType: EbookSchemasUsers })
     @Expose({ name: "users" })
-    @Type(() => EbookScopeLimitationsUsers)
-    users?: EbookScopeLimitationsUsers[];
+    @Type(() => EbookSchemasUsers)
+    users?: EbookSchemasUsers[];
 }
 
-export class EbookScopeMobileDeviceGroups extends SpeakeasyBase {
+export class EbookMobileDeviceGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "mobile_device_group" })
     @Type(() => IdName)
     mobileDeviceGroup?: IdName;
 }
 
-export class EbookScopeMobileDevicesMobileDevice extends SpeakeasyBase {
+export class EbookMobileDevice extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -419,14 +419,14 @@ export class EbookScopeMobileDevicesMobileDevice extends SpeakeasyBase {
     wifiMacAddress?: string;
 }
 
-export class EbookScopeMobileDevices extends SpeakeasyBase {
+export class EbookMobileDevices extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "mobile_device" })
-    @Type(() => EbookScopeMobileDevicesMobileDevice)
-    mobileDevice?: EbookScopeMobileDevicesMobileDevice;
+    @Type(() => EbookMobileDevice)
+    mobileDevice?: EbookMobileDevice;
 }
 
-export class EbookScope extends SpeakeasyBase {
+export class Scope extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "all_computers" })
     allComputers?: boolean;
@@ -439,63 +439,63 @@ export class EbookScope extends SpeakeasyBase {
     @Expose({ name: "all_mobile_devices" })
     allMobileDevices?: boolean;
 
-    @SpeakeasyMetadata({ elemType: EbookScopeBuildings })
+    @SpeakeasyMetadata({ elemType: EbookBuildings })
     @Expose({ name: "buildings" })
-    @Type(() => EbookScopeBuildings)
-    buildings?: EbookScopeBuildings[];
+    @Type(() => EbookBuildings)
+    buildings?: EbookBuildings[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeClasses })
+    @SpeakeasyMetadata({ elemType: EbookClasses })
     @Expose({ name: "classes" })
-    @Type(() => EbookScopeClasses)
-    classes?: EbookScopeClasses[];
+    @Type(() => EbookClasses)
+    classes?: EbookClasses[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeComputerGroups })
+    @SpeakeasyMetadata({ elemType: EbookComputerGroups })
     @Expose({ name: "computer_groups" })
-    @Type(() => EbookScopeComputerGroups)
-    computerGroups?: EbookScopeComputerGroups[];
+    @Type(() => EbookComputerGroups)
+    computerGroups?: EbookComputerGroups[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeComputers })
+    @SpeakeasyMetadata({ elemType: EbookComputers })
     @Expose({ name: "computers" })
-    @Type(() => EbookScopeComputers)
-    computers?: EbookScopeComputers[];
+    @Type(() => EbookComputers)
+    computers?: EbookComputers[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeDepartments })
+    @SpeakeasyMetadata({ elemType: EbookDepartments })
     @Expose({ name: "departments" })
-    @Type(() => EbookScopeDepartments)
-    departments?: EbookScopeDepartments[];
+    @Type(() => EbookDepartments)
+    departments?: EbookDepartments[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "exclusions" })
-    @Type(() => EbookScopeExclusions)
-    exclusions?: EbookScopeExclusions;
+    @Type(() => Exclusions)
+    exclusions?: Exclusions;
 
-    @SpeakeasyMetadata({ elemType: EbookScopeJssUserGroups })
+    @SpeakeasyMetadata({ elemType: JssUserGroups })
     @Expose({ name: "jss_user_groups" })
-    @Type(() => EbookScopeJssUserGroups)
-    jssUserGroups?: EbookScopeJssUserGroups[];
+    @Type(() => JssUserGroups)
+    jssUserGroups?: JssUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeJssUsers })
+    @SpeakeasyMetadata({ elemType: JssUsers })
     @Expose({ name: "jss_users" })
-    @Type(() => EbookScopeJssUsers)
-    jssUsers?: EbookScopeJssUsers[];
+    @Type(() => JssUsers)
+    jssUsers?: JssUsers[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "limitations" })
-    @Type(() => EbookScopeLimitations)
-    limitations?: EbookScopeLimitations;
+    @Type(() => Limitations)
+    limitations?: Limitations;
 
-    @SpeakeasyMetadata({ elemType: EbookScopeMobileDeviceGroups })
+    @SpeakeasyMetadata({ elemType: EbookMobileDeviceGroups })
     @Expose({ name: "mobile_device_groups" })
-    @Type(() => EbookScopeMobileDeviceGroups)
-    mobileDeviceGroups?: EbookScopeMobileDeviceGroups[];
+    @Type(() => EbookMobileDeviceGroups)
+    mobileDeviceGroups?: EbookMobileDeviceGroups[];
 
-    @SpeakeasyMetadata({ elemType: EbookScopeMobileDevices })
+    @SpeakeasyMetadata({ elemType: EbookMobileDevices })
     @Expose({ name: "mobile_devices" })
-    @Type(() => EbookScopeMobileDevices)
-    mobileDevices?: EbookScopeMobileDevices[];
+    @Type(() => EbookMobileDevices)
+    mobileDevices?: EbookMobileDevices[];
 }
 
-export class EbookSelfServiceSelfServiceCategoriesCategory extends SpeakeasyBase {
+export class EbookCategory extends SpeakeasyBase {
     /**
      * Self Service categories to be displayed ebook in
      */
@@ -519,14 +519,14 @@ export class EbookSelfServiceSelfServiceCategoriesCategory extends SpeakeasyBase
     name?: string;
 }
 
-export class EbookSelfServiceSelfServiceCategories extends SpeakeasyBase {
+export class SelfServiceCategories extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "category" })
-    @Type(() => EbookSelfServiceSelfServiceCategoriesCategory)
-    category?: EbookSelfServiceSelfServiceCategoriesCategory;
+    @Type(() => EbookCategory)
+    category?: EbookCategory;
 }
 
-export class EbookSelfServiceSelfServiceIcon extends SpeakeasyBase {
+export class EbookSelfServiceIcon extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "data" })
     data?: string;
@@ -540,7 +540,7 @@ export class EbookSelfServiceSelfServiceIcon extends SpeakeasyBase {
     uri?: string;
 }
 
-export class EbookSelfService extends SpeakeasyBase {
+export class SelfService extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "feature_on_main_page" })
     featureOnMainPage?: boolean;
@@ -567,8 +567,8 @@ export class EbookSelfService extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "self_service_categories" })
-    @Type(() => EbookSelfServiceSelfServiceCategories)
-    selfServiceCategories?: EbookSelfServiceSelfServiceCategories;
+    @Type(() => SelfServiceCategories)
+    selfServiceCategories?: SelfServiceCategories;
 
     @SpeakeasyMetadata()
     @Expose({ name: "self_service_description" })
@@ -580,8 +580,8 @@ export class EbookSelfService extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "self_service_icon" })
-    @Type(() => EbookSelfServiceSelfServiceIcon)
-    selfServiceIcon?: EbookSelfServiceSelfServiceIcon;
+    @Type(() => EbookSelfServiceIcon)
+    selfServiceIcon?: EbookSelfServiceIcon;
 }
 
 export class Ebook extends SpeakeasyBase {
@@ -592,11 +592,11 @@ export class Ebook extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "scope" })
-    @Type(() => EbookScope)
-    scope?: EbookScope;
+    @Type(() => Scope)
+    scope?: Scope;
 
     @SpeakeasyMetadata()
     @Expose({ name: "self_service" })
-    @Type(() => EbookSelfService)
-    selfService?: EbookSelfService;
+    @Type(() => SelfService)
+    selfService?: SelfService;
 }

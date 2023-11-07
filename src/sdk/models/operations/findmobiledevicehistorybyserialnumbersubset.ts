@@ -3,13 +3,13 @@
  */
 
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
-import * as shared from "../shared";
+import * as shared from "../../../sdk/models/shared";
 import { AxiosResponse } from "axios";
 
 /**
  * Subset to filter by
  */
-export enum FindMobileDeviceHistoryBySerialNumberSubsetSubset {
+export enum FindMobileDeviceHistoryBySerialNumberSubsetPathParamSubset {
     General = "General",
     ManagementCommands = "ManagementCommands",
     UserLocation = "UserLocation",
@@ -29,7 +29,7 @@ export class FindMobileDeviceHistoryBySerialNumberSubsetRequest extends Speakeas
      * Subset to filter by
      */
     @SpeakeasyMetadata({ data: "pathParam, style=simple;explode=false;name=subset" })
-    subset: FindMobileDeviceHistoryBySerialNumberSubsetSubset;
+    subset: FindMobileDeviceHistoryBySerialNumberSubsetPathParamSubset;
 }
 
 export class FindMobileDeviceHistoryBySerialNumberSubsetResponse extends SpeakeasyBase {

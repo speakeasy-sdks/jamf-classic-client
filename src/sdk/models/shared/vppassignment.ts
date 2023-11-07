@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { IdName } from "./idname";
 import { Expose, Type } from "class-transformer";
 
-export class VppAssignmentEbooksEbook extends SpeakeasyBase {
+export class VppAssignmentEbook extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "adam_id" })
     adamId?: number;
@@ -19,8 +19,8 @@ export class VppAssignmentEbooksEbook extends SpeakeasyBase {
 export class VppAssignmentEbooks extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "ebook" })
-    @Type(() => VppAssignmentEbooksEbook)
-    ebook?: VppAssignmentEbooksEbook;
+    @Type(() => VppAssignmentEbook)
+    ebook?: VppAssignmentEbook;
 }
 
 export class VppAssignmentGeneral extends SpeakeasyBase {
@@ -41,7 +41,7 @@ export class VppAssignmentGeneral extends SpeakeasyBase {
     vppAdminAccountName?: string;
 }
 
-export class VppAssignmentIosAppsIosApp extends SpeakeasyBase {
+export class IosApp extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "adam_id" })
     adamId?: number;
@@ -51,14 +51,14 @@ export class VppAssignmentIosAppsIosApp extends SpeakeasyBase {
     name?: string;
 }
 
-export class VppAssignmentIosApps extends SpeakeasyBase {
+export class IosApps extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "ios_app" })
-    @Type(() => VppAssignmentIosAppsIosApp)
-    iosApp?: VppAssignmentIosAppsIosApp;
+    @Type(() => IosApp)
+    iosApp?: IosApp;
 }
 
-export class VppAssignmentMacAppsMacApp extends SpeakeasyBase {
+export class MacApp extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "adam_id" })
     adamId?: number;
@@ -68,83 +68,83 @@ export class VppAssignmentMacAppsMacApp extends SpeakeasyBase {
     name?: string;
 }
 
-export class VppAssignmentMacApps extends SpeakeasyBase {
+export class MacApps extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "mac_app" })
-    @Type(() => VppAssignmentMacAppsMacApp)
-    macApp?: VppAssignmentMacAppsMacApp;
+    @Type(() => MacApp)
+    macApp?: MacApp;
 }
 
-export class VppAssignmentScopeExclusionsJssUserGroups extends SpeakeasyBase {
+export class VppAssignmentSchemasJssUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class VppAssignmentScopeExclusionsJssUsers extends SpeakeasyBase {
+export class VppAssignmentSchemasJssUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     @Type(() => IdName)
     user?: IdName;
 }
 
-export class VppAssignmentScopeExclusionsUserGroupsUserGroup extends SpeakeasyBase {
+export class VppAssignmentUserGroup extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
 }
 
-export class VppAssignmentScopeExclusionsUserGroups extends SpeakeasyBase {
+export class VppAssignmentUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
-    @Type(() => VppAssignmentScopeExclusionsUserGroupsUserGroup)
-    userGroup?: VppAssignmentScopeExclusionsUserGroupsUserGroup;
+    @Type(() => VppAssignmentUserGroup)
+    userGroup?: VppAssignmentUserGroup;
 }
 
-export class VppAssignmentScopeExclusions extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: VppAssignmentScopeExclusionsJssUserGroups })
+export class VppAssignmentExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: VppAssignmentSchemasJssUserGroups })
     @Expose({ name: "jss_user_groups" })
-    @Type(() => VppAssignmentScopeExclusionsJssUserGroups)
-    jssUserGroups?: VppAssignmentScopeExclusionsJssUserGroups[];
+    @Type(() => VppAssignmentSchemasJssUserGroups)
+    jssUserGroups?: VppAssignmentSchemasJssUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: VppAssignmentScopeExclusionsJssUsers })
+    @SpeakeasyMetadata({ elemType: VppAssignmentSchemasJssUsers })
     @Expose({ name: "jss_users" })
-    @Type(() => VppAssignmentScopeExclusionsJssUsers)
-    jssUsers?: VppAssignmentScopeExclusionsJssUsers[];
+    @Type(() => VppAssignmentSchemasJssUsers)
+    jssUsers?: VppAssignmentSchemasJssUsers[];
 
-    @SpeakeasyMetadata({ elemType: VppAssignmentScopeExclusionsUserGroups })
+    @SpeakeasyMetadata({ elemType: VppAssignmentUserGroups })
     @Expose({ name: "user_groups" })
-    @Type(() => VppAssignmentScopeExclusionsUserGroups)
-    userGroups?: VppAssignmentScopeExclusionsUserGroups[];
+    @Type(() => VppAssignmentUserGroups)
+    userGroups?: VppAssignmentUserGroups[];
 }
 
-export class VppAssignmentScopeJssUserGroups extends SpeakeasyBase {
+export class VppAssignmentJssUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class VppAssignmentScopeJssUsers extends SpeakeasyBase {
+export class VppAssignmentJssUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     @Type(() => IdName)
     user?: IdName;
 }
 
-export class VppAssignmentScopeLimitationsUserGroups extends SpeakeasyBase {
+export class VppAssignmentSchemasUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class VppAssignmentScopeLimitations extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: VppAssignmentScopeLimitationsUserGroups })
+export class VppAssignmentLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: VppAssignmentSchemasUserGroups })
     @Expose({ name: "user_groups" })
-    @Type(() => VppAssignmentScopeLimitationsUserGroups)
-    userGroups?: VppAssignmentScopeLimitationsUserGroups[];
+    @Type(() => VppAssignmentSchemasUserGroups)
+    userGroups?: VppAssignmentSchemasUserGroups[];
 }
 
 export class VppAssignmentScope extends SpeakeasyBase {
@@ -154,23 +154,23 @@ export class VppAssignmentScope extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "exclusions" })
-    @Type(() => VppAssignmentScopeExclusions)
-    exclusions?: VppAssignmentScopeExclusions;
+    @Type(() => VppAssignmentExclusions)
+    exclusions?: VppAssignmentExclusions;
 
-    @SpeakeasyMetadata({ elemType: VppAssignmentScopeJssUserGroups })
+    @SpeakeasyMetadata({ elemType: VppAssignmentJssUserGroups })
     @Expose({ name: "jss_user_groups" })
-    @Type(() => VppAssignmentScopeJssUserGroups)
-    jssUserGroups?: VppAssignmentScopeJssUserGroups[];
+    @Type(() => VppAssignmentJssUserGroups)
+    jssUserGroups?: VppAssignmentJssUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: VppAssignmentScopeJssUsers })
+    @SpeakeasyMetadata({ elemType: VppAssignmentJssUsers })
     @Expose({ name: "jss_users" })
-    @Type(() => VppAssignmentScopeJssUsers)
-    jssUsers?: VppAssignmentScopeJssUsers[];
+    @Type(() => VppAssignmentJssUsers)
+    jssUsers?: VppAssignmentJssUsers[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "limitations" })
-    @Type(() => VppAssignmentScopeLimitations)
-    limitations?: VppAssignmentScopeLimitations;
+    @Type(() => VppAssignmentLimitations)
+    limitations?: VppAssignmentLimitations;
 }
 
 export class VppAssignment extends SpeakeasyBase {
@@ -184,15 +184,15 @@ export class VppAssignment extends SpeakeasyBase {
     @Type(() => VppAssignmentGeneral)
     general?: VppAssignmentGeneral;
 
-    @SpeakeasyMetadata({ elemType: VppAssignmentIosApps })
+    @SpeakeasyMetadata({ elemType: IosApps })
     @Expose({ name: "ios_apps" })
-    @Type(() => VppAssignmentIosApps)
-    iosApps?: VppAssignmentIosApps[];
+    @Type(() => IosApps)
+    iosApps?: IosApps[];
 
-    @SpeakeasyMetadata({ elemType: VppAssignmentMacApps })
+    @SpeakeasyMetadata({ elemType: MacApps })
     @Expose({ name: "mac_apps" })
-    @Type(() => VppAssignmentMacApps)
-    macApps?: VppAssignmentMacApps[];
+    @Type(() => MacApps)
+    macApps?: MacApps[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "scope" })

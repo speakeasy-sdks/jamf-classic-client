@@ -6,7 +6,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { SiteObject } from "./siteobject";
 import { Expose, Type } from "class-transformer";
 
-export class ComputerInvitationEnrollIntoSite extends SpeakeasyBase {
+export class EnrollIntoSite extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -23,8 +23,8 @@ export class ComputerInvitation extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "enroll_into_site" })
-    @Type(() => ComputerInvitationEnrollIntoSite)
-    enrollIntoSite?: ComputerInvitationEnrollIntoSite;
+    @Type(() => EnrollIntoSite)
+    enrollIntoSite?: EnrollIntoSite;
 
     /**
      * Use 'Unlimited' to specify no expiration date

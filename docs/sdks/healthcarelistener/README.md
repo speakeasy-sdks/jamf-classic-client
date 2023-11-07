@@ -1,5 +1,5 @@
 # Healthcarelistener
-(*healthcarelistener*)
+(*.healthcarelistener*)
 
 ### Available Operations
 
@@ -25,6 +25,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.healthcarelistener.findHealthcareListener();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -65,6 +66,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 309302,
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -104,6 +106,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.healthcarelistener.updateHealthCareListenerById({
     id: 68635,
   });
+
 
   if (res.statusCode == 200) {
     // handle response

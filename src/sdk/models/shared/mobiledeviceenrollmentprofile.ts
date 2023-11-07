@@ -8,7 +8,7 @@ import { Location } from "./location";
 import { Purchasing } from "./purchasing";
 import { Expose, Type } from "class-transformer";
 
-export class MobileDeviceEnrollmentProfileAttachments extends SpeakeasyBase {
+export class Attachments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "attachment" })
     @Type(() => Attachment)
@@ -41,10 +41,10 @@ export class MobileDeviceEnrollmentProfileGeneral extends SpeakeasyBase {
 }
 
 export class MobileDeviceEnrollmentProfile extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: MobileDeviceEnrollmentProfileAttachments })
+    @SpeakeasyMetadata({ elemType: Attachments })
     @Expose({ name: "attachments" })
-    @Type(() => MobileDeviceEnrollmentProfileAttachments)
-    attachments?: MobileDeviceEnrollmentProfileAttachments[];
+    @Type(() => Attachments)
+    attachments?: Attachments[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "general" })

@@ -8,12 +8,12 @@ import { IdName } from "./idname";
 import { SiteObject } from "./siteobject";
 import { Expose, Type } from "class-transformer";
 
-export enum OsXConfigurationProfileGeneralDistributionMethod {
+export enum DistributionMethod {
     InstallAutomatically = "Install Automatically",
     MakeAvailableInSelfService = "Make Available in Self Service",
 }
 
-export enum OsXConfigurationProfileGeneralLevel {
+export enum OsXConfigurationProfileLevel {
     Computer = "computer",
     User = "user",
 }
@@ -30,7 +30,7 @@ export class OsXConfigurationProfileGeneral extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "distribution_method" })
-    distributionMethod?: OsXConfigurationProfileGeneralDistributionMethod;
+    distributionMethod?: DistributionMethod;
 
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
@@ -38,7 +38,7 @@ export class OsXConfigurationProfileGeneral extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "level" })
-    level?: OsXConfigurationProfileGeneralLevel;
+    level?: OsXConfigurationProfileLevel;
 
     /**
      * Name of the configuration profile
@@ -69,21 +69,21 @@ export class OsXConfigurationProfileGeneral extends SpeakeasyBase {
     uuid?: string;
 }
 
-export class OsXConfigurationProfileScopeBuildings extends SpeakeasyBase {
+export class OsXConfigurationProfileBuildings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "building" })
     @Type(() => IdName)
     building?: IdName;
 }
 
-export class OsXConfigurationProfileScopeComputerGroups extends SpeakeasyBase {
+export class OsXConfigurationProfileComputerGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer_group" })
     @Type(() => IdName)
     computerGroup?: IdName;
 }
 
-export class OsXConfigurationProfileScopeComputersComputer extends SpeakeasyBase {
+export class OsXConfigurationProfileComputer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -100,35 +100,35 @@ export class OsXConfigurationProfileScopeComputersComputer extends SpeakeasyBase
     udid?: string;
 }
 
-export class OsXConfigurationProfileScopeComputers extends SpeakeasyBase {
+export class OsXConfigurationProfileComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
-    @Type(() => OsXConfigurationProfileScopeComputersComputer)
-    computer?: OsXConfigurationProfileScopeComputersComputer;
+    @Type(() => OsXConfigurationProfileComputer)
+    computer?: OsXConfigurationProfileComputer;
 }
 
-export class OsXConfigurationProfileScopeDepartments extends SpeakeasyBase {
+export class OsXConfigurationProfileDepartments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "department" })
     @Type(() => IdName)
     department?: IdName;
 }
 
-export class OsXConfigurationProfileScopeExclusionsBuildings extends SpeakeasyBase {
+export class OsXConfigurationProfileSchemasBuildings extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "building" })
     @Type(() => IdName)
     building?: IdName;
 }
 
-export class OsXConfigurationProfileScopeExclusionsComputerGroups extends SpeakeasyBase {
+export class OsXConfigurationProfileSchemasComputerGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer_group" })
     @Type(() => IdName)
     computerGroup?: IdName;
 }
 
-export class OsXConfigurationProfileScopeExclusionsComputersComputer extends SpeakeasyBase {
+export class OsXConfigurationProfileSchemasComputer extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -145,42 +145,42 @@ export class OsXConfigurationProfileScopeExclusionsComputersComputer extends Spe
     udid?: string;
 }
 
-export class OsXConfigurationProfileScopeExclusionsComputers extends SpeakeasyBase {
+export class OsXConfigurationProfileSchemasComputers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "computer" })
-    @Type(() => OsXConfigurationProfileScopeExclusionsComputersComputer)
-    computer?: OsXConfigurationProfileScopeExclusionsComputersComputer;
+    @Type(() => OsXConfigurationProfileSchemasComputer)
+    computer?: OsXConfigurationProfileSchemasComputer;
 }
 
-export class OsXConfigurationProfileScopeExclusionsDepartments extends SpeakeasyBase {
+export class OsXConfigurationProfileSchemasDepartments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "department" })
     @Type(() => IdName)
     department?: IdName;
 }
 
-export class OsXConfigurationProfileScopeExclusionsIbeacons extends SpeakeasyBase {
+export class OsXConfigurationProfileIbeacons extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "ibeacon" })
     @Type(() => IdName)
     ibeacon?: IdName;
 }
 
-export class OsXConfigurationProfileScopeExclusionsJssUserGroups extends SpeakeasyBase {
+export class OsXConfigurationProfileSchemasJssUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "jss_user_group" })
     @Type(() => IdName)
     jssUserGroup?: IdName;
 }
 
-export class OsXConfigurationProfileScopeExclusionsJssUsers extends SpeakeasyBase {
+export class OsXConfigurationProfileSchemasJssUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "jss_user" })
     @Type(() => IdName)
     jssUser?: IdName;
 }
 
-export class OsXConfigurationProfileScopeExclusionsNetworkSegmentsNetworkSegment extends SpeakeasyBase {
+export class OsXConfigurationProfileNetworkSegment extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "id" })
     id?: number;
@@ -197,147 +197,147 @@ export class OsXConfigurationProfileScopeExclusionsNetworkSegmentsNetworkSegment
     uid?: string;
 }
 
-export class OsXConfigurationProfileScopeExclusionsNetworkSegments extends SpeakeasyBase {
+export class OsXConfigurationProfileNetworkSegments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "network_segment" })
-    @Type(() => OsXConfigurationProfileScopeExclusionsNetworkSegmentsNetworkSegment)
-    networkSegment?: OsXConfigurationProfileScopeExclusionsNetworkSegmentsNetworkSegment;
+    @Type(() => OsXConfigurationProfileNetworkSegment)
+    networkSegment?: OsXConfigurationProfileNetworkSegment;
 }
 
-export class OsXConfigurationProfileScopeExclusionsUserGroups extends SpeakeasyBase {
+export class OsXConfigurationProfileUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class OsXConfigurationProfileScopeExclusionsUsersUser extends SpeakeasyBase {
+export class OsXConfigurationProfileUser extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "name" })
     name?: string;
 }
 
-export class OsXConfigurationProfileScopeExclusionsUsers extends SpeakeasyBase {
+export class OsXConfigurationProfileUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
-    @Type(() => OsXConfigurationProfileScopeExclusionsUsersUser)
-    user?: OsXConfigurationProfileScopeExclusionsUsersUser;
+    @Type(() => OsXConfigurationProfileUser)
+    user?: OsXConfigurationProfileUser;
 }
 
-export class OsXConfigurationProfileScopeExclusions extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeExclusionsBuildings })
+export class OsXConfigurationProfileExclusions extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileSchemasBuildings })
     @Expose({ name: "buildings" })
-    @Type(() => OsXConfigurationProfileScopeExclusionsBuildings)
-    buildings?: OsXConfigurationProfileScopeExclusionsBuildings[];
+    @Type(() => OsXConfigurationProfileSchemasBuildings)
+    buildings?: OsXConfigurationProfileSchemasBuildings[];
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeExclusionsComputerGroups })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileSchemasComputerGroups })
     @Expose({ name: "computer_groups" })
-    @Type(() => OsXConfigurationProfileScopeExclusionsComputerGroups)
-    computerGroups?: OsXConfigurationProfileScopeExclusionsComputerGroups[];
+    @Type(() => OsXConfigurationProfileSchemasComputerGroups)
+    computerGroups?: OsXConfigurationProfileSchemasComputerGroups[];
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeExclusionsComputers })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileSchemasComputers })
     @Expose({ name: "computers" })
-    @Type(() => OsXConfigurationProfileScopeExclusionsComputers)
-    computers?: OsXConfigurationProfileScopeExclusionsComputers[];
+    @Type(() => OsXConfigurationProfileSchemasComputers)
+    computers?: OsXConfigurationProfileSchemasComputers[];
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeExclusionsDepartments })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileSchemasDepartments })
     @Expose({ name: "departments" })
-    @Type(() => OsXConfigurationProfileScopeExclusionsDepartments)
-    departments?: OsXConfigurationProfileScopeExclusionsDepartments[];
+    @Type(() => OsXConfigurationProfileSchemasDepartments)
+    departments?: OsXConfigurationProfileSchemasDepartments[];
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeExclusionsIbeacons })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileIbeacons })
     @Expose({ name: "ibeacons" })
-    @Type(() => OsXConfigurationProfileScopeExclusionsIbeacons)
-    ibeacons?: OsXConfigurationProfileScopeExclusionsIbeacons[];
+    @Type(() => OsXConfigurationProfileIbeacons)
+    ibeacons?: OsXConfigurationProfileIbeacons[];
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeExclusionsJssUserGroups })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileSchemasJssUserGroups })
     @Expose({ name: "jss_user_groups" })
-    @Type(() => OsXConfigurationProfileScopeExclusionsJssUserGroups)
-    jssUserGroups?: OsXConfigurationProfileScopeExclusionsJssUserGroups[];
+    @Type(() => OsXConfigurationProfileSchemasJssUserGroups)
+    jssUserGroups?: OsXConfigurationProfileSchemasJssUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeExclusionsJssUsers })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileSchemasJssUsers })
     @Expose({ name: "jss_users" })
-    @Type(() => OsXConfigurationProfileScopeExclusionsJssUsers)
-    jssUsers?: OsXConfigurationProfileScopeExclusionsJssUsers[];
+    @Type(() => OsXConfigurationProfileSchemasJssUsers)
+    jssUsers?: OsXConfigurationProfileSchemasJssUsers[];
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeExclusionsNetworkSegments })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileNetworkSegments })
     @Expose({ name: "network_segments" })
-    @Type(() => OsXConfigurationProfileScopeExclusionsNetworkSegments)
-    networkSegments?: OsXConfigurationProfileScopeExclusionsNetworkSegments[];
+    @Type(() => OsXConfigurationProfileNetworkSegments)
+    networkSegments?: OsXConfigurationProfileNetworkSegments[];
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeExclusionsUserGroups })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileUserGroups })
     @Expose({ name: "user_groups" })
-    @Type(() => OsXConfigurationProfileScopeExclusionsUserGroups)
-    userGroups?: OsXConfigurationProfileScopeExclusionsUserGroups[];
+    @Type(() => OsXConfigurationProfileUserGroups)
+    userGroups?: OsXConfigurationProfileUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeExclusionsUsers })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileUsers })
     @Expose({ name: "users" })
-    @Type(() => OsXConfigurationProfileScopeExclusionsUsers)
-    users?: OsXConfigurationProfileScopeExclusionsUsers[];
+    @Type(() => OsXConfigurationProfileUsers)
+    users?: OsXConfigurationProfileUsers[];
 }
 
-export class OsXConfigurationProfileScopeJssUserGroups extends SpeakeasyBase {
+export class OsXConfigurationProfileJssUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "jss_user_group" })
     @Type(() => IdName)
     jssUserGroup?: IdName;
 }
 
-export class OsXConfigurationProfileScopeJssUsers extends SpeakeasyBase {
+export class OsXConfigurationProfileJssUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "users" })
     @Type(() => IdName)
     users?: IdName;
 }
 
-export class OsXConfigurationProfileScopeLimitationsIbeacons extends SpeakeasyBase {
+export class OsXConfigurationProfileSchemasIbeacons extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "ibeacon" })
     @Type(() => IdName)
     ibeacon?: IdName;
 }
 
-export class OsXConfigurationProfileScopeLimitationsNetworkSegments extends SpeakeasyBase {
+export class OsXConfigurationProfileSchemasNetworkSegments extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "network_segment" })
     @Type(() => IdName)
     networkSegment?: IdName;
 }
 
-export class OsXConfigurationProfileScopeLimitationsUserGroups extends SpeakeasyBase {
+export class OsXConfigurationProfileSchemasUserGroups extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user_group" })
     @Type(() => IdName)
     userGroup?: IdName;
 }
 
-export class OsXConfigurationProfileScopeLimitationsUsers extends SpeakeasyBase {
+export class OsXConfigurationProfileSchemasUsers extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "user" })
     @Type(() => IdName)
     user?: IdName;
 }
 
-export class OsXConfigurationProfileScopeLimitations extends SpeakeasyBase {
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeLimitationsIbeacons })
+export class OsXConfigurationProfileLimitations extends SpeakeasyBase {
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileSchemasIbeacons })
     @Expose({ name: "ibeacons" })
-    @Type(() => OsXConfigurationProfileScopeLimitationsIbeacons)
-    ibeacons?: OsXConfigurationProfileScopeLimitationsIbeacons[];
+    @Type(() => OsXConfigurationProfileSchemasIbeacons)
+    ibeacons?: OsXConfigurationProfileSchemasIbeacons[];
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeLimitationsNetworkSegments })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileSchemasNetworkSegments })
     @Expose({ name: "network_segments" })
-    @Type(() => OsXConfigurationProfileScopeLimitationsNetworkSegments)
-    networkSegments?: OsXConfigurationProfileScopeLimitationsNetworkSegments[];
+    @Type(() => OsXConfigurationProfileSchemasNetworkSegments)
+    networkSegments?: OsXConfigurationProfileSchemasNetworkSegments[];
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeLimitationsUserGroups })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileSchemasUserGroups })
     @Expose({ name: "user_groups" })
-    @Type(() => OsXConfigurationProfileScopeLimitationsUserGroups)
-    userGroups?: OsXConfigurationProfileScopeLimitationsUserGroups[];
+    @Type(() => OsXConfigurationProfileSchemasUserGroups)
+    userGroups?: OsXConfigurationProfileSchemasUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeLimitationsUsers })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileSchemasUsers })
     @Expose({ name: "users" })
-    @Type(() => OsXConfigurationProfileScopeLimitationsUsers)
-    users?: OsXConfigurationProfileScopeLimitationsUsers[];
+    @Type(() => OsXConfigurationProfileSchemasUsers)
+    users?: OsXConfigurationProfileSchemasUsers[];
 }
 
 export class OsXConfigurationProfileScope extends SpeakeasyBase {
@@ -349,48 +349,48 @@ export class OsXConfigurationProfileScope extends SpeakeasyBase {
     @Expose({ name: "all_jss_users" })
     allJssUsers?: boolean;
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeBuildings })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileBuildings })
     @Expose({ name: "buildings" })
-    @Type(() => OsXConfigurationProfileScopeBuildings)
-    buildings?: OsXConfigurationProfileScopeBuildings[];
+    @Type(() => OsXConfigurationProfileBuildings)
+    buildings?: OsXConfigurationProfileBuildings[];
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeComputerGroups })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileComputerGroups })
     @Expose({ name: "computer_groups" })
-    @Type(() => OsXConfigurationProfileScopeComputerGroups)
-    computerGroups?: OsXConfigurationProfileScopeComputerGroups[];
+    @Type(() => OsXConfigurationProfileComputerGroups)
+    computerGroups?: OsXConfigurationProfileComputerGroups[];
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeComputers })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileComputers })
     @Expose({ name: "computers" })
-    @Type(() => OsXConfigurationProfileScopeComputers)
-    computers?: OsXConfigurationProfileScopeComputers[];
+    @Type(() => OsXConfigurationProfileComputers)
+    computers?: OsXConfigurationProfileComputers[];
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeDepartments })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileDepartments })
     @Expose({ name: "departments" })
-    @Type(() => OsXConfigurationProfileScopeDepartments)
-    departments?: OsXConfigurationProfileScopeDepartments[];
+    @Type(() => OsXConfigurationProfileDepartments)
+    departments?: OsXConfigurationProfileDepartments[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "exclusions" })
-    @Type(() => OsXConfigurationProfileScopeExclusions)
-    exclusions?: OsXConfigurationProfileScopeExclusions;
+    @Type(() => OsXConfigurationProfileExclusions)
+    exclusions?: OsXConfigurationProfileExclusions;
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeJssUserGroups })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileJssUserGroups })
     @Expose({ name: "jss_user_groups" })
-    @Type(() => OsXConfigurationProfileScopeJssUserGroups)
-    jssUserGroups?: OsXConfigurationProfileScopeJssUserGroups[];
+    @Type(() => OsXConfigurationProfileJssUserGroups)
+    jssUserGroups?: OsXConfigurationProfileJssUserGroups[];
 
-    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileScopeJssUsers })
+    @SpeakeasyMetadata({ elemType: OsXConfigurationProfileJssUsers })
     @Expose({ name: "jss_users" })
-    @Type(() => OsXConfigurationProfileScopeJssUsers)
-    jssUsers?: OsXConfigurationProfileScopeJssUsers[];
+    @Type(() => OsXConfigurationProfileJssUsers)
+    jssUsers?: OsXConfigurationProfileJssUsers[];
 
     @SpeakeasyMetadata()
     @Expose({ name: "limitations" })
-    @Type(() => OsXConfigurationProfileScopeLimitations)
-    limitations?: OsXConfigurationProfileScopeLimitations;
+    @Type(() => OsXConfigurationProfileLimitations)
+    limitations?: OsXConfigurationProfileLimitations;
 }
 
-export class OsXConfigurationProfileSelfServiceSelfServiceCategoriesCategory extends SpeakeasyBase {
+export class OsXConfigurationProfileCategory extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "display_in" })
     displayIn?: boolean;
@@ -408,14 +408,14 @@ export class OsXConfigurationProfileSelfServiceSelfServiceCategoriesCategory ext
     name?: string;
 }
 
-export class OsXConfigurationProfileSelfServiceSelfServiceCategories extends SpeakeasyBase {
+export class OsXConfigurationProfileSelfServiceCategories extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "category" })
-    @Type(() => OsXConfigurationProfileSelfServiceSelfServiceCategoriesCategory)
-    category?: OsXConfigurationProfileSelfServiceSelfServiceCategoriesCategory;
+    @Type(() => OsXConfigurationProfileCategory)
+    category?: OsXConfigurationProfileCategory;
 }
 
-export class OsXConfigurationProfileSelfServiceSelfServiceIcon extends SpeakeasyBase {
+export class OsXConfigurationProfileSelfServiceIcon extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "data" })
     data?: string;
@@ -456,8 +456,8 @@ export class OsXConfigurationProfileSelfService extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "self_service_categories" })
-    @Type(() => OsXConfigurationProfileSelfServiceSelfServiceCategories)
-    selfServiceCategories?: OsXConfigurationProfileSelfServiceSelfServiceCategories;
+    @Type(() => OsXConfigurationProfileSelfServiceCategories)
+    selfServiceCategories?: OsXConfigurationProfileSelfServiceCategories;
 
     @SpeakeasyMetadata()
     @Expose({ name: "self_service_description" })
@@ -465,8 +465,8 @@ export class OsXConfigurationProfileSelfService extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "self_service_icon" })
-    @Type(() => OsXConfigurationProfileSelfServiceSelfServiceIcon)
-    selfServiceIcon?: OsXConfigurationProfileSelfServiceSelfServiceIcon;
+    @Type(() => OsXConfigurationProfileSelfServiceIcon)
+    selfServiceIcon?: OsXConfigurationProfileSelfServiceIcon;
 }
 
 export class OsXConfigurationProfile extends SpeakeasyBase {

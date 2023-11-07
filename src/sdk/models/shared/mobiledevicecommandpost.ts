@@ -7,7 +7,7 @@ import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 /**
  * Command to send device
  */
-export enum MobileDeviceCommandPostGeneralCommand {
+export enum Command {
     Settings = "Settings",
     DeviceLock = "DeviceLock",
     EraseDevice = "EraseDevice",
@@ -46,7 +46,7 @@ export class MobileDeviceCommandPostGeneral extends SpeakeasyBase {
      * Command to send device
      */
     @SpeakeasyMetadata()
-    command: MobileDeviceCommandPostGeneralCommand;
+    command: Command;
 
     /**
      * Device name to set (Required for DeviceName command)
@@ -127,14 +127,14 @@ export class MobileDeviceCommandPostGeneral extends SpeakeasyBase {
     wallpaperSetting?: number;
 }
 
-export class MobileDeviceCommandPostMobileDevicesMobileDevice extends SpeakeasyBase {
+export class MobileDeviceCommandPostMobileDevice extends SpeakeasyBase {
     @SpeakeasyMetadata()
     id: number;
 }
 
 export class MobileDeviceCommandPostMobileDevices extends SpeakeasyBase {
     @SpeakeasyMetadata()
-    mobileDevice?: MobileDeviceCommandPostMobileDevicesMobileDevice;
+    mobileDevice?: MobileDeviceCommandPostMobileDevice;
 }
 
 export class MobileDeviceCommandPost extends SpeakeasyBase {

@@ -1,5 +1,5 @@
 # Healthcarelistenerrule
-(*healthcarelistenerrule*)
+(*.healthcarelistenerrule*)
 
 ### Available Operations
 
@@ -28,6 +28,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.healthcarelistenerrule.createHealthCareListenerRuleById({
     id: 256297,
   });
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -66,6 +67,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   });
 
   const res = await sdk.healthcarelistenerrule.findHealthcareListenerRule();
+
 
   if (res.statusCode == 200) {
     // handle response
@@ -106,6 +108,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: "<ID>",
   });
 
+
   if (res.statusCode == 200) {
     // handle response
   }
@@ -145,6 +148,7 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   const res = await sdk.healthcarelistenerrule.updateHealthCareListenerRuleById({
     id: "<ID>",
   });
+
 
   if (res.statusCode == 200) {
     // handle response

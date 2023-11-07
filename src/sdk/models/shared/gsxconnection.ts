@@ -5,7 +5,7 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose } from "class-transformer";
 
-export enum GsxConnectionRegion {
+export enum Region {
     Americas = "Americas",
     Apac = "APAC",
     Emea = "EMEA",
@@ -23,7 +23,7 @@ export class GsxConnection extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "region" })
-    region?: GsxConnectionRegion;
+    region?: Region;
 
     @SpeakeasyMetadata()
     @Expose({ name: "uri" })

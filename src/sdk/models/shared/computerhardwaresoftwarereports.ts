@@ -5,12 +5,12 @@
 import { SpeakeasyBase, SpeakeasyMetadata } from "../../../internal/utils";
 import { Expose, Type } from "class-transformer";
 
-export enum ComputerHardwareSoftwareReportsFontReportType {
+export enum ComputerHardwareSoftwareReportsType {
     Added = "Added",
     Deleted = "Deleted",
 }
 
-export class ComputerHardwareSoftwareReportsFontReport extends SpeakeasyBase {
+export class FontReport extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "date_time" })
     dateTime?: string;
@@ -33,14 +33,14 @@ export class ComputerHardwareSoftwareReportsFontReport extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    type?: ComputerHardwareSoftwareReportsFontReportType;
+    type?: ComputerHardwareSoftwareReportsType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "version" })
     version?: string;
 }
 
-export class ComputerHardwareSoftwareReportsHardwareReport extends SpeakeasyBase {
+export class HardwareReport extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "NIC_speed" })
     nicSpeed?: string;
@@ -110,12 +110,12 @@ export class ComputerHardwareSoftwareReportsHardwareReport extends SpeakeasyBase
     totalRamMb?: number;
 }
 
-export enum ComputerHardwareSoftwareReportsPluginReportType {
+export enum ComputerHardwareSoftwareReportsSchemasType {
     Added = "Added",
     Removed = "Removed",
 }
 
-export class ComputerHardwareSoftwareReportsPluginReport extends SpeakeasyBase {
+export class PluginReport extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "date_time" })
     dateTime?: string;
@@ -138,19 +138,19 @@ export class ComputerHardwareSoftwareReportsPluginReport extends SpeakeasyBase {
 
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    type?: ComputerHardwareSoftwareReportsPluginReportType;
+    type?: ComputerHardwareSoftwareReportsSchemasType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "version" })
     version?: string;
 }
 
-export enum ComputerHardwareSoftwareReportsSoftwareReportType {
+export enum ComputerHardwareSoftwareReportsSchemasSoftwareReportType {
     Added = "Added",
     Deleted = "Deleted",
 }
 
-export class ComputerHardwareSoftwareReportsSoftwareReport extends SpeakeasyBase {
+export class SoftwareReport extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "date_time" })
     dateTime?: string;
@@ -173,7 +173,7 @@ export class ComputerHardwareSoftwareReportsSoftwareReport extends SpeakeasyBase
 
     @SpeakeasyMetadata()
     @Expose({ name: "type" })
-    type?: ComputerHardwareSoftwareReportsSoftwareReportType;
+    type?: ComputerHardwareSoftwareReportsSchemasSoftwareReportType;
 
     @SpeakeasyMetadata()
     @Expose({ name: "version" })
@@ -183,21 +183,21 @@ export class ComputerHardwareSoftwareReportsSoftwareReport extends SpeakeasyBase
 export class ComputerHardwareSoftwareReports extends SpeakeasyBase {
     @SpeakeasyMetadata()
     @Expose({ name: "font_report" })
-    @Type(() => ComputerHardwareSoftwareReportsFontReport)
-    fontReport?: ComputerHardwareSoftwareReportsFontReport;
+    @Type(() => FontReport)
+    fontReport?: FontReport;
 
     @SpeakeasyMetadata()
     @Expose({ name: "hardware_report" })
-    @Type(() => ComputerHardwareSoftwareReportsHardwareReport)
-    hardwareReport?: ComputerHardwareSoftwareReportsHardwareReport;
+    @Type(() => HardwareReport)
+    hardwareReport?: HardwareReport;
 
     @SpeakeasyMetadata()
     @Expose({ name: "plugin_report" })
-    @Type(() => ComputerHardwareSoftwareReportsPluginReport)
-    pluginReport?: ComputerHardwareSoftwareReportsPluginReport;
+    @Type(() => PluginReport)
+    pluginReport?: PluginReport;
 
     @SpeakeasyMetadata()
     @Expose({ name: "software_report" })
-    @Type(() => ComputerHardwareSoftwareReportsSoftwareReport)
-    softwareReport?: ComputerHardwareSoftwareReportsSoftwareReport;
+    @Type(() => SoftwareReport)
+    softwareReport?: SoftwareReport;
 }

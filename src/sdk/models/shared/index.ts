@@ -64,7 +64,7 @@ export * from "./group";
 export * from "./gsxconnection";
 export * from "./healthcarelistener";
 export * from "./healthcarelistenerrule";
-export * from "./healthcarelistenerrules1";
+export * from "./healthcarelistenerrules";
 export * from "./healthcarelisteners";
 export * from "./ibeacon";
 export * from "./ibeacons";
