@@ -1,5 +1,5 @@
 # Usergroups
-(*.usergroups*)
+(*usergroups*)
 
 ### Available Operations
 
@@ -33,7 +33,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 253753,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -42,16 +41,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.CreateUserGroupsByIdRequest](../../models/operations/createusergroupsbyidrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.CreateUserGroupsByIdRequest](../../sdk/models/operations/createusergroupsbyidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response
 
-**Promise<[operations.CreateUserGroupsByIdResponse](../../models/operations/createusergroupsbyidresponse.md)>**
+**Promise<[operations.CreateUserGroupsByIdResponse](../../sdk/models/operations/createusergroupsbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteUserGroupsById
 
@@ -74,7 +77,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 256319,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -83,16 +85,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.DeleteUserGroupsByIdRequest](../../models/operations/deleteusergroupsbyidrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.DeleteUserGroupsByIdRequest](../../sdk/models/operations/deleteusergroupsbyidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response
 
-**Promise<[operations.DeleteUserGroupsByIdResponse](../../models/operations/deleteusergroupsbyidresponse.md)>**
+**Promise<[operations.DeleteUserGroupsByIdResponse](../../sdk/models/operations/deleteusergroupsbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteUserGroupsByName
 
@@ -115,7 +121,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -124,16 +129,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.DeleteUserGroupsByNameRequest](../../models/operations/deleteusergroupsbynamerequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.DeleteUserGroupsByNameRequest](../../sdk/models/operations/deleteusergroupsbynamerequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
 
 
 ### Response
 
-**Promise<[operations.DeleteUserGroupsByNameResponse](../../models/operations/deleteusergroupsbynameresponse.md)>**
+**Promise<[operations.DeleteUserGroupsByNameResponse](../../sdk/models/operations/deleteusergroupsbynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findUserGroups
 
@@ -154,7 +163,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.usergroups.findUserGroups();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -170,8 +178,12 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.FindUserGroupsResponse](../../models/operations/findusergroupsresponse.md)>**
+**Promise<[operations.FindUserGroupsResponse](../../sdk/models/operations/findusergroupsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findUserGroupsById
 
@@ -194,7 +206,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 121740,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -203,16 +214,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `request`                                                                                    | [operations.FindUserGroupsByIdRequest](../../models/operations/findusergroupsbyidrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `config`                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                 | :heavy_minus_sign:                                                                           | Available config options for making requests.                                                |
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `request`                                                                                        | [operations.FindUserGroupsByIdRequest](../../sdk/models/operations/findusergroupsbyidrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
 
 
 ### Response
 
-**Promise<[operations.FindUserGroupsByIdResponse](../../models/operations/findusergroupsbyidresponse.md)>**
+**Promise<[operations.FindUserGroupsByIdResponse](../../sdk/models/operations/findusergroupsbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findUserGroupsByName
 
@@ -235,7 +250,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -244,16 +258,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.FindUserGroupsByNameRequest](../../models/operations/findusergroupsbynamerequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.FindUserGroupsByNameRequest](../../sdk/models/operations/findusergroupsbynamerequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response
 
-**Promise<[operations.FindUserGroupsByNameResponse](../../models/operations/findusergroupsbynameresponse.md)>**
+**Promise<[operations.FindUserGroupsByNameResponse](../../sdk/models/operations/findusergroupsbynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updateUserGroupsById
 
@@ -276,7 +294,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 967440,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -285,16 +302,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `request`                                                                                        | [operations.UpdateUserGroupsByIdRequest](../../models/operations/updateusergroupsbyidrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `config`                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                     | :heavy_minus_sign:                                                                               | Available config options for making requests.                                                    |
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `request`                                                                                            | [operations.UpdateUserGroupsByIdRequest](../../sdk/models/operations/updateusergroupsbyidrequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
 
 
 ### Response
 
-**Promise<[operations.UpdateUserGroupsByIdResponse](../../models/operations/updateusergroupsbyidresponse.md)>**
+**Promise<[operations.UpdateUserGroupsByIdResponse](../../sdk/models/operations/updateusergroupsbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updateUserGroupsByName
 
@@ -317,7 +338,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -326,13 +346,17 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
-| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `request`                                                                                            | [operations.UpdateUserGroupsByNameRequest](../../models/operations/updateusergroupsbynamerequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
-| `config`                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                         | :heavy_minus_sign:                                                                                   | Available config options for making requests.                                                        |
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                | [operations.UpdateUserGroupsByNameRequest](../../sdk/models/operations/updateusergroupsbynamerequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
 
 
 ### Response
 
-**Promise<[operations.UpdateUserGroupsByNameResponse](../../models/operations/updateusergroupsbynameresponse.md)>**
+**Promise<[operations.UpdateUserGroupsByNameResponse](../../sdk/models/operations/updateusergroupsbynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

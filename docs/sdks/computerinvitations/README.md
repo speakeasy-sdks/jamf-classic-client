@@ -1,5 +1,5 @@
 # Computerinvitations
-(*.computerinvitations*)
+(*computerinvitations*)
 
 ### Available Operations
 
@@ -32,7 +32,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 426166,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -41,16 +40,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.CreateComputerInvitationsByIdRequest](../../models/operations/createcomputerinvitationsbyidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [operations.CreateComputerInvitationsByIdRequest](../../sdk/models/operations/createcomputerinvitationsbyidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
 
 
 ### Response
 
-**Promise<[operations.CreateComputerInvitationsByIdResponse](../../models/operations/createcomputerinvitationsbyidresponse.md)>**
+**Promise<[operations.CreateComputerInvitationsByIdResponse](../../sdk/models/operations/createcomputerinvitationsbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## createComputerInvitationsByInvitation
 
@@ -73,7 +76,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     invitation: 107268,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -82,16 +84,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [operations.CreateComputerInvitationsByInvitationRequest](../../models/operations/createcomputerinvitationsbyinvitationrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [operations.CreateComputerInvitationsByInvitationRequest](../../sdk/models/operations/createcomputerinvitationsbyinvitationrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.CreateComputerInvitationsByInvitationResponse](../../models/operations/createcomputerinvitationsbyinvitationresponse.md)>**
+**Promise<[operations.CreateComputerInvitationsByInvitationResponse](../../sdk/models/operations/createcomputerinvitationsbyinvitationresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteComputerInvitationById
 
@@ -114,7 +120,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 620598,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -123,16 +128,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.DeleteComputerInvitationByIdRequest](../../models/operations/deletecomputerinvitationbyidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.DeleteComputerInvitationByIdRequest](../../sdk/models/operations/deletecomputerinvitationbyidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
 
 
 ### Response
 
-**Promise<[operations.DeleteComputerInvitationByIdResponse](../../models/operations/deletecomputerinvitationbyidresponse.md)>**
+**Promise<[operations.DeleteComputerInvitationByIdResponse](../../sdk/models/operations/deletecomputerinvitationbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteComputerInvitationByInvitation
 
@@ -155,7 +164,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     invitation: 706715,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -164,16 +172,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.DeleteComputerInvitationByInvitationRequest](../../models/operations/deletecomputerinvitationbyinvitationrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.DeleteComputerInvitationByInvitationRequest](../../sdk/models/operations/deletecomputerinvitationbyinvitationrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.DeleteComputerInvitationByInvitationResponse](../../models/operations/deletecomputerinvitationbyinvitationresponse.md)>**
+**Promise<[operations.DeleteComputerInvitationByInvitationResponse](../../sdk/models/operations/deletecomputerinvitationbyinvitationresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerInvitations
 
@@ -194,7 +206,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.computerinvitations.findComputerInvitations();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -210,8 +221,12 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.FindComputerInvitationsResponse](../../models/operations/findcomputerinvitationsresponse.md)>**
+**Promise<[operations.FindComputerInvitationsResponse](../../sdk/models/operations/findcomputerinvitationsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerInvitationsById
 
@@ -234,7 +249,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 737242,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -243,16 +257,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.FindComputerInvitationsByIdRequest](../../models/operations/findcomputerinvitationsbyidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.FindComputerInvitationsByIdRequest](../../sdk/models/operations/findcomputerinvitationsbyidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
 
 
 ### Response
 
-**Promise<[operations.FindComputerInvitationsByIdResponse](../../models/operations/findcomputerinvitationsbyidresponse.md)>**
+**Promise<[operations.FindComputerInvitationsByIdResponse](../../sdk/models/operations/findcomputerinvitationsbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerInvitationsByInvitation
 
@@ -275,7 +293,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     invitation: 681787,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -284,13 +301,17 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.FindComputerInvitationsByInvitationRequest](../../models/operations/findcomputerinvitationsbyinvitationrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [operations.FindComputerInvitationsByInvitationRequest](../../sdk/models/operations/findcomputerinvitationsbyinvitationrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.FindComputerInvitationsByInvitationResponse](../../models/operations/findcomputerinvitationsbyinvitationresponse.md)>**
+**Promise<[operations.FindComputerInvitationsByInvitationResponse](../../sdk/models/operations/findcomputerinvitationsbyinvitationresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

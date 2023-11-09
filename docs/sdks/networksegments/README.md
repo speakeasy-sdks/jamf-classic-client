@@ -1,5 +1,5 @@
 # Networksegments
-(*.networksegments*)
+(*networksegments*)
 
 ### Available Operations
 
@@ -33,7 +33,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 478113,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -42,16 +41,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.CreateNetworkSegmentByIdRequest](../../models/operations/createnetworksegmentbyidrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.CreateNetworkSegmentByIdRequest](../../sdk/models/operations/createnetworksegmentbyidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
 
 
 ### Response
 
-**Promise<[operations.CreateNetworkSegmentByIdResponse](../../models/operations/createnetworksegmentbyidresponse.md)>**
+**Promise<[operations.CreateNetworkSegmentByIdResponse](../../sdk/models/operations/createnetworksegmentbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteNetworkSegmentById
 
@@ -74,7 +77,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 629182,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -83,16 +85,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.DeleteNetworkSegmentByIdRequest](../../models/operations/deletenetworksegmentbyidrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.DeleteNetworkSegmentByIdRequest](../../sdk/models/operations/deletenetworksegmentbyidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
 
 
 ### Response
 
-**Promise<[operations.DeleteNetworkSegmentByIdResponse](../../models/operations/deletenetworksegmentbyidresponse.md)>**
+**Promise<[operations.DeleteNetworkSegmentByIdResponse](../../sdk/models/operations/deletenetworksegmentbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteNetworkSegmentByName
 
@@ -115,7 +121,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -124,16 +129,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.DeleteNetworkSegmentByNameRequest](../../models/operations/deletenetworksegmentbynamerequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.DeleteNetworkSegmentByNameRequest](../../sdk/models/operations/deletenetworksegmentbynamerequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
 
 
 ### Response
 
-**Promise<[operations.DeleteNetworkSegmentByNameResponse](../../models/operations/deletenetworksegmentbynameresponse.md)>**
+**Promise<[operations.DeleteNetworkSegmentByNameResponse](../../sdk/models/operations/deletenetworksegmentbynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findNetworkSegments
 
@@ -154,7 +163,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.networksegments.findNetworkSegments();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -170,8 +178,12 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.FindNetworkSegmentsResponse](../../models/operations/findnetworksegmentsresponse.md)>**
+**Promise<[operations.FindNetworkSegmentsResponse](../../sdk/models/operations/findnetworksegmentsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findNetworkSegmentsById
 
@@ -194,7 +206,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 300997,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -203,16 +214,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.FindNetworkSegmentsByIdRequest](../../models/operations/findnetworksegmentsbyidrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.FindNetworkSegmentsByIdRequest](../../sdk/models/operations/findnetworksegmentsbyidrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
 
 
 ### Response
 
-**Promise<[operations.FindNetworkSegmentsByIdResponse](../../models/operations/findnetworksegmentsbyidresponse.md)>**
+**Promise<[operations.FindNetworkSegmentsByIdResponse](../../sdk/models/operations/findnetworksegmentsbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findNetworkSegmentsByName
 
@@ -235,7 +250,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -244,16 +258,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.FindNetworkSegmentsByNameRequest](../../models/operations/findnetworksegmentsbynamerequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.FindNetworkSegmentsByNameRequest](../../sdk/models/operations/findnetworksegmentsbynamerequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
 
 
 ### Response
 
-**Promise<[operations.FindNetworkSegmentsByNameResponse](../../models/operations/findnetworksegmentsbynameresponse.md)>**
+**Promise<[operations.FindNetworkSegmentsByNameResponse](../../sdk/models/operations/findnetworksegmentsbynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updateNetworkSegmentById
 
@@ -276,7 +294,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 393979,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -285,16 +302,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                | [operations.UpdateNetworkSegmentByIdRequest](../../models/operations/updatenetworksegmentbyidrequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
-| `config`                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                             | :heavy_minus_sign:                                                                                       | Available config options for making requests.                                                            |
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                    | [operations.UpdateNetworkSegmentByIdRequest](../../sdk/models/operations/updatenetworksegmentbyidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
 
 
 ### Response
 
-**Promise<[operations.UpdateNetworkSegmentByIdResponse](../../models/operations/updatenetworksegmentbyidresponse.md)>**
+**Promise<[operations.UpdateNetworkSegmentByIdResponse](../../sdk/models/operations/updatenetworksegmentbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updateNetworkSegmentByName
 
@@ -317,7 +338,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -326,13 +346,17 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.UpdateNetworkSegmentByNameRequest](../../models/operations/updatenetworksegmentbynamerequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.UpdateNetworkSegmentByNameRequest](../../sdk/models/operations/updatenetworksegmentbynamerequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
 
 
 ### Response
 
-**Promise<[operations.UpdateNetworkSegmentByNameResponse](../../models/operations/updatenetworksegmentbynameresponse.md)>**
+**Promise<[operations.UpdateNetworkSegmentByNameResponse](../../sdk/models/operations/updatenetworksegmentbynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

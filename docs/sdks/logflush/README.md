@@ -1,5 +1,5 @@
 # Logflush
-(*.logflush*)
+(*logflush*)
 
 ### Available Operations
 
@@ -30,7 +30,6 @@ import { Log } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
     log: Log.Policy,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -39,16 +38,20 @@ import { Log } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.CreateLogFlushForIntervalRequest](../../models/operations/createlogflushforintervalrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.CreateLogFlushForIntervalRequest](../../sdk/models/operations/createlogflushforintervalrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
 
 
 ### Response
 
-**Promise<[operations.CreateLogFlushForIntervalResponse](../../models/operations/createlogflushforintervalresponse.md)>**
+**Promise<[operations.CreateLogFlushForIntervalResponse](../../sdk/models/operations/createlogflushforintervalresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## createLogFlushWithIdAndInterval
 
@@ -74,7 +77,6 @@ import { PathParamLog } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations
     log: PathParamLog.Policy,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -83,16 +85,20 @@ import { PathParamLog } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.CreateLogFlushWithIdAndIntervalRequest](../../models/operations/createlogflushwithidandintervalrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.CreateLogFlushWithIdAndIntervalRequest](../../sdk/models/operations/createlogflushwithidandintervalrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.CreateLogFlushWithIdAndIntervalResponse](../../models/operations/createlogflushwithidandintervalresponse.md)>**
+**Promise<[operations.CreateLogFlushWithIdAndIntervalResponse](../../sdk/models/operations/createlogflushwithidandintervalresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## logFlush
 
@@ -114,7 +120,6 @@ import { Interval, Log } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
   const res = await sdk.logflush.logFlush(new TextEncoder().encode("0x3bDEA554dC"));
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -125,11 +130,15 @@ import { Interval, Log } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
 | Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `request`                                                    | [Uint8Array](../../models//.md)                              | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| `request`                                                    | [Uint8Array](../../models/.md)                               | :heavy_check_mark:                                           | The request object to use for the request.                   |
 | `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
 
-**Promise<[operations.LogFlushResponse](../../models/operations/logflushresponse.md)>**
+**Promise<[operations.LogFlushResponse](../../sdk/models/operations/logflushresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,5 +1,5 @@
 # Mobiledeviceinvitations
-(*.mobiledeviceinvitations*)
+(*mobiledeviceinvitations*)
 
 ### Available Operations
 
@@ -32,7 +32,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 850185,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -41,16 +40,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [operations.CreateMobileDeviceInvitationsByIdRequest](../../models/operations/createmobiledeviceinvitationsbyidrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [operations.CreateMobileDeviceInvitationsByIdRequest](../../sdk/models/operations/createmobiledeviceinvitationsbyidrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.CreateMobileDeviceInvitationsByIdResponse](../../models/operations/createmobiledeviceinvitationsbyidresponse.md)>**
+**Promise<[operations.CreateMobileDeviceInvitationsByIdResponse](../../sdk/models/operations/createmobiledeviceinvitationsbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## createMobileDeviceInvitationsByInvitation
 
@@ -73,7 +76,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     invitation: 60639,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -82,16 +84,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.CreateMobileDeviceInvitationsByInvitationRequest](../../models/operations/createmobiledeviceinvitationsbyinvitationrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                      | [operations.CreateMobileDeviceInvitationsByInvitationRequest](../../sdk/models/operations/createmobiledeviceinvitationsbyinvitationrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.CreateMobileDeviceInvitationsByInvitationResponse](../../models/operations/createmobiledeviceinvitationsbyinvitationresponse.md)>**
+**Promise<[operations.CreateMobileDeviceInvitationsByInvitationResponse](../../sdk/models/operations/createmobiledeviceinvitationsbyinvitationresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteMobileDeviceInvitationById
 
@@ -114,7 +120,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 377680,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -123,16 +128,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.DeleteMobileDeviceInvitationByIdRequest](../../models/operations/deletemobiledeviceinvitationbyidrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [operations.DeleteMobileDeviceInvitationByIdRequest](../../sdk/models/operations/deletemobiledeviceinvitationbyidrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
 
 
 ### Response
 
-**Promise<[operations.DeleteMobileDeviceInvitationByIdResponse](../../models/operations/deletemobiledeviceinvitationbyidresponse.md)>**
+**Promise<[operations.DeleteMobileDeviceInvitationByIdResponse](../../sdk/models/operations/deletemobiledeviceinvitationbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteMobileDeviceInvitationByInvitation
 
@@ -155,7 +164,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     invitation: 34819,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -164,16 +172,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [operations.DeleteMobileDeviceInvitationByInvitationRequest](../../models/operations/deletemobiledeviceinvitationbyinvitationrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-| `config`                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                             | :heavy_minus_sign:                                                                                                                       | Available config options for making requests.                                                                                            |
+| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                    | [operations.DeleteMobileDeviceInvitationByInvitationRequest](../../sdk/models/operations/deletemobiledeviceinvitationbyinvitationrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
 
 
 ### Response
 
-**Promise<[operations.DeleteMobileDeviceInvitationByInvitationResponse](../../models/operations/deletemobiledeviceinvitationbyinvitationresponse.md)>**
+**Promise<[operations.DeleteMobileDeviceInvitationByInvitationResponse](../../sdk/models/operations/deletemobiledeviceinvitationbyinvitationresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findMobileDeviceInvitations
 
@@ -194,7 +206,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.mobiledeviceinvitations.findMobileDeviceInvitations();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -210,8 +221,12 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.FindMobileDeviceInvitationsResponse](../../models/operations/findmobiledeviceinvitationsresponse.md)>**
+**Promise<[operations.FindMobileDeviceInvitationsResponse](../../sdk/models/operations/findmobiledeviceinvitationsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findMobileDeviceInvitationsById
 
@@ -234,7 +249,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 522350,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -243,16 +257,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.FindMobileDeviceInvitationsByIdRequest](../../models/operations/findmobiledeviceinvitationsbyidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.FindMobileDeviceInvitationsByIdRequest](../../sdk/models/operations/findmobiledeviceinvitationsbyidrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.FindMobileDeviceInvitationsByIdResponse](../../models/operations/findmobiledeviceinvitationsbyidresponse.md)>**
+**Promise<[operations.FindMobileDeviceInvitationsByIdResponse](../../sdk/models/operations/findmobiledeviceinvitationsbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findMobileDeviceInvitationsByInvitation
 
@@ -275,7 +293,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     invitation: 313759,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -284,13 +301,17 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.FindMobileDeviceInvitationsByInvitationRequest](../../models/operations/findmobiledeviceinvitationsbyinvitationrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [operations.FindMobileDeviceInvitationsByInvitationRequest](../../sdk/models/operations/findmobiledeviceinvitationsbyinvitationrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.FindMobileDeviceInvitationsByInvitationResponse](../../models/operations/findmobiledeviceinvitationsbyinvitationresponse.md)>**
+**Promise<[operations.FindMobileDeviceInvitationsByInvitationResponse](../../sdk/models/operations/findmobiledeviceinvitationsbyinvitationresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

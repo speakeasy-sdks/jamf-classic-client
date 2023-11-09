@@ -1,5 +1,5 @@
 # Advancedmobiledevicesearches
-(*.advancedmobiledevicesearches*)
+(*advancedmobiledevicesearches*)
 
 ### Available Operations
 
@@ -33,7 +33,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 827357,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -42,16 +41,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.CreateAdvancedMobileDeviceSearchByIdRequest](../../models/operations/createadvancedmobiledevicesearchbyidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.CreateAdvancedMobileDeviceSearchByIdRequest](../../sdk/models/operations/createadvancedmobiledevicesearchbyidrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.CreateAdvancedMobileDeviceSearchByIdResponse](../../models/operations/createadvancedmobiledevicesearchbyidresponse.md)>**
+**Promise<[operations.CreateAdvancedMobileDeviceSearchByIdResponse](../../sdk/models/operations/createadvancedmobiledevicesearchbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteAdvancedMobileDeviceSearchById
 
@@ -74,7 +77,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 246857,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -83,16 +85,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.DeleteAdvancedMobileDeviceSearchByIdRequest](../../models/operations/deleteadvancedmobiledevicesearchbyidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.DeleteAdvancedMobileDeviceSearchByIdRequest](../../sdk/models/operations/deleteadvancedmobiledevicesearchbyidrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.DeleteAdvancedMobileDeviceSearchByIdResponse](../../models/operations/deleteadvancedmobiledevicesearchbyidresponse.md)>**
+**Promise<[operations.DeleteAdvancedMobileDeviceSearchByIdResponse](../../sdk/models/operations/deleteadvancedmobiledevicesearchbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteAdvancedMobileDeviceSearchByName
 
@@ -115,7 +121,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -124,16 +129,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.DeleteAdvancedMobileDeviceSearchByNameRequest](../../models/operations/deleteadvancedmobiledevicesearchbynamerequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [operations.DeleteAdvancedMobileDeviceSearchByNameRequest](../../sdk/models/operations/deleteadvancedmobiledevicesearchbynamerequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| `config`                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                             | :heavy_minus_sign:                                                                                                                       | Available config options for making requests.                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.DeleteAdvancedMobileDeviceSearchByNameResponse](../../models/operations/deleteadvancedmobiledevicesearchbynameresponse.md)>**
+**Promise<[operations.DeleteAdvancedMobileDeviceSearchByNameResponse](../../sdk/models/operations/deleteadvancedmobiledevicesearchbynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findAdvancedMobileDeviceSearches
 
@@ -154,7 +163,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.advancedmobiledevicesearches.findAdvancedMobileDeviceSearches();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -170,8 +178,12 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.FindAdvancedMobileDeviceSearchesResponse](../../models/operations/findadvancedmobiledevicesearchesresponse.md)>**
+**Promise<[operations.FindAdvancedMobileDeviceSearchesResponse](../../sdk/models/operations/findadvancedmobiledevicesearchesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findAdvancedMobileDeviceSearchesById
 
@@ -194,7 +206,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 507076,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -203,16 +214,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.FindAdvancedMobileDeviceSearchesByIdRequest](../../models/operations/findadvancedmobiledevicesearchesbyidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.FindAdvancedMobileDeviceSearchesByIdRequest](../../sdk/models/operations/findadvancedmobiledevicesearchesbyidrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.FindAdvancedMobileDeviceSearchesByIdResponse](../../models/operations/findadvancedmobiledevicesearchesbyidresponse.md)>**
+**Promise<[operations.FindAdvancedMobileDeviceSearchesByIdResponse](../../sdk/models/operations/findadvancedmobiledevicesearchesbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findMobileDeviceSearchesByName
 
@@ -235,7 +250,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -244,16 +258,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.FindMobileDeviceSearchesByNameRequest](../../models/operations/findmobiledevicesearchesbynamerequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [operations.FindMobileDeviceSearchesByNameRequest](../../sdk/models/operations/findmobiledevicesearchesbynamerequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
 
 
 ### Response
 
-**Promise<[operations.FindMobileDeviceSearchesByNameResponse](../../models/operations/findmobiledevicesearchesbynameresponse.md)>**
+**Promise<[operations.FindMobileDeviceSearchesByNameResponse](../../sdk/models/operations/findmobiledevicesearchesbynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updateAdvancedMobileDeviceSearchById
 
@@ -276,7 +294,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 827690,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -285,16 +302,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.UpdateAdvancedMobileDeviceSearchByIdRequest](../../models/operations/updateadvancedmobiledevicesearchbyidrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.UpdateAdvancedMobileDeviceSearchByIdRequest](../../sdk/models/operations/updateadvancedmobiledevicesearchbyidrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.UpdateAdvancedMobileDeviceSearchByIdResponse](../../models/operations/updateadvancedmobiledevicesearchbyidresponse.md)>**
+**Promise<[operations.UpdateAdvancedMobileDeviceSearchByIdResponse](../../sdk/models/operations/updateadvancedmobiledevicesearchbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updateAdvancedMobileDeviceSearchByName
 
@@ -317,7 +338,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -326,13 +346,17 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.UpdateAdvancedMobileDeviceSearchByNameRequest](../../models/operations/updateadvancedmobiledevicesearchbynamerequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [operations.UpdateAdvancedMobileDeviceSearchByNameRequest](../../sdk/models/operations/updateadvancedmobiledevicesearchbynamerequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| `config`                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                             | :heavy_minus_sign:                                                                                                                       | Available config options for making requests.                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.UpdateAdvancedMobileDeviceSearchByNameResponse](../../models/operations/updateadvancedmobiledevicesearchbynameresponse.md)>**
+**Promise<[operations.UpdateAdvancedMobileDeviceSearchByNameResponse](../../sdk/models/operations/updateadvancedmobiledevicesearchbynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

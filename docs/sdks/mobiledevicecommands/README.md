@@ -1,5 +1,5 @@
 # Mobiledevicecommands
-(*.mobiledevicecommands*)
+(*mobiledevicecommands*)
 
 ### Available Operations
 
@@ -62,7 +62,6 @@ import { Command } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
   const res = await sdk.mobiledevicecommands.createMobileDeviceCommand(new TextEncoder().encode("0xA86D7E0fDE"));
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -73,14 +72,18 @@ import { Command } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
 | Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `request`                                                    | [Uint8Array](../../models//.md)                              | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| `request`                                                    | [Uint8Array](../../models/.md)                               | :heavy_check_mark:                                           | The request object to use for the request.                   |
 | `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
 
-**Promise<[operations.CreateMobileDeviceCommandResponse](../../models/operations/createmobiledevicecommandresponse.md)>**
+**Promise<[operations.CreateMobileDeviceCommandResponse](../../sdk/models/operations/createmobiledevicecommandresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## createMobileDeviceCommandURL
 
@@ -124,7 +127,6 @@ import { CreateMobileDeviceCommandURLPathParamCommand } from "jamf-classic-sdk-n
     idList: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -133,16 +135,20 @@ import { CreateMobileDeviceCommandURLPathParamCommand } from "jamf-classic-sdk-n
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.CreateMobileDeviceCommandURLRequest](../../models/operations/createmobiledevicecommandurlrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.CreateMobileDeviceCommandURLRequest](../../sdk/models/operations/createmobiledevicecommandurlrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
 
 
 ### Response
 
-**Promise<[operations.CreateMobileDeviceCommandURLResponse](../../models/operations/createmobiledevicecommandurlresponse.md)>**
+**Promise<[operations.CreateMobileDeviceCommandURLResponse](../../sdk/models/operations/createmobiledevicecommandurlresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## createMobileDeviceLockCommandURL
 
@@ -166,7 +172,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     lockMessage: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -175,16 +180,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.CreateMobileDeviceLockCommandURLRequest](../../models/operations/createmobiledevicelockcommandurlrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [operations.CreateMobileDeviceLockCommandURLRequest](../../sdk/models/operations/createmobiledevicelockcommandurlrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
 
 
 ### Response
 
-**Promise<[operations.CreateMobileDeviceLockCommandURLResponse](../../models/operations/createmobiledevicelockcommandurlresponse.md)>**
+**Promise<[operations.CreateMobileDeviceLockCommandURLResponse](../../sdk/models/operations/createmobiledevicelockcommandurlresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## createMobileDeviceNameCommandURL
 
@@ -208,7 +217,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     idList: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -217,16 +225,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.CreateMobileDeviceNameCommandURLRequest](../../models/operations/createmobiledevicenamecommandurlrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [operations.CreateMobileDeviceNameCommandURLRequest](../../sdk/models/operations/createmobiledevicenamecommandurlrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
 
 
 ### Response
 
-**Promise<[operations.CreateMobileDeviceNameCommandURLResponse](../../models/operations/createmobiledevicenamecommandurlresponse.md)>**
+**Promise<[operations.CreateMobileDeviceNameCommandURLResponse](../../sdk/models/operations/createmobiledevicenamecommandurlresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## createMobileScheduleOSUpdateCommandURL
 
@@ -251,7 +263,6 @@ import { InstallAction } from "jamf-classic-sdk-nodejs/dist/sdk/models/operation
     installAction: InstallAction.One,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -260,16 +271,20 @@ import { InstallAction } from "jamf-classic-sdk-nodejs/dist/sdk/models/operation
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.CreateMobileScheduleOSUpdateCommandURLRequest](../../models/operations/createmobilescheduleosupdatecommandurlrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [operations.CreateMobileScheduleOSUpdateCommandURLRequest](../../sdk/models/operations/createmobilescheduleosupdatecommandurlrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| `config`                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                             | :heavy_minus_sign:                                                                                                                       | Available config options for making requests.                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.CreateMobileScheduleOSUpdateCommandURLResponse](../../models/operations/createmobilescheduleosupdatecommandurlresponse.md)>**
+**Promise<[operations.CreateMobileScheduleOSUpdateCommandURLResponse](../../sdk/models/operations/createmobilescheduleosupdatecommandurlresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## createMobileScheduleOSUpdateCommandWithProductVersionURL
 
@@ -295,7 +310,6 @@ import { PathParamInstallAction } from "jamf-classic-sdk-nodejs/dist/sdk/models/
     productVersion: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -304,16 +318,20 @@ import { PathParamInstallAction } from "jamf-classic-sdk-nodejs/dist/sdk/models/
 
 ### Parameters
 
-| Parameter                                                                                                                                                                | Type                                                                                                                                                                     | Required                                                                                                                                                                 | Description                                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                | [operations.CreateMobileScheduleOSUpdateCommandWithProductVersionURLRequest](../../models/operations/createmobilescheduleosupdatecommandwithproductversionurlrequest.md) | :heavy_check_mark:                                                                                                                                                       | The request object to use for the request.                                                                                                                               |
-| `config`                                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                             | :heavy_minus_sign:                                                                                                                                                       | Available config options for making requests.                                                                                                                            |
+| Parameter                                                                                                                                                                    | Type                                                                                                                                                                         | Required                                                                                                                                                                     | Description                                                                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                                    | [operations.CreateMobileScheduleOSUpdateCommandWithProductVersionURLRequest](../../sdk/models/operations/createmobilescheduleosupdatecommandwithproductversionurlrequest.md) | :heavy_check_mark:                                                                                                                                                           | The request object to use for the request.                                                                                                                                   |
+| `config`                                                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                 | :heavy_minus_sign:                                                                                                                                                           | Available config options for making requests.                                                                                                                                |
 
 
 ### Response
 
-**Promise<[operations.CreateMobileScheduleOSUpdateCommandWithProductVersionURLResponse](../../models/operations/createmobilescheduleosupdatecommandwithproductversionurlresponse.md)>**
+**Promise<[operations.CreateMobileScheduleOSUpdateCommandWithProductVersionURLResponse](../../sdk/models/operations/createmobilescheduleosupdatecommandwithproductversionurlresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findMobileDeviceCommands
 
@@ -334,7 +352,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.mobiledevicecommands.findMobileDeviceCommands();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -350,8 +367,12 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.FindMobileDeviceCommandsResponse](../../models/operations/findmobiledevicecommandsresponse.md)>**
+**Promise<[operations.FindMobileDeviceCommandsResponse](../../sdk/models/operations/findmobiledevicecommandsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findMobileDeviceCommandsByCommand
 
@@ -374,7 +395,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     command: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -383,16 +403,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [operations.FindMobileDeviceCommandsByCommandRequest](../../models/operations/findmobiledevicecommandsbycommandrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [operations.FindMobileDeviceCommandsByCommandRequest](../../sdk/models/operations/findmobiledevicecommandsbycommandrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.FindMobileDeviceCommandsByCommandResponse](../../models/operations/findmobiledevicecommandsbycommandresponse.md)>**
+**Promise<[operations.FindMobileDeviceCommandsByCommandResponse](../../sdk/models/operations/findmobiledevicecommandsbycommandresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findMobileDeviceCommandsByName
 
@@ -415,7 +439,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -424,16 +447,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.FindMobileDeviceCommandsByNameRequest](../../models/operations/findmobiledevicecommandsbynamerequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [operations.FindMobileDeviceCommandsByNameRequest](../../sdk/models/operations/findmobiledevicecommandsbynamerequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
 
 
 ### Response
 
-**Promise<[operations.FindMobileDeviceCommandsByNameResponse](../../models/operations/findmobiledevicecommandsbynameresponse.md)>**
+**Promise<[operations.FindMobileDeviceCommandsByNameResponse](../../sdk/models/operations/findmobiledevicecommandsbynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findMobileDeviceCommandsByUuid
 
@@ -456,7 +483,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     uuid: "71a67216-a890-416c-90d7-93de2db01d31",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -465,13 +491,17 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.FindMobileDeviceCommandsByUuidRequest](../../models/operations/findmobiledevicecommandsbyuuidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [operations.FindMobileDeviceCommandsByUuidRequest](../../sdk/models/operations/findmobiledevicecommandsbyuuidrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
 
 
 ### Response
 
-**Promise<[operations.FindMobileDeviceCommandsByUuidResponse](../../models/operations/findmobiledevicecommandsbyuuidresponse.md)>**
+**Promise<[operations.FindMobileDeviceCommandsByUuidResponse](../../sdk/models/operations/findmobiledevicecommandsbyuuidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

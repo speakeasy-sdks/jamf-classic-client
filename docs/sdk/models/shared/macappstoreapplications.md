@@ -1,0 +1,10 @@
+# MacAppStoreApplications
+
+
+## Fields
+
+| Field                                                                                   | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `failed`                                                                                | [shared.ComputerHistoryFailed](../../../sdk/models/shared/computerhistoryfailed.md)[]   | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `installed`                                                                             | [shared.Installed](../../../sdk/models/shared/installed.md)[]                           | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `pending`                                                                               | [shared.ComputerHistoryPending](../../../sdk/models/shared/computerhistorypending.md)[] | :heavy_minus_sign:                                                                      | N/A                                                                                     |

@@ -1,5 +1,5 @@
 # Osxconfigurationprofiles
-(*.osxconfigurationprofiles*)
+(*osxconfigurationprofiles*)
 
 ### Available Operations
 
@@ -35,7 +35,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 774029,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -44,16 +43,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [operations.CreateOsxConfigurationProfileByIdRequest](../../models/operations/createosxconfigurationprofilebyidrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [operations.CreateOsxConfigurationProfileByIdRequest](../../sdk/models/operations/createosxconfigurationprofilebyidrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.CreateOsxConfigurationProfileByIdResponse](../../models/operations/createosxconfigurationprofilebyidresponse.md)>**
+**Promise<[operations.CreateOsxConfigurationProfileByIdResponse](../../sdk/models/operations/createosxconfigurationprofilebyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteOsxConfigurationProfileById
 
@@ -76,7 +79,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 564754,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -85,16 +87,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [operations.DeleteOsxConfigurationProfileByIdRequest](../../models/operations/deleteosxconfigurationprofilebyidrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [operations.DeleteOsxConfigurationProfileByIdRequest](../../sdk/models/operations/deleteosxconfigurationprofilebyidrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.DeleteOsxConfigurationProfileByIdResponse](../../models/operations/deleteosxconfigurationprofilebyidresponse.md)>**
+**Promise<[operations.DeleteOsxConfigurationProfileByIdResponse](../../sdk/models/operations/deleteosxconfigurationprofilebyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteOsxConfigurationProfileByName
 
@@ -117,7 +123,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -126,16 +131,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.DeleteOsxConfigurationProfileByNameRequest](../../models/operations/deleteosxconfigurationprofilebynamerequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [operations.DeleteOsxConfigurationProfileByNameRequest](../../sdk/models/operations/deleteosxconfigurationprofilebynamerequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.DeleteOsxConfigurationProfileByNameResponse](../../models/operations/deleteosxconfigurationprofilebynameresponse.md)>**
+**Promise<[operations.DeleteOsxConfigurationProfileByNameResponse](../../sdk/models/operations/deleteosxconfigurationprofilebynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findOsxConfigurationProfiles
 
@@ -156,7 +165,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.osxconfigurationprofiles.findOsxConfigurationProfiles();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -172,8 +180,12 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.FindOsxConfigurationProfilesResponse](../../models/operations/findosxconfigurationprofilesresponse.md)>**
+**Promise<[operations.FindOsxConfigurationProfilesResponse](../../sdk/models/operations/findosxconfigurationprofilesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findOsxConfigurationProfilesById
 
@@ -196,7 +208,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 118508,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -205,16 +216,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.FindOsxConfigurationProfilesByIdRequest](../../models/operations/findosxconfigurationprofilesbyidrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [operations.FindOsxConfigurationProfilesByIdRequest](../../sdk/models/operations/findosxconfigurationprofilesbyidrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
 
 
 ### Response
 
-**Promise<[operations.FindOsxConfigurationProfilesByIdResponse](../../models/operations/findosxconfigurationprofilesbyidresponse.md)>**
+**Promise<[operations.FindOsxConfigurationProfilesByIdResponse](../../sdk/models/operations/findosxconfigurationprofilesbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findOsxConfigurationProfilesByIdSubset
 
@@ -239,7 +254,6 @@ import { FindOsxConfigurationProfilesByIdSubsetPathParamSubset } from "jamf-clas
     subset: FindOsxConfigurationProfilesByIdSubsetPathParamSubset.Scope,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -248,16 +262,20 @@ import { FindOsxConfigurationProfilesByIdSubsetPathParamSubset } from "jamf-clas
 
 ### Parameters
 
-| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                            | [operations.FindOsxConfigurationProfilesByIdSubsetRequest](../../models/operations/findosxconfigurationprofilesbyidsubsetrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
-| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
+| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                | [operations.FindOsxConfigurationProfilesByIdSubsetRequest](../../sdk/models/operations/findosxconfigurationprofilesbyidsubsetrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
+| `config`                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                             | :heavy_minus_sign:                                                                                                                       | Available config options for making requests.                                                                                            |
 
 
 ### Response
 
-**Promise<[operations.FindOsxConfigurationProfilesByIdSubsetResponse](../../models/operations/findosxconfigurationprofilesbyidsubsetresponse.md)>**
+**Promise<[operations.FindOsxConfigurationProfilesByIdSubsetResponse](../../sdk/models/operations/findosxconfigurationprofilesbyidsubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findOsxConfigurationProfilesByName
 
@@ -280,7 +298,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -289,16 +306,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.FindOsxConfigurationProfilesByNameRequest](../../models/operations/findosxconfigurationprofilesbynamerequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [operations.FindOsxConfigurationProfilesByNameRequest](../../sdk/models/operations/findosxconfigurationprofilesbynamerequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.FindOsxConfigurationProfilesByNameResponse](../../models/operations/findosxconfigurationprofilesbynameresponse.md)>**
+**Promise<[operations.FindOsxConfigurationProfilesByNameResponse](../../sdk/models/operations/findosxconfigurationprofilesbynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findOsxConfigurationProfilesByNameSubset
 
@@ -323,7 +344,6 @@ import { FindOsxConfigurationProfilesByNameSubsetPathParamSubset } from "jamf-cl
     subset: FindOsxConfigurationProfilesByNameSubsetPathParamSubset.General,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -332,16 +352,20 @@ import { FindOsxConfigurationProfilesByNameSubsetPathParamSubset } from "jamf-cl
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [operations.FindOsxConfigurationProfilesByNameSubsetRequest](../../models/operations/findosxconfigurationprofilesbynamesubsetrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-| `config`                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                             | :heavy_minus_sign:                                                                                                                       | Available config options for making requests.                                                                                            |
+| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                    | [operations.FindOsxConfigurationProfilesByNameSubsetRequest](../../sdk/models/operations/findosxconfigurationprofilesbynamesubsetrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
 
 
 ### Response
 
-**Promise<[operations.FindOsxConfigurationProfilesByNameSubsetResponse](../../models/operations/findosxconfigurationprofilesbynamesubsetresponse.md)>**
+**Promise<[operations.FindOsxConfigurationProfilesByNameSubsetResponse](../../sdk/models/operations/findosxconfigurationprofilesbynamesubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updateOsxConfigurationProfileById
 
@@ -364,7 +388,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 633054,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -373,16 +396,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [operations.UpdateOsxConfigurationProfileByIdRequest](../../models/operations/updateosxconfigurationprofilebyidrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [operations.UpdateOsxConfigurationProfileByIdRequest](../../sdk/models/operations/updateosxconfigurationprofilebyidrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.UpdateOsxConfigurationProfileByIdResponse](../../models/operations/updateosxconfigurationprofilebyidresponse.md)>**
+**Promise<[operations.UpdateOsxConfigurationProfileByIdResponse](../../sdk/models/operations/updateosxconfigurationprofilebyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updateOsxConfigurationProfileByName
 
@@ -405,7 +432,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -414,13 +440,17 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.UpdateOsxConfigurationProfileByNameRequest](../../models/operations/updateosxconfigurationprofilebynamerequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [operations.UpdateOsxConfigurationProfileByNameRequest](../../sdk/models/operations/updateosxconfigurationprofilebynamerequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.UpdateOsxConfigurationProfileByNameResponse](../../models/operations/updateosxconfigurationprofilebynameresponse.md)>**
+**Promise<[operations.UpdateOsxConfigurationProfileByNameResponse](../../sdk/models/operations/updateosxconfigurationprofilebynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,0 +1,9 @@
+# MobileDeviceCommandPost
+
+
+## Fields
+
+| Field                                                                                                             | Type                                                                                                              | Required                                                                                                          | Description                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| `general`                                                                                                         | [shared.MobileDeviceCommandPostGeneral](../../../sdk/models/shared/mobiledevicecommandpostgeneral.md)             | :heavy_minus_sign:                                                                                                | N/A                                                                                                               |
+| `mobileDevices`                                                                                                   | [shared.MobileDeviceCommandPostMobileDevices](../../../sdk/models/shared/mobiledevicecommandpostmobiledevices.md) | :heavy_minus_sign:                                                                                                | N/A                                                                                                               |

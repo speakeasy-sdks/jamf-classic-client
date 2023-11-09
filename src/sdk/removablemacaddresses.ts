@@ -46,7 +46,11 @@ export class Removablemacaddresses {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/removablemacaddresses/id/{id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/removablemacaddresses/id/{id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -63,7 +67,7 @@ export class Removablemacaddresses {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -105,7 +109,11 @@ export class Removablemacaddresses {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/removablemacaddresses/id/{id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/removablemacaddresses/id/{id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -122,7 +130,7 @@ export class Removablemacaddresses {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -164,7 +172,11 @@ export class Removablemacaddresses {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/removablemacaddresses/name/{name}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/removablemacaddresses/name/{name}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -181,7 +193,7 @@ export class Removablemacaddresses {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -219,7 +231,7 @@ export class Removablemacaddresses {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/removablemacaddresses";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/removablemacaddresses";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -240,7 +252,7 @@ export class Removablemacaddresses {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -302,7 +314,11 @@ export class Removablemacaddresses {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/removablemacaddresses/id/{id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/removablemacaddresses/id/{id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -323,7 +339,7 @@ export class Removablemacaddresses {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -382,7 +398,11 @@ export class Removablemacaddresses {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/removablemacaddresses/name/{name}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/removablemacaddresses/name/{name}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -403,7 +423,7 @@ export class Removablemacaddresses {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -461,7 +481,11 @@ export class Removablemacaddresses {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/removablemacaddresses/id/{id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/removablemacaddresses/id/{id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -478,7 +502,7 @@ export class Removablemacaddresses {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -520,7 +544,11 @@ export class Removablemacaddresses {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/removablemacaddresses/name/{name}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/removablemacaddresses/name/{name}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -537,7 +565,7 @@ export class Removablemacaddresses {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",

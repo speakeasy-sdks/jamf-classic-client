@@ -1,9 +1,0 @@
-# FindMacappsByIdSubsetRequest
-
-
-## Fields
-
-| Field                                                                                                              | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `id`                                                                                                               | *number*                                                                                                           | :heavy_check_mark:                                                                                                 | ID to filter by                                                                                                    |
-| `subset`                                                                                                           | [operations.FindMacappsByIdSubsetPathParamSubset](../../models/operations/findmacappsbyidsubsetpathparamsubset.md) | :heavy_check_mark:                                                                                                 | Subset to filter by                                                                                                |

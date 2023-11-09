@@ -1,0 +1,12 @@
+# Links
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `computers`                                                                   | [shared.UserComputers](../../../sdk/models/shared/usercomputers.md)           | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `mobileDevices`                                                               | [shared.UserMobileDevices](../../../sdk/models/shared/usermobiledevices.md)   | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `peripherals`                                                                 | [shared.UserPeripherals](../../../sdk/models/shared/userperipherals.md)       | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `totalVppCodeCount`                                                           | *number*                                                                      | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `vppAssignments`                                                              | [shared.UserVppAssignments](../../../sdk/models/shared/uservppassignments.md) | :heavy_minus_sign:                                                            | N/A                                                                           |

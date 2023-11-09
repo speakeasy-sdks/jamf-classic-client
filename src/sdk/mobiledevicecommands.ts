@@ -78,7 +78,7 @@ export class Mobiledevicecommands {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/mobiledevicecommands/command";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/mobiledevicecommands/command";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -110,7 +110,7 @@ export class Mobiledevicecommands {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -175,7 +175,7 @@ export class Mobiledevicecommands {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledevicecommands/command/{command}/id/{id_list}",
             req
@@ -196,7 +196,7 @@ export class Mobiledevicecommands {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -238,7 +238,7 @@ export class Mobiledevicecommands {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledevicecommands/command/DeviceLock/{lock_message}/id/{id_list}",
             req
@@ -259,7 +259,7 @@ export class Mobiledevicecommands {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -301,7 +301,7 @@ export class Mobiledevicecommands {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledevicecommands/command/DeviceName/{device_name}/id/{id_list}",
             req
@@ -322,7 +322,7 @@ export class Mobiledevicecommands {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -364,7 +364,7 @@ export class Mobiledevicecommands {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledevicecommands/command/ScheduleOSUpdate/{install_action}/id/{id_list}",
             req
@@ -385,7 +385,7 @@ export class Mobiledevicecommands {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -429,7 +429,7 @@ export class Mobiledevicecommands {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledevicecommands/command/ScheduleOSUpdate/{install_action}/{product_version}/id/{id_list}",
             req
@@ -450,7 +450,7 @@ export class Mobiledevicecommands {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -488,7 +488,7 @@ export class Mobiledevicecommands {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/mobiledevicecommands";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/mobiledevicecommands";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -509,7 +509,7 @@ export class Mobiledevicecommands {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -571,7 +571,7 @@ export class Mobiledevicecommands {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledevicecommands/command/{command}",
             req
@@ -596,7 +596,7 @@ export class Mobiledevicecommands {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -655,7 +655,11 @@ export class Mobiledevicecommands {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/mobiledevicecommands/name/{name}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/mobiledevicecommands/name/{name}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -676,7 +680,7 @@ export class Mobiledevicecommands {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -735,7 +739,11 @@ export class Mobiledevicecommands {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/mobiledevicecommands/uuid/{uuid}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/mobiledevicecommands/uuid/{uuid}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -756,7 +764,7 @@ export class Mobiledevicecommands {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",

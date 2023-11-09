@@ -1,5 +1,5 @@
 # Computerhistory
-(*.computerhistory*)
+(*computerhistory*)
 
 ### Available Operations
 
@@ -35,7 +35,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 814675,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -44,16 +43,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
-| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                              | [operations.FindComputerHistoryByIdRequest](../../models/operations/findcomputerhistorybyidrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
-| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                  | [operations.FindComputerHistoryByIdRequest](../../sdk/models/operations/findcomputerhistorybyidrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHistoryByIdResponse](../../models/operations/findcomputerhistorybyidresponse.md)>**
+**Promise<[operations.FindComputerHistoryByIdResponse](../../sdk/models/operations/findcomputerhistorybyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHistoryByIdSubset
 
@@ -78,7 +81,6 @@ import { FindComputerHistoryByIdSubsetPathParamSubset } from "jamf-classic-sdk-n
     subset: FindComputerHistoryByIdSubsetPathParamSubset.CasperImagingLogs,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -87,16 +89,20 @@ import { FindComputerHistoryByIdSubsetPathParamSubset } from "jamf-classic-sdk-n
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.FindComputerHistoryByIdSubsetRequest](../../models/operations/findcomputerhistorybyidsubsetrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [operations.FindComputerHistoryByIdSubsetRequest](../../sdk/models/operations/findcomputerhistorybyidsubsetrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHistoryByIdSubsetResponse](../../models/operations/findcomputerhistorybyidsubsetresponse.md)>**
+**Promise<[operations.FindComputerHistoryByIdSubsetResponse](../../sdk/models/operations/findcomputerhistorybyidsubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHistoryByMacAddress
 
@@ -119,7 +125,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     macaddress: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -128,16 +133,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.FindComputerHistoryByMacAddressRequest](../../models/operations/findcomputerhistorybymacaddressrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.FindComputerHistoryByMacAddressRequest](../../sdk/models/operations/findcomputerhistorybymacaddressrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHistoryByMacAddressResponse](../../models/operations/findcomputerhistorybymacaddressresponse.md)>**
+**Promise<[operations.FindComputerHistoryByMacAddressResponse](../../sdk/models/operations/findcomputerhistorybymacaddressresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHistoryByMacAddressSubset
 
@@ -162,7 +171,6 @@ import { FindComputerHistoryByMacAddressSubsetPathParamSubset } from "jamf-class
     subset: FindComputerHistoryByMacAddressSubsetPathParamSubset.Commands,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -171,16 +179,20 @@ import { FindComputerHistoryByMacAddressSubsetPathParamSubset } from "jamf-class
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [operations.FindComputerHistoryByMacAddressSubsetRequest](../../models/operations/findcomputerhistorybymacaddresssubsetrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [operations.FindComputerHistoryByMacAddressSubsetRequest](../../sdk/models/operations/findcomputerhistorybymacaddresssubsetrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHistoryByMacAddressSubsetResponse](../../models/operations/findcomputerhistorybymacaddresssubsetresponse.md)>**
+**Promise<[operations.FindComputerHistoryByMacAddressSubsetResponse](../../sdk/models/operations/findcomputerhistorybymacaddresssubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHistoryByName
 
@@ -203,7 +215,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -212,16 +223,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.FindComputerHistoryByNameRequest](../../models/operations/findcomputerhistorybynamerequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.FindComputerHistoryByNameRequest](../../sdk/models/operations/findcomputerhistorybynamerequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHistoryByNameResponse](../../models/operations/findcomputerhistorybynameresponse.md)>**
+**Promise<[operations.FindComputerHistoryByNameResponse](../../sdk/models/operations/findcomputerhistorybynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHistoryByNameSubset
 
@@ -246,7 +261,6 @@ import { FindComputerHistoryByNameSubsetPathParamSubset } from "jamf-classic-sdk
     subset: FindComputerHistoryByNameSubsetPathParamSubset.UserLocation,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -255,16 +269,20 @@ import { FindComputerHistoryByNameSubsetPathParamSubset } from "jamf-classic-sdk
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.FindComputerHistoryByNameSubsetRequest](../../models/operations/findcomputerhistorybynamesubsetrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.FindComputerHistoryByNameSubsetRequest](../../sdk/models/operations/findcomputerhistorybynamesubsetrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHistoryByNameSubsetResponse](../../models/operations/findcomputerhistorybynamesubsetresponse.md)>**
+**Promise<[operations.FindComputerHistoryByNameSubsetResponse](../../sdk/models/operations/findcomputerhistorybynamesubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHistoryBySerialNumber
 
@@ -287,7 +305,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     serialnumber: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -296,16 +313,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                  | [operations.FindComputerHistoryBySerialNumberRequest](../../models/operations/findcomputerhistorybyserialnumberrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                      | [operations.FindComputerHistoryBySerialNumberRequest](../../sdk/models/operations/findcomputerhistorybyserialnumberrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHistoryBySerialNumberResponse](../../models/operations/findcomputerhistorybyserialnumberresponse.md)>**
+**Promise<[operations.FindComputerHistoryBySerialNumberResponse](../../sdk/models/operations/findcomputerhistorybyserialnumberresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHistoryBySerialNumberSubset
 
@@ -330,7 +351,6 @@ import { FindComputerHistoryBySerialNumberSubsetPathParamSubset } from "jamf-cla
     subset: FindComputerHistoryBySerialNumberSubsetPathParamSubset.Commands,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -339,16 +359,20 @@ import { FindComputerHistoryBySerialNumberSubsetPathParamSubset } from "jamf-cla
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.FindComputerHistoryBySerialNumberSubsetRequest](../../models/operations/findcomputerhistorybyserialnumbersubsetrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [operations.FindComputerHistoryBySerialNumberSubsetRequest](../../sdk/models/operations/findcomputerhistorybyserialnumbersubsetrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHistoryBySerialNumberSubsetResponse](../../models/operations/findcomputerhistorybyserialnumbersubsetresponse.md)>**
+**Promise<[operations.FindComputerHistoryBySerialNumberSubsetResponse](../../sdk/models/operations/findcomputerhistorybyserialnumbersubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHistoryByUDID
 
@@ -371,7 +395,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     udid: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -380,16 +403,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                  | [operations.FindComputerHistoryByUDIDRequest](../../models/operations/findcomputerhistorybyudidrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
-| `config`                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                               | :heavy_minus_sign:                                                                                         | Available config options for making requests.                                                              |
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                      | [operations.FindComputerHistoryByUDIDRequest](../../sdk/models/operations/findcomputerhistorybyudidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHistoryByUDIDResponse](../../models/operations/findcomputerhistorybyudidresponse.md)>**
+**Promise<[operations.FindComputerHistoryByUDIDResponse](../../sdk/models/operations/findcomputerhistorybyudidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHistoryByUDIDSubset
 
@@ -414,7 +441,6 @@ import { FindComputerHistoryByUDIDSubsetPathParamSubset } from "jamf-classic-sdk
     udid: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -423,13 +449,17 @@ import { FindComputerHistoryByUDIDSubsetPathParamSubset } from "jamf-classic-sdk
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.FindComputerHistoryByUDIDSubsetRequest](../../models/operations/findcomputerhistorybyudidsubsetrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.FindComputerHistoryByUDIDSubsetRequest](../../sdk/models/operations/findcomputerhistorybyudidsubsetrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHistoryByUDIDSubsetResponse](../../models/operations/findcomputerhistorybyudidsubsetresponse.md)>**
+**Promise<[operations.FindComputerHistoryByUDIDSubsetResponse](../../sdk/models/operations/findcomputerhistorybyudidsubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -51,7 +51,11 @@ export class Osxconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/osxconfigurationprofiles/id/{id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/osxconfigurationprofiles/id/{id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -68,7 +72,7 @@ export class Osxconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -110,7 +114,11 @@ export class Osxconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/osxconfigurationprofiles/id/{id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/osxconfigurationprofiles/id/{id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -127,7 +135,7 @@ export class Osxconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -169,7 +177,7 @@ export class Osxconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/osxconfigurationprofiles/name/{name}",
             req
@@ -190,7 +198,7 @@ export class Osxconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -228,7 +236,7 @@ export class Osxconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/osxconfigurationprofiles";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/osxconfigurationprofiles";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -249,7 +257,7 @@ export class Osxconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -311,7 +319,11 @@ export class Osxconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/osxconfigurationprofiles/id/{id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/osxconfigurationprofiles/id/{id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -332,7 +344,7 @@ export class Osxconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -393,7 +405,7 @@ export class Osxconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/osxconfigurationprofiles/id/{id}/subset/{subset}",
             req
@@ -414,7 +426,7 @@ export class Osxconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -457,7 +469,7 @@ export class Osxconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/osxconfigurationprofiles/name/{name}",
             req
@@ -482,7 +494,7 @@ export class Osxconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -544,7 +556,7 @@ export class Osxconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/osxconfigurationprofiles/name/{name}/subset/{subset}",
             req
@@ -569,7 +581,7 @@ export class Osxconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -627,7 +639,11 @@ export class Osxconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/osxconfigurationprofiles/id/{id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/osxconfigurationprofiles/id/{id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -644,7 +660,7 @@ export class Osxconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -686,7 +702,7 @@ export class Osxconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/osxconfigurationprofiles/name/{name}",
             req
@@ -707,7 +723,7 @@ export class Osxconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",

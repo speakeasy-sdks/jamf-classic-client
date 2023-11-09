@@ -56,7 +56,7 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceenrollmentprofiles/id/{id}",
             req
@@ -77,7 +77,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -119,7 +119,7 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceenrollmentprofiles/id/{id}",
             req
@@ -140,7 +140,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -182,7 +182,7 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceenrollmentprofiles/invitation/{invitation}",
             req
@@ -203,7 +203,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -245,7 +245,7 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceenrollmentprofiles/name/{name}",
             req
@@ -266,7 +266,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -304,7 +304,7 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/mobiledeviceenrollmentprofiles";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/mobiledeviceenrollmentprofiles";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -325,7 +325,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -388,7 +388,7 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceenrollmentprofiles/id/{id}",
             req
@@ -413,7 +413,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -474,7 +474,7 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceenrollmentprofiles/id/{id}/subset/{subset}",
             req
@@ -495,7 +495,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -538,7 +538,7 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceenrollmentprofiles/invitation/{invitation}",
             req
@@ -563,7 +563,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -622,7 +622,7 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceenrollmentprofiles/name/{name}",
             req
@@ -647,7 +647,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -709,7 +709,7 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceenrollmentprofiles/name/{name}/subset/{subset}",
             req
@@ -734,7 +734,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -792,7 +792,7 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceenrollmentprofiles/id/{id}",
             req
@@ -813,7 +813,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -855,7 +855,7 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceenrollmentprofiles/invitation/{invitation}",
             req
@@ -876,7 +876,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -918,7 +918,7 @@ export class Mobiledeviceenrollmentprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceenrollmentprofiles/name/{name}",
             req
@@ -939,7 +939,7 @@ export class Mobiledeviceenrollmentprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",

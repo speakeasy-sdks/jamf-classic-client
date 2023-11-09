@@ -1,5 +1,5 @@
 # Computercommands
-(*.computercommands*)
+(*computercommands*)
 
 ### Available Operations
 
@@ -47,7 +47,6 @@ import { Command } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
     command: Command.DeleteUser,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -56,16 +55,20 @@ import { Command } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
 ### Parameters
 
-| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                            | [operations.CreateComputerCommandByCommandRequest](../../models/operations/createcomputercommandbycommandrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
-| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                | [operations.CreateComputerCommandByCommandRequest](../../sdk/models/operations/createcomputercommandbycommandrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
 
 
 ### Response
 
-**Promise<[operations.CreateComputerCommandByCommandResponse](../../models/operations/createcomputercommandbycommandresponse.md)>**
+**Promise<[operations.CreateComputerCommandByCommandResponse](../../sdk/models/operations/createcomputercommandbycommandresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## createComputerCommandByCommandAndAction
 
@@ -91,7 +94,6 @@ import { Action, PathParamCommand } from "jamf-classic-sdk-nodejs/dist/sdk/model
     id: "<ID>",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -100,16 +102,20 @@ import { Action, PathParamCommand } from "jamf-classic-sdk-nodejs/dist/sdk/model
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.CreateComputerCommandByCommandAndActionRequest](../../models/operations/createcomputercommandbycommandandactionrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [operations.CreateComputerCommandByCommandAndActionRequest](../../sdk/models/operations/createcomputercommandbycommandandactionrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.CreateComputerCommandByCommandAndActionResponse](../../models/operations/createcomputercommandbycommandandactionresponse.md)>**
+**Promise<[operations.CreateComputerCommandByCommandAndActionResponse](../../sdk/models/operations/createcomputercommandbycommandandactionresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## createComputerCommandByCommandAndId
 
@@ -134,7 +140,6 @@ import { CreateComputerCommandByCommandAndIdPathParamCommand } from "jamf-classi
     id: "<ID>",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -143,16 +148,20 @@ import { CreateComputerCommandByCommandAndIdPathParamCommand } from "jamf-classi
 
 ### Parameters
 
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                      | [operations.CreateComputerCommandByCommandAndIdRequest](../../models/operations/createcomputercommandbycommandandidrequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-| `config`                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                   | :heavy_minus_sign:                                                                                                             | Available config options for making requests.                                                                                  |
+| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                          | [operations.CreateComputerCommandByCommandAndIdRequest](../../sdk/models/operations/createcomputercommandbycommandandidrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
+| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.CreateComputerCommandByCommandAndIdResponse](../../models/operations/createcomputercommandbycommandandidresponse.md)>**
+**Promise<[operations.CreateComputerCommandByCommandAndIdResponse](../../sdk/models/operations/createcomputercommandbycommandandidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## createComputerCommandByCommandIdAndPasscode
 
@@ -178,7 +187,6 @@ import { CreateComputerCommandByCommandIdAndPasscodePathParamCommand } from "jam
     passcode: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -187,16 +195,20 @@ import { CreateComputerCommandByCommandIdAndPasscodePathParamCommand } from "jam
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [operations.CreateComputerCommandByCommandIdAndPasscodeRequest](../../models/operations/createcomputercommandbycommandidandpasscoderequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
+| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                          | [operations.CreateComputerCommandByCommandIdAndPasscodeRequest](../../sdk/models/operations/createcomputercommandbycommandidandpasscoderequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.CreateComputerCommandByCommandIdAndPasscodeResponse](../../models/operations/createcomputercommandbycommandidandpasscoderesponse.md)>**
+**Promise<[operations.CreateComputerCommandByCommandIdAndPasscodeResponse](../../sdk/models/operations/createcomputercommandbycommandidandpasscoderesponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerCommands
 
@@ -217,7 +229,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.computercommands.findComputerCommands();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -233,8 +244,12 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.FindComputerCommandsResponse](../../models/operations/findcomputercommandsresponse.md)>**
+**Promise<[operations.FindComputerCommandsResponse](../../sdk/models/operations/findcomputercommandsresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerCommandsByName
 
@@ -257,7 +272,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -266,16 +280,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.FindComputerCommandsByNameRequest](../../models/operations/findcomputercommandsbynamerequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.FindComputerCommandsByNameRequest](../../sdk/models/operations/findcomputercommandsbynamerequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
 
 
 ### Response
 
-**Promise<[operations.FindComputerCommandsByNameResponse](../../models/operations/findcomputercommandsbynameresponse.md)>**
+**Promise<[operations.FindComputerCommandsByNameResponse](../../sdk/models/operations/findcomputercommandsbynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerCommandsByUuid
 
@@ -298,7 +316,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     uuid: "d70e80ba-6e24-40b9-95fb-5378b5fc34fb",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -307,13 +324,17 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.FindComputerCommandsByUuidRequest](../../models/operations/findcomputercommandsbyuuidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.FindComputerCommandsByUuidRequest](../../sdk/models/operations/findcomputercommandsbyuuidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
 
 
 ### Response
 
-**Promise<[operations.FindComputerCommandsByUuidResponse](../../models/operations/findcomputercommandsbyuuidresponse.md)>**
+**Promise<[operations.FindComputerCommandsByUuidResponse](../../sdk/models/operations/findcomputercommandsbyuuidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,5 +1,5 @@
 # Activationcode
-(*.activationcode*)
+(*activationcode*)
 
 ### Available Operations
 
@@ -25,7 +25,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.activationcode.findactivationcode();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -41,8 +40,12 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.FindactivationcodeResponse](../../models/operations/findactivationcoderesponse.md)>**
+**Promise<[operations.FindactivationcodeResponse](../../sdk/models/operations/findactivationcoderesponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updateActivationCode
 
@@ -63,7 +66,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.activationcode.updateActivationCode(new TextEncoder().encode("0xBa4e6ed1D3"));
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -74,11 +76,15 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 | Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `request`                                                    | [Uint8Array](../../models//.md)                              | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| `request`                                                    | [Uint8Array](../../models/.md)                               | :heavy_check_mark:                                           | The request object to use for the request.                   |
 | `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
 
-**Promise<[operations.UpdateActivationCodeResponse](../../models/operations/updateactivationcoderesponse.md)>**
+**Promise<[operations.UpdateActivationCodeResponse](../../sdk/models/operations/updateactivationcoderesponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

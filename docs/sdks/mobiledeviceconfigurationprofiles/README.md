@@ -1,5 +1,5 @@
 # Mobiledeviceconfigurationprofiles
-(*.mobiledeviceconfigurationprofiles*)
+(*mobiledeviceconfigurationprofiles*)
 
 ### Available Operations
 
@@ -35,7 +35,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 357736,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -44,16 +43,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.CreateMobileDeviceConfigurationProfileByIdRequest](../../models/operations/createmobiledeviceconfigurationprofilebyidrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.CreateMobileDeviceConfigurationProfileByIdRequest](../../sdk/models/operations/createmobiledeviceconfigurationprofilebyidrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.CreateMobileDeviceConfigurationProfileByIdResponse](../../models/operations/createmobiledeviceconfigurationprofilebyidresponse.md)>**
+**Promise<[operations.CreateMobileDeviceConfigurationProfileByIdResponse](../../sdk/models/operations/createmobiledeviceconfigurationprofilebyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteMobileDeviceConfigurationProfileById
 
@@ -76,7 +79,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 401787,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -85,16 +87,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.DeleteMobileDeviceConfigurationProfileByIdRequest](../../models/operations/deletemobiledeviceconfigurationprofilebyidrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.DeleteMobileDeviceConfigurationProfileByIdRequest](../../sdk/models/operations/deletemobiledeviceconfigurationprofilebyidrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.DeleteMobileDeviceConfigurationProfileByIdResponse](../../models/operations/deletemobiledeviceconfigurationprofilebyidresponse.md)>**
+**Promise<[operations.DeleteMobileDeviceConfigurationProfileByIdResponse](../../sdk/models/operations/deletemobiledeviceconfigurationprofilebyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deleteMobileDeviceConfigurationProfileByName
 
@@ -117,7 +123,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -126,16 +131,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.DeleteMobileDeviceConfigurationProfileByNameRequest](../../models/operations/deletemobiledeviceconfigurationprofilebynamerequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                            | [operations.DeleteMobileDeviceConfigurationProfileByNameRequest](../../sdk/models/operations/deletemobiledeviceconfigurationprofilebynamerequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
+| `config`                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                         | :heavy_minus_sign:                                                                                                                                   | Available config options for making requests.                                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.DeleteMobileDeviceConfigurationProfileByNameResponse](../../models/operations/deletemobiledeviceconfigurationprofilebynameresponse.md)>**
+**Promise<[operations.DeleteMobileDeviceConfigurationProfileByNameResponse](../../sdk/models/operations/deletemobiledeviceconfigurationprofilebynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findMobileDeviceConfigurationProfiles
 
@@ -156,7 +165,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfiles();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -172,8 +180,12 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.FindMobileDeviceConfigurationProfilesResponse](../../models/operations/findmobiledeviceconfigurationprofilesresponse.md)>**
+**Promise<[operations.FindMobileDeviceConfigurationProfilesResponse](../../sdk/models/operations/findmobiledeviceconfigurationprofilesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findMobileDeviceConfigurationProfilesById
 
@@ -196,7 +208,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 994932,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -205,16 +216,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.FindMobileDeviceConfigurationProfilesByIdRequest](../../models/operations/findmobiledeviceconfigurationprofilesbyidrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                      | [operations.FindMobileDeviceConfigurationProfilesByIdRequest](../../sdk/models/operations/findmobiledeviceconfigurationprofilesbyidrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.FindMobileDeviceConfigurationProfilesByIdResponse](../../models/operations/findmobiledeviceconfigurationprofilesbyidresponse.md)>**
+**Promise<[operations.FindMobileDeviceConfigurationProfilesByIdResponse](../../sdk/models/operations/findmobiledeviceconfigurationprofilesbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findMobileDeviceConfigurationProfilesByIdSubset
 
@@ -239,7 +254,6 @@ import { FindMobileDeviceConfigurationProfilesByIdSubsetPathParamSubset } from "
     subset: FindMobileDeviceConfigurationProfilesByIdSubsetPathParamSubset.Scope,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -248,16 +262,20 @@ import { FindMobileDeviceConfigurationProfilesByIdSubsetPathParamSubset } from "
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [operations.FindMobileDeviceConfigurationProfilesByIdSubsetRequest](../../models/operations/findmobiledeviceconfigurationprofilesbyidsubsetrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
+| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                  | [operations.FindMobileDeviceConfigurationProfilesByIdSubsetRequest](../../sdk/models/operations/findmobiledeviceconfigurationprofilesbyidsubsetrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.FindMobileDeviceConfigurationProfilesByIdSubsetResponse](../../models/operations/findmobiledeviceconfigurationprofilesbyidsubsetresponse.md)>**
+**Promise<[operations.FindMobileDeviceConfigurationProfilesByIdSubsetResponse](../../sdk/models/operations/findmobiledeviceconfigurationprofilesbyidsubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findMobileDeviceConfigurationProfilesByName
 
@@ -280,7 +298,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -289,16 +306,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [operations.FindMobileDeviceConfigurationProfilesByNameRequest](../../models/operations/findmobiledeviceconfigurationprofilesbynamerequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
+| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                          | [operations.FindMobileDeviceConfigurationProfilesByNameRequest](../../sdk/models/operations/findmobiledeviceconfigurationprofilesbynamerequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.FindMobileDeviceConfigurationProfilesByNameResponse](../../models/operations/findmobiledeviceconfigurationprofilesbynameresponse.md)>**
+**Promise<[operations.FindMobileDeviceConfigurationProfilesByNameResponse](../../sdk/models/operations/findmobiledeviceconfigurationprofilesbynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findMobileDeviceConfigurationProfilesByNameSubset
 
@@ -323,7 +344,6 @@ import { FindMobileDeviceConfigurationProfilesByNameSubsetPathParamSubset } from
     subset: FindMobileDeviceConfigurationProfilesByNameSubsetPathParamSubset.General,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -332,16 +352,20 @@ import { FindMobileDeviceConfigurationProfilesByNameSubsetPathParamSubset } from
 
 ### Parameters
 
-| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                  | [operations.FindMobileDeviceConfigurationProfilesByNameSubsetRequest](../../models/operations/findmobiledeviceconfigurationprofilesbynamesubsetrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
-| `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
+| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                      | [operations.FindMobileDeviceConfigurationProfilesByNameSubsetRequest](../../sdk/models/operations/findmobiledeviceconfigurationprofilesbynamesubsetrequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
+| `config`                                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                   | :heavy_minus_sign:                                                                                                                                             | Available config options for making requests.                                                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.FindMobileDeviceConfigurationProfilesByNameSubsetResponse](../../models/operations/findmobiledeviceconfigurationprofilesbynamesubsetresponse.md)>**
+**Promise<[operations.FindMobileDeviceConfigurationProfilesByNameSubsetResponse](../../sdk/models/operations/findmobiledeviceconfigurationprofilesbynamesubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updateMobileDeviceConfigurationProfileById
 
@@ -364,7 +388,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 879870,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -373,16 +396,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.UpdateMobileDeviceConfigurationProfileByIdRequest](../../models/operations/updatemobiledeviceconfigurationprofilebyidrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.UpdateMobileDeviceConfigurationProfileByIdRequest](../../sdk/models/operations/updatemobiledeviceconfigurationprofilebyidrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.UpdateMobileDeviceConfigurationProfileByIdResponse](../../models/operations/updatemobiledeviceconfigurationprofilebyidresponse.md)>**
+**Promise<[operations.UpdateMobileDeviceConfigurationProfileByIdResponse](../../sdk/models/operations/updatemobiledeviceconfigurationprofilebyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updateMobileDeviceConfigurationProfileByName
 
@@ -405,7 +432,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -414,13 +440,17 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.UpdateMobileDeviceConfigurationProfileByNameRequest](../../models/operations/updatemobiledeviceconfigurationprofilebynamerequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                            | [operations.UpdateMobileDeviceConfigurationProfileByNameRequest](../../sdk/models/operations/updatemobiledeviceconfigurationprofilebynamerequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
+| `config`                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                         | :heavy_minus_sign:                                                                                                                                   | Available config options for making requests.                                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.UpdateMobileDeviceConfigurationProfileByNameResponse](../../models/operations/updatemobiledeviceconfigurationprofilebynameresponse.md)>**
+**Promise<[operations.UpdateMobileDeviceConfigurationProfileByNameResponse](../../sdk/models/operations/updatemobiledeviceconfigurationprofilebynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

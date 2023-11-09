@@ -1,5 +1,5 @@
 # Computermanagement
-(*.computermanagement*)
+(*computermanagement*)
 
 ### Available Operations
 
@@ -50,7 +50,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 800419,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -59,16 +58,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                    | [operations.FindComputerManagementByIdRequest](../../models/operations/findcomputermanagementbyidrequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
-| `config`                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                 | :heavy_minus_sign:                                                                                           | Available config options for making requests.                                                                |
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                        | [operations.FindComputerManagementByIdRequest](../../sdk/models/operations/findcomputermanagementbyidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByIdResponse](../../models/operations/findcomputermanagementbyidresponse.md)>**
+**Promise<[operations.FindComputerManagementByIdResponse](../../sdk/models/operations/findcomputermanagementbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByIdPatchFilter
 
@@ -92,7 +95,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 596013,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -101,16 +103,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                          | Type                                                                                                                               | Required                                                                                                                           | Description                                                                                                                        |
-| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                          | [operations.FindComputerManagementByIdPatchFilterRequest](../../models/operations/findcomputermanagementbyidpatchfilterrequest.md) | :heavy_check_mark:                                                                                                                 | The request object to use for the request.                                                                                         |
-| `config`                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                       | :heavy_minus_sign:                                                                                                                 | Available config options for making requests.                                                                                      |
+| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                              | [operations.FindComputerManagementByIdPatchFilterRequest](../../sdk/models/operations/findcomputermanagementbyidpatchfilterrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
+| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByIdPatchFilterResponse](../../models/operations/findcomputermanagementbyidpatchfilterresponse.md)>**
+**Promise<[operations.FindComputerManagementByIdPatchFilterResponse](../../sdk/models/operations/findcomputermanagementbyidpatchfilterresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByIdSubset
 
@@ -135,7 +141,6 @@ import { FindComputerManagementByIdSubsetPathParamSubset } from "jamf-classic-sd
     subset: FindComputerManagementByIdSubsetPathParamSubset.ManagedPreferenceProfiles,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -144,16 +149,20 @@ import { FindComputerManagementByIdSubsetPathParamSubset } from "jamf-classic-sd
 
 ### Parameters
 
-| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                | [operations.FindComputerManagementByIdSubsetRequest](../../models/operations/findcomputermanagementbyidsubsetrequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
-| `config`                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                             | :heavy_minus_sign:                                                                                                       | Available config options for making requests.                                                                            |
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                    | [operations.FindComputerManagementByIdSubsetRequest](../../sdk/models/operations/findcomputermanagementbyidsubsetrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByIdSubsetResponse](../../models/operations/findcomputermanagementbyidsubsetresponse.md)>**
+**Promise<[operations.FindComputerManagementByIdSubsetResponse](../../sdk/models/operations/findcomputermanagementbyidsubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByIdUsername
 
@@ -177,7 +186,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     username: "Kolby_Hirthe16",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -186,16 +194,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.FindComputerManagementByIdUsernameRequest](../../models/operations/findcomputermanagementbyidusernamerequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [operations.FindComputerManagementByIdUsernameRequest](../../sdk/models/operations/findcomputermanagementbyidusernamerequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByIdUsernameResponse](../../models/operations/findcomputermanagementbyidusernameresponse.md)>**
+**Promise<[operations.FindComputerManagementByIdUsernameResponse](../../sdk/models/operations/findcomputermanagementbyidusernameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByIdUsernameSubset
 
@@ -221,7 +233,6 @@ import { FindComputerManagementByIdUsernameSubsetPathParamSubset } from "jamf-cl
     username: "Mckenzie54",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -230,16 +241,20 @@ import { FindComputerManagementByIdUsernameSubsetPathParamSubset } from "jamf-cl
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [operations.FindComputerManagementByIdUsernameSubsetRequest](../../models/operations/findcomputermanagementbyidusernamesubsetrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-| `config`                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                             | :heavy_minus_sign:                                                                                                                       | Available config options for making requests.                                                                                            |
+| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                    | [operations.FindComputerManagementByIdUsernameSubsetRequest](../../sdk/models/operations/findcomputermanagementbyidusernamesubsetrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByIdUsernameSubsetResponse](../../models/operations/findcomputermanagementbyidusernamesubsetresponse.md)>**
+**Promise<[operations.FindComputerManagementByIdUsernameSubsetResponse](../../sdk/models/operations/findcomputermanagementbyidusernamesubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByMacAddress
 
@@ -262,7 +277,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     macaddress: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -271,16 +285,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.FindComputerManagementByMacAddressRequest](../../models/operations/findcomputermanagementbymacaddressrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [operations.FindComputerManagementByMacAddressRequest](../../sdk/models/operations/findcomputermanagementbymacaddressrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByMacAddressResponse](../../models/operations/findcomputermanagementbymacaddressresponse.md)>**
+**Promise<[operations.FindComputerManagementByMacAddressResponse](../../sdk/models/operations/findcomputermanagementbymacaddressresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByMacAddressPatchFilter
 
@@ -304,7 +322,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     macaddress: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -313,16 +330,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [operations.FindComputerManagementByMacAddressPatchFilterRequest](../../models/operations/findcomputermanagementbymacaddresspatchfilterrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
-| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
+| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                              | [operations.FindComputerManagementByMacAddressPatchFilterRequest](../../sdk/models/operations/findcomputermanagementbymacaddresspatchfilterrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
+| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByMacAddressPatchFilterResponse](../../models/operations/findcomputermanagementbymacaddresspatchfilterresponse.md)>**
+**Promise<[operations.FindComputerManagementByMacAddressPatchFilterResponse](../../sdk/models/operations/findcomputermanagementbymacaddresspatchfilterresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByMacAddressSubset
 
@@ -347,7 +368,6 @@ import { FindComputerManagementByMacAddressSubsetPathParamSubset } from "jamf-cl
     subset: FindComputerManagementByMacAddressSubsetPathParamSubset.General,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -356,16 +376,20 @@ import { FindComputerManagementByMacAddressSubsetPathParamSubset } from "jamf-cl
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [operations.FindComputerManagementByMacAddressSubsetRequest](../../models/operations/findcomputermanagementbymacaddresssubsetrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-| `config`                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                             | :heavy_minus_sign:                                                                                                                       | Available config options for making requests.                                                                                            |
+| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                    | [operations.FindComputerManagementByMacAddressSubsetRequest](../../sdk/models/operations/findcomputermanagementbymacaddresssubsetrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByMacAddressSubsetResponse](../../models/operations/findcomputermanagementbymacaddresssubsetresponse.md)>**
+**Promise<[operations.FindComputerManagementByMacAddressSubsetResponse](../../sdk/models/operations/findcomputermanagementbymacaddresssubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByMacAddressUsername
 
@@ -389,7 +413,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     username: "Uriah_Dach70",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -398,16 +421,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.FindComputerManagementByMacAddressUsernameRequest](../../models/operations/findcomputermanagementbymacaddressusernamerequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.FindComputerManagementByMacAddressUsernameRequest](../../sdk/models/operations/findcomputermanagementbymacaddressusernamerequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByMacAddressUsernameResponse](../../models/operations/findcomputermanagementbymacaddressusernameresponse.md)>**
+**Promise<[operations.FindComputerManagementByMacAddressUsernameResponse](../../sdk/models/operations/findcomputermanagementbymacaddressusernameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByMacAddressUsernameSubset
 
@@ -433,7 +460,6 @@ import { FindComputerManagementByMacAddressUsernameSubsetPathParamSubset } from 
     username: "Aida_Murazik94",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -442,16 +468,20 @@ import { FindComputerManagementByMacAddressUsernameSubsetPathParamSubset } from 
 
 ### Parameters
 
-| Parameter                                                                                                                                                | Type                                                                                                                                                     | Required                                                                                                                                                 | Description                                                                                                                                              |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                | [operations.FindComputerManagementByMacAddressUsernameSubsetRequest](../../models/operations/findcomputermanagementbymacaddressusernamesubsetrequest.md) | :heavy_check_mark:                                                                                                                                       | The request object to use for the request.                                                                                                               |
-| `config`                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                             | :heavy_minus_sign:                                                                                                                                       | Available config options for making requests.                                                                                                            |
+| Parameter                                                                                                                                                    | Type                                                                                                                                                         | Required                                                                                                                                                     | Description                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                                    | [operations.FindComputerManagementByMacAddressUsernameSubsetRequest](../../sdk/models/operations/findcomputermanagementbymacaddressusernamesubsetrequest.md) | :heavy_check_mark:                                                                                                                                           | The request object to use for the request.                                                                                                                   |
+| `config`                                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                 | :heavy_minus_sign:                                                                                                                                           | Available config options for making requests.                                                                                                                |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByMacAddressUsernameSubsetResponse](../../models/operations/findcomputermanagementbymacaddressusernamesubsetresponse.md)>**
+**Promise<[operations.FindComputerManagementByMacAddressUsernameSubsetResponse](../../sdk/models/operations/findcomputermanagementbymacaddressusernamesubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByName
 
@@ -474,7 +504,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -483,16 +512,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.FindComputerManagementByNameRequest](../../models/operations/findcomputermanagementbynamerequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.FindComputerManagementByNameRequest](../../sdk/models/operations/findcomputermanagementbynamerequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByNameResponse](../../models/operations/findcomputermanagementbynameresponse.md)>**
+**Promise<[operations.FindComputerManagementByNameResponse](../../sdk/models/operations/findcomputermanagementbynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByNamePatchFilter
 
@@ -516,7 +549,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     name: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -525,16 +557,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.FindComputerManagementByNamePatchFilterRequest](../../models/operations/findcomputermanagementbynamepatchfilterrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [operations.FindComputerManagementByNamePatchFilterRequest](../../sdk/models/operations/findcomputermanagementbynamepatchfilterrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByNamePatchFilterResponse](../../models/operations/findcomputermanagementbynamepatchfilterresponse.md)>**
+**Promise<[operations.FindComputerManagementByNamePatchFilterResponse](../../sdk/models/operations/findcomputermanagementbynamepatchfilterresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByNameSubset
 
@@ -559,7 +595,6 @@ import { FindComputerManagementByNameSubsetPathParamSubset } from "jamf-classic-
     subset: FindComputerManagementByNameSubsetPathParamSubset.StaticGroups,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -568,16 +603,20 @@ import { FindComputerManagementByNameSubsetPathParamSubset } from "jamf-classic-
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.FindComputerManagementByNameSubsetRequest](../../models/operations/findcomputermanagementbynamesubsetrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [operations.FindComputerManagementByNameSubsetRequest](../../sdk/models/operations/findcomputermanagementbynamesubsetrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByNameSubsetResponse](../../models/operations/findcomputermanagementbynamesubsetresponse.md)>**
+**Promise<[operations.FindComputerManagementByNameSubsetResponse](../../sdk/models/operations/findcomputermanagementbynamesubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByNameUsername
 
@@ -601,7 +640,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     username: "Giovanni_Daugherty63",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -610,16 +648,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.FindComputerManagementByNameUsernameRequest](../../models/operations/findcomputermanagementbynameusernamerequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.FindComputerManagementByNameUsernameRequest](../../sdk/models/operations/findcomputermanagementbynameusernamerequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByNameUsernameResponse](../../models/operations/findcomputermanagementbynameusernameresponse.md)>**
+**Promise<[operations.FindComputerManagementByNameUsernameResponse](../../sdk/models/operations/findcomputermanagementbynameusernameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByNameUsernameSubset
 
@@ -645,7 +687,6 @@ import { FindComputerManagementByNameUsernameSubsetPathParamSubset } from "jamf-
     username: "Jermain_Batz41",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -654,16 +695,20 @@ import { FindComputerManagementByNameUsernameSubsetPathParamSubset } from "jamf-
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.FindComputerManagementByNameUsernameSubsetRequest](../../models/operations/findcomputermanagementbynameusernamesubsetrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.FindComputerManagementByNameUsernameSubsetRequest](../../sdk/models/operations/findcomputermanagementbynameusernamesubsetrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByNameUsernameSubsetResponse](../../models/operations/findcomputermanagementbynameusernamesubsetresponse.md)>**
+**Promise<[operations.FindComputerManagementByNameUsernameSubsetResponse](../../sdk/models/operations/findcomputermanagementbynameusernamesubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementBySerialNumber
 
@@ -686,7 +731,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     serialnumber: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -695,16 +739,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.FindComputerManagementBySerialNumberRequest](../../models/operations/findcomputermanagementbyserialnumberrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.FindComputerManagementBySerialNumberRequest](../../sdk/models/operations/findcomputermanagementbyserialnumberrequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementBySerialNumberResponse](../../models/operations/findcomputermanagementbyserialnumberresponse.md)>**
+**Promise<[operations.FindComputerManagementBySerialNumberResponse](../../sdk/models/operations/findcomputermanagementbyserialnumberresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementBySerialNumberPatchFilter
 
@@ -728,7 +776,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     serialnumber: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -737,16 +784,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [operations.FindComputerManagementBySerialNumberPatchFilterRequest](../../models/operations/findcomputermanagementbyserialnumberpatchfilterrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
+| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                  | [operations.FindComputerManagementBySerialNumberPatchFilterRequest](../../sdk/models/operations/findcomputermanagementbyserialnumberpatchfilterrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementBySerialNumberPatchFilterResponse](../../models/operations/findcomputermanagementbyserialnumberpatchfilterresponse.md)>**
+**Promise<[operations.FindComputerManagementBySerialNumberPatchFilterResponse](../../sdk/models/operations/findcomputermanagementbyserialnumberpatchfilterresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementBySerialNumberSubset
 
@@ -771,7 +822,6 @@ import { FindComputerManagementBySerialNumberSubsetPathParamSubset } from "jamf-
     subset: FindComputerManagementBySerialNumberSubsetPathParamSubset.OSXConfigurationProfiles,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -780,16 +830,20 @@ import { FindComputerManagementBySerialNumberSubsetPathParamSubset } from "jamf-
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.FindComputerManagementBySerialNumberSubsetRequest](../../models/operations/findcomputermanagementbyserialnumbersubsetrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.FindComputerManagementBySerialNumberSubsetRequest](../../sdk/models/operations/findcomputermanagementbyserialnumbersubsetrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementBySerialNumberSubsetResponse](../../models/operations/findcomputermanagementbyserialnumbersubsetresponse.md)>**
+**Promise<[operations.FindComputerManagementBySerialNumberSubsetResponse](../../sdk/models/operations/findcomputermanagementbyserialnumbersubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementBySerialNumberUsername
 
@@ -813,7 +867,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     username: "Reilly_Considine52",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -822,16 +875,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                        | [operations.FindComputerManagementBySerialNumberUsernameRequest](../../models/operations/findcomputermanagementbyserialnumberusernamerequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
-| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
+| Parameter                                                                                                                                            | Type                                                                                                                                                 | Required                                                                                                                                             | Description                                                                                                                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                            | [operations.FindComputerManagementBySerialNumberUsernameRequest](../../sdk/models/operations/findcomputermanagementbyserialnumberusernamerequest.md) | :heavy_check_mark:                                                                                                                                   | The request object to use for the request.                                                                                                           |
+| `config`                                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                         | :heavy_minus_sign:                                                                                                                                   | Available config options for making requests.                                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementBySerialNumberUsernameResponse](../../models/operations/findcomputermanagementbyserialnumberusernameresponse.md)>**
+**Promise<[operations.FindComputerManagementBySerialNumberUsernameResponse](../../sdk/models/operations/findcomputermanagementbyserialnumberusernameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementBySerialNumberUsernameSubset
 
@@ -857,7 +914,6 @@ import { FindComputerManagementBySerialNumberUsernameSubsetPathParamSubset } fro
     username: "Deja22",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -866,16 +922,20 @@ import { FindComputerManagementBySerialNumberUsernameSubsetPathParamSubset } fro
 
 ### Parameters
 
-| Parameter                                                                                                                                                    | Type                                                                                                                                                         | Required                                                                                                                                                     | Description                                                                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                    | [operations.FindComputerManagementBySerialNumberUsernameSubsetRequest](../../models/operations/findcomputermanagementbyserialnumberusernamesubsetrequest.md) | :heavy_check_mark:                                                                                                                                           | The request object to use for the request.                                                                                                                   |
-| `config`                                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                 | :heavy_minus_sign:                                                                                                                                           | Available config options for making requests.                                                                                                                |
+| Parameter                                                                                                                                                        | Type                                                                                                                                                             | Required                                                                                                                                                         | Description                                                                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                        | [operations.FindComputerManagementBySerialNumberUsernameSubsetRequest](../../sdk/models/operations/findcomputermanagementbyserialnumberusernamesubsetrequest.md) | :heavy_check_mark:                                                                                                                                               | The request object to use for the request.                                                                                                                       |
+| `config`                                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                     | :heavy_minus_sign:                                                                                                                                               | Available config options for making requests.                                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementBySerialNumberUsernameSubsetResponse](../../models/operations/findcomputermanagementbyserialnumberusernamesubsetresponse.md)>**
+**Promise<[operations.FindComputerManagementBySerialNumberUsernameSubsetResponse](../../sdk/models/operations/findcomputermanagementbyserialnumberusernamesubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByUDID
 
@@ -898,7 +958,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     udid: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -907,16 +966,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.FindComputerManagementByUDIDRequest](../../models/operations/findcomputermanagementbyudidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.FindComputerManagementByUDIDRequest](../../sdk/models/operations/findcomputermanagementbyudidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByUDIDResponse](../../models/operations/findcomputermanagementbyudidresponse.md)>**
+**Promise<[operations.FindComputerManagementByUDIDResponse](../../sdk/models/operations/findcomputermanagementbyudidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByUDIDSubset
 
@@ -941,7 +1004,6 @@ import { FindComputerManagementByUDIDSubsetPathParamSubset } from "jamf-classic-
     udid: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -950,16 +1012,20 @@ import { FindComputerManagementByUDIDSubsetPathParamSubset } from "jamf-classic-
 
 ### Parameters
 
-| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
-| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                    | [operations.FindComputerManagementByUDIDSubsetRequest](../../models/operations/findcomputermanagementbyudidsubsetrequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
-| `config`                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                 | :heavy_minus_sign:                                                                                                           | Available config options for making requests.                                                                                |
+| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                        | [operations.FindComputerManagementByUDIDSubsetRequest](../../sdk/models/operations/findcomputermanagementbyudidsubsetrequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
+| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByUDIDSubsetResponse](../../models/operations/findcomputermanagementbyudidsubsetresponse.md)>**
+**Promise<[operations.FindComputerManagementByUDIDSubsetResponse](../../sdk/models/operations/findcomputermanagementbyudidsubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByUdidPatchFilter
 
@@ -983,7 +1049,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     udid: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -992,16 +1057,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.FindComputerManagementByUdidPatchFilterRequest](../../models/operations/findcomputermanagementbyudidpatchfilterrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [operations.FindComputerManagementByUdidPatchFilterRequest](../../sdk/models/operations/findcomputermanagementbyudidpatchfilterrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByUdidPatchFilterResponse](../../models/operations/findcomputermanagementbyudidpatchfilterresponse.md)>**
+**Promise<[operations.FindComputerManagementByUdidPatchFilterResponse](../../sdk/models/operations/findcomputermanagementbyudidpatchfilterresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByUdidUsername
 
@@ -1025,7 +1094,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     username: "Shyanne_Satterfield",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1034,16 +1102,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                        | [operations.FindComputerManagementByUdidUsernameRequest](../../models/operations/findcomputermanagementbyudidusernamerequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-| `config`                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                     | :heavy_minus_sign:                                                                                                               | Available config options for making requests.                                                                                    |
+| Parameter                                                                                                                            | Type                                                                                                                                 | Required                                                                                                                             | Description                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                            | [operations.FindComputerManagementByUdidUsernameRequest](../../sdk/models/operations/findcomputermanagementbyudidusernamerequest.md) | :heavy_check_mark:                                                                                                                   | The request object to use for the request.                                                                                           |
+| `config`                                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                         | :heavy_minus_sign:                                                                                                                   | Available config options for making requests.                                                                                        |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByUdidUsernameResponse](../../models/operations/findcomputermanagementbyudidusernameresponse.md)>**
+**Promise<[operations.FindComputerManagementByUdidUsernameResponse](../../sdk/models/operations/findcomputermanagementbyudidusernameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerManagementByUdidUsernameSubset
 
@@ -1069,7 +1141,6 @@ import { FindComputerManagementByUdidUsernameSubsetPathParamSubset } from "jamf-
     username: "Hilda_Schimmel10",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -1078,13 +1149,17 @@ import { FindComputerManagementByUdidUsernameSubsetPathParamSubset } from "jamf-
 
 ### Parameters
 
-| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
-| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                    | [operations.FindComputerManagementByUdidUsernameSubsetRequest](../../models/operations/findcomputermanagementbyudidusernamesubsetrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
-| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
+| Parameter                                                                                                                                        | Type                                                                                                                                             | Required                                                                                                                                         | Description                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                        | [operations.FindComputerManagementByUdidUsernameSubsetRequest](../../sdk/models/operations/findcomputermanagementbyudidusernamesubsetrequest.md) | :heavy_check_mark:                                                                                                                               | The request object to use for the request.                                                                                                       |
+| `config`                                                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                     | :heavy_minus_sign:                                                                                                                               | Available config options for making requests.                                                                                                    |
 
 
 ### Response
 
-**Promise<[operations.FindComputerManagementByUdidUsernameSubsetResponse](../../models/operations/findcomputermanagementbyudidusernamesubsetresponse.md)>**
+**Promise<[operations.FindComputerManagementByUdidUsernameSubsetResponse](../../sdk/models/operations/findcomputermanagementbyudidusernamesubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

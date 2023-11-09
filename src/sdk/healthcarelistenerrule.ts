@@ -41,7 +41,11 @@ export class Healthcarelistenerrule {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/healthcarelistenerrule/id/{id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/healthcarelistenerrule/id/{id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -58,7 +62,7 @@ export class Healthcarelistenerrule {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -96,7 +100,7 @@ export class Healthcarelistenerrule {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/healthcarelistenerrule";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/healthcarelistenerrule";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -117,7 +121,7 @@ export class Healthcarelistenerrule {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -179,7 +183,11 @@ export class Healthcarelistenerrule {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/healthcarelistenerrule/id/{id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/healthcarelistenerrule/id/{id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -200,7 +208,7 @@ export class Healthcarelistenerrule {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -258,7 +266,11 @@ export class Healthcarelistenerrule {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/healthcarelistenerrule/id/{id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/healthcarelistenerrule/id/{id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -275,7 +287,7 @@ export class Healthcarelistenerrule {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",

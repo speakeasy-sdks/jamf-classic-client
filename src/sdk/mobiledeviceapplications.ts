@@ -64,7 +64,11 @@ export class Mobiledeviceapplications {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/mobiledeviceapplications/id/{id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/mobiledeviceapplications/id/{id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -81,7 +85,7 @@ export class Mobiledeviceapplications {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -123,7 +127,7 @@ export class Mobiledeviceapplications {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceapplications/bundleid/{bundleid}",
             req
@@ -144,7 +148,7 @@ export class Mobiledeviceapplications {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -186,7 +190,7 @@ export class Mobiledeviceapplications {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceapplications/bundleid/{bundleid}/version/{version}",
             req
@@ -207,7 +211,7 @@ export class Mobiledeviceapplications {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -249,7 +253,11 @@ export class Mobiledeviceapplications {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/mobiledeviceapplications/id/{id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/mobiledeviceapplications/id/{id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -266,7 +274,7 @@ export class Mobiledeviceapplications {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -308,7 +316,7 @@ export class Mobiledeviceapplications {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceapplications/name/{name}",
             req
@@ -329,7 +337,7 @@ export class Mobiledeviceapplications {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -367,7 +375,7 @@ export class Mobiledeviceapplications {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/mobiledeviceapplications";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/mobiledeviceapplications";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -388,7 +396,7 @@ export class Mobiledeviceapplications {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -453,7 +461,7 @@ export class Mobiledeviceapplications {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceapplications/bundleid/{bundleid}",
             req
@@ -478,7 +486,7 @@ export class Mobiledeviceapplications {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -537,7 +545,7 @@ export class Mobiledeviceapplications {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceapplications/bundleid/{bundleid}/version/{version}",
             req
@@ -562,7 +570,7 @@ export class Mobiledeviceapplications {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -621,7 +629,11 @@ export class Mobiledeviceapplications {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/mobiledeviceapplications/id/{id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/mobiledeviceapplications/id/{id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -642,7 +654,7 @@ export class Mobiledeviceapplications {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -701,7 +713,7 @@ export class Mobiledeviceapplications {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceapplications/name/{name}",
             req
@@ -726,7 +738,7 @@ export class Mobiledeviceapplications {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -788,7 +800,7 @@ export class Mobiledeviceapplications {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceapplications/name/{name}/subset/{subset}",
             req
@@ -813,7 +825,7 @@ export class Mobiledeviceapplications {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -874,7 +886,7 @@ export class Mobiledeviceapplications {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceapplications/id/{id}/subset/{subset}",
             req
@@ -895,7 +907,7 @@ export class Mobiledeviceapplications {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -937,7 +949,7 @@ export class Mobiledeviceapplications {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceapplications/bundleid/{bundleid}",
             req
@@ -958,7 +970,7 @@ export class Mobiledeviceapplications {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -1000,7 +1012,7 @@ export class Mobiledeviceapplications {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceapplications/bundleid/{bundleid}/version/{version}",
             req
@@ -1021,7 +1033,7 @@ export class Mobiledeviceapplications {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -1066,7 +1078,11 @@ export class Mobiledeviceapplications {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/mobiledeviceapplications/id/{id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/mobiledeviceapplications/id/{id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -1083,7 +1099,7 @@ export class Mobiledeviceapplications {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -1125,7 +1141,7 @@ export class Mobiledeviceapplications {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceapplications/name/{name}",
             req
@@ -1146,7 +1162,7 @@ export class Mobiledeviceapplications {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",

@@ -57,7 +57,7 @@ export class Computerapplicationusage {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/computerapplicationusage/id/{id}/{start_date}_{end_date}",
             req
@@ -82,7 +82,7 @@ export class Computerapplicationusage {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -144,7 +144,7 @@ export class Computerapplicationusage {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/computerapplicationusage/macaddress/{macaddress}/{start_date}_{end_date}",
             req
@@ -169,7 +169,7 @@ export class Computerapplicationusage {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -231,7 +231,7 @@ export class Computerapplicationusage {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/computerapplicationusage/name/{name}/{start_date}_{end_date}",
             req
@@ -256,7 +256,7 @@ export class Computerapplicationusage {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -318,7 +318,7 @@ export class Computerapplicationusage {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/computerapplicationusage/serialnumber/{serialnumber}/{start_date}_{end_date}",
             req
@@ -343,7 +343,7 @@ export class Computerapplicationusage {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -405,7 +405,7 @@ export class Computerapplicationusage {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/computerapplicationusage/udid/{udid}/{start_date}_{end_date}",
             req
@@ -430,7 +430,7 @@ export class Computerapplicationusage {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",

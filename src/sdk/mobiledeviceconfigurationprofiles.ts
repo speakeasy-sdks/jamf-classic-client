@@ -51,7 +51,7 @@ export class Mobiledeviceconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceconfigurationprofiles/id/{id}",
             req
@@ -72,7 +72,7 @@ export class Mobiledeviceconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -114,7 +114,7 @@ export class Mobiledeviceconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceconfigurationprofiles/id/{id}",
             req
@@ -135,7 +135,7 @@ export class Mobiledeviceconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -177,7 +177,7 @@ export class Mobiledeviceconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceconfigurationprofiles/name/{name}",
             req
@@ -198,7 +198,7 @@ export class Mobiledeviceconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -236,7 +236,8 @@ export class Mobiledeviceconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/mobiledeviceconfigurationprofiles";
+        const operationUrl: string =
+            baseURL.replace(/\/$/, "") + "/mobiledeviceconfigurationprofiles";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -257,7 +258,7 @@ export class Mobiledeviceconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -320,7 +321,7 @@ export class Mobiledeviceconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceconfigurationprofiles/id/{id}",
             req
@@ -345,7 +346,7 @@ export class Mobiledeviceconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -406,7 +407,7 @@ export class Mobiledeviceconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceconfigurationprofiles/id/{id}/subset/{subset}",
             req
@@ -427,7 +428,7 @@ export class Mobiledeviceconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -470,7 +471,7 @@ export class Mobiledeviceconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceconfigurationprofiles/name/{name}",
             req
@@ -495,7 +496,7 @@ export class Mobiledeviceconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -557,7 +558,7 @@ export class Mobiledeviceconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceconfigurationprofiles/name/{name}/subset/{subset}",
             req
@@ -582,7 +583,7 @@ export class Mobiledeviceconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -640,7 +641,7 @@ export class Mobiledeviceconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceconfigurationprofiles/id/{id}",
             req
@@ -661,7 +662,7 @@ export class Mobiledeviceconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -703,7 +704,7 @@ export class Mobiledeviceconfigurationprofiles {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledeviceconfigurationprofiles/name/{name}",
             req
@@ -724,7 +725,7 @@ export class Mobiledeviceconfigurationprofiles {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",

@@ -1,5 +1,5 @@
 # Computerhardwaresoftwarereports
-(*.computerhardwaresoftwarereports*)
+(*computerhardwaresoftwarereports*)
 
 ### Available Operations
 
@@ -38,7 +38,6 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     startDate: new RFCDate("2021-08-19"),
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -47,16 +46,20 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.FindComputerHardwareSoftwareReportsByIdRequest](../../models/operations/findcomputerhardwaresoftwarereportsbyidrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [operations.FindComputerHardwareSoftwareReportsByIdRequest](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbyidrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHardwareSoftwareReportsByIdResponse](../../models/operations/findcomputerhardwaresoftwarereportsbyidresponse.md)>**
+**Promise<[operations.FindComputerHardwareSoftwareReportsByIdResponse](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHardwareSoftwareReportsByIdSubset
 
@@ -84,7 +87,6 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     subset: Subset.Hardwre,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -93,16 +95,20 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 ### Parameters
 
-| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
-| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                          | [operations.FindComputerHardwareSoftwareReportsByIdSubsetRequest](../../models/operations/findcomputerhardwaresoftwarereportsbyidsubsetrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
-| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
+| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                              | [operations.FindComputerHardwareSoftwareReportsByIdSubsetRequest](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbyidsubsetrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
+| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHardwareSoftwareReportsByIdSubsetResponse](../../models/operations/findcomputerhardwaresoftwarereportsbyidsubsetresponse.md)>**
+**Promise<[operations.FindComputerHardwareSoftwareReportsByIdSubsetResponse](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbyidsubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHardwareSoftwareReportsByMacAddress
 
@@ -128,7 +134,6 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     startDate: new RFCDate("2022-02-03"),
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -137,16 +142,20 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [operations.FindComputerHardwareSoftwareReportsByMacAddressRequest](../../models/operations/findcomputerhardwaresoftwarereportsbymacaddressrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
+| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                  | [operations.FindComputerHardwareSoftwareReportsByMacAddressRequest](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbymacaddressrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHardwareSoftwareReportsByMacAddressResponse](../../models/operations/findcomputerhardwaresoftwarereportsbymacaddressresponse.md)>**
+**Promise<[operations.FindComputerHardwareSoftwareReportsByMacAddressResponse](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbymacaddressresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHardwareSoftwareReportsByMacAddressSubset
 
@@ -174,7 +183,6 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     subset: PathParamSubset.Software,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -183,16 +191,20 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 ### Parameters
 
-| Parameter                                                                                                                                                          | Type                                                                                                                                                               | Required                                                                                                                                                           | Description                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                          | [operations.FindComputerHardwareSoftwareReportsByMacAddressSubsetRequest](../../models/operations/findcomputerhardwaresoftwarereportsbymacaddresssubsetrequest.md) | :heavy_check_mark:                                                                                                                                                 | The request object to use for the request.                                                                                                                         |
-| `config`                                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                       | :heavy_minus_sign:                                                                                                                                                 | Available config options for making requests.                                                                                                                      |
+| Parameter                                                                                                                                                              | Type                                                                                                                                                                   | Required                                                                                                                                                               | Description                                                                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                              | [operations.FindComputerHardwareSoftwareReportsByMacAddressSubsetRequest](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbymacaddresssubsetrequest.md) | :heavy_check_mark:                                                                                                                                                     | The request object to use for the request.                                                                                                                             |
+| `config`                                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                           | :heavy_minus_sign:                                                                                                                                                     | Available config options for making requests.                                                                                                                          |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHardwareSoftwareReportsByMacAddressSubsetResponse](../../models/operations/findcomputerhardwaresoftwarereportsbymacaddresssubsetresponse.md)>**
+**Promise<[operations.FindComputerHardwareSoftwareReportsByMacAddressSubsetResponse](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbymacaddresssubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHardwareSoftwareReportsByName
 
@@ -218,7 +230,6 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     startDate: new RFCDate("2022-07-15"),
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -227,16 +238,20 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.FindComputerHardwareSoftwareReportsByNameRequest](../../models/operations/findcomputerhardwaresoftwarereportsbynamerequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                      | [operations.FindComputerHardwareSoftwareReportsByNameRequest](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbynamerequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHardwareSoftwareReportsByNameResponse](../../models/operations/findcomputerhardwaresoftwarereportsbynameresponse.md)>**
+**Promise<[operations.FindComputerHardwareSoftwareReportsByNameResponse](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbynameresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHardwareSoftwareReportsByNameSubset
 
@@ -264,7 +279,6 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     subset: FindComputerHardwareSoftwareReportsByNameSubsetPathParamSubset.Software,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -273,16 +287,20 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [operations.FindComputerHardwareSoftwareReportsByNameSubsetRequest](../../models/operations/findcomputerhardwaresoftwarereportsbynamesubsetrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
+| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                  | [operations.FindComputerHardwareSoftwareReportsByNameSubsetRequest](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbynamesubsetrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHardwareSoftwareReportsByNameSubsetResponse](../../models/operations/findcomputerhardwaresoftwarereportsbynamesubsetresponse.md)>**
+**Promise<[operations.FindComputerHardwareSoftwareReportsByNameSubsetResponse](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbynamesubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHardwareSoftwareReportsBySerial
 
@@ -308,7 +326,6 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     startDate: new RFCDate("2021-05-25"),
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -317,16 +334,20 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 ### Parameters
 
-| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                      | [operations.FindComputerHardwareSoftwareReportsBySerialRequest](../../models/operations/findcomputerhardwaresoftwarereportsbyserialrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
-| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
+| Parameter                                                                                                                                          | Type                                                                                                                                               | Required                                                                                                                                           | Description                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                          | [operations.FindComputerHardwareSoftwareReportsBySerialRequest](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbyserialrequest.md) | :heavy_check_mark:                                                                                                                                 | The request object to use for the request.                                                                                                         |
+| `config`                                                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                       | :heavy_minus_sign:                                                                                                                                 | Available config options for making requests.                                                                                                      |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHardwareSoftwareReportsBySerialResponse](../../models/operations/findcomputerhardwaresoftwarereportsbyserialresponse.md)>**
+**Promise<[operations.FindComputerHardwareSoftwareReportsBySerialResponse](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbyserialresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHardwareSoftwareReportsBySerialSubset
 
@@ -354,7 +375,6 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     subset: FindComputerHardwareSoftwareReportsBySerialSubsetPathParamSubset.Plugins,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -363,16 +383,20 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 ### Parameters
 
-| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                                  | [operations.FindComputerHardwareSoftwareReportsBySerialSubsetRequest](../../models/operations/findcomputerhardwaresoftwarereportsbyserialsubsetrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
-| `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
+| Parameter                                                                                                                                                      | Type                                                                                                                                                           | Required                                                                                                                                                       | Description                                                                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                      | [operations.FindComputerHardwareSoftwareReportsBySerialSubsetRequest](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbyserialsubsetrequest.md) | :heavy_check_mark:                                                                                                                                             | The request object to use for the request.                                                                                                                     |
+| `config`                                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                   | :heavy_minus_sign:                                                                                                                                             | Available config options for making requests.                                                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHardwareSoftwareReportsBySerialSubsetResponse](../../models/operations/findcomputerhardwaresoftwarereportsbyserialsubsetresponse.md)>**
+**Promise<[operations.FindComputerHardwareSoftwareReportsBySerialSubsetResponse](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbyserialsubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHardwareSoftwareReportsByUDID
 
@@ -398,7 +422,6 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     udid: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -407,16 +430,20 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 ### Parameters
 
-| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                  | [operations.FindComputerHardwareSoftwareReportsByUDIDRequest](../../models/operations/findcomputerhardwaresoftwarereportsbyudidrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
-| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                      | [operations.FindComputerHardwareSoftwareReportsByUDIDRequest](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbyudidrequest.md) | :heavy_check_mark:                                                                                                                             | The request object to use for the request.                                                                                                     |
+| `config`                                                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                   | :heavy_minus_sign:                                                                                                                             | Available config options for making requests.                                                                                                  |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHardwareSoftwareReportsByUDIDResponse](../../models/operations/findcomputerhardwaresoftwarereportsbyudidresponse.md)>**
+**Promise<[operations.FindComputerHardwareSoftwareReportsByUDIDResponse](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbyudidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findComputerHardwareSoftwareReportsByUDIDSubset
 
@@ -444,7 +471,6 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
     udid: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -453,13 +479,17 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
 ### Parameters
 
-| Parameter                                                                                                                                              | Type                                                                                                                                                   | Required                                                                                                                                               | Description                                                                                                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                              | [operations.FindComputerHardwareSoftwareReportsByUDIDSubsetRequest](../../models/operations/findcomputerhardwaresoftwarereportsbyudidsubsetrequest.md) | :heavy_check_mark:                                                                                                                                     | The request object to use for the request.                                                                                                             |
-| `config`                                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                           | :heavy_minus_sign:                                                                                                                                     | Available config options for making requests.                                                                                                          |
+| Parameter                                                                                                                                                  | Type                                                                                                                                                       | Required                                                                                                                                                   | Description                                                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                  | [operations.FindComputerHardwareSoftwareReportsByUDIDSubsetRequest](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbyudidsubsetrequest.md) | :heavy_check_mark:                                                                                                                                         | The request object to use for the request.                                                                                                                 |
+| `config`                                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                               | :heavy_minus_sign:                                                                                                                                         | Available config options for making requests.                                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.FindComputerHardwareSoftwareReportsByUDIDSubsetResponse](../../models/operations/findcomputerhardwaresoftwarereportsbyudidsubsetresponse.md)>**
+**Promise<[operations.FindComputerHardwareSoftwareReportsByUDIDSubsetResponse](../../sdk/models/operations/findcomputerhardwaresoftwarereportsbyudidsubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

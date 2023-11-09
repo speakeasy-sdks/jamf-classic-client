@@ -1,5 +1,5 @@
 # Patchreports
-(*.patchreports*)
+(*patchreports*)
 
 ### Available Operations
 
@@ -29,7 +29,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: "<ID>",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -38,16 +37,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                              | Type                                                                                                                                   | Required                                                                                                                               | Description                                                                                                                            |
-| -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                              | [operations.PatchreportsPatchsoftwaretitleidByIdGetRequest](../../models/operations/patchreportspatchsoftwaretitleidbyidgetrequest.md) | :heavy_check_mark:                                                                                                                     | The request object to use for the request.                                                                                             |
-| `config`                                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                           | :heavy_minus_sign:                                                                                                                     | Available config options for making requests.                                                                                          |
+| Parameter                                                                                                                                  | Type                                                                                                                                       | Required                                                                                                                                   | Description                                                                                                                                |
+| ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                                                  | [operations.PatchreportsPatchsoftwaretitleidByIdGetRequest](../../sdk/models/operations/patchreportspatchsoftwaretitleidbyidgetrequest.md) | :heavy_check_mark:                                                                                                                         | The request object to use for the request.                                                                                                 |
+| `config`                                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                               | :heavy_minus_sign:                                                                                                                         | Available config options for making requests.                                                                                              |
 
 
 ### Response
 
-**Promise<[operations.PatchreportsPatchsoftwaretitleidByIdGetResponse](../../models/operations/patchreportspatchsoftwaretitleidbyidgetresponse.md)>**
+**Promise<[operations.PatchreportsPatchsoftwaretitleidByIdGetResponse](../../sdk/models/operations/patchreportspatchsoftwaretitleidbyidgetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## ~~patchreportsPatchsoftwaretitleidVersionByIdAndVersionGet~~
 
@@ -73,7 +76,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     version: "string",
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -82,13 +84,17 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                                                                | Type                                                                                                                                                                     | Required                                                                                                                                                                 | Description                                                                                                                                                              |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                                                                                | [operations.PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetRequest](../../models/operations/patchreportspatchsoftwaretitleidversionbyidandversiongetrequest.md) | :heavy_check_mark:                                                                                                                                                       | The request object to use for the request.                                                                                                                               |
-| `config`                                                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                             | :heavy_minus_sign:                                                                                                                                                       | Available config options for making requests.                                                                                                                            |
+| Parameter                                                                                                                                                                    | Type                                                                                                                                                                         | Required                                                                                                                                                                     | Description                                                                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                                                    | [operations.PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetRequest](../../sdk/models/operations/patchreportspatchsoftwaretitleidversionbyidandversiongetrequest.md) | :heavy_check_mark:                                                                                                                                                           | The request object to use for the request.                                                                                                                                   |
+| `config`                                                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                                                 | :heavy_minus_sign:                                                                                                                                                           | Available config options for making requests.                                                                                                                                |
 
 
 ### Response
 
-**Promise<[operations.PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetResponse](../../models/operations/patchreportspatchsoftwaretitleidversionbyidandversiongetresponse.md)>**
+**Promise<[operations.PatchreportsPatchsoftwaretitleidVersionByIdAndVersionGetResponse](../../sdk/models/operations/patchreportspatchsoftwaretitleidversionbyidandversiongetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

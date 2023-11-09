@@ -1,0 +1,8 @@
+# OsXConfigurationProfileSchemasBuildings
+
+
+## Fields
+
+| Field                                                 | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `building`                                            | [shared.IdName](../../../sdk/models/shared/idname.md) | :heavy_minus_sign:                                    | N/A                                                   |

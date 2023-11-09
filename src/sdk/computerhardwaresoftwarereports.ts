@@ -82,7 +82,7 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/computerhardwaresoftwarereports/id/{id}/{start_date}_{end_date}",
             req
@@ -107,7 +107,7 @@ export class Computerhardwaresoftwarereports {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -169,7 +169,7 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/computerhardwaresoftwarereports/id/{id}/{start_date}_{end_date}/subset/{subset}",
             req
@@ -194,7 +194,7 @@ export class Computerhardwaresoftwarereports {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -253,7 +253,7 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/computerhardwaresoftwarereports/macaddress/{macaddress}/{start_date}_{end_date}",
             req
@@ -278,7 +278,7 @@ export class Computerhardwaresoftwarereports {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -340,7 +340,7 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/computerhardwaresoftwarereports/macaddress/{macaddress}/{start_date}_{end_date}/subset/{subset}",
             req
@@ -365,7 +365,7 @@ export class Computerhardwaresoftwarereports {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -424,7 +424,7 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/computerhardwaresoftwarereports/name/{name}/{start_date}_{end_date}",
             req
@@ -449,7 +449,7 @@ export class Computerhardwaresoftwarereports {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -511,7 +511,7 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/computerhardwaresoftwarereports/name/{name}/{start_date}_{end_date}/subset/{subset}",
             req
@@ -536,7 +536,7 @@ export class Computerhardwaresoftwarereports {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -595,7 +595,7 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/computerhardwaresoftwarereports/serialnumber/{serialnumber}/{start_date}_{end_date}",
             req
@@ -620,7 +620,7 @@ export class Computerhardwaresoftwarereports {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -682,7 +682,7 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/computerhardwaresoftwarereports/serialnumber/{serialnumber}/{start_date}_{end_date}/subset/{subset}",
             req
@@ -707,7 +707,7 @@ export class Computerhardwaresoftwarereports {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -766,7 +766,7 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/computerhardwaresoftwarereports/udid/{udid}/{start_date}_{end_date}",
             req
@@ -791,7 +791,7 @@ export class Computerhardwaresoftwarereports {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -853,7 +853,7 @@ export class Computerhardwaresoftwarereports {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/computerhardwaresoftwarereports/udid/{udid}/{start_date}_{end_date}/subset/{subset}",
             req
@@ -878,7 +878,7 @@ export class Computerhardwaresoftwarereports {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",

@@ -1,5 +1,5 @@
 # Gsxconnection
-(*.gsxconnection*)
+(*gsxconnection*)
 
 ### Available Operations
 
@@ -25,7 +25,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.gsxconnection.findGSXConnection();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -41,8 +40,12 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.FindGSXConnectionResponse](../../models/operations/findgsxconnectionresponse.md)>**
+**Promise<[operations.FindGSXConnectionResponse](../../sdk/models/operations/findgsxconnectionresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updateGSXConnection
 
@@ -64,7 +67,6 @@ import { Region } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
   const res = await sdk.gsxconnection.updateGSXConnection(new TextEncoder().encode("0xf6280edaC8"));
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -75,11 +77,15 @@ import { Region } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
 | Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `request`                                                    | [Uint8Array](../../models//.md)                              | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| `request`                                                    | [Uint8Array](../../models/.md)                               | :heavy_check_mark:                                           | The request object to use for the request.                   |
 | `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
 
-**Promise<[operations.UpdateGSXConnectionResponse](../../models/operations/updategsxconnectionresponse.md)>**
+**Promise<[operations.UpdateGSXConnectionResponse](../../sdk/models/operations/updategsxconnectionresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

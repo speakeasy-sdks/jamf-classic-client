@@ -1,0 +1,12 @@
+# General
+
+
+## Fields
+
+| Field                                                         | Type                                                          | Required                                                      | Description                                                   | Example                                                       |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `description`                                                 | *string*                                                      | :heavy_minus_sign:                                            | N/A                                                           | Used for Android or iOS BYO device enrollments                |
+| `enabled`                                                     | *boolean*                                                     | :heavy_minus_sign:                                            | N/A                                                           |                                                               |
+| `id`                                                          | *number*                                                      | :heavy_minus_sign:                                            | N/A                                                           | 1                                                             |
+| `name`                                                        | *string*                                                      | :heavy_check_mark:                                            | Name of the BYO profile                                       | Personal Device Profile                                       |
+| `site`                                                        | [shared.SiteObject](../../../sdk/models/shared/siteobject.md) | :heavy_minus_sign:                                            | N/A                                                           |                                                               |

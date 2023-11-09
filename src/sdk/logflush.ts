@@ -30,7 +30,11 @@ export class Logflush {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/logflush/{log}/interval/{interval}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/logflush/{log}/interval/{interval}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -47,7 +51,7 @@ export class Logflush {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -89,7 +93,7 @@ export class Logflush {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/logflush/{log}/id/{id}/interval/{interval}",
             req
@@ -110,7 +114,7 @@ export class Logflush {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -148,7 +152,7 @@ export class Logflush {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/logflush";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/logflush";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -180,7 +184,7 @@ export class Logflush {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",

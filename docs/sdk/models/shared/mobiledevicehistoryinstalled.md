@@ -1,0 +1,10 @@
+# MobileDeviceHistoryInstalled
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `appStoreFromMobileDeviceAppCatalog`                                                  | [shared.MobileDeviceHistoryApp](../../../sdk/models/shared/mobiledevicehistoryapp.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `inHouseFromMobileDeviceAppCatalog`                                                   | [shared.MobileDeviceHistoryApp](../../../sdk/models/shared/mobiledevicehistoryapp.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `other`                                                                               | [shared.MobileDeviceHistoryApp](../../../sdk/models/shared/mobiledevicehistoryapp.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |

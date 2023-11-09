@@ -1,9 +1,0 @@
-# FindEbookssByIdSubsetRequest
-
-
-## Fields
-
-| Field                                                                                                              | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `id`                                                                                                               | *string*                                                                                                           | :heavy_check_mark:                                                                                                 | ID to filter by                                                                                                    |
-| `subset`                                                                                                           | [operations.FindEbookssByIdSubsetPathParamSubset](../../models/operations/findebookssbyidsubsetpathparamsubset.md) | :heavy_check_mark:                                                                                                 | Subset to filter by                                                                                                |

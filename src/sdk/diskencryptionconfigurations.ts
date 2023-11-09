@@ -46,7 +46,7 @@ export class Diskencryptionconfigurations {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/diskencryptionconfigurations/id/{id}",
             req
@@ -67,7 +67,7 @@ export class Diskencryptionconfigurations {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "post",
             headers: headers,
             responseType: "arraybuffer",
@@ -109,7 +109,7 @@ export class Diskencryptionconfigurations {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/diskencryptionconfigurations/id/{id}",
             req
@@ -130,7 +130,7 @@ export class Diskencryptionconfigurations {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -172,7 +172,7 @@ export class Diskencryptionconfigurations {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/diskencryptionconfigurations/name/{name}",
             req
@@ -193,7 +193,7 @@ export class Diskencryptionconfigurations {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -231,7 +231,7 @@ export class Diskencryptionconfigurations {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/diskencryptionconfigurations";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/diskencryptionconfigurations";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -252,7 +252,7 @@ export class Diskencryptionconfigurations {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -314,7 +314,7 @@ export class Diskencryptionconfigurations {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/diskencryptionconfigurations/id/{id}",
             req
@@ -339,7 +339,7 @@ export class Diskencryptionconfigurations {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -398,7 +398,7 @@ export class Diskencryptionconfigurations {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/diskencryptionconfigurations/name/{name}",
             req
@@ -423,7 +423,7 @@ export class Diskencryptionconfigurations {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -481,7 +481,7 @@ export class Diskencryptionconfigurations {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/diskencryptionconfigurations/id/{id}",
             req
@@ -502,7 +502,7 @@ export class Diskencryptionconfigurations {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",
@@ -544,7 +544,7 @@ export class Diskencryptionconfigurations {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/diskencryptionconfigurations/name/{name}",
             req
@@ -565,7 +565,7 @@ export class Diskencryptionconfigurations {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",

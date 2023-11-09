@@ -1,0 +1,12 @@
+# LicensedSoftware
+
+
+## Fields
+
+| Field                                                                                   | Type                                                                                    | Required                                                                                | Description                                                                             |
+| --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| `fontDefinitions`                                                                       | [shared.FontDefinitions](../../../sdk/models/shared/fontdefinitions.md)[]               | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `general`                                                                               | [shared.LicensedSoftwareGeneral](../../../sdk/models/shared/licensedsoftwaregeneral.md) | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `licenses`                                                                              | [shared.Licenses](../../../sdk/models/shared/licenses.md)[]                             | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `pluginDefinitions`                                                                     | [shared.PluginDefinitions](../../../sdk/models/shared/plugindefinitions.md)[]           | :heavy_minus_sign:                                                                      | N/A                                                                                     |
+| `softwareDefinitions`                                                                   | [shared.SoftwareDefinitions](../../../sdk/models/shared/softwaredefinitions.md)[]       | :heavy_minus_sign:                                                                      | N/A                                                                                     |

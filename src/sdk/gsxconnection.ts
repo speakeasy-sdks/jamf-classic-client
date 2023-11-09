@@ -32,7 +32,7 @@ export class Gsxconnection {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/gsxconnection";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/gsxconnection";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -53,7 +53,7 @@ export class Gsxconnection {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -106,7 +106,7 @@ export class Gsxconnection {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/gsxconnection";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/gsxconnection";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -138,7 +138,7 @@ export class Gsxconnection {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",

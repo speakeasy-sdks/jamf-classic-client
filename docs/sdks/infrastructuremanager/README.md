@@ -1,5 +1,5 @@
 # Infrastructuremanager
-(*.infrastructuremanager*)
+(*infrastructuremanager*)
 
 ### Available Operations
 
@@ -26,7 +26,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.infrastructuremanager.findInfrastructureManager();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -42,8 +41,12 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.FindInfrastructureManagerResponse](../../models/operations/findinfrastructuremanagerresponse.md)>**
+**Promise<[operations.FindInfrastructureManagerResponse](../../sdk/models/operations/findinfrastructuremanagerresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findInfrastructureManagerById
 
@@ -66,7 +69,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 48223,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -75,16 +77,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `request`                                                                                                          | [operations.FindInfrastructureManagerByIdRequest](../../models/operations/findinfrastructuremanagerbyidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
-| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                              | [operations.FindInfrastructureManagerByIdRequest](../../sdk/models/operations/findinfrastructuremanagerbyidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
 
 
 ### Response
 
-**Promise<[operations.FindInfrastructureManagerByIdResponse](../../models/operations/findinfrastructuremanagerbyidresponse.md)>**
+**Promise<[operations.FindInfrastructureManagerByIdResponse](../../sdk/models/operations/findinfrastructuremanagerbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updateInfrastructureManagerById
 
@@ -107,7 +113,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 612584,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -116,13 +121,17 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
-| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                              | [operations.UpdateInfrastructureManagerByIdRequest](../../models/operations/updateinfrastructuremanagerbyidrequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
-| `config`                                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                           | :heavy_minus_sign:                                                                                                     | Available config options for making requests.                                                                          |
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                  | [operations.UpdateInfrastructureManagerByIdRequest](../../sdk/models/operations/updateinfrastructuremanagerbyidrequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+| `config`                                                                                                                   | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                               | :heavy_minus_sign:                                                                                                         | Available config options for making requests.                                                                              |
 
 
 ### Response
 
-**Promise<[operations.UpdateInfrastructureManagerByIdResponse](../../models/operations/updateinfrastructuremanagerbyidresponse.md)>**
+**Promise<[operations.UpdateInfrastructureManagerByIdResponse](../../sdk/models/operations/updateinfrastructuremanagerbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,5 +1,5 @@
 # Computerinventorycollection
-(*.computerinventorycollection*)
+(*computerinventorycollection*)
 
 ### Available Operations
 
@@ -25,7 +25,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.computerinventorycollection.findComputerInventoryCollection();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -41,8 +40,12 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.FindComputerInventoryCollectionResponse](../../models/operations/findcomputerinventorycollectionresponse.md)>**
+**Promise<[operations.FindComputerInventoryCollectionResponse](../../sdk/models/operations/findcomputerinventorycollectionresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updateComputerInventoryCollection
 
@@ -68,7 +71,6 @@ import {
 
   const res = await sdk.computerinventorycollection.updateComputerInventoryCollection(new TextEncoder().encode("0x0Aea3b0A0a"));
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -79,11 +81,15 @@ import {
 
 | Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `request`                                                    | [Uint8Array](../../models//.md)                              | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| `request`                                                    | [Uint8Array](../../models/.md)                               | :heavy_check_mark:                                           | The request object to use for the request.                   |
 | `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
 
-**Promise<[operations.UpdateComputerInventoryCollectionResponse](../../models/operations/updatecomputerinventorycollectionresponse.md)>**
+**Promise<[operations.UpdateComputerInventoryCollectionResponse](../../sdk/models/operations/updatecomputerinventorycollectionresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -32,7 +32,7 @@ export class Computerinventorycollection {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/computerinventorycollection";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/computerinventorycollection";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -53,7 +53,7 @@ export class Computerinventorycollection {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -107,7 +107,7 @@ export class Computerinventorycollection {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/computerinventorycollection";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/computerinventorycollection";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -139,7 +139,7 @@ export class Computerinventorycollection {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",

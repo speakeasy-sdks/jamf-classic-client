@@ -1,5 +1,5 @@
 # Patchpolicies
-(*.patchpolicies*)
+(*patchpolicies*)
 
 ### Available Operations
 
@@ -32,7 +32,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     softwaretitleconfigid: 205122,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -41,16 +40,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [operations.CreatePatchPolicyBySoftwareTitleConfigIdRequest](../../models/operations/createpatchpolicybysoftwaretitleconfigidrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-| `config`                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                             | :heavy_minus_sign:                                                                                                                       | Available config options for making requests.                                                                                            |
+| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                    | [operations.CreatePatchPolicyBySoftwareTitleConfigIdRequest](../../sdk/models/operations/createpatchpolicybysoftwaretitleconfigidrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
 
 
 ### Response
 
-**Promise<[operations.CreatePatchPolicyBySoftwareTitleConfigIdResponse](../../models/operations/createpatchpolicybysoftwaretitleconfigidresponse.md)>**
+**Promise<[operations.CreatePatchPolicyBySoftwareTitleConfigIdResponse](../../sdk/models/operations/createpatchpolicybysoftwaretitleconfigidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## deletePatchPolicyById
 
@@ -73,7 +76,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 891870,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -82,16 +84,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.DeletePatchPolicyByIdRequest](../../models/operations/deletepatchpolicybyidrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.DeletePatchPolicyByIdRequest](../../sdk/models/operations/deletepatchpolicybyidrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
 
 
 ### Response
 
-**Promise<[operations.DeletePatchPolicyByIdResponse](../../models/operations/deletepatchpolicybyidresponse.md)>**
+**Promise<[operations.DeletePatchPolicyByIdResponse](../../sdk/models/operations/deletepatchpolicybyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## ~~findPatchPolicies~~
 
@@ -114,7 +120,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.patchpolicies.findPatchPolicies();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -130,8 +135,12 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.FindPatchPoliciesResponse](../../models/operations/findpatchpoliciesresponse.md)>**
+**Promise<[operations.FindPatchPoliciesResponse](../../sdk/models/operations/findpatchpoliciesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findPatchPoliciesByIdSubset
 
@@ -156,7 +165,6 @@ import { FindPatchPoliciesByIdSubsetPathParamSubset } from "jamf-classic-sdk-nod
     subset: FindPatchPoliciesByIdSubsetPathParamSubset.General,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -165,16 +173,20 @@ import { FindPatchPoliciesByIdSubsetPathParamSubset } from "jamf-classic-sdk-nod
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.FindPatchPoliciesByIdSubsetRequest](../../models/operations/findpatchpoliciesbyidsubsetrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.FindPatchPoliciesByIdSubsetRequest](../../sdk/models/operations/findpatchpoliciesbyidsubsetrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
 
 
 ### Response
 
-**Promise<[operations.FindPatchPoliciesByIdSubsetResponse](../../models/operations/findpatchpoliciesbyidsubsetresponse.md)>**
+**Promise<[operations.FindPatchPoliciesByIdSubsetResponse](../../sdk/models/operations/findpatchpoliciesbyidsubsetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## ~~findPatchPoliciesBySoftwareTitleConfigId~~
 
@@ -199,7 +211,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     softwaretitleconfigid: 916770,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -208,16 +219,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                                                | Type                                                                                                                                     | Required                                                                                                                                 | Description                                                                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                                                | [operations.FindPatchPoliciesBySoftwareTitleConfigIdRequest](../../models/operations/findpatchpoliciesbysoftwaretitleconfigidrequest.md) | :heavy_check_mark:                                                                                                                       | The request object to use for the request.                                                                                               |
-| `config`                                                                                                                                 | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                             | :heavy_minus_sign:                                                                                                                       | Available config options for making requests.                                                                                            |
+| Parameter                                                                                                                                    | Type                                                                                                                                         | Required                                                                                                                                     | Description                                                                                                                                  |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                                                    | [operations.FindPatchPoliciesBySoftwareTitleConfigIdRequest](../../sdk/models/operations/findpatchpoliciesbysoftwaretitleconfigidrequest.md) | :heavy_check_mark:                                                                                                                           | The request object to use for the request.                                                                                                   |
+| `config`                                                                                                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                                                 | :heavy_minus_sign:                                                                                                                           | Available config options for making requests.                                                                                                |
 
 
 ### Response
 
-**Promise<[operations.FindPatchPoliciesBySoftwareTitleConfigIdResponse](../../models/operations/findpatchpoliciesbysoftwaretitleconfigidresponse.md)>**
+**Promise<[operations.FindPatchPoliciesBySoftwareTitleConfigIdResponse](../../sdk/models/operations/findpatchpoliciesbysoftwaretitleconfigidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findPatchPolicyById
 
@@ -240,7 +255,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 840291,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -249,16 +263,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
-| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| `request`                                                                                      | [operations.FindPatchPolicyByIdRequest](../../models/operations/findpatchpolicybyidrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
-| `config`                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                   | :heavy_minus_sign:                                                                             | Available config options for making requests.                                                  |
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `request`                                                                                          | [operations.FindPatchPolicyByIdRequest](../../sdk/models/operations/findpatchpolicybyidrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
 
 
 ### Response
 
-**Promise<[operations.FindPatchPolicyByIdResponse](../../models/operations/findpatchpolicybyidresponse.md)>**
+**Promise<[operations.FindPatchPolicyByIdResponse](../../sdk/models/operations/findpatchpolicybyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updatePatchPolicyById
 
@@ -281,7 +299,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 648752,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -290,13 +307,17 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
-| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `request`                                                                                          | [operations.UpdatePatchPolicyByIdRequest](../../models/operations/updatepatchpolicybyidrequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
-| `config`                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                       | :heavy_minus_sign:                                                                                 | Available config options for making requests.                                                      |
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                              | [operations.UpdatePatchPolicyByIdRequest](../../sdk/models/operations/updatepatchpolicybyidrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `config`                                                                                               | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                           | :heavy_minus_sign:                                                                                     | Available config options for making requests.                                                          |
 
 
 ### Response
 
-**Promise<[operations.UpdatePatchPolicyByIdResponse](../../models/operations/updatepatchpolicybyidresponse.md)>**
+**Promise<[operations.UpdatePatchPolicyByIdResponse](../../sdk/models/operations/updatepatchpolicybyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

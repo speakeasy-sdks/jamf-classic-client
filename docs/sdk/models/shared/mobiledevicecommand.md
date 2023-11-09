@@ -1,0 +1,9 @@
+# MobileDeviceCommand
+
+
+## Fields
+
+| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `general`                                                                                                 | [shared.MobileDeviceCommandGeneral](../../../sdk/models/shared/mobiledevicecommandgeneral.md)             | :heavy_minus_sign:                                                                                        | N/A                                                                                                       |
+| `mobileDevices`                                                                                           | [shared.MobileDeviceCommandMobileDevices](../../../sdk/models/shared/mobiledevicecommandmobiledevices.md) | :heavy_minus_sign:                                                                                        | N/A                                                                                                       |

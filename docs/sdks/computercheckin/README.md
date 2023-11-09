@@ -1,5 +1,5 @@
 # Computercheckin
-(*.computercheckin*)
+(*computercheckin*)
 
 ### Available Operations
 
@@ -25,7 +25,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.computercheckin.findComputerCheckin();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -41,8 +40,12 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.FindComputerCheckinResponse](../../models/operations/findcomputercheckinresponse.md)>**
+**Promise<[operations.FindComputerCheckinResponse](../../sdk/models/operations/findcomputercheckinresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updateComputerCheckin
 
@@ -63,7 +66,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.computercheckin.updateComputerCheckin(new TextEncoder().encode("0x49E6b89264"));
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -74,11 +76,15 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 | Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `request`                                                    | [Uint8Array](../../models//.md)                              | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| `request`                                                    | [Uint8Array](../../models/.md)                               | :heavy_check_mark:                                           | The request object to use for the request.                   |
 | `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
 
-**Promise<[operations.UpdateComputerCheckinResponse](../../models/operations/updatecomputercheckinresponse.md)>**
+**Promise<[operations.UpdateComputerCheckinResponse](../../sdk/models/operations/updatecomputercheckinresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

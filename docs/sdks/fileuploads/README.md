@@ -1,5 +1,5 @@
 # Fileuploads
-(*.fileuploads*)
+(*fileuploads*)
 
 ### Available Operations
 
@@ -29,7 +29,6 @@ import { PathParamIdType, Resource } from "jamf-classic-sdk-nodejs/dist/sdk/mode
     resource: Resource.Mobiledevices,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -38,13 +37,17 @@ import { PathParamIdType, Resource } from "jamf-classic-sdk-nodejs/dist/sdk/mode
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `request`                                                                      | [operations.UploadFilesRequest](../../models/operations/uploadfilesrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `config`                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                   | :heavy_minus_sign:                                                             | Available config options for making requests.                                  |
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `request`                                                                          | [operations.UploadFilesRequest](../../sdk/models/operations/uploadfilesrequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+| `config`                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                       | :heavy_minus_sign:                                                                 | Available config options for making requests.                                      |
 
 
 ### Response
 
-**Promise<[operations.UploadFilesResponse](../../models/operations/uploadfilesresponse.md)>**
+**Promise<[operations.UploadFilesResponse](../../sdk/models/operations/uploadfilesresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

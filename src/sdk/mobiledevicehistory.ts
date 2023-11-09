@@ -77,7 +77,11 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/mobiledevicehistory/id/{id}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/mobiledevicehistory/id/{id}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -98,7 +102,7 @@ export class Mobiledevicehistory {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -159,7 +163,7 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledevicehistory/id/{id}/subset/{subset}",
             req
@@ -180,7 +184,7 @@ export class Mobiledevicehistory {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -223,7 +227,7 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledevicehistory/macaddress/{macaddress}",
             req
@@ -248,7 +252,7 @@ export class Mobiledevicehistory {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -310,7 +314,7 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledevicehistory/macaddress/{macaddress}/subset/{subset}",
             req
@@ -335,7 +339,7 @@ export class Mobiledevicehistory {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -394,7 +398,11 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/mobiledevicehistory/name/{name}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/mobiledevicehistory/name/{name}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -415,7 +423,7 @@ export class Mobiledevicehistory {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -477,7 +485,7 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledevicehistory/name/{name}/subset/{subset}",
             req
@@ -502,7 +510,7 @@ export class Mobiledevicehistory {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -561,7 +569,7 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledevicehistory/serialnumber/{serialnumber}",
             req
@@ -586,7 +594,7 @@ export class Mobiledevicehistory {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -648,7 +656,7 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledevicehistory/serialnumber/{serialnumber}/subset/{subset}",
             req
@@ -673,7 +681,7 @@ export class Mobiledevicehistory {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -732,7 +740,11 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(baseURL, "/mobiledevicehistory/udid/{udid}", req);
+        const operationUrl: string = utils.generateURL(
+            baseURL,
+            "/mobiledevicehistory/udid/{udid}",
+            req
+        );
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -753,7 +765,7 @@ export class Mobiledevicehistory {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -815,7 +827,7 @@ export class Mobiledevicehistory {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/mobiledevicehistory/udid/{udid}/subset/{subset}",
             req
@@ -840,7 +852,7 @@ export class Mobiledevicehistory {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",

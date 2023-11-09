@@ -1,5 +1,5 @@
 # Healthcarelistener
-(*.healthcarelistener*)
+(*healthcarelistener*)
 
 ### Available Operations
 
@@ -26,7 +26,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.healthcarelistener.findHealthcareListener();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -42,8 +41,12 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.FindHealthcareListenerResponse](../../models/operations/findhealthcarelistenerresponse.md)>**
+**Promise<[operations.FindHealthcareListenerResponse](../../sdk/models/operations/findhealthcarelistenerresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## findHealthcareListenersById
 
@@ -66,7 +69,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 309302,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -75,16 +77,20 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                      | [operations.FindHealthcareListenersByIdRequest](../../models/operations/findhealthcarelistenersbyidrequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
-| `config`                                                                                                       | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                   | :heavy_minus_sign:                                                                                             | Available config options for making requests.                                                                  |
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `request`                                                                                                          | [operations.FindHealthcareListenersByIdRequest](../../sdk/models/operations/findhealthcarelistenersbyidrequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+| `config`                                                                                                           | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                       | :heavy_minus_sign:                                                                                                 | Available config options for making requests.                                                                      |
 
 
 ### Response
 
-**Promise<[operations.FindHealthcareListenersByIdResponse](../../models/operations/findhealthcarelistenersbyidresponse.md)>**
+**Promise<[operations.FindHealthcareListenersByIdResponse](../../sdk/models/operations/findhealthcarelistenersbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updateHealthCareListenerById
 
@@ -107,7 +113,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
     id: 68635,
   });
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -116,13 +121,17 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Parameters
 
-| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `request`                                                                                                        | [operations.UpdateHealthCareListenerByIdRequest](../../models/operations/updatehealthcarelistenerbyidrequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
-| `config`                                                                                                         | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                     | :heavy_minus_sign:                                                                                               | Available config options for making requests.                                                                    |
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `request`                                                                                                            | [operations.UpdateHealthCareListenerByIdRequest](../../sdk/models/operations/updatehealthcarelistenerbyidrequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+| `config`                                                                                                             | [AxiosRequestConfig](https://axios-http.com/docs/req_config)                                                         | :heavy_minus_sign:                                                                                                   | Available config options for making requests.                                                                        |
 
 
 ### Response
 
-**Promise<[operations.UpdateHealthCareListenerByIdResponse](../../models/operations/updatehealthcarelistenerbyidresponse.md)>**
+**Promise<[operations.UpdateHealthCareListenerByIdResponse](../../sdk/models/operations/updatehealthcarelistenerbyidresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

@@ -1,0 +1,11 @@
+# Peripheral
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `attachments`                                                                         | [shared.PeripheralAttachments](../../../sdk/models/shared/peripheralattachments.md)[] | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `general`                                                                             | [shared.PeripheralGeneral](../../../sdk/models/shared/peripheralgeneral.md)           | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `location`                                                                            | [shared.Location](../../../sdk/models/shared/location.md)                             | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `purchasing`                                                                          | [shared.Purchasing](../../../sdk/models/shared/purchasing.md)                         | :heavy_minus_sign:                                                                    | N/A                                                                                   |

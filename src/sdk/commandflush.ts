@@ -26,7 +26,7 @@ export class Commandflush {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/commandflush";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/commandflush";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -58,7 +58,7 @@ export class Commandflush {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",
@@ -100,7 +100,7 @@ export class Commandflush {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = utils.generateURL(
+        const operationUrl: string = utils.generateURL(
             baseURL,
             "/commandflush/{idtype}/id/{id}/status/{status}",
             req
@@ -121,7 +121,7 @@ export class Commandflush {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "delete",
             headers: headers,
             responseType: "arraybuffer",

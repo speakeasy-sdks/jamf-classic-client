@@ -1,0 +1,10 @@
+# MappingsForUsers
+
+
+## Fields
+
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `userGroupMappings`                                                                             | [shared.UserGroupMappings](../../../sdk/models/shared/usergroupmappings.md)                     | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `userGroupMembershipMappings`                                                                   | [shared.UserGroupMembershipMappings](../../../sdk/models/shared/usergroupmembershipmappings.md) | :heavy_minus_sign:                                                                              | N/A                                                                                             |
+| `userMappings`                                                                                  | [shared.UserMappings](../../../sdk/models/shared/usermappings.md)                               | :heavy_minus_sign:                                                                              | N/A                                                                                             |

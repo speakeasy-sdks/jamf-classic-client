@@ -32,7 +32,7 @@ export class Activationcode {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/activationcode";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/activationcode";
         const client: AxiosInstance = this.sdkConfiguration.defaultClient;
         let globalSecurity = this.sdkConfiguration.security;
         if (typeof globalSecurity === "function") {
@@ -53,7 +53,7 @@ export class Activationcode {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "get",
             headers: headers,
             responseType: "arraybuffer",
@@ -107,7 +107,7 @@ export class Activationcode {
             this.sdkConfiguration.serverURL,
             this.sdkConfiguration.serverDefaults
         );
-        const url: string = baseURL.replace(/\/$/, "") + "/activationcode";
+        const operationUrl: string = baseURL.replace(/\/$/, "") + "/activationcode";
 
         let [reqBodyHeaders, reqBody]: [object, any] = [{}, null];
 
@@ -139,7 +139,7 @@ export class Activationcode {
 
         const httpRes: AxiosResponse = await client.request({
             validateStatus: () => true,
-            url: url,
+            url: operationUrl,
             method: "put",
             headers: headers,
             responseType: "arraybuffer",

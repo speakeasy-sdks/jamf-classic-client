@@ -1,5 +1,5 @@
 # Smtpserver
-(*.smtpserver*)
+(*smtpserver*)
 
 ### Available Operations
 
@@ -25,7 +25,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.smtpserver.findSMTPServer();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -41,8 +40,12 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.FindSMTPServerResponse](../../models/operations/findsmtpserverresponse.md)>**
+**Promise<[operations.FindSMTPServerResponse](../../sdk/models/operations/findsmtpserverresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
 
 ## updateSMTPServer
 
@@ -63,7 +66,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.smtpserver.updateSMTPServer(new TextEncoder().encode("0xAA066c5d9b"));
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -74,11 +76,15 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 | Parameter                                                    | Type                                                         | Required                                                     | Description                                                  |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| `request`                                                    | [Uint8Array](../../models//.md)                              | :heavy_check_mark:                                           | The request object to use for the request.                   |
+| `request`                                                    | [Uint8Array](../../models/.md)                               | :heavy_check_mark:                                           | The request object to use for the request.                   |
 | `config`                                                     | [AxiosRequestConfig](https://axios-http.com/docs/req_config) | :heavy_minus_sign:                                           | Available config options for making requests.                |
 
 
 ### Response
 
-**Promise<[operations.UpdateSMTPServerResponse](../../models/operations/updatesmtpserverresponse.md)>**
+**Promise<[operations.UpdateSMTPServerResponse](../../sdk/models/operations/updatesmtpserverresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |

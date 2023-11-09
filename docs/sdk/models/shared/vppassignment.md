@@ -1,0 +1,12 @@
+# VppAssignment
+
+
+## Fields
+
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `ebooks`                                                                          | [shared.VppAssignmentEbooks](../../../sdk/models/shared/vppassignmentebooks.md)[] | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `general`                                                                         | [shared.VppAssignmentGeneral](../../../sdk/models/shared/vppassignmentgeneral.md) | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `iosApps`                                                                         | [shared.IosApps](../../../sdk/models/shared/iosapps.md)[]                         | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `macApps`                                                                         | [shared.MacApps](../../../sdk/models/shared/macapps.md)[]                         | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `scope`                                                                           | [shared.VppAssignmentScope](../../../sdk/models/shared/vppassignmentscope.md)     | :heavy_minus_sign:                                                                | N/A                                                                               |

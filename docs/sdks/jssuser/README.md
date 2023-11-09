@@ -1,5 +1,5 @@
 # Jssuser
-(*.jssuser*)
+(*jssuser*)
 
 ### Available Operations
 
@@ -26,7 +26,6 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
   const res = await sdk.jssuser.jssuserGet();
 
-
   if (res.statusCode == 200) {
     // handle response
   }
@@ -42,5 +41,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 
 ### Response
 
-**Promise<[operations.JssuserGetResponse](../../models/operations/jssusergetresponse.md)>**
+**Promise<[operations.JssuserGetResponse](../../sdk/models/operations/jssusergetresponse.md)>**
+### Errors
 
+| Error Object    | Status Code     | Content Type    |
+| --------------- | --------------- | --------------- |
+| errors.SDKError | 400-600         | */*             |
