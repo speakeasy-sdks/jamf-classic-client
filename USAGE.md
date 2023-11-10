@@ -1,6 +1,4 @@
 <!-- Start SDK Example Usage -->
-
-
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 

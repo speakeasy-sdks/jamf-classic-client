@@ -2,21 +2,23 @@ configVersion: 1.0.0
 management:
   docChecksum: 6c666f8514d4102cea0bdf1e68fde734
   docVersion: 10.48.0
-  speakeasyVersion: 1.116.0
-  generationVersion: 2.185.0
+  speakeasyVersion: 1.118.3
+  generationVersion: 2.187.7
 generation:
   comments: {}
   sdkClassName: jamf
   repoURL: https://github.com/speakeasy-sdks/jamf-classic-client.git
+  usageSnippets:
+    optionalPropertyRendering: withExample
 features:
   typescript:
     acceptHeaders: 2.81.1
-    core: 3.1.2
+    core: 3.1.3
     deprecations: 2.81.1
     globalSecurity: 2.82.0
     globalServerURLs: 2.82.0
 typescript:
-  version: 2.0.1
+  version: 2.0.2
   author: halosync
   clientServerStatusCodesAsErrors: false
   flattenGlobalSecurity: false

@@ -94,7 +94,7 @@ export class Mobiledeviceprovisioningprofiles {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -103,7 +103,7 @@ export class Mobiledeviceprovisioningprofiles {
         const res: operations.CreateMobileDeviceProvisioningProfilesByIdResponse =
             new operations.CreateMobileDeviceProvisioningProfilesByIdResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         switch (true) {
@@ -157,7 +157,7 @@ export class Mobiledeviceprovisioningprofiles {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -166,7 +166,7 @@ export class Mobiledeviceprovisioningprofiles {
         const res: operations.CreateMobileDeviceProvisioningProfilesByNameResponse =
             new operations.CreateMobileDeviceProvisioningProfilesByNameResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         switch (true) {
@@ -220,7 +220,7 @@ export class Mobiledeviceprovisioningprofiles {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -229,7 +229,7 @@ export class Mobiledeviceprovisioningprofiles {
         const res: operations.CreateMobileDeviceProvisioningProfilesByUUIDResponse =
             new operations.CreateMobileDeviceProvisioningProfilesByUUIDResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         switch (true) {
@@ -283,7 +283,7 @@ export class Mobiledeviceprovisioningprofiles {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -292,7 +292,7 @@ export class Mobiledeviceprovisioningprofiles {
         const res: operations.DeleteMobileDeviceProvisioningProfilesByIdResponse =
             new operations.DeleteMobileDeviceProvisioningProfilesByIdResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         switch (true) {
@@ -346,7 +346,7 @@ export class Mobiledeviceprovisioningprofiles {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -355,7 +355,7 @@ export class Mobiledeviceprovisioningprofiles {
         const res: operations.DeleteMobileDeviceProvisioningProfilesByNameResponse =
             new operations.DeleteMobileDeviceProvisioningProfilesByNameResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         switch (true) {
@@ -409,7 +409,7 @@ export class Mobiledeviceprovisioningprofiles {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -418,7 +418,7 @@ export class Mobiledeviceprovisioningprofiles {
         const res: operations.DeleteMobileDeviceProvisioningProfilesByUUIDResponse =
             new operations.DeleteMobileDeviceProvisioningProfilesByUUIDResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         switch (true) {
@@ -469,7 +469,7 @@ export class Mobiledeviceprovisioningprofiles {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -478,13 +478,13 @@ export class Mobiledeviceprovisioningprofiles {
         const res: operations.FindMobileDeviceProvisioningProfilesResponse =
             new operations.FindMobileDeviceProvisioningProfilesResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.twoHundredApplicationJsonMobileDeviceProvisioningProfiles = [];
                     const resFieldDepth: number = utils.getResFieldDepth(res);
                     res.twoHundredApplicationJsonMobileDeviceProvisioningProfiles =
@@ -493,11 +493,11 @@ export class Mobiledeviceprovisioningprofiles {
                             shared.MobileDeviceProvisioningProfiles,
                             resFieldDepth
                         );
-                } else if (utils.matchContentType(contentType, `application/xml`)) {
+                } else if (utils.matchContentType(responseContentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -557,7 +557,7 @@ export class Mobiledeviceprovisioningprofiles {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -566,22 +566,22 @@ export class Mobiledeviceprovisioningprofiles {
         const res: operations.FindMobileDeviceProvisioningProfilesByIdResponse =
             new operations.FindMobileDeviceProvisioningProfilesByIdResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.mobileDeviceProvisioningProfile = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.MobileDeviceProvisioningProfile
                     );
-                } else if (utils.matchContentType(contentType, `application/xml`)) {
+                } else if (utils.matchContentType(responseContentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -641,7 +641,7 @@ export class Mobiledeviceprovisioningprofiles {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -650,22 +650,22 @@ export class Mobiledeviceprovisioningprofiles {
         const res: operations.FindMobileDeviceProvisioningProfilesByNameResponse =
             new operations.FindMobileDeviceProvisioningProfilesByNameResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.mobileDeviceProvisioningProfile = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.MobileDeviceProvisioningProfile
                     );
-                } else if (utils.matchContentType(contentType, `application/xml`)) {
+                } else if (utils.matchContentType(responseContentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -725,7 +725,7 @@ export class Mobiledeviceprovisioningprofiles {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -734,22 +734,22 @@ export class Mobiledeviceprovisioningprofiles {
         const res: operations.FindMobileDeviceProvisioningProfilesByUUIDResponse =
             new operations.FindMobileDeviceProvisioningProfilesByUUIDResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.mobileDeviceProvisioningProfile = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.MobileDeviceProvisioningProfile
                     );
-                } else if (utils.matchContentType(contentType, `application/xml`)) {
+                } else if (utils.matchContentType(responseContentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -809,7 +809,7 @@ export class Mobiledeviceprovisioningprofiles {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -818,22 +818,22 @@ export class Mobiledeviceprovisioningprofiles {
         const res: operations.UpdateMobileDeviceProvisioningProfilesByIdResponse =
             new operations.UpdateMobileDeviceProvisioningProfilesByIdResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.mobileDeviceProvisioningProfile = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.MobileDeviceProvisioningProfile
                     );
-                } else if (utils.matchContentType(contentType, `application/xml`)) {
+                } else if (utils.matchContentType(responseContentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -893,7 +893,7 @@ export class Mobiledeviceprovisioningprofiles {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -902,22 +902,22 @@ export class Mobiledeviceprovisioningprofiles {
         const res: operations.UpdateMobileDeviceProvisioningProfilesByNameResponse =
             new operations.UpdateMobileDeviceProvisioningProfilesByNameResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.mobileDeviceProvisioningProfile = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.MobileDeviceProvisioningProfile
                     );
-                } else if (utils.matchContentType(contentType, `application/xml`)) {
+                } else if (utils.matchContentType(responseContentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes
@@ -977,7 +977,7 @@ export class Mobiledeviceprovisioningprofiles {
             ...config,
         });
 
-        const contentType: string = httpRes?.headers?.["content-type"] ?? "";
+        const responseContentType: string = httpRes?.headers?.["content-type"] ?? "";
 
         if (httpRes?.status == null) {
             throw new Error(`status code not found in response: ${httpRes}`);
@@ -986,22 +986,22 @@ export class Mobiledeviceprovisioningprofiles {
         const res: operations.UpdateMobileDeviceProvisioningProfilesByUUIDResponse =
             new operations.UpdateMobileDeviceProvisioningProfilesByUUIDResponse({
                 statusCode: httpRes.status,
-                contentType: contentType,
+                contentType: responseContentType,
                 rawResponse: httpRes,
             });
         const decodedRes = new TextDecoder().decode(httpRes?.data);
         switch (true) {
             case httpRes?.status == 200:
-                if (utils.matchContentType(contentType, `application/json`)) {
+                if (utils.matchContentType(responseContentType, `application/json`)) {
                     res.mobileDeviceProvisioningProfile = utils.objectToClass(
                         JSON.parse(decodedRes),
                         shared.MobileDeviceProvisioningProfile
                     );
-                } else if (utils.matchContentType(contentType, `application/xml`)) {
+                } else if (utils.matchContentType(responseContentType, `application/xml`)) {
                     res.body = httpRes?.data;
                 } else {
                     throw new errors.SDKError(
-                        "unknown content-type received: " + contentType,
+                        "unknown content-type received: " + responseContentType,
                         httpRes.status,
                         decodedRes,
                         httpRes

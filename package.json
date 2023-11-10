@@ -1,6 +1,6 @@
 {
   "name": "jamf-classic-sdk-nodejs",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "halosync",
   "scripts": {
     "prepare": "tsc --build",
