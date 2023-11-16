@@ -30,5 +30,5 @@ export class CreateMobileDeviceProvisioningProfilesByNameResponse extends Speake
      * Raw HTTP response; suitable for custom response parsing
      */
     @SpeakeasyMetadata()
-    rawResponse?: AxiosResponse;
+    rawResponse: AxiosResponse;
 }
