@@ -28,11 +28,11 @@ Creates a new account by ID
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -43,7 +43,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -72,11 +74,11 @@ Groups created via this endpoint are created only within Jamf Pro and will not a
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -87,7 +89,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -116,11 +120,11 @@ Deletes an account by ID
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -131,7 +135,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -160,11 +166,11 @@ Deletes an account by name
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -175,7 +181,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -204,11 +212,11 @@ Deletes a group by ID
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -219,7 +227,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -248,11 +258,11 @@ Deletes a group by name
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -263,7 +273,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -292,11 +304,11 @@ Finds all accounts
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -305,7 +317,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -333,11 +347,11 @@ Finds accounts by ID
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -348,7 +362,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -377,11 +393,11 @@ Finds accounts by name
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -392,7 +408,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -421,11 +439,11 @@ Finds groups by ID
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -436,7 +454,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -465,11 +485,11 @@ Finds groups by name
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -480,7 +500,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -509,11 +531,11 @@ Updates an existing account by ID
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -524,7 +546,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -553,11 +577,11 @@ Updates an existing account by name
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -568,7 +592,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -597,11 +623,11 @@ Groups updated via this endpoint are updated only within Jamf Pro and will not a
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -612,7 +638,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -641,11 +669,11 @@ Groups updated via this endpoint are updated only within Jamf Pro and will not a
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -656,7 +684,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

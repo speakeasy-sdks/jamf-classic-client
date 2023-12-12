@@ -17,11 +17,11 @@ Creates a new Healthcare Listener rule
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -32,7 +32,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -61,11 +63,11 @@ Find all Healthcare Listener rules
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -74,7 +76,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -102,11 +106,11 @@ Finds Healthcare Listener rules by ID
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -117,7 +121,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -146,11 +152,11 @@ Updates an existing Healthcare Listener rule by ID
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -161,7 +167,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

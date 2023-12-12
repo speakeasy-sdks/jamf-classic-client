@@ -21,11 +21,11 @@ Only one of script_contents_encoded and script_contents should be submitted.
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -36,7 +36,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -65,11 +67,11 @@ Deletes a script by ID
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -80,7 +82,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -109,11 +113,11 @@ Deletes a script by name
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -124,7 +128,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -153,11 +159,11 @@ Finds all scripts
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -166,7 +172,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -194,11 +202,11 @@ script_contents_encoded is the equivalent of script_contents, but it has been Ba
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -209,7 +217,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -238,11 +248,11 @@ script_contents_encoded is the equivalent of script_contents, but it has been Ba
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -253,7 +263,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -282,11 +294,11 @@ Only one of script_contents_encoded and script_contents should be submitted.
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -297,7 +309,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -326,11 +340,11 @@ Only one of script_contents_encoded and script_contents should be submitted.
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -341,7 +355,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

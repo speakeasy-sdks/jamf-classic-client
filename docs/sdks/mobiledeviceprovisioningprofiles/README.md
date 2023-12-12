@@ -26,11 +26,11 @@ Creates a mobile device provisioning profiles by id
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -41,7 +41,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -70,11 +72,11 @@ Creates a mobile device provisioning profiles by name
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -85,7 +87,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -114,11 +118,11 @@ Creates a mobile device provisioning profiles by uuid
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -129,7 +133,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -158,11 +164,11 @@ Deletes a mobile device provisioning profiles by id
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -173,7 +179,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -202,11 +210,11 @@ Deletes a mobile device provisioning profiles by name
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -217,7 +225,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -246,11 +256,11 @@ Deletes a mobile device provisioning profiles by uuid
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -261,7 +271,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -290,11 +302,11 @@ Finds all mobile device provisioning profiles
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -303,7 +315,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -331,11 +345,11 @@ Finds a mobile device provisioning profiles by id
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -346,7 +360,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -375,11 +391,11 @@ Finds a mobile device provisioning profiles by name
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -390,7 +406,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -419,11 +437,11 @@ Finds a mobile device provisioning profiles by uuid
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -434,7 +452,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -463,11 +483,11 @@ Updates an existing mobile device provisioning profiles by id
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -478,7 +498,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -507,11 +529,11 @@ Updates an existing mobile device provisioning profiles by name
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -522,7 +544,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -551,11 +575,11 @@ Updates an existing mobile device provisioning profiles by uuid
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -566,7 +590,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

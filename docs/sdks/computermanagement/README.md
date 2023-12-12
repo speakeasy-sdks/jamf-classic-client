@@ -38,11 +38,11 @@ Finds computer management information by ID
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -53,7 +53,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -82,11 +84,11 @@ Display patch management information for a computer and filter
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -98,7 +100,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -128,11 +132,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { FindComputerManagementByIdSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -144,7 +148,9 @@ import { FindComputerManagementByIdSubsetPathParamSubset } from "jamf-classic-sd
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -173,11 +179,11 @@ Finds management information for a computer and username
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -189,7 +195,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -219,11 +227,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { FindComputerManagementByIdUsernameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -236,7 +244,9 @@ import { FindComputerManagementByIdUsernameSubsetPathParamSubset } from "jamf-cl
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -265,11 +275,11 @@ Finds computer management information by MAC address
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -280,7 +290,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -309,11 +321,11 @@ Display patch management information for a computer and filter
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -325,7 +337,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -355,11 +369,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { FindComputerManagementByMacAddressSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -371,7 +385,9 @@ import { FindComputerManagementByMacAddressSubsetPathParamSubset } from "jamf-cl
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -400,11 +416,11 @@ Finds management information for a computer and username
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -416,7 +432,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -446,11 +464,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { FindComputerManagementByMacAddressUsernameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -463,7 +481,9 @@ import { FindComputerManagementByMacAddressUsernameSubsetPathParamSubset } from 
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -492,11 +512,11 @@ Finds computer management information by name
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -507,7 +527,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -536,11 +558,11 @@ Display patch management information for a computer and filter
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -552,7 +574,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -582,11 +606,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { FindComputerManagementByNameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -598,7 +622,9 @@ import { FindComputerManagementByNameSubsetPathParamSubset } from "jamf-classic-
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -627,11 +653,11 @@ Finds management information for a computer and username
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -643,7 +669,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -673,11 +701,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { FindComputerManagementByNameUsernameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -690,7 +718,9 @@ import { FindComputerManagementByNameUsernameSubsetPathParamSubset } from "jamf-
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -719,11 +749,11 @@ Finds computer management information by serial number
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -734,7 +764,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -763,11 +795,11 @@ Display patch management information for a computer and filter
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -779,7 +811,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -809,11 +843,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { FindComputerManagementBySerialNumberSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -825,7 +859,9 @@ import { FindComputerManagementBySerialNumberSubsetPathParamSubset } from "jamf-
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -854,11 +890,11 @@ Finds management information for a computer and username
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -870,7 +906,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -900,11 +938,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { FindComputerManagementBySerialNumberUsernameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -917,7 +955,9 @@ import { FindComputerManagementBySerialNumberUsernameSubsetPathParamSubset } fro
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -946,11 +986,11 @@ Finds computer management information by UDID
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -961,7 +1001,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -991,11 +1033,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { FindComputerManagementByUDIDSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -1007,7 +1049,9 @@ import { FindComputerManagementByUDIDSubsetPathParamSubset } from "jamf-classic-
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1036,11 +1080,11 @@ Display patch management information for a computer and filter
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -1052,7 +1096,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1081,11 +1127,11 @@ Finds management information for a computer and username
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -1097,7 +1143,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -1127,11 +1175,11 @@ Subset values can also be appended using an ampersand to return multiple subsets
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { FindComputerManagementByUdidUsernameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -1144,7 +1192,9 @@ import { FindComputerManagementByUdidUsernameSubsetPathParamSubset } from "jamf-
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

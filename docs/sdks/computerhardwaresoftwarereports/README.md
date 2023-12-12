@@ -24,11 +24,11 @@ Finds hardware/software reports by computer ID
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -41,7 +41,9 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -72,11 +74,11 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 import { Subset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -90,7 +92,9 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -120,11 +124,11 @@ Finds hardware/software reports by computer MAC address
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -137,7 +141,9 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -168,11 +174,11 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 import { PathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -186,7 +192,9 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -216,11 +224,11 @@ Finds hardware/software reports by computer name
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -233,7 +241,9 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -264,11 +274,11 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 import { FindComputerHardwareSoftwareReportsByNameSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -282,7 +292,9 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -312,11 +324,11 @@ Finds hardware/software reports by computer serial number
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -329,7 +341,9 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -360,11 +374,11 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 import { FindComputerHardwareSoftwareReportsBySerialSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -378,7 +392,9 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -408,11 +424,11 @@ Finds hardware/software reports by computer UDID
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -425,7 +441,9 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -456,11 +474,11 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
 import { FindComputerHardwareSoftwareReportsByUDIDSubsetPathParamSubset } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -474,7 +492,9 @@ import { RFCDate } from "jamf-classic-sdk-nodejs/dist/sdk/types";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

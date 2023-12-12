@@ -888,7 +888,6 @@ src/sdk/models/shared/security.ts
 src/sdk/models/errors/index.ts
 src/sdk/models/operations/index.ts
 src/sdk/models/shared/index.ts
-USAGE.md
 docs/sdk/models/operations/createaccountbyidrequest.md
 docs/sdk/models/operations/createaccountbyidresponse.md
 docs/sdk/models/operations/creategroupbyidrequest.md
@@ -3051,4 +3050,5 @@ docs/sdks/vppaccounts/README.md
 docs/sdks/vppassignments/README.md
 docs/sdks/vppinvitations/README.md
 docs/sdks/webhooks/README.md
+USAGE.md
 .gitattributes

@@ -35,11 +35,11 @@ The chart below includes additional requirements for usage of specific commands
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { Command } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -50,7 +50,9 @@ import { Command } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -80,11 +82,11 @@ Creates a new computer command with a command specific action. Commands supporte
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { Action, PathParamCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -97,7 +99,9 @@ import { Action, PathParamCommand } from "jamf-classic-sdk-nodejs/dist/sdk/model
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -127,11 +131,11 @@ Creates a new computer command using command name and device IDs
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { CreateComputerCommandByCommandAndIdPathParamCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -143,7 +147,9 @@ import { CreateComputerCommandByCommandAndIdPathParamCommand } from "jamf-classi
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -173,11 +179,11 @@ Issuing a DeviceLock and EraseDevice command requires a 6 character passcode.
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { CreateComputerCommandByCommandIdAndPasscodePathParamCommand } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -190,7 +196,9 @@ import { CreateComputerCommandByCommandIdAndPasscodePathParamCommand } from "jam
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -219,11 +227,11 @@ Finds all computer commands
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -232,7 +240,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -260,11 +270,11 @@ Finds all computer commands by name
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -275,7 +285,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -304,11 +316,11 @@ Finds a computer command by UUID
 ```typescript
 import { Jamf } from "jamf-classic-sdk-nodejs";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -319,7 +331,9 @@ import { Jamf } from "jamf-classic-sdk-nodejs";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

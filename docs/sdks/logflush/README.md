@@ -17,11 +17,11 @@ Flushes all logs for a given interval
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { Log } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -33,7 +33,9 @@ import { Log } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -63,11 +65,11 @@ Flushes a single log for a given interval
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { PathParamLog } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -80,7 +82,9 @@ import { PathParamLog } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -110,11 +114,11 @@ Flushes a log specified in an XML file
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { Interval, Log } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -123,7 +127,9 @@ import { Interval, Log } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

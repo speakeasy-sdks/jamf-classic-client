@@ -16,11 +16,11 @@ Flushes commands based on information specified in an XML file
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { Status } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -29,7 +29,9 @@ import { Status } from "jamf-classic-sdk-nodejs/dist/sdk/models/shared";
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
@@ -59,11 +61,11 @@ Flushes commands for devices
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { Idtype, Status } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -76,7 +78,9 @@ import { Idtype, Status } from "jamf-classic-sdk-nodejs/dist/sdk/models/operatio
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters

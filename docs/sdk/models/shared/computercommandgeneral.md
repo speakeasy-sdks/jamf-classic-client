@@ -7,7 +7,7 @@
 | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ | ------------------------------------ |
 | `apnsResultStatus`                   | *string*                             | :heavy_minus_sign:                   | N/A                                  | Acknowledged                         |
 | `command`                            | *string*                             | :heavy_minus_sign:                   | Command type                         | InstallProfile                       |
-| `dateSent`                           | *string*                             | :heavy_minus_sign:                   | N/A                                  | 2017-07-07 18:37:04                  |
+| `dateSent`                           | *string*                             | :heavy_minus_sign:                   | N/A                                  | 2017-07-07 18:37:04 +0000 UTC        |
 | `dateSentEpoch`                      | *string*                             | :heavy_minus_sign:                   | N/A                                  | 1499470624555                        |
 | `dateSentUtc`                        | *string*                             | :heavy_minus_sign:                   | N/A                                  | 2017-07-07T18:37:04.555-0500         |
 | `id`                                 | *number*                             | :heavy_minus_sign:                   | N/A                                  | 1002                                 |

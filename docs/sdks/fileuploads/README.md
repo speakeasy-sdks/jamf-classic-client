@@ -15,11 +15,11 @@ Here is a sample command curl -k -u user:password https://my.server.com:8443/JSS
 import { Jamf } from "jamf-classic-sdk-nodejs";
 import { PathParamIdType, Resource } from "jamf-classic-sdk-nodejs/dist/sdk/models/operations";
 
-(async() => {
+async function run() {
   const sdk = new Jamf({
     security: {
-      password: "",
-      username: "",
+      password: "<YOUR_PASSWORD_HERE>",
+      username: "<YOUR_USERNAME_HERE>",
     },
   });
 
@@ -32,7 +32,9 @@ import { PathParamIdType, Resource } from "jamf-classic-sdk-nodejs/dist/sdk/mode
   if (res.statusCode == 200) {
     // handle response
   }
-})();
+}
+
+run();
 ```
 
 ### Parameters
