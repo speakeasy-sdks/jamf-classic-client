@@ -28,9 +28,9 @@ async function run() {
   });
 
   const res = await sdk.computerapplicationusage.findComputerApplicationUsageById({
-    endDate: new RFCDate("2022-08-06"),
+    endDate: new RFCDate("2023-08-07"),
     id: "<ID>",
-    startDate: new RFCDate("2023-06-04"),
+    startDate: new RFCDate("2024-06-04"),
   });
 
   if (res.statusCode == 200) {
