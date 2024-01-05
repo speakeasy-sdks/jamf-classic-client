@@ -1,24 +1,10 @@
-configVersion: 1.0.0
-management:
-  docChecksum: 6c666f8514d4102cea0bdf1e68fde734
-  docVersion: 10.48.0
-  speakeasyVersion: 1.129.1
-  generationVersion: 2.223.3
+configVersion: 2.0.0
 generation:
-  comments: {}
   sdkClassName: jamf
-  repoURL: https://github.com/speakeasy-sdks/jamf-classic-client.git
   usageSnippets:
     optionalPropertyRendering: withExample
   fixes:
     nameResolutionDec2023: false
-features:
-  typescript:
-    acceptHeaders: 2.81.1
-    core: 3.3.12
-    deprecations: 2.81.1
-    globalSecurity: 2.82.2
-    globalServerURLs: 2.82.1
 typescript:
   version: 2.1.2
   author: halosync
@@ -33,10 +19,7 @@ typescript:
       shared: sdk/models/shared
       webhooks: sdk/models/webhooks
   inputModelSuffix: input
-  installationURL: https://github.com/speakeasy-sdks/jamf-classic-client
   maxMethodParams: 0
   outputModelSuffix: output
   packageName: jamf-classic-sdk-nodejs
-  published: true
-  repoSubDirectory: .
   templateVersion: v1
