@@ -26,7 +26,7 @@ async function run() {
   });
 
   const res = await sdk.logflush.createLogFlushForInterval({
-    interval: "string",
+    interval: "<value>",
     log: Log.Policy,
   });
 
@@ -74,8 +74,8 @@ async function run() {
   });
 
   const res = await sdk.logflush.createLogFlushWithIdAndInterval({
-    id: "<ID>",
-    interval: "string",
+    id: "<id>",
+    interval: "<value>",
     log: PathParamLog.Policy,
   });
 

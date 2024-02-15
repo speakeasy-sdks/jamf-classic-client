@@ -26,8 +26,8 @@ async function run() {
   });
 
   const res = await sdk.computerapplications.findComputerApplicationByNameAndVersion({
-    application: "string",
-    version: "string",
+    application: "<value>",
+    version: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -73,7 +73,7 @@ async function run() {
   });
 
   const res = await sdk.computerapplications.findComputerApplicationsByName({
-    application: "string",
+    application: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -119,9 +119,9 @@ async function run() {
   });
 
   const res = await sdk.computerapplications.findComputerApplicationsByNameAndVersionAndInventory({
-    application: "string",
-    inventory: "string",
-    version: "string",
+    application: "<value>",
+    inventory: "<value>",
+    version: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -167,8 +167,8 @@ async function run() {
   });
 
   const res = await sdk.computerapplications.findComputerApplicationsByNameInventory({
-    application: "string",
-    inventory: "string",
+    application: "<value>",
+    inventory: "<value>",
   });
 
   if (res.statusCode == 200) {

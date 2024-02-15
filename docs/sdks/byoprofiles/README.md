@@ -122,7 +122,7 @@ async function run() {
   });
 
   const res = await sdk.byoprofiles.deleteBYOProfilesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -257,7 +257,7 @@ async function run() {
   });
 
   const res = await sdk.byoprofiles.findBYOProfilesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -349,7 +349,7 @@ async function run() {
   });
 
   const res = await sdk.byoprofiles.updateBYOProfilesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

@@ -122,7 +122,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevicegroups.deleteMobileDeviceGroupByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -257,7 +257,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevicegroups.findMobileDeviceGroupsByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -349,7 +349,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevicegroups.updateMobileDeviceGroupByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

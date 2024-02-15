@@ -124,7 +124,7 @@ async function run() {
   });
 
   const res = await sdk.osxconfigurationprofiles.deleteOsxConfigurationProfileByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ async function run() {
   });
 
   const res = await sdk.osxconfigurationprofiles.findOsxConfigurationProfilesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -354,7 +354,7 @@ async function run() {
   });
 
   const res = await sdk.osxconfigurationprofiles.findOsxConfigurationProfilesByNameSubset({
-    name: "string",
+    name: "<value>",
     subset: FindOsxConfigurationProfilesByNameSubsetPathParamSubset.General,
   });
 
@@ -447,7 +447,7 @@ async function run() {
   });
 
   const res = await sdk.osxconfigurationprofiles.updateOsxConfigurationProfileByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

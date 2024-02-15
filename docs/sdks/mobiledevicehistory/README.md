@@ -126,7 +126,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByMacAddress({
-    macaddress: "string",
+    macaddress: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -173,7 +173,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByMacAddressSubset({
-    macaddress: "string",
+    macaddress: "<value>",
     subset: FindMobileDeviceHistoryByMacAddressSubsetPathParamSubset.Applications,
   });
 
@@ -220,7 +220,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -267,7 +267,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByNameSubset({
-    name: "string",
+    name: "<value>",
     subset: FindMobileDeviceHistoryByNameSubsetPathParamSubset.UserLocation,
   });
 
@@ -314,7 +314,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryBySerialNumber({
-    serialnumber: "string",
+    serialnumber: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -361,7 +361,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryBySerialNumberSubset({
-    serialnumber: "string",
+    serialnumber: "<value>",
     subset: FindMobileDeviceHistoryBySerialNumberSubsetPathParamSubset.General,
   });
 
@@ -408,7 +408,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByUDID({
-    udid: "string",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -456,7 +456,7 @@ async function run() {
 
   const res = await sdk.mobiledevicehistory.findMobileDeviceHistoryByUDIDSubset({
     subset: FindMobileDeviceHistoryByUDIDSubsetPathParamSubset.ManagementCommands,
-    udid: "string",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {

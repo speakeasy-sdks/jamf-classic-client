@@ -127,7 +127,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceenrollmentprofiles.deleteMobileDeviceEnrollmentProfileByInvitation({
-    invitation: "string",
+    invitation: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -173,7 +173,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceenrollmentprofiles.deleteMobileDeviceEnrollmentProfileByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -356,7 +356,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByInvitation({
-    invitation: "string",
+    invitation: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -402,7 +402,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -449,7 +449,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceenrollmentprofiles.findMobileDeviceEnrollmentProfilesByNameSubset({
-    name: "string",
+    name: "<value>",
     subset: FindMobileDeviceEnrollmentProfilesByNameSubsetPathParamSubset.Purchasing,
   });
 
@@ -542,7 +542,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceenrollmentprofiles.updateMobileDeviceEnrollmentProfileByInvitation({
-    invitation: "string",
+    invitation: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -588,7 +588,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceenrollmentprofiles.updateMobileDeviceEnrollmentProfileByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

@@ -122,7 +122,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceextensionattributes.deleteMobiledeviceextensionattributeByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -257,7 +257,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceextensionattributes.findMobiledeviceextensionattributesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -349,7 +349,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceextensionattributes.updateMobiledeviceextensionattributeByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

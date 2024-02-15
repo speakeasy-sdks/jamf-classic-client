@@ -122,7 +122,7 @@ async function run() {
   });
 
   const res = await sdk.computerextensionattributes.deleteComputerextensionattributeByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -257,7 +257,7 @@ async function run() {
   });
 
   const res = await sdk.computerextensionattributes.findComputerextensionattributesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -349,7 +349,7 @@ async function run() {
   });
 
   const res = await sdk.computerextensionattributes.updateComputerextensionattributeByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

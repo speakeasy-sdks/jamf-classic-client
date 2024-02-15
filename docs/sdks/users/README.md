@@ -171,7 +171,7 @@ async function run() {
   });
 
   const res = await sdk.users.deleteUserByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -352,7 +352,7 @@ async function run() {
   });
 
   const res = await sdk.users.findUsersByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -490,7 +490,7 @@ async function run() {
   });
 
   const res = await sdk.users.updateUserByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

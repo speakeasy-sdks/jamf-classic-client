@@ -84,7 +84,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceapplications.deleteMobileDeviceApplicationByBundleID({
-    bundleid: "string",
+    bundleid: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -130,8 +130,8 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceapplications.deleteMobileDeviceApplicationByBundleIDandVersion({
-    bundleid: "string",
-    version: "string",
+    bundleid: "<value>",
+    version: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -223,7 +223,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceapplications.deleteMobileDeviceApplicationByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -312,7 +312,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceapplications.findMobileDeviceApplicationsByBundleID({
-    bundleid: "string",
+    bundleid: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -358,8 +358,8 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceapplications.findMobileDeviceApplicationsByBundleIDandVersion({
-    bundleid: "string",
-    version: "string",
+    bundleid: "<value>",
+    version: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -451,7 +451,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceapplications.findMobileDeviceApplicationsByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -498,7 +498,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceapplications.findMobileDeviceApplicationsByNameSubset({
-    name: "string",
+    name: "<value>",
     subset: FindMobileDeviceApplicationsByNameSubsetPathParamSubset.AppConfiguration,
   });
 
@@ -593,7 +593,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceapplications.updateMobileDeviceApplicationByBundleID({
-    bundleid: "string",
+    bundleid: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -639,8 +639,8 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceapplications.updateMobileDeviceApplicationByBundleIDandVersion({
-    bundleid: "string",
-    version: "string",
+    bundleid: "<value>",
+    version: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -732,7 +732,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceapplications.updateMobileDeviceApplicationByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

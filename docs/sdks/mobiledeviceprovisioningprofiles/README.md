@@ -81,7 +81,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceprovisioningprofiles.createMobileDeviceProvisioningProfilesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -219,7 +219,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceprovisioningprofiles.deleteMobileDeviceProvisioningProfilesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -400,7 +400,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceprovisioningprofiles.findMobileDeviceProvisioningProfilesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -538,7 +538,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceprovisioningprofiles.updateMobileDeviceProvisioningProfilesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

@@ -126,7 +126,7 @@ async function run() {
   });
 
   const res = await sdk.computerhistory.findComputerHistoryByMacAddress({
-    macaddress: "string",
+    macaddress: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -173,7 +173,7 @@ async function run() {
   });
 
   const res = await sdk.computerhistory.findComputerHistoryByMacAddressSubset({
-    macaddress: "string",
+    macaddress: "<value>",
     subset: FindComputerHistoryByMacAddressSubsetPathParamSubset.Commands,
   });
 
@@ -220,7 +220,7 @@ async function run() {
   });
 
   const res = await sdk.computerhistory.findComputerHistoryByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -267,7 +267,7 @@ async function run() {
   });
 
   const res = await sdk.computerhistory.findComputerHistoryByNameSubset({
-    name: "string",
+    name: "<value>",
     subset: FindComputerHistoryByNameSubsetPathParamSubset.UserLocation,
   });
 
@@ -314,7 +314,7 @@ async function run() {
   });
 
   const res = await sdk.computerhistory.findComputerHistoryBySerialNumber({
-    serialnumber: "string",
+    serialnumber: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -361,7 +361,7 @@ async function run() {
   });
 
   const res = await sdk.computerhistory.findComputerHistoryBySerialNumberSubset({
-    serialnumber: "string",
+    serialnumber: "<value>",
     subset: FindComputerHistoryBySerialNumberSubsetPathParamSubset.Commands,
   });
 
@@ -408,7 +408,7 @@ async function run() {
   });
 
   const res = await sdk.computerhistory.findComputerHistoryByUDID({
-    udid: "string",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -456,7 +456,7 @@ async function run() {
 
   const res = await sdk.computerhistory.findComputerHistoryByUDIDSubset({
     subset: FindComputerHistoryByUDIDSubsetPathParamSubset.ScreenSharingLogs,
-    udid: "string",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {

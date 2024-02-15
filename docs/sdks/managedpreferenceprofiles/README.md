@@ -124,7 +124,7 @@ async function run() {
   });
 
   const res = await sdk.managedpreferenceprofiles.deleteManagedPreferenceProfilesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ async function run() {
   });
 
   const res = await sdk.managedpreferenceprofiles.findManagedPreferenceProfilesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -354,7 +354,7 @@ async function run() {
   });
 
   const res = await sdk.managedpreferenceprofiles.findManagedPreferenceProfilesByNameSubset({
-    name: "string",
+    name: "<value>",
     subset: FindManagedPreferenceProfilesByNameSubsetPathParamSubset.General,
   });
 
@@ -447,7 +447,7 @@ async function run() {
   });
 
   const res = await sdk.managedpreferenceprofiles.updateManagedPreferenceProfilesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

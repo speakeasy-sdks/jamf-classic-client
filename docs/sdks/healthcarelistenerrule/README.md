@@ -115,7 +115,7 @@ async function run() {
   });
 
   const res = await sdk.healthcarelistenerrule.findHealthcareListenerRulesById({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -161,7 +161,7 @@ async function run() {
   });
 
   const res = await sdk.healthcarelistenerrule.updateHealthCareListenerRuleById({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {

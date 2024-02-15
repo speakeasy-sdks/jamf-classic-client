@@ -93,7 +93,7 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementByIdPatchFilter({
-    filter: "string",
+    filter: "<value>",
     id: 596013,
   });
 
@@ -284,7 +284,7 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementByMacAddress({
-    macaddress: "string",
+    macaddress: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -330,8 +330,8 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementByMacAddressPatchFilter({
-    filter: "string",
-    macaddress: "string",
+    filter: "<value>",
+    macaddress: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -378,7 +378,7 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementByMacAddressSubset({
-    macaddress: "string",
+    macaddress: "<value>",
     subset: FindComputerManagementByMacAddressSubsetPathParamSubset.General,
   });
 
@@ -425,7 +425,7 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementByMacAddressUsername({
-    macaddress: "string",
+    macaddress: "<value>",
     username: "Uriah_Dach70",
   });
 
@@ -473,7 +473,7 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementByMacAddressUsernameSubset({
-    macaddress: "string",
+    macaddress: "<value>",
     subset: FindComputerManagementByMacAddressUsernameSubsetPathParamSubset.OSXConfigurationProfiles,
     username: "Aida_Murazik94",
   });
@@ -521,7 +521,7 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -567,8 +567,8 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementByNamePatchFilter({
-    filter: "string",
-    name: "string",
+    filter: "<value>",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -615,7 +615,7 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementByNameSubset({
-    name: "string",
+    name: "<value>",
     subset: FindComputerManagementByNameSubsetPathParamSubset.StaticGroups,
   });
 
@@ -662,7 +662,7 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementByNameUsername({
-    name: "string",
+    name: "<value>",
     username: "Giovanni_Daugherty63",
   });
 
@@ -710,7 +710,7 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementByNameUsernameSubset({
-    name: "string",
+    name: "<value>",
     subset: FindComputerManagementByNameUsernameSubsetPathParamSubset.General,
     username: "Jermain_Batz41",
   });
@@ -758,7 +758,7 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementBySerialNumber({
-    serialnumber: "string",
+    serialnumber: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -804,8 +804,8 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementBySerialNumberPatchFilter({
-    filter: "string",
-    serialnumber: "string",
+    filter: "<value>",
+    serialnumber: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -852,7 +852,7 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementBySerialNumberSubset({
-    serialnumber: "string",
+    serialnumber: "<value>",
     subset: FindComputerManagementBySerialNumberSubsetPathParamSubset.OSXConfigurationProfiles,
   });
 
@@ -899,7 +899,7 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementBySerialNumberUsername({
-    serialnumber: "string",
+    serialnumber: "<value>",
     username: "Reilly_Considine52",
   });
 
@@ -947,7 +947,7 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementBySerialNumberUsernameSubset({
-    serialnumber: "string",
+    serialnumber: "<value>",
     subset: FindComputerManagementBySerialNumberUsernameSubsetPathParamSubset.RestrictedSoftware,
     username: "Deja22",
   });
@@ -995,7 +995,7 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementByUDID({
-    udid: "string",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1043,7 +1043,7 @@ async function run() {
 
   const res = await sdk.computermanagement.findComputerManagementByUDIDSubset({
     subset: FindComputerManagementByUDIDSubsetPathParamSubset.MacAppStoreApps,
-    udid: "string",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1089,8 +1089,8 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementByUdidPatchFilter({
-    filter: "string",
-    udid: "string",
+    filter: "<value>",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1136,7 +1136,7 @@ async function run() {
   });
 
   const res = await sdk.computermanagement.findComputerManagementByUdidUsername({
-    udid: "string",
+    udid: "<value>",
     username: "Shyanne_Satterfield",
   });
 
@@ -1185,7 +1185,7 @@ async function run() {
 
   const res = await sdk.computermanagement.findComputerManagementByUdidUsernameSubset({
     subset: FindComputerManagementByUdidUsernameSubsetPathParamSubset.General,
-    udid: "string",
+    udid: "<value>",
     username: "Hilda_Schimmel10",
   });
 

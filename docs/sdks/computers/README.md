@@ -140,7 +140,7 @@ async function run() {
   });
 
   const res = await sdk.computers.deleteComputerByMacAddress({
-    macaddress: "string",
+    macaddress: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -186,7 +186,7 @@ async function run() {
   });
 
   const res = await sdk.computers.deleteComputerByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -232,7 +232,7 @@ async function run() {
   });
 
   const res = await sdk.computers.deleteComputerBySerialNumber({
-    serialnumber: "string",
+    serialnumber: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -278,7 +278,7 @@ async function run() {
   });
 
   const res = await sdk.computers.deleteComputerByUDID({
-    udid: "string",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -504,7 +504,7 @@ async function run() {
   });
 
   const res = await sdk.computers.findComputersByMacAddress({
-    macaddress: "string",
+    macaddress: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -551,7 +551,7 @@ async function run() {
   });
 
   const res = await sdk.computers.findComputersByMacAddressSubset({
-    macaddress: "string",
+    macaddress: "<value>",
     subset: FindComputersByMacAddressSubsetPathParamSubset.ConfigurationProfiles,
   });
 
@@ -598,7 +598,7 @@ async function run() {
   });
 
   const res = await sdk.computers.findComputersByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -645,7 +645,7 @@ async function run() {
   });
 
   const res = await sdk.computers.findComputersByNameSubset({
-    name: "string",
+    name: "<value>",
     subset: FindComputersByNameSubsetPathParamSubset.Location,
   });
 
@@ -692,7 +692,7 @@ async function run() {
   });
 
   const res = await sdk.computers.findComputersBySerialNumber({
-    serialnumber: "string",
+    serialnumber: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -739,7 +739,7 @@ async function run() {
   });
 
   const res = await sdk.computers.findComputersBySerialNumberSubset({
-    serialnumber: "string",
+    serialnumber: "<value>",
     subset: FindComputersBySerialNumberSubsetPathParamSubset.Software,
   });
 
@@ -786,7 +786,7 @@ async function run() {
   });
 
   const res = await sdk.computers.findComputersByUDID({
-    udid: "string",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -834,7 +834,7 @@ async function run() {
 
   const res = await sdk.computers.findComputersByUDIDSubset({
     subset: FindComputersByUDIDSubsetPathParamSubset.ExtensionAttributes,
-    udid: "string",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -880,7 +880,7 @@ async function run() {
   });
 
   const res = await sdk.computers.flushComputerExtenstionAttributeData({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -926,7 +926,7 @@ async function run() {
   });
 
   const res = await sdk.computers.matchComputers({
-    match: "string",
+    match: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -972,7 +972,7 @@ async function run() {
   });
 
   const res = await sdk.computers.matchComputersNames({
-    matchname: "string",
+    matchname: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1064,7 +1064,7 @@ async function run() {
   });
 
   const res = await sdk.computers.updateComputerByMacAddress({
-    macaddress: "string",
+    macaddress: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1110,7 +1110,7 @@ async function run() {
   });
 
   const res = await sdk.computers.updateComputerByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1156,7 +1156,7 @@ async function run() {
   });
 
   const res = await sdk.computers.updateComputerBySerialNumber({
-    serialnumber: "string",
+    serialnumber: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1202,7 +1202,7 @@ async function run() {
   });
 
   const res = await sdk.computers.updateComputerByUDID({
-    udid: "string",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {

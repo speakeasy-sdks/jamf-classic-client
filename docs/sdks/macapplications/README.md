@@ -124,7 +124,7 @@ async function run() {
   });
 
   const res = await sdk.macapplications.deleteMacappByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ async function run() {
   });
 
   const res = await sdk.macapplications.findMacappsByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -354,7 +354,7 @@ async function run() {
   });
 
   const res = await sdk.macapplications.findMacappsByNameSubset({
-    name: "string",
+    name: "<value>",
     subset: FindMacappsByNameSubsetPathParamSubset.Vpp,
   });
 
@@ -447,7 +447,7 @@ async function run() {
   });
 
   const res = await sdk.macapplications.updateMacappByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

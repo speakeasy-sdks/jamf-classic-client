@@ -122,7 +122,7 @@ async function run() {
   });
 
   const res = await sdk.distributionpoints.deleteDistributionPointByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -257,7 +257,7 @@ async function run() {
   });
 
   const res = await sdk.distributionpoints.findDistributionPointsByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -349,7 +349,7 @@ async function run() {
   });
 
   const res = await sdk.distributionpoints.updateDistributionPointByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

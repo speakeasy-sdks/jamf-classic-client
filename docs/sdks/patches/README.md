@@ -34,7 +34,7 @@ async function run() {
   });
 
   const res = await sdk.patches.createPatchSoftwareTitlesById({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -130,7 +130,7 @@ async function run() {
   });
 
   const res = await sdk.patches.deleteSoftwareTitlesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -179,7 +179,7 @@ async function run() {
 
   const res = await sdk.patches.findComputersByIDAndTitleVersion({
     id: 188338,
-    version: "string",
+    version: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -227,8 +227,8 @@ async function run() {
   });
 
   const res = await sdk.patches.findComputersByNameAndTitleVersion({
-    name: "string",
-    version: "string",
+    name: "<value>",
+    version: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -369,7 +369,7 @@ async function run() {
   });
 
   const res = await sdk.patches.findPatchesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -465,7 +465,7 @@ async function run() {
   });
 
   const res = await sdk.patches.updateSoftwareTitlesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

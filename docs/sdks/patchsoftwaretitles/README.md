@@ -74,7 +74,7 @@ async function run() {
   });
 
   const res = await sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdDelete({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -122,7 +122,7 @@ async function run() {
   });
 
   const res = await sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdGet({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -170,7 +170,7 @@ async function run() {
   });
 
   const res = await sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdPost({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -218,7 +218,7 @@ async function run() {
   });
 
   const res = await sdk.patchsoftwaretitles.patchsoftwaretitlesIdByIdPut({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {

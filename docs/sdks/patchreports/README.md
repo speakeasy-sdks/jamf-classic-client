@@ -26,7 +26,7 @@ async function run() {
   });
 
   const res = await sdk.patchreports.patchreportsPatchsoftwaretitleidByIdGet({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -74,8 +74,8 @@ async function run() {
   });
 
   const res = await sdk.patchreports.patchreportsPatchsoftwaretitleidVersionByIdAndVersionGet({
-    id: "<ID>",
-    version: "string",
+    id: "<id>",
+    version: "<value>",
   });
 
   if (res.statusCode == 200) {

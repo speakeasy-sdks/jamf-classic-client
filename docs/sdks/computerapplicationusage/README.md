@@ -29,7 +29,7 @@ async function run() {
 
   const res = await sdk.computerapplicationusage.findComputerApplicationUsageById({
     endDate: new RFCDate("2023-08-07"),
-    id: "<ID>",
+    id: "<id>",
     startDate: new RFCDate("2024-06-04"),
   });
 
@@ -76,9 +76,9 @@ async function run() {
   });
 
   const res = await sdk.computerapplicationusage.findComputerApplicationUsageByMacAddress({
-    endDate: "string",
-    macaddress: "string",
-    startDate: "string",
+    endDate: "<value>",
+    macaddress: "<value>",
+    startDate: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -124,9 +124,9 @@ async function run() {
   });
 
   const res = await sdk.computerapplicationusage.findComputerApplicationUsageByName({
-    endDate: "string",
-    name: "string",
-    startDate: "string",
+    endDate: "<value>",
+    name: "<value>",
+    startDate: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -172,9 +172,9 @@ async function run() {
   });
 
   const res = await sdk.computerapplicationusage.findComputerApplicationUsageBySerial({
-    endDate: "string",
-    serialnumber: "string",
-    startDate: "string",
+    endDate: "<value>",
+    serialnumber: "<value>",
+    startDate: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -220,9 +220,9 @@ async function run() {
   });
 
   const res = await sdk.computerapplicationusage.findComputerApplicationUsageByUDID({
-    endDate: "string",
-    startDate: "string",
-    udid: "string",
+    endDate: "<value>",
+    startDate: "<value>",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {

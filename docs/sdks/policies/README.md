@@ -126,7 +126,7 @@ async function run() {
   });
 
   const res = await sdk.policies.deletePolicyByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -215,7 +215,7 @@ async function run() {
   });
 
   const res = await sdk.policies.findPoliciesByCategory({
-    category: "string",
+    category: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -355,7 +355,7 @@ async function run() {
   });
 
   const res = await sdk.policies.findPoliciesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -402,7 +402,7 @@ async function run() {
   });
 
   const res = await sdk.policies.findPoliciesByNameSubset({
-    name: "string",
+    name: "<value>",
     subset: FindPoliciesByNameSubsetPathParamSubset.DiskEncryption,
   });
 
@@ -542,7 +542,7 @@ async function run() {
   });
 
   const res = await sdk.policies.updatePolicyByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

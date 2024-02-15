@@ -122,7 +122,7 @@ async function run() {
   });
 
   const res = await sdk.networksegments.deleteNetworkSegmentByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -257,7 +257,7 @@ async function run() {
   });
 
   const res = await sdk.networksegments.findNetworkSegmentsByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -349,7 +349,7 @@ async function run() {
   });
 
   const res = await sdk.networksegments.updateNetworkSegmentByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

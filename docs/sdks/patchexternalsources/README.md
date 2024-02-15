@@ -76,7 +76,7 @@ async function run() {
   });
 
   const res = await sdk.patchexternalsources.createPatchExternalSourcesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -122,7 +122,7 @@ async function run() {
   });
 
   const res = await sdk.patchexternalsources.deletePatchExternalSourcesById({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -211,7 +211,7 @@ async function run() {
   });
 
   const res = await sdk.patchexternalsources.findPatchExternalSourcesById({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -257,7 +257,7 @@ async function run() {
   });
 
   const res = await sdk.patchexternalsources.findPatchExternalSourcesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -303,7 +303,7 @@ async function run() {
   });
 
   const res = await sdk.patchexternalsources.updatePatchExternalSourcesById({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -349,7 +349,7 @@ async function run() {
   });
 
   const res = await sdk.patchexternalsources.updatePatchExternalSourcesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

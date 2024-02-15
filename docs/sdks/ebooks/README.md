@@ -124,7 +124,7 @@ async function run() {
   });
 
   const res = await sdk.ebooks.deleteEBookByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -259,7 +259,7 @@ async function run() {
   });
 
   const res = await sdk.ebooks.findEBooksByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -306,7 +306,7 @@ async function run() {
   });
 
   const res = await sdk.ebooks.findEBooksByNameSubset({
-    name: "string",
+    name: "<value>",
     subset: FindEBooksByNameSubsetPathParamSubset.SelfService,
   });
 
@@ -354,7 +354,7 @@ async function run() {
   });
 
   const res = await sdk.ebooks.findEbookssByIdSubset({
-    id: "<ID>",
+    id: "<id>",
     subset: FindEbookssByIdSubsetPathParamSubset.General,
   });
 
@@ -447,7 +447,7 @@ async function run() {
   });
 
   const res = await sdk.ebooks.updateEBookByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

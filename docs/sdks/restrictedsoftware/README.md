@@ -122,7 +122,7 @@ async function run() {
   });
 
   const res = await sdk.restrictedsoftware.deleteRestrictedSoftwareByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -257,7 +257,7 @@ async function run() {
   });
 
   const res = await sdk.restrictedsoftware.findRestrictedSoftwareByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -349,7 +349,7 @@ async function run() {
   });
 
   const res = await sdk.restrictedsoftware.updateRestrictedSoftwareByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

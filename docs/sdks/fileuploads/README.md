@@ -24,7 +24,7 @@ async function run() {
   });
 
   const res = await sdk.fileuploads.uploadFiles({
-    id: "<ID>",
+    id: "<id>",
     idType: PathParamIdType.Id,
     resource: Resource.Mobiledevices,
   });

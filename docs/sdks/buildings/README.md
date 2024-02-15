@@ -122,7 +122,7 @@ async function run() {
   });
 
   const res = await sdk.buildings.deleteBuildingByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -257,7 +257,7 @@ async function run() {
   });
 
   const res = await sdk.buildings.findBuildingsByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -349,7 +349,7 @@ async function run() {
   });
 
   const res = await sdk.buildings.updateBuildingByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

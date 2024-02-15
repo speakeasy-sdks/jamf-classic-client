@@ -124,7 +124,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceconfigurationprofiles.deleteMobileDeviceConfigurationProfileByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -307,7 +307,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -354,7 +354,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceconfigurationprofiles.findMobileDeviceConfigurationProfilesByNameSubset({
-    name: "string",
+    name: "<value>",
     subset: FindMobileDeviceConfigurationProfilesByNameSubsetPathParamSubset.General,
   });
 
@@ -447,7 +447,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledeviceconfigurationprofiles.updateMobileDeviceConfigurationProfileByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

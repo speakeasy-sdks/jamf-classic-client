@@ -122,7 +122,7 @@ async function run() {
   });
 
   const res = await sdk.advancedmobiledevicesearches.deleteAdvancedMobileDeviceSearchByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -257,7 +257,7 @@ async function run() {
   });
 
   const res = await sdk.advancedmobiledevicesearches.findMobileDeviceSearchesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -349,7 +349,7 @@ async function run() {
   });
 
   const res = await sdk.advancedmobiledevicesearches.updateAdvancedMobileDeviceSearchByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

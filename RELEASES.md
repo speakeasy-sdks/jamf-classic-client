@@ -321,3 +321,13 @@ Based on:
 - [typescript v2.1.2] .
 ### Releases
 - [NPM v2.1.2] https://www.npmjs.com/package/jamf-classic-sdk-nodejs/v/2.1.2 - .
+
+## 2024-02-15 00:34:23
+### Changes
+Based on:
+- OpenAPI Doc 10.48.0 
+- Speakeasy CLI 1.180.1 (2.258.2) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [typescript v2.1.3] .
+### Releases
+- [NPM v2.1.3] https://www.npmjs.com/package/jamf-classic-sdk-nodejs/v/2.1.3 - .

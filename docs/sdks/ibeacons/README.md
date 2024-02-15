@@ -122,7 +122,7 @@ async function run() {
   });
 
   const res = await sdk.ibeacons.deleteIBeaconByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -257,7 +257,7 @@ async function run() {
   });
 
   const res = await sdk.ibeacons.findIBeaconsByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -349,7 +349,7 @@ async function run() {
   });
 
   const res = await sdk.ibeacons.updateIBeaconByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

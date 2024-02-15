@@ -68,7 +68,7 @@ async function run() {
   });
 
   const res = await sdk.patchinternalsources.findPatchInternalSourcesById({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -114,7 +114,7 @@ async function run() {
   });
 
   const res = await sdk.patchinternalsources.findPatchInternalSourcesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

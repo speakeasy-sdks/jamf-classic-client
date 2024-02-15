@@ -128,7 +128,7 @@ async function run() {
   });
 
   const res = await sdk.ldapservers.deleteLDAPServerByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -174,7 +174,7 @@ async function run() {
   });
 
   const res = await sdk.ldapservers.findLDAPServerGroupById({
-    group: "string",
+    group: "<value>",
     id: 279778,
   });
 
@@ -221,8 +221,8 @@ async function run() {
   });
 
   const res = await sdk.ldapservers.findLDAPServerGroupByName({
-    group: "string",
-    name: "string",
+    group: "<value>",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -268,7 +268,7 @@ async function run() {
   });
 
   const res = await sdk.ldapservers.findLDAPServerGroupUserById({
-    group: "string",
+    group: "<value>",
     id: 12011,
     user: "Zula_Krajcik",
   });
@@ -316,8 +316,8 @@ async function run() {
   });
 
   const res = await sdk.ldapservers.findLDAPServerGroupUserByName({
-    group: "string",
-    name: "string",
+    group: "<value>",
+    name: "<value>",
     user: "Elena81",
   });
 
@@ -411,7 +411,7 @@ async function run() {
   });
 
   const res = await sdk.ldapservers.findLDAPServerUserByName({
-    name: "string",
+    name: "<value>",
     user: "Justen73",
   });
 
@@ -547,7 +547,7 @@ async function run() {
   });
 
   const res = await sdk.ldapservers.findLDAPServersByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -639,7 +639,7 @@ async function run() {
   });
 
   const res = await sdk.ldapservers.updateLDAPServerByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

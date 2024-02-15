@@ -93,7 +93,7 @@ async function run() {
   const res = await sdk.computercommands.createComputerCommandByCommandAndAction({
     action: Action.Install,
     command: PathParamCommand.ScheduleOSUpdate,
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -141,7 +141,7 @@ async function run() {
 
   const res = await sdk.computercommands.createComputerCommandByCommandAndId({
     command: CreateComputerCommandByCommandAndIdPathParamCommand.ScheduleOSUpdate,
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -189,8 +189,8 @@ async function run() {
 
   const res = await sdk.computercommands.createComputerCommandByCommandIdAndPasscode({
     command: CreateComputerCommandByCommandIdAndPasscodePathParamCommand.DeviceLock,
-    id: "<ID>",
-    passcode: "string",
+    id: "<id>",
+    passcode: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -279,7 +279,7 @@ async function run() {
   });
 
   const res = await sdk.computercommands.findComputerCommandsByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

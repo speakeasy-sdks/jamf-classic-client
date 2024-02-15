@@ -175,7 +175,7 @@ async function run() {
   });
 
   const res = await sdk.accounts.deleteAccountByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -402,7 +402,7 @@ async function run() {
   });
 
   const res = await sdk.accounts.findAccountsByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -494,7 +494,7 @@ async function run() {
   });
 
   const res = await sdk.accounts.findGroupsByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -586,7 +586,7 @@ async function run() {
   });
 
   const res = await sdk.accounts.updateAccountByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

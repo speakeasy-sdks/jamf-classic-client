@@ -122,7 +122,7 @@ async function run() {
   });
 
   const res = await sdk.userextensionattributes.deleteUserextensionattributeByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -257,7 +257,7 @@ async function run() {
   });
 
   const res = await sdk.userextensionattributes.findUserextensionattributesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -349,7 +349,7 @@ async function run() {
   });
 
   const res = await sdk.userextensionattributes.updateUserextensionattributeByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {

@@ -34,7 +34,7 @@ async function run() {
 
   const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsById({
     endDate: new RFCDate("2023-01-23"),
-    id: "<ID>",
+    id: "<id>",
     startDate: new RFCDate("2022-08-20"),
   });
 
@@ -134,7 +134,7 @@ async function run() {
 
   const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByMacAddress({
     endDate: new RFCDate("2022-11-05"),
-    macaddress: "string",
+    macaddress: "<value>",
     startDate: new RFCDate("2023-02-03"),
   });
 
@@ -184,7 +184,7 @@ async function run() {
 
   const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByMacAddressSubset({
     endDate: new RFCDate("2024-05-04"),
-    macaddress: "string",
+    macaddress: "<value>",
     startDate: new RFCDate("2022-06-27"),
     subset: PathParamSubset.Software,
   });
@@ -234,7 +234,7 @@ async function run() {
 
   const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByName({
     endDate: new RFCDate("2024-01-12"),
-    name: "string",
+    name: "<value>",
     startDate: new RFCDate("2023-07-16"),
   });
 
@@ -284,7 +284,7 @@ async function run() {
 
   const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByNameSubset({
     endDate: new RFCDate("2022-07-31"),
-    name: "string",
+    name: "<value>",
     startDate: new RFCDate("2024-09-06"),
     subset: FindComputerHardwareSoftwareReportsByNameSubsetPathParamSubset.Software,
   });
@@ -334,7 +334,7 @@ async function run() {
 
   const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsBySerial({
     endDate: new RFCDate("2024-10-13"),
-    serialnumber: "string",
+    serialnumber: "<value>",
     startDate: new RFCDate("2022-05-25"),
   });
 
@@ -384,7 +384,7 @@ async function run() {
 
   const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsBySerialSubset({
     endDate: new RFCDate("2023-03-08"),
-    serialnumber: "string",
+    serialnumber: "<value>",
     startDate: new RFCDate("2023-10-09"),
     subset: FindComputerHardwareSoftwareReportsBySerialSubsetPathParamSubset.Plugins,
   });
@@ -435,7 +435,7 @@ async function run() {
   const res = await sdk.computerhardwaresoftwarereports.findComputerHardwareSoftwareReportsByUDID({
     endDate: new RFCDate("2022-05-02"),
     startDate: new RFCDate("2024-04-25"),
-    udid: "string",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -486,7 +486,7 @@ async function run() {
     endDate: new RFCDate("2023-09-30"),
     startDate: new RFCDate("2024-09-30"),
     subset: FindComputerHardwareSoftwareReportsByUDIDSubsetPathParamSubset.Software,
-    udid: "string",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {

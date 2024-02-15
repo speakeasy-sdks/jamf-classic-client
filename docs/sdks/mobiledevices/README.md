@@ -137,7 +137,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevices.deleteMobileDeviceByMacAddress({
-    macaddress: "string",
+    macaddress: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -183,7 +183,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevices.deleteMobileDeviceByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -229,7 +229,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevices.deleteMobileDeviceBySerialNumber({
-    serialnumber: "string",
+    serialnumber: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -275,7 +275,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevices.deleteMobileDeviceByUDID({
-    udid: "string",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -458,7 +458,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevices.findMobileDevicesByMacAddress({
-    macaddress: "string",
+    macaddress: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -505,7 +505,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevices.findMobileDevicesByMacAddressSubset({
-    macaddress: "string",
+    macaddress: "<value>",
     subset: FindMobileDevicesByMacAddressSubsetPathParamSubset.MobileDeviceGroups,
   });
 
@@ -552,7 +552,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevices.findMobileDevicesByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -599,7 +599,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevices.findMobileDevicesByNameSubset({
-    name: "string",
+    name: "<value>",
     subset: FindMobileDevicesByNameSubsetPathParamSubset.Purchasing,
   });
 
@@ -646,7 +646,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevices.findMobileDevicesBySerialNumber({
-    serialnumber: "string",
+    serialnumber: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -693,7 +693,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevices.findMobileDevicesBySerialNumberSubset({
-    serialnumber: "string",
+    serialnumber: "<value>",
     subset: FindMobileDevicesBySerialNumberSubsetPathParamSubset.Security,
   });
 
@@ -740,7 +740,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevices.findMobileDevicesByUDID({
-    udid: "string",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -788,7 +788,7 @@ async function run() {
 
   const res = await sdk.mobiledevices.findMobileDevicesByUDIDSubset({
     subset: FindMobileDevicesByUDIDSubsetPathParamSubset.Purchasing,
-    udid: "string",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -834,7 +834,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevices.matchMobileDevices({
-    match: "string",
+    match: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -926,7 +926,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevices.updateMobileDeviceByMacAddress({
-    macaddress: "string",
+    macaddress: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -972,7 +972,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevices.updateMobileDeviceByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1018,7 +1018,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevices.updateMobileDeviceBySerialNumber({
-    serialnumber: "string",
+    serialnumber: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -1064,7 +1064,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevices.updateMobileDeviceByUDID({
-    udid: "string",
+    udid: "<value>",
   });
 
   if (res.statusCode == 200) {

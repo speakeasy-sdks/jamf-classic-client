@@ -73,7 +73,7 @@ async function run() {
   });
 
   const res = await sdk.jsonwebtokenconfigurations.deleteJsonWebTokenConfigurationById({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -119,7 +119,7 @@ async function run() {
   });
 
   const res = await sdk.jsonwebtokenconfigurations.findJsonWebTokenConfigurationById({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {
@@ -208,7 +208,7 @@ async function run() {
   });
 
   const res = await sdk.jsonwebtokenconfigurations.updateJsonWebTokenConfigurationById({
-    id: "<ID>",
+    id: "<id>",
   });
 
   if (res.statusCode == 200) {

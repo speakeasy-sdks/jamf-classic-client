@@ -126,7 +126,7 @@ async function run() {
 
   const res = await sdk.mobiledevicecommands.createMobileDeviceCommandURL({
     command: CreateMobileDeviceCommandURLPathParamCommand.DeviceLocation,
-    idList: "string",
+    idList: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -172,8 +172,8 @@ async function run() {
   });
 
   const res = await sdk.mobiledevicecommands.createMobileDeviceLockCommandURL({
-    idList: "string",
-    lockMessage: "string",
+    idList: "<value>",
+    lockMessage: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -219,8 +219,8 @@ async function run() {
   });
 
   const res = await sdk.mobiledevicecommands.createMobileDeviceNameCommandURL({
-    deviceName: "string",
-    idList: "string",
+    deviceName: "<value>",
+    idList: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -267,7 +267,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevicecommands.createMobileScheduleOSUpdateCommandURL({
-    idList: "string",
+    idList: "<value>",
     installAction: InstallAction.One,
   });
 
@@ -315,9 +315,9 @@ async function run() {
   });
 
   const res = await sdk.mobiledevicecommands.createMobileScheduleOSUpdateCommandWithProductVersionURL({
-    idList: "string",
+    idList: "<value>",
     installAction: PathParamInstallAction.One,
-    productVersion: "string",
+    productVersion: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -406,7 +406,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevicecommands.findMobileDeviceCommandsByCommand({
-    command: "string",
+    command: "<value>",
   });
 
   if (res.statusCode == 200) {
@@ -452,7 +452,7 @@ async function run() {
   });
 
   const res = await sdk.mobiledevicecommands.findMobileDeviceCommandsByName({
-    name: "string",
+    name: "<value>",
   });
 
   if (res.statusCode == 200) {
