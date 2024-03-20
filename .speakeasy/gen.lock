@@ -3,10 +3,10 @@ id: b771ca00-93d7-48e8-b2c0-23af921ee148
 management:
   docChecksum: 6c666f8514d4102cea0bdf1e68fde734
   docVersion: 10.48.0
-  speakeasyVersion: 1.207.1
-  generationVersion: 2.280.6
-  releaseVersion: 2.1.4
-  configChecksum: ecc96be7d50120e45ba80969fdf78900
+  speakeasyVersion: 1.213.0
+  generationVersion: 2.283.1
+  releaseVersion: 2.1.5
+  configChecksum: 452318a67f7aaa1ae4a6c10e5f301cc2
   repoURL: https://github.com/speakeasy-sdks/jamf-classic-client.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/jamf-classic-client
@@ -16,7 +16,7 @@ features:
     acceptHeaders: 2.81.1
     core: 3.4.8
     deprecations: 2.81.1
-    globalSecurity: 2.82.4
+    globalSecurity: 2.82.5
     globalServerURLs: 2.82.2
 generatedFiles:
   - src/sdk/accounts.ts
